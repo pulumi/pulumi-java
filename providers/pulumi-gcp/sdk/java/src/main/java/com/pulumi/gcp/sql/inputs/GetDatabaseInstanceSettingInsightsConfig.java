@@ -14,94 +14,87 @@ public final class GetDatabaseInstanceSettingInsightsConfig extends com.pulumi.r
     public static final GetDatabaseInstanceSettingInsightsConfig Empty = new GetDatabaseInstanceSettingInsightsConfig();
 
     @Import(name="queryInsightsEnabled", required=true)
-      private final Boolean queryInsightsEnabled;
+    private Boolean queryInsightsEnabled;
 
     public Boolean queryInsightsEnabled() {
         return this.queryInsightsEnabled;
     }
 
     @Import(name="queryStringLength", required=true)
-      private final Integer queryStringLength;
+    private Integer queryStringLength;
 
     public Integer queryStringLength() {
         return this.queryStringLength;
     }
 
     @Import(name="recordApplicationTags", required=true)
-      private final Boolean recordApplicationTags;
+    private Boolean recordApplicationTags;
 
     public Boolean recordApplicationTags() {
         return this.recordApplicationTags;
     }
 
     @Import(name="recordClientAddress", required=true)
-      private final Boolean recordClientAddress;
+    private Boolean recordClientAddress;
 
     public Boolean recordClientAddress() {
         return this.recordClientAddress;
     }
 
-    public GetDatabaseInstanceSettingInsightsConfig(
-        Boolean queryInsightsEnabled,
-        Integer queryStringLength,
-        Boolean recordApplicationTags,
-        Boolean recordClientAddress) {
-        this.queryInsightsEnabled = Objects.requireNonNull(queryInsightsEnabled, "expected parameter 'queryInsightsEnabled' to be non-null");
-        this.queryStringLength = Objects.requireNonNull(queryStringLength, "expected parameter 'queryStringLength' to be non-null");
-        this.recordApplicationTags = Objects.requireNonNull(recordApplicationTags, "expected parameter 'recordApplicationTags' to be non-null");
-        this.recordClientAddress = Objects.requireNonNull(recordClientAddress, "expected parameter 'recordClientAddress' to be non-null");
-    }
+    private GetDatabaseInstanceSettingInsightsConfig() {}
 
-    private GetDatabaseInstanceSettingInsightsConfig() {
-        this.queryInsightsEnabled = null;
-        this.queryStringLength = null;
-        this.recordApplicationTags = null;
-        this.recordClientAddress = null;
+    private GetDatabaseInstanceSettingInsightsConfig(GetDatabaseInstanceSettingInsightsConfig $) {
+        this.queryInsightsEnabled = $.queryInsightsEnabled;
+        this.queryStringLength = $.queryStringLength;
+        this.recordApplicationTags = $.recordApplicationTags;
+        this.recordClientAddress = $.recordClientAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseInstanceSettingInsightsConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean queryInsightsEnabled;
-        private Integer queryStringLength;
-        private Boolean recordApplicationTags;
-        private Boolean recordClientAddress;
+        private GetDatabaseInstanceSettingInsightsConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseInstanceSettingInsightsConfig();
         }
 
         public Builder(GetDatabaseInstanceSettingInsightsConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryInsightsEnabled = defaults.queryInsightsEnabled;
-    	      this.queryStringLength = defaults.queryStringLength;
-    	      this.recordApplicationTags = defaults.recordApplicationTags;
-    	      this.recordClientAddress = defaults.recordClientAddress;
+            $ = new GetDatabaseInstanceSettingInsightsConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder queryInsightsEnabled(Boolean queryInsightsEnabled) {
-            this.queryInsightsEnabled = Objects.requireNonNull(queryInsightsEnabled);
+            $.queryInsightsEnabled = queryInsightsEnabled;
             return this;
         }
+
         public Builder queryStringLength(Integer queryStringLength) {
-            this.queryStringLength = Objects.requireNonNull(queryStringLength);
+            $.queryStringLength = queryStringLength;
             return this;
         }
+
         public Builder recordApplicationTags(Boolean recordApplicationTags) {
-            this.recordApplicationTags = Objects.requireNonNull(recordApplicationTags);
+            $.recordApplicationTags = recordApplicationTags;
             return this;
         }
+
         public Builder recordClientAddress(Boolean recordClientAddress) {
-            this.recordClientAddress = Objects.requireNonNull(recordClientAddress);
+            $.recordClientAddress = recordClientAddress;
             return this;
-        }        public GetDatabaseInstanceSettingInsightsConfig build() {
-            return new GetDatabaseInstanceSettingInsightsConfig(queryInsightsEnabled, queryStringLength, recordApplicationTags, recordClientAddress);
+        }
+
+        public GetDatabaseInstanceSettingInsightsConfig build() {
+            $.queryInsightsEnabled = Objects.requireNonNull($.queryInsightsEnabled, "expected parameter 'queryInsightsEnabled' to be non-null");
+            $.queryStringLength = Objects.requireNonNull($.queryStringLength, "expected parameter 'queryStringLength' to be non-null");
+            $.recordApplicationTags = Objects.requireNonNull($.recordApplicationTags, "expected parameter 'recordApplicationTags' to be non-null");
+            $.recordClientAddress = Objects.requireNonNull($.recordClientAddress, "expected parameter 'recordClientAddress' to be non-null");
+            return $;
         }
     }
+
 }

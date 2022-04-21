@@ -13,45 +13,45 @@ public final class GetBucketEncryption extends com.pulumi.resources.InvokeArgs {
     public static final GetBucketEncryption Empty = new GetBucketEncryption();
 
     @Import(name="defaultKmsKeyName", required=true)
-      private final String defaultKmsKeyName;
+    private String defaultKmsKeyName;
 
     public String defaultKmsKeyName() {
         return this.defaultKmsKeyName;
     }
 
-    public GetBucketEncryption(String defaultKmsKeyName) {
-        this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName, "expected parameter 'defaultKmsKeyName' to be non-null");
-    }
+    private GetBucketEncryption() {}
 
-    private GetBucketEncryption() {
-        this.defaultKmsKeyName = null;
+    private GetBucketEncryption(GetBucketEncryption $) {
+        this.defaultKmsKeyName = $.defaultKmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBucketEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String defaultKmsKeyName;
+        private GetBucketEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBucketEncryption();
         }
 
         public Builder(GetBucketEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultKmsKeyName = defaults.defaultKmsKeyName;
+            $ = new GetBucketEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultKmsKeyName(String defaultKmsKeyName) {
-            this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
+            $.defaultKmsKeyName = defaultKmsKeyName;
             return this;
-        }        public GetBucketEncryption build() {
-            return new GetBucketEncryption(defaultKmsKeyName);
+        }
+
+        public GetBucketEncryption build() {
+            $.defaultKmsKeyName = Objects.requireNonNull($.defaultKmsKeyName, "expected parameter 'defaultKmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

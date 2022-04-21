@@ -19,7 +19,7 @@ public final class GetRouterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -30,7 +30,7 @@ public final class GetRouterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -42,10 +42,10 @@ public final class GetRouterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -54,73 +54,64 @@ public final class GetRouterArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
-    public GetRouterArgs(
-        String name,
-        String network,
-        @Nullable String project,
-        @Nullable String region) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.project = project;
-        this.region = region;
-    }
+    private GetRouterArgs() {}
 
-    private GetRouterArgs() {
-        this.name = null;
-        this.network = null;
-        this.project = null;
-        this.region = null;
+    private GetRouterArgs(GetRouterArgs $) {
+        this.name = $.name;
+        this.network = $.network;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String network;
-        private @Nullable String project;
-        private @Nullable String region;
+        private GetRouterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouterArgs();
         }
 
         public Builder(GetRouterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetRouterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
-        }        public GetRouterArgs build() {
-            return new GetRouterArgs(name, network, project, region);
+        }
+
+        public GetRouterArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            return $;
         }
     }
+
 }

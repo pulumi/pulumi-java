@@ -5,7 +5,6 @@ package com.pulumi.gcp.memcache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.memcache.inputs.InstanceMemcacheNodeGetArgs;
 import com.pulumi.gcp.memcache.inputs.InstanceMemcacheParametersGetArgs;
 import com.pulumi.gcp.memcache.inputs.InstanceNodeConfigGetArgs;
@@ -14,6 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizedNetwork")
-      private final @Nullable Output<String> authorizedNetwork;
+    private @Nullable Output<String> authorizedNetwork;
 
-    public Output<String> authorizedNetwork() {
-        return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
+    public Optional<Output<String>> authorizedNetwork() {
+        return Optional.ofNullable(this.authorizedNetwork);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="discoveryEndpoint")
-      private final @Nullable Output<String> discoveryEndpoint;
+    private @Nullable Output<String> discoveryEndpoint;
 
-    public Output<String> discoveryEndpoint() {
-        return this.discoveryEndpoint == null ? Codegen.empty() : this.discoveryEndpoint;
+    public Optional<Output<String>> discoveryEndpoint() {
+        return Optional.ofNullable(this.discoveryEndpoint);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memcacheFullVersion")
-      private final @Nullable Output<String> memcacheFullVersion;
+    private @Nullable Output<String> memcacheFullVersion;
 
-    public Output<String> memcacheFullVersion() {
-        return this.memcacheFullVersion == null ? Codegen.empty() : this.memcacheFullVersion;
+    public Optional<Output<String>> memcacheFullVersion() {
+        return Optional.ofNullable(this.memcacheFullVersion);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memcacheNodes")
-      private final @Nullable Output<List<InstanceMemcacheNodeGetArgs>> memcacheNodes;
+    private @Nullable Output<List<InstanceMemcacheNodeGetArgs>> memcacheNodes;
 
-    public Output<List<InstanceMemcacheNodeGetArgs>> memcacheNodes() {
-        return this.memcacheNodes == null ? Codegen.empty() : this.memcacheNodes;
+    public Optional<Output<List<InstanceMemcacheNodeGetArgs>>> memcacheNodes() {
+        return Optional.ofNullable(this.memcacheNodes);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memcacheParameters")
-      private final @Nullable Output<InstanceMemcacheParametersGetArgs> memcacheParameters;
+    private @Nullable Output<InstanceMemcacheParametersGetArgs> memcacheParameters;
 
-    public Output<InstanceMemcacheParametersGetArgs> memcacheParameters() {
-        return this.memcacheParameters == null ? Codegen.empty() : this.memcacheParameters;
+    public Optional<Output<InstanceMemcacheParametersGetArgs>> memcacheParameters() {
+        return Optional.ofNullable(this.memcacheParameters);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memcacheVersion")
-      private final @Nullable Output<String> memcacheVersion;
+    private @Nullable Output<String> memcacheVersion;
 
-    public Output<String> memcacheVersion() {
-        return this.memcacheVersion == null ? Codegen.empty() : this.memcacheVersion;
+    public Optional<Output<String>> memcacheVersion() {
+        return Optional.ofNullable(this.memcacheVersion);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeConfig")
-      private final @Nullable Output<InstanceNodeConfigGetArgs> nodeConfig;
+    private @Nullable Output<InstanceNodeConfigGetArgs> nodeConfig;
 
-    public Output<InstanceNodeConfigGetArgs> nodeConfig() {
-        return this.nodeConfig == null ? Codegen.empty() : this.nodeConfig;
+    public Optional<Output<InstanceNodeConfigGetArgs>> nodeConfig() {
+        return Optional.ofNullable(this.nodeConfig);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeCount")
-      private final @Nullable Output<Integer> nodeCount;
+    private @Nullable Output<Integer> nodeCount;
 
-    public Output<Integer> nodeCount() {
-        return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
+    public Optional<Output<Integer>> nodeCount() {
+        return Optional.ofNullable(this.nodeCount);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -189,238 +189,196 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public InstanceState(
-        @Nullable Output<String> authorizedNetwork,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> discoveryEndpoint,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> memcacheFullVersion,
-        @Nullable Output<List<InstanceMemcacheNodeGetArgs>> memcacheNodes,
-        @Nullable Output<InstanceMemcacheParametersGetArgs> memcacheParameters,
-        @Nullable Output<String> memcacheVersion,
-        @Nullable Output<String> name,
-        @Nullable Output<InstanceNodeConfigGetArgs> nodeConfig,
-        @Nullable Output<Integer> nodeCount,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<List<String>> zones) {
-        this.authorizedNetwork = authorizedNetwork;
-        this.createTime = createTime;
-        this.discoveryEndpoint = discoveryEndpoint;
-        this.displayName = displayName;
-        this.labels = labels;
-        this.memcacheFullVersion = memcacheFullVersion;
-        this.memcacheNodes = memcacheNodes;
-        this.memcacheParameters = memcacheParameters;
-        this.memcacheVersion = memcacheVersion;
-        this.name = name;
-        this.nodeConfig = nodeConfig;
-        this.nodeCount = nodeCount;
-        this.project = project;
-        this.region = region;
-        this.zones = zones;
-    }
+    private InstanceState() {}
 
-    private InstanceState() {
-        this.authorizedNetwork = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.discoveryEndpoint = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.memcacheFullVersion = Codegen.empty();
-        this.memcacheNodes = Codegen.empty();
-        this.memcacheParameters = Codegen.empty();
-        this.memcacheVersion = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nodeConfig = Codegen.empty();
-        this.nodeCount = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.zones = Codegen.empty();
+    private InstanceState(InstanceState $) {
+        this.authorizedNetwork = $.authorizedNetwork;
+        this.createTime = $.createTime;
+        this.discoveryEndpoint = $.discoveryEndpoint;
+        this.displayName = $.displayName;
+        this.labels = $.labels;
+        this.memcacheFullVersion = $.memcacheFullVersion;
+        this.memcacheNodes = $.memcacheNodes;
+        this.memcacheParameters = $.memcacheParameters;
+        this.memcacheVersion = $.memcacheVersion;
+        this.name = $.name;
+        this.nodeConfig = $.nodeConfig;
+        this.nodeCount = $.nodeCount;
+        this.project = $.project;
+        this.region = $.region;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authorizedNetwork;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> discoveryEndpoint;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> memcacheFullVersion;
-        private @Nullable Output<List<InstanceMemcacheNodeGetArgs>> memcacheNodes;
-        private @Nullable Output<InstanceMemcacheParametersGetArgs> memcacheParameters;
-        private @Nullable Output<String> memcacheVersion;
-        private @Nullable Output<String> name;
-        private @Nullable Output<InstanceNodeConfigGetArgs> nodeConfig;
-        private @Nullable Output<Integer> nodeCount;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<List<String>> zones;
+        private InstanceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceState();
         }
 
         public Builder(InstanceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizedNetwork = defaults.authorizedNetwork;
-    	      this.createTime = defaults.createTime;
-    	      this.discoveryEndpoint = defaults.discoveryEndpoint;
-    	      this.displayName = defaults.displayName;
-    	      this.labels = defaults.labels;
-    	      this.memcacheFullVersion = defaults.memcacheFullVersion;
-    	      this.memcacheNodes = defaults.memcacheNodes;
-    	      this.memcacheParameters = defaults.memcacheParameters;
-    	      this.memcacheVersion = defaults.memcacheVersion;
-    	      this.name = defaults.name;
-    	      this.nodeConfig = defaults.nodeConfig;
-    	      this.nodeCount = defaults.nodeCount;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.zones = defaults.zones;
+            $ = new InstanceState(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
-            this.authorizedNetwork = authorizedNetwork;
+            $.authorizedNetwork = authorizedNetwork;
             return this;
         }
-        public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Codegen.ofNullable(authorizedNetwork);
-            return this;
+
+        public Builder authorizedNetwork(String authorizedNetwork) {
+            return authorizedNetwork(Output.of(authorizedNetwork));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder discoveryEndpoint(@Nullable Output<String> discoveryEndpoint) {
-            this.discoveryEndpoint = discoveryEndpoint;
+            $.discoveryEndpoint = discoveryEndpoint;
             return this;
         }
-        public Builder discoveryEndpoint(@Nullable String discoveryEndpoint) {
-            this.discoveryEndpoint = Codegen.ofNullable(discoveryEndpoint);
-            return this;
+
+        public Builder discoveryEndpoint(String discoveryEndpoint) {
+            return discoveryEndpoint(Output.of(discoveryEndpoint));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder memcacheFullVersion(@Nullable Output<String> memcacheFullVersion) {
-            this.memcacheFullVersion = memcacheFullVersion;
+            $.memcacheFullVersion = memcacheFullVersion;
             return this;
         }
-        public Builder memcacheFullVersion(@Nullable String memcacheFullVersion) {
-            this.memcacheFullVersion = Codegen.ofNullable(memcacheFullVersion);
-            return this;
+
+        public Builder memcacheFullVersion(String memcacheFullVersion) {
+            return memcacheFullVersion(Output.of(memcacheFullVersion));
         }
+
         public Builder memcacheNodes(@Nullable Output<List<InstanceMemcacheNodeGetArgs>> memcacheNodes) {
-            this.memcacheNodes = memcacheNodes;
+            $.memcacheNodes = memcacheNodes;
             return this;
         }
-        public Builder memcacheNodes(@Nullable List<InstanceMemcacheNodeGetArgs> memcacheNodes) {
-            this.memcacheNodes = Codegen.ofNullable(memcacheNodes);
-            return this;
+
+        public Builder memcacheNodes(List<InstanceMemcacheNodeGetArgs> memcacheNodes) {
+            return memcacheNodes(Output.of(memcacheNodes));
         }
+
         public Builder memcacheNodes(InstanceMemcacheNodeGetArgs... memcacheNodes) {
             return memcacheNodes(List.of(memcacheNodes));
         }
+
         public Builder memcacheParameters(@Nullable Output<InstanceMemcacheParametersGetArgs> memcacheParameters) {
-            this.memcacheParameters = memcacheParameters;
+            $.memcacheParameters = memcacheParameters;
             return this;
         }
-        public Builder memcacheParameters(@Nullable InstanceMemcacheParametersGetArgs memcacheParameters) {
-            this.memcacheParameters = Codegen.ofNullable(memcacheParameters);
-            return this;
+
+        public Builder memcacheParameters(InstanceMemcacheParametersGetArgs memcacheParameters) {
+            return memcacheParameters(Output.of(memcacheParameters));
         }
+
         public Builder memcacheVersion(@Nullable Output<String> memcacheVersion) {
-            this.memcacheVersion = memcacheVersion;
+            $.memcacheVersion = memcacheVersion;
             return this;
         }
-        public Builder memcacheVersion(@Nullable String memcacheVersion) {
-            this.memcacheVersion = Codegen.ofNullable(memcacheVersion);
-            return this;
+
+        public Builder memcacheVersion(String memcacheVersion) {
+            return memcacheVersion(Output.of(memcacheVersion));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nodeConfig(@Nullable Output<InstanceNodeConfigGetArgs> nodeConfig) {
-            this.nodeConfig = nodeConfig;
+            $.nodeConfig = nodeConfig;
             return this;
         }
-        public Builder nodeConfig(@Nullable InstanceNodeConfigGetArgs nodeConfig) {
-            this.nodeConfig = Codegen.ofNullable(nodeConfig);
-            return this;
+
+        public Builder nodeConfig(InstanceNodeConfigGetArgs nodeConfig) {
+            return nodeConfig(Output.of(nodeConfig));
         }
+
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
-            this.nodeCount = nodeCount;
+            $.nodeCount = nodeCount;
             return this;
         }
-        public Builder nodeCount(@Nullable Integer nodeCount) {
-            this.nodeCount = Codegen.ofNullable(nodeCount);
-            return this;
+
+        public Builder nodeCount(Integer nodeCount) {
+            return nodeCount(Output.of(nodeCount));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public InstanceState build() {
-            return new InstanceState(authorizedNetwork, createTime, discoveryEndpoint, displayName, labels, memcacheFullVersion, memcacheNodes, memcacheParameters, memcacheVersion, name, nodeConfig, nodeCount, project, region, zones);
+        }
+
+        public InstanceState build() {
+            return $;
         }
     }
+
 }

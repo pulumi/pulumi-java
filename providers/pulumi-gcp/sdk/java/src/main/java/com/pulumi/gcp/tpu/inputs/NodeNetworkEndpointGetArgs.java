@@ -5,10 +5,10 @@ package com.pulumi.gcp.tpu.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class NodeNetworkEndpointGetArgs extends com.pulumi.resources.Resou
     public static final NodeNetworkEndpointGetArgs Empty = new NodeNetworkEndpointGetArgs();
 
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
-    public NodeNetworkEndpointGetArgs(
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<Integer> port) {
-        this.ipAddress = ipAddress;
-        this.port = port;
-    }
+    private NodeNetworkEndpointGetArgs() {}
 
-    private NodeNetworkEndpointGetArgs() {
-        this.ipAddress = Codegen.empty();
-        this.port = Codegen.empty();
+    private NodeNetworkEndpointGetArgs(NodeNetworkEndpointGetArgs $) {
+        this.ipAddress = $.ipAddress;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeNetworkEndpointGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<Integer> port;
+        private NodeNetworkEndpointGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeNetworkEndpointGetArgs();
         }
 
         public Builder(NodeNetworkEndpointGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.port = defaults.port;
+            $ = new NodeNetworkEndpointGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
-        }        public NodeNetworkEndpointGetArgs build() {
-            return new NodeNetworkEndpointGetArgs(ipAddress, port);
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
+        }
+
+        public NodeNetworkEndpointGetArgs build() {
+            return $;
         }
     }
+
 }

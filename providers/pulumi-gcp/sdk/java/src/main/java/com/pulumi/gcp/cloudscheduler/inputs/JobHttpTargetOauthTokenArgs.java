@@ -5,9 +5,9 @@ package com.pulumi.gcp.cloudscheduler.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class JobHttpTargetOauthTokenArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<String> scope;
+    private @Nullable Output<String> scope;
 
-    public Output<String> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
     /**
@@ -33,63 +33,59 @@ public final class JobHttpTargetOauthTokenArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="serviceAccountEmail", required=true)
-      private final Output<String> serviceAccountEmail;
+    private Output<String> serviceAccountEmail;
 
     public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
-    public JobHttpTargetOauthTokenArgs(
-        @Nullable Output<String> scope,
-        Output<String> serviceAccountEmail) {
-        this.scope = scope;
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
-    }
+    private JobHttpTargetOauthTokenArgs() {}
 
-    private JobHttpTargetOauthTokenArgs() {
-        this.scope = Codegen.empty();
-        this.serviceAccountEmail = Codegen.empty();
+    private JobHttpTargetOauthTokenArgs(JobHttpTargetOauthTokenArgs $) {
+        this.scope = $.scope;
+        this.serviceAccountEmail = $.serviceAccountEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobHttpTargetOauthTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> scope;
-        private Output<String> serviceAccountEmail;
+        private JobHttpTargetOauthTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobHttpTargetOauthTokenArgs();
         }
 
         public Builder(JobHttpTargetOauthTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scope = defaults.scope;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
+            $ = new JobHttpTargetOauthTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scope(@Nullable Output<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable String scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
+
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
         }
+
         public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
-            this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
+
         public Builder serviceAccountEmail(String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.of(Objects.requireNonNull(serviceAccountEmail));
-            return this;
-        }        public JobHttpTargetOauthTokenArgs build() {
-            return new JobHttpTargetOauthTokenArgs(scope, serviceAccountEmail);
+            return serviceAccountEmail(Output.of(serviceAccountEmail));
+        }
+
+        public JobHttpTargetOauthTokenArgs build() {
+            $.serviceAccountEmail = Objects.requireNonNull($.serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.endpoints.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,110 +16,99 @@ public final class ServiceApiMethodArgs extends com.pulumi.resources.ResourceArg
     public static final ServiceApiMethodArgs Empty = new ServiceApiMethodArgs();
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="requestType")
-      private final @Nullable Output<String> requestType;
+    private @Nullable Output<String> requestType;
 
-    public Output<String> requestType() {
-        return this.requestType == null ? Codegen.empty() : this.requestType;
+    public Optional<Output<String>> requestType() {
+        return Optional.ofNullable(this.requestType);
     }
 
     @Import(name="responseType")
-      private final @Nullable Output<String> responseType;
+    private @Nullable Output<String> responseType;
 
-    public Output<String> responseType() {
-        return this.responseType == null ? Codegen.empty() : this.responseType;
+    public Optional<Output<String>> responseType() {
+        return Optional.ofNullable(this.responseType);
     }
 
     @Import(name="syntax")
-      private final @Nullable Output<String> syntax;
+    private @Nullable Output<String> syntax;
 
-    public Output<String> syntax() {
-        return this.syntax == null ? Codegen.empty() : this.syntax;
+    public Optional<Output<String>> syntax() {
+        return Optional.ofNullable(this.syntax);
     }
 
-    public ServiceApiMethodArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> requestType,
-        @Nullable Output<String> responseType,
-        @Nullable Output<String> syntax) {
-        this.name = name;
-        this.requestType = requestType;
-        this.responseType = responseType;
-        this.syntax = syntax;
-    }
+    private ServiceApiMethodArgs() {}
 
-    private ServiceApiMethodArgs() {
-        this.name = Codegen.empty();
-        this.requestType = Codegen.empty();
-        this.responseType = Codegen.empty();
-        this.syntax = Codegen.empty();
+    private ServiceApiMethodArgs(ServiceApiMethodArgs $) {
+        this.name = $.name;
+        this.requestType = $.requestType;
+        this.responseType = $.responseType;
+        this.syntax = $.syntax;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceApiMethodArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> requestType;
-        private @Nullable Output<String> responseType;
-        private @Nullable Output<String> syntax;
+        private ServiceApiMethodArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceApiMethodArgs();
         }
 
         public Builder(ServiceApiMethodArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.requestType = defaults.requestType;
-    	      this.responseType = defaults.responseType;
-    	      this.syntax = defaults.syntax;
+            $ = new ServiceApiMethodArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder requestType(@Nullable Output<String> requestType) {
-            this.requestType = requestType;
+            $.requestType = requestType;
             return this;
         }
-        public Builder requestType(@Nullable String requestType) {
-            this.requestType = Codegen.ofNullable(requestType);
-            return this;
+
+        public Builder requestType(String requestType) {
+            return requestType(Output.of(requestType));
         }
+
         public Builder responseType(@Nullable Output<String> responseType) {
-            this.responseType = responseType;
+            $.responseType = responseType;
             return this;
         }
-        public Builder responseType(@Nullable String responseType) {
-            this.responseType = Codegen.ofNullable(responseType);
-            return this;
+
+        public Builder responseType(String responseType) {
+            return responseType(Output.of(responseType));
         }
+
         public Builder syntax(@Nullable Output<String> syntax) {
-            this.syntax = syntax;
+            $.syntax = syntax;
             return this;
         }
-        public Builder syntax(@Nullable String syntax) {
-            this.syntax = Codegen.ofNullable(syntax);
-            return this;
-        }        public ServiceApiMethodArgs build() {
-            return new ServiceApiMethodArgs(name, requestType, responseType, syntax);
+
+        public Builder syntax(String syntax) {
+            return syntax(Output.of(syntax));
+        }
+
+        public ServiceApiMethodArgs build() {
+            return $;
         }
     }
+
 }

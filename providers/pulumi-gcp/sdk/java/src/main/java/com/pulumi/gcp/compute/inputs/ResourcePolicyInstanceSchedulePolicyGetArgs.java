@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs;
 import com.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends com.pulum
      * 
      */
     @Import(name="expirationTime")
-      private final @Nullable Output<String> expirationTime;
+    private @Nullable Output<String> expirationTime;
 
-    public Output<String> expirationTime() {
-        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
+    public Optional<Output<String>> expirationTime() {
+        return Optional.ofNullable(this.expirationTime);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends com.pulum
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends com.pulum
      * 
      */
     @Import(name="timeZone", required=true)
-      private final Output<String> timeZone;
+    private Output<String> timeZone;
 
     public Output<String> timeZone() {
         return this.timeZone;
@@ -57,10 +57,10 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends com.pulum
      * 
      */
     @Import(name="vmStartSchedule")
-      private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs> vmStartSchedule;
+    private @Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs> vmStartSchedule;
 
-    public Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs> vmStartSchedule() {
-        return this.vmStartSchedule == null ? Codegen.empty() : this.vmStartSchedule;
+    public Optional<Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs>> vmStartSchedule() {
+        return Optional.ofNullable(this.vmStartSchedule);
     }
 
     /**
@@ -69,102 +69,89 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends com.pulum
      * 
      */
     @Import(name="vmStopSchedule")
-      private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs> vmStopSchedule;
+    private @Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs> vmStopSchedule;
 
-    public Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs> vmStopSchedule() {
-        return this.vmStopSchedule == null ? Codegen.empty() : this.vmStopSchedule;
+    public Optional<Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs>> vmStopSchedule() {
+        return Optional.ofNullable(this.vmStopSchedule);
     }
 
-    public ResourcePolicyInstanceSchedulePolicyGetArgs(
-        @Nullable Output<String> expirationTime,
-        @Nullable Output<String> startTime,
-        Output<String> timeZone,
-        @Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs> vmStartSchedule,
-        @Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs> vmStopSchedule) {
-        this.expirationTime = expirationTime;
-        this.startTime = startTime;
-        this.timeZone = Objects.requireNonNull(timeZone, "expected parameter 'timeZone' to be non-null");
-        this.vmStartSchedule = vmStartSchedule;
-        this.vmStopSchedule = vmStopSchedule;
-    }
+    private ResourcePolicyInstanceSchedulePolicyGetArgs() {}
 
-    private ResourcePolicyInstanceSchedulePolicyGetArgs() {
-        this.expirationTime = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.timeZone = Codegen.empty();
-        this.vmStartSchedule = Codegen.empty();
-        this.vmStopSchedule = Codegen.empty();
+    private ResourcePolicyInstanceSchedulePolicyGetArgs(ResourcePolicyInstanceSchedulePolicyGetArgs $) {
+        this.expirationTime = $.expirationTime;
+        this.startTime = $.startTime;
+        this.timeZone = $.timeZone;
+        this.vmStartSchedule = $.vmStartSchedule;
+        this.vmStopSchedule = $.vmStopSchedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyInstanceSchedulePolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expirationTime;
-        private @Nullable Output<String> startTime;
-        private Output<String> timeZone;
-        private @Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs> vmStartSchedule;
-        private @Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs> vmStopSchedule;
+        private ResourcePolicyInstanceSchedulePolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyInstanceSchedulePolicyGetArgs();
         }
 
         public Builder(ResourcePolicyInstanceSchedulePolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.startTime = defaults.startTime;
-    	      this.timeZone = defaults.timeZone;
-    	      this.vmStartSchedule = defaults.vmStartSchedule;
-    	      this.vmStopSchedule = defaults.vmStopSchedule;
+            $ = new ResourcePolicyInstanceSchedulePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
-            this.expirationTime = expirationTime;
+            $.expirationTime = expirationTime;
             return this;
         }
-        public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Codegen.ofNullable(expirationTime);
-            return this;
+
+        public Builder expirationTime(String expirationTime) {
+            return expirationTime(Output.of(expirationTime));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder timeZone(Output<String> timeZone) {
-            this.timeZone = Objects.requireNonNull(timeZone);
+            $.timeZone = timeZone;
             return this;
         }
+
         public Builder timeZone(String timeZone) {
-            this.timeZone = Output.of(Objects.requireNonNull(timeZone));
-            return this;
+            return timeZone(Output.of(timeZone));
         }
+
         public Builder vmStartSchedule(@Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs> vmStartSchedule) {
-            this.vmStartSchedule = vmStartSchedule;
+            $.vmStartSchedule = vmStartSchedule;
             return this;
         }
-        public Builder vmStartSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs vmStartSchedule) {
-            this.vmStartSchedule = Codegen.ofNullable(vmStartSchedule);
-            return this;
+
+        public Builder vmStartSchedule(ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs vmStartSchedule) {
+            return vmStartSchedule(Output.of(vmStartSchedule));
         }
+
         public Builder vmStopSchedule(@Nullable Output<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs> vmStopSchedule) {
-            this.vmStopSchedule = vmStopSchedule;
+            $.vmStopSchedule = vmStopSchedule;
             return this;
         }
-        public Builder vmStopSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs vmStopSchedule) {
-            this.vmStopSchedule = Codegen.ofNullable(vmStopSchedule);
-            return this;
-        }        public ResourcePolicyInstanceSchedulePolicyGetArgs build() {
-            return new ResourcePolicyInstanceSchedulePolicyGetArgs(expirationTime, startTime, timeZone, vmStartSchedule, vmStopSchedule);
+
+        public Builder vmStopSchedule(ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs vmStopSchedule) {
+            return vmStopSchedule(Output.of(vmStopSchedule));
+        }
+
+        public ResourcePolicyInstanceSchedulePolicyGetArgs build() {
+            $.timeZone = Objects.requireNonNull($.timeZone, "expected parameter 'timeZone' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends com.pulumi.r
      * 
      */
     @Import(name="applicationReadable")
-      private final @Nullable Output<Boolean> applicationReadable;
+    private @Nullable Output<Boolean> applicationReadable;
 
-    public Output<Boolean> applicationReadable() {
-        return this.applicationReadable == null ? Codegen.empty() : this.applicationReadable;
+    public Optional<Output<Boolean>> applicationReadable() {
+        return Optional.ofNullable(this.applicationReadable);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends com.pulumi.r
      * 
      */
     @Import(name="expiration")
-      private final @Nullable Output<String> expiration;
+    private @Nullable Output<String> expiration;
 
-    public Output<String> expiration() {
-        return this.expiration == null ? Codegen.empty() : this.expiration;
+    public Optional<Output<String>> expiration() {
+        return Optional.ofNullable(this.expiration);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends com.pulumi.r
      * 
      */
     @Import(name="httpHeaders")
-      private final @Nullable Output<Map<String,String>> httpHeaders;
+    private @Nullable Output<Map<String,String>> httpHeaders;
 
-    public Output<Map<String,String>> httpHeaders() {
-        return this.httpHeaders == null ? Codegen.empty() : this.httpHeaders;
+    public Optional<Output<Map<String,String>>> httpHeaders() {
+        return Optional.ofNullable(this.httpHeaders);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends com.pulumi.r
      * 
      */
     @Import(name="mimeType")
-      private final @Nullable Output<String> mimeType;
+    private @Nullable Output<String> mimeType;
 
-    public Output<String> mimeType() {
-        return this.mimeType == null ? Codegen.empty() : this.mimeType;
+    public Optional<Output<String>> mimeType() {
+        return Optional.ofNullable(this.mimeType);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends com.pulumi.r
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends com.pulumi.r
      * 
      */
     @Import(name="requireMatchingFile")
-      private final @Nullable Output<Boolean> requireMatchingFile;
+    private @Nullable Output<Boolean> requireMatchingFile;
 
-    public Output<Boolean> requireMatchingFile() {
-        return this.requireMatchingFile == null ? Codegen.empty() : this.requireMatchingFile;
+    public Optional<Output<Boolean>> requireMatchingFile() {
+        return Optional.ofNullable(this.requireMatchingFile);
     }
 
     /**
@@ -93,128 +93,108 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends com.pulumi.r
      * 
      */
     @Import(name="uploadPathRegex")
-      private final @Nullable Output<String> uploadPathRegex;
+    private @Nullable Output<String> uploadPathRegex;
 
-    public Output<String> uploadPathRegex() {
-        return this.uploadPathRegex == null ? Codegen.empty() : this.uploadPathRegex;
+    public Optional<Output<String>> uploadPathRegex() {
+        return Optional.ofNullable(this.uploadPathRegex);
     }
 
-    public StandardAppVersionHandlerStaticFilesArgs(
-        @Nullable Output<Boolean> applicationReadable,
-        @Nullable Output<String> expiration,
-        @Nullable Output<Map<String,String>> httpHeaders,
-        @Nullable Output<String> mimeType,
-        @Nullable Output<String> path,
-        @Nullable Output<Boolean> requireMatchingFile,
-        @Nullable Output<String> uploadPathRegex) {
-        this.applicationReadable = applicationReadable;
-        this.expiration = expiration;
-        this.httpHeaders = httpHeaders;
-        this.mimeType = mimeType;
-        this.path = path;
-        this.requireMatchingFile = requireMatchingFile;
-        this.uploadPathRegex = uploadPathRegex;
-    }
+    private StandardAppVersionHandlerStaticFilesArgs() {}
 
-    private StandardAppVersionHandlerStaticFilesArgs() {
-        this.applicationReadable = Codegen.empty();
-        this.expiration = Codegen.empty();
-        this.httpHeaders = Codegen.empty();
-        this.mimeType = Codegen.empty();
-        this.path = Codegen.empty();
-        this.requireMatchingFile = Codegen.empty();
-        this.uploadPathRegex = Codegen.empty();
+    private StandardAppVersionHandlerStaticFilesArgs(StandardAppVersionHandlerStaticFilesArgs $) {
+        this.applicationReadable = $.applicationReadable;
+        this.expiration = $.expiration;
+        this.httpHeaders = $.httpHeaders;
+        this.mimeType = $.mimeType;
+        this.path = $.path;
+        this.requireMatchingFile = $.requireMatchingFile;
+        this.uploadPathRegex = $.uploadPathRegex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardAppVersionHandlerStaticFilesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> applicationReadable;
-        private @Nullable Output<String> expiration;
-        private @Nullable Output<Map<String,String>> httpHeaders;
-        private @Nullable Output<String> mimeType;
-        private @Nullable Output<String> path;
-        private @Nullable Output<Boolean> requireMatchingFile;
-        private @Nullable Output<String> uploadPathRegex;
+        private StandardAppVersionHandlerStaticFilesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardAppVersionHandlerStaticFilesArgs();
         }
 
         public Builder(StandardAppVersionHandlerStaticFilesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationReadable = defaults.applicationReadable;
-    	      this.expiration = defaults.expiration;
-    	      this.httpHeaders = defaults.httpHeaders;
-    	      this.mimeType = defaults.mimeType;
-    	      this.path = defaults.path;
-    	      this.requireMatchingFile = defaults.requireMatchingFile;
-    	      this.uploadPathRegex = defaults.uploadPathRegex;
+            $ = new StandardAppVersionHandlerStaticFilesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationReadable(@Nullable Output<Boolean> applicationReadable) {
-            this.applicationReadable = applicationReadable;
+            $.applicationReadable = applicationReadable;
             return this;
         }
-        public Builder applicationReadable(@Nullable Boolean applicationReadable) {
-            this.applicationReadable = Codegen.ofNullable(applicationReadable);
-            return this;
+
+        public Builder applicationReadable(Boolean applicationReadable) {
+            return applicationReadable(Output.of(applicationReadable));
         }
+
         public Builder expiration(@Nullable Output<String> expiration) {
-            this.expiration = expiration;
+            $.expiration = expiration;
             return this;
         }
-        public Builder expiration(@Nullable String expiration) {
-            this.expiration = Codegen.ofNullable(expiration);
-            return this;
+
+        public Builder expiration(String expiration) {
+            return expiration(Output.of(expiration));
         }
+
         public Builder httpHeaders(@Nullable Output<Map<String,String>> httpHeaders) {
-            this.httpHeaders = httpHeaders;
+            $.httpHeaders = httpHeaders;
             return this;
         }
-        public Builder httpHeaders(@Nullable Map<String,String> httpHeaders) {
-            this.httpHeaders = Codegen.ofNullable(httpHeaders);
-            return this;
+
+        public Builder httpHeaders(Map<String,String> httpHeaders) {
+            return httpHeaders(Output.of(httpHeaders));
         }
+
         public Builder mimeType(@Nullable Output<String> mimeType) {
-            this.mimeType = mimeType;
+            $.mimeType = mimeType;
             return this;
         }
-        public Builder mimeType(@Nullable String mimeType) {
-            this.mimeType = Codegen.ofNullable(mimeType);
-            return this;
+
+        public Builder mimeType(String mimeType) {
+            return mimeType(Output.of(mimeType));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder requireMatchingFile(@Nullable Output<Boolean> requireMatchingFile) {
-            this.requireMatchingFile = requireMatchingFile;
+            $.requireMatchingFile = requireMatchingFile;
             return this;
         }
-        public Builder requireMatchingFile(@Nullable Boolean requireMatchingFile) {
-            this.requireMatchingFile = Codegen.ofNullable(requireMatchingFile);
-            return this;
+
+        public Builder requireMatchingFile(Boolean requireMatchingFile) {
+            return requireMatchingFile(Output.of(requireMatchingFile));
         }
+
         public Builder uploadPathRegex(@Nullable Output<String> uploadPathRegex) {
-            this.uploadPathRegex = uploadPathRegex;
+            $.uploadPathRegex = uploadPathRegex;
             return this;
         }
-        public Builder uploadPathRegex(@Nullable String uploadPathRegex) {
-            this.uploadPathRegex = Codegen.ofNullable(uploadPathRegex);
-            return this;
-        }        public StandardAppVersionHandlerStaticFilesArgs build() {
-            return new StandardAppVersionHandlerStaticFilesArgs(applicationReadable, expiration, httpHeaders, mimeType, path, requireMatchingFile, uploadPathRegex);
+
+        public Builder uploadPathRegex(String uploadPathRegex) {
+            return uploadPathRegex(Output.of(uploadPathRegex));
+        }
+
+        public StandardAppVersionHandlerStaticFilesArgs build() {
+            return $;
         }
     }
+
 }

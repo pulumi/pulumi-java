@@ -13,62 +13,59 @@ public final class GetClusterMasterAuthorizedNetworksConfigCidrBlock extends com
     public static final GetClusterMasterAuthorizedNetworksConfigCidrBlock Empty = new GetClusterMasterAuthorizedNetworksConfigCidrBlock();
 
     @Import(name="cidrBlock", required=true)
-      private final String cidrBlock;
+    private String cidrBlock;
 
     public String cidrBlock() {
         return this.cidrBlock;
     }
 
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
     }
 
-    public GetClusterMasterAuthorizedNetworksConfigCidrBlock(
-        String cidrBlock,
-        String displayName) {
-        this.cidrBlock = Objects.requireNonNull(cidrBlock, "expected parameter 'cidrBlock' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-    }
+    private GetClusterMasterAuthorizedNetworksConfigCidrBlock() {}
 
-    private GetClusterMasterAuthorizedNetworksConfigCidrBlock() {
-        this.cidrBlock = null;
-        this.displayName = null;
+    private GetClusterMasterAuthorizedNetworksConfigCidrBlock(GetClusterMasterAuthorizedNetworksConfigCidrBlock $) {
+        this.cidrBlock = $.cidrBlock;
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterMasterAuthorizedNetworksConfigCidrBlock defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cidrBlock;
-        private String displayName;
+        private GetClusterMasterAuthorizedNetworksConfigCidrBlock $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterMasterAuthorizedNetworksConfigCidrBlock();
         }
 
         public Builder(GetClusterMasterAuthorizedNetworksConfigCidrBlock defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.displayName = defaults.displayName;
+            $ = new GetClusterMasterAuthorizedNetworksConfigCidrBlock(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlock(String cidrBlock) {
-            this.cidrBlock = Objects.requireNonNull(cidrBlock);
+            $.cidrBlock = cidrBlock;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
-        }        public GetClusterMasterAuthorizedNetworksConfigCidrBlock build() {
-            return new GetClusterMasterAuthorizedNetworksConfigCidrBlock(cidrBlock, displayName);
+        }
+
+        public GetClusterMasterAuthorizedNetworksConfigCidrBlock build() {
+            $.cidrBlock = Objects.requireNonNull($.cidrBlock, "expected parameter 'cidrBlock' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

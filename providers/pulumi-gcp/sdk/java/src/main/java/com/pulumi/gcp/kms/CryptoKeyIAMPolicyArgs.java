@@ -5,7 +5,6 @@ package com.pulumi.gcp.kms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +21,7 @@ public final class CryptoKeyIAMPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cryptoKeyId", required=true)
-      private final Output<String> cryptoKeyId;
+    private Output<String> cryptoKeyId;
 
     public Output<String> cryptoKeyId() {
         return this.cryptoKeyId;
@@ -34,63 +33,60 @@ public final class CryptoKeyIAMPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
-    public CryptoKeyIAMPolicyArgs(
-        Output<String> cryptoKeyId,
-        Output<String> policyData) {
-        this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId, "expected parameter 'cryptoKeyId' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-    }
+    private CryptoKeyIAMPolicyArgs() {}
 
-    private CryptoKeyIAMPolicyArgs() {
-        this.cryptoKeyId = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private CryptoKeyIAMPolicyArgs(CryptoKeyIAMPolicyArgs $) {
+        this.cryptoKeyId = $.cryptoKeyId;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CryptoKeyIAMPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cryptoKeyId;
-        private Output<String> policyData;
+        private CryptoKeyIAMPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CryptoKeyIAMPolicyArgs();
         }
 
         public Builder(CryptoKeyIAMPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cryptoKeyId = defaults.cryptoKeyId;
-    	      this.policyData = defaults.policyData;
+            $ = new CryptoKeyIAMPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cryptoKeyId(Output<String> cryptoKeyId) {
-            this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
+            $.cryptoKeyId = cryptoKeyId;
             return this;
         }
+
         public Builder cryptoKeyId(String cryptoKeyId) {
-            this.cryptoKeyId = Output.of(Objects.requireNonNull(cryptoKeyId));
-            return this;
+            return cryptoKeyId(Output.of(cryptoKeyId));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
-        }        public CryptoKeyIAMPolicyArgs build() {
-            return new CryptoKeyIAMPolicyArgs(cryptoKeyId, policyData);
+            return policyData(Output.of(policyData));
+        }
+
+        public CryptoKeyIAMPolicyArgs build() {
+            $.cryptoKeyId = Objects.requireNonNull($.cryptoKeyId, "expected parameter 'cryptoKeyId' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

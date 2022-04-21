@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.NodeTemplateNodeTypeFlexibilityGetArgs;
 import com.pulumi.gcp.compute.inputs.NodeTemplateServerBindingGetArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cpuOvercommitType")
-      private final @Nullable Output<String> cpuOvercommitType;
+    private @Nullable Output<String> cpuOvercommitType;
 
-    public Output<String> cpuOvercommitType() {
-        return this.cpuOvercommitType == null ? Codegen.empty() : this.cpuOvercommitType;
+    public Optional<Output<String>> cpuOvercommitType() {
+        return Optional.ofNullable(this.cpuOvercommitType);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeAffinityLabels")
-      private final @Nullable Output<Map<String,String>> nodeAffinityLabels;
+    private @Nullable Output<Map<String,String>> nodeAffinityLabels;
 
-    public Output<Map<String,String>> nodeAffinityLabels() {
-        return this.nodeAffinityLabels == null ? Codegen.empty() : this.nodeAffinityLabels;
+    public Optional<Output<Map<String,String>>> nodeAffinityLabels() {
+        return Optional.ofNullable(this.nodeAffinityLabels);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeType")
-      private final @Nullable Output<String> nodeType;
+    private @Nullable Output<String> nodeType;
 
-    public Output<String> nodeType() {
-        return this.nodeType == null ? Codegen.empty() : this.nodeType;
+    public Optional<Output<String>> nodeType() {
+        return Optional.ofNullable(this.nodeType);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeTypeFlexibility")
-      private final @Nullable Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility;
+    private @Nullable Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility;
 
-    public Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility() {
-        return this.nodeTypeFlexibility == null ? Codegen.empty() : this.nodeTypeFlexibility;
+    public Optional<Output<NodeTemplateNodeTypeFlexibilityGetArgs>> nodeTypeFlexibility() {
+        return Optional.ofNullable(this.nodeTypeFlexibility);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -145,180 +145,148 @@ public final class NodeTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverBinding")
-      private final @Nullable Output<NodeTemplateServerBindingGetArgs> serverBinding;
+    private @Nullable Output<NodeTemplateServerBindingGetArgs> serverBinding;
 
-    public Output<NodeTemplateServerBindingGetArgs> serverBinding() {
-        return this.serverBinding == null ? Codegen.empty() : this.serverBinding;
+    public Optional<Output<NodeTemplateServerBindingGetArgs>> serverBinding() {
+        return Optional.ofNullable(this.serverBinding);
     }
 
-    public NodeTemplateState(
-        @Nullable Output<String> cpuOvercommitType,
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> nodeAffinityLabels,
-        @Nullable Output<String> nodeType,
-        @Nullable Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<NodeTemplateServerBindingGetArgs> serverBinding) {
-        this.cpuOvercommitType = cpuOvercommitType;
-        this.creationTimestamp = creationTimestamp;
-        this.description = description;
-        this.name = name;
-        this.nodeAffinityLabels = nodeAffinityLabels;
-        this.nodeType = nodeType;
-        this.nodeTypeFlexibility = nodeTypeFlexibility;
-        this.project = project;
-        this.region = region;
-        this.selfLink = selfLink;
-        this.serverBinding = serverBinding;
-    }
+    private NodeTemplateState() {}
 
-    private NodeTemplateState() {
-        this.cpuOvercommitType = Codegen.empty();
-        this.creationTimestamp = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nodeAffinityLabels = Codegen.empty();
-        this.nodeType = Codegen.empty();
-        this.nodeTypeFlexibility = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.serverBinding = Codegen.empty();
+    private NodeTemplateState(NodeTemplateState $) {
+        this.cpuOvercommitType = $.cpuOvercommitType;
+        this.creationTimestamp = $.creationTimestamp;
+        this.description = $.description;
+        this.name = $.name;
+        this.nodeAffinityLabels = $.nodeAffinityLabels;
+        this.nodeType = $.nodeType;
+        this.nodeTypeFlexibility = $.nodeTypeFlexibility;
+        this.project = $.project;
+        this.region = $.region;
+        this.selfLink = $.selfLink;
+        this.serverBinding = $.serverBinding;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeTemplateState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cpuOvercommitType;
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> nodeAffinityLabels;
-        private @Nullable Output<String> nodeType;
-        private @Nullable Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<NodeTemplateServerBindingGetArgs> serverBinding;
+        private NodeTemplateState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeTemplateState();
         }
 
         public Builder(NodeTemplateState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuOvercommitType = defaults.cpuOvercommitType;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.nodeAffinityLabels = defaults.nodeAffinityLabels;
-    	      this.nodeType = defaults.nodeType;
-    	      this.nodeTypeFlexibility = defaults.nodeTypeFlexibility;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.selfLink = defaults.selfLink;
-    	      this.serverBinding = defaults.serverBinding;
+            $ = new NodeTemplateState(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuOvercommitType(@Nullable Output<String> cpuOvercommitType) {
-            this.cpuOvercommitType = cpuOvercommitType;
+            $.cpuOvercommitType = cpuOvercommitType;
             return this;
         }
-        public Builder cpuOvercommitType(@Nullable String cpuOvercommitType) {
-            this.cpuOvercommitType = Codegen.ofNullable(cpuOvercommitType);
-            return this;
+
+        public Builder cpuOvercommitType(String cpuOvercommitType) {
+            return cpuOvercommitType(Output.of(cpuOvercommitType));
         }
+
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nodeAffinityLabels(@Nullable Output<Map<String,String>> nodeAffinityLabels) {
-            this.nodeAffinityLabels = nodeAffinityLabels;
+            $.nodeAffinityLabels = nodeAffinityLabels;
             return this;
         }
-        public Builder nodeAffinityLabels(@Nullable Map<String,String> nodeAffinityLabels) {
-            this.nodeAffinityLabels = Codegen.ofNullable(nodeAffinityLabels);
-            return this;
+
+        public Builder nodeAffinityLabels(Map<String,String> nodeAffinityLabels) {
+            return nodeAffinityLabels(Output.of(nodeAffinityLabels));
         }
+
         public Builder nodeType(@Nullable Output<String> nodeType) {
-            this.nodeType = nodeType;
+            $.nodeType = nodeType;
             return this;
         }
-        public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Codegen.ofNullable(nodeType);
-            return this;
+
+        public Builder nodeType(String nodeType) {
+            return nodeType(Output.of(nodeType));
         }
+
         public Builder nodeTypeFlexibility(@Nullable Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility) {
-            this.nodeTypeFlexibility = nodeTypeFlexibility;
+            $.nodeTypeFlexibility = nodeTypeFlexibility;
             return this;
         }
-        public Builder nodeTypeFlexibility(@Nullable NodeTemplateNodeTypeFlexibilityGetArgs nodeTypeFlexibility) {
-            this.nodeTypeFlexibility = Codegen.ofNullable(nodeTypeFlexibility);
-            return this;
+
+        public Builder nodeTypeFlexibility(NodeTemplateNodeTypeFlexibilityGetArgs nodeTypeFlexibility) {
+            return nodeTypeFlexibility(Output.of(nodeTypeFlexibility));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder serverBinding(@Nullable Output<NodeTemplateServerBindingGetArgs> serverBinding) {
-            this.serverBinding = serverBinding;
+            $.serverBinding = serverBinding;
             return this;
         }
-        public Builder serverBinding(@Nullable NodeTemplateServerBindingGetArgs serverBinding) {
-            this.serverBinding = Codegen.ofNullable(serverBinding);
-            return this;
-        }        public NodeTemplateState build() {
-            return new NodeTemplateState(cpuOvercommitType, creationTimestamp, description, name, nodeAffinityLabels, nodeType, nodeTypeFlexibility, project, region, selfLink, serverBinding);
+
+        public Builder serverBinding(NodeTemplateServerBindingGetArgs serverBinding) {
+            return serverBinding(Output.of(serverBinding));
+        }
+
+        public NodeTemplateState build() {
+            return $;
         }
     }
+
 }

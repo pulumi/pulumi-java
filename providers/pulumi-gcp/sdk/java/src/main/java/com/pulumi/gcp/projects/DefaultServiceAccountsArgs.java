@@ -5,9 +5,9 @@ package com.pulumi.gcp.projects;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DefaultServiceAccountsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
@@ -31,7 +31,7 @@ public final class DefaultServiceAccountsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="project", required=true)
-      private final Output<String> project;
+    private Output<String> project;
 
     public Output<String> project() {
         return this.project;
@@ -45,76 +45,70 @@ public final class DefaultServiceAccountsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="restorePolicy")
-      private final @Nullable Output<String> restorePolicy;
+    private @Nullable Output<String> restorePolicy;
 
-    public Output<String> restorePolicy() {
-        return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
+    public Optional<Output<String>> restorePolicy() {
+        return Optional.ofNullable(this.restorePolicy);
     }
 
-    public DefaultServiceAccountsArgs(
-        Output<String> action,
-        Output<String> project,
-        @Nullable Output<String> restorePolicy) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.restorePolicy = restorePolicy;
-    }
+    private DefaultServiceAccountsArgs() {}
 
-    private DefaultServiceAccountsArgs() {
-        this.action = Codegen.empty();
-        this.project = Codegen.empty();
-        this.restorePolicy = Codegen.empty();
+    private DefaultServiceAccountsArgs(DefaultServiceAccountsArgs $) {
+        this.action = $.action;
+        this.project = $.project;
+        this.restorePolicy = $.restorePolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultServiceAccountsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private Output<String> project;
-        private @Nullable Output<String> restorePolicy;
+        private DefaultServiceAccountsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultServiceAccountsArgs();
         }
 
         public Builder(DefaultServiceAccountsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.project = defaults.project;
-    	      this.restorePolicy = defaults.restorePolicy;
+            $ = new DefaultServiceAccountsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder project(Output<String> project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Output.of(Objects.requireNonNull(project));
-            return this;
+            return project(Output.of(project));
         }
+
         public Builder restorePolicy(@Nullable Output<String> restorePolicy) {
-            this.restorePolicy = restorePolicy;
+            $.restorePolicy = restorePolicy;
             return this;
         }
-        public Builder restorePolicy(@Nullable String restorePolicy) {
-            this.restorePolicy = Codegen.ofNullable(restorePolicy);
-            return this;
-        }        public DefaultServiceAccountsArgs build() {
-            return new DefaultServiceAccountsArgs(action, project, restorePolicy);
+
+        public Builder restorePolicy(String restorePolicy) {
+            return restorePolicy(Output.of(restorePolicy));
+        }
+
+        public DefaultServiceAccountsArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

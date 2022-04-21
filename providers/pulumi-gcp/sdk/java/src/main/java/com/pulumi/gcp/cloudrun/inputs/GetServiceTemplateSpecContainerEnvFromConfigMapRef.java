@@ -15,65 +15,63 @@ public final class GetServiceTemplateSpecContainerEnvFromConfigMapRef extends co
     public static final GetServiceTemplateSpecContainerEnvFromConfigMapRef Empty = new GetServiceTemplateSpecContainerEnvFromConfigMapRef();
 
     @Import(name="localObjectReferences", required=true)
-      private final List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences;
+    private List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences;
 
     public List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences() {
         return this.localObjectReferences;
     }
 
     @Import(name="optional", required=true)
-      private final Boolean optional;
+    private Boolean optional;
 
     public Boolean optional() {
         return this.optional;
     }
 
-    public GetServiceTemplateSpecContainerEnvFromConfigMapRef(
-        List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences,
-        Boolean optional) {
-        this.localObjectReferences = Objects.requireNonNull(localObjectReferences, "expected parameter 'localObjectReferences' to be non-null");
-        this.optional = Objects.requireNonNull(optional, "expected parameter 'optional' to be non-null");
-    }
+    private GetServiceTemplateSpecContainerEnvFromConfigMapRef() {}
 
-    private GetServiceTemplateSpecContainerEnvFromConfigMapRef() {
-        this.localObjectReferences = List.of();
-        this.optional = null;
+    private GetServiceTemplateSpecContainerEnvFromConfigMapRef(GetServiceTemplateSpecContainerEnvFromConfigMapRef $) {
+        this.localObjectReferences = $.localObjectReferences;
+        this.optional = $.optional;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateSpecContainerEnvFromConfigMapRef defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences;
-        private Boolean optional;
+        private GetServiceTemplateSpecContainerEnvFromConfigMapRef $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateSpecContainerEnvFromConfigMapRef();
         }
 
         public Builder(GetServiceTemplateSpecContainerEnvFromConfigMapRef defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localObjectReferences = defaults.localObjectReferences;
-    	      this.optional = defaults.optional;
+            $ = new GetServiceTemplateSpecContainerEnvFromConfigMapRef(Objects.requireNonNull(defaults));
         }
 
         public Builder localObjectReferences(List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences) {
-            this.localObjectReferences = Objects.requireNonNull(localObjectReferences);
+            $.localObjectReferences = localObjectReferences;
             return this;
         }
+
         public Builder localObjectReferences(GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference... localObjectReferences) {
             return localObjectReferences(List.of(localObjectReferences));
         }
+
         public Builder optional(Boolean optional) {
-            this.optional = Objects.requireNonNull(optional);
+            $.optional = optional;
             return this;
-        }        public GetServiceTemplateSpecContainerEnvFromConfigMapRef build() {
-            return new GetServiceTemplateSpecContainerEnvFromConfigMapRef(localObjectReferences, optional);
+        }
+
+        public GetServiceTemplateSpecContainerEnvFromConfigMapRef build() {
+            $.localObjectReferences = Objects.requireNonNull($.localObjectReferences, "expected parameter 'localObjectReferences' to be non-null");
+            $.optional = Objects.requireNonNull($.optional, "expected parameter 'optional' to be non-null");
+            return $;
         }
     }
+
 }

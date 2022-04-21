@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataproc;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.JobIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,21 +18,21 @@ public final class JobIAMBindingArgs extends com.pulumi.resources.ResourceArgs {
     public static final JobIAMBindingArgs Empty = new JobIAMBindingArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<JobIAMBindingConditionArgs> condition;
+    private @Nullable Output<JobIAMBindingConditionArgs> condition;
 
-    public Output<JobIAMBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<JobIAMBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="jobId", required=true)
-      private final Output<String> jobId;
+    private Output<String> jobId;
 
     public Output<String> jobId() {
         return this.jobId;
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -44,10 +44,10 @@ public final class JobIAMBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class JobIAMBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -69,118 +69,105 @@ public final class JobIAMBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public JobIAMBindingArgs(
-        @Nullable Output<JobIAMBindingConditionArgs> condition,
-        Output<String> jobId,
-        Output<List<String>> members,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<String> role) {
-        this.condition = condition;
-        this.jobId = Objects.requireNonNull(jobId, "expected parameter 'jobId' to be non-null");
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.project = project;
-        this.region = region;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private JobIAMBindingArgs() {}
 
-    private JobIAMBindingArgs() {
-        this.condition = Codegen.empty();
-        this.jobId = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.role = Codegen.empty();
+    private JobIAMBindingArgs(JobIAMBindingArgs $) {
+        this.condition = $.condition;
+        this.jobId = $.jobId;
+        this.members = $.members;
+        this.project = $.project;
+        this.region = $.region;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobIAMBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JobIAMBindingConditionArgs> condition;
-        private Output<String> jobId;
-        private Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<String> role;
+        private JobIAMBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobIAMBindingArgs();
         }
 
         public Builder(JobIAMBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.jobId = defaults.jobId;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.role = defaults.role;
+            $ = new JobIAMBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<JobIAMBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable JobIAMBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(JobIAMBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder jobId(Output<String> jobId) {
-            this.jobId = Objects.requireNonNull(jobId);
+            $.jobId = jobId;
             return this;
         }
+
         public Builder jobId(String jobId) {
-            this.jobId = Output.of(Objects.requireNonNull(jobId));
-            return this;
+            return jobId(Output.of(jobId));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public JobIAMBindingArgs build() {
-            return new JobIAMBindingArgs(condition, jobId, members, project, region, role);
+            return role(Output.of(role));
+        }
+
+        public JobIAMBindingArgs build() {
+            $.jobId = Objects.requireNonNull($.jobId, "expected parameter 'jobId' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @Import(name="dictionary")
-      private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary;
+    private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary;
 
-    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary() {
-        return this.dictionary == null ? Codegen.empty() : this.dictionary;
+    public Optional<Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs>> dictionary() {
+        return Optional.ofNullable(this.dictionary);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @Import(name="exclusionType")
-      private final @Nullable Output<String> exclusionType;
+    private @Nullable Output<String> exclusionType;
 
-    public Output<String> exclusionType() {
-        return this.exclusionType == null ? Codegen.empty() : this.exclusionType;
+    public Optional<Output<String>> exclusionType() {
+        return Optional.ofNullable(this.exclusionType);
     }
 
     /**
@@ -52,7 +52,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @Import(name="infoType", required=true)
-      private final Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType;
+    private Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType;
 
     public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType() {
         return this.infoType;
@@ -66,10 +66,10 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @Import(name="likelihood")
-      private final @Nullable Output<String> likelihood;
+    private @Nullable Output<String> likelihood;
 
-    public Output<String> likelihood() {
-        return this.likelihood == null ? Codegen.empty() : this.likelihood;
+    public Optional<Output<String>> likelihood() {
+        return Optional.ofNullable(this.likelihood);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @Import(name="regex")
-      private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex;
+    private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex;
 
-    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex() {
-        return this.regex == null ? Codegen.empty() : this.regex;
+    public Optional<Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs>> regex() {
+        return Optional.ofNullable(this.regex);
     }
 
     /**
@@ -90,115 +90,99 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
      * 
      */
     @Import(name="storedType")
-      private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType;
+    private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType;
 
-    public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType() {
-        return this.storedType == null ? Codegen.empty() : this.storedType;
+    public Optional<Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs>> storedType() {
+        return Optional.ofNullable(this.storedType);
     }
 
-    public PreventionInspectTemplateInspectConfigCustomInfoTypeArgs(
-        @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary,
-        @Nullable Output<String> exclusionType,
-        Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType,
-        @Nullable Output<String> likelihood,
-        @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex,
-        @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType) {
-        this.dictionary = dictionary;
-        this.exclusionType = exclusionType;
-        this.infoType = Objects.requireNonNull(infoType, "expected parameter 'infoType' to be non-null");
-        this.likelihood = likelihood;
-        this.regex = regex;
-        this.storedType = storedType;
-    }
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeArgs() {}
 
-    private PreventionInspectTemplateInspectConfigCustomInfoTypeArgs() {
-        this.dictionary = Codegen.empty();
-        this.exclusionType = Codegen.empty();
-        this.infoType = Codegen.empty();
-        this.likelihood = Codegen.empty();
-        this.regex = Codegen.empty();
-        this.storedType = Codegen.empty();
+    private PreventionInspectTemplateInspectConfigCustomInfoTypeArgs(PreventionInspectTemplateInspectConfigCustomInfoTypeArgs $) {
+        this.dictionary = $.dictionary;
+        this.exclusionType = $.exclusionType;
+        this.infoType = $.infoType;
+        this.likelihood = $.likelihood;
+        this.regex = $.regex;
+        this.storedType = $.storedType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionInspectTemplateInspectConfigCustomInfoTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary;
-        private @Nullable Output<String> exclusionType;
-        private Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType;
-        private @Nullable Output<String> likelihood;
-        private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex;
-        private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType;
+        private PreventionInspectTemplateInspectConfigCustomInfoTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionInspectTemplateInspectConfigCustomInfoTypeArgs();
         }
 
         public Builder(PreventionInspectTemplateInspectConfigCustomInfoTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dictionary = defaults.dictionary;
-    	      this.exclusionType = defaults.exclusionType;
-    	      this.infoType = defaults.infoType;
-    	      this.likelihood = defaults.likelihood;
-    	      this.regex = defaults.regex;
-    	      this.storedType = defaults.storedType;
+            $ = new PreventionInspectTemplateInspectConfigCustomInfoTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dictionary(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary) {
-            this.dictionary = dictionary;
+            $.dictionary = dictionary;
             return this;
         }
-        public Builder dictionary(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs dictionary) {
-            this.dictionary = Codegen.ofNullable(dictionary);
-            return this;
+
+        public Builder dictionary(PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs dictionary) {
+            return dictionary(Output.of(dictionary));
         }
+
         public Builder exclusionType(@Nullable Output<String> exclusionType) {
-            this.exclusionType = exclusionType;
+            $.exclusionType = exclusionType;
             return this;
         }
-        public Builder exclusionType(@Nullable String exclusionType) {
-            this.exclusionType = Codegen.ofNullable(exclusionType);
-            return this;
+
+        public Builder exclusionType(String exclusionType) {
+            return exclusionType(Output.of(exclusionType));
         }
+
         public Builder infoType(Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType) {
-            this.infoType = Objects.requireNonNull(infoType);
+            $.infoType = infoType;
             return this;
         }
+
         public Builder infoType(PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs infoType) {
-            this.infoType = Output.of(Objects.requireNonNull(infoType));
-            return this;
+            return infoType(Output.of(infoType));
         }
+
         public Builder likelihood(@Nullable Output<String> likelihood) {
-            this.likelihood = likelihood;
+            $.likelihood = likelihood;
             return this;
         }
-        public Builder likelihood(@Nullable String likelihood) {
-            this.likelihood = Codegen.ofNullable(likelihood);
-            return this;
+
+        public Builder likelihood(String likelihood) {
+            return likelihood(Output.of(likelihood));
         }
+
         public Builder regex(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex) {
-            this.regex = regex;
+            $.regex = regex;
             return this;
         }
-        public Builder regex(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs regex) {
-            this.regex = Codegen.ofNullable(regex);
-            return this;
+
+        public Builder regex(PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs regex) {
+            return regex(Output.of(regex));
         }
+
         public Builder storedType(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType) {
-            this.storedType = storedType;
+            $.storedType = storedType;
             return this;
         }
-        public Builder storedType(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs storedType) {
-            this.storedType = Codegen.ofNullable(storedType);
-            return this;
-        }        public PreventionInspectTemplateInspectConfigCustomInfoTypeArgs build() {
-            return new PreventionInspectTemplateInspectConfigCustomInfoTypeArgs(dictionary, exclusionType, infoType, likelihood, regex, storedType);
+
+        public Builder storedType(PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs storedType) {
+            return storedType(Output.of(storedType));
+        }
+
+        public PreventionInspectTemplateInspectConfigCustomInfoTypeArgs build() {
+            $.infoType = Objects.requireNonNull($.infoType, "expected parameter 'infoType' to be non-null");
+            return $;
         }
     }
+
 }

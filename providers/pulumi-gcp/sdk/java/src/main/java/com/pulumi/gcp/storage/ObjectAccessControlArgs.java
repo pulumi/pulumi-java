@@ -5,7 +5,6 @@ package com.pulumi.gcp.storage;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ObjectAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -38,7 +37,7 @@ public final class ObjectAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="entity", required=true)
-      private final Output<String> entity;
+    private Output<String> entity;
 
     public Output<String> entity() {
         return this.entity;
@@ -49,7 +48,7 @@ public final class ObjectAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="object", required=true)
-      private final Output<String> object;
+    private Output<String> object;
 
     public Output<String> object() {
         return this.object;
@@ -61,89 +60,82 @@ public final class ObjectAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public ObjectAccessControlArgs(
-        Output<String> bucket,
-        Output<String> entity,
-        Output<String> object,
-        Output<String> role) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.entity = Objects.requireNonNull(entity, "expected parameter 'entity' to be non-null");
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private ObjectAccessControlArgs() {}
 
-    private ObjectAccessControlArgs() {
-        this.bucket = Codegen.empty();
-        this.entity = Codegen.empty();
-        this.object = Codegen.empty();
-        this.role = Codegen.empty();
+    private ObjectAccessControlArgs(ObjectAccessControlArgs $) {
+        this.bucket = $.bucket;
+        this.entity = $.entity;
+        this.object = $.object;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectAccessControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private Output<String> entity;
-        private Output<String> object;
-        private Output<String> role;
+        private ObjectAccessControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectAccessControlArgs();
         }
 
         public Builder(ObjectAccessControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.entity = defaults.entity;
-    	      this.object = defaults.object;
-    	      this.role = defaults.role;
+            $ = new ObjectAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder entity(Output<String> entity) {
-            this.entity = Objects.requireNonNull(entity);
+            $.entity = entity;
             return this;
         }
+
         public Builder entity(String entity) {
-            this.entity = Output.of(Objects.requireNonNull(entity));
-            return this;
+            return entity(Output.of(entity));
         }
+
         public Builder object(Output<String> object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Output.of(Objects.requireNonNull(object));
-            return this;
+            return object(Output.of(object));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public ObjectAccessControlArgs build() {
-            return new ObjectAccessControlArgs(bucket, entity, object, role);
+            return role(Output.of(role));
+        }
+
+        public ObjectAccessControlArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.entity = Objects.requireNonNull($.entity, "expected parameter 'entity' to be non-null");
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

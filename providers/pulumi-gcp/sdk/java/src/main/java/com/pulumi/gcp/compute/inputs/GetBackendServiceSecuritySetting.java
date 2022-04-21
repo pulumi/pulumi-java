@@ -14,65 +14,63 @@ public final class GetBackendServiceSecuritySetting extends com.pulumi.resources
     public static final GetBackendServiceSecuritySetting Empty = new GetBackendServiceSecuritySetting();
 
     @Import(name="clientTlsPolicy", required=true)
-      private final String clientTlsPolicy;
+    private String clientTlsPolicy;
 
     public String clientTlsPolicy() {
         return this.clientTlsPolicy;
     }
 
     @Import(name="subjectAltNames", required=true)
-      private final List<String> subjectAltNames;
+    private List<String> subjectAltNames;
 
     public List<String> subjectAltNames() {
         return this.subjectAltNames;
     }
 
-    public GetBackendServiceSecuritySetting(
-        String clientTlsPolicy,
-        List<String> subjectAltNames) {
-        this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy, "expected parameter 'clientTlsPolicy' to be non-null");
-        this.subjectAltNames = Objects.requireNonNull(subjectAltNames, "expected parameter 'subjectAltNames' to be non-null");
-    }
+    private GetBackendServiceSecuritySetting() {}
 
-    private GetBackendServiceSecuritySetting() {
-        this.clientTlsPolicy = null;
-        this.subjectAltNames = List.of();
+    private GetBackendServiceSecuritySetting(GetBackendServiceSecuritySetting $) {
+        this.clientTlsPolicy = $.clientTlsPolicy;
+        this.subjectAltNames = $.subjectAltNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendServiceSecuritySetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientTlsPolicy;
-        private List<String> subjectAltNames;
+        private GetBackendServiceSecuritySetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendServiceSecuritySetting();
         }
 
         public Builder(GetBackendServiceSecuritySetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientTlsPolicy = defaults.clientTlsPolicy;
-    	      this.subjectAltNames = defaults.subjectAltNames;
+            $ = new GetBackendServiceSecuritySetting(Objects.requireNonNull(defaults));
         }
 
         public Builder clientTlsPolicy(String clientTlsPolicy) {
-            this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
+            $.clientTlsPolicy = clientTlsPolicy;
             return this;
         }
+
         public Builder subjectAltNames(List<String> subjectAltNames) {
-            this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
+            $.subjectAltNames = subjectAltNames;
             return this;
         }
+
         public Builder subjectAltNames(String... subjectAltNames) {
             return subjectAltNames(List.of(subjectAltNames));
-        }        public GetBackendServiceSecuritySetting build() {
-            return new GetBackendServiceSecuritySetting(clientTlsPolicy, subjectAltNames);
+        }
+
+        public GetBackendServiceSecuritySetting build() {
+            $.clientTlsPolicy = Objects.requireNonNull($.clientTlsPolicy, "expected parameter 'clientTlsPolicy' to be non-null");
+            $.subjectAltNames = Objects.requireNonNull($.subjectAltNames, "expected parameter 'subjectAltNames' to be non-null");
+            return $;
         }
     }
+
 }

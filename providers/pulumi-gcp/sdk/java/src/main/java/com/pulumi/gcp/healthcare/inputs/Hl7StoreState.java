@@ -5,7 +5,6 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigGetArgs;
 import com.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigsGetArgs;
 import com.pulumi.gcp.healthcare.inputs.Hl7StoreParserConfigGetArgs;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataset")
-      private final @Nullable Output<String> dataset;
+    private @Nullable Output<String> dataset;
 
-    public Output<String> dataset() {
-        return this.dataset == null ? Codegen.empty() : this.dataset;
+    public Optional<Output<String>> dataset() {
+        return Optional.ofNullable(this.dataset);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -74,11 +74,11 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* This field has been replaced by notificationConfigs */
     @Import(name="notificationConfig")
-      private final @Nullable Output<Hl7StoreNotificationConfigGetArgs> notificationConfig;
+    private @Nullable Output<Hl7StoreNotificationConfigGetArgs> notificationConfig;
 
     @Deprecated /* This field has been replaced by notificationConfigs */
-    public Output<Hl7StoreNotificationConfigGetArgs> notificationConfig() {
-        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
+    public Optional<Output<Hl7StoreNotificationConfigGetArgs>> notificationConfig() {
+        return Optional.ofNullable(this.notificationConfig);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfigs")
-      private final @Nullable Output<List<Hl7StoreNotificationConfigsGetArgs>> notificationConfigs;
+    private @Nullable Output<List<Hl7StoreNotificationConfigsGetArgs>> notificationConfigs;
 
-    public Output<List<Hl7StoreNotificationConfigsGetArgs>> notificationConfigs() {
-        return this.notificationConfigs == null ? Codegen.empty() : this.notificationConfigs;
+    public Optional<Output<List<Hl7StoreNotificationConfigsGetArgs>>> notificationConfigs() {
+        return Optional.ofNullable(this.notificationConfigs);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parserConfig")
-      private final @Nullable Output<Hl7StoreParserConfigGetArgs> parserConfig;
+    private @Nullable Output<Hl7StoreParserConfigGetArgs> parserConfig;
 
-    public Output<Hl7StoreParserConfigGetArgs> parserConfig() {
-        return this.parserConfig == null ? Codegen.empty() : this.parserConfig;
+    public Optional<Output<Hl7StoreParserConfigGetArgs>> parserConfig() {
+        return Optional.ofNullable(this.parserConfig);
     }
 
     /**
@@ -112,131 +112,112 @@ public final class Hl7StoreState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
-    public Hl7StoreState(
-        @Nullable Output<String> dataset,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<Hl7StoreNotificationConfigGetArgs> notificationConfig,
-        @Nullable Output<List<Hl7StoreNotificationConfigsGetArgs>> notificationConfigs,
-        @Nullable Output<Hl7StoreParserConfigGetArgs> parserConfig,
-        @Nullable Output<String> selfLink) {
-        this.dataset = dataset;
-        this.labels = labels;
-        this.name = name;
-        this.notificationConfig = notificationConfig;
-        this.notificationConfigs = notificationConfigs;
-        this.parserConfig = parserConfig;
-        this.selfLink = selfLink;
-    }
+    private Hl7StoreState() {}
 
-    private Hl7StoreState() {
-        this.dataset = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationConfig = Codegen.empty();
-        this.notificationConfigs = Codegen.empty();
-        this.parserConfig = Codegen.empty();
-        this.selfLink = Codegen.empty();
+    private Hl7StoreState(Hl7StoreState $) {
+        this.dataset = $.dataset;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.notificationConfig = $.notificationConfig;
+        this.notificationConfigs = $.notificationConfigs;
+        this.parserConfig = $.parserConfig;
+        this.selfLink = $.selfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7StoreState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataset;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Hl7StoreNotificationConfigGetArgs> notificationConfig;
-        private @Nullable Output<List<Hl7StoreNotificationConfigsGetArgs>> notificationConfigs;
-        private @Nullable Output<Hl7StoreParserConfigGetArgs> parserConfig;
-        private @Nullable Output<String> selfLink;
+        private Hl7StoreState $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7StoreState();
         }
 
         public Builder(Hl7StoreState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.notificationConfig = defaults.notificationConfig;
-    	      this.notificationConfigs = defaults.notificationConfigs;
-    	      this.parserConfig = defaults.parserConfig;
-    	      this.selfLink = defaults.selfLink;
+            $ = new Hl7StoreState(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(@Nullable Output<String> dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
-        public Builder dataset(@Nullable String dataset) {
-            this.dataset = Codegen.ofNullable(dataset);
-            return this;
+
+        public Builder dataset(String dataset) {
+            return dataset(Output.of(dataset));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationConfig(@Nullable Output<Hl7StoreNotificationConfigGetArgs> notificationConfig) {
-            this.notificationConfig = notificationConfig;
+            $.notificationConfig = notificationConfig;
             return this;
         }
-        public Builder notificationConfig(@Nullable Hl7StoreNotificationConfigGetArgs notificationConfig) {
-            this.notificationConfig = Codegen.ofNullable(notificationConfig);
-            return this;
+
+        public Builder notificationConfig(Hl7StoreNotificationConfigGetArgs notificationConfig) {
+            return notificationConfig(Output.of(notificationConfig));
         }
+
         public Builder notificationConfigs(@Nullable Output<List<Hl7StoreNotificationConfigsGetArgs>> notificationConfigs) {
-            this.notificationConfigs = notificationConfigs;
+            $.notificationConfigs = notificationConfigs;
             return this;
         }
-        public Builder notificationConfigs(@Nullable List<Hl7StoreNotificationConfigsGetArgs> notificationConfigs) {
-            this.notificationConfigs = Codegen.ofNullable(notificationConfigs);
-            return this;
+
+        public Builder notificationConfigs(List<Hl7StoreNotificationConfigsGetArgs> notificationConfigs) {
+            return notificationConfigs(Output.of(notificationConfigs));
         }
+
         public Builder notificationConfigs(Hl7StoreNotificationConfigsGetArgs... notificationConfigs) {
             return notificationConfigs(List.of(notificationConfigs));
         }
+
         public Builder parserConfig(@Nullable Output<Hl7StoreParserConfigGetArgs> parserConfig) {
-            this.parserConfig = parserConfig;
+            $.parserConfig = parserConfig;
             return this;
         }
-        public Builder parserConfig(@Nullable Hl7StoreParserConfigGetArgs parserConfig) {
-            this.parserConfig = Codegen.ofNullable(parserConfig);
-            return this;
+
+        public Builder parserConfig(Hl7StoreParserConfigGetArgs parserConfig) {
+            return parserConfig(Output.of(parserConfig));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
-        }        public Hl7StoreState build() {
-            return new Hl7StoreState(dataset, labels, name, notificationConfig, notificationConfigs, parserConfig, selfLink);
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
+        }
+
+        public Hl7StoreState build() {
+            return $;
         }
     }
+
 }

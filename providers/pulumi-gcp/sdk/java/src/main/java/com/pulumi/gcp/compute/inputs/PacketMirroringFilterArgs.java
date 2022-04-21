@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PacketMirroringFilterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="cidrRanges")
-      private final @Nullable Output<List<String>> cidrRanges;
+    private @Nullable Output<List<String>> cidrRanges;
 
-    public Output<List<String>> cidrRanges() {
-        return this.cidrRanges == null ? Codegen.empty() : this.cidrRanges;
+    public Optional<Output<List<String>>> cidrRanges() {
+        return Optional.ofNullable(this.cidrRanges);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PacketMirroringFilterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="direction")
-      private final @Nullable Output<String> direction;
+    private @Nullable Output<String> direction;
 
-    public Output<String> direction() {
-        return this.direction == null ? Codegen.empty() : this.direction;
+    public Optional<Output<String>> direction() {
+        return Optional.ofNullable(this.direction);
     }
 
     /**
@@ -47,82 +47,76 @@ public final class PacketMirroringFilterArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ipProtocols")
-      private final @Nullable Output<List<String>> ipProtocols;
+    private @Nullable Output<List<String>> ipProtocols;
 
-    public Output<List<String>> ipProtocols() {
-        return this.ipProtocols == null ? Codegen.empty() : this.ipProtocols;
+    public Optional<Output<List<String>>> ipProtocols() {
+        return Optional.ofNullable(this.ipProtocols);
     }
 
-    public PacketMirroringFilterArgs(
-        @Nullable Output<List<String>> cidrRanges,
-        @Nullable Output<String> direction,
-        @Nullable Output<List<String>> ipProtocols) {
-        this.cidrRanges = cidrRanges;
-        this.direction = direction;
-        this.ipProtocols = ipProtocols;
-    }
+    private PacketMirroringFilterArgs() {}
 
-    private PacketMirroringFilterArgs() {
-        this.cidrRanges = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.ipProtocols = Codegen.empty();
+    private PacketMirroringFilterArgs(PacketMirroringFilterArgs $) {
+        this.cidrRanges = $.cidrRanges;
+        this.direction = $.direction;
+        this.ipProtocols = $.ipProtocols;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PacketMirroringFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> cidrRanges;
-        private @Nullable Output<String> direction;
-        private @Nullable Output<List<String>> ipProtocols;
+        private PacketMirroringFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PacketMirroringFilterArgs();
         }
 
         public Builder(PacketMirroringFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrRanges = defaults.cidrRanges;
-    	      this.direction = defaults.direction;
-    	      this.ipProtocols = defaults.ipProtocols;
+            $ = new PacketMirroringFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrRanges(@Nullable Output<List<String>> cidrRanges) {
-            this.cidrRanges = cidrRanges;
+            $.cidrRanges = cidrRanges;
             return this;
         }
-        public Builder cidrRanges(@Nullable List<String> cidrRanges) {
-            this.cidrRanges = Codegen.ofNullable(cidrRanges);
-            return this;
+
+        public Builder cidrRanges(List<String> cidrRanges) {
+            return cidrRanges(Output.of(cidrRanges));
         }
+
         public Builder cidrRanges(String... cidrRanges) {
             return cidrRanges(List.of(cidrRanges));
         }
+
         public Builder direction(@Nullable Output<String> direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
-        public Builder direction(@Nullable String direction) {
-            this.direction = Codegen.ofNullable(direction);
-            return this;
+
+        public Builder direction(String direction) {
+            return direction(Output.of(direction));
         }
+
         public Builder ipProtocols(@Nullable Output<List<String>> ipProtocols) {
-            this.ipProtocols = ipProtocols;
+            $.ipProtocols = ipProtocols;
             return this;
         }
-        public Builder ipProtocols(@Nullable List<String> ipProtocols) {
-            this.ipProtocols = Codegen.ofNullable(ipProtocols);
-            return this;
+
+        public Builder ipProtocols(List<String> ipProtocols) {
+            return ipProtocols(Output.of(ipProtocols));
         }
+
         public Builder ipProtocols(String... ipProtocols) {
             return ipProtocols(List.of(ipProtocols));
-        }        public PacketMirroringFilterArgs build() {
-            return new PacketMirroringFilterArgs(cidrRanges, direction, ipProtocols);
+        }
+
+        public PacketMirroringFilterArgs build() {
+            return $;
         }
     }
+
 }

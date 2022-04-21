@@ -5,9 +5,9 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class TriggerBuildSourceStorageSourceGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -32,10 +32,10 @@ public final class TriggerBuildSourceStorageSourceGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="generation")
-      private final @Nullable Output<String> generation;
+    private @Nullable Output<String> generation;
 
-    public Output<String> generation() {
-        return this.generation == null ? Codegen.empty() : this.generation;
+    public Optional<Output<String>> generation() {
+        return Optional.ofNullable(this.generation);
     }
 
     /**
@@ -44,76 +44,70 @@ public final class TriggerBuildSourceStorageSourceGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="object", required=true)
-      private final Output<String> object;
+    private Output<String> object;
 
     public Output<String> object() {
         return this.object;
     }
 
-    public TriggerBuildSourceStorageSourceGetArgs(
-        Output<String> bucket,
-        @Nullable Output<String> generation,
-        Output<String> object) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.generation = generation;
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private TriggerBuildSourceStorageSourceGetArgs() {}
 
-    private TriggerBuildSourceStorageSourceGetArgs() {
-        this.bucket = Codegen.empty();
-        this.generation = Codegen.empty();
-        this.object = Codegen.empty();
+    private TriggerBuildSourceStorageSourceGetArgs(TriggerBuildSourceStorageSourceGetArgs $) {
+        this.bucket = $.bucket;
+        this.generation = $.generation;
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerBuildSourceStorageSourceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<String> generation;
-        private Output<String> object;
+        private TriggerBuildSourceStorageSourceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerBuildSourceStorageSourceGetArgs();
         }
 
         public Builder(TriggerBuildSourceStorageSourceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.generation = defaults.generation;
-    	      this.object = defaults.object;
+            $ = new TriggerBuildSourceStorageSourceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder generation(@Nullable Output<String> generation) {
-            this.generation = generation;
+            $.generation = generation;
             return this;
         }
-        public Builder generation(@Nullable String generation) {
-            this.generation = Codegen.ofNullable(generation);
-            return this;
+
+        public Builder generation(String generation) {
+            return generation(Output.of(generation));
         }
+
         public Builder object(Output<String> object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Output.of(Objects.requireNonNull(object));
-            return this;
-        }        public TriggerBuildSourceStorageSourceGetArgs build() {
-            return new TriggerBuildSourceStorageSourceGetArgs(bucket, generation, object);
+            return object(Output.of(object));
+        }
+
+        public TriggerBuildSourceStorageSourceGetArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

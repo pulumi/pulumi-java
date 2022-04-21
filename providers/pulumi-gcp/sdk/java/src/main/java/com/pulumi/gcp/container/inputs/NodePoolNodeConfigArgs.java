@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.NodePoolNodeConfigEphemeralStorageConfigArgs;
 import com.pulumi.gcp.container.inputs.NodePoolNodeConfigGcfsConfigArgs;
 import com.pulumi.gcp.container.inputs.NodePoolNodeConfigGuestAcceleratorArgs;
@@ -21,6 +20,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,522 +29,455 @@ public final class NodePoolNodeConfigArgs extends com.pulumi.resources.ResourceA
     public static final NodePoolNodeConfigArgs Empty = new NodePoolNodeConfigArgs();
 
     @Import(name="bootDiskKmsKey")
-      private final @Nullable Output<String> bootDiskKmsKey;
+    private @Nullable Output<String> bootDiskKmsKey;
 
-    public Output<String> bootDiskKmsKey() {
-        return this.bootDiskKmsKey == null ? Codegen.empty() : this.bootDiskKmsKey;
+    public Optional<Output<String>> bootDiskKmsKey() {
+        return Optional.ofNullable(this.bootDiskKmsKey);
     }
 
     @Import(name="diskSizeGb")
-      private final @Nullable Output<Integer> diskSizeGb;
+    private @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<Integer>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     @Import(name="diskType")
-      private final @Nullable Output<String> diskType;
+    private @Nullable Output<String> diskType;
 
-    public Output<String> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<String>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     @Import(name="ephemeralStorageConfig")
-      private final @Nullable Output<NodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig;
+    private @Nullable Output<NodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig;
 
-    public Output<NodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig() {
-        return this.ephemeralStorageConfig == null ? Codegen.empty() : this.ephemeralStorageConfig;
+    public Optional<Output<NodePoolNodeConfigEphemeralStorageConfigArgs>> ephemeralStorageConfig() {
+        return Optional.ofNullable(this.ephemeralStorageConfig);
     }
 
     @Import(name="gcfsConfig")
-      private final @Nullable Output<NodePoolNodeConfigGcfsConfigArgs> gcfsConfig;
+    private @Nullable Output<NodePoolNodeConfigGcfsConfigArgs> gcfsConfig;
 
-    public Output<NodePoolNodeConfigGcfsConfigArgs> gcfsConfig() {
-        return this.gcfsConfig == null ? Codegen.empty() : this.gcfsConfig;
+    public Optional<Output<NodePoolNodeConfigGcfsConfigArgs>> gcfsConfig() {
+        return Optional.ofNullable(this.gcfsConfig);
     }
 
     @Import(name="guestAccelerators")
-      private final @Nullable Output<List<NodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators;
+    private @Nullable Output<List<NodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators;
 
-    public Output<List<NodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators() {
-        return this.guestAccelerators == null ? Codegen.empty() : this.guestAccelerators;
+    public Optional<Output<List<NodePoolNodeConfigGuestAcceleratorArgs>>> guestAccelerators() {
+        return Optional.ofNullable(this.guestAccelerators);
     }
 
     @Import(name="imageType")
-      private final @Nullable Output<String> imageType;
+    private @Nullable Output<String> imageType;
 
-    public Output<String> imageType() {
-        return this.imageType == null ? Codegen.empty() : this.imageType;
+    public Optional<Output<String>> imageType() {
+        return Optional.ofNullable(this.imageType);
     }
 
     @Import(name="kubeletConfig")
-      private final @Nullable Output<NodePoolNodeConfigKubeletConfigArgs> kubeletConfig;
+    private @Nullable Output<NodePoolNodeConfigKubeletConfigArgs> kubeletConfig;
 
-    public Output<NodePoolNodeConfigKubeletConfigArgs> kubeletConfig() {
-        return this.kubeletConfig == null ? Codegen.empty() : this.kubeletConfig;
+    public Optional<Output<NodePoolNodeConfigKubeletConfigArgs>> kubeletConfig() {
+        return Optional.ofNullable(this.kubeletConfig);
     }
 
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="linuxNodeConfig")
-      private final @Nullable Output<NodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig;
+    private @Nullable Output<NodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig;
 
-    public Output<NodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig() {
-        return this.linuxNodeConfig == null ? Codegen.empty() : this.linuxNodeConfig;
+    public Optional<Output<NodePoolNodeConfigLinuxNodeConfigArgs>> linuxNodeConfig() {
+        return Optional.ofNullable(this.linuxNodeConfig);
     }
 
     @Import(name="localSsdCount")
-      private final @Nullable Output<Integer> localSsdCount;
+    private @Nullable Output<Integer> localSsdCount;
 
-    public Output<Integer> localSsdCount() {
-        return this.localSsdCount == null ? Codegen.empty() : this.localSsdCount;
+    public Optional<Output<Integer>> localSsdCount() {
+        return Optional.ofNullable(this.localSsdCount);
     }
 
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     @Import(name="minCpuPlatform")
-      private final @Nullable Output<String> minCpuPlatform;
+    private @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> minCpuPlatform() {
-        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
+    public Optional<Output<String>> minCpuPlatform() {
+        return Optional.ofNullable(this.minCpuPlatform);
     }
 
     @Import(name="nodeGroup")
-      private final @Nullable Output<String> nodeGroup;
+    private @Nullable Output<String> nodeGroup;
 
-    public Output<String> nodeGroup() {
-        return this.nodeGroup == null ? Codegen.empty() : this.nodeGroup;
+    public Optional<Output<String>> nodeGroup() {
+        return Optional.ofNullable(this.nodeGroup);
     }
 
     @Import(name="oauthScopes")
-      private final @Nullable Output<List<String>> oauthScopes;
+    private @Nullable Output<List<String>> oauthScopes;
 
-    public Output<List<String>> oauthScopes() {
-        return this.oauthScopes == null ? Codegen.empty() : this.oauthScopes;
+    public Optional<Output<List<String>>> oauthScopes() {
+        return Optional.ofNullable(this.oauthScopes);
     }
 
     @Import(name="preemptible")
-      private final @Nullable Output<Boolean> preemptible;
+    private @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> preemptible() {
-        return this.preemptible == null ? Codegen.empty() : this.preemptible;
+    public Optional<Output<Boolean>> preemptible() {
+        return Optional.ofNullable(this.preemptible);
     }
 
     @Import(name="sandboxConfig")
-      private final @Nullable Output<NodePoolNodeConfigSandboxConfigArgs> sandboxConfig;
+    private @Nullable Output<NodePoolNodeConfigSandboxConfigArgs> sandboxConfig;
 
-    public Output<NodePoolNodeConfigSandboxConfigArgs> sandboxConfig() {
-        return this.sandboxConfig == null ? Codegen.empty() : this.sandboxConfig;
+    public Optional<Output<NodePoolNodeConfigSandboxConfigArgs>> sandboxConfig() {
+        return Optional.ofNullable(this.sandboxConfig);
     }
 
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     @Import(name="shieldedInstanceConfig")
-      private final @Nullable Output<NodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
+    private @Nullable Output<NodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<NodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
+    public Optional<Output<NodePoolNodeConfigShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
+        return Optional.ofNullable(this.shieldedInstanceConfig);
     }
 
     @Import(name="spot")
-      private final @Nullable Output<Boolean> spot;
+    private @Nullable Output<Boolean> spot;
 
-    public Output<Boolean> spot() {
-        return this.spot == null ? Codegen.empty() : this.spot;
+    public Optional<Output<Boolean>> spot() {
+        return Optional.ofNullable(this.spot);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="taints")
-      private final @Nullable Output<List<NodePoolNodeConfigTaintArgs>> taints;
+    private @Nullable Output<List<NodePoolNodeConfigTaintArgs>> taints;
 
-    public Output<List<NodePoolNodeConfigTaintArgs>> taints() {
-        return this.taints == null ? Codegen.empty() : this.taints;
+    public Optional<Output<List<NodePoolNodeConfigTaintArgs>>> taints() {
+        return Optional.ofNullable(this.taints);
     }
 
     @Import(name="workloadMetadataConfig")
-      private final @Nullable Output<NodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig;
+    private @Nullable Output<NodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig;
 
-    public Output<NodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig() {
-        return this.workloadMetadataConfig == null ? Codegen.empty() : this.workloadMetadataConfig;
+    public Optional<Output<NodePoolNodeConfigWorkloadMetadataConfigArgs>> workloadMetadataConfig() {
+        return Optional.ofNullable(this.workloadMetadataConfig);
     }
 
-    public NodePoolNodeConfigArgs(
-        @Nullable Output<String> bootDiskKmsKey,
-        @Nullable Output<Integer> diskSizeGb,
-        @Nullable Output<String> diskType,
-        @Nullable Output<NodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig,
-        @Nullable Output<NodePoolNodeConfigGcfsConfigArgs> gcfsConfig,
-        @Nullable Output<List<NodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators,
-        @Nullable Output<String> imageType,
-        @Nullable Output<NodePoolNodeConfigKubeletConfigArgs> kubeletConfig,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<NodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig,
-        @Nullable Output<Integer> localSsdCount,
-        @Nullable Output<String> machineType,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> minCpuPlatform,
-        @Nullable Output<String> nodeGroup,
-        @Nullable Output<List<String>> oauthScopes,
-        @Nullable Output<Boolean> preemptible,
-        @Nullable Output<NodePoolNodeConfigSandboxConfigArgs> sandboxConfig,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<NodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        @Nullable Output<Boolean> spot,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<List<NodePoolNodeConfigTaintArgs>> taints,
-        @Nullable Output<NodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig) {
-        this.bootDiskKmsKey = bootDiskKmsKey;
-        this.diskSizeGb = diskSizeGb;
-        this.diskType = diskType;
-        this.ephemeralStorageConfig = ephemeralStorageConfig;
-        this.gcfsConfig = gcfsConfig;
-        this.guestAccelerators = guestAccelerators;
-        this.imageType = imageType;
-        this.kubeletConfig = kubeletConfig;
-        this.labels = labels;
-        this.linuxNodeConfig = linuxNodeConfig;
-        this.localSsdCount = localSsdCount;
-        this.machineType = machineType;
-        this.metadata = metadata;
-        this.minCpuPlatform = minCpuPlatform;
-        this.nodeGroup = nodeGroup;
-        this.oauthScopes = oauthScopes;
-        this.preemptible = preemptible;
-        this.sandboxConfig = sandboxConfig;
-        this.serviceAccount = serviceAccount;
-        this.shieldedInstanceConfig = shieldedInstanceConfig;
-        this.spot = spot;
-        this.tags = tags;
-        this.taints = taints;
-        this.workloadMetadataConfig = workloadMetadataConfig;
-    }
+    private NodePoolNodeConfigArgs() {}
 
-    private NodePoolNodeConfigArgs() {
-        this.bootDiskKmsKey = Codegen.empty();
-        this.diskSizeGb = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.ephemeralStorageConfig = Codegen.empty();
-        this.gcfsConfig = Codegen.empty();
-        this.guestAccelerators = Codegen.empty();
-        this.imageType = Codegen.empty();
-        this.kubeletConfig = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.linuxNodeConfig = Codegen.empty();
-        this.localSsdCount = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.minCpuPlatform = Codegen.empty();
-        this.nodeGroup = Codegen.empty();
-        this.oauthScopes = Codegen.empty();
-        this.preemptible = Codegen.empty();
-        this.sandboxConfig = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.shieldedInstanceConfig = Codegen.empty();
-        this.spot = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.taints = Codegen.empty();
-        this.workloadMetadataConfig = Codegen.empty();
+    private NodePoolNodeConfigArgs(NodePoolNodeConfigArgs $) {
+        this.bootDiskKmsKey = $.bootDiskKmsKey;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.ephemeralStorageConfig = $.ephemeralStorageConfig;
+        this.gcfsConfig = $.gcfsConfig;
+        this.guestAccelerators = $.guestAccelerators;
+        this.imageType = $.imageType;
+        this.kubeletConfig = $.kubeletConfig;
+        this.labels = $.labels;
+        this.linuxNodeConfig = $.linuxNodeConfig;
+        this.localSsdCount = $.localSsdCount;
+        this.machineType = $.machineType;
+        this.metadata = $.metadata;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.nodeGroup = $.nodeGroup;
+        this.oauthScopes = $.oauthScopes;
+        this.preemptible = $.preemptible;
+        this.sandboxConfig = $.sandboxConfig;
+        this.serviceAccount = $.serviceAccount;
+        this.shieldedInstanceConfig = $.shieldedInstanceConfig;
+        this.spot = $.spot;
+        this.tags = $.tags;
+        this.taints = $.taints;
+        this.workloadMetadataConfig = $.workloadMetadataConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolNodeConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bootDiskKmsKey;
-        private @Nullable Output<Integer> diskSizeGb;
-        private @Nullable Output<String> diskType;
-        private @Nullable Output<NodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig;
-        private @Nullable Output<NodePoolNodeConfigGcfsConfigArgs> gcfsConfig;
-        private @Nullable Output<List<NodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators;
-        private @Nullable Output<String> imageType;
-        private @Nullable Output<NodePoolNodeConfigKubeletConfigArgs> kubeletConfig;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<NodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig;
-        private @Nullable Output<Integer> localSsdCount;
-        private @Nullable Output<String> machineType;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> minCpuPlatform;
-        private @Nullable Output<String> nodeGroup;
-        private @Nullable Output<List<String>> oauthScopes;
-        private @Nullable Output<Boolean> preemptible;
-        private @Nullable Output<NodePoolNodeConfigSandboxConfigArgs> sandboxConfig;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<NodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private @Nullable Output<Boolean> spot;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<List<NodePoolNodeConfigTaintArgs>> taints;
-        private @Nullable Output<NodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig;
+        private NodePoolNodeConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolNodeConfigArgs();
         }
 
         public Builder(NodePoolNodeConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bootDiskKmsKey = defaults.bootDiskKmsKey;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.ephemeralStorageConfig = defaults.ephemeralStorageConfig;
-    	      this.gcfsConfig = defaults.gcfsConfig;
-    	      this.guestAccelerators = defaults.guestAccelerators;
-    	      this.imageType = defaults.imageType;
-    	      this.kubeletConfig = defaults.kubeletConfig;
-    	      this.labels = defaults.labels;
-    	      this.linuxNodeConfig = defaults.linuxNodeConfig;
-    	      this.localSsdCount = defaults.localSsdCount;
-    	      this.machineType = defaults.machineType;
-    	      this.metadata = defaults.metadata;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.nodeGroup = defaults.nodeGroup;
-    	      this.oauthScopes = defaults.oauthScopes;
-    	      this.preemptible = defaults.preemptible;
-    	      this.sandboxConfig = defaults.sandboxConfig;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.shieldedInstanceConfig = defaults.shieldedInstanceConfig;
-    	      this.spot = defaults.spot;
-    	      this.tags = defaults.tags;
-    	      this.taints = defaults.taints;
-    	      this.workloadMetadataConfig = defaults.workloadMetadataConfig;
+            $ = new NodePoolNodeConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bootDiskKmsKey(@Nullable Output<String> bootDiskKmsKey) {
-            this.bootDiskKmsKey = bootDiskKmsKey;
+            $.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
-        public Builder bootDiskKmsKey(@Nullable String bootDiskKmsKey) {
-            this.bootDiskKmsKey = Codegen.ofNullable(bootDiskKmsKey);
-            return this;
+
+        public Builder bootDiskKmsKey(String bootDiskKmsKey) {
+            return bootDiskKmsKey(Output.of(bootDiskKmsKey));
         }
+
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(Integer diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder diskType(@Nullable Output<String> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable String diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(String diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder ephemeralStorageConfig(@Nullable Output<NodePoolNodeConfigEphemeralStorageConfigArgs> ephemeralStorageConfig) {
-            this.ephemeralStorageConfig = ephemeralStorageConfig;
+            $.ephemeralStorageConfig = ephemeralStorageConfig;
             return this;
         }
-        public Builder ephemeralStorageConfig(@Nullable NodePoolNodeConfigEphemeralStorageConfigArgs ephemeralStorageConfig) {
-            this.ephemeralStorageConfig = Codegen.ofNullable(ephemeralStorageConfig);
-            return this;
+
+        public Builder ephemeralStorageConfig(NodePoolNodeConfigEphemeralStorageConfigArgs ephemeralStorageConfig) {
+            return ephemeralStorageConfig(Output.of(ephemeralStorageConfig));
         }
+
         public Builder gcfsConfig(@Nullable Output<NodePoolNodeConfigGcfsConfigArgs> gcfsConfig) {
-            this.gcfsConfig = gcfsConfig;
+            $.gcfsConfig = gcfsConfig;
             return this;
         }
-        public Builder gcfsConfig(@Nullable NodePoolNodeConfigGcfsConfigArgs gcfsConfig) {
-            this.gcfsConfig = Codegen.ofNullable(gcfsConfig);
-            return this;
+
+        public Builder gcfsConfig(NodePoolNodeConfigGcfsConfigArgs gcfsConfig) {
+            return gcfsConfig(Output.of(gcfsConfig));
         }
+
         public Builder guestAccelerators(@Nullable Output<List<NodePoolNodeConfigGuestAcceleratorArgs>> guestAccelerators) {
-            this.guestAccelerators = guestAccelerators;
+            $.guestAccelerators = guestAccelerators;
             return this;
         }
-        public Builder guestAccelerators(@Nullable List<NodePoolNodeConfigGuestAcceleratorArgs> guestAccelerators) {
-            this.guestAccelerators = Codegen.ofNullable(guestAccelerators);
-            return this;
+
+        public Builder guestAccelerators(List<NodePoolNodeConfigGuestAcceleratorArgs> guestAccelerators) {
+            return guestAccelerators(Output.of(guestAccelerators));
         }
+
         public Builder guestAccelerators(NodePoolNodeConfigGuestAcceleratorArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
+
         public Builder imageType(@Nullable Output<String> imageType) {
-            this.imageType = imageType;
+            $.imageType = imageType;
             return this;
         }
-        public Builder imageType(@Nullable String imageType) {
-            this.imageType = Codegen.ofNullable(imageType);
-            return this;
+
+        public Builder imageType(String imageType) {
+            return imageType(Output.of(imageType));
         }
+
         public Builder kubeletConfig(@Nullable Output<NodePoolNodeConfigKubeletConfigArgs> kubeletConfig) {
-            this.kubeletConfig = kubeletConfig;
+            $.kubeletConfig = kubeletConfig;
             return this;
         }
-        public Builder kubeletConfig(@Nullable NodePoolNodeConfigKubeletConfigArgs kubeletConfig) {
-            this.kubeletConfig = Codegen.ofNullable(kubeletConfig);
-            return this;
+
+        public Builder kubeletConfig(NodePoolNodeConfigKubeletConfigArgs kubeletConfig) {
+            return kubeletConfig(Output.of(kubeletConfig));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder linuxNodeConfig(@Nullable Output<NodePoolNodeConfigLinuxNodeConfigArgs> linuxNodeConfig) {
-            this.linuxNodeConfig = linuxNodeConfig;
+            $.linuxNodeConfig = linuxNodeConfig;
             return this;
         }
-        public Builder linuxNodeConfig(@Nullable NodePoolNodeConfigLinuxNodeConfigArgs linuxNodeConfig) {
-            this.linuxNodeConfig = Codegen.ofNullable(linuxNodeConfig);
-            return this;
+
+        public Builder linuxNodeConfig(NodePoolNodeConfigLinuxNodeConfigArgs linuxNodeConfig) {
+            return linuxNodeConfig(Output.of(linuxNodeConfig));
         }
+
         public Builder localSsdCount(@Nullable Output<Integer> localSsdCount) {
-            this.localSsdCount = localSsdCount;
+            $.localSsdCount = localSsdCount;
             return this;
         }
-        public Builder localSsdCount(@Nullable Integer localSsdCount) {
-            this.localSsdCount = Codegen.ofNullable(localSsdCount);
-            return this;
+
+        public Builder localSsdCount(Integer localSsdCount) {
+            return localSsdCount(Output.of(localSsdCount));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
-            this.minCpuPlatform = minCpuPlatform;
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
-        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
-            return this;
+
+        public Builder minCpuPlatform(String minCpuPlatform) {
+            return minCpuPlatform(Output.of(minCpuPlatform));
         }
+
         public Builder nodeGroup(@Nullable Output<String> nodeGroup) {
-            this.nodeGroup = nodeGroup;
+            $.nodeGroup = nodeGroup;
             return this;
         }
-        public Builder nodeGroup(@Nullable String nodeGroup) {
-            this.nodeGroup = Codegen.ofNullable(nodeGroup);
-            return this;
+
+        public Builder nodeGroup(String nodeGroup) {
+            return nodeGroup(Output.of(nodeGroup));
         }
+
         public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
-            this.oauthScopes = oauthScopes;
+            $.oauthScopes = oauthScopes;
             return this;
         }
-        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Codegen.ofNullable(oauthScopes);
-            return this;
+
+        public Builder oauthScopes(List<String> oauthScopes) {
+            return oauthScopes(Output.of(oauthScopes));
         }
+
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
+
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
-            this.preemptible = preemptible;
+            $.preemptible = preemptible;
             return this;
         }
-        public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Codegen.ofNullable(preemptible);
-            return this;
+
+        public Builder preemptible(Boolean preemptible) {
+            return preemptible(Output.of(preemptible));
         }
+
         public Builder sandboxConfig(@Nullable Output<NodePoolNodeConfigSandboxConfigArgs> sandboxConfig) {
-            this.sandboxConfig = sandboxConfig;
+            $.sandboxConfig = sandboxConfig;
             return this;
         }
-        public Builder sandboxConfig(@Nullable NodePoolNodeConfigSandboxConfigArgs sandboxConfig) {
-            this.sandboxConfig = Codegen.ofNullable(sandboxConfig);
-            return this;
+
+        public Builder sandboxConfig(NodePoolNodeConfigSandboxConfigArgs sandboxConfig) {
+            return sandboxConfig(Output.of(sandboxConfig));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder shieldedInstanceConfig(@Nullable Output<NodePoolNodeConfigShieldedInstanceConfigArgs> shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = shieldedInstanceConfig;
+            $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-        public Builder shieldedInstanceConfig(@Nullable NodePoolNodeConfigShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
-            return this;
+
+        public Builder shieldedInstanceConfig(NodePoolNodeConfigShieldedInstanceConfigArgs shieldedInstanceConfig) {
+            return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
+
         public Builder spot(@Nullable Output<Boolean> spot) {
-            this.spot = spot;
+            $.spot = spot;
             return this;
         }
-        public Builder spot(@Nullable Boolean spot) {
-            this.spot = Codegen.ofNullable(spot);
-            return this;
+
+        public Builder spot(Boolean spot) {
+            return spot(Output.of(spot));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder taints(@Nullable Output<List<NodePoolNodeConfigTaintArgs>> taints) {
-            this.taints = taints;
+            $.taints = taints;
             return this;
         }
-        public Builder taints(@Nullable List<NodePoolNodeConfigTaintArgs> taints) {
-            this.taints = Codegen.ofNullable(taints);
-            return this;
+
+        public Builder taints(List<NodePoolNodeConfigTaintArgs> taints) {
+            return taints(Output.of(taints));
         }
+
         public Builder taints(NodePoolNodeConfigTaintArgs... taints) {
             return taints(List.of(taints));
         }
+
         public Builder workloadMetadataConfig(@Nullable Output<NodePoolNodeConfigWorkloadMetadataConfigArgs> workloadMetadataConfig) {
-            this.workloadMetadataConfig = workloadMetadataConfig;
+            $.workloadMetadataConfig = workloadMetadataConfig;
             return this;
         }
-        public Builder workloadMetadataConfig(@Nullable NodePoolNodeConfigWorkloadMetadataConfigArgs workloadMetadataConfig) {
-            this.workloadMetadataConfig = Codegen.ofNullable(workloadMetadataConfig);
-            return this;
-        }        public NodePoolNodeConfigArgs build() {
-            return new NodePoolNodeConfigArgs(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfig, gcfsConfig, guestAccelerators, imageType, kubeletConfig, labels, linuxNodeConfig, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfig, serviceAccount, shieldedInstanceConfig, spot, tags, taints, workloadMetadataConfig);
+
+        public Builder workloadMetadataConfig(NodePoolNodeConfigWorkloadMetadataConfigArgs workloadMetadataConfig) {
+            return workloadMetadataConfig(Output.of(workloadMetadataConfig));
+        }
+
+        public NodePoolNodeConfigArgs build() {
+            return $;
         }
     }
+
 }

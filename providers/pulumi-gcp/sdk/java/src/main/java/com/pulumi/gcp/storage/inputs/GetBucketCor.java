@@ -15,103 +15,99 @@ public final class GetBucketCor extends com.pulumi.resources.InvokeArgs {
     public static final GetBucketCor Empty = new GetBucketCor();
 
     @Import(name="maxAgeSeconds", required=true)
-      private final Integer maxAgeSeconds;
+    private Integer maxAgeSeconds;
 
     public Integer maxAgeSeconds() {
         return this.maxAgeSeconds;
     }
 
     @Import(name="methods", required=true)
-      private final List<String> methods;
+    private List<String> methods;
 
     public List<String> methods() {
         return this.methods;
     }
 
     @Import(name="origins", required=true)
-      private final List<String> origins;
+    private List<String> origins;
 
     public List<String> origins() {
         return this.origins;
     }
 
     @Import(name="responseHeaders", required=true)
-      private final List<String> responseHeaders;
+    private List<String> responseHeaders;
 
     public List<String> responseHeaders() {
         return this.responseHeaders;
     }
 
-    public GetBucketCor(
-        Integer maxAgeSeconds,
-        List<String> methods,
-        List<String> origins,
-        List<String> responseHeaders) {
-        this.maxAgeSeconds = Objects.requireNonNull(maxAgeSeconds, "expected parameter 'maxAgeSeconds' to be non-null");
-        this.methods = Objects.requireNonNull(methods, "expected parameter 'methods' to be non-null");
-        this.origins = Objects.requireNonNull(origins, "expected parameter 'origins' to be non-null");
-        this.responseHeaders = Objects.requireNonNull(responseHeaders, "expected parameter 'responseHeaders' to be non-null");
-    }
+    private GetBucketCor() {}
 
-    private GetBucketCor() {
-        this.maxAgeSeconds = null;
-        this.methods = List.of();
-        this.origins = List.of();
-        this.responseHeaders = List.of();
+    private GetBucketCor(GetBucketCor $) {
+        this.maxAgeSeconds = $.maxAgeSeconds;
+        this.methods = $.methods;
+        this.origins = $.origins;
+        this.responseHeaders = $.responseHeaders;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBucketCor defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxAgeSeconds;
-        private List<String> methods;
-        private List<String> origins;
-        private List<String> responseHeaders;
+        private GetBucketCor $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBucketCor();
         }
 
         public Builder(GetBucketCor defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxAgeSeconds = defaults.maxAgeSeconds;
-    	      this.methods = defaults.methods;
-    	      this.origins = defaults.origins;
-    	      this.responseHeaders = defaults.responseHeaders;
+            $ = new GetBucketCor(Objects.requireNonNull(defaults));
         }
 
         public Builder maxAgeSeconds(Integer maxAgeSeconds) {
-            this.maxAgeSeconds = Objects.requireNonNull(maxAgeSeconds);
+            $.maxAgeSeconds = maxAgeSeconds;
             return this;
         }
+
         public Builder methods(List<String> methods) {
-            this.methods = Objects.requireNonNull(methods);
+            $.methods = methods;
             return this;
         }
+
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
+
         public Builder origins(List<String> origins) {
-            this.origins = Objects.requireNonNull(origins);
+            $.origins = origins;
             return this;
         }
+
         public Builder origins(String... origins) {
             return origins(List.of(origins));
         }
+
         public Builder responseHeaders(List<String> responseHeaders) {
-            this.responseHeaders = Objects.requireNonNull(responseHeaders);
+            $.responseHeaders = responseHeaders;
             return this;
         }
+
         public Builder responseHeaders(String... responseHeaders) {
             return responseHeaders(List.of(responseHeaders));
-        }        public GetBucketCor build() {
-            return new GetBucketCor(maxAgeSeconds, methods, origins, responseHeaders);
+        }
+
+        public GetBucketCor build() {
+            $.maxAgeSeconds = Objects.requireNonNull($.maxAgeSeconds, "expected parameter 'maxAgeSeconds' to be non-null");
+            $.methods = Objects.requireNonNull($.methods, "expected parameter 'methods' to be non-null");
+            $.origins = Objects.requireNonNull($.origins, "expected parameter 'origins' to be non-null");
+            $.responseHeaders = Objects.requireNonNull($.responseHeaders, "expected parameter 'responseHeaders' to be non-null");
+            return $;
         }
     }
+
 }

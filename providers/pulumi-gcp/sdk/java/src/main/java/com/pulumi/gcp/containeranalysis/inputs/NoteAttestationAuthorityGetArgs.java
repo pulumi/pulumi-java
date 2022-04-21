@@ -5,7 +5,6 @@ package com.pulumi.gcp.containeranalysis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.containeranalysis.inputs.NoteAttestationAuthorityHintGetArgs;
 import java.util.Objects;
 
@@ -27,49 +26,49 @@ public final class NoteAttestationAuthorityGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="hint", required=true)
-      private final Output<NoteAttestationAuthorityHintGetArgs> hint;
+    private Output<NoteAttestationAuthorityHintGetArgs> hint;
 
     public Output<NoteAttestationAuthorityHintGetArgs> hint() {
         return this.hint;
     }
 
-    public NoteAttestationAuthorityGetArgs(Output<NoteAttestationAuthorityHintGetArgs> hint) {
-        this.hint = Objects.requireNonNull(hint, "expected parameter 'hint' to be non-null");
-    }
+    private NoteAttestationAuthorityGetArgs() {}
 
-    private NoteAttestationAuthorityGetArgs() {
-        this.hint = Codegen.empty();
+    private NoteAttestationAuthorityGetArgs(NoteAttestationAuthorityGetArgs $) {
+        this.hint = $.hint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NoteAttestationAuthorityGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<NoteAttestationAuthorityHintGetArgs> hint;
+        private NoteAttestationAuthorityGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NoteAttestationAuthorityGetArgs();
         }
 
         public Builder(NoteAttestationAuthorityGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hint = defaults.hint;
+            $ = new NoteAttestationAuthorityGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hint(Output<NoteAttestationAuthorityHintGetArgs> hint) {
-            this.hint = Objects.requireNonNull(hint);
+            $.hint = hint;
             return this;
         }
+
         public Builder hint(NoteAttestationAuthorityHintGetArgs hint) {
-            this.hint = Output.of(Objects.requireNonNull(hint));
-            return this;
-        }        public NoteAttestationAuthorityGetArgs build() {
-            return new NoteAttestationAuthorityGetArgs(hint);
+            return hint(Output.of(hint));
+        }
+
+        public NoteAttestationAuthorityGetArgs build() {
+            $.hint = Objects.requireNonNull($.hint, "expected parameter 'hint' to be non-null");
+            return $;
         }
     }
+
 }

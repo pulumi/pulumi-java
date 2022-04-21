@@ -5,10 +5,10 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterClusterAutoscalingResourceLimitArgs extends com.pulumi
      * 
      */
     @Import(name="maximum")
-      private final @Nullable Output<Integer> maximum;
+    private @Nullable Output<Integer> maximum;
 
-    public Output<Integer> maximum() {
-        return this.maximum == null ? Codegen.empty() : this.maximum;
+    public Optional<Output<Integer>> maximum() {
+        return Optional.ofNullable(this.maximum);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ClusterClusterAutoscalingResourceLimitArgs extends com.pulumi
      * 
      */
     @Import(name="minimum")
-      private final @Nullable Output<Integer> minimum;
+    private @Nullable Output<Integer> minimum;
 
-    public Output<Integer> minimum() {
-        return this.minimum == null ? Codegen.empty() : this.minimum;
+    public Optional<Output<Integer>> minimum() {
+        return Optional.ofNullable(this.minimum);
     }
 
     /**
@@ -45,76 +45,69 @@ public final class ClusterClusterAutoscalingResourceLimitArgs extends com.pulumi
      * 
      */
     @Import(name="resourceType", required=true)
-      private final Output<String> resourceType;
+    private Output<String> resourceType;
 
     public Output<String> resourceType() {
         return this.resourceType;
     }
 
-    public ClusterClusterAutoscalingResourceLimitArgs(
-        @Nullable Output<Integer> maximum,
-        @Nullable Output<Integer> minimum,
-        Output<String> resourceType) {
-        this.maximum = maximum;
-        this.minimum = minimum;
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private ClusterClusterAutoscalingResourceLimitArgs() {}
 
-    private ClusterClusterAutoscalingResourceLimitArgs() {
-        this.maximum = Codegen.empty();
-        this.minimum = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private ClusterClusterAutoscalingResourceLimitArgs(ClusterClusterAutoscalingResourceLimitArgs $) {
+        this.maximum = $.maximum;
+        this.minimum = $.minimum;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterAutoscalingResourceLimitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maximum;
-        private @Nullable Output<Integer> minimum;
-        private Output<String> resourceType;
+        private ClusterClusterAutoscalingResourceLimitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterAutoscalingResourceLimitArgs();
         }
 
         public Builder(ClusterClusterAutoscalingResourceLimitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maximum = defaults.maximum;
-    	      this.minimum = defaults.minimum;
-    	      this.resourceType = defaults.resourceType;
+            $ = new ClusterClusterAutoscalingResourceLimitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maximum(@Nullable Output<Integer> maximum) {
-            this.maximum = maximum;
+            $.maximum = maximum;
             return this;
         }
-        public Builder maximum(@Nullable Integer maximum) {
-            this.maximum = Codegen.ofNullable(maximum);
-            return this;
+
+        public Builder maximum(Integer maximum) {
+            return maximum(Output.of(maximum));
         }
+
         public Builder minimum(@Nullable Output<Integer> minimum) {
-            this.minimum = minimum;
+            $.minimum = minimum;
             return this;
         }
-        public Builder minimum(@Nullable Integer minimum) {
-            this.minimum = Codegen.ofNullable(minimum);
-            return this;
+
+        public Builder minimum(Integer minimum) {
+            return minimum(Output.of(minimum));
         }
+
         public Builder resourceType(Output<String> resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Output.of(Objects.requireNonNull(resourceType));
-            return this;
-        }        public ClusterClusterAutoscalingResourceLimitArgs build() {
-            return new ClusterClusterAutoscalingResourceLimitArgs(maximum, minimum, resourceType);
+            return resourceType(Output.of(resourceType));
+        }
+
+        public ClusterClusterAutoscalingResourceLimitArgs build() {
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.eventarc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TriggerMatchingCriteriaGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="attribute", required=true)
-      private final Output<String> attribute;
+    private Output<String> attribute;
 
     public Output<String> attribute() {
         return this.attribute;
@@ -30,63 +29,60 @@ public final class TriggerMatchingCriteriaGetArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public TriggerMatchingCriteriaGetArgs(
-        Output<String> attribute,
-        Output<String> value) {
-        this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private TriggerMatchingCriteriaGetArgs() {}
 
-    private TriggerMatchingCriteriaGetArgs() {
-        this.attribute = Codegen.empty();
-        this.value = Codegen.empty();
+    private TriggerMatchingCriteriaGetArgs(TriggerMatchingCriteriaGetArgs $) {
+        this.attribute = $.attribute;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerMatchingCriteriaGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> attribute;
-        private Output<String> value;
+        private TriggerMatchingCriteriaGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerMatchingCriteriaGetArgs();
         }
 
         public Builder(TriggerMatchingCriteriaGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.value = defaults.value;
+            $ = new TriggerMatchingCriteriaGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(Output<String> attribute) {
-            this.attribute = Objects.requireNonNull(attribute);
+            $.attribute = attribute;
             return this;
         }
+
         public Builder attribute(String attribute) {
-            this.attribute = Output.of(Objects.requireNonNull(attribute));
-            return this;
+            return attribute(Output.of(attribute));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public TriggerMatchingCriteriaGetArgs build() {
-            return new TriggerMatchingCriteriaGetArgs(attribute, value);
+            return value(Output.of(value));
+        }
+
+        public TriggerMatchingCriteriaGetArgs build() {
+            $.attribute = Objects.requireNonNull($.attribute, "expected parameter 'attribute' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

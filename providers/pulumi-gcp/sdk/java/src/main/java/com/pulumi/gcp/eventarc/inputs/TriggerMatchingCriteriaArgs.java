@@ -5,7 +5,6 @@ package com.pulumi.gcp.eventarc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class TriggerMatchingCriteriaArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="attribute", required=true)
-      private final Output<String> attribute;
+    private Output<String> attribute;
 
     public Output<String> attribute() {
         return this.attribute;
@@ -30,63 +29,60 @@ public final class TriggerMatchingCriteriaArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public TriggerMatchingCriteriaArgs(
-        Output<String> attribute,
-        Output<String> value) {
-        this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private TriggerMatchingCriteriaArgs() {}
 
-    private TriggerMatchingCriteriaArgs() {
-        this.attribute = Codegen.empty();
-        this.value = Codegen.empty();
+    private TriggerMatchingCriteriaArgs(TriggerMatchingCriteriaArgs $) {
+        this.attribute = $.attribute;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerMatchingCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> attribute;
-        private Output<String> value;
+        private TriggerMatchingCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerMatchingCriteriaArgs();
         }
 
         public Builder(TriggerMatchingCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attribute = defaults.attribute;
-    	      this.value = defaults.value;
+            $ = new TriggerMatchingCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attribute(Output<String> attribute) {
-            this.attribute = Objects.requireNonNull(attribute);
+            $.attribute = attribute;
             return this;
         }
+
         public Builder attribute(String attribute) {
-            this.attribute = Output.of(Objects.requireNonNull(attribute));
-            return this;
+            return attribute(Output.of(attribute));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public TriggerMatchingCriteriaArgs build() {
-            return new TriggerMatchingCriteriaArgs(attribute, value);
+            return value(Output.of(value));
+        }
+
+        public TriggerMatchingCriteriaArgs build() {
+            $.attribute = Objects.requireNonNull($.attribute, "expected parameter 'attribute' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

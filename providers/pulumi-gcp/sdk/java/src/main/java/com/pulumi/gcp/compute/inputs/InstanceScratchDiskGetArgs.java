@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class InstanceScratchDiskGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="interface", required=true)
-      private final Output<String> interface_;
+    private Output<String> interface_;
 
     public Output<String> interface_() {
         return this.interface_;
     }
 
-    public InstanceScratchDiskGetArgs(Output<String> interface_) {
-        this.interface_ = Objects.requireNonNull(interface_, "expected parameter 'interface' to be non-null");
-    }
+    private InstanceScratchDiskGetArgs() {}
 
-    private InstanceScratchDiskGetArgs() {
-        this.interface_ = Codegen.empty();
+    private InstanceScratchDiskGetArgs(InstanceScratchDiskGetArgs $) {
+        this.interface_ = $.interface_;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceScratchDiskGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> interface_;
+        private InstanceScratchDiskGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceScratchDiskGetArgs();
         }
 
         public Builder(InstanceScratchDiskGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interface_ = defaults.interface_;
+            $ = new InstanceScratchDiskGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interface_(Output<String> interface_) {
-            this.interface_ = Objects.requireNonNull(interface_);
+            $.interface_ = interface_;
             return this;
         }
+
         public Builder interface_(String interface_) {
-            this.interface_ = Output.of(Objects.requireNonNull(interface_));
-            return this;
-        }        public InstanceScratchDiskGetArgs build() {
-            return new InstanceScratchDiskGetArgs(interface_);
+            return interface_(Output.of(interface_));
+        }
+
+        public InstanceScratchDiskGetArgs build() {
+            $.interface_ = Objects.requireNonNull($.interface_, "expected parameter 'interface' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.DiskIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,14 +17,14 @@ public final class DiskIamMemberArgs extends com.pulumi.resources.ResourceArgs {
     public static final DiskIamMemberArgs Empty = new DiskIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<DiskIamMemberConditionArgs> condition;
+    private @Nullable Output<DiskIamMemberConditionArgs> condition;
 
-    public Output<DiskIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<DiskIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -35,10 +35,10 @@ public final class DiskIamMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DiskIamMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class DiskIamMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -73,115 +73,100 @@ public final class DiskIamMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public DiskIamMemberArgs(
-        @Nullable Output<DiskIamMemberConditionArgs> condition,
-        Output<String> member,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> role,
-        @Nullable Output<String> zone) {
-        this.condition = condition;
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.zone = zone;
-    }
+    private DiskIamMemberArgs() {}
 
-    private DiskIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.member = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.zone = Codegen.empty();
+    private DiskIamMemberArgs(DiskIamMemberArgs $) {
+        this.condition = $.condition;
+        this.member = $.member;
+        this.name = $.name;
+        this.project = $.project;
+        this.role = $.role;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DiskIamMemberConditionArgs> condition;
-        private Output<String> member;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> role;
-        private @Nullable Output<String> zone;
+        private DiskIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskIamMemberArgs();
         }
 
         public Builder(DiskIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.member = defaults.member;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.zone = defaults.zone;
+            $ = new DiskIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<DiskIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable DiskIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(DiskIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public DiskIamMemberArgs build() {
-            return new DiskIamMemberArgs(condition, member, name, project, role, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public DiskIamMemberArgs build() {
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

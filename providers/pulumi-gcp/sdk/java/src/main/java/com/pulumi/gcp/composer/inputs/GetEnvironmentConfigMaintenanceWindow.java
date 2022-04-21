@@ -13,78 +13,73 @@ public final class GetEnvironmentConfigMaintenanceWindow extends com.pulumi.reso
     public static final GetEnvironmentConfigMaintenanceWindow Empty = new GetEnvironmentConfigMaintenanceWindow();
 
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
     }
 
     @Import(name="recurrence", required=true)
-      private final String recurrence;
+    private String recurrence;
 
     public String recurrence() {
         return this.recurrence;
     }
 
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public GetEnvironmentConfigMaintenanceWindow(
-        String endTime,
-        String recurrence,
-        String startTime) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.recurrence = Objects.requireNonNull(recurrence, "expected parameter 'recurrence' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private GetEnvironmentConfigMaintenanceWindow() {}
 
-    private GetEnvironmentConfigMaintenanceWindow() {
-        this.endTime = null;
-        this.recurrence = null;
-        this.startTime = null;
+    private GetEnvironmentConfigMaintenanceWindow(GetEnvironmentConfigMaintenanceWindow $) {
+        this.endTime = $.endTime;
+        this.recurrence = $.recurrence;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentConfigMaintenanceWindow defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTime;
-        private String recurrence;
-        private String startTime;
+        private GetEnvironmentConfigMaintenanceWindow $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentConfigMaintenanceWindow();
         }
 
         public Builder(GetEnvironmentConfigMaintenanceWindow defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.recurrence = defaults.recurrence;
-    	      this.startTime = defaults.startTime;
+            $ = new GetEnvironmentConfigMaintenanceWindow(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder recurrence(String recurrence) {
-            this.recurrence = Objects.requireNonNull(recurrence);
+            $.recurrence = recurrence;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public GetEnvironmentConfigMaintenanceWindow build() {
-            return new GetEnvironmentConfigMaintenanceWindow(endTime, recurrence, startTime);
+        }
+
+        public GetEnvironmentConfigMaintenanceWindow build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.recurrence = Objects.requireNonNull($.recurrence, "expected parameter 'recurrence' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

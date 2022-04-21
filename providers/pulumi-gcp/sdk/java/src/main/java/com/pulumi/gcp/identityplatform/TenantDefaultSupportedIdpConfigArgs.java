@@ -5,10 +5,10 @@ package com.pulumi.gcp.identityplatform;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class TenantDefaultSupportedIdpConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="clientId", required=true)
-      private final Output<String> clientId;
+    private Output<String> clientId;
 
     public Output<String> clientId() {
         return this.clientId;
@@ -32,7 +32,7 @@ public final class TenantDefaultSupportedIdpConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="clientSecret", required=true)
-      private final Output<String> clientSecret;
+    private Output<String> clientSecret;
 
     public Output<String> clientSecret() {
         return this.clientSecret;
@@ -43,10 +43,10 @@ public final class TenantDefaultSupportedIdpConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class TenantDefaultSupportedIdpConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="idpId", required=true)
-      private final Output<String> idpId;
+    private Output<String> idpId;
 
     public Output<String> idpId() {
         return this.idpId;
@@ -76,10 +76,10 @@ public final class TenantDefaultSupportedIdpConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -87,115 +87,102 @@ public final class TenantDefaultSupportedIdpConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="tenant", required=true)
-      private final Output<String> tenant;
+    private Output<String> tenant;
 
     public Output<String> tenant() {
         return this.tenant;
     }
 
-    public TenantDefaultSupportedIdpConfigArgs(
-        Output<String> clientId,
-        Output<String> clientSecret,
-        @Nullable Output<Boolean> enabled,
-        Output<String> idpId,
-        @Nullable Output<String> project,
-        Output<String> tenant) {
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
-        this.enabled = enabled;
-        this.idpId = Objects.requireNonNull(idpId, "expected parameter 'idpId' to be non-null");
-        this.project = project;
-        this.tenant = Objects.requireNonNull(tenant, "expected parameter 'tenant' to be non-null");
-    }
+    private TenantDefaultSupportedIdpConfigArgs() {}
 
-    private TenantDefaultSupportedIdpConfigArgs() {
-        this.clientId = Codegen.empty();
-        this.clientSecret = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.idpId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.tenant = Codegen.empty();
+    private TenantDefaultSupportedIdpConfigArgs(TenantDefaultSupportedIdpConfigArgs $) {
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.enabled = $.enabled;
+        this.idpId = $.idpId;
+        this.project = $.project;
+        this.tenant = $.tenant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TenantDefaultSupportedIdpConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clientId;
-        private Output<String> clientSecret;
-        private @Nullable Output<Boolean> enabled;
-        private Output<String> idpId;
-        private @Nullable Output<String> project;
-        private Output<String> tenant;
+        private TenantDefaultSupportedIdpConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TenantDefaultSupportedIdpConfigArgs();
         }
 
         public Builder(TenantDefaultSupportedIdpConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.enabled = defaults.enabled;
-    	      this.idpId = defaults.idpId;
-    	      this.project = defaults.project;
-    	      this.tenant = defaults.tenant;
+            $ = new TenantDefaultSupportedIdpConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientId(Output<String> clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Output.of(Objects.requireNonNull(clientId));
-            return this;
+            return clientId(Output.of(clientId));
         }
+
         public Builder clientSecret(Output<String> clientSecret) {
-            this.clientSecret = Objects.requireNonNull(clientSecret);
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
-            return this;
+            return clientSecret(Output.of(clientSecret));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder idpId(Output<String> idpId) {
-            this.idpId = Objects.requireNonNull(idpId);
+            $.idpId = idpId;
             return this;
         }
+
         public Builder idpId(String idpId) {
-            this.idpId = Output.of(Objects.requireNonNull(idpId));
-            return this;
+            return idpId(Output.of(idpId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder tenant(Output<String> tenant) {
-            this.tenant = Objects.requireNonNull(tenant);
+            $.tenant = tenant;
             return this;
         }
+
         public Builder tenant(String tenant) {
-            this.tenant = Output.of(Objects.requireNonNull(tenant));
-            return this;
-        }        public TenantDefaultSupportedIdpConfigArgs build() {
-            return new TenantDefaultSupportedIdpConfigArgs(clientId, clientSecret, enabled, idpId, project, tenant);
+            return tenant(Output.of(tenant));
+        }
+
+        public TenantDefaultSupportedIdpConfigArgs build() {
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.clientSecret = Objects.requireNonNull($.clientSecret, "expected parameter 'clientSecret' to be non-null");
+            $.idpId = Objects.requireNonNull($.idpId, "expected parameter 'idpId' to be non-null");
+            $.tenant = Objects.requireNonNull($.tenant, "expected parameter 'tenant' to be non-null");
+            return $;
         }
     }
+
 }

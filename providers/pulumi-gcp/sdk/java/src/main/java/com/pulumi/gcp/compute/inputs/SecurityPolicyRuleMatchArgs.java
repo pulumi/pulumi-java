@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleMatchConfigArgs;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleMatchExprArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SecurityPolicyRuleMatchArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<SecurityPolicyRuleMatchConfigArgs> config;
+    private @Nullable Output<SecurityPolicyRuleMatchConfigArgs> config;
 
-    public Output<SecurityPolicyRuleMatchConfigArgs> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<SecurityPolicyRuleMatchConfigArgs>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SecurityPolicyRuleMatchArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="expr")
-      private final @Nullable Output<SecurityPolicyRuleMatchExprArgs> expr;
+    private @Nullable Output<SecurityPolicyRuleMatchExprArgs> expr;
 
-    public Output<SecurityPolicyRuleMatchExprArgs> expr() {
-        return this.expr == null ? Codegen.empty() : this.expr;
+    public Optional<Output<SecurityPolicyRuleMatchExprArgs>> expr() {
+        return Optional.ofNullable(this.expr);
     }
 
     /**
@@ -50,76 +50,68 @@ public final class SecurityPolicyRuleMatchArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="versionedExpr")
-      private final @Nullable Output<String> versionedExpr;
+    private @Nullable Output<String> versionedExpr;
 
-    public Output<String> versionedExpr() {
-        return this.versionedExpr == null ? Codegen.empty() : this.versionedExpr;
+    public Optional<Output<String>> versionedExpr() {
+        return Optional.ofNullable(this.versionedExpr);
     }
 
-    public SecurityPolicyRuleMatchArgs(
-        @Nullable Output<SecurityPolicyRuleMatchConfigArgs> config,
-        @Nullable Output<SecurityPolicyRuleMatchExprArgs> expr,
-        @Nullable Output<String> versionedExpr) {
-        this.config = config;
-        this.expr = expr;
-        this.versionedExpr = versionedExpr;
-    }
+    private SecurityPolicyRuleMatchArgs() {}
 
-    private SecurityPolicyRuleMatchArgs() {
-        this.config = Codegen.empty();
-        this.expr = Codegen.empty();
-        this.versionedExpr = Codegen.empty();
+    private SecurityPolicyRuleMatchArgs(SecurityPolicyRuleMatchArgs $) {
+        this.config = $.config;
+        this.expr = $.expr;
+        this.versionedExpr = $.versionedExpr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleMatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityPolicyRuleMatchConfigArgs> config;
-        private @Nullable Output<SecurityPolicyRuleMatchExprArgs> expr;
-        private @Nullable Output<String> versionedExpr;
+        private SecurityPolicyRuleMatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleMatchArgs();
         }
 
         public Builder(SecurityPolicyRuleMatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.expr = defaults.expr;
-    	      this.versionedExpr = defaults.versionedExpr;
+            $ = new SecurityPolicyRuleMatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(@Nullable Output<SecurityPolicyRuleMatchConfigArgs> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable SecurityPolicyRuleMatchConfigArgs config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(SecurityPolicyRuleMatchConfigArgs config) {
+            return config(Output.of(config));
         }
+
         public Builder expr(@Nullable Output<SecurityPolicyRuleMatchExprArgs> expr) {
-            this.expr = expr;
+            $.expr = expr;
             return this;
         }
-        public Builder expr(@Nullable SecurityPolicyRuleMatchExprArgs expr) {
-            this.expr = Codegen.ofNullable(expr);
-            return this;
+
+        public Builder expr(SecurityPolicyRuleMatchExprArgs expr) {
+            return expr(Output.of(expr));
         }
+
         public Builder versionedExpr(@Nullable Output<String> versionedExpr) {
-            this.versionedExpr = versionedExpr;
+            $.versionedExpr = versionedExpr;
             return this;
         }
-        public Builder versionedExpr(@Nullable String versionedExpr) {
-            this.versionedExpr = Codegen.ofNullable(versionedExpr);
-            return this;
-        }        public SecurityPolicyRuleMatchArgs build() {
-            return new SecurityPolicyRuleMatchArgs(config, expr, versionedExpr);
+
+        public Builder versionedExpr(String versionedExpr) {
+            return versionedExpr(Output.of(versionedExpr));
+        }
+
+        public SecurityPolicyRuleMatchArgs build() {
+            return $;
         }
     }
+
 }

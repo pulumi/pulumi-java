@@ -19,65 +19,63 @@ public final class GetServiceTemplateSpecVolume extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="secrets", required=true)
-      private final List<GetServiceTemplateSpecVolumeSecret> secrets;
+    private List<GetServiceTemplateSpecVolumeSecret> secrets;
 
     public List<GetServiceTemplateSpecVolumeSecret> secrets() {
         return this.secrets;
     }
 
-    public GetServiceTemplateSpecVolume(
-        String name,
-        List<GetServiceTemplateSpecVolumeSecret> secrets) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.secrets = Objects.requireNonNull(secrets, "expected parameter 'secrets' to be non-null");
-    }
+    private GetServiceTemplateSpecVolume() {}
 
-    private GetServiceTemplateSpecVolume() {
-        this.name = null;
-        this.secrets = List.of();
+    private GetServiceTemplateSpecVolume(GetServiceTemplateSpecVolume $) {
+        this.name = $.name;
+        this.secrets = $.secrets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateSpecVolume defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private List<GetServiceTemplateSpecVolumeSecret> secrets;
+        private GetServiceTemplateSpecVolume $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateSpecVolume();
         }
 
         public Builder(GetServiceTemplateSpecVolume defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.secrets = defaults.secrets;
+            $ = new GetServiceTemplateSpecVolume(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder secrets(List<GetServiceTemplateSpecVolumeSecret> secrets) {
-            this.secrets = Objects.requireNonNull(secrets);
+            $.secrets = secrets;
             return this;
         }
+
         public Builder secrets(GetServiceTemplateSpecVolumeSecret... secrets) {
             return secrets(List.of(secrets));
-        }        public GetServiceTemplateSpecVolume build() {
-            return new GetServiceTemplateSpecVolume(name, secrets);
+        }
+
+        public GetServiceTemplateSpecVolume build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.secrets = Objects.requireNonNull($.secrets, "expected parameter 'secrets' to be non-null");
+            return $;
         }
     }
+
 }

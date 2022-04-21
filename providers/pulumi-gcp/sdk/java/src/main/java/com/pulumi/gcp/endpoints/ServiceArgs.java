@@ -5,9 +5,9 @@ package com.pulumi.gcp.endpoints;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grpcConfig")
-      private final @Nullable Output<String> grpcConfig;
+    private @Nullable Output<String> grpcConfig;
 
-    public Output<String> grpcConfig() {
-        return this.grpcConfig == null ? Codegen.empty() : this.grpcConfig;
+    public Optional<Output<String>> grpcConfig() {
+        return Optional.ofNullable(this.grpcConfig);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="openapiConfig")
-      private final @Nullable Output<String> openapiConfig;
+    private @Nullable Output<String> openapiConfig;
 
-    public Output<String> openapiConfig() {
-        return this.openapiConfig == null ? Codegen.empty() : this.openapiConfig;
+    public Optional<Output<String>> openapiConfig() {
+        return Optional.ofNullable(this.openapiConfig);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocOutputBase64")
-      private final @Nullable Output<String> protocOutputBase64;
+    private @Nullable Output<String> protocOutputBase64;
 
-    public Output<String> protocOutputBase64() {
-        return this.protocOutputBase64 == null ? Codegen.empty() : this.protocOutputBase64;
+    public Optional<Output<String>> protocOutputBase64() {
+        return Optional.ofNullable(this.protocOutputBase64);
     }
 
     /**
@@ -67,102 +67,89 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public ServiceArgs(
-        @Nullable Output<String> grpcConfig,
-        @Nullable Output<String> openapiConfig,
-        @Nullable Output<String> project,
-        @Nullable Output<String> protocOutputBase64,
-        Output<String> serviceName) {
-        this.grpcConfig = grpcConfig;
-        this.openapiConfig = openapiConfig;
-        this.project = project;
-        this.protocOutputBase64 = protocOutputBase64;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private ServiceArgs() {}
 
-    private ServiceArgs() {
-        this.grpcConfig = Codegen.empty();
-        this.openapiConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.protocOutputBase64 = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private ServiceArgs(ServiceArgs $) {
+        this.grpcConfig = $.grpcConfig;
+        this.openapiConfig = $.openapiConfig;
+        this.project = $.project;
+        this.protocOutputBase64 = $.protocOutputBase64;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> grpcConfig;
-        private @Nullable Output<String> openapiConfig;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> protocOutputBase64;
-        private Output<String> serviceName;
+        private ServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceArgs();
         }
 
         public Builder(ServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.grpcConfig = defaults.grpcConfig;
-    	      this.openapiConfig = defaults.openapiConfig;
-    	      this.project = defaults.project;
-    	      this.protocOutputBase64 = defaults.protocOutputBase64;
-    	      this.serviceName = defaults.serviceName;
+            $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder grpcConfig(@Nullable Output<String> grpcConfig) {
-            this.grpcConfig = grpcConfig;
+            $.grpcConfig = grpcConfig;
             return this;
         }
-        public Builder grpcConfig(@Nullable String grpcConfig) {
-            this.grpcConfig = Codegen.ofNullable(grpcConfig);
-            return this;
+
+        public Builder grpcConfig(String grpcConfig) {
+            return grpcConfig(Output.of(grpcConfig));
         }
+
         public Builder openapiConfig(@Nullable Output<String> openapiConfig) {
-            this.openapiConfig = openapiConfig;
+            $.openapiConfig = openapiConfig;
             return this;
         }
-        public Builder openapiConfig(@Nullable String openapiConfig) {
-            this.openapiConfig = Codegen.ofNullable(openapiConfig);
-            return this;
+
+        public Builder openapiConfig(String openapiConfig) {
+            return openapiConfig(Output.of(openapiConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder protocOutputBase64(@Nullable Output<String> protocOutputBase64) {
-            this.protocOutputBase64 = protocOutputBase64;
+            $.protocOutputBase64 = protocOutputBase64;
             return this;
         }
-        public Builder protocOutputBase64(@Nullable String protocOutputBase64) {
-            this.protocOutputBase64 = Codegen.ofNullable(protocOutputBase64);
-            return this;
+
+        public Builder protocOutputBase64(String protocOutputBase64) {
+            return protocOutputBase64(Output.of(protocOutputBase64));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public ServiceArgs build() {
-            return new ServiceArgs(grpcConfig, openapiConfig, project, protocOutputBase64, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public ServiceArgs build() {
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

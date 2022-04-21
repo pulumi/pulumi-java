@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudasset.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudasset.inputs.FolderFeedFeedOutputConfigPubsubDestinationGetArgs;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class FolderFeedFeedOutputConfigGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="pubsubDestination", required=true)
-      private final Output<FolderFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
+    private Output<FolderFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
 
     public Output<FolderFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination() {
         return this.pubsubDestination;
     }
 
-    public FolderFeedFeedOutputConfigGetArgs(Output<FolderFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination) {
-        this.pubsubDestination = Objects.requireNonNull(pubsubDestination, "expected parameter 'pubsubDestination' to be non-null");
-    }
+    private FolderFeedFeedOutputConfigGetArgs() {}
 
-    private FolderFeedFeedOutputConfigGetArgs() {
-        this.pubsubDestination = Codegen.empty();
+    private FolderFeedFeedOutputConfigGetArgs(FolderFeedFeedOutputConfigGetArgs $) {
+        this.pubsubDestination = $.pubsubDestination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FolderFeedFeedOutputConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FolderFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
+        private FolderFeedFeedOutputConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FolderFeedFeedOutputConfigGetArgs();
         }
 
         public Builder(FolderFeedFeedOutputConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubDestination = defaults.pubsubDestination;
+            $ = new FolderFeedFeedOutputConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubDestination(Output<FolderFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination) {
-            this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
+            $.pubsubDestination = pubsubDestination;
             return this;
         }
+
         public Builder pubsubDestination(FolderFeedFeedOutputConfigPubsubDestinationGetArgs pubsubDestination) {
-            this.pubsubDestination = Output.of(Objects.requireNonNull(pubsubDestination));
-            return this;
-        }        public FolderFeedFeedOutputConfigGetArgs build() {
-            return new FolderFeedFeedOutputConfigGetArgs(pubsubDestination);
+            return pubsubDestination(Output.of(pubsubDestination));
+        }
+
+        public FolderFeedFeedOutputConfigGetArgs build() {
+            $.pubsubDestination = Objects.requireNonNull($.pubsubDestination, "expected parameter 'pubsubDestination' to be non-null");
+            return $;
         }
     }
+
 }

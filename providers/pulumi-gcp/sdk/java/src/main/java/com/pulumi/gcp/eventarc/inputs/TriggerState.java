@@ -5,7 +5,6 @@ package com.pulumi.gcp.eventarc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.eventarc.inputs.TriggerDestinationGetArgs;
 import com.pulumi.gcp.eventarc.inputs.TriggerMatchingCriteriaGetArgs;
 import com.pulumi.gcp.eventarc.inputs.TriggerTransportGetArgs;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destination")
-      private final @Nullable Output<TriggerDestinationGetArgs> destination;
+    private @Nullable Output<TriggerDestinationGetArgs> destination;
 
-    public Output<TriggerDestinationGetArgs> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<TriggerDestinationGetArgs>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="matchingCriterias")
-      private final @Nullable Output<List<TriggerMatchingCriteriaGetArgs>> matchingCriterias;
+    private @Nullable Output<List<TriggerMatchingCriteriaGetArgs>> matchingCriterias;
 
-    public Output<List<TriggerMatchingCriteriaGetArgs>> matchingCriterias() {
-        return this.matchingCriterias == null ? Codegen.empty() : this.matchingCriterias;
+    public Optional<Output<List<TriggerMatchingCriteriaGetArgs>>> matchingCriterias() {
+        return Optional.ofNullable(this.matchingCriterias);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transports")
-      private final @Nullable Output<List<TriggerTransportGetArgs>> transports;
+    private @Nullable Output<List<TriggerTransportGetArgs>> transports;
 
-    public Output<List<TriggerTransportGetArgs>> transports() {
-        return this.transports == null ? Codegen.empty() : this.transports;
+    public Optional<Output<List<TriggerTransportGetArgs>>> transports() {
+        return Optional.ofNullable(this.transports);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
     /**
@@ -148,199 +148,166 @@ public final class TriggerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public TriggerState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<TriggerDestinationGetArgs> destination,
-        @Nullable Output<String> etag,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<List<TriggerMatchingCriteriaGetArgs>> matchingCriterias,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<List<TriggerTransportGetArgs>> transports,
-        @Nullable Output<String> uid,
-        @Nullable Output<String> updateTime) {
-        this.createTime = createTime;
-        this.destination = destination;
-        this.etag = etag;
-        this.labels = labels;
-        this.location = location;
-        this.matchingCriterias = matchingCriterias;
-        this.name = name;
-        this.project = project;
-        this.serviceAccount = serviceAccount;
-        this.transports = transports;
-        this.uid = uid;
-        this.updateTime = updateTime;
-    }
+    private TriggerState() {}
 
-    private TriggerState() {
-        this.createTime = Codegen.empty();
-        this.destination = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.matchingCriterias = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.transports = Codegen.empty();
-        this.uid = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private TriggerState(TriggerState $) {
+        this.createTime = $.createTime;
+        this.destination = $.destination;
+        this.etag = $.etag;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.matchingCriterias = $.matchingCriterias;
+        this.name = $.name;
+        this.project = $.project;
+        this.serviceAccount = $.serviceAccount;
+        this.transports = $.transports;
+        this.uid = $.uid;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<TriggerDestinationGetArgs> destination;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<TriggerMatchingCriteriaGetArgs>> matchingCriterias;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<List<TriggerTransportGetArgs>> transports;
-        private @Nullable Output<String> uid;
-        private @Nullable Output<String> updateTime;
+        private TriggerState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerState();
         }
 
         public Builder(TriggerState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.destination = defaults.destination;
-    	      this.etag = defaults.etag;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.matchingCriterias = defaults.matchingCriterias;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.transports = defaults.transports;
-    	      this.uid = defaults.uid;
-    	      this.updateTime = defaults.updateTime;
+            $ = new TriggerState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder destination(@Nullable Output<TriggerDestinationGetArgs> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable TriggerDestinationGetArgs destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(TriggerDestinationGetArgs destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder matchingCriterias(@Nullable Output<List<TriggerMatchingCriteriaGetArgs>> matchingCriterias) {
-            this.matchingCriterias = matchingCriterias;
+            $.matchingCriterias = matchingCriterias;
             return this;
         }
-        public Builder matchingCriterias(@Nullable List<TriggerMatchingCriteriaGetArgs> matchingCriterias) {
-            this.matchingCriterias = Codegen.ofNullable(matchingCriterias);
-            return this;
+
+        public Builder matchingCriterias(List<TriggerMatchingCriteriaGetArgs> matchingCriterias) {
+            return matchingCriterias(Output.of(matchingCriterias));
         }
+
         public Builder matchingCriterias(TriggerMatchingCriteriaGetArgs... matchingCriterias) {
             return matchingCriterias(List.of(matchingCriterias));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder transports(@Nullable Output<List<TriggerTransportGetArgs>> transports) {
-            this.transports = transports;
+            $.transports = transports;
             return this;
         }
-        public Builder transports(@Nullable List<TriggerTransportGetArgs> transports) {
-            this.transports = Codegen.ofNullable(transports);
-            return this;
+
+        public Builder transports(List<TriggerTransportGetArgs> transports) {
+            return transports(Output.of(transports));
         }
+
         public Builder transports(TriggerTransportGetArgs... transports) {
             return transports(List.of(transports));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public TriggerState build() {
-            return new TriggerState(createTime, destination, etag, labels, location, matchingCriterias, name, project, serviceAccount, transports, uid, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public TriggerState build() {
+            return $;
         }
     }
+
 }

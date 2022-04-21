@@ -5,7 +5,6 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class MembershipAuthorityGetArgs extends com.pulumi.resources.Resou
     public static final MembershipAuthorityGetArgs Empty = new MembershipAuthorityGetArgs();
 
     @Import(name="issuer", required=true)
-      private final Output<String> issuer;
+    private Output<String> issuer;
 
     public Output<String> issuer() {
         return this.issuer;
     }
 
-    public MembershipAuthorityGetArgs(Output<String> issuer) {
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-    }
+    private MembershipAuthorityGetArgs() {}
 
-    private MembershipAuthorityGetArgs() {
-        this.issuer = Codegen.empty();
+    private MembershipAuthorityGetArgs(MembershipAuthorityGetArgs $) {
+        this.issuer = $.issuer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MembershipAuthorityGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> issuer;
+        private MembershipAuthorityGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MembershipAuthorityGetArgs();
         }
 
         public Builder(MembershipAuthorityGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issuer = defaults.issuer;
+            $ = new MembershipAuthorityGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder issuer(Output<String> issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Output.of(Objects.requireNonNull(issuer));
-            return this;
-        }        public MembershipAuthorityGetArgs build() {
-            return new MembershipAuthorityGetArgs(issuer);
+            return issuer(Output.of(issuer));
+        }
+
+        public MembershipAuthorityGetArgs build() {
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            return $;
         }
     }
+
 }

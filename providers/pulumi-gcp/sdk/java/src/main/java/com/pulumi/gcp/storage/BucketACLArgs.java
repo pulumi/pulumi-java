@@ -5,10 +5,10 @@ package com.pulumi.gcp.storage;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class BucketACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -32,10 +32,10 @@ public final class BucketACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultAcl")
-      private final @Nullable Output<String> defaultAcl;
+    private @Nullable Output<String> defaultAcl;
 
-    public Output<String> defaultAcl() {
-        return this.defaultAcl == null ? Codegen.empty() : this.defaultAcl;
+    public Optional<Output<String>> defaultAcl() {
+        return Optional.ofNullable(this.defaultAcl);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BucketACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="predefinedAcl")
-      private final @Nullable Output<String> predefinedAcl;
+    private @Nullable Output<String> predefinedAcl;
 
-    public Output<String> predefinedAcl() {
-        return this.predefinedAcl == null ? Codegen.empty() : this.predefinedAcl;
+    public Optional<Output<String>> predefinedAcl() {
+        return Optional.ofNullable(this.predefinedAcl);
     }
 
     /**
@@ -54,92 +54,83 @@ public final class BucketACLArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleEntities")
-      private final @Nullable Output<List<String>> roleEntities;
+    private @Nullable Output<List<String>> roleEntities;
 
-    public Output<List<String>> roleEntities() {
-        return this.roleEntities == null ? Codegen.empty() : this.roleEntities;
+    public Optional<Output<List<String>>> roleEntities() {
+        return Optional.ofNullable(this.roleEntities);
     }
 
-    public BucketACLArgs(
-        Output<String> bucket,
-        @Nullable Output<String> defaultAcl,
-        @Nullable Output<String> predefinedAcl,
-        @Nullable Output<List<String>> roleEntities) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.defaultAcl = defaultAcl;
-        this.predefinedAcl = predefinedAcl;
-        this.roleEntities = roleEntities;
-    }
+    private BucketACLArgs() {}
 
-    private BucketACLArgs() {
-        this.bucket = Codegen.empty();
-        this.defaultAcl = Codegen.empty();
-        this.predefinedAcl = Codegen.empty();
-        this.roleEntities = Codegen.empty();
+    private BucketACLArgs(BucketACLArgs $) {
+        this.bucket = $.bucket;
+        this.defaultAcl = $.defaultAcl;
+        this.predefinedAcl = $.predefinedAcl;
+        this.roleEntities = $.roleEntities;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketACLArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private @Nullable Output<String> defaultAcl;
-        private @Nullable Output<String> predefinedAcl;
-        private @Nullable Output<List<String>> roleEntities;
+        private BucketACLArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketACLArgs();
         }
 
         public Builder(BucketACLArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.defaultAcl = defaults.defaultAcl;
-    	      this.predefinedAcl = defaults.predefinedAcl;
-    	      this.roleEntities = defaults.roleEntities;
+            $ = new BucketACLArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder defaultAcl(@Nullable Output<String> defaultAcl) {
-            this.defaultAcl = defaultAcl;
+            $.defaultAcl = defaultAcl;
             return this;
         }
-        public Builder defaultAcl(@Nullable String defaultAcl) {
-            this.defaultAcl = Codegen.ofNullable(defaultAcl);
-            return this;
+
+        public Builder defaultAcl(String defaultAcl) {
+            return defaultAcl(Output.of(defaultAcl));
         }
+
         public Builder predefinedAcl(@Nullable Output<String> predefinedAcl) {
-            this.predefinedAcl = predefinedAcl;
+            $.predefinedAcl = predefinedAcl;
             return this;
         }
-        public Builder predefinedAcl(@Nullable String predefinedAcl) {
-            this.predefinedAcl = Codegen.ofNullable(predefinedAcl);
-            return this;
+
+        public Builder predefinedAcl(String predefinedAcl) {
+            return predefinedAcl(Output.of(predefinedAcl));
         }
+
         public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
-            this.roleEntities = roleEntities;
+            $.roleEntities = roleEntities;
             return this;
         }
-        public Builder roleEntities(@Nullable List<String> roleEntities) {
-            this.roleEntities = Codegen.ofNullable(roleEntities);
-            return this;
+
+        public Builder roleEntities(List<String> roleEntities) {
+            return roleEntities(Output.of(roleEntities));
         }
+
         public Builder roleEntities(String... roleEntities) {
             return roleEntities(List.of(roleEntities));
-        }        public BucketACLArgs build() {
-            return new BucketACLArgs(bucket, defaultAcl, predefinedAcl, roleEntities);
+        }
+
+        public BucketACLArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

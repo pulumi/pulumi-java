@@ -19,7 +19,7 @@ public final class GetDatabaseInstanceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -30,55 +30,51 @@ public final class GetDatabaseInstanceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetDatabaseInstanceArgs(
-        String name,
-        @Nullable String project) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.project = project;
-    }
+    private GetDatabaseInstanceArgs() {}
 
-    private GetDatabaseInstanceArgs() {
-        this.name = null;
-        this.project = null;
+    private GetDatabaseInstanceArgs(GetDatabaseInstanceArgs $) {
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String project;
+        private GetDatabaseInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseInstanceArgs();
         }
 
         public Builder(GetDatabaseInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new GetDatabaseInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetDatabaseInstanceArgs build() {
-            return new GetDatabaseInstanceArgs(name, project);
+        }
+
+        public GetDatabaseInstanceArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

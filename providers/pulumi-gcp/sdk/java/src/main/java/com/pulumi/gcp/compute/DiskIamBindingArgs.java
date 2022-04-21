@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.DiskIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,14 +18,14 @@ public final class DiskIamBindingArgs extends com.pulumi.resources.ResourceArgs 
     public static final DiskIamBindingArgs Empty = new DiskIamBindingArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<DiskIamBindingConditionArgs> condition;
+    private @Nullable Output<DiskIamBindingConditionArgs> condition;
 
-    public Output<DiskIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<DiskIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -36,10 +36,10 @@ public final class DiskIamBindingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DiskIamBindingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -61,7 +61,7 @@ public final class DiskIamBindingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -74,118 +74,104 @@ public final class DiskIamBindingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public DiskIamBindingArgs(
-        @Nullable Output<DiskIamBindingConditionArgs> condition,
-        Output<List<String>> members,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> role,
-        @Nullable Output<String> zone) {
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.zone = zone;
-    }
+    private DiskIamBindingArgs() {}
 
-    private DiskIamBindingArgs() {
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.zone = Codegen.empty();
+    private DiskIamBindingArgs(DiskIamBindingArgs $) {
+        this.condition = $.condition;
+        this.members = $.members;
+        this.name = $.name;
+        this.project = $.project;
+        this.role = $.role;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DiskIamBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> role;
-        private @Nullable Output<String> zone;
+        private DiskIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskIamBindingArgs();
         }
 
         public Builder(DiskIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.zone = defaults.zone;
+            $ = new DiskIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<DiskIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable DiskIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(DiskIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public DiskIamBindingArgs build() {
-            return new DiskIamBindingArgs(condition, members, name, project, role, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public DiskIamBindingArgs build() {
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

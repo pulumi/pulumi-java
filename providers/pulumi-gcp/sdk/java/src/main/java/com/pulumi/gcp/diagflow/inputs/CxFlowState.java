@@ -5,13 +5,13 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.CxFlowEventHandlerGetArgs;
 import com.pulumi.gcp.diagflow.inputs.CxFlowNluSettingsGetArgs;
 import com.pulumi.gcp.diagflow.inputs.CxFlowTransitionRouteGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventHandlers")
-      private final @Nullable Output<List<CxFlowEventHandlerGetArgs>> eventHandlers;
+    private @Nullable Output<List<CxFlowEventHandlerGetArgs>> eventHandlers;
 
-    public Output<List<CxFlowEventHandlerGetArgs>> eventHandlers() {
-        return this.eventHandlers == null ? Codegen.empty() : this.eventHandlers;
+    public Optional<Output<List<CxFlowEventHandlerGetArgs>>> eventHandlers() {
+        return Optional.ofNullable(this.eventHandlers);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="languageCode")
-      private final @Nullable Output<String> languageCode;
+    private @Nullable Output<String> languageCode;
 
-    public Output<String> languageCode() {
-        return this.languageCode == null ? Codegen.empty() : this.languageCode;
+    public Optional<Output<String>> languageCode() {
+        return Optional.ofNullable(this.languageCode);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nluSettings")
-      private final @Nullable Output<CxFlowNluSettingsGetArgs> nluSettings;
+    private @Nullable Output<CxFlowNluSettingsGetArgs> nluSettings;
 
-    public Output<CxFlowNluSettingsGetArgs> nluSettings() {
-        return this.nluSettings == null ? Codegen.empty() : this.nluSettings;
+    public Optional<Output<CxFlowNluSettingsGetArgs>> nluSettings() {
+        return Optional.ofNullable(this.nluSettings);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitionRouteGroups")
-      private final @Nullable Output<List<String>> transitionRouteGroups;
+    private @Nullable Output<List<String>> transitionRouteGroups;
 
-    public Output<List<String>> transitionRouteGroups() {
-        return this.transitionRouteGroups == null ? Codegen.empty() : this.transitionRouteGroups;
+    public Optional<Output<List<String>>> transitionRouteGroups() {
+        return Optional.ofNullable(this.transitionRouteGroups);
     }
 
     /**
@@ -129,163 +129,140 @@ public final class CxFlowState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitionRoutes")
-      private final @Nullable Output<List<CxFlowTransitionRouteGetArgs>> transitionRoutes;
+    private @Nullable Output<List<CxFlowTransitionRouteGetArgs>> transitionRoutes;
 
-    public Output<List<CxFlowTransitionRouteGetArgs>> transitionRoutes() {
-        return this.transitionRoutes == null ? Codegen.empty() : this.transitionRoutes;
+    public Optional<Output<List<CxFlowTransitionRouteGetArgs>>> transitionRoutes() {
+        return Optional.ofNullable(this.transitionRoutes);
     }
 
-    public CxFlowState(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<List<CxFlowEventHandlerGetArgs>> eventHandlers,
-        @Nullable Output<String> languageCode,
-        @Nullable Output<String> name,
-        @Nullable Output<CxFlowNluSettingsGetArgs> nluSettings,
-        @Nullable Output<String> parent,
-        @Nullable Output<List<String>> transitionRouteGroups,
-        @Nullable Output<List<CxFlowTransitionRouteGetArgs>> transitionRoutes) {
-        this.description = description;
-        this.displayName = displayName;
-        this.eventHandlers = eventHandlers;
-        this.languageCode = languageCode;
-        this.name = name;
-        this.nluSettings = nluSettings;
-        this.parent = parent;
-        this.transitionRouteGroups = transitionRouteGroups;
-        this.transitionRoutes = transitionRoutes;
-    }
+    private CxFlowState() {}
 
-    private CxFlowState() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.eventHandlers = Codegen.empty();
-        this.languageCode = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nluSettings = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.transitionRouteGroups = Codegen.empty();
-        this.transitionRoutes = Codegen.empty();
+    private CxFlowState(CxFlowState $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.eventHandlers = $.eventHandlers;
+        this.languageCode = $.languageCode;
+        this.name = $.name;
+        this.nluSettings = $.nluSettings;
+        this.parent = $.parent;
+        this.transitionRouteGroups = $.transitionRouteGroups;
+        this.transitionRoutes = $.transitionRoutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxFlowState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<List<CxFlowEventHandlerGetArgs>> eventHandlers;
-        private @Nullable Output<String> languageCode;
-        private @Nullable Output<String> name;
-        private @Nullable Output<CxFlowNluSettingsGetArgs> nluSettings;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<List<String>> transitionRouteGroups;
-        private @Nullable Output<List<CxFlowTransitionRouteGetArgs>> transitionRoutes;
+        private CxFlowState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxFlowState();
         }
 
         public Builder(CxFlowState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.eventHandlers = defaults.eventHandlers;
-    	      this.languageCode = defaults.languageCode;
-    	      this.name = defaults.name;
-    	      this.nluSettings = defaults.nluSettings;
-    	      this.parent = defaults.parent;
-    	      this.transitionRouteGroups = defaults.transitionRouteGroups;
-    	      this.transitionRoutes = defaults.transitionRoutes;
+            $ = new CxFlowState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder eventHandlers(@Nullable Output<List<CxFlowEventHandlerGetArgs>> eventHandlers) {
-            this.eventHandlers = eventHandlers;
+            $.eventHandlers = eventHandlers;
             return this;
         }
-        public Builder eventHandlers(@Nullable List<CxFlowEventHandlerGetArgs> eventHandlers) {
-            this.eventHandlers = Codegen.ofNullable(eventHandlers);
-            return this;
+
+        public Builder eventHandlers(List<CxFlowEventHandlerGetArgs> eventHandlers) {
+            return eventHandlers(Output.of(eventHandlers));
         }
+
         public Builder eventHandlers(CxFlowEventHandlerGetArgs... eventHandlers) {
             return eventHandlers(List.of(eventHandlers));
         }
+
         public Builder languageCode(@Nullable Output<String> languageCode) {
-            this.languageCode = languageCode;
+            $.languageCode = languageCode;
             return this;
         }
-        public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Codegen.ofNullable(languageCode);
-            return this;
+
+        public Builder languageCode(String languageCode) {
+            return languageCode(Output.of(languageCode));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nluSettings(@Nullable Output<CxFlowNluSettingsGetArgs> nluSettings) {
-            this.nluSettings = nluSettings;
+            $.nluSettings = nluSettings;
             return this;
         }
-        public Builder nluSettings(@Nullable CxFlowNluSettingsGetArgs nluSettings) {
-            this.nluSettings = Codegen.ofNullable(nluSettings);
-            return this;
+
+        public Builder nluSettings(CxFlowNluSettingsGetArgs nluSettings) {
+            return nluSettings(Output.of(nluSettings));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder transitionRouteGroups(@Nullable Output<List<String>> transitionRouteGroups) {
-            this.transitionRouteGroups = transitionRouteGroups;
+            $.transitionRouteGroups = transitionRouteGroups;
             return this;
         }
-        public Builder transitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
-            this.transitionRouteGroups = Codegen.ofNullable(transitionRouteGroups);
-            return this;
+
+        public Builder transitionRouteGroups(List<String> transitionRouteGroups) {
+            return transitionRouteGroups(Output.of(transitionRouteGroups));
         }
+
         public Builder transitionRouteGroups(String... transitionRouteGroups) {
             return transitionRouteGroups(List.of(transitionRouteGroups));
         }
+
         public Builder transitionRoutes(@Nullable Output<List<CxFlowTransitionRouteGetArgs>> transitionRoutes) {
-            this.transitionRoutes = transitionRoutes;
+            $.transitionRoutes = transitionRoutes;
             return this;
         }
-        public Builder transitionRoutes(@Nullable List<CxFlowTransitionRouteGetArgs> transitionRoutes) {
-            this.transitionRoutes = Codegen.ofNullable(transitionRoutes);
-            return this;
+
+        public Builder transitionRoutes(List<CxFlowTransitionRouteGetArgs> transitionRoutes) {
+            return transitionRoutes(Output.of(transitionRoutes));
         }
+
         public Builder transitionRoutes(CxFlowTransitionRouteGetArgs... transitionRoutes) {
             return transitionRoutes(List.of(transitionRoutes));
-        }        public CxFlowState build() {
-            return new CxFlowState(description, displayName, eventHandlers, languageCode, name, nluSettings, parent, transitionRouteGroups, transitionRoutes);
+        }
+
+        public CxFlowState build() {
+            return $;
         }
     }
+
 }

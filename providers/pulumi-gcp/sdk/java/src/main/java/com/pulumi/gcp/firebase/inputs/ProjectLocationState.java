@@ -5,9 +5,9 @@ package com.pulumi.gcp.firebase.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ProjectLocationState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="locationId")
-      private final @Nullable Output<String> locationId;
+    private @Nullable Output<String> locationId;
 
-    public Output<String> locationId() {
-        return this.locationId == null ? Codegen.empty() : this.locationId;
+    public Optional<Output<String>> locationId() {
+        return Optional.ofNullable(this.locationId);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class ProjectLocationState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ProjectLocationState(
-        @Nullable Output<String> locationId,
-        @Nullable Output<String> project) {
-        this.locationId = locationId;
-        this.project = project;
-    }
+    private ProjectLocationState() {}
 
-    private ProjectLocationState() {
-        this.locationId = Codegen.empty();
-        this.project = Codegen.empty();
+    private ProjectLocationState(ProjectLocationState $) {
+        this.locationId = $.locationId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectLocationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> locationId;
-        private @Nullable Output<String> project;
+        private ProjectLocationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectLocationState();
         }
 
         public Builder(ProjectLocationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locationId = defaults.locationId;
-    	      this.project = defaults.project;
+            $ = new ProjectLocationState(Objects.requireNonNull(defaults));
         }
 
         public Builder locationId(@Nullable Output<String> locationId) {
-            this.locationId = locationId;
+            $.locationId = locationId;
             return this;
         }
-        public Builder locationId(@Nullable String locationId) {
-            this.locationId = Codegen.ofNullable(locationId);
-            return this;
+
+        public Builder locationId(String locationId) {
+            return locationId(Output.of(locationId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ProjectLocationState build() {
-            return new ProjectLocationState(locationId, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ProjectLocationState build() {
+            return $;
         }
     }
+
 }

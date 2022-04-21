@@ -13,45 +13,45 @@ public final class GetIstioCanonicalServiceTelemetry extends com.pulumi.resource
     public static final GetIstioCanonicalServiceTelemetry Empty = new GetIstioCanonicalServiceTelemetry();
 
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetIstioCanonicalServiceTelemetry(String resourceName) {
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetIstioCanonicalServiceTelemetry() {}
 
-    private GetIstioCanonicalServiceTelemetry() {
-        this.resourceName = null;
+    private GetIstioCanonicalServiceTelemetry(GetIstioCanonicalServiceTelemetry $) {
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIstioCanonicalServiceTelemetry defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceName;
+        private GetIstioCanonicalServiceTelemetry $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIstioCanonicalServiceTelemetry();
         }
 
         public Builder(GetIstioCanonicalServiceTelemetry defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetIstioCanonicalServiceTelemetry(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetIstioCanonicalServiceTelemetry build() {
-            return new GetIstioCanonicalServiceTelemetry(resourceName);
+        }
+
+        public GetIstioCanonicalServiceTelemetry build() {
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

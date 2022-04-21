@@ -18,7 +18,7 @@ public final class GetRegionInstanceGroupInstanceNamedPort extends com.pulumi.re
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -29,55 +29,52 @@ public final class GetRegionInstanceGroupInstanceNamedPort extends com.pulumi.re
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public GetRegionInstanceGroupInstanceNamedPort(
-        String name,
-        Integer port) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private GetRegionInstanceGroupInstanceNamedPort() {}
 
-    private GetRegionInstanceGroupInstanceNamedPort() {
-        this.name = null;
-        this.port = null;
+    private GetRegionInstanceGroupInstanceNamedPort(GetRegionInstanceGroupInstanceNamedPort $) {
+        this.name = $.name;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionInstanceGroupInstanceNamedPort defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private Integer port;
+        private GetRegionInstanceGroupInstanceNamedPort $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionInstanceGroupInstanceNamedPort();
         }
 
         public Builder(GetRegionInstanceGroupInstanceNamedPort defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
+            $ = new GetRegionInstanceGroupInstanceNamedPort(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public GetRegionInstanceGroupInstanceNamedPort build() {
-            return new GetRegionInstanceGroupInstanceNamedPort(name, port);
+        }
+
+        public GetRegionInstanceGroupInstanceNamedPort build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

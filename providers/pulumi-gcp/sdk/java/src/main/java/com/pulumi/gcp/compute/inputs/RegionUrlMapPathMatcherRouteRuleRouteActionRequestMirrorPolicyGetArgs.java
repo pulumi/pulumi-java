@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,49 +20,49 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolic
      * 
      */
     @Import(name="backendService", required=true)
-      private final Output<String> backendService;
+    private Output<String> backendService;
 
     public Output<String> backendService() {
         return this.backendService;
     }
 
-    public RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs(Output<String> backendService) {
-        this.backendService = Objects.requireNonNull(backendService, "expected parameter 'backendService' to be non-null");
-    }
+    private RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs() {}
 
-    private RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs() {
-        this.backendService = Codegen.empty();
+    private RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs(RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs $) {
+        this.backendService = $.backendService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> backendService;
+        private RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs();
         }
 
         public Builder(RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendService = defaults.backendService;
+            $ = new RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendService(Output<String> backendService) {
-            this.backendService = Objects.requireNonNull(backendService);
+            $.backendService = backendService;
             return this;
         }
+
         public Builder backendService(String backendService) {
-            this.backendService = Output.of(Objects.requireNonNull(backendService));
-            return this;
-        }        public RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs build() {
-            return new RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs(backendService);
+            return backendService(Output.of(backendService));
+        }
+
+        public RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyGetArgs build() {
+            $.backendService = Objects.requireNonNull($.backendService, "expected parameter 'backendService' to be non-null");
+            return $;
         }
     }
+
 }

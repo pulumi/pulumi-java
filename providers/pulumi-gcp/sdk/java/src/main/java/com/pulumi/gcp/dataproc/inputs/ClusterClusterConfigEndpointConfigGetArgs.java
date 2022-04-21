@@ -5,12 +5,12 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,70 +24,66 @@ public final class ClusterClusterConfigEndpointConfigGetArgs extends com.pulumi.
      * 
      */
     @Import(name="enableHttpPortAccess", required=true)
-      private final Output<Boolean> enableHttpPortAccess;
+    private Output<Boolean> enableHttpPortAccess;
 
     public Output<Boolean> enableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }
 
     @Import(name="httpPorts")
-      private final @Nullable Output<Map<String,Object>> httpPorts;
+    private @Nullable Output<Map<String,Object>> httpPorts;
 
-    public Output<Map<String,Object>> httpPorts() {
-        return this.httpPorts == null ? Codegen.empty() : this.httpPorts;
+    public Optional<Output<Map<String,Object>>> httpPorts() {
+        return Optional.ofNullable(this.httpPorts);
     }
 
-    public ClusterClusterConfigEndpointConfigGetArgs(
-        Output<Boolean> enableHttpPortAccess,
-        @Nullable Output<Map<String,Object>> httpPorts) {
-        this.enableHttpPortAccess = Objects.requireNonNull(enableHttpPortAccess, "expected parameter 'enableHttpPortAccess' to be non-null");
-        this.httpPorts = httpPorts;
-    }
+    private ClusterClusterConfigEndpointConfigGetArgs() {}
 
-    private ClusterClusterConfigEndpointConfigGetArgs() {
-        this.enableHttpPortAccess = Codegen.empty();
-        this.httpPorts = Codegen.empty();
+    private ClusterClusterConfigEndpointConfigGetArgs(ClusterClusterConfigEndpointConfigGetArgs $) {
+        this.enableHttpPortAccess = $.enableHttpPortAccess;
+        this.httpPorts = $.httpPorts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterConfigEndpointConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enableHttpPortAccess;
-        private @Nullable Output<Map<String,Object>> httpPorts;
+        private ClusterClusterConfigEndpointConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterConfigEndpointConfigGetArgs();
         }
 
         public Builder(ClusterClusterConfigEndpointConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableHttpPortAccess = defaults.enableHttpPortAccess;
-    	      this.httpPorts = defaults.httpPorts;
+            $ = new ClusterClusterConfigEndpointConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableHttpPortAccess(Output<Boolean> enableHttpPortAccess) {
-            this.enableHttpPortAccess = Objects.requireNonNull(enableHttpPortAccess);
+            $.enableHttpPortAccess = enableHttpPortAccess;
             return this;
         }
+
         public Builder enableHttpPortAccess(Boolean enableHttpPortAccess) {
-            this.enableHttpPortAccess = Output.of(Objects.requireNonNull(enableHttpPortAccess));
-            return this;
+            return enableHttpPortAccess(Output.of(enableHttpPortAccess));
         }
+
         public Builder httpPorts(@Nullable Output<Map<String,Object>> httpPorts) {
-            this.httpPorts = httpPorts;
+            $.httpPorts = httpPorts;
             return this;
         }
-        public Builder httpPorts(@Nullable Map<String,Object> httpPorts) {
-            this.httpPorts = Codegen.ofNullable(httpPorts);
-            return this;
-        }        public ClusterClusterConfigEndpointConfigGetArgs build() {
-            return new ClusterClusterConfigEndpointConfigGetArgs(enableHttpPortAccess, httpPorts);
+
+        public Builder httpPorts(Map<String,Object> httpPorts) {
+            return httpPorts(Output.of(httpPorts));
+        }
+
+        public ClusterClusterConfigEndpointConfigGetArgs build() {
+            $.enableHttpPortAccess = Objects.requireNonNull($.enableHttpPortAccess, "expected parameter 'enableHttpPortAccess' to be non-null");
+            return $;
         }
     }
+
 }

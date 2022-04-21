@@ -5,9 +5,9 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * 
      */
     @Import(name="clusterNamespace")
-      private final @Nullable Output<String> clusterNamespace;
+    private @Nullable Output<String> clusterNamespace;
 
-    public Output<String> clusterNamespace() {
-        return this.clusterNamespace == null ? Codegen.empty() : this.clusterNamespace;
+    public Optional<Output<String>> clusterNamespace() {
+        return Optional.ofNullable(this.clusterNamespace);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * 
      */
     @Import(name="targetGkeCluster")
-      private final @Nullable Output<String> targetGkeCluster;
+    private @Nullable Output<String> targetGkeCluster;
 
-    public Output<String> targetGkeCluster() {
-        return this.targetGkeCluster == null ? Codegen.empty() : this.targetGkeCluster;
+    public Optional<Output<String>> targetGkeCluster() {
+        return Optional.ofNullable(this.targetGkeCluster);
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs(
-        @Nullable Output<String> clusterNamespace,
-        @Nullable Output<String> targetGkeCluster) {
-        this.clusterNamespace = clusterNamespace;
-        this.targetGkeCluster = targetGkeCluster;
-    }
+    private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs() {
-        this.clusterNamespace = Codegen.empty();
-        this.targetGkeCluster = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs(WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs $) {
+        this.clusterNamespace = $.clusterNamespace;
+        this.targetGkeCluster = $.targetGkeCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clusterNamespace;
-        private @Nullable Output<String> targetGkeCluster;
+        private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterNamespace = defaults.clusterNamespace;
-    	      this.targetGkeCluster = defaults.targetGkeCluster;
+            $ = new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterNamespace(@Nullable Output<String> clusterNamespace) {
-            this.clusterNamespace = clusterNamespace;
+            $.clusterNamespace = clusterNamespace;
             return this;
         }
-        public Builder clusterNamespace(@Nullable String clusterNamespace) {
-            this.clusterNamespace = Codegen.ofNullable(clusterNamespace);
-            return this;
+
+        public Builder clusterNamespace(String clusterNamespace) {
+            return clusterNamespace(Output.of(clusterNamespace));
         }
+
         public Builder targetGkeCluster(@Nullable Output<String> targetGkeCluster) {
-            this.targetGkeCluster = targetGkeCluster;
+            $.targetGkeCluster = targetGkeCluster;
             return this;
         }
-        public Builder targetGkeCluster(@Nullable String targetGkeCluster) {
-            this.targetGkeCluster = Codegen.ofNullable(targetGkeCluster);
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs(clusterNamespace, targetGkeCluster);
+
+        public Builder targetGkeCluster(String targetGkeCluster) {
+            return targetGkeCluster(Output.of(targetGkeCluster));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetArgs build() {
+            return $;
         }
     }
+
 }

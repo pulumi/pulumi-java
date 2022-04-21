@@ -5,9 +5,9 @@ package com.pulumi.gcp.runtimeconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VariableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class VariableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VariableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class VariableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<String> text;
+    private @Nullable Output<String> text;
 
-    public Output<String> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<String>> text() {
+        return Optional.ofNullable(this.text);
     }
 
     /**
@@ -72,122 +72,105 @@ public final class VariableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public VariableState(
-        @Nullable Output<String> name,
-        @Nullable Output<String> parent,
-        @Nullable Output<String> project,
-        @Nullable Output<String> text,
-        @Nullable Output<String> updateTime,
-        @Nullable Output<String> value) {
-        this.name = name;
-        this.parent = parent;
-        this.project = project;
-        this.text = text;
-        this.updateTime = updateTime;
-        this.value = value;
-    }
+    private VariableState() {}
 
-    private VariableState() {
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.project = Codegen.empty();
-        this.text = Codegen.empty();
-        this.updateTime = Codegen.empty();
-        this.value = Codegen.empty();
+    private VariableState(VariableState $) {
+        this.name = $.name;
+        this.parent = $.parent;
+        this.project = $.project;
+        this.text = $.text;
+        this.updateTime = $.updateTime;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VariableState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> text;
-        private @Nullable Output<String> updateTime;
-        private @Nullable Output<String> value;
+        private VariableState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VariableState();
         }
 
         public Builder(VariableState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.project = defaults.project;
-    	      this.text = defaults.text;
-    	      this.updateTime = defaults.updateTime;
-    	      this.value = defaults.value;
+            $ = new VariableState(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder text(@Nullable Output<String> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable String text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
+
+        public Builder text(String text) {
+            return text(Output.of(text));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public VariableState build() {
-            return new VariableState(name, parent, project, text, updateTime, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public VariableState build() {
+            return $;
         }
     }
+
 }

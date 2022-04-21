@@ -5,12 +5,12 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.pubsub.inputs.LiteTopicPartitionConfigGetArgs;
 import com.pulumi.gcp.pubsub.inputs.LiteTopicReservationConfigGetArgs;
 import com.pulumi.gcp.pubsub.inputs.LiteTopicRetentionConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partitionConfig")
-      private final @Nullable Output<LiteTopicPartitionConfigGetArgs> partitionConfig;
+    private @Nullable Output<LiteTopicPartitionConfigGetArgs> partitionConfig;
 
-    public Output<LiteTopicPartitionConfigGetArgs> partitionConfig() {
-        return this.partitionConfig == null ? Codegen.empty() : this.partitionConfig;
+    public Optional<Output<LiteTopicPartitionConfigGetArgs>> partitionConfig() {
+        return Optional.ofNullable(this.partitionConfig);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservationConfig")
-      private final @Nullable Output<LiteTopicReservationConfigGetArgs> reservationConfig;
+    private @Nullable Output<LiteTopicReservationConfigGetArgs> reservationConfig;
 
-    public Output<LiteTopicReservationConfigGetArgs> reservationConfig() {
-        return this.reservationConfig == null ? Codegen.empty() : this.reservationConfig;
+    public Optional<Output<LiteTopicReservationConfigGetArgs>> reservationConfig() {
+        return Optional.ofNullable(this.reservationConfig);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retentionConfig")
-      private final @Nullable Output<LiteTopicRetentionConfigGetArgs> retentionConfig;
+    private @Nullable Output<LiteTopicRetentionConfigGetArgs> retentionConfig;
 
-    public Output<LiteTopicRetentionConfigGetArgs> retentionConfig() {
-        return this.retentionConfig == null ? Codegen.empty() : this.retentionConfig;
+    public Optional<Output<LiteTopicRetentionConfigGetArgs>> retentionConfig() {
+        return Optional.ofNullable(this.retentionConfig);
     }
 
     /**
@@ -93,128 +93,108 @@ public final class LiteTopicState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public LiteTopicState(
-        @Nullable Output<String> name,
-        @Nullable Output<LiteTopicPartitionConfigGetArgs> partitionConfig,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<LiteTopicReservationConfigGetArgs> reservationConfig,
-        @Nullable Output<LiteTopicRetentionConfigGetArgs> retentionConfig,
-        @Nullable Output<String> zone) {
-        this.name = name;
-        this.partitionConfig = partitionConfig;
-        this.project = project;
-        this.region = region;
-        this.reservationConfig = reservationConfig;
-        this.retentionConfig = retentionConfig;
-        this.zone = zone;
-    }
+    private LiteTopicState() {}
 
-    private LiteTopicState() {
-        this.name = Codegen.empty();
-        this.partitionConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.reservationConfig = Codegen.empty();
-        this.retentionConfig = Codegen.empty();
-        this.zone = Codegen.empty();
+    private LiteTopicState(LiteTopicState $) {
+        this.name = $.name;
+        this.partitionConfig = $.partitionConfig;
+        this.project = $.project;
+        this.region = $.region;
+        this.reservationConfig = $.reservationConfig;
+        this.retentionConfig = $.retentionConfig;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiteTopicState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<LiteTopicPartitionConfigGetArgs> partitionConfig;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<LiteTopicReservationConfigGetArgs> reservationConfig;
-        private @Nullable Output<LiteTopicRetentionConfigGetArgs> retentionConfig;
-        private @Nullable Output<String> zone;
+        private LiteTopicState $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiteTopicState();
         }
 
         public Builder(LiteTopicState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.partitionConfig = defaults.partitionConfig;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.reservationConfig = defaults.reservationConfig;
-    	      this.retentionConfig = defaults.retentionConfig;
-    	      this.zone = defaults.zone;
+            $ = new LiteTopicState(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder partitionConfig(@Nullable Output<LiteTopicPartitionConfigGetArgs> partitionConfig) {
-            this.partitionConfig = partitionConfig;
+            $.partitionConfig = partitionConfig;
             return this;
         }
-        public Builder partitionConfig(@Nullable LiteTopicPartitionConfigGetArgs partitionConfig) {
-            this.partitionConfig = Codegen.ofNullable(partitionConfig);
-            return this;
+
+        public Builder partitionConfig(LiteTopicPartitionConfigGetArgs partitionConfig) {
+            return partitionConfig(Output.of(partitionConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder reservationConfig(@Nullable Output<LiteTopicReservationConfigGetArgs> reservationConfig) {
-            this.reservationConfig = reservationConfig;
+            $.reservationConfig = reservationConfig;
             return this;
         }
-        public Builder reservationConfig(@Nullable LiteTopicReservationConfigGetArgs reservationConfig) {
-            this.reservationConfig = Codegen.ofNullable(reservationConfig);
-            return this;
+
+        public Builder reservationConfig(LiteTopicReservationConfigGetArgs reservationConfig) {
+            return reservationConfig(Output.of(reservationConfig));
         }
+
         public Builder retentionConfig(@Nullable Output<LiteTopicRetentionConfigGetArgs> retentionConfig) {
-            this.retentionConfig = retentionConfig;
+            $.retentionConfig = retentionConfig;
             return this;
         }
-        public Builder retentionConfig(@Nullable LiteTopicRetentionConfigGetArgs retentionConfig) {
-            this.retentionConfig = Codegen.ofNullable(retentionConfig);
-            return this;
+
+        public Builder retentionConfig(LiteTopicRetentionConfigGetArgs retentionConfig) {
+            return retentionConfig(Output.of(retentionConfig));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public LiteTopicState build() {
-            return new LiteTopicState(name, partitionConfig, project, region, reservationConfig, retentionConfig, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public LiteTopicState build() {
+            return $;
         }
     }
+
 }

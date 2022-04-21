@@ -5,10 +5,10 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class OrganizationExclusionState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OrganizationExclusionState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class OrganizationExclusionState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class OrganizationExclusionState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class OrganizationExclusionState extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="orgId")
-      private final @Nullable Output<String> orgId;
+    private @Nullable Output<String> orgId;
 
-    public Output<String> orgId() {
-        return this.orgId == null ? Codegen.empty() : this.orgId;
+    public Optional<Output<String>> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
-    public OrganizationExclusionState(
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<String> filter,
-        @Nullable Output<String> name,
-        @Nullable Output<String> orgId) {
-        this.description = description;
-        this.disabled = disabled;
-        this.filter = filter;
-        this.name = name;
-        this.orgId = orgId;
-    }
+    private OrganizationExclusionState() {}
 
-    private OrganizationExclusionState() {
-        this.description = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.name = Codegen.empty();
-        this.orgId = Codegen.empty();
+    private OrganizationExclusionState(OrganizationExclusionState $) {
+        this.description = $.description;
+        this.disabled = $.disabled;
+        this.filter = $.filter;
+        this.name = $.name;
+        this.orgId = $.orgId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationExclusionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<String> filter;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> orgId;
+        private OrganizationExclusionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationExclusionState();
         }
 
         public Builder(OrganizationExclusionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.disabled = defaults.disabled;
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.orgId = defaults.orgId;
+            $ = new OrganizationExclusionState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder orgId(@Nullable Output<String> orgId) {
-            this.orgId = orgId;
+            $.orgId = orgId;
             return this;
         }
-        public Builder orgId(@Nullable String orgId) {
-            this.orgId = Codegen.ofNullable(orgId);
-            return this;
-        }        public OrganizationExclusionState build() {
-            return new OrganizationExclusionState(description, disabled, filter, name, orgId);
+
+        public Builder orgId(String orgId) {
+            return orgId(Output.of(orgId));
+        }
+
+        public OrganizationExclusionState build() {
+            return $;
         }
     }
+
 }

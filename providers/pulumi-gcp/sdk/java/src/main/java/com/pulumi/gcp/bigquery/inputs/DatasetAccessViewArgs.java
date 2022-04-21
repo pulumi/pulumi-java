@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class DatasetAccessViewArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="datasetId", required=true)
-      private final Output<String> datasetId;
+    private Output<String> datasetId;
 
     public Output<String> datasetId() {
         return this.datasetId;
@@ -30,7 +29,7 @@ public final class DatasetAccessViewArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="projectId", required=true)
-      private final Output<String> projectId;
+    private Output<String> projectId;
 
     public Output<String> projectId() {
         return this.projectId;
@@ -43,76 +42,71 @@ public final class DatasetAccessViewArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tableId", required=true)
-      private final Output<String> tableId;
+    private Output<String> tableId;
 
     public Output<String> tableId() {
         return this.tableId;
     }
 
-    public DatasetAccessViewArgs(
-        Output<String> datasetId,
-        Output<String> projectId,
-        Output<String> tableId) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
-        this.tableId = Objects.requireNonNull(tableId, "expected parameter 'tableId' to be non-null");
-    }
+    private DatasetAccessViewArgs() {}
 
-    private DatasetAccessViewArgs() {
-        this.datasetId = Codegen.empty();
-        this.projectId = Codegen.empty();
-        this.tableId = Codegen.empty();
+    private DatasetAccessViewArgs(DatasetAccessViewArgs $) {
+        this.datasetId = $.datasetId;
+        this.projectId = $.projectId;
+        this.tableId = $.tableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetAccessViewArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> datasetId;
-        private Output<String> projectId;
-        private Output<String> tableId;
+        private DatasetAccessViewArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetAccessViewArgs();
         }
 
         public Builder(DatasetAccessViewArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.projectId = defaults.projectId;
-    	      this.tableId = defaults.tableId;
+            $ = new DatasetAccessViewArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(Output<String> datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
-            return this;
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder projectId(Output<String> projectId) {
-            this.projectId = Objects.requireNonNull(projectId);
+            $.projectId = projectId;
             return this;
         }
+
         public Builder projectId(String projectId) {
-            this.projectId = Output.of(Objects.requireNonNull(projectId));
-            return this;
+            return projectId(Output.of(projectId));
         }
+
         public Builder tableId(Output<String> tableId) {
-            this.tableId = Objects.requireNonNull(tableId);
+            $.tableId = tableId;
             return this;
         }
+
         public Builder tableId(String tableId) {
-            this.tableId = Output.of(Objects.requireNonNull(tableId));
-            return this;
-        }        public DatasetAccessViewArgs build() {
-            return new DatasetAccessViewArgs(datasetId, projectId, tableId);
+            return tableId(Output.of(tableId));
+        }
+
+        public DatasetAccessViewArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.projectId = Objects.requireNonNull($.projectId, "expected parameter 'projectId' to be non-null");
+            $.tableId = Objects.requireNonNull($.tableId, "expected parameter 'tableId' to be non-null");
+            return $;
         }
     }
+
 }

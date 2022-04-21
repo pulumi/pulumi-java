@@ -5,10 +5,10 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.notebooks.inputs.RuntimeIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class RuntimeIamMemberState extends com.pulumi.resources.ResourceAr
     public static final RuntimeIamMemberState Empty = new RuntimeIamMemberState();
 
     @Import(name="condition")
-      private final @Nullable Output<RuntimeIamMemberConditionGetArgs> condition;
+    private @Nullable Output<RuntimeIamMemberConditionGetArgs> condition;
 
-    public Output<RuntimeIamMemberConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<RuntimeIamMemberConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -28,10 +28,10 @@ public final class RuntimeIamMemberState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -39,17 +39,17 @@ public final class RuntimeIamMemberState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="member")
-      private final @Nullable Output<String> member;
+    private @Nullable Output<String> member;
 
-    public Output<String> member() {
-        return this.member == null ? Codegen.empty() : this.member;
+    public Optional<Output<String>> member() {
+        return Optional.ofNullable(this.member);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RuntimeIamMemberState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class RuntimeIamMemberState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -82,128 +82,108 @@ public final class RuntimeIamMemberState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="runtimeName")
-      private final @Nullable Output<String> runtimeName;
+    private @Nullable Output<String> runtimeName;
 
-    public Output<String> runtimeName() {
-        return this.runtimeName == null ? Codegen.empty() : this.runtimeName;
+    public Optional<Output<String>> runtimeName() {
+        return Optional.ofNullable(this.runtimeName);
     }
 
-    public RuntimeIamMemberState(
-        @Nullable Output<RuntimeIamMemberConditionGetArgs> condition,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> location,
-        @Nullable Output<String> member,
-        @Nullable Output<String> project,
-        @Nullable Output<String> role,
-        @Nullable Output<String> runtimeName) {
-        this.condition = condition;
-        this.etag = etag;
-        this.location = location;
-        this.member = member;
-        this.project = project;
-        this.role = role;
-        this.runtimeName = runtimeName;
-    }
+    private RuntimeIamMemberState() {}
 
-    private RuntimeIamMemberState() {
-        this.condition = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.location = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.runtimeName = Codegen.empty();
+    private RuntimeIamMemberState(RuntimeIamMemberState $) {
+        this.condition = $.condition;
+        this.etag = $.etag;
+        this.location = $.location;
+        this.member = $.member;
+        this.project = $.project;
+        this.role = $.role;
+        this.runtimeName = $.runtimeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeIamMemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuntimeIamMemberConditionGetArgs> condition;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> member;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> role;
-        private @Nullable Output<String> runtimeName;
+        private RuntimeIamMemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeIamMemberState();
         }
 
         public Builder(RuntimeIamMemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.etag = defaults.etag;
-    	      this.location = defaults.location;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.runtimeName = defaults.runtimeName;
+            $ = new RuntimeIamMemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<RuntimeIamMemberConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable RuntimeIamMemberConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(RuntimeIamMemberConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder member(@Nullable Output<String> member) {
-            this.member = member;
+            $.member = member;
             return this;
         }
-        public Builder member(@Nullable String member) {
-            this.member = Codegen.ofNullable(member);
-            return this;
+
+        public Builder member(String member) {
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder runtimeName(@Nullable Output<String> runtimeName) {
-            this.runtimeName = runtimeName;
+            $.runtimeName = runtimeName;
             return this;
         }
-        public Builder runtimeName(@Nullable String runtimeName) {
-            this.runtimeName = Codegen.ofNullable(runtimeName);
-            return this;
-        }        public RuntimeIamMemberState build() {
-            return new RuntimeIamMemberState(condition, etag, location, member, project, role, runtimeName);
+
+        public Builder runtimeName(String runtimeName) {
+            return runtimeName(Output.of(runtimeName));
+        }
+
+        public RuntimeIamMemberState build() {
+            return $;
         }
     }
+
 }

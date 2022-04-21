@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GlobalNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="defaultPort")
-      private final @Nullable Output<Integer> defaultPort;
+    private @Nullable Output<Integer> defaultPort;
 
-    public Output<Integer> defaultPort() {
-        return this.defaultPort == null ? Codegen.empty() : this.defaultPort;
+    public Optional<Output<Integer>> defaultPort() {
+        return Optional.ofNullable(this.defaultPort);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GlobalNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GlobalNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class GlobalNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="networkEndpointType")
-      private final @Nullable Output<String> networkEndpointType;
+    private @Nullable Output<String> networkEndpointType;
 
-    public Output<String> networkEndpointType() {
-        return this.networkEndpointType == null ? Codegen.empty() : this.networkEndpointType;
+    public Optional<Output<String>> networkEndpointType() {
+        return Optional.ofNullable(this.networkEndpointType);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class GlobalNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -86,115 +86,98 @@ public final class GlobalNetworkEndpointGroupState extends com.pulumi.resources.
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
-    public GlobalNetworkEndpointGroupState(
-        @Nullable Output<Integer> defaultPort,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> networkEndpointType,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink) {
-        this.defaultPort = defaultPort;
-        this.description = description;
-        this.name = name;
-        this.networkEndpointType = networkEndpointType;
-        this.project = project;
-        this.selfLink = selfLink;
-    }
+    private GlobalNetworkEndpointGroupState() {}
 
-    private GlobalNetworkEndpointGroupState() {
-        this.defaultPort = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkEndpointType = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
+    private GlobalNetworkEndpointGroupState(GlobalNetworkEndpointGroupState $) {
+        this.defaultPort = $.defaultPort;
+        this.description = $.description;
+        this.name = $.name;
+        this.networkEndpointType = $.networkEndpointType;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalNetworkEndpointGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> defaultPort;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> networkEndpointType;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
+        private GlobalNetworkEndpointGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalNetworkEndpointGroupState();
         }
 
         public Builder(GlobalNetworkEndpointGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultPort = defaults.defaultPort;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.networkEndpointType = defaults.networkEndpointType;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
+            $ = new GlobalNetworkEndpointGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultPort(@Nullable Output<Integer> defaultPort) {
-            this.defaultPort = defaultPort;
+            $.defaultPort = defaultPort;
             return this;
         }
-        public Builder defaultPort(@Nullable Integer defaultPort) {
-            this.defaultPort = Codegen.ofNullable(defaultPort);
-            return this;
+
+        public Builder defaultPort(Integer defaultPort) {
+            return defaultPort(Output.of(defaultPort));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkEndpointType(@Nullable Output<String> networkEndpointType) {
-            this.networkEndpointType = networkEndpointType;
+            $.networkEndpointType = networkEndpointType;
             return this;
         }
-        public Builder networkEndpointType(@Nullable String networkEndpointType) {
-            this.networkEndpointType = Codegen.ofNullable(networkEndpointType);
-            return this;
+
+        public Builder networkEndpointType(String networkEndpointType) {
+            return networkEndpointType(Output.of(networkEndpointType));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
-        }        public GlobalNetworkEndpointGroupState build() {
-            return new GlobalNetworkEndpointGroupState(defaultPort, description, name, networkEndpointType, project, selfLink);
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
+        }
+
+        public GlobalNetworkEndpointGroupState build() {
+            return $;
         }
     }
+
 }

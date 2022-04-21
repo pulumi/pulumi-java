@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvValueFromGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServiceTemplateSpecContainerEnvGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ServiceTemplateSpecContainerEnvGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
     /**
@@ -51,76 +51,68 @@ public final class ServiceTemplateSpecContainerEnvGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="valueFrom")
-      private final @Nullable Output<ServiceTemplateSpecContainerEnvValueFromGetArgs> valueFrom;
+    private @Nullable Output<ServiceTemplateSpecContainerEnvValueFromGetArgs> valueFrom;
 
-    public Output<ServiceTemplateSpecContainerEnvValueFromGetArgs> valueFrom() {
-        return this.valueFrom == null ? Codegen.empty() : this.valueFrom;
+    public Optional<Output<ServiceTemplateSpecContainerEnvValueFromGetArgs>> valueFrom() {
+        return Optional.ofNullable(this.valueFrom);
     }
 
-    public ServiceTemplateSpecContainerEnvGetArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> value,
-        @Nullable Output<ServiceTemplateSpecContainerEnvValueFromGetArgs> valueFrom) {
-        this.name = name;
-        this.value = value;
-        this.valueFrom = valueFrom;
-    }
+    private ServiceTemplateSpecContainerEnvGetArgs() {}
 
-    private ServiceTemplateSpecContainerEnvGetArgs() {
-        this.name = Codegen.empty();
-        this.value = Codegen.empty();
-        this.valueFrom = Codegen.empty();
+    private ServiceTemplateSpecContainerEnvGetArgs(ServiceTemplateSpecContainerEnvGetArgs $) {
+        this.name = $.name;
+        this.value = $.value;
+        this.valueFrom = $.valueFrom;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTemplateSpecContainerEnvGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> value;
-        private @Nullable Output<ServiceTemplateSpecContainerEnvValueFromGetArgs> valueFrom;
+        private ServiceTemplateSpecContainerEnvGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTemplateSpecContainerEnvGetArgs();
         }
 
         public Builder(ServiceTemplateSpecContainerEnvGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
-    	      this.valueFrom = defaults.valueFrom;
+            $ = new ServiceTemplateSpecContainerEnvGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(String value) {
+            return value(Output.of(value));
         }
+
         public Builder valueFrom(@Nullable Output<ServiceTemplateSpecContainerEnvValueFromGetArgs> valueFrom) {
-            this.valueFrom = valueFrom;
+            $.valueFrom = valueFrom;
             return this;
         }
-        public Builder valueFrom(@Nullable ServiceTemplateSpecContainerEnvValueFromGetArgs valueFrom) {
-            this.valueFrom = Codegen.ofNullable(valueFrom);
-            return this;
-        }        public ServiceTemplateSpecContainerEnvGetArgs build() {
-            return new ServiceTemplateSpecContainerEnvGetArgs(name, value, valueFrom);
+
+        public Builder valueFrom(ServiceTemplateSpecContainerEnvValueFromGetArgs valueFrom) {
+            return valueFrom(Output.of(valueFrom));
+        }
+
+        public ServiceTemplateSpecContainerEnvGetArgs build() {
+            return $;
         }
     }
+
 }

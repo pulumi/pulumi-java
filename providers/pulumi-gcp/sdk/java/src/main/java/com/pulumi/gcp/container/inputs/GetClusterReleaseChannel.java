@@ -13,45 +13,45 @@ public final class GetClusterReleaseChannel extends com.pulumi.resources.InvokeA
     public static final GetClusterReleaseChannel Empty = new GetClusterReleaseChannel();
 
     @Import(name="channel", required=true)
-      private final String channel;
+    private String channel;
 
     public String channel() {
         return this.channel;
     }
 
-    public GetClusterReleaseChannel(String channel) {
-        this.channel = Objects.requireNonNull(channel, "expected parameter 'channel' to be non-null");
-    }
+    private GetClusterReleaseChannel() {}
 
-    private GetClusterReleaseChannel() {
-        this.channel = null;
+    private GetClusterReleaseChannel(GetClusterReleaseChannel $) {
+        this.channel = $.channel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterReleaseChannel defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String channel;
+        private GetClusterReleaseChannel $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterReleaseChannel();
         }
 
         public Builder(GetClusterReleaseChannel defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channel = defaults.channel;
+            $ = new GetClusterReleaseChannel(Objects.requireNonNull(defaults));
         }
 
         public Builder channel(String channel) {
-            this.channel = Objects.requireNonNull(channel);
+            $.channel = channel;
             return this;
-        }        public GetClusterReleaseChannel build() {
-            return new GetClusterReleaseChannel(channel);
+        }
+
+        public GetClusterReleaseChannel build() {
+            $.channel = Objects.requireNonNull($.channel, "expected parameter 'channel' to be non-null");
+            return $;
         }
     }
+
 }

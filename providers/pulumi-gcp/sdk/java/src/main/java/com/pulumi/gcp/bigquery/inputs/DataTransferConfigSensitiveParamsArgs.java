@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class DataTransferConfigSensitiveParamsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="secretAccessKey", required=true)
-      private final Output<String> secretAccessKey;
+    private Output<String> secretAccessKey;
 
     public Output<String> secretAccessKey() {
         return this.secretAccessKey;
     }
 
-    public DataTransferConfigSensitiveParamsArgs(Output<String> secretAccessKey) {
-        this.secretAccessKey = Objects.requireNonNull(secretAccessKey, "expected parameter 'secretAccessKey' to be non-null");
-    }
+    private DataTransferConfigSensitiveParamsArgs() {}
 
-    private DataTransferConfigSensitiveParamsArgs() {
-        this.secretAccessKey = Codegen.empty();
+    private DataTransferConfigSensitiveParamsArgs(DataTransferConfigSensitiveParamsArgs $) {
+        this.secretAccessKey = $.secretAccessKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataTransferConfigSensitiveParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> secretAccessKey;
+        private DataTransferConfigSensitiveParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataTransferConfigSensitiveParamsArgs();
         }
 
         public Builder(DataTransferConfigSensitiveParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretAccessKey = defaults.secretAccessKey;
+            $ = new DataTransferConfigSensitiveParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretAccessKey(Output<String> secretAccessKey) {
-            this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
+            $.secretAccessKey = secretAccessKey;
             return this;
         }
+
         public Builder secretAccessKey(String secretAccessKey) {
-            this.secretAccessKey = Output.of(Objects.requireNonNull(secretAccessKey));
-            return this;
-        }        public DataTransferConfigSensitiveParamsArgs build() {
-            return new DataTransferConfigSensitiveParamsArgs(secretAccessKey);
+            return secretAccessKey(Output.of(secretAccessKey));
+        }
+
+        public DataTransferConfigSensitiveParamsArgs build() {
+            $.secretAccessKey = Objects.requireNonNull($.secretAccessKey, "expected parameter 'secretAccessKey' to be non-null");
+            return $;
         }
     }
+
 }

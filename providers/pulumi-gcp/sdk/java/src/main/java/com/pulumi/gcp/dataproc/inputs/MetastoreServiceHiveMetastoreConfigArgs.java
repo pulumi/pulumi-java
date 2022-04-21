@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigKerberosConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends com.pulumi.re
      * 
      */
     @Import(name="configOverrides")
-      private final @Nullable Output<Map<String,String>> configOverrides;
+    private @Nullable Output<Map<String,String>> configOverrides;
 
-    public Output<Map<String,String>> configOverrides() {
-        return this.configOverrides == null ? Codegen.empty() : this.configOverrides;
+    public Optional<Output<Map<String,String>>> configOverrides() {
+        return Optional.ofNullable(this.configOverrides);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends com.pulumi.re
      * 
      */
     @Import(name="kerberosConfig")
-      private final @Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig;
+    private @Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig;
 
-    public Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig() {
-        return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
+    public Optional<Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs>> kerberosConfig() {
+        return Optional.ofNullable(this.kerberosConfig);
     }
 
     /**
@@ -46,76 +46,69 @@ public final class MetastoreServiceHiveMetastoreConfigArgs extends com.pulumi.re
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public MetastoreServiceHiveMetastoreConfigArgs(
-        @Nullable Output<Map<String,String>> configOverrides,
-        @Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig,
-        Output<String> version) {
-        this.configOverrides = configOverrides;
-        this.kerberosConfig = kerberosConfig;
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private MetastoreServiceHiveMetastoreConfigArgs() {}
 
-    private MetastoreServiceHiveMetastoreConfigArgs() {
-        this.configOverrides = Codegen.empty();
-        this.kerberosConfig = Codegen.empty();
-        this.version = Codegen.empty();
+    private MetastoreServiceHiveMetastoreConfigArgs(MetastoreServiceHiveMetastoreConfigArgs $) {
+        this.configOverrides = $.configOverrides;
+        this.kerberosConfig = $.kerberosConfig;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetastoreServiceHiveMetastoreConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> configOverrides;
-        private @Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig;
-        private Output<String> version;
+        private MetastoreServiceHiveMetastoreConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetastoreServiceHiveMetastoreConfigArgs();
         }
 
         public Builder(MetastoreServiceHiveMetastoreConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configOverrides = defaults.configOverrides;
-    	      this.kerberosConfig = defaults.kerberosConfig;
-    	      this.version = defaults.version;
+            $ = new MetastoreServiceHiveMetastoreConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configOverrides(@Nullable Output<Map<String,String>> configOverrides) {
-            this.configOverrides = configOverrides;
+            $.configOverrides = configOverrides;
             return this;
         }
-        public Builder configOverrides(@Nullable Map<String,String> configOverrides) {
-            this.configOverrides = Codegen.ofNullable(configOverrides);
-            return this;
+
+        public Builder configOverrides(Map<String,String> configOverrides) {
+            return configOverrides(Output.of(configOverrides));
         }
+
         public Builder kerberosConfig(@Nullable Output<MetastoreServiceHiveMetastoreConfigKerberosConfigArgs> kerberosConfig) {
-            this.kerberosConfig = kerberosConfig;
+            $.kerberosConfig = kerberosConfig;
             return this;
         }
-        public Builder kerberosConfig(@Nullable MetastoreServiceHiveMetastoreConfigKerberosConfigArgs kerberosConfig) {
-            this.kerberosConfig = Codegen.ofNullable(kerberosConfig);
-            return this;
+
+        public Builder kerberosConfig(MetastoreServiceHiveMetastoreConfigKerberosConfigArgs kerberosConfig) {
+            return kerberosConfig(Output.of(kerberosConfig));
         }
+
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public MetastoreServiceHiveMetastoreConfigArgs build() {
-            return new MetastoreServiceHiveMetastoreConfigArgs(configOverrides, kerberosConfig, version);
+            return version(Output.of(version));
+        }
+
+        public MetastoreServiceHiveMetastoreConfigArgs build() {
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

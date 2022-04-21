@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends com.pulumi
      * 
      */
     @Import(name="connectionLimit", required=true)
-      private final Output<Integer> connectionLimit;
+    private Output<Integer> connectionLimit;
 
     public Output<Integer> connectionLimit() {
         return this.connectionLimit;
@@ -32,63 +31,60 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends com.pulumi
      * 
      */
     @Import(name="projectIdOrNum", required=true)
-      private final Output<String> projectIdOrNum;
+    private Output<String> projectIdOrNum;
 
     public Output<String> projectIdOrNum() {
         return this.projectIdOrNum;
     }
 
-    public ServiceAttachmentConsumerAcceptListGetArgs(
-        Output<Integer> connectionLimit,
-        Output<String> projectIdOrNum) {
-        this.connectionLimit = Objects.requireNonNull(connectionLimit, "expected parameter 'connectionLimit' to be non-null");
-        this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum, "expected parameter 'projectIdOrNum' to be non-null");
-    }
+    private ServiceAttachmentConsumerAcceptListGetArgs() {}
 
-    private ServiceAttachmentConsumerAcceptListGetArgs() {
-        this.connectionLimit = Codegen.empty();
-        this.projectIdOrNum = Codegen.empty();
+    private ServiceAttachmentConsumerAcceptListGetArgs(ServiceAttachmentConsumerAcceptListGetArgs $) {
+        this.connectionLimit = $.connectionLimit;
+        this.projectIdOrNum = $.projectIdOrNum;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAttachmentConsumerAcceptListGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> connectionLimit;
-        private Output<String> projectIdOrNum;
+        private ServiceAttachmentConsumerAcceptListGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAttachmentConsumerAcceptListGetArgs();
         }
 
         public Builder(ServiceAttachmentConsumerAcceptListGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionLimit = defaults.connectionLimit;
-    	      this.projectIdOrNum = defaults.projectIdOrNum;
+            $ = new ServiceAttachmentConsumerAcceptListGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionLimit(Output<Integer> connectionLimit) {
-            this.connectionLimit = Objects.requireNonNull(connectionLimit);
+            $.connectionLimit = connectionLimit;
             return this;
         }
+
         public Builder connectionLimit(Integer connectionLimit) {
-            this.connectionLimit = Output.of(Objects.requireNonNull(connectionLimit));
-            return this;
+            return connectionLimit(Output.of(connectionLimit));
         }
+
         public Builder projectIdOrNum(Output<String> projectIdOrNum) {
-            this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
+            $.projectIdOrNum = projectIdOrNum;
             return this;
         }
+
         public Builder projectIdOrNum(String projectIdOrNum) {
-            this.projectIdOrNum = Output.of(Objects.requireNonNull(projectIdOrNum));
-            return this;
-        }        public ServiceAttachmentConsumerAcceptListGetArgs build() {
-            return new ServiceAttachmentConsumerAcceptListGetArgs(connectionLimit, projectIdOrNum);
+            return projectIdOrNum(Output.of(projectIdOrNum));
+        }
+
+        public ServiceAttachmentConsumerAcceptListGetArgs build() {
+            $.connectionLimit = Objects.requireNonNull($.connectionLimit, "expected parameter 'connectionLimit' to be non-null");
+            $.projectIdOrNum = Objects.requireNonNull($.projectIdOrNum, "expected parameter 'projectIdOrNum' to be non-null");
+            return $;
         }
     }
+
 }

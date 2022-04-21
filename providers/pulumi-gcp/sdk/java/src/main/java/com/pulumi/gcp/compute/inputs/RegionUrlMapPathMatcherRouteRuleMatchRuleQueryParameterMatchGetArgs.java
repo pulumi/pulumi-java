@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchG
      * 
      */
     @Import(name="exactMatch")
-      private final @Nullable Output<String> exactMatch;
+    private @Nullable Output<String> exactMatch;
 
-    public Output<String> exactMatch() {
-        return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
+    public Optional<Output<String>> exactMatch() {
+        return Optional.ofNullable(this.exactMatch);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchG
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -48,10 +48,10 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchG
      * 
      */
     @Import(name="presentMatch")
-      private final @Nullable Output<Boolean> presentMatch;
+    private @Nullable Output<Boolean> presentMatch;
 
-    public Output<Boolean> presentMatch() {
-        return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
+    public Optional<Output<Boolean>> presentMatch() {
+        return Optional.ofNullable(this.presentMatch);
     }
 
     /**
@@ -62,89 +62,79 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchG
      * 
      */
     @Import(name="regexMatch")
-      private final @Nullable Output<String> regexMatch;
+    private @Nullable Output<String> regexMatch;
 
-    public Output<String> regexMatch() {
-        return this.regexMatch == null ? Codegen.empty() : this.regexMatch;
+    public Optional<Output<String>> regexMatch() {
+        return Optional.ofNullable(this.regexMatch);
     }
 
-    public RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs(
-        @Nullable Output<String> exactMatch,
-        Output<String> name,
-        @Nullable Output<Boolean> presentMatch,
-        @Nullable Output<String> regexMatch) {
-        this.exactMatch = exactMatch;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.presentMatch = presentMatch;
-        this.regexMatch = regexMatch;
-    }
+    private RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs() {}
 
-    private RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs() {
-        this.exactMatch = Codegen.empty();
-        this.name = Codegen.empty();
-        this.presentMatch = Codegen.empty();
-        this.regexMatch = Codegen.empty();
+    private RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs(RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs $) {
+        this.exactMatch = $.exactMatch;
+        this.name = $.name;
+        this.presentMatch = $.presentMatch;
+        this.regexMatch = $.regexMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> exactMatch;
-        private Output<String> name;
-        private @Nullable Output<Boolean> presentMatch;
-        private @Nullable Output<String> regexMatch;
+        private RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs();
         }
 
         public Builder(RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exactMatch = defaults.exactMatch;
-    	      this.name = defaults.name;
-    	      this.presentMatch = defaults.presentMatch;
-    	      this.regexMatch = defaults.regexMatch;
+            $ = new RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exactMatch(@Nullable Output<String> exactMatch) {
-            this.exactMatch = exactMatch;
+            $.exactMatch = exactMatch;
             return this;
         }
-        public Builder exactMatch(@Nullable String exactMatch) {
-            this.exactMatch = Codegen.ofNullable(exactMatch);
-            return this;
+
+        public Builder exactMatch(String exactMatch) {
+            return exactMatch(Output.of(exactMatch));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
-            this.presentMatch = presentMatch;
+            $.presentMatch = presentMatch;
             return this;
         }
-        public Builder presentMatch(@Nullable Boolean presentMatch) {
-            this.presentMatch = Codegen.ofNullable(presentMatch);
-            return this;
+
+        public Builder presentMatch(Boolean presentMatch) {
+            return presentMatch(Output.of(presentMatch));
         }
+
         public Builder regexMatch(@Nullable Output<String> regexMatch) {
-            this.regexMatch = regexMatch;
+            $.regexMatch = regexMatch;
             return this;
         }
-        public Builder regexMatch(@Nullable String regexMatch) {
-            this.regexMatch = Codegen.ofNullable(regexMatch);
-            return this;
-        }        public RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs build() {
-            return new RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs(exactMatch, name, presentMatch, regexMatch);
+
+        public Builder regexMatch(String regexMatch) {
+            return regexMatch(Output.of(regexMatch));
+        }
+
+        public RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

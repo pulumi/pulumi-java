@@ -19,7 +19,7 @@ public final class GetKMSSecretCiphertextArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cryptoKey", required=true)
-      private final String cryptoKey;
+    private String cryptoKey;
 
     public String cryptoKey() {
         return this.cryptoKey;
@@ -30,55 +30,52 @@ public final class GetKMSSecretCiphertextArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="plaintext", required=true)
-      private final String plaintext;
+    private String plaintext;
 
     public String plaintext() {
         return this.plaintext;
     }
 
-    public GetKMSSecretCiphertextArgs(
-        String cryptoKey,
-        String plaintext) {
-        this.cryptoKey = Objects.requireNonNull(cryptoKey, "expected parameter 'cryptoKey' to be non-null");
-        this.plaintext = Objects.requireNonNull(plaintext, "expected parameter 'plaintext' to be non-null");
-    }
+    private GetKMSSecretCiphertextArgs() {}
 
-    private GetKMSSecretCiphertextArgs() {
-        this.cryptoKey = null;
-        this.plaintext = null;
+    private GetKMSSecretCiphertextArgs(GetKMSSecretCiphertextArgs $) {
+        this.cryptoKey = $.cryptoKey;
+        this.plaintext = $.plaintext;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKMSSecretCiphertextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cryptoKey;
-        private String plaintext;
+        private GetKMSSecretCiphertextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKMSSecretCiphertextArgs();
         }
 
         public Builder(GetKMSSecretCiphertextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cryptoKey = defaults.cryptoKey;
-    	      this.plaintext = defaults.plaintext;
+            $ = new GetKMSSecretCiphertextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cryptoKey(String cryptoKey) {
-            this.cryptoKey = Objects.requireNonNull(cryptoKey);
+            $.cryptoKey = cryptoKey;
             return this;
         }
+
         public Builder plaintext(String plaintext) {
-            this.plaintext = Objects.requireNonNull(plaintext);
+            $.plaintext = plaintext;
             return this;
-        }        public GetKMSSecretCiphertextArgs build() {
-            return new GetKMSSecretCiphertextArgs(cryptoKey, plaintext);
+        }
+
+        public GetKMSSecretCiphertextArgs build() {
+            $.cryptoKey = Objects.requireNonNull($.cryptoKey, "expected parameter 'cryptoKey' to be non-null");
+            $.plaintext = Objects.requireNonNull($.plaintext, "expected parameter 'plaintext' to be non-null");
+            return $;
         }
     }
+
 }

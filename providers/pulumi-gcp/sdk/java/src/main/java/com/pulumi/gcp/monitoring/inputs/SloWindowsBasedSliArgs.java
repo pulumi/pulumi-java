@@ -5,12 +5,12 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdArgs;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricMeanInRangeArgs;
 import com.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricSumInRangeArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SloWindowsBasedSliArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="goodBadMetricFilter")
-      private final @Nullable Output<String> goodBadMetricFilter;
+    private @Nullable Output<String> goodBadMetricFilter;
 
-    public Output<String> goodBadMetricFilter() {
-        return this.goodBadMetricFilter == null ? Codegen.empty() : this.goodBadMetricFilter;
+    public Optional<Output<String>> goodBadMetricFilter() {
+        return Optional.ofNullable(this.goodBadMetricFilter);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SloWindowsBasedSliArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="goodTotalRatioThreshold")
-      private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdArgs> goodTotalRatioThreshold;
+    private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdArgs> goodTotalRatioThreshold;
 
-    public Output<SloWindowsBasedSliGoodTotalRatioThresholdArgs> goodTotalRatioThreshold() {
-        return this.goodTotalRatioThreshold == null ? Codegen.empty() : this.goodTotalRatioThreshold;
+    public Optional<Output<SloWindowsBasedSliGoodTotalRatioThresholdArgs>> goodTotalRatioThreshold() {
+        return Optional.ofNullable(this.goodTotalRatioThreshold);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class SloWindowsBasedSliArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="metricMeanInRange")
-      private final @Nullable Output<SloWindowsBasedSliMetricMeanInRangeArgs> metricMeanInRange;
+    private @Nullable Output<SloWindowsBasedSliMetricMeanInRangeArgs> metricMeanInRange;
 
-    public Output<SloWindowsBasedSliMetricMeanInRangeArgs> metricMeanInRange() {
-        return this.metricMeanInRange == null ? Codegen.empty() : this.metricMeanInRange;
+    public Optional<Output<SloWindowsBasedSliMetricMeanInRangeArgs>> metricMeanInRange() {
+        return Optional.ofNullable(this.metricMeanInRange);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class SloWindowsBasedSliArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="metricSumInRange")
-      private final @Nullable Output<SloWindowsBasedSliMetricSumInRangeArgs> metricSumInRange;
+    private @Nullable Output<SloWindowsBasedSliMetricSumInRangeArgs> metricSumInRange;
 
-    public Output<SloWindowsBasedSliMetricSumInRangeArgs> metricSumInRange() {
-        return this.metricSumInRange == null ? Codegen.empty() : this.metricSumInRange;
+    public Optional<Output<SloWindowsBasedSliMetricSumInRangeArgs>> metricSumInRange() {
+        return Optional.ofNullable(this.metricSumInRange);
     }
 
     /**
@@ -91,102 +91,88 @@ public final class SloWindowsBasedSliArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="windowPeriod")
-      private final @Nullable Output<String> windowPeriod;
+    private @Nullable Output<String> windowPeriod;
 
-    public Output<String> windowPeriod() {
-        return this.windowPeriod == null ? Codegen.empty() : this.windowPeriod;
+    public Optional<Output<String>> windowPeriod() {
+        return Optional.ofNullable(this.windowPeriod);
     }
 
-    public SloWindowsBasedSliArgs(
-        @Nullable Output<String> goodBadMetricFilter,
-        @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdArgs> goodTotalRatioThreshold,
-        @Nullable Output<SloWindowsBasedSliMetricMeanInRangeArgs> metricMeanInRange,
-        @Nullable Output<SloWindowsBasedSliMetricSumInRangeArgs> metricSumInRange,
-        @Nullable Output<String> windowPeriod) {
-        this.goodBadMetricFilter = goodBadMetricFilter;
-        this.goodTotalRatioThreshold = goodTotalRatioThreshold;
-        this.metricMeanInRange = metricMeanInRange;
-        this.metricSumInRange = metricSumInRange;
-        this.windowPeriod = windowPeriod;
-    }
+    private SloWindowsBasedSliArgs() {}
 
-    private SloWindowsBasedSliArgs() {
-        this.goodBadMetricFilter = Codegen.empty();
-        this.goodTotalRatioThreshold = Codegen.empty();
-        this.metricMeanInRange = Codegen.empty();
-        this.metricSumInRange = Codegen.empty();
-        this.windowPeriod = Codegen.empty();
+    private SloWindowsBasedSliArgs(SloWindowsBasedSliArgs $) {
+        this.goodBadMetricFilter = $.goodBadMetricFilter;
+        this.goodTotalRatioThreshold = $.goodTotalRatioThreshold;
+        this.metricMeanInRange = $.metricMeanInRange;
+        this.metricSumInRange = $.metricSumInRange;
+        this.windowPeriod = $.windowPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SloWindowsBasedSliArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> goodBadMetricFilter;
-        private @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdArgs> goodTotalRatioThreshold;
-        private @Nullable Output<SloWindowsBasedSliMetricMeanInRangeArgs> metricMeanInRange;
-        private @Nullable Output<SloWindowsBasedSliMetricSumInRangeArgs> metricSumInRange;
-        private @Nullable Output<String> windowPeriod;
+        private SloWindowsBasedSliArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SloWindowsBasedSliArgs();
         }
 
         public Builder(SloWindowsBasedSliArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.goodBadMetricFilter = defaults.goodBadMetricFilter;
-    	      this.goodTotalRatioThreshold = defaults.goodTotalRatioThreshold;
-    	      this.metricMeanInRange = defaults.metricMeanInRange;
-    	      this.metricSumInRange = defaults.metricSumInRange;
-    	      this.windowPeriod = defaults.windowPeriod;
+            $ = new SloWindowsBasedSliArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder goodBadMetricFilter(@Nullable Output<String> goodBadMetricFilter) {
-            this.goodBadMetricFilter = goodBadMetricFilter;
+            $.goodBadMetricFilter = goodBadMetricFilter;
             return this;
         }
-        public Builder goodBadMetricFilter(@Nullable String goodBadMetricFilter) {
-            this.goodBadMetricFilter = Codegen.ofNullable(goodBadMetricFilter);
-            return this;
+
+        public Builder goodBadMetricFilter(String goodBadMetricFilter) {
+            return goodBadMetricFilter(Output.of(goodBadMetricFilter));
         }
+
         public Builder goodTotalRatioThreshold(@Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdArgs> goodTotalRatioThreshold) {
-            this.goodTotalRatioThreshold = goodTotalRatioThreshold;
+            $.goodTotalRatioThreshold = goodTotalRatioThreshold;
             return this;
         }
-        public Builder goodTotalRatioThreshold(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdArgs goodTotalRatioThreshold) {
-            this.goodTotalRatioThreshold = Codegen.ofNullable(goodTotalRatioThreshold);
-            return this;
+
+        public Builder goodTotalRatioThreshold(SloWindowsBasedSliGoodTotalRatioThresholdArgs goodTotalRatioThreshold) {
+            return goodTotalRatioThreshold(Output.of(goodTotalRatioThreshold));
         }
+
         public Builder metricMeanInRange(@Nullable Output<SloWindowsBasedSliMetricMeanInRangeArgs> metricMeanInRange) {
-            this.metricMeanInRange = metricMeanInRange;
+            $.metricMeanInRange = metricMeanInRange;
             return this;
         }
-        public Builder metricMeanInRange(@Nullable SloWindowsBasedSliMetricMeanInRangeArgs metricMeanInRange) {
-            this.metricMeanInRange = Codegen.ofNullable(metricMeanInRange);
-            return this;
+
+        public Builder metricMeanInRange(SloWindowsBasedSliMetricMeanInRangeArgs metricMeanInRange) {
+            return metricMeanInRange(Output.of(metricMeanInRange));
         }
+
         public Builder metricSumInRange(@Nullable Output<SloWindowsBasedSliMetricSumInRangeArgs> metricSumInRange) {
-            this.metricSumInRange = metricSumInRange;
+            $.metricSumInRange = metricSumInRange;
             return this;
         }
-        public Builder metricSumInRange(@Nullable SloWindowsBasedSliMetricSumInRangeArgs metricSumInRange) {
-            this.metricSumInRange = Codegen.ofNullable(metricSumInRange);
-            return this;
+
+        public Builder metricSumInRange(SloWindowsBasedSliMetricSumInRangeArgs metricSumInRange) {
+            return metricSumInRange(Output.of(metricSumInRange));
         }
+
         public Builder windowPeriod(@Nullable Output<String> windowPeriod) {
-            this.windowPeriod = windowPeriod;
+            $.windowPeriod = windowPeriod;
             return this;
         }
-        public Builder windowPeriod(@Nullable String windowPeriod) {
-            this.windowPeriod = Codegen.ofNullable(windowPeriod);
-            return this;
-        }        public SloWindowsBasedSliArgs build() {
-            return new SloWindowsBasedSliArgs(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);
+
+        public Builder windowPeriod(String windowPeriod) {
+            return windowPeriod(Output.of(windowPeriod));
+        }
+
+        public SloWindowsBasedSliArgs build() {
+            return $;
         }
     }
+
 }

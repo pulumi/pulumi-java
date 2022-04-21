@@ -5,10 +5,10 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.DatasetIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class DatasetIamMemberArgs extends com.pulumi.resources.ResourceArg
     public static final DatasetIamMemberArgs Empty = new DatasetIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<DatasetIamMemberConditionArgs> condition;
+    private @Nullable Output<DatasetIamMemberConditionArgs> condition;
 
-    public Output<DatasetIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<DatasetIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -31,14 +31,14 @@ public final class DatasetIamMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="datasetId", required=true)
-      private final Output<String> datasetId;
+    private Output<String> datasetId;
 
     public Output<String> datasetId() {
         return this.datasetId;
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -51,89 +51,81 @@ public final class DatasetIamMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public DatasetIamMemberArgs(
-        @Nullable Output<DatasetIamMemberConditionArgs> condition,
-        Output<String> datasetId,
-        Output<String> member,
-        Output<String> role) {
-        this.condition = condition;
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private DatasetIamMemberArgs() {}
 
-    private DatasetIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.datasetId = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
+    private DatasetIamMemberArgs(DatasetIamMemberArgs $) {
+        this.condition = $.condition;
+        this.datasetId = $.datasetId;
+        this.member = $.member;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatasetIamMemberConditionArgs> condition;
-        private Output<String> datasetId;
-        private Output<String> member;
-        private Output<String> role;
+        private DatasetIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetIamMemberArgs();
         }
 
         public Builder(DatasetIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.datasetId = defaults.datasetId;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
+            $ = new DatasetIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<DatasetIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable DatasetIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(DatasetIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder datasetId(Output<String> datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
-            return this;
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public DatasetIamMemberArgs build() {
-            return new DatasetIamMemberArgs(condition, datasetId, member, role);
+            return role(Output.of(role));
+        }
+
+        public DatasetIamMemberArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

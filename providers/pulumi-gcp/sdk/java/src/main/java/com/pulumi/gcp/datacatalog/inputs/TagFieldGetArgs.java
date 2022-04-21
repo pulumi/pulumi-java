@@ -5,12 +5,12 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TagFieldGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="boolValue")
-      private final @Nullable Output<Boolean> boolValue;
+    private @Nullable Output<Boolean> boolValue;
 
-    public Output<Boolean> boolValue() {
-        return this.boolValue == null ? Codegen.empty() : this.boolValue;
+    public Optional<Output<Boolean>> boolValue() {
+        return Optional.ofNullable(this.boolValue);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TagFieldGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TagFieldGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="doubleValue")
-      private final @Nullable Output<Double> doubleValue;
+    private @Nullable Output<Double> doubleValue;
 
-    public Output<Double> doubleValue() {
-        return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
+    public Optional<Output<Double>> doubleValue() {
+        return Optional.ofNullable(this.doubleValue);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TagFieldGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enumValue")
-      private final @Nullable Output<String> enumValue;
+    private @Nullable Output<String> enumValue;
 
-    public Output<String> enumValue() {
-        return this.enumValue == null ? Codegen.empty() : this.enumValue;
+    public Optional<Output<String>> enumValue() {
+        return Optional.ofNullable(this.enumValue);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class TagFieldGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fieldName", required=true)
-      private final Output<String> fieldName;
+    private Output<String> fieldName;
 
     public Output<String> fieldName() {
         return this.fieldName;
@@ -83,10 +83,10 @@ public final class TagFieldGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="order")
-      private final @Nullable Output<Integer> order;
+    private @Nullable Output<Integer> order;
 
-    public Output<Integer> order() {
-        return this.order == null ? Codegen.empty() : this.order;
+    public Optional<Output<Integer>> order() {
+        return Optional.ofNullable(this.order);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class TagFieldGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stringValue")
-      private final @Nullable Output<String> stringValue;
+    private @Nullable Output<String> stringValue;
 
-    public Output<String> stringValue() {
-        return this.stringValue == null ? Codegen.empty() : this.stringValue;
+    public Optional<Output<String>> stringValue() {
+        return Optional.ofNullable(this.stringValue);
     }
 
     /**
@@ -105,141 +105,119 @@ public final class TagFieldGetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timestampValue")
-      private final @Nullable Output<String> timestampValue;
+    private @Nullable Output<String> timestampValue;
 
-    public Output<String> timestampValue() {
-        return this.timestampValue == null ? Codegen.empty() : this.timestampValue;
+    public Optional<Output<String>> timestampValue() {
+        return Optional.ofNullable(this.timestampValue);
     }
 
-    public TagFieldGetArgs(
-        @Nullable Output<Boolean> boolValue,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Double> doubleValue,
-        @Nullable Output<String> enumValue,
-        Output<String> fieldName,
-        @Nullable Output<Integer> order,
-        @Nullable Output<String> stringValue,
-        @Nullable Output<String> timestampValue) {
-        this.boolValue = boolValue;
-        this.displayName = displayName;
-        this.doubleValue = doubleValue;
-        this.enumValue = enumValue;
-        this.fieldName = Objects.requireNonNull(fieldName, "expected parameter 'fieldName' to be non-null");
-        this.order = order;
-        this.stringValue = stringValue;
-        this.timestampValue = timestampValue;
-    }
+    private TagFieldGetArgs() {}
 
-    private TagFieldGetArgs() {
-        this.boolValue = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.doubleValue = Codegen.empty();
-        this.enumValue = Codegen.empty();
-        this.fieldName = Codegen.empty();
-        this.order = Codegen.empty();
-        this.stringValue = Codegen.empty();
-        this.timestampValue = Codegen.empty();
+    private TagFieldGetArgs(TagFieldGetArgs $) {
+        this.boolValue = $.boolValue;
+        this.displayName = $.displayName;
+        this.doubleValue = $.doubleValue;
+        this.enumValue = $.enumValue;
+        this.fieldName = $.fieldName;
+        this.order = $.order;
+        this.stringValue = $.stringValue;
+        this.timestampValue = $.timestampValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagFieldGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> boolValue;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Double> doubleValue;
-        private @Nullable Output<String> enumValue;
-        private Output<String> fieldName;
-        private @Nullable Output<Integer> order;
-        private @Nullable Output<String> stringValue;
-        private @Nullable Output<String> timestampValue;
+        private TagFieldGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagFieldGetArgs();
         }
 
         public Builder(TagFieldGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boolValue = defaults.boolValue;
-    	      this.displayName = defaults.displayName;
-    	      this.doubleValue = defaults.doubleValue;
-    	      this.enumValue = defaults.enumValue;
-    	      this.fieldName = defaults.fieldName;
-    	      this.order = defaults.order;
-    	      this.stringValue = defaults.stringValue;
-    	      this.timestampValue = defaults.timestampValue;
+            $ = new TagFieldGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder boolValue(@Nullable Output<Boolean> boolValue) {
-            this.boolValue = boolValue;
+            $.boolValue = boolValue;
             return this;
         }
-        public Builder boolValue(@Nullable Boolean boolValue) {
-            this.boolValue = Codegen.ofNullable(boolValue);
-            return this;
+
+        public Builder boolValue(Boolean boolValue) {
+            return boolValue(Output.of(boolValue));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
-            this.doubleValue = doubleValue;
+            $.doubleValue = doubleValue;
             return this;
         }
-        public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = Codegen.ofNullable(doubleValue);
-            return this;
+
+        public Builder doubleValue(Double doubleValue) {
+            return doubleValue(Output.of(doubleValue));
         }
+
         public Builder enumValue(@Nullable Output<String> enumValue) {
-            this.enumValue = enumValue;
+            $.enumValue = enumValue;
             return this;
         }
-        public Builder enumValue(@Nullable String enumValue) {
-            this.enumValue = Codegen.ofNullable(enumValue);
-            return this;
+
+        public Builder enumValue(String enumValue) {
+            return enumValue(Output.of(enumValue));
         }
+
         public Builder fieldName(Output<String> fieldName) {
-            this.fieldName = Objects.requireNonNull(fieldName);
+            $.fieldName = fieldName;
             return this;
         }
+
         public Builder fieldName(String fieldName) {
-            this.fieldName = Output.of(Objects.requireNonNull(fieldName));
-            return this;
+            return fieldName(Output.of(fieldName));
         }
+
         public Builder order(@Nullable Output<Integer> order) {
-            this.order = order;
+            $.order = order;
             return this;
         }
-        public Builder order(@Nullable Integer order) {
-            this.order = Codegen.ofNullable(order);
-            return this;
+
+        public Builder order(Integer order) {
+            return order(Output.of(order));
         }
+
         public Builder stringValue(@Nullable Output<String> stringValue) {
-            this.stringValue = stringValue;
+            $.stringValue = stringValue;
             return this;
         }
-        public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Codegen.ofNullable(stringValue);
-            return this;
+
+        public Builder stringValue(String stringValue) {
+            return stringValue(Output.of(stringValue));
         }
+
         public Builder timestampValue(@Nullable Output<String> timestampValue) {
-            this.timestampValue = timestampValue;
+            $.timestampValue = timestampValue;
             return this;
         }
-        public Builder timestampValue(@Nullable String timestampValue) {
-            this.timestampValue = Codegen.ofNullable(timestampValue);
-            return this;
-        }        public TagFieldGetArgs build() {
-            return new TagFieldGetArgs(boolValue, displayName, doubleValue, enumValue, fieldName, order, stringValue, timestampValue);
+
+        public Builder timestampValue(String timestampValue) {
+            return timestampValue(Output.of(timestampValue));
+        }
+
+        public TagFieldGetArgs build() {
+            $.fieldName = Objects.requireNonNull($.fieldName, "expected parameter 'fieldName' to be non-null");
+            return $;
         }
     }
+
 }

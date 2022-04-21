@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobGetArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterGetArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementGetArgs;
@@ -14,6 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dagTimeout")
-      private final @Nullable Output<String> dagTimeout;
+    private @Nullable Output<String> dagTimeout;
 
-    public Output<String> dagTimeout() {
-        return this.dagTimeout == null ? Codegen.empty() : this.dagTimeout;
+    public Optional<Output<String>> dagTimeout() {
+        return Optional.ofNullable(this.dagTimeout);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="jobs")
-      private final @Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs;
+    private @Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs;
 
-    public Output<List<WorkflowTemplateJobGetArgs>> jobs() {
-        return this.jobs == null ? Codegen.empty() : this.jobs;
+    public Optional<Output<List<WorkflowTemplateJobGetArgs>>> jobs() {
+        return Optional.ofNullable(this.jobs);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters;
+    private @Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters;
 
-    public Output<List<WorkflowTemplateParameterGetArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<WorkflowTemplateParameterGetArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="placement")
-      private final @Nullable Output<WorkflowTemplatePlacementGetArgs> placement;
+    private @Nullable Output<WorkflowTemplatePlacementGetArgs> placement;
 
-    public Output<WorkflowTemplatePlacementGetArgs> placement() {
-        return this.placement == null ? Codegen.empty() : this.placement;
+    public Optional<Output<WorkflowTemplatePlacementGetArgs>> placement() {
+        return Optional.ofNullable(this.placement);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
     /**
@@ -140,187 +140,157 @@ public final class WorkflowTemplateState extends com.pulumi.resources.ResourceAr
      */
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public WorkflowTemplateState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> dagTimeout,
-        @Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters,
-        @Nullable Output<WorkflowTemplatePlacementGetArgs> placement,
-        @Nullable Output<String> project,
-        @Nullable Output<String> updateTime,
-        @Nullable Output<Integer> version) {
-        this.createTime = createTime;
-        this.dagTimeout = dagTimeout;
-        this.jobs = jobs;
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.parameters = parameters;
-        this.placement = placement;
-        this.project = project;
-        this.updateTime = updateTime;
-        this.version = version;
-    }
+    private WorkflowTemplateState() {}
 
-    private WorkflowTemplateState() {
-        this.createTime = Codegen.empty();
-        this.dagTimeout = Codegen.empty();
-        this.jobs = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.placement = Codegen.empty();
-        this.project = Codegen.empty();
-        this.updateTime = Codegen.empty();
-        this.version = Codegen.empty();
+    private WorkflowTemplateState(WorkflowTemplateState $) {
+        this.createTime = $.createTime;
+        this.dagTimeout = $.dagTimeout;
+        this.jobs = $.jobs;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.placement = $.placement;
+        this.project = $.project;
+        this.updateTime = $.updateTime;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplateState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> dagTimeout;
-        private @Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters;
-        private @Nullable Output<WorkflowTemplatePlacementGetArgs> placement;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> updateTime;
-        private @Nullable Output<Integer> version;
+        private WorkflowTemplateState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplateState();
         }
 
         public Builder(WorkflowTemplateState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.dagTimeout = defaults.dagTimeout;
-    	      this.jobs = defaults.jobs;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.placement = defaults.placement;
-    	      this.project = defaults.project;
-    	      this.updateTime = defaults.updateTime;
-    	      this.version = defaults.version;
+            $ = new WorkflowTemplateState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder dagTimeout(@Nullable Output<String> dagTimeout) {
-            this.dagTimeout = dagTimeout;
+            $.dagTimeout = dagTimeout;
             return this;
         }
-        public Builder dagTimeout(@Nullable String dagTimeout) {
-            this.dagTimeout = Codegen.ofNullable(dagTimeout);
-            return this;
+
+        public Builder dagTimeout(String dagTimeout) {
+            return dagTimeout(Output.of(dagTimeout));
         }
+
         public Builder jobs(@Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs) {
-            this.jobs = jobs;
+            $.jobs = jobs;
             return this;
         }
-        public Builder jobs(@Nullable List<WorkflowTemplateJobGetArgs> jobs) {
-            this.jobs = Codegen.ofNullable(jobs);
-            return this;
+
+        public Builder jobs(List<WorkflowTemplateJobGetArgs> jobs) {
+            return jobs(Output.of(jobs));
         }
+
         public Builder jobs(WorkflowTemplateJobGetArgs... jobs) {
             return jobs(List.of(jobs));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<WorkflowTemplateParameterGetArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<WorkflowTemplateParameterGetArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(WorkflowTemplateParameterGetArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder placement(@Nullable Output<WorkflowTemplatePlacementGetArgs> placement) {
-            this.placement = placement;
+            $.placement = placement;
             return this;
         }
-        public Builder placement(@Nullable WorkflowTemplatePlacementGetArgs placement) {
-            this.placement = Codegen.ofNullable(placement);
-            return this;
+
+        public Builder placement(WorkflowTemplatePlacementGetArgs placement) {
+            return placement(Output.of(placement));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public WorkflowTemplateState build() {
-            return new WorkflowTemplateState(createTime, dagTimeout, jobs, labels, location, name, parameters, placement, project, updateTime, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public WorkflowTemplateState build() {
+            return $;
         }
     }
+
 }

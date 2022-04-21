@@ -5,12 +5,12 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudrun.inputs.ServiceStatusConditionArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,133 +19,120 @@ public final class ServiceStatusArgs extends com.pulumi.resources.ResourceArgs {
     public static final ServiceStatusArgs Empty = new ServiceStatusArgs();
 
     @Import(name="conditions")
-      private final @Nullable Output<List<ServiceStatusConditionArgs>> conditions;
+    private @Nullable Output<List<ServiceStatusConditionArgs>> conditions;
 
-    public Output<List<ServiceStatusConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<ServiceStatusConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     @Import(name="latestCreatedRevisionName")
-      private final @Nullable Output<String> latestCreatedRevisionName;
+    private @Nullable Output<String> latestCreatedRevisionName;
 
-    public Output<String> latestCreatedRevisionName() {
-        return this.latestCreatedRevisionName == null ? Codegen.empty() : this.latestCreatedRevisionName;
+    public Optional<Output<String>> latestCreatedRevisionName() {
+        return Optional.ofNullable(this.latestCreatedRevisionName);
     }
 
     @Import(name="latestReadyRevisionName")
-      private final @Nullable Output<String> latestReadyRevisionName;
+    private @Nullable Output<String> latestReadyRevisionName;
 
-    public Output<String> latestReadyRevisionName() {
-        return this.latestReadyRevisionName == null ? Codegen.empty() : this.latestReadyRevisionName;
+    public Optional<Output<String>> latestReadyRevisionName() {
+        return Optional.ofNullable(this.latestReadyRevisionName);
     }
 
     @Import(name="observedGeneration")
-      private final @Nullable Output<Integer> observedGeneration;
+    private @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> observedGeneration() {
-        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
+    public Optional<Output<Integer>> observedGeneration() {
+        return Optional.ofNullable(this.observedGeneration);
     }
 
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public ServiceStatusArgs(
-        @Nullable Output<List<ServiceStatusConditionArgs>> conditions,
-        @Nullable Output<String> latestCreatedRevisionName,
-        @Nullable Output<String> latestReadyRevisionName,
-        @Nullable Output<Integer> observedGeneration,
-        @Nullable Output<String> url) {
-        this.conditions = conditions;
-        this.latestCreatedRevisionName = latestCreatedRevisionName;
-        this.latestReadyRevisionName = latestReadyRevisionName;
-        this.observedGeneration = observedGeneration;
-        this.url = url;
-    }
+    private ServiceStatusArgs() {}
 
-    private ServiceStatusArgs() {
-        this.conditions = Codegen.empty();
-        this.latestCreatedRevisionName = Codegen.empty();
-        this.latestReadyRevisionName = Codegen.empty();
-        this.observedGeneration = Codegen.empty();
-        this.url = Codegen.empty();
+    private ServiceStatusArgs(ServiceStatusArgs $) {
+        this.conditions = $.conditions;
+        this.latestCreatedRevisionName = $.latestCreatedRevisionName;
+        this.latestReadyRevisionName = $.latestReadyRevisionName;
+        this.observedGeneration = $.observedGeneration;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ServiceStatusConditionArgs>> conditions;
-        private @Nullable Output<String> latestCreatedRevisionName;
-        private @Nullable Output<String> latestReadyRevisionName;
-        private @Nullable Output<Integer> observedGeneration;
-        private @Nullable Output<String> url;
+        private ServiceStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceStatusArgs();
         }
 
         public Builder(ServiceStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.latestCreatedRevisionName = defaults.latestCreatedRevisionName;
-    	      this.latestReadyRevisionName = defaults.latestReadyRevisionName;
-    	      this.observedGeneration = defaults.observedGeneration;
-    	      this.url = defaults.url;
+            $ = new ServiceStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(@Nullable Output<List<ServiceStatusConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<ServiceStatusConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<ServiceStatusConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(ServiceStatusConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder latestCreatedRevisionName(@Nullable Output<String> latestCreatedRevisionName) {
-            this.latestCreatedRevisionName = latestCreatedRevisionName;
+            $.latestCreatedRevisionName = latestCreatedRevisionName;
             return this;
         }
-        public Builder latestCreatedRevisionName(@Nullable String latestCreatedRevisionName) {
-            this.latestCreatedRevisionName = Codegen.ofNullable(latestCreatedRevisionName);
-            return this;
+
+        public Builder latestCreatedRevisionName(String latestCreatedRevisionName) {
+            return latestCreatedRevisionName(Output.of(latestCreatedRevisionName));
         }
+
         public Builder latestReadyRevisionName(@Nullable Output<String> latestReadyRevisionName) {
-            this.latestReadyRevisionName = latestReadyRevisionName;
+            $.latestReadyRevisionName = latestReadyRevisionName;
             return this;
         }
-        public Builder latestReadyRevisionName(@Nullable String latestReadyRevisionName) {
-            this.latestReadyRevisionName = Codegen.ofNullable(latestReadyRevisionName);
-            return this;
+
+        public Builder latestReadyRevisionName(String latestReadyRevisionName) {
+            return latestReadyRevisionName(Output.of(latestReadyRevisionName));
         }
+
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
-            this.observedGeneration = observedGeneration;
+            $.observedGeneration = observedGeneration;
             return this;
         }
-        public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Codegen.ofNullable(observedGeneration);
-            return this;
+
+        public Builder observedGeneration(Integer observedGeneration) {
+            return observedGeneration(Output.of(observedGeneration));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public ServiceStatusArgs build() {
-            return new ServiceStatusArgs(conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public ServiceStatusArgs build() {
+            return $;
         }
     }
+
 }

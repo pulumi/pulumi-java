@@ -5,9 +5,9 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BucketIAMPolicyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class BucketIAMPolicyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class BucketIAMPolicyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
-    public BucketIAMPolicyState(
-        @Nullable Output<String> bucket,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData) {
-        this.bucket = bucket;
-        this.etag = etag;
-        this.policyData = policyData;
-    }
+    private BucketIAMPolicyState() {}
 
-    private BucketIAMPolicyState() {
-        this.bucket = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private BucketIAMPolicyState(BucketIAMPolicyState $) {
+        this.bucket = $.bucket;
+        this.etag = $.etag;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketIAMPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
+        private BucketIAMPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketIAMPolicyState();
         }
 
         public Builder(BucketIAMPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
+            $ = new BucketIAMPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
-        }        public BucketIAMPolicyState build() {
-            return new BucketIAMPolicyState(bucket, etag, policyData);
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
+        }
+
+        public BucketIAMPolicyState build() {
+            return $;
         }
     }
+
 }

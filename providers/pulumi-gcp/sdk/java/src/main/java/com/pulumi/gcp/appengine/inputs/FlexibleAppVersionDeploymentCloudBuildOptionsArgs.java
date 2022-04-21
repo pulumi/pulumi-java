@@ -5,9 +5,9 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsArgs extends com
      * 
      */
     @Import(name="appYamlPath", required=true)
-      private final Output<String> appYamlPath;
+    private Output<String> appYamlPath;
 
     public Output<String> appYamlPath() {
         return this.appYamlPath;
@@ -32,63 +32,59 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsArgs extends com
      * 
      */
     @Import(name="cloudBuildTimeout")
-      private final @Nullable Output<String> cloudBuildTimeout;
+    private @Nullable Output<String> cloudBuildTimeout;
 
-    public Output<String> cloudBuildTimeout() {
-        return this.cloudBuildTimeout == null ? Codegen.empty() : this.cloudBuildTimeout;
+    public Optional<Output<String>> cloudBuildTimeout() {
+        return Optional.ofNullable(this.cloudBuildTimeout);
     }
 
-    public FlexibleAppVersionDeploymentCloudBuildOptionsArgs(
-        Output<String> appYamlPath,
-        @Nullable Output<String> cloudBuildTimeout) {
-        this.appYamlPath = Objects.requireNonNull(appYamlPath, "expected parameter 'appYamlPath' to be non-null");
-        this.cloudBuildTimeout = cloudBuildTimeout;
-    }
+    private FlexibleAppVersionDeploymentCloudBuildOptionsArgs() {}
 
-    private FlexibleAppVersionDeploymentCloudBuildOptionsArgs() {
-        this.appYamlPath = Codegen.empty();
-        this.cloudBuildTimeout = Codegen.empty();
+    private FlexibleAppVersionDeploymentCloudBuildOptionsArgs(FlexibleAppVersionDeploymentCloudBuildOptionsArgs $) {
+        this.appYamlPath = $.appYamlPath;
+        this.cloudBuildTimeout = $.cloudBuildTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionDeploymentCloudBuildOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appYamlPath;
-        private @Nullable Output<String> cloudBuildTimeout;
+        private FlexibleAppVersionDeploymentCloudBuildOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionDeploymentCloudBuildOptionsArgs();
         }
 
         public Builder(FlexibleAppVersionDeploymentCloudBuildOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appYamlPath = defaults.appYamlPath;
-    	      this.cloudBuildTimeout = defaults.cloudBuildTimeout;
+            $ = new FlexibleAppVersionDeploymentCloudBuildOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appYamlPath(Output<String> appYamlPath) {
-            this.appYamlPath = Objects.requireNonNull(appYamlPath);
+            $.appYamlPath = appYamlPath;
             return this;
         }
+
         public Builder appYamlPath(String appYamlPath) {
-            this.appYamlPath = Output.of(Objects.requireNonNull(appYamlPath));
-            return this;
+            return appYamlPath(Output.of(appYamlPath));
         }
+
         public Builder cloudBuildTimeout(@Nullable Output<String> cloudBuildTimeout) {
-            this.cloudBuildTimeout = cloudBuildTimeout;
+            $.cloudBuildTimeout = cloudBuildTimeout;
             return this;
         }
-        public Builder cloudBuildTimeout(@Nullable String cloudBuildTimeout) {
-            this.cloudBuildTimeout = Codegen.ofNullable(cloudBuildTimeout);
-            return this;
-        }        public FlexibleAppVersionDeploymentCloudBuildOptionsArgs build() {
-            return new FlexibleAppVersionDeploymentCloudBuildOptionsArgs(appYamlPath, cloudBuildTimeout);
+
+        public Builder cloudBuildTimeout(String cloudBuildTimeout) {
+            return cloudBuildTimeout(Output.of(cloudBuildTimeout));
+        }
+
+        public FlexibleAppVersionDeploymentCloudBuildOptionsArgs build() {
+            $.appYamlPath = Objects.requireNonNull($.appYamlPath, "expected parameter 'appYamlPath' to be non-null");
+            return $;
         }
     }
+
 }

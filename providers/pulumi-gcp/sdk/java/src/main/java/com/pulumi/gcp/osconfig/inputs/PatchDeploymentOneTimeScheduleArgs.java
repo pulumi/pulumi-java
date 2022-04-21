@@ -5,7 +5,6 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class PatchDeploymentOneTimeScheduleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="executeTime", required=true)
-      private final Output<String> executeTime;
+    private Output<String> executeTime;
 
     public Output<String> executeTime() {
         return this.executeTime;
     }
 
-    public PatchDeploymentOneTimeScheduleArgs(Output<String> executeTime) {
-        this.executeTime = Objects.requireNonNull(executeTime, "expected parameter 'executeTime' to be non-null");
-    }
+    private PatchDeploymentOneTimeScheduleArgs() {}
 
-    private PatchDeploymentOneTimeScheduleArgs() {
-        this.executeTime = Codegen.empty();
+    private PatchDeploymentOneTimeScheduleArgs(PatchDeploymentOneTimeScheduleArgs $) {
+        this.executeTime = $.executeTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchDeploymentOneTimeScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> executeTime;
+        private PatchDeploymentOneTimeScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchDeploymentOneTimeScheduleArgs();
         }
 
         public Builder(PatchDeploymentOneTimeScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executeTime = defaults.executeTime;
+            $ = new PatchDeploymentOneTimeScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executeTime(Output<String> executeTime) {
-            this.executeTime = Objects.requireNonNull(executeTime);
+            $.executeTime = executeTime;
             return this;
         }
+
         public Builder executeTime(String executeTime) {
-            this.executeTime = Output.of(Objects.requireNonNull(executeTime));
-            return this;
-        }        public PatchDeploymentOneTimeScheduleArgs build() {
-            return new PatchDeploymentOneTimeScheduleArgs(executeTime);
+            return executeTime(Output.of(executeTime));
+        }
+
+        public PatchDeploymentOneTimeScheduleArgs build() {
+            $.executeTime = Objects.requireNonNull($.executeTime, "expected parameter 'executeTime' to be non-null");
+            return $;
         }
     }
+
 }

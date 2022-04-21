@@ -5,10 +5,10 @@ package com.pulumi.gcp.tags;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.tags.inputs.TagKeyIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,14 +17,14 @@ public final class TagKeyIamMemberArgs extends com.pulumi.resources.ResourceArgs
     public static final TagKeyIamMemberArgs Empty = new TagKeyIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<TagKeyIamMemberConditionArgs> condition;
+    private @Nullable Output<TagKeyIamMemberConditionArgs> condition;
 
-    public Output<TagKeyIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<TagKeyIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -37,7 +37,7 @@ public final class TagKeyIamMemberArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -48,89 +48,81 @@ public final class TagKeyIamMemberArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tagKey", required=true)
-      private final Output<String> tagKey;
+    private Output<String> tagKey;
 
     public Output<String> tagKey() {
         return this.tagKey;
     }
 
-    public TagKeyIamMemberArgs(
-        @Nullable Output<TagKeyIamMemberConditionArgs> condition,
-        Output<String> member,
-        Output<String> role,
-        Output<String> tagKey) {
-        this.condition = condition;
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.tagKey = Objects.requireNonNull(tagKey, "expected parameter 'tagKey' to be non-null");
-    }
+    private TagKeyIamMemberArgs() {}
 
-    private TagKeyIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
-        this.tagKey = Codegen.empty();
+    private TagKeyIamMemberArgs(TagKeyIamMemberArgs $) {
+        this.condition = $.condition;
+        this.member = $.member;
+        this.role = $.role;
+        this.tagKey = $.tagKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagKeyIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TagKeyIamMemberConditionArgs> condition;
-        private Output<String> member;
-        private Output<String> role;
-        private Output<String> tagKey;
+        private TagKeyIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagKeyIamMemberArgs();
         }
 
         public Builder(TagKeyIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
-    	      this.tagKey = defaults.tagKey;
+            $ = new TagKeyIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<TagKeyIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable TagKeyIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(TagKeyIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder tagKey(Output<String> tagKey) {
-            this.tagKey = Objects.requireNonNull(tagKey);
+            $.tagKey = tagKey;
             return this;
         }
+
         public Builder tagKey(String tagKey) {
-            this.tagKey = Output.of(Objects.requireNonNull(tagKey));
-            return this;
-        }        public TagKeyIamMemberArgs build() {
-            return new TagKeyIamMemberArgs(condition, member, role, tagKey);
+            return tagKey(Output.of(tagKey));
+        }
+
+        public TagKeyIamMemberArgs build() {
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.tagKey = Objects.requireNonNull($.tagKey, "expected parameter 'tagKey' to be non-null");
+            return $;
         }
     }
+
 }

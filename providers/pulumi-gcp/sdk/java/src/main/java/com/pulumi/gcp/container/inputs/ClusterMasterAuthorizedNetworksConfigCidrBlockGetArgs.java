@@ -5,9 +5,9 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs extends
      * 
      */
     @Import(name="cidrBlock", required=true)
-      private final Output<String> cidrBlock;
+    private Output<String> cidrBlock;
 
     public Output<String> cidrBlock() {
         return this.cidrBlock;
@@ -32,63 +32,59 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs extends
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
-    public ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs(
-        Output<String> cidrBlock,
-        @Nullable Output<String> displayName) {
-        this.cidrBlock = Objects.requireNonNull(cidrBlock, "expected parameter 'cidrBlock' to be non-null");
-        this.displayName = displayName;
-    }
+    private ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs() {}
 
-    private ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs() {
-        this.cidrBlock = Codegen.empty();
-        this.displayName = Codegen.empty();
+    private ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs(ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs $) {
+        this.cidrBlock = $.cidrBlock;
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cidrBlock;
-        private @Nullable Output<String> displayName;
+        private ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs();
         }
 
         public Builder(ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.displayName = defaults.displayName;
+            $ = new ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlock(Output<String> cidrBlock) {
-            this.cidrBlock = Objects.requireNonNull(cidrBlock);
+            $.cidrBlock = cidrBlock;
             return this;
         }
+
         public Builder cidrBlock(String cidrBlock) {
-            this.cidrBlock = Output.of(Objects.requireNonNull(cidrBlock));
-            return this;
+            return cidrBlock(Output.of(cidrBlock));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
-        }        public ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs build() {
-            return new ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs(cidrBlock, displayName);
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        public ClusterMasterAuthorizedNetworksConfigCidrBlockGetArgs build() {
+            $.cidrBlock = Objects.requireNonNull($.cidrBlock, "expected parameter 'cidrBlock' to be non-null");
+            return $;
         }
     }
+
 }

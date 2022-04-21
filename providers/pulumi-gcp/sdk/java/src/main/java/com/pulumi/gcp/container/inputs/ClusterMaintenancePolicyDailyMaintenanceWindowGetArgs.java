@@ -5,9 +5,9 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs extends
     public static final ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs Empty = new ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs();
 
     @Import(name="duration")
-      private final @Nullable Output<String> duration;
+    private @Nullable Output<String> duration;
 
-    public Output<String> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<String>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
     @Import(name="startTime", required=true)
-      private final Output<String> startTime;
+    private Output<String> startTime;
 
     public Output<String> startTime() {
         return this.startTime;
     }
 
-    public ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs(
-        @Nullable Output<String> duration,
-        Output<String> startTime) {
-        this.duration = duration;
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs() {}
 
-    private ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs() {
-        this.duration = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs(ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs $) {
+        this.duration = $.duration;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> duration;
-        private Output<String> startTime;
+        private ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs();
         }
 
         public Builder(ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.startTime = defaults.startTime;
+            $ = new ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(@Nullable Output<String> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable String duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
+
+        public Builder duration(String duration) {
+            return duration(Output.of(duration));
         }
+
         public Builder startTime(Output<String> startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Output.of(Objects.requireNonNull(startTime));
-            return this;
-        }        public ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs build() {
-            return new ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs(duration, startTime);
+            return startTime(Output.of(startTime));
+        }
+
+        public ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs build() {
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

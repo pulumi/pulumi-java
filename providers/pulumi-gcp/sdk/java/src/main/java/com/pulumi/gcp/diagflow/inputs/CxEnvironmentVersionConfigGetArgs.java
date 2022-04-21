@@ -5,7 +5,6 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class CxEnvironmentVersionConfigGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="version", required=true)
-      private final Output<String> version;
+    private Output<String> version;
 
     public Output<String> version() {
         return this.version;
     }
 
-    public CxEnvironmentVersionConfigGetArgs(Output<String> version) {
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private CxEnvironmentVersionConfigGetArgs() {}
 
-    private CxEnvironmentVersionConfigGetArgs() {
-        this.version = Codegen.empty();
+    private CxEnvironmentVersionConfigGetArgs(CxEnvironmentVersionConfigGetArgs $) {
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxEnvironmentVersionConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> version;
+        private CxEnvironmentVersionConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxEnvironmentVersionConfigGetArgs();
         }
 
         public Builder(CxEnvironmentVersionConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.version = defaults.version;
+            $ = new CxEnvironmentVersionConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder version(Output<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Output.of(Objects.requireNonNull(version));
-            return this;
-        }        public CxEnvironmentVersionConfigGetArgs build() {
-            return new CxEnvironmentVersionConfigGetArgs(version);
+            return version(Output.of(version));
+        }
+
+        public CxEnvironmentVersionConfigGetArgs build() {
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

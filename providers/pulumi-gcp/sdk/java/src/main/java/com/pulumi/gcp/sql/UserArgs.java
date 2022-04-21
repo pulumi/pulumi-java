@@ -5,9 +5,9 @@ package com.pulumi.gcp.sql;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deletionPolicy")
-      private final @Nullable Output<String> deletionPolicy;
+    private @Nullable Output<String> deletionPolicy;
 
-    public Output<String> deletionPolicy() {
-        return this.deletionPolicy == null ? Codegen.empty() : this.deletionPolicy;
+    public Optional<Output<String>> deletionPolicy() {
+        return Optional.ofNullable(this.deletionPolicy);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instance", required=true)
-      private final Output<String> instance;
+    private Output<String> instance;
 
     public Output<String> instance() {
         return this.instance;
@@ -59,10 +59,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -96,128 +96,109 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public UserArgs(
-        @Nullable Output<String> deletionPolicy,
-        @Nullable Output<String> host,
-        Output<String> instance,
-        @Nullable Output<String> name,
-        @Nullable Output<String> password,
-        @Nullable Output<String> project,
-        @Nullable Output<String> type) {
-        this.deletionPolicy = deletionPolicy;
-        this.host = host;
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.name = name;
-        this.password = password;
-        this.project = project;
-        this.type = type;
-    }
+    private UserArgs() {}
 
-    private UserArgs() {
-        this.deletionPolicy = Codegen.empty();
-        this.host = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.name = Codegen.empty();
-        this.password = Codegen.empty();
-        this.project = Codegen.empty();
-        this.type = Codegen.empty();
+    private UserArgs(UserArgs $) {
+        this.deletionPolicy = $.deletionPolicy;
+        this.host = $.host;
+        this.instance = $.instance;
+        this.name = $.name;
+        this.password = $.password;
+        this.project = $.project;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deletionPolicy;
-        private @Nullable Output<String> host;
-        private Output<String> instance;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> type;
+        private UserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserArgs();
         }
 
         public Builder(UserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deletionPolicy = defaults.deletionPolicy;
-    	      this.host = defaults.host;
-    	      this.instance = defaults.instance;
-    	      this.name = defaults.name;
-    	      this.password = defaults.password;
-    	      this.project = defaults.project;
-    	      this.type = defaults.type;
+            $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deletionPolicy(@Nullable Output<String> deletionPolicy) {
-            this.deletionPolicy = deletionPolicy;
+            $.deletionPolicy = deletionPolicy;
             return this;
         }
-        public Builder deletionPolicy(@Nullable String deletionPolicy) {
-            this.deletionPolicy = Codegen.ofNullable(deletionPolicy);
-            return this;
+
+        public Builder deletionPolicy(String deletionPolicy) {
+            return deletionPolicy(Output.of(deletionPolicy));
         }
+
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder instance(Output<String> instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Output.of(Objects.requireNonNull(instance));
-            return this;
+            return instance(Output.of(instance));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public UserArgs build() {
-            return new UserArgs(deletionPolicy, host, instance, name, password, project, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public UserArgs build() {
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            return $;
         }
     }
+
 }

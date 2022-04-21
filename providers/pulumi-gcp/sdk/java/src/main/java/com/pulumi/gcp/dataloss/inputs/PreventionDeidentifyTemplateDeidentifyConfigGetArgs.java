@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigGetArgs extends c
      * 
      */
     @Import(name="infoTypeTransformations", required=true)
-      private final Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations;
+    private Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations;
 
     public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations() {
         return this.infoTypeTransformations;
     }
 
-    public PreventionDeidentifyTemplateDeidentifyConfigGetArgs(Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations) {
-        this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations, "expected parameter 'infoTypeTransformations' to be non-null");
-    }
+    private PreventionDeidentifyTemplateDeidentifyConfigGetArgs() {}
 
-    private PreventionDeidentifyTemplateDeidentifyConfigGetArgs() {
-        this.infoTypeTransformations = Codegen.empty();
+    private PreventionDeidentifyTemplateDeidentifyConfigGetArgs(PreventionDeidentifyTemplateDeidentifyConfigGetArgs $) {
+        this.infoTypeTransformations = $.infoTypeTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionDeidentifyTemplateDeidentifyConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations;
+        private PreventionDeidentifyTemplateDeidentifyConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigGetArgs();
         }
 
         public Builder(PreventionDeidentifyTemplateDeidentifyConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infoTypeTransformations = defaults.infoTypeTransformations;
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder infoTypeTransformations(Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs> infoTypeTransformations) {
-            this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
+            $.infoTypeTransformations = infoTypeTransformations;
             return this;
         }
+
         public Builder infoTypeTransformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsGetArgs infoTypeTransformations) {
-            this.infoTypeTransformations = Output.of(Objects.requireNonNull(infoTypeTransformations));
-            return this;
-        }        public PreventionDeidentifyTemplateDeidentifyConfigGetArgs build() {
-            return new PreventionDeidentifyTemplateDeidentifyConfigGetArgs(infoTypeTransformations);
+            return infoTypeTransformations(Output.of(infoTypeTransformations));
+        }
+
+        public PreventionDeidentifyTemplateDeidentifyConfigGetArgs build() {
+            $.infoTypeTransformations = Objects.requireNonNull($.infoTypeTransformations, "expected parameter 'infoTypeTransformations' to be non-null");
+            return $;
         }
     }
+
 }

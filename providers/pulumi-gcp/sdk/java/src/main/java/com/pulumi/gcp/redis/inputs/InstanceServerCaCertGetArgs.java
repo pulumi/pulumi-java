@@ -5,9 +5,9 @@ package com.pulumi.gcp.redis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,10 +16,10 @@ public final class InstanceServerCaCertGetArgs extends com.pulumi.resources.Reso
     public static final InstanceServerCaCertGetArgs Empty = new InstanceServerCaCertGetArgs();
 
     @Import(name="cert")
-      private final @Nullable Output<String> cert;
+    private @Nullable Output<String> cert;
 
-    public Output<String> cert() {
-        return this.cert == null ? Codegen.empty() : this.cert;
+    public Optional<Output<String>> cert() {
+        return Optional.ofNullable(this.cert);
     }
 
     /**
@@ -30,123 +30,109 @@ public final class InstanceServerCaCertGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     @Import(name="expireTime")
-      private final @Nullable Output<String> expireTime;
+    private @Nullable Output<String> expireTime;
 
-    public Output<String> expireTime() {
-        return this.expireTime == null ? Codegen.empty() : this.expireTime;
+    public Optional<Output<String>> expireTime() {
+        return Optional.ofNullable(this.expireTime);
     }
 
     @Import(name="serialNumber")
-      private final @Nullable Output<String> serialNumber;
+    private @Nullable Output<String> serialNumber;
 
-    public Output<String> serialNumber() {
-        return this.serialNumber == null ? Codegen.empty() : this.serialNumber;
+    public Optional<Output<String>> serialNumber() {
+        return Optional.ofNullable(this.serialNumber);
     }
 
     @Import(name="sha1Fingerprint")
-      private final @Nullable Output<String> sha1Fingerprint;
+    private @Nullable Output<String> sha1Fingerprint;
 
-    public Output<String> sha1Fingerprint() {
-        return this.sha1Fingerprint == null ? Codegen.empty() : this.sha1Fingerprint;
+    public Optional<Output<String>> sha1Fingerprint() {
+        return Optional.ofNullable(this.sha1Fingerprint);
     }
 
-    public InstanceServerCaCertGetArgs(
-        @Nullable Output<String> cert,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> expireTime,
-        @Nullable Output<String> serialNumber,
-        @Nullable Output<String> sha1Fingerprint) {
-        this.cert = cert;
-        this.createTime = createTime;
-        this.expireTime = expireTime;
-        this.serialNumber = serialNumber;
-        this.sha1Fingerprint = sha1Fingerprint;
-    }
+    private InstanceServerCaCertGetArgs() {}
 
-    private InstanceServerCaCertGetArgs() {
-        this.cert = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.expireTime = Codegen.empty();
-        this.serialNumber = Codegen.empty();
-        this.sha1Fingerprint = Codegen.empty();
+    private InstanceServerCaCertGetArgs(InstanceServerCaCertGetArgs $) {
+        this.cert = $.cert;
+        this.createTime = $.createTime;
+        this.expireTime = $.expireTime;
+        this.serialNumber = $.serialNumber;
+        this.sha1Fingerprint = $.sha1Fingerprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceServerCaCertGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cert;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> expireTime;
-        private @Nullable Output<String> serialNumber;
-        private @Nullable Output<String> sha1Fingerprint;
+        private InstanceServerCaCertGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceServerCaCertGetArgs();
         }
 
         public Builder(InstanceServerCaCertGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cert = defaults.cert;
-    	      this.createTime = defaults.createTime;
-    	      this.expireTime = defaults.expireTime;
-    	      this.serialNumber = defaults.serialNumber;
-    	      this.sha1Fingerprint = defaults.sha1Fingerprint;
+            $ = new InstanceServerCaCertGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cert(@Nullable Output<String> cert) {
-            this.cert = cert;
+            $.cert = cert;
             return this;
         }
-        public Builder cert(@Nullable String cert) {
-            this.cert = Codegen.ofNullable(cert);
-            return this;
+
+        public Builder cert(String cert) {
+            return cert(Output.of(cert));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder expireTime(@Nullable Output<String> expireTime) {
-            this.expireTime = expireTime;
+            $.expireTime = expireTime;
             return this;
         }
-        public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Codegen.ofNullable(expireTime);
-            return this;
+
+        public Builder expireTime(String expireTime) {
+            return expireTime(Output.of(expireTime));
         }
+
         public Builder serialNumber(@Nullable Output<String> serialNumber) {
-            this.serialNumber = serialNumber;
+            $.serialNumber = serialNumber;
             return this;
         }
-        public Builder serialNumber(@Nullable String serialNumber) {
-            this.serialNumber = Codegen.ofNullable(serialNumber);
-            return this;
+
+        public Builder serialNumber(String serialNumber) {
+            return serialNumber(Output.of(serialNumber));
         }
+
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
-            this.sha1Fingerprint = sha1Fingerprint;
+            $.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
-        public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
-            this.sha1Fingerprint = Codegen.ofNullable(sha1Fingerprint);
-            return this;
-        }        public InstanceServerCaCertGetArgs build() {
-            return new InstanceServerCaCertGetArgs(cert, createTime, expireTime, serialNumber, sha1Fingerprint);
+
+        public Builder sha1Fingerprint(String sha1Fingerprint) {
+            return sha1Fingerprint(Output.of(sha1Fingerprint));
+        }
+
+        public InstanceServerCaCertGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,10 +22,10 @@ public final class GetEngineVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GetEngineVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -50,64 +50,56 @@ public final class GetEngineVersionsArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="versionPrefix")
-      private final @Nullable String versionPrefix;
+    private @Nullable String versionPrefix;
 
     public Optional<String> versionPrefix() {
-        return this.versionPrefix == null ? Optional.empty() : Optional.ofNullable(this.versionPrefix);
+        return Optional.ofNullable(this.versionPrefix);
     }
 
-    public GetEngineVersionsArgs(
-        @Nullable String location,
-        @Nullable String project,
-        @Nullable String versionPrefix) {
-        this.location = location;
-        this.project = project;
-        this.versionPrefix = versionPrefix;
-    }
+    private GetEngineVersionsArgs() {}
 
-    private GetEngineVersionsArgs() {
-        this.location = null;
-        this.project = null;
-        this.versionPrefix = null;
+    private GetEngineVersionsArgs(GetEngineVersionsArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.versionPrefix = $.versionPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEngineVersionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String location;
-        private @Nullable String project;
-        private @Nullable String versionPrefix;
+        private GetEngineVersionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEngineVersionsArgs();
         }
 
         public Builder(GetEngineVersionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.versionPrefix = defaults.versionPrefix;
+            $ = new GetEngineVersionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder versionPrefix(@Nullable String versionPrefix) {
-            this.versionPrefix = versionPrefix;
+            $.versionPrefix = versionPrefix;
             return this;
-        }        public GetEngineVersionsArgs build() {
-            return new GetEngineVersionsArgs(location, project, versionPrefix);
+        }
+
+        public GetEngineVersionsArgs build() {
+            return $;
         }
     }
+
 }

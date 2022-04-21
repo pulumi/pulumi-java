@@ -5,11 +5,11 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.FhirStoreStreamConfigBigqueryDestinationArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class FhirStoreStreamConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="bigqueryDestination", required=true)
-      private final Output<FhirStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
+    private Output<FhirStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
 
     public Output<FhirStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination() {
         return this.bigqueryDestination;
@@ -40,66 +40,63 @@ public final class FhirStoreStreamConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceTypes")
-      private final @Nullable Output<List<String>> resourceTypes;
+    private @Nullable Output<List<String>> resourceTypes;
 
-    public Output<List<String>> resourceTypes() {
-        return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
+    public Optional<Output<List<String>>> resourceTypes() {
+        return Optional.ofNullable(this.resourceTypes);
     }
 
-    public FhirStoreStreamConfigArgs(
-        Output<FhirStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination,
-        @Nullable Output<List<String>> resourceTypes) {
-        this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination, "expected parameter 'bigqueryDestination' to be non-null");
-        this.resourceTypes = resourceTypes;
-    }
+    private FhirStoreStreamConfigArgs() {}
 
-    private FhirStoreStreamConfigArgs() {
-        this.bigqueryDestination = Codegen.empty();
-        this.resourceTypes = Codegen.empty();
+    private FhirStoreStreamConfigArgs(FhirStoreStreamConfigArgs $) {
+        this.bigqueryDestination = $.bigqueryDestination;
+        this.resourceTypes = $.resourceTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FhirStoreStreamConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FhirStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
-        private @Nullable Output<List<String>> resourceTypes;
+        private FhirStoreStreamConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FhirStoreStreamConfigArgs();
         }
 
         public Builder(FhirStoreStreamConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryDestination = defaults.bigqueryDestination;
-    	      this.resourceTypes = defaults.resourceTypes;
+            $ = new FhirStoreStreamConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryDestination(Output<FhirStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination) {
-            this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
+            $.bigqueryDestination = bigqueryDestination;
             return this;
         }
+
         public Builder bigqueryDestination(FhirStoreStreamConfigBigqueryDestinationArgs bigqueryDestination) {
-            this.bigqueryDestination = Output.of(Objects.requireNonNull(bigqueryDestination));
-            return this;
+            return bigqueryDestination(Output.of(bigqueryDestination));
         }
+
         public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
-            this.resourceTypes = resourceTypes;
+            $.resourceTypes = resourceTypes;
             return this;
         }
-        public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = Codegen.ofNullable(resourceTypes);
-            return this;
+
+        public Builder resourceTypes(List<String> resourceTypes) {
+            return resourceTypes(Output.of(resourceTypes));
         }
+
         public Builder resourceTypes(String... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
-        }        public FhirStoreStreamConfigArgs build() {
-            return new FhirStoreStreamConfigArgs(bigqueryDestination, resourceTypes);
+        }
+
+        public FhirStoreStreamConfigArgs build() {
+            $.bigqueryDestination = Objects.requireNonNull($.bigqueryDestination, "expected parameter 'bigqueryDestination' to be non-null");
+            return $;
         }
     }
+
 }

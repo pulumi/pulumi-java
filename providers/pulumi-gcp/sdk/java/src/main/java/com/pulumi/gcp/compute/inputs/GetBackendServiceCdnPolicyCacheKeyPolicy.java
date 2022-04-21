@@ -15,116 +15,109 @@ public final class GetBackendServiceCdnPolicyCacheKeyPolicy extends com.pulumi.r
     public static final GetBackendServiceCdnPolicyCacheKeyPolicy Empty = new GetBackendServiceCdnPolicyCacheKeyPolicy();
 
     @Import(name="includeHost", required=true)
-      private final Boolean includeHost;
+    private Boolean includeHost;
 
     public Boolean includeHost() {
         return this.includeHost;
     }
 
     @Import(name="includeProtocol", required=true)
-      private final Boolean includeProtocol;
+    private Boolean includeProtocol;
 
     public Boolean includeProtocol() {
         return this.includeProtocol;
     }
 
     @Import(name="includeQueryString", required=true)
-      private final Boolean includeQueryString;
+    private Boolean includeQueryString;
 
     public Boolean includeQueryString() {
         return this.includeQueryString;
     }
 
     @Import(name="queryStringBlacklists", required=true)
-      private final List<String> queryStringBlacklists;
+    private List<String> queryStringBlacklists;
 
     public List<String> queryStringBlacklists() {
         return this.queryStringBlacklists;
     }
 
     @Import(name="queryStringWhitelists", required=true)
-      private final List<String> queryStringWhitelists;
+    private List<String> queryStringWhitelists;
 
     public List<String> queryStringWhitelists() {
         return this.queryStringWhitelists;
     }
 
-    public GetBackendServiceCdnPolicyCacheKeyPolicy(
-        Boolean includeHost,
-        Boolean includeProtocol,
-        Boolean includeQueryString,
-        List<String> queryStringBlacklists,
-        List<String> queryStringWhitelists) {
-        this.includeHost = Objects.requireNonNull(includeHost, "expected parameter 'includeHost' to be non-null");
-        this.includeProtocol = Objects.requireNonNull(includeProtocol, "expected parameter 'includeProtocol' to be non-null");
-        this.includeQueryString = Objects.requireNonNull(includeQueryString, "expected parameter 'includeQueryString' to be non-null");
-        this.queryStringBlacklists = Objects.requireNonNull(queryStringBlacklists, "expected parameter 'queryStringBlacklists' to be non-null");
-        this.queryStringWhitelists = Objects.requireNonNull(queryStringWhitelists, "expected parameter 'queryStringWhitelists' to be non-null");
-    }
+    private GetBackendServiceCdnPolicyCacheKeyPolicy() {}
 
-    private GetBackendServiceCdnPolicyCacheKeyPolicy() {
-        this.includeHost = null;
-        this.includeProtocol = null;
-        this.includeQueryString = null;
-        this.queryStringBlacklists = List.of();
-        this.queryStringWhitelists = List.of();
+    private GetBackendServiceCdnPolicyCacheKeyPolicy(GetBackendServiceCdnPolicyCacheKeyPolicy $) {
+        this.includeHost = $.includeHost;
+        this.includeProtocol = $.includeProtocol;
+        this.includeQueryString = $.includeQueryString;
+        this.queryStringBlacklists = $.queryStringBlacklists;
+        this.queryStringWhitelists = $.queryStringWhitelists;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendServiceCdnPolicyCacheKeyPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean includeHost;
-        private Boolean includeProtocol;
-        private Boolean includeQueryString;
-        private List<String> queryStringBlacklists;
-        private List<String> queryStringWhitelists;
+        private GetBackendServiceCdnPolicyCacheKeyPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendServiceCdnPolicyCacheKeyPolicy();
         }
 
         public Builder(GetBackendServiceCdnPolicyCacheKeyPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includeHost = defaults.includeHost;
-    	      this.includeProtocol = defaults.includeProtocol;
-    	      this.includeQueryString = defaults.includeQueryString;
-    	      this.queryStringBlacklists = defaults.queryStringBlacklists;
-    	      this.queryStringWhitelists = defaults.queryStringWhitelists;
+            $ = new GetBackendServiceCdnPolicyCacheKeyPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder includeHost(Boolean includeHost) {
-            this.includeHost = Objects.requireNonNull(includeHost);
+            $.includeHost = includeHost;
             return this;
         }
+
         public Builder includeProtocol(Boolean includeProtocol) {
-            this.includeProtocol = Objects.requireNonNull(includeProtocol);
+            $.includeProtocol = includeProtocol;
             return this;
         }
+
         public Builder includeQueryString(Boolean includeQueryString) {
-            this.includeQueryString = Objects.requireNonNull(includeQueryString);
+            $.includeQueryString = includeQueryString;
             return this;
         }
+
         public Builder queryStringBlacklists(List<String> queryStringBlacklists) {
-            this.queryStringBlacklists = Objects.requireNonNull(queryStringBlacklists);
+            $.queryStringBlacklists = queryStringBlacklists;
             return this;
         }
+
         public Builder queryStringBlacklists(String... queryStringBlacklists) {
             return queryStringBlacklists(List.of(queryStringBlacklists));
         }
+
         public Builder queryStringWhitelists(List<String> queryStringWhitelists) {
-            this.queryStringWhitelists = Objects.requireNonNull(queryStringWhitelists);
+            $.queryStringWhitelists = queryStringWhitelists;
             return this;
         }
+
         public Builder queryStringWhitelists(String... queryStringWhitelists) {
             return queryStringWhitelists(List.of(queryStringWhitelists));
-        }        public GetBackendServiceCdnPolicyCacheKeyPolicy build() {
-            return new GetBackendServiceCdnPolicyCacheKeyPolicy(includeHost, includeProtocol, includeQueryString, queryStringBlacklists, queryStringWhitelists);
+        }
+
+        public GetBackendServiceCdnPolicyCacheKeyPolicy build() {
+            $.includeHost = Objects.requireNonNull($.includeHost, "expected parameter 'includeHost' to be non-null");
+            $.includeProtocol = Objects.requireNonNull($.includeProtocol, "expected parameter 'includeProtocol' to be non-null");
+            $.includeQueryString = Objects.requireNonNull($.includeQueryString, "expected parameter 'includeQueryString' to be non-null");
+            $.queryStringBlacklists = Objects.requireNonNull($.queryStringBlacklists, "expected parameter 'queryStringBlacklists' to be non-null");
+            $.queryStringWhitelists = Objects.requireNonNull($.queryStringWhitelists, "expected parameter 'queryStringWhitelists' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends com.pul
      * 
      */
     @Import(name="queryInsightsEnabled")
-      private final @Nullable Output<Boolean> queryInsightsEnabled;
+    private @Nullable Output<Boolean> queryInsightsEnabled;
 
-    public Output<Boolean> queryInsightsEnabled() {
-        return this.queryInsightsEnabled == null ? Codegen.empty() : this.queryInsightsEnabled;
+    public Optional<Output<Boolean>> queryInsightsEnabled() {
+        return Optional.ofNullable(this.queryInsightsEnabled);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends com.pul
      * 
      */
     @Import(name="queryStringLength")
-      private final @Nullable Output<Integer> queryStringLength;
+    private @Nullable Output<Integer> queryStringLength;
 
-    public Output<Integer> queryStringLength() {
-        return this.queryStringLength == null ? Codegen.empty() : this.queryStringLength;
+    public Optional<Output<Integer>> queryStringLength() {
+        return Optional.ofNullable(this.queryStringLength);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends com.pul
      * 
      */
     @Import(name="recordApplicationTags")
-      private final @Nullable Output<Boolean> recordApplicationTags;
+    private @Nullable Output<Boolean> recordApplicationTags;
 
-    public Output<Boolean> recordApplicationTags() {
-        return this.recordApplicationTags == null ? Codegen.empty() : this.recordApplicationTags;
+    public Optional<Output<Boolean>> recordApplicationTags() {
+        return Optional.ofNullable(this.recordApplicationTags);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends com.pul
      * 
      */
     @Import(name="recordClientAddress")
-      private final @Nullable Output<Boolean> recordClientAddress;
+    private @Nullable Output<Boolean> recordClientAddress;
 
-    public Output<Boolean> recordClientAddress() {
-        return this.recordClientAddress == null ? Codegen.empty() : this.recordClientAddress;
+    public Optional<Output<Boolean>> recordClientAddress() {
+        return Optional.ofNullable(this.recordClientAddress);
     }
 
-    public DatabaseInstanceSettingsInsightsConfigGetArgs(
-        @Nullable Output<Boolean> queryInsightsEnabled,
-        @Nullable Output<Integer> queryStringLength,
-        @Nullable Output<Boolean> recordApplicationTags,
-        @Nullable Output<Boolean> recordClientAddress) {
-        this.queryInsightsEnabled = queryInsightsEnabled;
-        this.queryStringLength = queryStringLength;
-        this.recordApplicationTags = recordApplicationTags;
-        this.recordClientAddress = recordClientAddress;
-    }
+    private DatabaseInstanceSettingsInsightsConfigGetArgs() {}
 
-    private DatabaseInstanceSettingsInsightsConfigGetArgs() {
-        this.queryInsightsEnabled = Codegen.empty();
-        this.queryStringLength = Codegen.empty();
-        this.recordApplicationTags = Codegen.empty();
-        this.recordClientAddress = Codegen.empty();
+    private DatabaseInstanceSettingsInsightsConfigGetArgs(DatabaseInstanceSettingsInsightsConfigGetArgs $) {
+        this.queryInsightsEnabled = $.queryInsightsEnabled;
+        this.queryStringLength = $.queryStringLength;
+        this.recordApplicationTags = $.recordApplicationTags;
+        this.recordClientAddress = $.recordClientAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceSettingsInsightsConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> queryInsightsEnabled;
-        private @Nullable Output<Integer> queryStringLength;
-        private @Nullable Output<Boolean> recordApplicationTags;
-        private @Nullable Output<Boolean> recordClientAddress;
+        private DatabaseInstanceSettingsInsightsConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceSettingsInsightsConfigGetArgs();
         }
 
         public Builder(DatabaseInstanceSettingsInsightsConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryInsightsEnabled = defaults.queryInsightsEnabled;
-    	      this.queryStringLength = defaults.queryStringLength;
-    	      this.recordApplicationTags = defaults.recordApplicationTags;
-    	      this.recordClientAddress = defaults.recordClientAddress;
+            $ = new DatabaseInstanceSettingsInsightsConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queryInsightsEnabled(@Nullable Output<Boolean> queryInsightsEnabled) {
-            this.queryInsightsEnabled = queryInsightsEnabled;
+            $.queryInsightsEnabled = queryInsightsEnabled;
             return this;
         }
-        public Builder queryInsightsEnabled(@Nullable Boolean queryInsightsEnabled) {
-            this.queryInsightsEnabled = Codegen.ofNullable(queryInsightsEnabled);
-            return this;
+
+        public Builder queryInsightsEnabled(Boolean queryInsightsEnabled) {
+            return queryInsightsEnabled(Output.of(queryInsightsEnabled));
         }
+
         public Builder queryStringLength(@Nullable Output<Integer> queryStringLength) {
-            this.queryStringLength = queryStringLength;
+            $.queryStringLength = queryStringLength;
             return this;
         }
-        public Builder queryStringLength(@Nullable Integer queryStringLength) {
-            this.queryStringLength = Codegen.ofNullable(queryStringLength);
-            return this;
+
+        public Builder queryStringLength(Integer queryStringLength) {
+            return queryStringLength(Output.of(queryStringLength));
         }
+
         public Builder recordApplicationTags(@Nullable Output<Boolean> recordApplicationTags) {
-            this.recordApplicationTags = recordApplicationTags;
+            $.recordApplicationTags = recordApplicationTags;
             return this;
         }
-        public Builder recordApplicationTags(@Nullable Boolean recordApplicationTags) {
-            this.recordApplicationTags = Codegen.ofNullable(recordApplicationTags);
-            return this;
+
+        public Builder recordApplicationTags(Boolean recordApplicationTags) {
+            return recordApplicationTags(Output.of(recordApplicationTags));
         }
+
         public Builder recordClientAddress(@Nullable Output<Boolean> recordClientAddress) {
-            this.recordClientAddress = recordClientAddress;
+            $.recordClientAddress = recordClientAddress;
             return this;
         }
-        public Builder recordClientAddress(@Nullable Boolean recordClientAddress) {
-            this.recordClientAddress = Codegen.ofNullable(recordClientAddress);
-            return this;
-        }        public DatabaseInstanceSettingsInsightsConfigGetArgs build() {
-            return new DatabaseInstanceSettingsInsightsConfigGetArgs(queryInsightsEnabled, queryStringLength, recordApplicationTags, recordClientAddress);
+
+        public Builder recordClientAddress(Boolean recordClientAddress) {
+            return recordClientAddress(Output.of(recordClientAddress));
+        }
+
+        public DatabaseInstanceSettingsInsightsConfigGetArgs build() {
+            return $;
         }
     }
+
 }

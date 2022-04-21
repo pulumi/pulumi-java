@@ -5,7 +5,6 @@ package com.pulumi.gcp.projects.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class OrganizationPolicyBooleanPolicyGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="enforced", required=true)
-      private final Output<Boolean> enforced;
+    private Output<Boolean> enforced;
 
     public Output<Boolean> enforced() {
         return this.enforced;
     }
 
-    public OrganizationPolicyBooleanPolicyGetArgs(Output<Boolean> enforced) {
-        this.enforced = Objects.requireNonNull(enforced, "expected parameter 'enforced' to be non-null");
-    }
+    private OrganizationPolicyBooleanPolicyGetArgs() {}
 
-    private OrganizationPolicyBooleanPolicyGetArgs() {
-        this.enforced = Codegen.empty();
+    private OrganizationPolicyBooleanPolicyGetArgs(OrganizationPolicyBooleanPolicyGetArgs $) {
+        this.enforced = $.enforced;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationPolicyBooleanPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enforced;
+        private OrganizationPolicyBooleanPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationPolicyBooleanPolicyGetArgs();
         }
 
         public Builder(OrganizationPolicyBooleanPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enforced = defaults.enforced;
+            $ = new OrganizationPolicyBooleanPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enforced(Output<Boolean> enforced) {
-            this.enforced = Objects.requireNonNull(enforced);
+            $.enforced = enforced;
             return this;
         }
+
         public Builder enforced(Boolean enforced) {
-            this.enforced = Output.of(Objects.requireNonNull(enforced));
-            return this;
-        }        public OrganizationPolicyBooleanPolicyGetArgs build() {
-            return new OrganizationPolicyBooleanPolicyGetArgs(enforced);
+            return enforced(Output.of(enforced));
+        }
+
+        public OrganizationPolicyBooleanPolicyGetArgs build() {
+            $.enforced = Objects.requireNonNull($.enforced, "expected parameter 'enforced' to be non-null");
+            return $;
         }
     }
+
 }

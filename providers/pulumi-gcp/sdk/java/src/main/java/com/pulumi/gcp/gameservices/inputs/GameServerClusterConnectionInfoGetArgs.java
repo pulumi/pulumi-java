@@ -5,7 +5,6 @@ package com.pulumi.gcp.gameservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.gameservices.inputs.GameServerClusterConnectionInfoGkeClusterReferenceGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class GameServerClusterConnectionInfoGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="gkeClusterReference", required=true)
-      private final Output<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference;
+    private Output<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference;
 
     public Output<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference() {
         return this.gkeClusterReference;
@@ -34,63 +33,60 @@ public final class GameServerClusterConnectionInfoGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="namespace", required=true)
-      private final Output<String> namespace;
+    private Output<String> namespace;
 
     public Output<String> namespace() {
         return this.namespace;
     }
 
-    public GameServerClusterConnectionInfoGetArgs(
-        Output<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference,
-        Output<String> namespace) {
-        this.gkeClusterReference = Objects.requireNonNull(gkeClusterReference, "expected parameter 'gkeClusterReference' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-    }
+    private GameServerClusterConnectionInfoGetArgs() {}
 
-    private GameServerClusterConnectionInfoGetArgs() {
-        this.gkeClusterReference = Codegen.empty();
-        this.namespace = Codegen.empty();
+    private GameServerClusterConnectionInfoGetArgs(GameServerClusterConnectionInfoGetArgs $) {
+        this.gkeClusterReference = $.gkeClusterReference;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameServerClusterConnectionInfoGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference;
-        private Output<String> namespace;
+        private GameServerClusterConnectionInfoGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameServerClusterConnectionInfoGetArgs();
         }
 
         public Builder(GameServerClusterConnectionInfoGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gkeClusterReference = defaults.gkeClusterReference;
-    	      this.namespace = defaults.namespace;
+            $ = new GameServerClusterConnectionInfoGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gkeClusterReference(Output<GameServerClusterConnectionInfoGkeClusterReferenceGetArgs> gkeClusterReference) {
-            this.gkeClusterReference = Objects.requireNonNull(gkeClusterReference);
+            $.gkeClusterReference = gkeClusterReference;
             return this;
         }
+
         public Builder gkeClusterReference(GameServerClusterConnectionInfoGkeClusterReferenceGetArgs gkeClusterReference) {
-            this.gkeClusterReference = Output.of(Objects.requireNonNull(gkeClusterReference));
-            return this;
+            return gkeClusterReference(Output.of(gkeClusterReference));
         }
+
         public Builder namespace(Output<String> namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Output.of(Objects.requireNonNull(namespace));
-            return this;
-        }        public GameServerClusterConnectionInfoGetArgs build() {
-            return new GameServerClusterConnectionInfoGetArgs(gkeClusterReference, namespace);
+            return namespace(Output.of(namespace));
+        }
+
+        public GameServerClusterConnectionInfoGetArgs build() {
+            $.gkeClusterReference = Objects.requireNonNull($.gkeClusterReference, "expected parameter 'gkeClusterReference' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            return $;
         }
     }
+
 }

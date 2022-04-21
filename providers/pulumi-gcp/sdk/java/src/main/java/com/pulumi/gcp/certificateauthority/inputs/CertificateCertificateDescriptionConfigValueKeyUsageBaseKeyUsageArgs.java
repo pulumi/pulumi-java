@@ -5,10 +5,10 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
     public static final CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs Empty = new CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs();
 
     @Import(name="keyUsageOptions")
-      private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions;
+    private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions;
 
-    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions() {
-        return this.keyUsageOptions == null ? Codegen.empty() : this.keyUsageOptions;
+    public Optional<Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>>> keyUsageOptions() {
+        return Optional.ofNullable(this.keyUsageOptions);
     }
 
-    public CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions) {
-        this.keyUsageOptions = keyUsageOptions;
-    }
+    private CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs() {}
 
-    private CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs() {
-        this.keyUsageOptions = Codegen.empty();
+    private CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs(CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs $) {
+        this.keyUsageOptions = $.keyUsageOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions;
+        private CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs();
         }
 
         public Builder(CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyUsageOptions = defaults.keyUsageOptions;
+            $ = new CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyUsageOptions(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions) {
-            this.keyUsageOptions = keyUsageOptions;
+            $.keyUsageOptions = keyUsageOptions;
             return this;
         }
-        public Builder keyUsageOptions(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs> keyUsageOptions) {
-            this.keyUsageOptions = Codegen.ofNullable(keyUsageOptions);
-            return this;
+
+        public Builder keyUsageOptions(List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs> keyUsageOptions) {
+            return keyUsageOptions(Output.of(keyUsageOptions));
         }
+
         public Builder keyUsageOptions(CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs... keyUsageOptions) {
             return keyUsageOptions(List.of(keyUsageOptions));
-        }        public CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs build() {
-            return new CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs(keyUsageOptions);
+        }
+
+        public CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs build() {
+            return $;
         }
     }
+
 }

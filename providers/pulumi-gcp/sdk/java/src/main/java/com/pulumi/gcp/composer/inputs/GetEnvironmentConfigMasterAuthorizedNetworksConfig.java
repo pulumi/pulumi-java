@@ -15,65 +15,63 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfig extends co
     public static final GetEnvironmentConfigMasterAuthorizedNetworksConfig Empty = new GetEnvironmentConfigMasterAuthorizedNetworksConfig();
 
     @Import(name="cidrBlocks", required=true)
-      private final List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
+    private List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
 
     public List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks() {
         return this.cidrBlocks;
     }
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GetEnvironmentConfigMasterAuthorizedNetworksConfig(
-        List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks,
-        Boolean enabled) {
-        this.cidrBlocks = Objects.requireNonNull(cidrBlocks, "expected parameter 'cidrBlocks' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GetEnvironmentConfigMasterAuthorizedNetworksConfig() {}
 
-    private GetEnvironmentConfigMasterAuthorizedNetworksConfig() {
-        this.cidrBlocks = List.of();
-        this.enabled = null;
+    private GetEnvironmentConfigMasterAuthorizedNetworksConfig(GetEnvironmentConfigMasterAuthorizedNetworksConfig $) {
+        this.cidrBlocks = $.cidrBlocks;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentConfigMasterAuthorizedNetworksConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
-        private Boolean enabled;
+        private GetEnvironmentConfigMasterAuthorizedNetworksConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentConfigMasterAuthorizedNetworksConfig();
         }
 
         public Builder(GetEnvironmentConfigMasterAuthorizedNetworksConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlocks = defaults.cidrBlocks;
-    	      this.enabled = defaults.enabled;
+            $ = new GetEnvironmentConfigMasterAuthorizedNetworksConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlocks(List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
-            this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
+            $.cidrBlocks = cidrBlocks;
             return this;
         }
+
         public Builder cidrBlocks(GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock... cidrBlocks) {
             return cidrBlocks(List.of(cidrBlocks));
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GetEnvironmentConfigMasterAuthorizedNetworksConfig build() {
-            return new GetEnvironmentConfigMasterAuthorizedNetworksConfig(cidrBlocks, enabled);
+        }
+
+        public GetEnvironmentConfigMasterAuthorizedNetworksConfig build() {
+            $.cidrBlocks = Objects.requireNonNull($.cidrBlocks, "expected parameter 'cidrBlocks' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

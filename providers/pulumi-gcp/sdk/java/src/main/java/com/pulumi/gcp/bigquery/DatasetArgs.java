@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigquery;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigquery.inputs.DatasetAccessArgs;
 import com.pulumi.gcp.bigquery.inputs.DatasetDefaultEncryptionConfigurationArgs;
 import java.lang.Boolean;
@@ -14,6 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accesses")
-      private final @Nullable Output<List<DatasetAccessArgs>> accesses;
+    private @Nullable Output<List<DatasetAccessArgs>> accesses;
 
-    public Output<List<DatasetAccessArgs>> accesses() {
-        return this.accesses == null ? Codegen.empty() : this.accesses;
+    public Optional<Output<List<DatasetAccessArgs>>> accesses() {
+        return Optional.ofNullable(this.accesses);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="datasetId", required=true)
-      private final Output<String> datasetId;
+    private Output<String> datasetId;
 
     public Output<String> datasetId() {
         return this.datasetId;
@@ -52,10 +52,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultEncryptionConfiguration")
-      private final @Nullable Output<DatasetDefaultEncryptionConfigurationArgs> defaultEncryptionConfiguration;
+    private @Nullable Output<DatasetDefaultEncryptionConfigurationArgs> defaultEncryptionConfiguration;
 
-    public Output<DatasetDefaultEncryptionConfigurationArgs> defaultEncryptionConfiguration() {
-        return this.defaultEncryptionConfiguration == null ? Codegen.empty() : this.defaultEncryptionConfiguration;
+    public Optional<Output<DatasetDefaultEncryptionConfigurationArgs>> defaultEncryptionConfiguration() {
+        return Optional.ofNullable(this.defaultEncryptionConfiguration);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultPartitionExpirationMs")
-      private final @Nullable Output<Integer> defaultPartitionExpirationMs;
+    private @Nullable Output<Integer> defaultPartitionExpirationMs;
 
-    public Output<Integer> defaultPartitionExpirationMs() {
-        return this.defaultPartitionExpirationMs == null ? Codegen.empty() : this.defaultPartitionExpirationMs;
+    public Optional<Output<Integer>> defaultPartitionExpirationMs() {
+        return Optional.ofNullable(this.defaultPartitionExpirationMs);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultTableExpirationMs")
-      private final @Nullable Output<Integer> defaultTableExpirationMs;
+    private @Nullable Output<Integer> defaultTableExpirationMs;
 
-    public Output<Integer> defaultTableExpirationMs() {
-        return this.defaultTableExpirationMs == null ? Codegen.empty() : this.defaultTableExpirationMs;
+    public Optional<Output<Integer>> defaultTableExpirationMs() {
+        return Optional.ofNullable(this.defaultTableExpirationMs);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deleteContentsOnDestroy")
-      private final @Nullable Output<Boolean> deleteContentsOnDestroy;
+    private @Nullable Output<Boolean> deleteContentsOnDestroy;
 
-    public Output<Boolean> deleteContentsOnDestroy() {
-        return this.deleteContentsOnDestroy == null ? Codegen.empty() : this.deleteContentsOnDestroy;
+    public Optional<Output<Boolean>> deleteContentsOnDestroy() {
+        return Optional.ofNullable(this.deleteContentsOnDestroy);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -147,183 +147,153 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public DatasetArgs(
-        @Nullable Output<List<DatasetAccessArgs>> accesses,
-        Output<String> datasetId,
-        @Nullable Output<DatasetDefaultEncryptionConfigurationArgs> defaultEncryptionConfiguration,
-        @Nullable Output<Integer> defaultPartitionExpirationMs,
-        @Nullable Output<Integer> defaultTableExpirationMs,
-        @Nullable Output<Boolean> deleteContentsOnDestroy,
-        @Nullable Output<String> description,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project) {
-        this.accesses = accesses;
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
-        this.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
-        this.defaultTableExpirationMs = defaultTableExpirationMs;
-        this.deleteContentsOnDestroy = deleteContentsOnDestroy;
-        this.description = description;
-        this.friendlyName = friendlyName;
-        this.labels = labels;
-        this.location = location;
-        this.project = project;
-    }
+    private DatasetArgs() {}
 
-    private DatasetArgs() {
-        this.accesses = Codegen.empty();
-        this.datasetId = Codegen.empty();
-        this.defaultEncryptionConfiguration = Codegen.empty();
-        this.defaultPartitionExpirationMs = Codegen.empty();
-        this.defaultTableExpirationMs = Codegen.empty();
-        this.deleteContentsOnDestroy = Codegen.empty();
-        this.description = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
+    private DatasetArgs(DatasetArgs $) {
+        this.accesses = $.accesses;
+        this.datasetId = $.datasetId;
+        this.defaultEncryptionConfiguration = $.defaultEncryptionConfiguration;
+        this.defaultPartitionExpirationMs = $.defaultPartitionExpirationMs;
+        this.defaultTableExpirationMs = $.defaultTableExpirationMs;
+        this.deleteContentsOnDestroy = $.deleteContentsOnDestroy;
+        this.description = $.description;
+        this.friendlyName = $.friendlyName;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DatasetAccessArgs>> accesses;
-        private Output<String> datasetId;
-        private @Nullable Output<DatasetDefaultEncryptionConfigurationArgs> defaultEncryptionConfiguration;
-        private @Nullable Output<Integer> defaultPartitionExpirationMs;
-        private @Nullable Output<Integer> defaultTableExpirationMs;
-        private @Nullable Output<Boolean> deleteContentsOnDestroy;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
+        private DatasetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetArgs();
         }
 
         public Builder(DatasetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accesses = defaults.accesses;
-    	      this.datasetId = defaults.datasetId;
-    	      this.defaultEncryptionConfiguration = defaults.defaultEncryptionConfiguration;
-    	      this.defaultPartitionExpirationMs = defaults.defaultPartitionExpirationMs;
-    	      this.defaultTableExpirationMs = defaults.defaultTableExpirationMs;
-    	      this.deleteContentsOnDestroy = defaults.deleteContentsOnDestroy;
-    	      this.description = defaults.description;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new DatasetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accesses(@Nullable Output<List<DatasetAccessArgs>> accesses) {
-            this.accesses = accesses;
+            $.accesses = accesses;
             return this;
         }
-        public Builder accesses(@Nullable List<DatasetAccessArgs> accesses) {
-            this.accesses = Codegen.ofNullable(accesses);
-            return this;
+
+        public Builder accesses(List<DatasetAccessArgs> accesses) {
+            return accesses(Output.of(accesses));
         }
+
         public Builder accesses(DatasetAccessArgs... accesses) {
             return accesses(List.of(accesses));
         }
+
         public Builder datasetId(Output<String> datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
-            return this;
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder defaultEncryptionConfiguration(@Nullable Output<DatasetDefaultEncryptionConfigurationArgs> defaultEncryptionConfiguration) {
-            this.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
+            $.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
             return this;
         }
-        public Builder defaultEncryptionConfiguration(@Nullable DatasetDefaultEncryptionConfigurationArgs defaultEncryptionConfiguration) {
-            this.defaultEncryptionConfiguration = Codegen.ofNullable(defaultEncryptionConfiguration);
-            return this;
+
+        public Builder defaultEncryptionConfiguration(DatasetDefaultEncryptionConfigurationArgs defaultEncryptionConfiguration) {
+            return defaultEncryptionConfiguration(Output.of(defaultEncryptionConfiguration));
         }
+
         public Builder defaultPartitionExpirationMs(@Nullable Output<Integer> defaultPartitionExpirationMs) {
-            this.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
+            $.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
             return this;
         }
-        public Builder defaultPartitionExpirationMs(@Nullable Integer defaultPartitionExpirationMs) {
-            this.defaultPartitionExpirationMs = Codegen.ofNullable(defaultPartitionExpirationMs);
-            return this;
+
+        public Builder defaultPartitionExpirationMs(Integer defaultPartitionExpirationMs) {
+            return defaultPartitionExpirationMs(Output.of(defaultPartitionExpirationMs));
         }
+
         public Builder defaultTableExpirationMs(@Nullable Output<Integer> defaultTableExpirationMs) {
-            this.defaultTableExpirationMs = defaultTableExpirationMs;
+            $.defaultTableExpirationMs = defaultTableExpirationMs;
             return this;
         }
-        public Builder defaultTableExpirationMs(@Nullable Integer defaultTableExpirationMs) {
-            this.defaultTableExpirationMs = Codegen.ofNullable(defaultTableExpirationMs);
-            return this;
+
+        public Builder defaultTableExpirationMs(Integer defaultTableExpirationMs) {
+            return defaultTableExpirationMs(Output.of(defaultTableExpirationMs));
         }
+
         public Builder deleteContentsOnDestroy(@Nullable Output<Boolean> deleteContentsOnDestroy) {
-            this.deleteContentsOnDestroy = deleteContentsOnDestroy;
+            $.deleteContentsOnDestroy = deleteContentsOnDestroy;
             return this;
         }
-        public Builder deleteContentsOnDestroy(@Nullable Boolean deleteContentsOnDestroy) {
-            this.deleteContentsOnDestroy = Codegen.ofNullable(deleteContentsOnDestroy);
-            return this;
+
+        public Builder deleteContentsOnDestroy(Boolean deleteContentsOnDestroy) {
+            return deleteContentsOnDestroy(Output.of(deleteContentsOnDestroy));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public DatasetArgs build() {
-            return new DatasetArgs(accesses, datasetId, defaultEncryptionConfiguration, defaultPartitionExpirationMs, defaultTableExpirationMs, deleteContentsOnDestroy, description, friendlyName, labels, location, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public DatasetArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            return $;
         }
     }
+
 }

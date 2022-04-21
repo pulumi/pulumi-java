@@ -5,9 +5,9 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class InstanceVmImageGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="imageFamily")
-      private final @Nullable Output<String> imageFamily;
+    private @Nullable Output<String> imageFamily;
 
-    public Output<String> imageFamily() {
-        return this.imageFamily == null ? Codegen.empty() : this.imageFamily;
+    public Optional<Output<String>> imageFamily() {
+        return Optional.ofNullable(this.imageFamily);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class InstanceVmImageGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="imageName")
-      private final @Nullable Output<String> imageName;
+    private @Nullable Output<String> imageName;
 
-    public Output<String> imageName() {
-        return this.imageName == null ? Codegen.empty() : this.imageName;
+    public Optional<Output<String>> imageName() {
+        return Optional.ofNullable(this.imageName);
     }
 
     /**
@@ -43,76 +43,69 @@ public final class InstanceVmImageGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project", required=true)
-      private final Output<String> project;
+    private Output<String> project;
 
     public Output<String> project() {
         return this.project;
     }
 
-    public InstanceVmImageGetArgs(
-        @Nullable Output<String> imageFamily,
-        @Nullable Output<String> imageName,
-        Output<String> project) {
-        this.imageFamily = imageFamily;
-        this.imageName = imageName;
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private InstanceVmImageGetArgs() {}
 
-    private InstanceVmImageGetArgs() {
-        this.imageFamily = Codegen.empty();
-        this.imageName = Codegen.empty();
-        this.project = Codegen.empty();
+    private InstanceVmImageGetArgs(InstanceVmImageGetArgs $) {
+        this.imageFamily = $.imageFamily;
+        this.imageName = $.imageName;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceVmImageGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> imageFamily;
-        private @Nullable Output<String> imageName;
-        private Output<String> project;
+        private InstanceVmImageGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceVmImageGetArgs();
         }
 
         public Builder(InstanceVmImageGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageFamily = defaults.imageFamily;
-    	      this.imageName = defaults.imageName;
-    	      this.project = defaults.project;
+            $ = new InstanceVmImageGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageFamily(@Nullable Output<String> imageFamily) {
-            this.imageFamily = imageFamily;
+            $.imageFamily = imageFamily;
             return this;
         }
-        public Builder imageFamily(@Nullable String imageFamily) {
-            this.imageFamily = Codegen.ofNullable(imageFamily);
-            return this;
+
+        public Builder imageFamily(String imageFamily) {
+            return imageFamily(Output.of(imageFamily));
         }
+
         public Builder imageName(@Nullable Output<String> imageName) {
-            this.imageName = imageName;
+            $.imageName = imageName;
             return this;
         }
-        public Builder imageName(@Nullable String imageName) {
-            this.imageName = Codegen.ofNullable(imageName);
-            return this;
+
+        public Builder imageName(String imageName) {
+            return imageName(Output.of(imageName));
         }
+
         public Builder project(Output<String> project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Output.of(Objects.requireNonNull(project));
-            return this;
-        }        public InstanceVmImageGetArgs build() {
-            return new InstanceVmImageGetArgs(imageFamily, imageName, project);
+            return project(Output.of(project));
+        }
+
+        public InstanceVmImageGetArgs build() {
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

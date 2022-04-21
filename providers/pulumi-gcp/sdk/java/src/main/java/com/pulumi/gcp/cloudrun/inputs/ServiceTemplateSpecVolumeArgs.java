@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeSecretArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ServiceTemplateSpecVolumeArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -34,63 +33,60 @@ public final class ServiceTemplateSpecVolumeArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="secret", required=true)
-      private final Output<ServiceTemplateSpecVolumeSecretArgs> secret;
+    private Output<ServiceTemplateSpecVolumeSecretArgs> secret;
 
     public Output<ServiceTemplateSpecVolumeSecretArgs> secret() {
         return this.secret;
     }
 
-    public ServiceTemplateSpecVolumeArgs(
-        Output<String> name,
-        Output<ServiceTemplateSpecVolumeSecretArgs> secret) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-    }
+    private ServiceTemplateSpecVolumeArgs() {}
 
-    private ServiceTemplateSpecVolumeArgs() {
-        this.name = Codegen.empty();
-        this.secret = Codegen.empty();
+    private ServiceTemplateSpecVolumeArgs(ServiceTemplateSpecVolumeArgs $) {
+        this.name = $.name;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTemplateSpecVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<ServiceTemplateSpecVolumeSecretArgs> secret;
+        private ServiceTemplateSpecVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTemplateSpecVolumeArgs();
         }
 
         public Builder(ServiceTemplateSpecVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.secret = defaults.secret;
+            $ = new ServiceTemplateSpecVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder secret(Output<ServiceTemplateSpecVolumeSecretArgs> secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder secret(ServiceTemplateSpecVolumeSecretArgs secret) {
-            this.secret = Output.of(Objects.requireNonNull(secret));
-            return this;
-        }        public ServiceTemplateSpecVolumeArgs build() {
-            return new ServiceTemplateSpecVolumeArgs(name, secret);
+            return secret(Output.of(secret));
+        }
+
+        public ServiceTemplateSpecVolumeArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

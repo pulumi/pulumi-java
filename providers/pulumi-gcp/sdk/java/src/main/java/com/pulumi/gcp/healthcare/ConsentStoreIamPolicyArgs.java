@@ -5,7 +5,6 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ConsentStoreIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="consentStoreId", required=true)
-      private final Output<String> consentStoreId;
+    private Output<String> consentStoreId;
 
     public Output<String> consentStoreId() {
         return this.consentStoreId;
@@ -32,7 +31,7 @@ public final class ConsentStoreIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="dataset", required=true)
-      private final Output<String> dataset;
+    private Output<String> dataset;
 
     public Output<String> dataset() {
         return this.dataset;
@@ -44,76 +43,71 @@ public final class ConsentStoreIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
-    public ConsentStoreIamPolicyArgs(
-        Output<String> consentStoreId,
-        Output<String> dataset,
-        Output<String> policyData) {
-        this.consentStoreId = Objects.requireNonNull(consentStoreId, "expected parameter 'consentStoreId' to be non-null");
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-    }
+    private ConsentStoreIamPolicyArgs() {}
 
-    private ConsentStoreIamPolicyArgs() {
-        this.consentStoreId = Codegen.empty();
-        this.dataset = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private ConsentStoreIamPolicyArgs(ConsentStoreIamPolicyArgs $) {
+        this.consentStoreId = $.consentStoreId;
+        this.dataset = $.dataset;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsentStoreIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> consentStoreId;
-        private Output<String> dataset;
-        private Output<String> policyData;
+        private ConsentStoreIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsentStoreIamPolicyArgs();
         }
 
         public Builder(ConsentStoreIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consentStoreId = defaults.consentStoreId;
-    	      this.dataset = defaults.dataset;
-    	      this.policyData = defaults.policyData;
+            $ = new ConsentStoreIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consentStoreId(Output<String> consentStoreId) {
-            this.consentStoreId = Objects.requireNonNull(consentStoreId);
+            $.consentStoreId = consentStoreId;
             return this;
         }
+
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
-            return this;
+            return consentStoreId(Output.of(consentStoreId));
         }
+
         public Builder dataset(Output<String> dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder dataset(String dataset) {
-            this.dataset = Output.of(Objects.requireNonNull(dataset));
-            return this;
+            return dataset(Output.of(dataset));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
-        }        public ConsentStoreIamPolicyArgs build() {
-            return new ConsentStoreIamPolicyArgs(consentStoreId, dataset, policyData);
+            return policyData(Output.of(policyData));
+        }
+
+        public ConsentStoreIamPolicyArgs build() {
+            $.consentStoreId = Objects.requireNonNull($.consentStoreId, "expected parameter 'consentStoreId' to be non-null");
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

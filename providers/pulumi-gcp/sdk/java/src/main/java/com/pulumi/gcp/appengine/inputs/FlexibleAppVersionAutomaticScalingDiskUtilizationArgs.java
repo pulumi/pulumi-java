@@ -5,9 +5,9 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilizationArgs extends
      * 
      */
     @Import(name="targetReadBytesPerSecond")
-      private final @Nullable Output<Integer> targetReadBytesPerSecond;
+    private @Nullable Output<Integer> targetReadBytesPerSecond;
 
-    public Output<Integer> targetReadBytesPerSecond() {
-        return this.targetReadBytesPerSecond == null ? Codegen.empty() : this.targetReadBytesPerSecond;
+    public Optional<Output<Integer>> targetReadBytesPerSecond() {
+        return Optional.ofNullable(this.targetReadBytesPerSecond);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilizationArgs extends
      * 
      */
     @Import(name="targetReadOpsPerSecond")
-      private final @Nullable Output<Integer> targetReadOpsPerSecond;
+    private @Nullable Output<Integer> targetReadOpsPerSecond;
 
-    public Output<Integer> targetReadOpsPerSecond() {
-        return this.targetReadOpsPerSecond == null ? Codegen.empty() : this.targetReadOpsPerSecond;
+    public Optional<Output<Integer>> targetReadOpsPerSecond() {
+        return Optional.ofNullable(this.targetReadOpsPerSecond);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilizationArgs extends
      * 
      */
     @Import(name="targetWriteBytesPerSecond")
-      private final @Nullable Output<Integer> targetWriteBytesPerSecond;
+    private @Nullable Output<Integer> targetWriteBytesPerSecond;
 
-    public Output<Integer> targetWriteBytesPerSecond() {
-        return this.targetWriteBytesPerSecond == null ? Codegen.empty() : this.targetWriteBytesPerSecond;
+    public Optional<Output<Integer>> targetWriteBytesPerSecond() {
+        return Optional.ofNullable(this.targetWriteBytesPerSecond);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilizationArgs extends
      * 
      */
     @Import(name="targetWriteOpsPerSecond")
-      private final @Nullable Output<Integer> targetWriteOpsPerSecond;
+    private @Nullable Output<Integer> targetWriteOpsPerSecond;
 
-    public Output<Integer> targetWriteOpsPerSecond() {
-        return this.targetWriteOpsPerSecond == null ? Codegen.empty() : this.targetWriteOpsPerSecond;
+    public Optional<Output<Integer>> targetWriteOpsPerSecond() {
+        return Optional.ofNullable(this.targetWriteOpsPerSecond);
     }
 
-    public FlexibleAppVersionAutomaticScalingDiskUtilizationArgs(
-        @Nullable Output<Integer> targetReadBytesPerSecond,
-        @Nullable Output<Integer> targetReadOpsPerSecond,
-        @Nullable Output<Integer> targetWriteBytesPerSecond,
-        @Nullable Output<Integer> targetWriteOpsPerSecond) {
-        this.targetReadBytesPerSecond = targetReadBytesPerSecond;
-        this.targetReadOpsPerSecond = targetReadOpsPerSecond;
-        this.targetWriteBytesPerSecond = targetWriteBytesPerSecond;
-        this.targetWriteOpsPerSecond = targetWriteOpsPerSecond;
-    }
+    private FlexibleAppVersionAutomaticScalingDiskUtilizationArgs() {}
 
-    private FlexibleAppVersionAutomaticScalingDiskUtilizationArgs() {
-        this.targetReadBytesPerSecond = Codegen.empty();
-        this.targetReadOpsPerSecond = Codegen.empty();
-        this.targetWriteBytesPerSecond = Codegen.empty();
-        this.targetWriteOpsPerSecond = Codegen.empty();
+    private FlexibleAppVersionAutomaticScalingDiskUtilizationArgs(FlexibleAppVersionAutomaticScalingDiskUtilizationArgs $) {
+        this.targetReadBytesPerSecond = $.targetReadBytesPerSecond;
+        this.targetReadOpsPerSecond = $.targetReadOpsPerSecond;
+        this.targetWriteBytesPerSecond = $.targetWriteBytesPerSecond;
+        this.targetWriteOpsPerSecond = $.targetWriteOpsPerSecond;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionAutomaticScalingDiskUtilizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> targetReadBytesPerSecond;
-        private @Nullable Output<Integer> targetReadOpsPerSecond;
-        private @Nullable Output<Integer> targetWriteBytesPerSecond;
-        private @Nullable Output<Integer> targetWriteOpsPerSecond;
+        private FlexibleAppVersionAutomaticScalingDiskUtilizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionAutomaticScalingDiskUtilizationArgs();
         }
 
         public Builder(FlexibleAppVersionAutomaticScalingDiskUtilizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetReadBytesPerSecond = defaults.targetReadBytesPerSecond;
-    	      this.targetReadOpsPerSecond = defaults.targetReadOpsPerSecond;
-    	      this.targetWriteBytesPerSecond = defaults.targetWriteBytesPerSecond;
-    	      this.targetWriteOpsPerSecond = defaults.targetWriteOpsPerSecond;
+            $ = new FlexibleAppVersionAutomaticScalingDiskUtilizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetReadBytesPerSecond(@Nullable Output<Integer> targetReadBytesPerSecond) {
-            this.targetReadBytesPerSecond = targetReadBytesPerSecond;
+            $.targetReadBytesPerSecond = targetReadBytesPerSecond;
             return this;
         }
-        public Builder targetReadBytesPerSecond(@Nullable Integer targetReadBytesPerSecond) {
-            this.targetReadBytesPerSecond = Codegen.ofNullable(targetReadBytesPerSecond);
-            return this;
+
+        public Builder targetReadBytesPerSecond(Integer targetReadBytesPerSecond) {
+            return targetReadBytesPerSecond(Output.of(targetReadBytesPerSecond));
         }
+
         public Builder targetReadOpsPerSecond(@Nullable Output<Integer> targetReadOpsPerSecond) {
-            this.targetReadOpsPerSecond = targetReadOpsPerSecond;
+            $.targetReadOpsPerSecond = targetReadOpsPerSecond;
             return this;
         }
-        public Builder targetReadOpsPerSecond(@Nullable Integer targetReadOpsPerSecond) {
-            this.targetReadOpsPerSecond = Codegen.ofNullable(targetReadOpsPerSecond);
-            return this;
+
+        public Builder targetReadOpsPerSecond(Integer targetReadOpsPerSecond) {
+            return targetReadOpsPerSecond(Output.of(targetReadOpsPerSecond));
         }
+
         public Builder targetWriteBytesPerSecond(@Nullable Output<Integer> targetWriteBytesPerSecond) {
-            this.targetWriteBytesPerSecond = targetWriteBytesPerSecond;
+            $.targetWriteBytesPerSecond = targetWriteBytesPerSecond;
             return this;
         }
-        public Builder targetWriteBytesPerSecond(@Nullable Integer targetWriteBytesPerSecond) {
-            this.targetWriteBytesPerSecond = Codegen.ofNullable(targetWriteBytesPerSecond);
-            return this;
+
+        public Builder targetWriteBytesPerSecond(Integer targetWriteBytesPerSecond) {
+            return targetWriteBytesPerSecond(Output.of(targetWriteBytesPerSecond));
         }
+
         public Builder targetWriteOpsPerSecond(@Nullable Output<Integer> targetWriteOpsPerSecond) {
-            this.targetWriteOpsPerSecond = targetWriteOpsPerSecond;
+            $.targetWriteOpsPerSecond = targetWriteOpsPerSecond;
             return this;
         }
-        public Builder targetWriteOpsPerSecond(@Nullable Integer targetWriteOpsPerSecond) {
-            this.targetWriteOpsPerSecond = Codegen.ofNullable(targetWriteOpsPerSecond);
-            return this;
-        }        public FlexibleAppVersionAutomaticScalingDiskUtilizationArgs build() {
-            return new FlexibleAppVersionAutomaticScalingDiskUtilizationArgs(targetReadBytesPerSecond, targetReadOpsPerSecond, targetWriteBytesPerSecond, targetWriteOpsPerSecond);
+
+        public Builder targetWriteOpsPerSecond(Integer targetWriteOpsPerSecond) {
+            return targetWriteOpsPerSecond(Output.of(targetWriteOpsPerSecond));
+        }
+
+        public FlexibleAppVersionAutomaticScalingDiskUtilizationArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.identityplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class TenantInboundSamlConfigIdpConfigIdpCertificateArgs extends co
      * 
      */
     @Import(name="x509Certificate")
-      private final @Nullable Output<String> x509Certificate;
+    private @Nullable Output<String> x509Certificate;
 
-    public Output<String> x509Certificate() {
-        return this.x509Certificate == null ? Codegen.empty() : this.x509Certificate;
+    public Optional<Output<String>> x509Certificate() {
+        return Optional.ofNullable(this.x509Certificate);
     }
 
-    public TenantInboundSamlConfigIdpConfigIdpCertificateArgs(@Nullable Output<String> x509Certificate) {
-        this.x509Certificate = x509Certificate;
-    }
+    private TenantInboundSamlConfigIdpConfigIdpCertificateArgs() {}
 
-    private TenantInboundSamlConfigIdpConfigIdpCertificateArgs() {
-        this.x509Certificate = Codegen.empty();
+    private TenantInboundSamlConfigIdpConfigIdpCertificateArgs(TenantInboundSamlConfigIdpConfigIdpCertificateArgs $) {
+        this.x509Certificate = $.x509Certificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TenantInboundSamlConfigIdpConfigIdpCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> x509Certificate;
+        private TenantInboundSamlConfigIdpConfigIdpCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TenantInboundSamlConfigIdpConfigIdpCertificateArgs();
         }
 
         public Builder(TenantInboundSamlConfigIdpConfigIdpCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.x509Certificate = defaults.x509Certificate;
+            $ = new TenantInboundSamlConfigIdpConfigIdpCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder x509Certificate(@Nullable Output<String> x509Certificate) {
-            this.x509Certificate = x509Certificate;
+            $.x509Certificate = x509Certificate;
             return this;
         }
-        public Builder x509Certificate(@Nullable String x509Certificate) {
-            this.x509Certificate = Codegen.ofNullable(x509Certificate);
-            return this;
-        }        public TenantInboundSamlConfigIdpConfigIdpCertificateArgs build() {
-            return new TenantInboundSamlConfigIdpConfigIdpCertificateArgs(x509Certificate);
+
+        public Builder x509Certificate(String x509Certificate) {
+            return x509Certificate(Output.of(x509Certificate));
+        }
+
+        public TenantInboundSamlConfigIdpConfigIdpCertificateArgs build() {
+            return $;
         }
     }
+
 }

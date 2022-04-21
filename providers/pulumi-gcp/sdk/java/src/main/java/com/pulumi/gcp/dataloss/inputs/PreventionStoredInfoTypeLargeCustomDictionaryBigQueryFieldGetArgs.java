@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGet
      * 
      */
     @Import(name="field", required=true)
-      private final Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field;
+    private Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field;
 
     public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field() {
         return this.field;
@@ -33,63 +32,60 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGet
      * 
      */
     @Import(name="table", required=true)
-      private final Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table;
+    private Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table;
 
     public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table() {
         return this.table;
     }
 
-    public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs(
-        Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field,
-        Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table) {
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.table = Objects.requireNonNull(table, "expected parameter 'table' to be non-null");
-    }
+    private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs() {}
 
-    private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs() {
-        this.field = Codegen.empty();
-        this.table = Codegen.empty();
+    private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs $) {
+        this.field = $.field;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field;
-        private Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table;
+        private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs();
         }
 
         public Builder(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.table = defaults.table;
+            $ = new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder field(Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder field(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs field) {
-            this.field = Output.of(Objects.requireNonNull(field));
-            return this;
+            return field(Output.of(field));
         }
+
         public Builder table(Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table) {
-            this.table = Objects.requireNonNull(table);
+            $.table = table;
             return this;
         }
+
         public Builder table(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs table) {
-            this.table = Output.of(Objects.requireNonNull(table));
-            return this;
-        }        public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs build() {
-            return new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs(field, table);
+            return table(Output.of(table));
+        }
+
+        public PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs build() {
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            $.table = Objects.requireNonNull($.table, "expected parameter 'table' to be non-null");
+            return $;
         }
     }
+
 }

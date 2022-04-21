@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudasset.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class FolderFeedFeedOutputConfigPubsubDestinationArgs extends com.p
      * 
      */
     @Import(name="topic", required=true)
-      private final Output<String> topic;
+    private Output<String> topic;
 
     public Output<String> topic() {
         return this.topic;
     }
 
-    public FolderFeedFeedOutputConfigPubsubDestinationArgs(Output<String> topic) {
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private FolderFeedFeedOutputConfigPubsubDestinationArgs() {}
 
-    private FolderFeedFeedOutputConfigPubsubDestinationArgs() {
-        this.topic = Codegen.empty();
+    private FolderFeedFeedOutputConfigPubsubDestinationArgs(FolderFeedFeedOutputConfigPubsubDestinationArgs $) {
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FolderFeedFeedOutputConfigPubsubDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> topic;
+        private FolderFeedFeedOutputConfigPubsubDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FolderFeedFeedOutputConfigPubsubDestinationArgs();
         }
 
         public Builder(FolderFeedFeedOutputConfigPubsubDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.topic = defaults.topic;
+            $ = new FolderFeedFeedOutputConfigPubsubDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder topic(Output<String> topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Output.of(Objects.requireNonNull(topic));
-            return this;
-        }        public FolderFeedFeedOutputConfigPubsubDestinationArgs build() {
-            return new FolderFeedFeedOutputConfigPubsubDestinationArgs(topic);
+            return topic(Output.of(topic));
+        }
+
+        public FolderFeedFeedOutputConfigPubsubDestinationArgs build() {
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArtifactGetArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeInstallStepGetArgs;
 import com.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeUpdateStepGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GuestPoliciesRecipeGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="artifacts")
-      private final @Nullable Output<List<GuestPoliciesRecipeArtifactGetArgs>> artifacts;
+    private @Nullable Output<List<GuestPoliciesRecipeArtifactGetArgs>> artifacts;
 
-    public Output<List<GuestPoliciesRecipeArtifactGetArgs>> artifacts() {
-        return this.artifacts == null ? Codegen.empty() : this.artifacts;
+    public Optional<Output<List<GuestPoliciesRecipeArtifactGetArgs>>> artifacts() {
+        return Optional.ofNullable(this.artifacts);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class GuestPoliciesRecipeGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="desiredState")
-      private final @Nullable Output<String> desiredState;
+    private @Nullable Output<String> desiredState;
 
-    public Output<String> desiredState() {
-        return this.desiredState == null ? Codegen.empty() : this.desiredState;
+    public Optional<Output<String>> desiredState() {
+        return Optional.ofNullable(this.desiredState);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GuestPoliciesRecipeGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="installSteps")
-      private final @Nullable Output<List<GuestPoliciesRecipeInstallStepGetArgs>> installSteps;
+    private @Nullable Output<List<GuestPoliciesRecipeInstallStepGetArgs>> installSteps;
 
-    public Output<List<GuestPoliciesRecipeInstallStepGetArgs>> installSteps() {
-        return this.installSteps == null ? Codegen.empty() : this.installSteps;
+    public Optional<Output<List<GuestPoliciesRecipeInstallStepGetArgs>>> installSteps() {
+        return Optional.ofNullable(this.installSteps);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class GuestPoliciesRecipeGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -82,10 +82,10 @@ public final class GuestPoliciesRecipeGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="updateSteps")
-      private final @Nullable Output<List<GuestPoliciesRecipeUpdateStepGetArgs>> updateSteps;
+    private @Nullable Output<List<GuestPoliciesRecipeUpdateStepGetArgs>> updateSteps;
 
-    public Output<List<GuestPoliciesRecipeUpdateStepGetArgs>> updateSteps() {
-        return this.updateSteps == null ? Codegen.empty() : this.updateSteps;
+    public Optional<Output<List<GuestPoliciesRecipeUpdateStepGetArgs>>> updateSteps() {
+        return Optional.ofNullable(this.updateSteps);
     }
 
     /**
@@ -93,124 +93,111 @@ public final class GuestPoliciesRecipeGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public GuestPoliciesRecipeGetArgs(
-        @Nullable Output<List<GuestPoliciesRecipeArtifactGetArgs>> artifacts,
-        @Nullable Output<String> desiredState,
-        @Nullable Output<List<GuestPoliciesRecipeInstallStepGetArgs>> installSteps,
-        Output<String> name,
-        @Nullable Output<List<GuestPoliciesRecipeUpdateStepGetArgs>> updateSteps,
-        @Nullable Output<String> version) {
-        this.artifacts = artifacts;
-        this.desiredState = desiredState;
-        this.installSteps = installSteps;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.updateSteps = updateSteps;
-        this.version = version;
-    }
+    private GuestPoliciesRecipeGetArgs() {}
 
-    private GuestPoliciesRecipeGetArgs() {
-        this.artifacts = Codegen.empty();
-        this.desiredState = Codegen.empty();
-        this.installSteps = Codegen.empty();
-        this.name = Codegen.empty();
-        this.updateSteps = Codegen.empty();
-        this.version = Codegen.empty();
+    private GuestPoliciesRecipeGetArgs(GuestPoliciesRecipeGetArgs $) {
+        this.artifacts = $.artifacts;
+        this.desiredState = $.desiredState;
+        this.installSteps = $.installSteps;
+        this.name = $.name;
+        this.updateSteps = $.updateSteps;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GuestPoliciesRecipeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GuestPoliciesRecipeArtifactGetArgs>> artifacts;
-        private @Nullable Output<String> desiredState;
-        private @Nullable Output<List<GuestPoliciesRecipeInstallStepGetArgs>> installSteps;
-        private Output<String> name;
-        private @Nullable Output<List<GuestPoliciesRecipeUpdateStepGetArgs>> updateSteps;
-        private @Nullable Output<String> version;
+        private GuestPoliciesRecipeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GuestPoliciesRecipeGetArgs();
         }
 
         public Builder(GuestPoliciesRecipeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifacts = defaults.artifacts;
-    	      this.desiredState = defaults.desiredState;
-    	      this.installSteps = defaults.installSteps;
-    	      this.name = defaults.name;
-    	      this.updateSteps = defaults.updateSteps;
-    	      this.version = defaults.version;
+            $ = new GuestPoliciesRecipeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifacts(@Nullable Output<List<GuestPoliciesRecipeArtifactGetArgs>> artifacts) {
-            this.artifacts = artifacts;
+            $.artifacts = artifacts;
             return this;
         }
-        public Builder artifacts(@Nullable List<GuestPoliciesRecipeArtifactGetArgs> artifacts) {
-            this.artifacts = Codegen.ofNullable(artifacts);
-            return this;
+
+        public Builder artifacts(List<GuestPoliciesRecipeArtifactGetArgs> artifacts) {
+            return artifacts(Output.of(artifacts));
         }
+
         public Builder artifacts(GuestPoliciesRecipeArtifactGetArgs... artifacts) {
             return artifacts(List.of(artifacts));
         }
+
         public Builder desiredState(@Nullable Output<String> desiredState) {
-            this.desiredState = desiredState;
+            $.desiredState = desiredState;
             return this;
         }
-        public Builder desiredState(@Nullable String desiredState) {
-            this.desiredState = Codegen.ofNullable(desiredState);
-            return this;
+
+        public Builder desiredState(String desiredState) {
+            return desiredState(Output.of(desiredState));
         }
+
         public Builder installSteps(@Nullable Output<List<GuestPoliciesRecipeInstallStepGetArgs>> installSteps) {
-            this.installSteps = installSteps;
+            $.installSteps = installSteps;
             return this;
         }
-        public Builder installSteps(@Nullable List<GuestPoliciesRecipeInstallStepGetArgs> installSteps) {
-            this.installSteps = Codegen.ofNullable(installSteps);
-            return this;
+
+        public Builder installSteps(List<GuestPoliciesRecipeInstallStepGetArgs> installSteps) {
+            return installSteps(Output.of(installSteps));
         }
+
         public Builder installSteps(GuestPoliciesRecipeInstallStepGetArgs... installSteps) {
             return installSteps(List.of(installSteps));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder updateSteps(@Nullable Output<List<GuestPoliciesRecipeUpdateStepGetArgs>> updateSteps) {
-            this.updateSteps = updateSteps;
+            $.updateSteps = updateSteps;
             return this;
         }
-        public Builder updateSteps(@Nullable List<GuestPoliciesRecipeUpdateStepGetArgs> updateSteps) {
-            this.updateSteps = Codegen.ofNullable(updateSteps);
-            return this;
+
+        public Builder updateSteps(List<GuestPoliciesRecipeUpdateStepGetArgs> updateSteps) {
+            return updateSteps(Output.of(updateSteps));
         }
+
         public Builder updateSteps(GuestPoliciesRecipeUpdateStepGetArgs... updateSteps) {
             return updateSteps(List.of(updateSteps));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public GuestPoliciesRecipeGetArgs build() {
-            return new GuestPoliciesRecipeGetArgs(artifacts, desiredState, installSteps, name, updateSteps, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public GuestPoliciesRecipeGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

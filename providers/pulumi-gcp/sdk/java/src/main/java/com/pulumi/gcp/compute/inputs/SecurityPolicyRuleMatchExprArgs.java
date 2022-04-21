@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class SecurityPolicyRuleMatchExprArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="expression", required=true)
-      private final Output<String> expression;
+    private Output<String> expression;
 
     public Output<String> expression() {
         return this.expression;
     }
 
-    public SecurityPolicyRuleMatchExprArgs(Output<String> expression) {
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-    }
+    private SecurityPolicyRuleMatchExprArgs() {}
 
-    private SecurityPolicyRuleMatchExprArgs() {
-        this.expression = Codegen.empty();
+    private SecurityPolicyRuleMatchExprArgs(SecurityPolicyRuleMatchExprArgs $) {
+        this.expression = $.expression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleMatchExprArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> expression;
+        private SecurityPolicyRuleMatchExprArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleMatchExprArgs();
         }
 
         public Builder(SecurityPolicyRuleMatchExprArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expression = defaults.expression;
+            $ = new SecurityPolicyRuleMatchExprArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expression(Output<String> expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder expression(String expression) {
-            this.expression = Output.of(Objects.requireNonNull(expression));
-            return this;
-        }        public SecurityPolicyRuleMatchExprArgs build() {
-            return new SecurityPolicyRuleMatchExprArgs(expression);
+            return expression(Output.of(expression));
+        }
+
+        public SecurityPolicyRuleMatchExprArgs build() {
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            return $;
         }
     }
+
 }

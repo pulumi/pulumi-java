@@ -5,9 +5,9 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,90 +20,82 @@ public final class JobStatusErrorGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     @Import(name="reason")
-      private final @Nullable Output<String> reason;
+    private @Nullable Output<String> reason;
 
-    public Output<String> reason() {
-        return this.reason == null ? Codegen.empty() : this.reason;
+    public Optional<Output<String>> reason() {
+        return Optional.ofNullable(this.reason);
     }
 
-    public JobStatusErrorGetArgs(
-        @Nullable Output<String> location,
-        @Nullable Output<String> message,
-        @Nullable Output<String> reason) {
-        this.location = location;
-        this.message = message;
-        this.reason = reason;
-    }
+    private JobStatusErrorGetArgs() {}
 
-    private JobStatusErrorGetArgs() {
-        this.location = Codegen.empty();
-        this.message = Codegen.empty();
-        this.reason = Codegen.empty();
+    private JobStatusErrorGetArgs(JobStatusErrorGetArgs $) {
+        this.location = $.location;
+        this.message = $.message;
+        this.reason = $.reason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatusErrorGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> reason;
+        private JobStatusErrorGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatusErrorGetArgs();
         }
 
         public Builder(JobStatusErrorGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.message = defaults.message;
-    	      this.reason = defaults.reason;
+            $ = new JobStatusErrorGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder reason(@Nullable Output<String> reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
-        public Builder reason(@Nullable String reason) {
-            this.reason = Codegen.ofNullable(reason);
-            return this;
-        }        public JobStatusErrorGetArgs build() {
-            return new JobStatusErrorGetArgs(location, message, reason);
+
+        public Builder reason(String reason) {
+            return reason(Output.of(reason));
+        }
+
+        public JobStatusErrorGetArgs build() {
+            return $;
         }
     }
+
 }

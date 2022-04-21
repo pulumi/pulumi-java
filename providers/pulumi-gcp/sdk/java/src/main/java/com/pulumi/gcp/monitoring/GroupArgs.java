@@ -5,10 +5,10 @@ package com.pulumi.gcp.monitoring;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -34,7 +34,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
@@ -47,10 +47,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isCluster")
-      private final @Nullable Output<Boolean> isCluster;
+    private @Nullable Output<Boolean> isCluster;
 
-    public Output<Boolean> isCluster() {
-        return this.isCluster == null ? Codegen.empty() : this.isCluster;
+    public Optional<Output<Boolean>> isCluster() {
+        return Optional.ofNullable(this.isCluster);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentName")
-      private final @Nullable Output<String> parentName;
+    private @Nullable Output<String> parentName;
 
-    public Output<String> parentName() {
-        return this.parentName == null ? Codegen.empty() : this.parentName;
+    public Optional<Output<String>> parentName() {
+        return Optional.ofNullable(this.parentName);
     }
 
     /**
@@ -72,102 +72,90 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public GroupArgs(
-        Output<String> displayName,
-        Output<String> filter,
-        @Nullable Output<Boolean> isCluster,
-        @Nullable Output<String> parentName,
-        @Nullable Output<String> project) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.isCluster = isCluster;
-        this.parentName = parentName;
-        this.project = project;
-    }
+    private GroupArgs() {}
 
-    private GroupArgs() {
-        this.displayName = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.isCluster = Codegen.empty();
-        this.parentName = Codegen.empty();
-        this.project = Codegen.empty();
+    private GroupArgs(GroupArgs $) {
+        this.displayName = $.displayName;
+        this.filter = $.filter;
+        this.isCluster = $.isCluster;
+        this.parentName = $.parentName;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> displayName;
-        private Output<String> filter;
-        private @Nullable Output<Boolean> isCluster;
-        private @Nullable Output<String> parentName;
-        private @Nullable Output<String> project;
+        private GroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupArgs();
         }
 
         public Builder(GroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.filter = defaults.filter;
-    	      this.isCluster = defaults.isCluster;
-    	      this.parentName = defaults.parentName;
-    	      this.project = defaults.project;
+            $ = new GroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder isCluster(@Nullable Output<Boolean> isCluster) {
-            this.isCluster = isCluster;
+            $.isCluster = isCluster;
             return this;
         }
-        public Builder isCluster(@Nullable Boolean isCluster) {
-            this.isCluster = Codegen.ofNullable(isCluster);
-            return this;
+
+        public Builder isCluster(Boolean isCluster) {
+            return isCluster(Output.of(isCluster));
         }
+
         public Builder parentName(@Nullable Output<String> parentName) {
-            this.parentName = parentName;
+            $.parentName = parentName;
             return this;
         }
-        public Builder parentName(@Nullable String parentName) {
-            this.parentName = Codegen.ofNullable(parentName);
-            return this;
+
+        public Builder parentName(String parentName) {
+            return parentName(Output.of(parentName));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public GroupArgs build() {
-            return new GroupArgs(displayName, filter, isCluster, parentName, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public GroupArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

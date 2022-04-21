@@ -5,7 +5,6 @@ package com.pulumi.gcp.serviceAccount;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -31,63 +30,60 @@ public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountId", required=true)
-      private final Output<String> serviceAccountId;
+    private Output<String> serviceAccountId;
 
     public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
 
-    public IAMPolicyArgs(
-        Output<String> policyData,
-        Output<String> serviceAccountId) {
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.serviceAccountId = Objects.requireNonNull(serviceAccountId, "expected parameter 'serviceAccountId' to be non-null");
-    }
+    private IAMPolicyArgs() {}
 
-    private IAMPolicyArgs() {
-        this.policyData = Codegen.empty();
-        this.serviceAccountId = Codegen.empty();
+    private IAMPolicyArgs(IAMPolicyArgs $) {
+        this.policyData = $.policyData;
+        this.serviceAccountId = $.serviceAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IAMPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyData;
-        private Output<String> serviceAccountId;
+        private IAMPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IAMPolicyArgs();
         }
 
         public Builder(IAMPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyData = defaults.policyData;
-    	      this.serviceAccountId = defaults.serviceAccountId;
+            $ = new IAMPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder serviceAccountId(Output<String> serviceAccountId) {
-            this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
+            $.serviceAccountId = serviceAccountId;
             return this;
         }
+
         public Builder serviceAccountId(String serviceAccountId) {
-            this.serviceAccountId = Output.of(Objects.requireNonNull(serviceAccountId));
-            return this;
-        }        public IAMPolicyArgs build() {
-            return new IAMPolicyArgs(policyData, serviceAccountId);
+            return serviceAccountId(Output.of(serviceAccountId));
+        }
+
+        public IAMPolicyArgs build() {
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            $.serviceAccountId = Objects.requireNonNull($.serviceAccountId, "expected parameter 'serviceAccountId' to be non-null");
+            return $;
         }
     }
+
 }

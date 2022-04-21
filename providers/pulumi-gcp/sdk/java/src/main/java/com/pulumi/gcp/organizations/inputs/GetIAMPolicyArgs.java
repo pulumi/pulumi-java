@@ -21,10 +21,10 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="auditConfigs")
-      private final @Nullable List<GetIAMPolicyAuditConfig> auditConfigs;
+    private @Nullable List<GetIAMPolicyAuditConfig> auditConfigs;
 
-    public List<GetIAMPolicyAuditConfig> auditConfigs() {
-        return this.auditConfigs == null ? List.of() : this.auditConfigs;
+    public Optional<List<GetIAMPolicyAuditConfig>> auditConfigs() {
+        return Optional.ofNullable(this.auditConfigs);
     }
 
     /**
@@ -34,61 +34,58 @@ public final class GetIAMPolicyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bindings")
-      private final @Nullable List<GetIAMPolicyBinding> bindings;
+    private @Nullable List<GetIAMPolicyBinding> bindings;
 
-    public List<GetIAMPolicyBinding> bindings() {
-        return this.bindings == null ? List.of() : this.bindings;
+    public Optional<List<GetIAMPolicyBinding>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
-    public GetIAMPolicyArgs(
-        @Nullable List<GetIAMPolicyAuditConfig> auditConfigs,
-        @Nullable List<GetIAMPolicyBinding> bindings) {
-        this.auditConfigs = auditConfigs;
-        this.bindings = bindings;
-    }
+    private GetIAMPolicyArgs() {}
 
-    private GetIAMPolicyArgs() {
-        this.auditConfigs = List.of();
-        this.bindings = List.of();
+    private GetIAMPolicyArgs(GetIAMPolicyArgs $) {
+        this.auditConfigs = $.auditConfigs;
+        this.bindings = $.bindings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIAMPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetIAMPolicyAuditConfig> auditConfigs;
-        private @Nullable List<GetIAMPolicyBinding> bindings;
+        private GetIAMPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIAMPolicyArgs();
         }
 
         public Builder(GetIAMPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditConfigs = defaults.auditConfigs;
-    	      this.bindings = defaults.bindings;
+            $ = new GetIAMPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auditConfigs(@Nullable List<GetIAMPolicyAuditConfig> auditConfigs) {
-            this.auditConfigs = auditConfigs;
+            $.auditConfigs = auditConfigs;
             return this;
         }
+
         public Builder auditConfigs(GetIAMPolicyAuditConfig... auditConfigs) {
             return auditConfigs(List.of(auditConfigs));
         }
+
         public Builder bindings(@Nullable List<GetIAMPolicyBinding> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
+
         public Builder bindings(GetIAMPolicyBinding... bindings) {
             return bindings(List.of(bindings));
-        }        public GetIAMPolicyArgs build() {
-            return new GetIAMPolicyArgs(auditConfigs, bindings);
+        }
+
+        public GetIAMPolicyArgs build() {
+            return $;
         }
     }
+
 }

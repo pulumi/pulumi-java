@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigGetArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends com.pu
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -33,7 +33,7 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends com.pu
      * 
      */
     @Import(name="config", required=true)
-      private final Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config;
+    private Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config() {
         return this.config;
@@ -44,76 +44,70 @@ public final class WorkflowTemplatePlacementManagedClusterGetArgs extends com.pu
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
-    public WorkflowTemplatePlacementManagedClusterGetArgs(
-        Output<String> clusterName,
-        Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config,
-        @Nullable Output<Map<String,String>> labels) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.labels = labels;
-    }
+    private WorkflowTemplatePlacementManagedClusterGetArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterGetArgs() {
-        this.clusterName = Codegen.empty();
-        this.config = Codegen.empty();
-        this.labels = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterGetArgs(WorkflowTemplatePlacementManagedClusterGetArgs $) {
+        this.clusterName = $.clusterName;
+        this.config = $.config;
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterName;
-        private Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config;
-        private @Nullable Output<Map<String,String>> labels;
+        private WorkflowTemplatePlacementManagedClusterGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterGetArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.config = defaults.config;
-    	      this.labels = defaults.labels;
+            $ = new WorkflowTemplatePlacementManagedClusterGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder config(Output<WorkflowTemplatePlacementManagedClusterConfigGetArgs> config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder config(WorkflowTemplatePlacementManagedClusterConfigGetArgs config) {
-            this.config = Output.of(Objects.requireNonNull(config));
-            return this;
+            return config(Output.of(config));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterGetArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterGetArgs(clusterName, config, labels);
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterGetArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            return $;
         }
     }
+
 }

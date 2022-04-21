@@ -19,10 +19,10 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -31,55 +31,50 @@ public final class GetAzureVersionsArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAzureVersionsArgs(
-        @Nullable String location,
-        @Nullable String project) {
-        this.location = location;
-        this.project = project;
-    }
+    private GetAzureVersionsArgs() {}
 
-    private GetAzureVersionsArgs() {
-        this.location = null;
-        this.project = null;
+    private GetAzureVersionsArgs(GetAzureVersionsArgs $) {
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAzureVersionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String location;
-        private @Nullable String project;
+        private GetAzureVersionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAzureVersionsArgs();
         }
 
         public Builder(GetAzureVersionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetAzureVersionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAzureVersionsArgs build() {
-            return new GetAzureVersionsArgs(location, project);
+        }
+
+        public GetAzureVersionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.gcp.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderAwsArgs;
 import com.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderOidcArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +35,10 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      * 
      */
     @Import(name="attributeCondition")
-      private final @Nullable Output<String> attributeCondition;
+    private @Nullable Output<String> attributeCondition;
 
-    public Output<String> attributeCondition() {
-        return this.attributeCondition == null ? Codegen.empty() : this.attributeCondition;
+    public Optional<Output<String>> attributeCondition() {
+        return Optional.ofNullable(this.attributeCondition);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      * 
      */
     @Import(name="attributeMapping")
-      private final @Nullable Output<Map<String,String>> attributeMapping;
+    private @Nullable Output<Map<String,String>> attributeMapping;
 
-    public Output<Map<String,String>> attributeMapping() {
-        return this.attributeMapping == null ? Codegen.empty() : this.attributeMapping;
+    public Optional<Output<Map<String,String>>> attributeMapping() {
+        return Optional.ofNullable(this.attributeMapping);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      * 
      */
     @Import(name="aws")
-      private final @Nullable Output<WorkloadIdentityPoolProviderAwsArgs> aws;
+    private @Nullable Output<WorkloadIdentityPoolProviderAwsArgs> aws;
 
-    public Output<WorkloadIdentityPoolProviderAwsArgs> aws() {
-        return this.aws == null ? Codegen.empty() : this.aws;
+    public Optional<Output<WorkloadIdentityPoolProviderAwsArgs>> aws() {
+        return Optional.ofNullable(this.aws);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      * 
      */
     @Import(name="oidc")
-      private final @Nullable Output<WorkloadIdentityPoolProviderOidcArgs> oidc;
+    private @Nullable Output<WorkloadIdentityPoolProviderOidcArgs> oidc;
 
-    public Output<WorkloadIdentityPoolProviderOidcArgs> oidc() {
-        return this.oidc == null ? Codegen.empty() : this.oidc;
+    public Optional<Output<WorkloadIdentityPoolProviderOidcArgs>> oidc() {
+        return Optional.ofNullable(this.oidc);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -165,7 +165,7 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      * 
      */
     @Import(name="workloadIdentityPoolId", required=true)
-      private final Output<String> workloadIdentityPoolId;
+    private Output<String> workloadIdentityPoolId;
 
     public Output<String> workloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
@@ -178,167 +178,140 @@ public final class WorkloadIdentityPoolProviderArgs extends com.pulumi.resources
      * 
      */
     @Import(name="workloadIdentityPoolProviderId", required=true)
-      private final Output<String> workloadIdentityPoolProviderId;
+    private Output<String> workloadIdentityPoolProviderId;
 
     public Output<String> workloadIdentityPoolProviderId() {
         return this.workloadIdentityPoolProviderId;
     }
 
-    public WorkloadIdentityPoolProviderArgs(
-        @Nullable Output<String> attributeCondition,
-        @Nullable Output<Map<String,String>> attributeMapping,
-        @Nullable Output<WorkloadIdentityPoolProviderAwsArgs> aws,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<String> displayName,
-        @Nullable Output<WorkloadIdentityPoolProviderOidcArgs> oidc,
-        @Nullable Output<String> project,
-        Output<String> workloadIdentityPoolId,
-        Output<String> workloadIdentityPoolProviderId) {
-        this.attributeCondition = attributeCondition;
-        this.attributeMapping = attributeMapping;
-        this.aws = aws;
-        this.description = description;
-        this.disabled = disabled;
-        this.displayName = displayName;
-        this.oidc = oidc;
-        this.project = project;
-        this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId, "expected parameter 'workloadIdentityPoolId' to be non-null");
-        this.workloadIdentityPoolProviderId = Objects.requireNonNull(workloadIdentityPoolProviderId, "expected parameter 'workloadIdentityPoolProviderId' to be non-null");
-    }
+    private WorkloadIdentityPoolProviderArgs() {}
 
-    private WorkloadIdentityPoolProviderArgs() {
-        this.attributeCondition = Codegen.empty();
-        this.attributeMapping = Codegen.empty();
-        this.aws = Codegen.empty();
-        this.description = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.oidc = Codegen.empty();
-        this.project = Codegen.empty();
-        this.workloadIdentityPoolId = Codegen.empty();
-        this.workloadIdentityPoolProviderId = Codegen.empty();
+    private WorkloadIdentityPoolProviderArgs(WorkloadIdentityPoolProviderArgs $) {
+        this.attributeCondition = $.attributeCondition;
+        this.attributeMapping = $.attributeMapping;
+        this.aws = $.aws;
+        this.description = $.description;
+        this.disabled = $.disabled;
+        this.displayName = $.displayName;
+        this.oidc = $.oidc;
+        this.project = $.project;
+        this.workloadIdentityPoolId = $.workloadIdentityPoolId;
+        this.workloadIdentityPoolProviderId = $.workloadIdentityPoolProviderId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadIdentityPoolProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> attributeCondition;
-        private @Nullable Output<Map<String,String>> attributeMapping;
-        private @Nullable Output<WorkloadIdentityPoolProviderAwsArgs> aws;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<WorkloadIdentityPoolProviderOidcArgs> oidc;
-        private @Nullable Output<String> project;
-        private Output<String> workloadIdentityPoolId;
-        private Output<String> workloadIdentityPoolProviderId;
+        private WorkloadIdentityPoolProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadIdentityPoolProviderArgs();
         }
 
         public Builder(WorkloadIdentityPoolProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeCondition = defaults.attributeCondition;
-    	      this.attributeMapping = defaults.attributeMapping;
-    	      this.aws = defaults.aws;
-    	      this.description = defaults.description;
-    	      this.disabled = defaults.disabled;
-    	      this.displayName = defaults.displayName;
-    	      this.oidc = defaults.oidc;
-    	      this.project = defaults.project;
-    	      this.workloadIdentityPoolId = defaults.workloadIdentityPoolId;
-    	      this.workloadIdentityPoolProviderId = defaults.workloadIdentityPoolProviderId;
+            $ = new WorkloadIdentityPoolProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeCondition(@Nullable Output<String> attributeCondition) {
-            this.attributeCondition = attributeCondition;
+            $.attributeCondition = attributeCondition;
             return this;
         }
-        public Builder attributeCondition(@Nullable String attributeCondition) {
-            this.attributeCondition = Codegen.ofNullable(attributeCondition);
-            return this;
+
+        public Builder attributeCondition(String attributeCondition) {
+            return attributeCondition(Output.of(attributeCondition));
         }
+
         public Builder attributeMapping(@Nullable Output<Map<String,String>> attributeMapping) {
-            this.attributeMapping = attributeMapping;
+            $.attributeMapping = attributeMapping;
             return this;
         }
-        public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
-            this.attributeMapping = Codegen.ofNullable(attributeMapping);
-            return this;
+
+        public Builder attributeMapping(Map<String,String> attributeMapping) {
+            return attributeMapping(Output.of(attributeMapping));
         }
+
         public Builder aws(@Nullable Output<WorkloadIdentityPoolProviderAwsArgs> aws) {
-            this.aws = aws;
+            $.aws = aws;
             return this;
         }
-        public Builder aws(@Nullable WorkloadIdentityPoolProviderAwsArgs aws) {
-            this.aws = Codegen.ofNullable(aws);
-            return this;
+
+        public Builder aws(WorkloadIdentityPoolProviderAwsArgs aws) {
+            return aws(Output.of(aws));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder oidc(@Nullable Output<WorkloadIdentityPoolProviderOidcArgs> oidc) {
-            this.oidc = oidc;
+            $.oidc = oidc;
             return this;
         }
-        public Builder oidc(@Nullable WorkloadIdentityPoolProviderOidcArgs oidc) {
-            this.oidc = Codegen.ofNullable(oidc);
-            return this;
+
+        public Builder oidc(WorkloadIdentityPoolProviderOidcArgs oidc) {
+            return oidc(Output.of(oidc));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder workloadIdentityPoolId(Output<String> workloadIdentityPoolId) {
-            this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
+            $.workloadIdentityPoolId = workloadIdentityPoolId;
             return this;
         }
+
         public Builder workloadIdentityPoolId(String workloadIdentityPoolId) {
-            this.workloadIdentityPoolId = Output.of(Objects.requireNonNull(workloadIdentityPoolId));
-            return this;
+            return workloadIdentityPoolId(Output.of(workloadIdentityPoolId));
         }
+
         public Builder workloadIdentityPoolProviderId(Output<String> workloadIdentityPoolProviderId) {
-            this.workloadIdentityPoolProviderId = Objects.requireNonNull(workloadIdentityPoolProviderId);
+            $.workloadIdentityPoolProviderId = workloadIdentityPoolProviderId;
             return this;
         }
+
         public Builder workloadIdentityPoolProviderId(String workloadIdentityPoolProviderId) {
-            this.workloadIdentityPoolProviderId = Output.of(Objects.requireNonNull(workloadIdentityPoolProviderId));
-            return this;
-        }        public WorkloadIdentityPoolProviderArgs build() {
-            return new WorkloadIdentityPoolProviderArgs(attributeCondition, attributeMapping, aws, description, disabled, displayName, oidc, project, workloadIdentityPoolId, workloadIdentityPoolProviderId);
+            return workloadIdentityPoolProviderId(Output.of(workloadIdentityPoolProviderId));
+        }
+
+        public WorkloadIdentityPoolProviderArgs build() {
+            $.workloadIdentityPoolId = Objects.requireNonNull($.workloadIdentityPoolId, "expected parameter 'workloadIdentityPoolId' to be non-null");
+            $.workloadIdentityPoolProviderId = Objects.requireNonNull($.workloadIdentityPoolProviderId, "expected parameter 'workloadIdentityPoolProviderId' to be non-null");
+            return $;
         }
     }
+
 }

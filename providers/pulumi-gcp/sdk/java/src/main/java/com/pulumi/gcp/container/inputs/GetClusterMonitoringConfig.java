@@ -14,48 +14,49 @@ public final class GetClusterMonitoringConfig extends com.pulumi.resources.Invok
     public static final GetClusterMonitoringConfig Empty = new GetClusterMonitoringConfig();
 
     @Import(name="enableComponents", required=true)
-      private final List<String> enableComponents;
+    private List<String> enableComponents;
 
     public List<String> enableComponents() {
         return this.enableComponents;
     }
 
-    public GetClusterMonitoringConfig(List<String> enableComponents) {
-        this.enableComponents = Objects.requireNonNull(enableComponents, "expected parameter 'enableComponents' to be non-null");
-    }
+    private GetClusterMonitoringConfig() {}
 
-    private GetClusterMonitoringConfig() {
-        this.enableComponents = List.of();
+    private GetClusterMonitoringConfig(GetClusterMonitoringConfig $) {
+        this.enableComponents = $.enableComponents;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterMonitoringConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> enableComponents;
+        private GetClusterMonitoringConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterMonitoringConfig();
         }
 
         public Builder(GetClusterMonitoringConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableComponents = defaults.enableComponents;
+            $ = new GetClusterMonitoringConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder enableComponents(List<String> enableComponents) {
-            this.enableComponents = Objects.requireNonNull(enableComponents);
+            $.enableComponents = enableComponents;
             return this;
         }
+
         public Builder enableComponents(String... enableComponents) {
             return enableComponents(List.of(enableComponents));
-        }        public GetClusterMonitoringConfig build() {
-            return new GetClusterMonitoringConfig(enableComponents);
+        }
+
+        public GetClusterMonitoringConfig build() {
+            $.enableComponents = Objects.requireNonNull($.enableComponents, "expected parameter 'enableComponents' to be non-null");
+            return $;
         }
     }
+
 }

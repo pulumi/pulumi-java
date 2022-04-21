@@ -5,11 +5,11 @@ package com.pulumi.gcp.iap;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.iap.inputs.WebIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +23,14 @@ public final class WebIamBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<WebIamBindingConditionArgs> condition;
+    private @Nullable Output<WebIamBindingConditionArgs> condition;
 
-    public Output<WebIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<WebIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -42,10 +42,10 @@ public final class WebIamBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -55,92 +55,84 @@ public final class WebIamBindingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public WebIamBindingArgs(
-        @Nullable Output<WebIamBindingConditionArgs> condition,
-        Output<List<String>> members,
-        @Nullable Output<String> project,
-        Output<String> role) {
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private WebIamBindingArgs() {}
 
-    private WebIamBindingArgs() {
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
+    private WebIamBindingArgs(WebIamBindingArgs $) {
+        this.condition = $.condition;
+        this.members = $.members;
+        this.project = $.project;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WebIamBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private Output<String> role;
+        private WebIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebIamBindingArgs();
         }
 
         public Builder(WebIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
+            $ = new WebIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<WebIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable WebIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(WebIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public WebIamBindingArgs build() {
-            return new WebIamBindingArgs(condition, members, project, role);
+            return role(Output.of(role));
+        }
+
+        public WebIamBindingArgs build() {
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

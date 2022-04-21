@@ -5,10 +5,10 @@ package com.pulumi.gcp.bigquery;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudSql", required=true)
-      private final Output<ConnectionCloudSqlArgs> cloudSql;
+    private Output<ConnectionCloudSqlArgs> cloudSql;
 
     public Output<ConnectionCloudSqlArgs> cloudSql() {
         return this.cloudSql;
@@ -33,10 +33,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionId")
-      private final @Nullable Output<String> connectionId;
+    private @Nullable Output<String> connectionId;
 
-    public Output<String> connectionId() {
-        return this.connectionId == null ? Codegen.empty() : this.connectionId;
+    public Optional<Output<String>> connectionId() {
+        return Optional.ofNullable(this.connectionId);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -81,115 +81,99 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ConnectionArgs(
-        Output<ConnectionCloudSqlArgs> cloudSql,
-        @Nullable Output<String> connectionId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project) {
-        this.cloudSql = Objects.requireNonNull(cloudSql, "expected parameter 'cloudSql' to be non-null");
-        this.connectionId = connectionId;
-        this.description = description;
-        this.friendlyName = friendlyName;
-        this.location = location;
-        this.project = project;
-    }
+    private ConnectionArgs() {}
 
-    private ConnectionArgs() {
-        this.cloudSql = Codegen.empty();
-        this.connectionId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
+    private ConnectionArgs(ConnectionArgs $) {
+        this.cloudSql = $.cloudSql;
+        this.connectionId = $.connectionId;
+        this.description = $.description;
+        this.friendlyName = $.friendlyName;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ConnectionCloudSqlArgs> cloudSql;
-        private @Nullable Output<String> connectionId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
+        private ConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionArgs();
         }
 
         public Builder(ConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudSql = defaults.cloudSql;
-    	      this.connectionId = defaults.connectionId;
-    	      this.description = defaults.description;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new ConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudSql(Output<ConnectionCloudSqlArgs> cloudSql) {
-            this.cloudSql = Objects.requireNonNull(cloudSql);
+            $.cloudSql = cloudSql;
             return this;
         }
+
         public Builder cloudSql(ConnectionCloudSqlArgs cloudSql) {
-            this.cloudSql = Output.of(Objects.requireNonNull(cloudSql));
-            return this;
+            return cloudSql(Output.of(cloudSql));
         }
+
         public Builder connectionId(@Nullable Output<String> connectionId) {
-            this.connectionId = connectionId;
+            $.connectionId = connectionId;
             return this;
         }
-        public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Codegen.ofNullable(connectionId);
-            return this;
+
+        public Builder connectionId(String connectionId) {
+            return connectionId(Output.of(connectionId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ConnectionArgs build() {
-            return new ConnectionArgs(cloudSql, connectionId, description, friendlyName, location, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ConnectionArgs build() {
+            $.cloudSql = Objects.requireNonNull($.cloudSql, "expected parameter 'cloudSql' to be non-null");
+            return $;
         }
     }
+
 }

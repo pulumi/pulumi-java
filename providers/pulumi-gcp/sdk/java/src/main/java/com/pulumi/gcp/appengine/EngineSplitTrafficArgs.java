@@ -5,11 +5,11 @@ package com.pulumi.gcp.appengine;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.EngineSplitTrafficSplitArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EngineSplitTrafficArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="migrateTraffic")
-      private final @Nullable Output<Boolean> migrateTraffic;
+    private @Nullable Output<Boolean> migrateTraffic;
 
-    public Output<Boolean> migrateTraffic() {
-        return this.migrateTraffic == null ? Codegen.empty() : this.migrateTraffic;
+    public Optional<Output<Boolean>> migrateTraffic() {
+        return Optional.ofNullable(this.migrateTraffic);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EngineSplitTrafficArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class EngineSplitTrafficArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
@@ -57,89 +57,80 @@ public final class EngineSplitTrafficArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="split", required=true)
-      private final Output<EngineSplitTrafficSplitArgs> split;
+    private Output<EngineSplitTrafficSplitArgs> split;
 
     public Output<EngineSplitTrafficSplitArgs> split() {
         return this.split;
     }
 
-    public EngineSplitTrafficArgs(
-        @Nullable Output<Boolean> migrateTraffic,
-        @Nullable Output<String> project,
-        Output<String> service,
-        Output<EngineSplitTrafficSplitArgs> split) {
-        this.migrateTraffic = migrateTraffic;
-        this.project = project;
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.split = Objects.requireNonNull(split, "expected parameter 'split' to be non-null");
-    }
+    private EngineSplitTrafficArgs() {}
 
-    private EngineSplitTrafficArgs() {
-        this.migrateTraffic = Codegen.empty();
-        this.project = Codegen.empty();
-        this.service = Codegen.empty();
-        this.split = Codegen.empty();
+    private EngineSplitTrafficArgs(EngineSplitTrafficArgs $) {
+        this.migrateTraffic = $.migrateTraffic;
+        this.project = $.project;
+        this.service = $.service;
+        this.split = $.split;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EngineSplitTrafficArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> migrateTraffic;
-        private @Nullable Output<String> project;
-        private Output<String> service;
-        private Output<EngineSplitTrafficSplitArgs> split;
+        private EngineSplitTrafficArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EngineSplitTrafficArgs();
         }
 
         public Builder(EngineSplitTrafficArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.migrateTraffic = defaults.migrateTraffic;
-    	      this.project = defaults.project;
-    	      this.service = defaults.service;
-    	      this.split = defaults.split;
+            $ = new EngineSplitTrafficArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder migrateTraffic(@Nullable Output<Boolean> migrateTraffic) {
-            this.migrateTraffic = migrateTraffic;
+            $.migrateTraffic = migrateTraffic;
             return this;
         }
-        public Builder migrateTraffic(@Nullable Boolean migrateTraffic) {
-            this.migrateTraffic = Codegen.ofNullable(migrateTraffic);
-            return this;
+
+        public Builder migrateTraffic(Boolean migrateTraffic) {
+            return migrateTraffic(Output.of(migrateTraffic));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
+            return service(Output.of(service));
         }
+
         public Builder split(Output<EngineSplitTrafficSplitArgs> split) {
-            this.split = Objects.requireNonNull(split);
+            $.split = split;
             return this;
         }
+
         public Builder split(EngineSplitTrafficSplitArgs split) {
-            this.split = Output.of(Objects.requireNonNull(split));
-            return this;
-        }        public EngineSplitTrafficArgs build() {
-            return new EngineSplitTrafficArgs(migrateTraffic, project, service, split);
+            return split(Output.of(split));
+        }
+
+        public EngineSplitTrafficArgs build() {
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.split = Objects.requireNonNull($.split, "expected parameter 'split' to be non-null");
+            return $;
         }
     }
+
 }

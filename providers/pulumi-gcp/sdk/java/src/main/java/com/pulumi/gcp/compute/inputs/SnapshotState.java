@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.SnapshotSnapshotEncryptionKeyGetArgs;
 import com.pulumi.gcp.compute.inputs.SnapshotSourceDiskEncryptionKeyGetArgs;
 import java.lang.Integer;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGb")
-      private final @Nullable Output<Integer> diskSizeGb;
+    private @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<Integer>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labelFingerprint")
-      private final @Nullable Output<String> labelFingerprint;
+    private @Nullable Output<String> labelFingerprint;
 
-    public Output<String> labelFingerprint() {
-        return this.labelFingerprint == null ? Codegen.empty() : this.labelFingerprint;
+    public Optional<Output<String>> labelFingerprint() {
+        return Optional.ofNullable(this.labelFingerprint);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="licenses")
-      private final @Nullable Output<List<String>> licenses;
+    private @Nullable Output<List<String>> licenses;
 
-    public Output<List<String>> licenses() {
-        return this.licenses == null ? Codegen.empty() : this.licenses;
+    public Optional<Output<List<String>>> licenses() {
+        return Optional.ofNullable(this.licenses);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotEncryptionKey")
-      private final @Nullable Output<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey;
+    private @Nullable Output<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey;
 
-    public Output<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey() {
-        return this.snapshotEncryptionKey == null ? Codegen.empty() : this.snapshotEncryptionKey;
+    public Optional<Output<SnapshotSnapshotEncryptionKeyGetArgs>> snapshotEncryptionKey() {
+        return Optional.ofNullable(this.snapshotEncryptionKey);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="snapshotId")
-      private final @Nullable Output<Integer> snapshotId;
+    private @Nullable Output<Integer> snapshotId;
 
-    public Output<Integer> snapshotId() {
-        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
+    public Optional<Output<Integer>> snapshotId() {
+        return Optional.ofNullable(this.snapshotId);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceDisk")
-      private final @Nullable Output<String> sourceDisk;
+    private @Nullable Output<String> sourceDisk;
 
-    public Output<String> sourceDisk() {
-        return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
+    public Optional<Output<String>> sourceDisk() {
+        return Optional.ofNullable(this.sourceDisk);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceDiskEncryptionKey")
-      private final @Nullable Output<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey;
+    private @Nullable Output<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey;
 
-    public Output<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey() {
-        return this.sourceDiskEncryptionKey == null ? Codegen.empty() : this.sourceDiskEncryptionKey;
+    public Optional<Output<SnapshotSourceDiskEncryptionKeyGetArgs>> sourceDiskEncryptionKey() {
+        return Optional.ofNullable(this.sourceDiskEncryptionKey);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageBytes")
-      private final @Nullable Output<Integer> storageBytes;
+    private @Nullable Output<Integer> storageBytes;
 
-    public Output<Integer> storageBytes() {
-        return this.storageBytes == null ? Codegen.empty() : this.storageBytes;
+    public Optional<Output<Integer>> storageBytes() {
+        return Optional.ofNullable(this.storageBytes);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageLocations")
-      private final @Nullable Output<List<String>> storageLocations;
+    private @Nullable Output<List<String>> storageLocations;
 
-    public Output<List<String>> storageLocations() {
-        return this.storageLocations == null ? Codegen.empty() : this.storageLocations;
+    public Optional<Output<List<String>>> storageLocations() {
+        return Optional.ofNullable(this.storageLocations);
     }
 
     /**
@@ -205,251 +205,206 @@ public final class SnapshotState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public SnapshotState(
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> diskSizeGb,
-        @Nullable Output<String> labelFingerprint,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<List<String>> licenses,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey,
-        @Nullable Output<Integer> snapshotId,
-        @Nullable Output<String> sourceDisk,
-        @Nullable Output<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey,
-        @Nullable Output<Integer> storageBytes,
-        @Nullable Output<List<String>> storageLocations,
-        @Nullable Output<String> zone) {
-        this.creationTimestamp = creationTimestamp;
-        this.description = description;
-        this.diskSizeGb = diskSizeGb;
-        this.labelFingerprint = labelFingerprint;
-        this.labels = labels;
-        this.licenses = licenses;
-        this.name = name;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.snapshotEncryptionKey = snapshotEncryptionKey;
-        this.snapshotId = snapshotId;
-        this.sourceDisk = sourceDisk;
-        this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
-        this.storageBytes = storageBytes;
-        this.storageLocations = storageLocations;
-        this.zone = zone;
-    }
+    private SnapshotState() {}
 
-    private SnapshotState() {
-        this.creationTimestamp = Codegen.empty();
-        this.description = Codegen.empty();
-        this.diskSizeGb = Codegen.empty();
-        this.labelFingerprint = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.licenses = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.snapshotEncryptionKey = Codegen.empty();
-        this.snapshotId = Codegen.empty();
-        this.sourceDisk = Codegen.empty();
-        this.sourceDiskEncryptionKey = Codegen.empty();
-        this.storageBytes = Codegen.empty();
-        this.storageLocations = Codegen.empty();
-        this.zone = Codegen.empty();
+    private SnapshotState(SnapshotState $) {
+        this.creationTimestamp = $.creationTimestamp;
+        this.description = $.description;
+        this.diskSizeGb = $.diskSizeGb;
+        this.labelFingerprint = $.labelFingerprint;
+        this.labels = $.labels;
+        this.licenses = $.licenses;
+        this.name = $.name;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.snapshotEncryptionKey = $.snapshotEncryptionKey;
+        this.snapshotId = $.snapshotId;
+        this.sourceDisk = $.sourceDisk;
+        this.sourceDiskEncryptionKey = $.sourceDiskEncryptionKey;
+        this.storageBytes = $.storageBytes;
+        this.storageLocations = $.storageLocations;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> diskSizeGb;
-        private @Nullable Output<String> labelFingerprint;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<List<String>> licenses;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey;
-        private @Nullable Output<Integer> snapshotId;
-        private @Nullable Output<String> sourceDisk;
-        private @Nullable Output<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey;
-        private @Nullable Output<Integer> storageBytes;
-        private @Nullable Output<List<String>> storageLocations;
-        private @Nullable Output<String> zone;
+        private SnapshotState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotState();
         }
 
         public Builder(SnapshotState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.description = defaults.description;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.labelFingerprint = defaults.labelFingerprint;
-    	      this.labels = defaults.labels;
-    	      this.licenses = defaults.licenses;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.snapshotEncryptionKey = defaults.snapshotEncryptionKey;
-    	      this.snapshotId = defaults.snapshotId;
-    	      this.sourceDisk = defaults.sourceDisk;
-    	      this.sourceDiskEncryptionKey = defaults.sourceDiskEncryptionKey;
-    	      this.storageBytes = defaults.storageBytes;
-    	      this.storageLocations = defaults.storageLocations;
-    	      this.zone = defaults.zone;
+            $ = new SnapshotState(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(Integer diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
-            this.labelFingerprint = labelFingerprint;
+            $.labelFingerprint = labelFingerprint;
             return this;
         }
-        public Builder labelFingerprint(@Nullable String labelFingerprint) {
-            this.labelFingerprint = Codegen.ofNullable(labelFingerprint);
-            return this;
+
+        public Builder labelFingerprint(String labelFingerprint) {
+            return labelFingerprint(Output.of(labelFingerprint));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder licenses(@Nullable Output<List<String>> licenses) {
-            this.licenses = licenses;
+            $.licenses = licenses;
             return this;
         }
-        public Builder licenses(@Nullable List<String> licenses) {
-            this.licenses = Codegen.ofNullable(licenses);
-            return this;
+
+        public Builder licenses(List<String> licenses) {
+            return licenses(Output.of(licenses));
         }
+
         public Builder licenses(String... licenses) {
             return licenses(List.of(licenses));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder snapshotEncryptionKey(@Nullable Output<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey) {
-            this.snapshotEncryptionKey = snapshotEncryptionKey;
+            $.snapshotEncryptionKey = snapshotEncryptionKey;
             return this;
         }
-        public Builder snapshotEncryptionKey(@Nullable SnapshotSnapshotEncryptionKeyGetArgs snapshotEncryptionKey) {
-            this.snapshotEncryptionKey = Codegen.ofNullable(snapshotEncryptionKey);
-            return this;
+
+        public Builder snapshotEncryptionKey(SnapshotSnapshotEncryptionKeyGetArgs snapshotEncryptionKey) {
+            return snapshotEncryptionKey(Output.of(snapshotEncryptionKey));
         }
+
         public Builder snapshotId(@Nullable Output<Integer> snapshotId) {
-            this.snapshotId = snapshotId;
+            $.snapshotId = snapshotId;
             return this;
         }
-        public Builder snapshotId(@Nullable Integer snapshotId) {
-            this.snapshotId = Codegen.ofNullable(snapshotId);
-            return this;
+
+        public Builder snapshotId(Integer snapshotId) {
+            return snapshotId(Output.of(snapshotId));
         }
+
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
-            this.sourceDisk = sourceDisk;
+            $.sourceDisk = sourceDisk;
             return this;
         }
-        public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Codegen.ofNullable(sourceDisk);
-            return this;
+
+        public Builder sourceDisk(String sourceDisk) {
+            return sourceDisk(Output.of(sourceDisk));
         }
+
         public Builder sourceDiskEncryptionKey(@Nullable Output<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey) {
-            this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
+            $.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
             return this;
         }
-        public Builder sourceDiskEncryptionKey(@Nullable SnapshotSourceDiskEncryptionKeyGetArgs sourceDiskEncryptionKey) {
-            this.sourceDiskEncryptionKey = Codegen.ofNullable(sourceDiskEncryptionKey);
-            return this;
+
+        public Builder sourceDiskEncryptionKey(SnapshotSourceDiskEncryptionKeyGetArgs sourceDiskEncryptionKey) {
+            return sourceDiskEncryptionKey(Output.of(sourceDiskEncryptionKey));
         }
+
         public Builder storageBytes(@Nullable Output<Integer> storageBytes) {
-            this.storageBytes = storageBytes;
+            $.storageBytes = storageBytes;
             return this;
         }
-        public Builder storageBytes(@Nullable Integer storageBytes) {
-            this.storageBytes = Codegen.ofNullable(storageBytes);
-            return this;
+
+        public Builder storageBytes(Integer storageBytes) {
+            return storageBytes(Output.of(storageBytes));
         }
+
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
-            this.storageLocations = storageLocations;
+            $.storageLocations = storageLocations;
             return this;
         }
-        public Builder storageLocations(@Nullable List<String> storageLocations) {
-            this.storageLocations = Codegen.ofNullable(storageLocations);
-            return this;
+
+        public Builder storageLocations(List<String> storageLocations) {
+            return storageLocations(Output.of(storageLocations));
         }
+
         public Builder storageLocations(String... storageLocations) {
             return storageLocations(List.of(storageLocations));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public SnapshotState build() {
-            return new SnapshotState(creationTimestamp, description, diskSizeGb, labelFingerprint, labels, licenses, name, project, selfLink, snapshotEncryptionKey, snapshotId, sourceDisk, sourceDiskEncryptionKey, storageBytes, storageLocations, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public SnapshotState build() {
+            return $;
         }
     }
+
 }

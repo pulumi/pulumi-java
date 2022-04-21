@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudtasks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -21,49 +20,49 @@ public final class QueueStackdriverLoggingConfigArgs extends com.pulumi.resource
      * 
      */
     @Import(name="samplingRatio", required=true)
-      private final Output<Double> samplingRatio;
+    private Output<Double> samplingRatio;
 
     public Output<Double> samplingRatio() {
         return this.samplingRatio;
     }
 
-    public QueueStackdriverLoggingConfigArgs(Output<Double> samplingRatio) {
-        this.samplingRatio = Objects.requireNonNull(samplingRatio, "expected parameter 'samplingRatio' to be non-null");
-    }
+    private QueueStackdriverLoggingConfigArgs() {}
 
-    private QueueStackdriverLoggingConfigArgs() {
-        this.samplingRatio = Codegen.empty();
+    private QueueStackdriverLoggingConfigArgs(QueueStackdriverLoggingConfigArgs $) {
+        this.samplingRatio = $.samplingRatio;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueueStackdriverLoggingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Double> samplingRatio;
+        private QueueStackdriverLoggingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueueStackdriverLoggingConfigArgs();
         }
 
         public Builder(QueueStackdriverLoggingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.samplingRatio = defaults.samplingRatio;
+            $ = new QueueStackdriverLoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder samplingRatio(Output<Double> samplingRatio) {
-            this.samplingRatio = Objects.requireNonNull(samplingRatio);
+            $.samplingRatio = samplingRatio;
             return this;
         }
+
         public Builder samplingRatio(Double samplingRatio) {
-            this.samplingRatio = Output.of(Objects.requireNonNull(samplingRatio));
-            return this;
-        }        public QueueStackdriverLoggingConfigArgs build() {
-            return new QueueStackdriverLoggingConfigArgs(samplingRatio);
+            return samplingRatio(Output.of(samplingRatio));
+        }
+
+        public QueueStackdriverLoggingConfigArgs build() {
+            $.samplingRatio = Objects.requireNonNull($.samplingRatio, "expected parameter 'samplingRatio' to be non-null");
+            return $;
         }
     }
+
 }

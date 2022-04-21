@@ -13,62 +13,59 @@ public final class GetGroupsGroupGroupKey extends com.pulumi.resources.InvokeArg
     public static final GetGroupsGroupGroupKey Empty = new GetGroupsGroupGroupKey();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
     }
 
-    public GetGroupsGroupGroupKey(
-        String id,
-        String namespace) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-    }
+    private GetGroupsGroupGroupKey() {}
 
-    private GetGroupsGroupGroupKey() {
-        this.id = null;
-        this.namespace = null;
+    private GetGroupsGroupGroupKey(GetGroupsGroupGroupKey $) {
+        this.id = $.id;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGroupsGroupGroupKey defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String namespace;
+        private GetGroupsGroupGroupKey $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGroupsGroupGroupKey();
         }
 
         public Builder(GetGroupsGroupGroupKey defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.namespace = defaults.namespace;
+            $ = new GetGroupsGroupGroupKey(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
-        }        public GetGroupsGroupGroupKey build() {
-            return new GetGroupsGroupGroupKey(id, namespace);
+        }
+
+        public GetGroupsGroupGroupKey build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            return $;
         }
     }
+
 }

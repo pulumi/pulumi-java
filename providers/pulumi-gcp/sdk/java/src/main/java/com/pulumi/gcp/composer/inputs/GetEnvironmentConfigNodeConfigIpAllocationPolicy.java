@@ -14,110 +14,101 @@ public final class GetEnvironmentConfigNodeConfigIpAllocationPolicy extends com.
     public static final GetEnvironmentConfigNodeConfigIpAllocationPolicy Empty = new GetEnvironmentConfigNodeConfigIpAllocationPolicy();
 
     @Import(name="clusterIpv4CidrBlock", required=true)
-      private final String clusterIpv4CidrBlock;
+    private String clusterIpv4CidrBlock;
 
     public String clusterIpv4CidrBlock() {
         return this.clusterIpv4CidrBlock;
     }
 
     @Import(name="clusterSecondaryRangeName", required=true)
-      private final String clusterSecondaryRangeName;
+    private String clusterSecondaryRangeName;
 
     public String clusterSecondaryRangeName() {
         return this.clusterSecondaryRangeName;
     }
 
     @Import(name="servicesIpv4CidrBlock", required=true)
-      private final String servicesIpv4CidrBlock;
+    private String servicesIpv4CidrBlock;
 
     public String servicesIpv4CidrBlock() {
         return this.servicesIpv4CidrBlock;
     }
 
     @Import(name="servicesSecondaryRangeName", required=true)
-      private final String servicesSecondaryRangeName;
+    private String servicesSecondaryRangeName;
 
     public String servicesSecondaryRangeName() {
         return this.servicesSecondaryRangeName;
     }
 
     @Import(name="useIpAliases", required=true)
-      private final Boolean useIpAliases;
+    private Boolean useIpAliases;
 
     public Boolean useIpAliases() {
         return this.useIpAliases;
     }
 
-    public GetEnvironmentConfigNodeConfigIpAllocationPolicy(
-        String clusterIpv4CidrBlock,
-        String clusterSecondaryRangeName,
-        String servicesIpv4CidrBlock,
-        String servicesSecondaryRangeName,
-        Boolean useIpAliases) {
-        this.clusterIpv4CidrBlock = Objects.requireNonNull(clusterIpv4CidrBlock, "expected parameter 'clusterIpv4CidrBlock' to be non-null");
-        this.clusterSecondaryRangeName = Objects.requireNonNull(clusterSecondaryRangeName, "expected parameter 'clusterSecondaryRangeName' to be non-null");
-        this.servicesIpv4CidrBlock = Objects.requireNonNull(servicesIpv4CidrBlock, "expected parameter 'servicesIpv4CidrBlock' to be non-null");
-        this.servicesSecondaryRangeName = Objects.requireNonNull(servicesSecondaryRangeName, "expected parameter 'servicesSecondaryRangeName' to be non-null");
-        this.useIpAliases = Objects.requireNonNull(useIpAliases, "expected parameter 'useIpAliases' to be non-null");
-    }
+    private GetEnvironmentConfigNodeConfigIpAllocationPolicy() {}
 
-    private GetEnvironmentConfigNodeConfigIpAllocationPolicy() {
-        this.clusterIpv4CidrBlock = null;
-        this.clusterSecondaryRangeName = null;
-        this.servicesIpv4CidrBlock = null;
-        this.servicesSecondaryRangeName = null;
-        this.useIpAliases = null;
+    private GetEnvironmentConfigNodeConfigIpAllocationPolicy(GetEnvironmentConfigNodeConfigIpAllocationPolicy $) {
+        this.clusterIpv4CidrBlock = $.clusterIpv4CidrBlock;
+        this.clusterSecondaryRangeName = $.clusterSecondaryRangeName;
+        this.servicesIpv4CidrBlock = $.servicesIpv4CidrBlock;
+        this.servicesSecondaryRangeName = $.servicesSecondaryRangeName;
+        this.useIpAliases = $.useIpAliases;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentConfigNodeConfigIpAllocationPolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterIpv4CidrBlock;
-        private String clusterSecondaryRangeName;
-        private String servicesIpv4CidrBlock;
-        private String servicesSecondaryRangeName;
-        private Boolean useIpAliases;
+        private GetEnvironmentConfigNodeConfigIpAllocationPolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentConfigNodeConfigIpAllocationPolicy();
         }
 
         public Builder(GetEnvironmentConfigNodeConfigIpAllocationPolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIpv4CidrBlock = defaults.clusterIpv4CidrBlock;
-    	      this.clusterSecondaryRangeName = defaults.clusterSecondaryRangeName;
-    	      this.servicesIpv4CidrBlock = defaults.servicesIpv4CidrBlock;
-    	      this.servicesSecondaryRangeName = defaults.servicesSecondaryRangeName;
-    	      this.useIpAliases = defaults.useIpAliases;
+            $ = new GetEnvironmentConfigNodeConfigIpAllocationPolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
-            this.clusterIpv4CidrBlock = Objects.requireNonNull(clusterIpv4CidrBlock);
+            $.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
+
         public Builder clusterSecondaryRangeName(String clusterSecondaryRangeName) {
-            this.clusterSecondaryRangeName = Objects.requireNonNull(clusterSecondaryRangeName);
+            $.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
+
         public Builder servicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
-            this.servicesIpv4CidrBlock = Objects.requireNonNull(servicesIpv4CidrBlock);
+            $.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
+
         public Builder servicesSecondaryRangeName(String servicesSecondaryRangeName) {
-            this.servicesSecondaryRangeName = Objects.requireNonNull(servicesSecondaryRangeName);
+            $.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
+
         public Builder useIpAliases(Boolean useIpAliases) {
-            this.useIpAliases = Objects.requireNonNull(useIpAliases);
+            $.useIpAliases = useIpAliases;
             return this;
-        }        public GetEnvironmentConfigNodeConfigIpAllocationPolicy build() {
-            return new GetEnvironmentConfigNodeConfigIpAllocationPolicy(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName, useIpAliases);
+        }
+
+        public GetEnvironmentConfigNodeConfigIpAllocationPolicy build() {
+            $.clusterIpv4CidrBlock = Objects.requireNonNull($.clusterIpv4CidrBlock, "expected parameter 'clusterIpv4CidrBlock' to be non-null");
+            $.clusterSecondaryRangeName = Objects.requireNonNull($.clusterSecondaryRangeName, "expected parameter 'clusterSecondaryRangeName' to be non-null");
+            $.servicesIpv4CidrBlock = Objects.requireNonNull($.servicesIpv4CidrBlock, "expected parameter 'servicesIpv4CidrBlock' to be non-null");
+            $.servicesSecondaryRangeName = Objects.requireNonNull($.servicesSecondaryRangeName, "expected parameter 'servicesSecondaryRangeName' to be non-null");
+            $.useIpAliases = Objects.requireNonNull($.useIpAliases, "expected parameter 'useIpAliases' to be non-null");
+            return $;
         }
     }
+
 }

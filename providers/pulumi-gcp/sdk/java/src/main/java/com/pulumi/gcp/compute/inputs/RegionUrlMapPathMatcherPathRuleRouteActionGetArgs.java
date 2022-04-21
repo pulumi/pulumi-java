@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs;
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs;
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs;
@@ -15,6 +14,7 @@ import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionU
 import com.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionGetArgs extends com
      * 
      */
     @Import(name="corsPolicy")
-      private final @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs> corsPolicy;
+    private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs> corsPolicy;
 
-    public Output<RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs> corsPolicy() {
-        return this.corsPolicy == null ? Codegen.empty() : this.corsPolicy;
+    public Optional<Output<RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs>> corsPolicy() {
+        return Optional.ofNullable(this.corsPolicy);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionGetArgs extends com
      * 
      */
     @Import(name="faultInjectionPolicy")
-      private final @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy;
+    private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy;
 
-    public Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy() {
-        return this.faultInjectionPolicy == null ? Codegen.empty() : this.faultInjectionPolicy;
+    public Optional<Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs>> faultInjectionPolicy() {
+        return Optional.ofNullable(this.faultInjectionPolicy);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionGetArgs extends com
      * 
      */
     @Import(name="requestMirrorPolicy")
-      private final @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy;
+    private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy;
 
-    public Output<RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy() {
-        return this.requestMirrorPolicy == null ? Codegen.empty() : this.requestMirrorPolicy;
+    public Optional<Output<RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs>> requestMirrorPolicy() {
+        return Optional.ofNullable(this.requestMirrorPolicy);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionGetArgs extends com
      * 
      */
     @Import(name="retryPolicy")
-      private final @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs> retryPolicy;
+    private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs> retryPolicy;
 
-    public Output<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs> retryPolicy() {
-        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
+    public Optional<Output<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs>> retryPolicy() {
+        return Optional.ofNullable(this.retryPolicy);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionGetArgs extends com
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs> timeout;
+    private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs> timeout;
 
-    public Output<RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionGetArgs extends com
      * 
      */
     @Import(name="urlRewrite")
-      private final @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteGetArgs> urlRewrite;
+    private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteGetArgs> urlRewrite;
 
-    public Output<RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteGetArgs> urlRewrite() {
-        return this.urlRewrite == null ? Codegen.empty() : this.urlRewrite;
+    public Optional<Output<RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteGetArgs>> urlRewrite() {
+        return Optional.ofNullable(this.urlRewrite);
     }
 
     /**
@@ -121,131 +121,112 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionGetArgs extends com
      * 
      */
     @Import(name="weightedBackendServices")
-      private final @Nullable Output<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices;
+    private @Nullable Output<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices;
 
-    public Output<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices() {
-        return this.weightedBackendServices == null ? Codegen.empty() : this.weightedBackendServices;
+    public Optional<Output<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs>>> weightedBackendServices() {
+        return Optional.ofNullable(this.weightedBackendServices);
     }
 
-    public RegionUrlMapPathMatcherPathRuleRouteActionGetArgs(
-        @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs> corsPolicy,
-        @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy,
-        @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy,
-        @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs> retryPolicy,
-        @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs> timeout,
-        @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteGetArgs> urlRewrite,
-        @Nullable Output<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices) {
-        this.corsPolicy = corsPolicy;
-        this.faultInjectionPolicy = faultInjectionPolicy;
-        this.requestMirrorPolicy = requestMirrorPolicy;
-        this.retryPolicy = retryPolicy;
-        this.timeout = timeout;
-        this.urlRewrite = urlRewrite;
-        this.weightedBackendServices = weightedBackendServices;
-    }
+    private RegionUrlMapPathMatcherPathRuleRouteActionGetArgs() {}
 
-    private RegionUrlMapPathMatcherPathRuleRouteActionGetArgs() {
-        this.corsPolicy = Codegen.empty();
-        this.faultInjectionPolicy = Codegen.empty();
-        this.requestMirrorPolicy = Codegen.empty();
-        this.retryPolicy = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.urlRewrite = Codegen.empty();
-        this.weightedBackendServices = Codegen.empty();
+    private RegionUrlMapPathMatcherPathRuleRouteActionGetArgs(RegionUrlMapPathMatcherPathRuleRouteActionGetArgs $) {
+        this.corsPolicy = $.corsPolicy;
+        this.faultInjectionPolicy = $.faultInjectionPolicy;
+        this.requestMirrorPolicy = $.requestMirrorPolicy;
+        this.retryPolicy = $.retryPolicy;
+        this.timeout = $.timeout;
+        this.urlRewrite = $.urlRewrite;
+        this.weightedBackendServices = $.weightedBackendServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionUrlMapPathMatcherPathRuleRouteActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs> corsPolicy;
-        private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy;
-        private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy;
-        private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs> retryPolicy;
-        private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs> timeout;
-        private @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteGetArgs> urlRewrite;
-        private @Nullable Output<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices;
+        private RegionUrlMapPathMatcherPathRuleRouteActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionUrlMapPathMatcherPathRuleRouteActionGetArgs();
         }
 
         public Builder(RegionUrlMapPathMatcherPathRuleRouteActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.corsPolicy = defaults.corsPolicy;
-    	      this.faultInjectionPolicy = defaults.faultInjectionPolicy;
-    	      this.requestMirrorPolicy = defaults.requestMirrorPolicy;
-    	      this.retryPolicy = defaults.retryPolicy;
-    	      this.timeout = defaults.timeout;
-    	      this.urlRewrite = defaults.urlRewrite;
-    	      this.weightedBackendServices = defaults.weightedBackendServices;
+            $ = new RegionUrlMapPathMatcherPathRuleRouteActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder corsPolicy(@Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs> corsPolicy) {
-            this.corsPolicy = corsPolicy;
+            $.corsPolicy = corsPolicy;
             return this;
         }
-        public Builder corsPolicy(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs corsPolicy) {
-            this.corsPolicy = Codegen.ofNullable(corsPolicy);
-            return this;
+
+        public Builder corsPolicy(RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyGetArgs corsPolicy) {
+            return corsPolicy(Output.of(corsPolicy));
         }
+
         public Builder faultInjectionPolicy(@Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy) {
-            this.faultInjectionPolicy = faultInjectionPolicy;
+            $.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
-        public Builder faultInjectionPolicy(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs faultInjectionPolicy) {
-            this.faultInjectionPolicy = Codegen.ofNullable(faultInjectionPolicy);
-            return this;
+
+        public Builder faultInjectionPolicy(RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyGetArgs faultInjectionPolicy) {
+            return faultInjectionPolicy(Output.of(faultInjectionPolicy));
         }
+
         public Builder requestMirrorPolicy(@Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy) {
-            this.requestMirrorPolicy = requestMirrorPolicy;
+            $.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
-        public Builder requestMirrorPolicy(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs requestMirrorPolicy) {
-            this.requestMirrorPolicy = Codegen.ofNullable(requestMirrorPolicy);
-            return this;
+
+        public Builder requestMirrorPolicy(RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyGetArgs requestMirrorPolicy) {
+            return requestMirrorPolicy(Output.of(requestMirrorPolicy));
         }
+
         public Builder retryPolicy(@Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs> retryPolicy) {
-            this.retryPolicy = retryPolicy;
+            $.retryPolicy = retryPolicy;
             return this;
         }
-        public Builder retryPolicy(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs retryPolicy) {
-            this.retryPolicy = Codegen.ofNullable(retryPolicy);
-            return this;
+
+        public Builder retryPolicy(RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyGetArgs retryPolicy) {
+            return retryPolicy(Output.of(retryPolicy));
         }
+
         public Builder timeout(@Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(RegionUrlMapPathMatcherPathRuleRouteActionTimeoutGetArgs timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder urlRewrite(@Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteGetArgs> urlRewrite) {
-            this.urlRewrite = urlRewrite;
+            $.urlRewrite = urlRewrite;
             return this;
         }
-        public Builder urlRewrite(@Nullable RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteGetArgs urlRewrite) {
-            this.urlRewrite = Codegen.ofNullable(urlRewrite);
-            return this;
+
+        public Builder urlRewrite(RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteGetArgs urlRewrite) {
+            return urlRewrite(Output.of(urlRewrite));
         }
+
         public Builder weightedBackendServices(@Nullable Output<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices) {
-            this.weightedBackendServices = weightedBackendServices;
+            $.weightedBackendServices = weightedBackendServices;
             return this;
         }
-        public Builder weightedBackendServices(@Nullable List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs> weightedBackendServices) {
-            this.weightedBackendServices = Codegen.ofNullable(weightedBackendServices);
-            return this;
+
+        public Builder weightedBackendServices(List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs> weightedBackendServices) {
+            return weightedBackendServices(Output.of(weightedBackendServices));
         }
+
         public Builder weightedBackendServices(RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceGetArgs... weightedBackendServices) {
             return weightedBackendServices(List.of(weightedBackendServices));
-        }        public RegionUrlMapPathMatcherPathRuleRouteActionGetArgs build() {
-            return new RegionUrlMapPathMatcherPathRuleRouteActionGetArgs(corsPolicy, faultInjectionPolicy, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
+        }
+
+        public RegionUrlMapPathMatcherPathRuleRouteActionGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.ClusterClusterAutoscalingAutoProvisioningDefaultsArgs;
 import com.pulumi.gcp.container.inputs.ClusterClusterAutoscalingResourceLimitArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ClusterClusterAutoscalingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="autoProvisioningDefaults")
-      private final @Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsArgs> autoProvisioningDefaults;
+    private @Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsArgs> autoProvisioningDefaults;
 
-    public Output<ClusterClusterAutoscalingAutoProvisioningDefaultsArgs> autoProvisioningDefaults() {
-        return this.autoProvisioningDefaults == null ? Codegen.empty() : this.autoProvisioningDefaults;
+    public Optional<Output<ClusterClusterAutoscalingAutoProvisioningDefaultsArgs>> autoProvisioningDefaults() {
+        return Optional.ofNullable(this.autoProvisioningDefaults);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ClusterClusterAutoscalingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="autoscalingProfile")
-      private final @Nullable Output<String> autoscalingProfile;
+    private @Nullable Output<String> autoscalingProfile;
 
-    public Output<String> autoscalingProfile() {
-        return this.autoscalingProfile == null ? Codegen.empty() : this.autoscalingProfile;
+    public Optional<Output<String>> autoscalingProfile() {
+        return Optional.ofNullable(this.autoscalingProfile);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class ClusterClusterAutoscalingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -65,92 +65,83 @@ public final class ClusterClusterAutoscalingArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceLimits")
-      private final @Nullable Output<List<ClusterClusterAutoscalingResourceLimitArgs>> resourceLimits;
+    private @Nullable Output<List<ClusterClusterAutoscalingResourceLimitArgs>> resourceLimits;
 
-    public Output<List<ClusterClusterAutoscalingResourceLimitArgs>> resourceLimits() {
-        return this.resourceLimits == null ? Codegen.empty() : this.resourceLimits;
+    public Optional<Output<List<ClusterClusterAutoscalingResourceLimitArgs>>> resourceLimits() {
+        return Optional.ofNullable(this.resourceLimits);
     }
 
-    public ClusterClusterAutoscalingArgs(
-        @Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsArgs> autoProvisioningDefaults,
-        @Nullable Output<String> autoscalingProfile,
-        Output<Boolean> enabled,
-        @Nullable Output<List<ClusterClusterAutoscalingResourceLimitArgs>> resourceLimits) {
-        this.autoProvisioningDefaults = autoProvisioningDefaults;
-        this.autoscalingProfile = autoscalingProfile;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.resourceLimits = resourceLimits;
-    }
+    private ClusterClusterAutoscalingArgs() {}
 
-    private ClusterClusterAutoscalingArgs() {
-        this.autoProvisioningDefaults = Codegen.empty();
-        this.autoscalingProfile = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.resourceLimits = Codegen.empty();
+    private ClusterClusterAutoscalingArgs(ClusterClusterAutoscalingArgs $) {
+        this.autoProvisioningDefaults = $.autoProvisioningDefaults;
+        this.autoscalingProfile = $.autoscalingProfile;
+        this.enabled = $.enabled;
+        this.resourceLimits = $.resourceLimits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterAutoscalingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsArgs> autoProvisioningDefaults;
-        private @Nullable Output<String> autoscalingProfile;
-        private Output<Boolean> enabled;
-        private @Nullable Output<List<ClusterClusterAutoscalingResourceLimitArgs>> resourceLimits;
+        private ClusterClusterAutoscalingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterAutoscalingArgs();
         }
 
         public Builder(ClusterClusterAutoscalingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoProvisioningDefaults = defaults.autoProvisioningDefaults;
-    	      this.autoscalingProfile = defaults.autoscalingProfile;
-    	      this.enabled = defaults.enabled;
-    	      this.resourceLimits = defaults.resourceLimits;
+            $ = new ClusterClusterAutoscalingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoProvisioningDefaults(@Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsArgs> autoProvisioningDefaults) {
-            this.autoProvisioningDefaults = autoProvisioningDefaults;
+            $.autoProvisioningDefaults = autoProvisioningDefaults;
             return this;
         }
-        public Builder autoProvisioningDefaults(@Nullable ClusterClusterAutoscalingAutoProvisioningDefaultsArgs autoProvisioningDefaults) {
-            this.autoProvisioningDefaults = Codegen.ofNullable(autoProvisioningDefaults);
-            return this;
+
+        public Builder autoProvisioningDefaults(ClusterClusterAutoscalingAutoProvisioningDefaultsArgs autoProvisioningDefaults) {
+            return autoProvisioningDefaults(Output.of(autoProvisioningDefaults));
         }
+
         public Builder autoscalingProfile(@Nullable Output<String> autoscalingProfile) {
-            this.autoscalingProfile = autoscalingProfile;
+            $.autoscalingProfile = autoscalingProfile;
             return this;
         }
-        public Builder autoscalingProfile(@Nullable String autoscalingProfile) {
-            this.autoscalingProfile = Codegen.ofNullable(autoscalingProfile);
-            return this;
+
+        public Builder autoscalingProfile(String autoscalingProfile) {
+            return autoscalingProfile(Output.of(autoscalingProfile));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder resourceLimits(@Nullable Output<List<ClusterClusterAutoscalingResourceLimitArgs>> resourceLimits) {
-            this.resourceLimits = resourceLimits;
+            $.resourceLimits = resourceLimits;
             return this;
         }
-        public Builder resourceLimits(@Nullable List<ClusterClusterAutoscalingResourceLimitArgs> resourceLimits) {
-            this.resourceLimits = Codegen.ofNullable(resourceLimits);
-            return this;
+
+        public Builder resourceLimits(List<ClusterClusterAutoscalingResourceLimitArgs> resourceLimits) {
+            return resourceLimits(Output.of(resourceLimits));
         }
+
         public Builder resourceLimits(ClusterClusterAutoscalingResourceLimitArgs... resourceLimits) {
             return resourceLimits(List.of(resourceLimits));
-        }        public ClusterClusterAutoscalingArgs build() {
-            return new ClusterClusterAutoscalingArgs(autoProvisioningDefaults, autoscalingProfile, enabled, resourceLimits);
+        }
+
+        public ClusterClusterAutoscalingArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

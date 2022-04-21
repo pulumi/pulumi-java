@@ -5,7 +5,6 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
      * 
      */
     @Import(name="dayOfWeek", required=true)
-      private final Output<String> dayOfWeek;
+    private Output<String> dayOfWeek;
 
     public Output<String> dayOfWeek() {
         return this.dayOfWeek;
@@ -32,63 +31,60 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
      * 
      */
     @Import(name="weekOrdinal", required=true)
-      private final Output<Integer> weekOrdinal;
+    private Output<Integer> weekOrdinal;
 
     public Output<Integer> weekOrdinal() {
         return this.weekOrdinal;
     }
 
-    public PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs(
-        Output<String> dayOfWeek,
-        Output<Integer> weekOrdinal) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
-        this.weekOrdinal = Objects.requireNonNull(weekOrdinal, "expected parameter 'weekOrdinal' to be non-null");
-    }
+    private PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs() {}
 
-    private PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs() {
-        this.dayOfWeek = Codegen.empty();
-        this.weekOrdinal = Codegen.empty();
+    private PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs(PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs $) {
+        this.dayOfWeek = $.dayOfWeek;
+        this.weekOrdinal = $.weekOrdinal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dayOfWeek;
-        private Output<Integer> weekOrdinal;
+        private PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs();
         }
 
         public Builder(PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeek = defaults.dayOfWeek;
-    	      this.weekOrdinal = defaults.weekOrdinal;
+            $ = new PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeek(Output<String> dayOfWeek) {
-            this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
+            $.dayOfWeek = dayOfWeek;
             return this;
         }
+
         public Builder dayOfWeek(String dayOfWeek) {
-            this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
-            return this;
+            return dayOfWeek(Output.of(dayOfWeek));
         }
+
         public Builder weekOrdinal(Output<Integer> weekOrdinal) {
-            this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
+            $.weekOrdinal = weekOrdinal;
             return this;
         }
+
         public Builder weekOrdinal(Integer weekOrdinal) {
-            this.weekOrdinal = Output.of(Objects.requireNonNull(weekOrdinal));
-            return this;
-        }        public PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs build() {
-            return new PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs(dayOfWeek, weekOrdinal);
+            return weekOrdinal(Output.of(weekOrdinal));
+        }
+
+        public PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs build() {
+            $.dayOfWeek = Objects.requireNonNull($.dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
+            $.weekOrdinal = Objects.requireNonNull($.weekOrdinal, "expected parameter 'weekOrdinal' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigquery.inputs.JobStatusErrorGetArgs;
 import com.pulumi.gcp.bigquery.inputs.JobStatusErrorResultGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,96 +19,90 @@ public final class JobStatusGetArgs extends com.pulumi.resources.ResourceArgs {
     public static final JobStatusGetArgs Empty = new JobStatusGetArgs();
 
     @Import(name="errorResults")
-      private final @Nullable Output<List<JobStatusErrorResultGetArgs>> errorResults;
+    private @Nullable Output<List<JobStatusErrorResultGetArgs>> errorResults;
 
-    public Output<List<JobStatusErrorResultGetArgs>> errorResults() {
-        return this.errorResults == null ? Codegen.empty() : this.errorResults;
+    public Optional<Output<List<JobStatusErrorResultGetArgs>>> errorResults() {
+        return Optional.ofNullable(this.errorResults);
     }
 
     @Import(name="errors")
-      private final @Nullable Output<List<JobStatusErrorGetArgs>> errors;
+    private @Nullable Output<List<JobStatusErrorGetArgs>> errors;
 
-    public Output<List<JobStatusErrorGetArgs>> errors() {
-        return this.errors == null ? Codegen.empty() : this.errors;
+    public Optional<Output<List<JobStatusErrorGetArgs>>> errors() {
+        return Optional.ofNullable(this.errors);
     }
 
     @Import(name="state")
-      private final @Nullable Output<String> state;
+    private @Nullable Output<String> state;
 
-    public Output<String> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<String>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public JobStatusGetArgs(
-        @Nullable Output<List<JobStatusErrorResultGetArgs>> errorResults,
-        @Nullable Output<List<JobStatusErrorGetArgs>> errors,
-        @Nullable Output<String> state) {
-        this.errorResults = errorResults;
-        this.errors = errors;
-        this.state = state;
-    }
+    private JobStatusGetArgs() {}
 
-    private JobStatusGetArgs() {
-        this.errorResults = Codegen.empty();
-        this.errors = Codegen.empty();
-        this.state = Codegen.empty();
+    private JobStatusGetArgs(JobStatusGetArgs $) {
+        this.errorResults = $.errorResults;
+        this.errors = $.errors;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatusGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<JobStatusErrorResultGetArgs>> errorResults;
-        private @Nullable Output<List<JobStatusErrorGetArgs>> errors;
-        private @Nullable Output<String> state;
+        private JobStatusGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatusGetArgs();
         }
 
         public Builder(JobStatusGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorResults = defaults.errorResults;
-    	      this.errors = defaults.errors;
-    	      this.state = defaults.state;
+            $ = new JobStatusGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder errorResults(@Nullable Output<List<JobStatusErrorResultGetArgs>> errorResults) {
-            this.errorResults = errorResults;
+            $.errorResults = errorResults;
             return this;
         }
-        public Builder errorResults(@Nullable List<JobStatusErrorResultGetArgs> errorResults) {
-            this.errorResults = Codegen.ofNullable(errorResults);
-            return this;
+
+        public Builder errorResults(List<JobStatusErrorResultGetArgs> errorResults) {
+            return errorResults(Output.of(errorResults));
         }
+
         public Builder errorResults(JobStatusErrorResultGetArgs... errorResults) {
             return errorResults(List.of(errorResults));
         }
+
         public Builder errors(@Nullable Output<List<JobStatusErrorGetArgs>> errors) {
-            this.errors = errors;
+            $.errors = errors;
             return this;
         }
-        public Builder errors(@Nullable List<JobStatusErrorGetArgs> errors) {
-            this.errors = Codegen.ofNullable(errors);
-            return this;
+
+        public Builder errors(List<JobStatusErrorGetArgs> errors) {
+            return errors(Output.of(errors));
         }
+
         public Builder errors(JobStatusErrorGetArgs... errors) {
             return errors(List.of(errors));
         }
+
         public Builder state(@Nullable Output<String> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable String state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public JobStatusGetArgs build() {
-            return new JobStatusGetArgs(errorResults, errors, state);
+
+        public Builder state(String state) {
+            return state(Output.of(state));
+        }
+
+        public JobStatusGetArgs build() {
+            return $;
         }
     }
+
 }

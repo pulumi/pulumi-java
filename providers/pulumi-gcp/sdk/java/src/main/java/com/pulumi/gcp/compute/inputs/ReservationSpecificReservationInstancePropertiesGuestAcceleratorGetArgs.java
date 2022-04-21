@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
      * 
      */
     @Import(name="acceleratorCount", required=true)
-      private final Output<Integer> acceleratorCount;
+    private Output<Integer> acceleratorCount;
 
     public Output<Integer> acceleratorCount() {
         return this.acceleratorCount;
@@ -35,63 +34,60 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
      * 
      */
     @Import(name="acceleratorType", required=true)
-      private final Output<String> acceleratorType;
+    private Output<String> acceleratorType;
 
     public Output<String> acceleratorType() {
         return this.acceleratorType;
     }
 
-    public ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs(
-        Output<Integer> acceleratorCount,
-        Output<String> acceleratorType) {
-        this.acceleratorCount = Objects.requireNonNull(acceleratorCount, "expected parameter 'acceleratorCount' to be non-null");
-        this.acceleratorType = Objects.requireNonNull(acceleratorType, "expected parameter 'acceleratorType' to be non-null");
-    }
+    private ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs() {}
 
-    private ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs() {
-        this.acceleratorCount = Codegen.empty();
-        this.acceleratorType = Codegen.empty();
+    private ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs(ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs $) {
+        this.acceleratorCount = $.acceleratorCount;
+        this.acceleratorType = $.acceleratorType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> acceleratorCount;
-        private Output<String> acceleratorType;
+        private ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs();
         }
 
         public Builder(ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorCount = defaults.acceleratorCount;
-    	      this.acceleratorType = defaults.acceleratorType;
+            $ = new ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorCount(Output<Integer> acceleratorCount) {
-            this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
+            $.acceleratorCount = acceleratorCount;
             return this;
         }
+
         public Builder acceleratorCount(Integer acceleratorCount) {
-            this.acceleratorCount = Output.of(Objects.requireNonNull(acceleratorCount));
-            return this;
+            return acceleratorCount(Output.of(acceleratorCount));
         }
+
         public Builder acceleratorType(Output<String> acceleratorType) {
-            this.acceleratorType = Objects.requireNonNull(acceleratorType);
+            $.acceleratorType = acceleratorType;
             return this;
         }
+
         public Builder acceleratorType(String acceleratorType) {
-            this.acceleratorType = Output.of(Objects.requireNonNull(acceleratorType));
-            return this;
-        }        public ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs build() {
-            return new ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs(acceleratorCount, acceleratorType);
+            return acceleratorType(Output.of(acceleratorType));
+        }
+
+        public ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs build() {
+            $.acceleratorCount = Objects.requireNonNull($.acceleratorCount, "expected parameter 'acceleratorCount' to be non-null");
+            $.acceleratorType = Objects.requireNonNull($.acceleratorType, "expected parameter 'acceleratorType' to be non-null");
+            return $;
         }
     }
+
 }

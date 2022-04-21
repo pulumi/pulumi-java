@@ -21,10 +21,10 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="delegates")
-      private final @Nullable List<String> delegates;
+    private @Nullable List<String> delegates;
 
-    public List<String> delegates() {
-        return this.delegates == null ? List.of() : this.delegates;
+    public Optional<List<String>> delegates() {
+        return Optional.ofNullable(this.delegates);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="includeEmail")
-      private final @Nullable Boolean includeEmail;
+    private @Nullable Boolean includeEmail;
 
     public Optional<Boolean> includeEmail() {
-        return this.includeEmail == null ? Optional.empty() : Optional.ofNullable(this.includeEmail);
+        return Optional.ofNullable(this.includeEmail);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="targetAudience", required=true)
-      private final String targetAudience;
+    private String targetAudience;
 
     public String targetAudience() {
         return this.targetAudience;
@@ -54,76 +54,67 @@ public final class GetAccountIdTokenArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="targetServiceAccount")
-      private final @Nullable String targetServiceAccount;
+    private @Nullable String targetServiceAccount;
 
     public Optional<String> targetServiceAccount() {
-        return this.targetServiceAccount == null ? Optional.empty() : Optional.ofNullable(this.targetServiceAccount);
+        return Optional.ofNullable(this.targetServiceAccount);
     }
 
-    public GetAccountIdTokenArgs(
-        @Nullable List<String> delegates,
-        @Nullable Boolean includeEmail,
-        String targetAudience,
-        @Nullable String targetServiceAccount) {
-        this.delegates = delegates;
-        this.includeEmail = includeEmail;
-        this.targetAudience = Objects.requireNonNull(targetAudience, "expected parameter 'targetAudience' to be non-null");
-        this.targetServiceAccount = targetServiceAccount;
-    }
+    private GetAccountIdTokenArgs() {}
 
-    private GetAccountIdTokenArgs() {
-        this.delegates = List.of();
-        this.includeEmail = null;
-        this.targetAudience = null;
-        this.targetServiceAccount = null;
+    private GetAccountIdTokenArgs(GetAccountIdTokenArgs $) {
+        this.delegates = $.delegates;
+        this.includeEmail = $.includeEmail;
+        this.targetAudience = $.targetAudience;
+        this.targetServiceAccount = $.targetServiceAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccountIdTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> delegates;
-        private @Nullable Boolean includeEmail;
-        private String targetAudience;
-        private @Nullable String targetServiceAccount;
+        private GetAccountIdTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccountIdTokenArgs();
         }
 
         public Builder(GetAccountIdTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delegates = defaults.delegates;
-    	      this.includeEmail = defaults.includeEmail;
-    	      this.targetAudience = defaults.targetAudience;
-    	      this.targetServiceAccount = defaults.targetServiceAccount;
+            $ = new GetAccountIdTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delegates(@Nullable List<String> delegates) {
-            this.delegates = delegates;
+            $.delegates = delegates;
             return this;
         }
+
         public Builder delegates(String... delegates) {
             return delegates(List.of(delegates));
         }
+
         public Builder includeEmail(@Nullable Boolean includeEmail) {
-            this.includeEmail = includeEmail;
+            $.includeEmail = includeEmail;
             return this;
         }
+
         public Builder targetAudience(String targetAudience) {
-            this.targetAudience = Objects.requireNonNull(targetAudience);
+            $.targetAudience = targetAudience;
             return this;
         }
+
         public Builder targetServiceAccount(@Nullable String targetServiceAccount) {
-            this.targetServiceAccount = targetServiceAccount;
+            $.targetServiceAccount = targetServiceAccount;
             return this;
-        }        public GetAccountIdTokenArgs build() {
-            return new GetAccountIdTokenArgs(delegates, includeEmail, targetAudience, targetServiceAccount);
+        }
+
+        public GetAccountIdTokenArgs build() {
+            $.targetAudience = Objects.requireNonNull($.targetAudience, "expected parameter 'targetAudience' to be non-null");
+            return $;
         }
     }
+
 }

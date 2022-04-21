@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class DataTransferConfigEmailPreferencesArgs extends com.pulumi.res
      * 
      */
     @Import(name="enableFailureEmail", required=true)
-      private final Output<Boolean> enableFailureEmail;
+    private Output<Boolean> enableFailureEmail;
 
     public Output<Boolean> enableFailureEmail() {
         return this.enableFailureEmail;
     }
 
-    public DataTransferConfigEmailPreferencesArgs(Output<Boolean> enableFailureEmail) {
-        this.enableFailureEmail = Objects.requireNonNull(enableFailureEmail, "expected parameter 'enableFailureEmail' to be non-null");
-    }
+    private DataTransferConfigEmailPreferencesArgs() {}
 
-    private DataTransferConfigEmailPreferencesArgs() {
-        this.enableFailureEmail = Codegen.empty();
+    private DataTransferConfigEmailPreferencesArgs(DataTransferConfigEmailPreferencesArgs $) {
+        this.enableFailureEmail = $.enableFailureEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataTransferConfigEmailPreferencesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enableFailureEmail;
+        private DataTransferConfigEmailPreferencesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataTransferConfigEmailPreferencesArgs();
         }
 
         public Builder(DataTransferConfigEmailPreferencesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableFailureEmail = defaults.enableFailureEmail;
+            $ = new DataTransferConfigEmailPreferencesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableFailureEmail(Output<Boolean> enableFailureEmail) {
-            this.enableFailureEmail = Objects.requireNonNull(enableFailureEmail);
+            $.enableFailureEmail = enableFailureEmail;
             return this;
         }
+
         public Builder enableFailureEmail(Boolean enableFailureEmail) {
-            this.enableFailureEmail = Output.of(Objects.requireNonNull(enableFailureEmail));
-            return this;
-        }        public DataTransferConfigEmailPreferencesArgs build() {
-            return new DataTransferConfigEmailPreferencesArgs(enableFailureEmail);
+            return enableFailureEmail(Output.of(enableFailureEmail));
+        }
+
+        public DataTransferConfigEmailPreferencesArgs build() {
+            $.enableFailureEmail = Objects.requireNonNull($.enableFailureEmail, "expected parameter 'enableFailureEmail' to be non-null");
+            return $;
         }
     }
+
 }

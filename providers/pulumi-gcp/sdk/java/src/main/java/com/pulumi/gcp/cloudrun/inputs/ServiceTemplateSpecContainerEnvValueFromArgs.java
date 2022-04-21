@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ServiceTemplateSpecContainerEnvValueFromArgs extends com.pulu
      * 
      */
     @Import(name="secretKeyRef", required=true)
-      private final Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> secretKeyRef;
+    private Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> secretKeyRef;
 
     public Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> secretKeyRef() {
         return this.secretKeyRef;
     }
 
-    public ServiceTemplateSpecContainerEnvValueFromArgs(Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> secretKeyRef) {
-        this.secretKeyRef = Objects.requireNonNull(secretKeyRef, "expected parameter 'secretKeyRef' to be non-null");
-    }
+    private ServiceTemplateSpecContainerEnvValueFromArgs() {}
 
-    private ServiceTemplateSpecContainerEnvValueFromArgs() {
-        this.secretKeyRef = Codegen.empty();
+    private ServiceTemplateSpecContainerEnvValueFromArgs(ServiceTemplateSpecContainerEnvValueFromArgs $) {
+        this.secretKeyRef = $.secretKeyRef;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTemplateSpecContainerEnvValueFromArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> secretKeyRef;
+        private ServiceTemplateSpecContainerEnvValueFromArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTemplateSpecContainerEnvValueFromArgs();
         }
 
         public Builder(ServiceTemplateSpecContainerEnvValueFromArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretKeyRef = defaults.secretKeyRef;
+            $ = new ServiceTemplateSpecContainerEnvValueFromArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder secretKeyRef(Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> secretKeyRef) {
-            this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
+            $.secretKeyRef = secretKeyRef;
             return this;
         }
+
         public Builder secretKeyRef(ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs secretKeyRef) {
-            this.secretKeyRef = Output.of(Objects.requireNonNull(secretKeyRef));
-            return this;
-        }        public ServiceTemplateSpecContainerEnvValueFromArgs build() {
-            return new ServiceTemplateSpecContainerEnvValueFromArgs(secretKeyRef);
+            return secretKeyRef(Output.of(secretKeyRef));
+        }
+
+        public ServiceTemplateSpecContainerEnvValueFromArgs build() {
+            $.secretKeyRef = Objects.requireNonNull($.secretKeyRef, "expected parameter 'secretKeyRef' to be non-null");
+            return $;
         }
     }
+
 }

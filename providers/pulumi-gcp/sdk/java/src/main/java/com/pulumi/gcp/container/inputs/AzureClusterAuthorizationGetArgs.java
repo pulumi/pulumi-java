@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.AzureClusterAuthorizationAdminUserGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class AzureClusterAuthorizationGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="adminUsers", required=true)
-      private final Output<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers;
+    private Output<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers;
 
     public Output<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers() {
         return this.adminUsers;
     }
 
-    public AzureClusterAuthorizationGetArgs(Output<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers) {
-        this.adminUsers = Objects.requireNonNull(adminUsers, "expected parameter 'adminUsers' to be non-null");
-    }
+    private AzureClusterAuthorizationGetArgs() {}
 
-    private AzureClusterAuthorizationGetArgs() {
-        this.adminUsers = Codegen.empty();
+    private AzureClusterAuthorizationGetArgs(AzureClusterAuthorizationGetArgs $) {
+        this.adminUsers = $.adminUsers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureClusterAuthorizationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers;
+        private AzureClusterAuthorizationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureClusterAuthorizationGetArgs();
         }
 
         public Builder(AzureClusterAuthorizationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adminUsers = defaults.adminUsers;
+            $ = new AzureClusterAuthorizationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adminUsers(Output<List<AzureClusterAuthorizationAdminUserGetArgs>> adminUsers) {
-            this.adminUsers = Objects.requireNonNull(adminUsers);
+            $.adminUsers = adminUsers;
             return this;
         }
+
         public Builder adminUsers(List<AzureClusterAuthorizationAdminUserGetArgs> adminUsers) {
-            this.adminUsers = Output.of(Objects.requireNonNull(adminUsers));
-            return this;
+            return adminUsers(Output.of(adminUsers));
         }
+
         public Builder adminUsers(AzureClusterAuthorizationAdminUserGetArgs... adminUsers) {
             return adminUsers(List.of(adminUsers));
-        }        public AzureClusterAuthorizationGetArgs build() {
-            return new AzureClusterAuthorizationGetArgs(adminUsers);
+        }
+
+        public AzureClusterAuthorizationGetArgs build() {
+            $.adminUsers = Objects.requireNonNull($.adminUsers, "expected parameter 'adminUsers' to be non-null");
+            return $;
         }
     }
+
 }

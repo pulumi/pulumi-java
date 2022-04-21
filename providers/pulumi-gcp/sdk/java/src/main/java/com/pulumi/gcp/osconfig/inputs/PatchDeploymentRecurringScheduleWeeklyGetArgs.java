@@ -5,7 +5,6 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class PatchDeploymentRecurringScheduleWeeklyGetArgs extends com.pul
      * 
      */
     @Import(name="dayOfWeek", required=true)
-      private final Output<String> dayOfWeek;
+    private Output<String> dayOfWeek;
 
     public Output<String> dayOfWeek() {
         return this.dayOfWeek;
     }
 
-    public PatchDeploymentRecurringScheduleWeeklyGetArgs(Output<String> dayOfWeek) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
-    }
+    private PatchDeploymentRecurringScheduleWeeklyGetArgs() {}
 
-    private PatchDeploymentRecurringScheduleWeeklyGetArgs() {
-        this.dayOfWeek = Codegen.empty();
+    private PatchDeploymentRecurringScheduleWeeklyGetArgs(PatchDeploymentRecurringScheduleWeeklyGetArgs $) {
+        this.dayOfWeek = $.dayOfWeek;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchDeploymentRecurringScheduleWeeklyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dayOfWeek;
+        private PatchDeploymentRecurringScheduleWeeklyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchDeploymentRecurringScheduleWeeklyGetArgs();
         }
 
         public Builder(PatchDeploymentRecurringScheduleWeeklyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeek = defaults.dayOfWeek;
+            $ = new PatchDeploymentRecurringScheduleWeeklyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeek(Output<String> dayOfWeek) {
-            this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
+            $.dayOfWeek = dayOfWeek;
             return this;
         }
+
         public Builder dayOfWeek(String dayOfWeek) {
-            this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
-            return this;
-        }        public PatchDeploymentRecurringScheduleWeeklyGetArgs build() {
-            return new PatchDeploymentRecurringScheduleWeeklyGetArgs(dayOfWeek);
+            return dayOfWeek(Output.of(dayOfWeek));
+        }
+
+        public PatchDeploymentRecurringScheduleWeeklyGetArgs build() {
+            $.dayOfWeek = Objects.requireNonNull($.dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,110 +16,100 @@ public final class InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetAr
     public static final InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs Empty = new InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs();
 
     @Import(name="externalIpv6")
-      private final @Nullable Output<String> externalIpv6;
+    private @Nullable Output<String> externalIpv6;
 
-    public Output<String> externalIpv6() {
-        return this.externalIpv6 == null ? Codegen.empty() : this.externalIpv6;
+    public Optional<Output<String>> externalIpv6() {
+        return Optional.ofNullable(this.externalIpv6);
     }
 
     @Import(name="externalIpv6PrefixLength")
-      private final @Nullable Output<String> externalIpv6PrefixLength;
+    private @Nullable Output<String> externalIpv6PrefixLength;
 
-    public Output<String> externalIpv6PrefixLength() {
-        return this.externalIpv6PrefixLength == null ? Codegen.empty() : this.externalIpv6PrefixLength;
+    public Optional<Output<String>> externalIpv6PrefixLength() {
+        return Optional.ofNullable(this.externalIpv6PrefixLength);
     }
 
     @Import(name="networkTier", required=true)
-      private final Output<String> networkTier;
+    private Output<String> networkTier;
 
     public Output<String> networkTier() {
         return this.networkTier;
     }
 
     @Import(name="publicPtrDomainName")
-      private final @Nullable Output<String> publicPtrDomainName;
+    private @Nullable Output<String> publicPtrDomainName;
 
-    public Output<String> publicPtrDomainName() {
-        return this.publicPtrDomainName == null ? Codegen.empty() : this.publicPtrDomainName;
+    public Optional<Output<String>> publicPtrDomainName() {
+        return Optional.ofNullable(this.publicPtrDomainName);
     }
 
-    public InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs(
-        @Nullable Output<String> externalIpv6,
-        @Nullable Output<String> externalIpv6PrefixLength,
-        Output<String> networkTier,
-        @Nullable Output<String> publicPtrDomainName) {
-        this.externalIpv6 = externalIpv6;
-        this.externalIpv6PrefixLength = externalIpv6PrefixLength;
-        this.networkTier = Objects.requireNonNull(networkTier, "expected parameter 'networkTier' to be non-null");
-        this.publicPtrDomainName = publicPtrDomainName;
-    }
+    private InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs() {}
 
-    private InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs() {
-        this.externalIpv6 = Codegen.empty();
-        this.externalIpv6PrefixLength = Codegen.empty();
-        this.networkTier = Codegen.empty();
-        this.publicPtrDomainName = Codegen.empty();
+    private InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs(InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs $) {
+        this.externalIpv6 = $.externalIpv6;
+        this.externalIpv6PrefixLength = $.externalIpv6PrefixLength;
+        this.networkTier = $.networkTier;
+        this.publicPtrDomainName = $.publicPtrDomainName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> externalIpv6;
-        private @Nullable Output<String> externalIpv6PrefixLength;
-        private Output<String> networkTier;
-        private @Nullable Output<String> publicPtrDomainName;
+        private InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs();
         }
 
         public Builder(InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.externalIpv6 = defaults.externalIpv6;
-    	      this.externalIpv6PrefixLength = defaults.externalIpv6PrefixLength;
-    	      this.networkTier = defaults.networkTier;
-    	      this.publicPtrDomainName = defaults.publicPtrDomainName;
+            $ = new InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder externalIpv6(@Nullable Output<String> externalIpv6) {
-            this.externalIpv6 = externalIpv6;
+            $.externalIpv6 = externalIpv6;
             return this;
         }
-        public Builder externalIpv6(@Nullable String externalIpv6) {
-            this.externalIpv6 = Codegen.ofNullable(externalIpv6);
-            return this;
+
+        public Builder externalIpv6(String externalIpv6) {
+            return externalIpv6(Output.of(externalIpv6));
         }
+
         public Builder externalIpv6PrefixLength(@Nullable Output<String> externalIpv6PrefixLength) {
-            this.externalIpv6PrefixLength = externalIpv6PrefixLength;
+            $.externalIpv6PrefixLength = externalIpv6PrefixLength;
             return this;
         }
-        public Builder externalIpv6PrefixLength(@Nullable String externalIpv6PrefixLength) {
-            this.externalIpv6PrefixLength = Codegen.ofNullable(externalIpv6PrefixLength);
-            return this;
+
+        public Builder externalIpv6PrefixLength(String externalIpv6PrefixLength) {
+            return externalIpv6PrefixLength(Output.of(externalIpv6PrefixLength));
         }
+
         public Builder networkTier(Output<String> networkTier) {
-            this.networkTier = Objects.requireNonNull(networkTier);
+            $.networkTier = networkTier;
             return this;
         }
+
         public Builder networkTier(String networkTier) {
-            this.networkTier = Output.of(Objects.requireNonNull(networkTier));
-            return this;
+            return networkTier(Output.of(networkTier));
         }
+
         public Builder publicPtrDomainName(@Nullable Output<String> publicPtrDomainName) {
-            this.publicPtrDomainName = publicPtrDomainName;
+            $.publicPtrDomainName = publicPtrDomainName;
             return this;
         }
-        public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
-            this.publicPtrDomainName = Codegen.ofNullable(publicPtrDomainName);
-            return this;
-        }        public InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs build() {
-            return new InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs(externalIpv6, externalIpv6PrefixLength, networkTier, publicPtrDomainName);
+
+        public Builder publicPtrDomainName(String publicPtrDomainName) {
+            return publicPtrDomainName(Output.of(publicPtrDomainName));
+        }
+
+        public InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigGetArgs build() {
+            $.networkTier = Objects.requireNonNull($.networkTier, "expected parameter 'networkTier' to be non-null");
+            return $;
         }
     }
+
 }

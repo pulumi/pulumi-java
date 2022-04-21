@@ -5,9 +5,9 @@ package com.pulumi.gcp.organizations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FolderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FolderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FolderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="folderId")
-      private final @Nullable Output<String> folderId;
+    private @Nullable Output<String> folderId;
 
-    public Output<String> folderId() {
-        return this.folderId == null ? Codegen.empty() : this.folderId;
+    public Optional<Output<String>> folderId() {
+        return Optional.ofNullable(this.folderId);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FolderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifecycleState")
-      private final @Nullable Output<String> lifecycleState;
+    private @Nullable Output<String> lifecycleState;
 
-    public Output<String> lifecycleState() {
-        return this.lifecycleState == null ? Codegen.empty() : this.lifecycleState;
+    public Optional<Output<String>> lifecycleState() {
+        return Optional.ofNullable(this.lifecycleState);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class FolderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -78,115 +78,98 @@ public final class FolderState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
-    public FolderState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> folderId,
-        @Nullable Output<String> lifecycleState,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parent) {
-        this.createTime = createTime;
-        this.displayName = displayName;
-        this.folderId = folderId;
-        this.lifecycleState = lifecycleState;
-        this.name = name;
-        this.parent = parent;
-    }
+    private FolderState() {}
 
-    private FolderState() {
-        this.createTime = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.folderId = Codegen.empty();
-        this.lifecycleState = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
+    private FolderState(FolderState $) {
+        this.createTime = $.createTime;
+        this.displayName = $.displayName;
+        this.folderId = $.folderId;
+        this.lifecycleState = $.lifecycleState;
+        this.name = $.name;
+        this.parent = $.parent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FolderState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> folderId;
-        private @Nullable Output<String> lifecycleState;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parent;
+        private FolderState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FolderState();
         }
 
         public Builder(FolderState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.displayName = defaults.displayName;
-    	      this.folderId = defaults.folderId;
-    	      this.lifecycleState = defaults.lifecycleState;
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
+            $ = new FolderState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder folderId(@Nullable Output<String> folderId) {
-            this.folderId = folderId;
+            $.folderId = folderId;
             return this;
         }
-        public Builder folderId(@Nullable String folderId) {
-            this.folderId = Codegen.ofNullable(folderId);
-            return this;
+
+        public Builder folderId(String folderId) {
+            return folderId(Output.of(folderId));
         }
+
         public Builder lifecycleState(@Nullable Output<String> lifecycleState) {
-            this.lifecycleState = lifecycleState;
+            $.lifecycleState = lifecycleState;
             return this;
         }
-        public Builder lifecycleState(@Nullable String lifecycleState) {
-            this.lifecycleState = Codegen.ofNullable(lifecycleState);
-            return this;
+
+        public Builder lifecycleState(String lifecycleState) {
+            return lifecycleState(Output.of(lifecycleState));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
-        }        public FolderState build() {
-            return new FolderState(createTime, displayName, folderId, lifecycleState, name, parent);
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
+        }
+
+        public FolderState build() {
+            return $;
         }
     }
+
 }

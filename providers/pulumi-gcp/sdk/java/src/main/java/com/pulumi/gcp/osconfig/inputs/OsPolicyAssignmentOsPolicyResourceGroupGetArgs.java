@@ -5,11 +5,11 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends com.pu
      * 
      */
     @Import(name="inventoryFilters")
-      private final @Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters;
+    private @Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters;
 
-    public Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters() {
-        return this.inventoryFilters == null ? Codegen.empty() : this.inventoryFilters;
+    public Optional<Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>>> inventoryFilters() {
+        return Optional.ofNullable(this.inventoryFilters);
     }
 
     /**
@@ -33,69 +33,67 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends com.pu
      * 
      */
     @Import(name="resources", required=true)
-      private final Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources;
+    private Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources;
 
     public Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources() {
         return this.resources;
     }
 
-    public OsPolicyAssignmentOsPolicyResourceGroupGetArgs(
-        @Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters,
-        Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources) {
-        this.inventoryFilters = inventoryFilters;
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-    }
+    private OsPolicyAssignmentOsPolicyResourceGroupGetArgs() {}
 
-    private OsPolicyAssignmentOsPolicyResourceGroupGetArgs() {
-        this.inventoryFilters = Codegen.empty();
-        this.resources = Codegen.empty();
+    private OsPolicyAssignmentOsPolicyResourceGroupGetArgs(OsPolicyAssignmentOsPolicyResourceGroupGetArgs $) {
+        this.inventoryFilters = $.inventoryFilters;
+        this.resources = $.resources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentOsPolicyResourceGroupGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters;
-        private Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources;
+        private OsPolicyAssignmentOsPolicyResourceGroupGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupGetArgs();
         }
 
         public Builder(OsPolicyAssignmentOsPolicyResourceGroupGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inventoryFilters = defaults.inventoryFilters;
-    	      this.resources = defaults.resources;
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inventoryFilters(@Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters) {
-            this.inventoryFilters = inventoryFilters;
+            $.inventoryFilters = inventoryFilters;
             return this;
         }
-        public Builder inventoryFilters(@Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs> inventoryFilters) {
-            this.inventoryFilters = Codegen.ofNullable(inventoryFilters);
-            return this;
+
+        public Builder inventoryFilters(List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs> inventoryFilters) {
+            return inventoryFilters(Output.of(inventoryFilters));
         }
+
         public Builder inventoryFilters(OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs... inventoryFilters) {
             return inventoryFilters(List.of(inventoryFilters));
         }
+
         public Builder resources(Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder resources(List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs> resources) {
-            this.resources = Output.of(Objects.requireNonNull(resources));
-            return this;
+            return resources(Output.of(resources));
         }
+
         public Builder resources(OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs... resources) {
             return resources(List.of(resources));
-        }        public OsPolicyAssignmentOsPolicyResourceGroupGetArgs build() {
-            return new OsPolicyAssignmentOsPolicyResourceGroupGetArgs(inventoryFilters, resources);
+        }
+
+        public OsPolicyAssignmentOsPolicyResourceGroupGetArgs build() {
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            return $;
         }
     }
+
 }

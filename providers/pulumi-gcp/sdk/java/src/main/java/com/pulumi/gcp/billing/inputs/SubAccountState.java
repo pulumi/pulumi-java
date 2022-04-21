@@ -5,10 +5,10 @@ package com.pulumi.gcp.billing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SubAccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="billingAccountId")
-      private final @Nullable Output<String> billingAccountId;
+    private @Nullable Output<String> billingAccountId;
 
-    public Output<String> billingAccountId() {
-        return this.billingAccountId == null ? Codegen.empty() : this.billingAccountId;
+    public Optional<Output<String>> billingAccountId() {
+        return Optional.ofNullable(this.billingAccountId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SubAccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deletionPolicy")
-      private final @Nullable Output<String> deletionPolicy;
+    private @Nullable Output<String> deletionPolicy;
 
-    public Output<String> deletionPolicy() {
-        return this.deletionPolicy == null ? Codegen.empty() : this.deletionPolicy;
+    public Optional<Output<String>> deletionPolicy() {
+        return Optional.ofNullable(this.deletionPolicy);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SubAccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SubAccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="masterBillingAccount")
-      private final @Nullable Output<String> masterBillingAccount;
+    private @Nullable Output<String> masterBillingAccount;
 
-    public Output<String> masterBillingAccount() {
-        return this.masterBillingAccount == null ? Codegen.empty() : this.masterBillingAccount;
+    public Optional<Output<String>> masterBillingAccount() {
+        return Optional.ofNullable(this.masterBillingAccount);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SubAccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -79,115 +79,98 @@ public final class SubAccountState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="open")
-      private final @Nullable Output<Boolean> open;
+    private @Nullable Output<Boolean> open;
 
-    public Output<Boolean> open() {
-        return this.open == null ? Codegen.empty() : this.open;
+    public Optional<Output<Boolean>> open() {
+        return Optional.ofNullable(this.open);
     }
 
-    public SubAccountState(
-        @Nullable Output<String> billingAccountId,
-        @Nullable Output<String> deletionPolicy,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> masterBillingAccount,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> open) {
-        this.billingAccountId = billingAccountId;
-        this.deletionPolicy = deletionPolicy;
-        this.displayName = displayName;
-        this.masterBillingAccount = masterBillingAccount;
-        this.name = name;
-        this.open = open;
-    }
+    private SubAccountState() {}
 
-    private SubAccountState() {
-        this.billingAccountId = Codegen.empty();
-        this.deletionPolicy = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.masterBillingAccount = Codegen.empty();
-        this.name = Codegen.empty();
-        this.open = Codegen.empty();
+    private SubAccountState(SubAccountState $) {
+        this.billingAccountId = $.billingAccountId;
+        this.deletionPolicy = $.deletionPolicy;
+        this.displayName = $.displayName;
+        this.masterBillingAccount = $.masterBillingAccount;
+        this.name = $.name;
+        this.open = $.open;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubAccountState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> billingAccountId;
-        private @Nullable Output<String> deletionPolicy;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> masterBillingAccount;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> open;
+        private SubAccountState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubAccountState();
         }
 
         public Builder(SubAccountState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.deletionPolicy = defaults.deletionPolicy;
-    	      this.displayName = defaults.displayName;
-    	      this.masterBillingAccount = defaults.masterBillingAccount;
-    	      this.name = defaults.name;
-    	      this.open = defaults.open;
+            $ = new SubAccountState(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountId(@Nullable Output<String> billingAccountId) {
-            this.billingAccountId = billingAccountId;
+            $.billingAccountId = billingAccountId;
             return this;
         }
-        public Builder billingAccountId(@Nullable String billingAccountId) {
-            this.billingAccountId = Codegen.ofNullable(billingAccountId);
-            return this;
+
+        public Builder billingAccountId(String billingAccountId) {
+            return billingAccountId(Output.of(billingAccountId));
         }
+
         public Builder deletionPolicy(@Nullable Output<String> deletionPolicy) {
-            this.deletionPolicy = deletionPolicy;
+            $.deletionPolicy = deletionPolicy;
             return this;
         }
-        public Builder deletionPolicy(@Nullable String deletionPolicy) {
-            this.deletionPolicy = Codegen.ofNullable(deletionPolicy);
-            return this;
+
+        public Builder deletionPolicy(String deletionPolicy) {
+            return deletionPolicy(Output.of(deletionPolicy));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder masterBillingAccount(@Nullable Output<String> masterBillingAccount) {
-            this.masterBillingAccount = masterBillingAccount;
+            $.masterBillingAccount = masterBillingAccount;
             return this;
         }
-        public Builder masterBillingAccount(@Nullable String masterBillingAccount) {
-            this.masterBillingAccount = Codegen.ofNullable(masterBillingAccount);
-            return this;
+
+        public Builder masterBillingAccount(String masterBillingAccount) {
+            return masterBillingAccount(Output.of(masterBillingAccount));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder open(@Nullable Output<Boolean> open) {
-            this.open = open;
+            $.open = open;
             return this;
         }
-        public Builder open(@Nullable Boolean open) {
-            this.open = Codegen.ofNullable(open);
-            return this;
-        }        public SubAccountState build() {
-            return new SubAccountState(billingAccountId, deletionPolicy, displayName, masterBillingAccount, name, open);
+
+        public Builder open(Boolean open) {
+            return open(Output.of(open));
+        }
+
+        public SubAccountState build() {
+            return $;
         }
     }
+
 }

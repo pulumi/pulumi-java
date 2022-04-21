@@ -14,42 +14,42 @@ public final class GetProjectProject extends com.pulumi.resources.InvokeArgs {
     public static final GetProjectProject Empty = new GetProjectProject();
 
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
     }
 
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
     }
 
     @Import(name="lifecycleState", required=true)
-      private final String lifecycleState;
+    private String lifecycleState;
 
     public String lifecycleState() {
         return this.lifecycleState;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="number", required=true)
-      private final String number;
+    private String number;
 
     public String number() {
         return this.number;
     }
 
     @Import(name="parent", required=true)
-      private final Map<String,String> parent;
+    private Map<String,String> parent;
 
     public Map<String,String> parent() {
         return this.parent;
@@ -60,100 +60,87 @@ public final class GetProjectProject extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="projectId", required=true)
-      private final String projectId;
+    private String projectId;
 
     public String projectId() {
         return this.projectId;
     }
 
-    public GetProjectProject(
-        String createTime,
-        Map<String,String> labels,
-        String lifecycleState,
-        String name,
-        String number,
-        Map<String,String> parent,
-        String projectId) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.lifecycleState = Objects.requireNonNull(lifecycleState, "expected parameter 'lifecycleState' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.number = Objects.requireNonNull(number, "expected parameter 'number' to be non-null");
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-        this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
-    }
+    private GetProjectProject() {}
 
-    private GetProjectProject() {
-        this.createTime = null;
-        this.labels = Map.of();
-        this.lifecycleState = null;
-        this.name = null;
-        this.number = null;
-        this.parent = Map.of();
-        this.projectId = null;
+    private GetProjectProject(GetProjectProject $) {
+        this.createTime = $.createTime;
+        this.labels = $.labels;
+        this.lifecycleState = $.lifecycleState;
+        this.name = $.name;
+        this.number = $.number;
+        this.parent = $.parent;
+        this.projectId = $.projectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProjectProject defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private Map<String,String> labels;
-        private String lifecycleState;
-        private String name;
-        private String number;
-        private Map<String,String> parent;
-        private String projectId;
+        private GetProjectProject $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProjectProject();
         }
 
         public Builder(GetProjectProject defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.labels = defaults.labels;
-    	      this.lifecycleState = defaults.lifecycleState;
-    	      this.name = defaults.name;
-    	      this.number = defaults.number;
-    	      this.parent = defaults.parent;
-    	      this.projectId = defaults.projectId;
+            $ = new GetProjectProject(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder lifecycleState(String lifecycleState) {
-            this.lifecycleState = Objects.requireNonNull(lifecycleState);
+            $.lifecycleState = lifecycleState;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder number(String number) {
-            this.number = Objects.requireNonNull(number);
+            $.number = number;
             return this;
         }
+
         public Builder parent(Map<String,String> parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder projectId(String projectId) {
-            this.projectId = Objects.requireNonNull(projectId);
+            $.projectId = projectId;
             return this;
-        }        public GetProjectProject build() {
-            return new GetProjectProject(createTime, labels, lifecycleState, name, number, parent, projectId);
+        }
+
+        public GetProjectProject build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.lifecycleState = Objects.requireNonNull($.lifecycleState, "expected parameter 'lifecycleState' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.number = Objects.requireNonNull($.number, "expected parameter 'number' to be non-null");
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            $.projectId = Objects.requireNonNull($.projectId, "expected parameter 'projectId' to be non-null");
+            return $;
         }
     }
+
 }

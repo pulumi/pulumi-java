@@ -5,11 +5,11 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.FhirStoreIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class FhirStoreIamBindingArgs extends com.pulumi.resources.Resource
     public static final FhirStoreIamBindingArgs Empty = new FhirStoreIamBindingArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<FhirStoreIamBindingConditionArgs> condition;
+    private @Nullable Output<FhirStoreIamBindingConditionArgs> condition;
 
-    public Output<FhirStoreIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<FhirStoreIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -32,14 +32,14 @@ public final class FhirStoreIamBindingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="fhirStoreId", required=true)
-      private final Output<String> fhirStoreId;
+    private Output<String> fhirStoreId;
 
     public Output<String> fhirStoreId() {
         return this.fhirStoreId;
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -52,92 +52,85 @@ public final class FhirStoreIamBindingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public FhirStoreIamBindingArgs(
-        @Nullable Output<FhirStoreIamBindingConditionArgs> condition,
-        Output<String> fhirStoreId,
-        Output<List<String>> members,
-        Output<String> role) {
-        this.condition = condition;
-        this.fhirStoreId = Objects.requireNonNull(fhirStoreId, "expected parameter 'fhirStoreId' to be non-null");
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private FhirStoreIamBindingArgs() {}
 
-    private FhirStoreIamBindingArgs() {
-        this.condition = Codegen.empty();
-        this.fhirStoreId = Codegen.empty();
-        this.members = Codegen.empty();
-        this.role = Codegen.empty();
+    private FhirStoreIamBindingArgs(FhirStoreIamBindingArgs $) {
+        this.condition = $.condition;
+        this.fhirStoreId = $.fhirStoreId;
+        this.members = $.members;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FhirStoreIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FhirStoreIamBindingConditionArgs> condition;
-        private Output<String> fhirStoreId;
-        private Output<List<String>> members;
-        private Output<String> role;
+        private FhirStoreIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FhirStoreIamBindingArgs();
         }
 
         public Builder(FhirStoreIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.fhirStoreId = defaults.fhirStoreId;
-    	      this.members = defaults.members;
-    	      this.role = defaults.role;
+            $ = new FhirStoreIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<FhirStoreIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable FhirStoreIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(FhirStoreIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder fhirStoreId(Output<String> fhirStoreId) {
-            this.fhirStoreId = Objects.requireNonNull(fhirStoreId);
+            $.fhirStoreId = fhirStoreId;
             return this;
         }
+
         public Builder fhirStoreId(String fhirStoreId) {
-            this.fhirStoreId = Output.of(Objects.requireNonNull(fhirStoreId));
-            return this;
+            return fhirStoreId(Output.of(fhirStoreId));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public FhirStoreIamBindingArgs build() {
-            return new FhirStoreIamBindingArgs(condition, fhirStoreId, members, role);
+            return role(Output.of(role));
+        }
+
+        public FhirStoreIamBindingArgs build() {
+            $.fhirStoreId = Objects.requireNonNull($.fhirStoreId, "expected parameter 'fhirStoreId' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

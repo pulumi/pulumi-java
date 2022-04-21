@@ -5,11 +5,11 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TableMaterializedViewGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="enableRefresh")
-      private final @Nullable Output<Boolean> enableRefresh;
+    private @Nullable Output<Boolean> enableRefresh;
 
-    public Output<Boolean> enableRefresh() {
-        return this.enableRefresh == null ? Codegen.empty() : this.enableRefresh;
+    public Optional<Output<Boolean>> enableRefresh() {
+        return Optional.ofNullable(this.enableRefresh);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class TableMaterializedViewGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="query", required=true)
-      private final Output<String> query;
+    private Output<String> query;
 
     public Output<String> query() {
         return this.query;
@@ -46,76 +46,69 @@ public final class TableMaterializedViewGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="refreshIntervalMs")
-      private final @Nullable Output<Integer> refreshIntervalMs;
+    private @Nullable Output<Integer> refreshIntervalMs;
 
-    public Output<Integer> refreshIntervalMs() {
-        return this.refreshIntervalMs == null ? Codegen.empty() : this.refreshIntervalMs;
+    public Optional<Output<Integer>> refreshIntervalMs() {
+        return Optional.ofNullable(this.refreshIntervalMs);
     }
 
-    public TableMaterializedViewGetArgs(
-        @Nullable Output<Boolean> enableRefresh,
-        Output<String> query,
-        @Nullable Output<Integer> refreshIntervalMs) {
-        this.enableRefresh = enableRefresh;
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.refreshIntervalMs = refreshIntervalMs;
-    }
+    private TableMaterializedViewGetArgs() {}
 
-    private TableMaterializedViewGetArgs() {
-        this.enableRefresh = Codegen.empty();
-        this.query = Codegen.empty();
-        this.refreshIntervalMs = Codegen.empty();
+    private TableMaterializedViewGetArgs(TableMaterializedViewGetArgs $) {
+        this.enableRefresh = $.enableRefresh;
+        this.query = $.query;
+        this.refreshIntervalMs = $.refreshIntervalMs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableMaterializedViewGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableRefresh;
-        private Output<String> query;
-        private @Nullable Output<Integer> refreshIntervalMs;
+        private TableMaterializedViewGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableMaterializedViewGetArgs();
         }
 
         public Builder(TableMaterializedViewGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableRefresh = defaults.enableRefresh;
-    	      this.query = defaults.query;
-    	      this.refreshIntervalMs = defaults.refreshIntervalMs;
+            $ = new TableMaterializedViewGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableRefresh(@Nullable Output<Boolean> enableRefresh) {
-            this.enableRefresh = enableRefresh;
+            $.enableRefresh = enableRefresh;
             return this;
         }
-        public Builder enableRefresh(@Nullable Boolean enableRefresh) {
-            this.enableRefresh = Codegen.ofNullable(enableRefresh);
-            return this;
+
+        public Builder enableRefresh(Boolean enableRefresh) {
+            return enableRefresh(Output.of(enableRefresh));
         }
+
         public Builder query(Output<String> query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Output.of(Objects.requireNonNull(query));
-            return this;
+            return query(Output.of(query));
         }
+
         public Builder refreshIntervalMs(@Nullable Output<Integer> refreshIntervalMs) {
-            this.refreshIntervalMs = refreshIntervalMs;
+            $.refreshIntervalMs = refreshIntervalMs;
             return this;
         }
-        public Builder refreshIntervalMs(@Nullable Integer refreshIntervalMs) {
-            this.refreshIntervalMs = Codegen.ofNullable(refreshIntervalMs);
-            return this;
-        }        public TableMaterializedViewGetArgs build() {
-            return new TableMaterializedViewGetArgs(enableRefresh, query, refreshIntervalMs);
+
+        public Builder refreshIntervalMs(Integer refreshIntervalMs) {
+            return refreshIntervalMs(Output.of(refreshIntervalMs));
+        }
+
+        public TableMaterializedViewGetArgs build() {
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            return $;
         }
     }
+
 }

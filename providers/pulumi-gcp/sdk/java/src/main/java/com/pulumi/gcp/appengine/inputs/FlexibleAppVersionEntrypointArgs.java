@@ -5,7 +5,6 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class FlexibleAppVersionEntrypointArgs extends com.pulumi.resources
      * 
      */
     @Import(name="shell", required=true)
-      private final Output<String> shell;
+    private Output<String> shell;
 
     public Output<String> shell() {
         return this.shell;
     }
 
-    public FlexibleAppVersionEntrypointArgs(Output<String> shell) {
-        this.shell = Objects.requireNonNull(shell, "expected parameter 'shell' to be non-null");
-    }
+    private FlexibleAppVersionEntrypointArgs() {}
 
-    private FlexibleAppVersionEntrypointArgs() {
-        this.shell = Codegen.empty();
+    private FlexibleAppVersionEntrypointArgs(FlexibleAppVersionEntrypointArgs $) {
+        this.shell = $.shell;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionEntrypointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> shell;
+        private FlexibleAppVersionEntrypointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionEntrypointArgs();
         }
 
         public Builder(FlexibleAppVersionEntrypointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.shell = defaults.shell;
+            $ = new FlexibleAppVersionEntrypointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder shell(Output<String> shell) {
-            this.shell = Objects.requireNonNull(shell);
+            $.shell = shell;
             return this;
         }
+
         public Builder shell(String shell) {
-            this.shell = Output.of(Objects.requireNonNull(shell));
-            return this;
-        }        public FlexibleAppVersionEntrypointArgs build() {
-            return new FlexibleAppVersionEntrypointArgs(shell);
+            return shell(Output.of(shell));
+        }
+
+        public FlexibleAppVersionEntrypointArgs build() {
+            $.shell = Objects.requireNonNull($.shell, "expected parameter 'shell' to be non-null");
+            return $;
         }
     }
+
 }

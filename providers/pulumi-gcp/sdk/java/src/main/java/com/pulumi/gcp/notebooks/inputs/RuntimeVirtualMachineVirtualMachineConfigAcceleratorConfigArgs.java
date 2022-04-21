@@ -5,10 +5,10 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArg
      * 
      */
     @Import(name="coreCount")
-      private final @Nullable Output<Integer> coreCount;
+    private @Nullable Output<Integer> coreCount;
 
-    public Output<Integer> coreCount() {
-        return this.coreCount == null ? Codegen.empty() : this.coreCount;
+    public Optional<Output<Integer>> coreCount() {
+        return Optional.ofNullable(this.coreCount);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArg
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs(
-        @Nullable Output<Integer> coreCount,
-        @Nullable Output<String> type) {
-        this.coreCount = coreCount;
-        this.type = type;
-    }
+    private RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs() {}
 
-    private RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs() {
-        this.coreCount = Codegen.empty();
-        this.type = Codegen.empty();
+    private RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs(RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs $) {
+        this.coreCount = $.coreCount;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> coreCount;
-        private @Nullable Output<String> type;
+        private RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs();
         }
 
         public Builder(RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coreCount = defaults.coreCount;
-    	      this.type = defaults.type;
+            $ = new RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder coreCount(@Nullable Output<Integer> coreCount) {
-            this.coreCount = coreCount;
+            $.coreCount = coreCount;
             return this;
         }
-        public Builder coreCount(@Nullable Integer coreCount) {
-            this.coreCount = Codegen.ofNullable(coreCount);
-            return this;
+
+        public Builder coreCount(Integer coreCount) {
+            return coreCount(Output.of(coreCount));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs build() {
-            return new RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs(coreCount, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs build() {
+            return $;
         }
     }
+
 }

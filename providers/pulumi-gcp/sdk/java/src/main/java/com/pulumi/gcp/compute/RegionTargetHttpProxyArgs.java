@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RegionTargetHttpProxyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RegionTargetHttpProxyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class RegionTargetHttpProxyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class RegionTargetHttpProxyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -73,102 +73,89 @@ public final class RegionTargetHttpProxyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="urlMap", required=true)
-      private final Output<String> urlMap;
+    private Output<String> urlMap;
 
     public Output<String> urlMap() {
         return this.urlMap;
     }
 
-    public RegionTargetHttpProxyArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<String> urlMap) {
-        this.description = description;
-        this.name = name;
-        this.project = project;
-        this.region = region;
-        this.urlMap = Objects.requireNonNull(urlMap, "expected parameter 'urlMap' to be non-null");
-    }
+    private RegionTargetHttpProxyArgs() {}
 
-    private RegionTargetHttpProxyArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.urlMap = Codegen.empty();
+    private RegionTargetHttpProxyArgs(RegionTargetHttpProxyArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
+        this.urlMap = $.urlMap;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionTargetHttpProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<String> urlMap;
+        private RegionTargetHttpProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionTargetHttpProxyArgs();
         }
 
         public Builder(RegionTargetHttpProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.urlMap = defaults.urlMap;
+            $ = new RegionTargetHttpProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder urlMap(Output<String> urlMap) {
-            this.urlMap = Objects.requireNonNull(urlMap);
+            $.urlMap = urlMap;
             return this;
         }
+
         public Builder urlMap(String urlMap) {
-            this.urlMap = Output.of(Objects.requireNonNull(urlMap));
-            return this;
-        }        public RegionTargetHttpProxyArgs build() {
-            return new RegionTargetHttpProxyArgs(description, name, project, region, urlMap);
+            return urlMap(Output.of(urlMap));
+        }
+
+        public RegionTargetHttpProxyArgs build() {
+            $.urlMap = Objects.requireNonNull($.urlMap, "expected parameter 'urlMap' to be non-null");
+            return $;
         }
     }
+
 }

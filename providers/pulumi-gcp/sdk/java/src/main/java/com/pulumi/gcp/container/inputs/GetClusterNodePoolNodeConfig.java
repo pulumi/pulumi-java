@@ -26,447 +26,411 @@ public final class GetClusterNodePoolNodeConfig extends com.pulumi.resources.Inv
     public static final GetClusterNodePoolNodeConfig Empty = new GetClusterNodePoolNodeConfig();
 
     @Import(name="bootDiskKmsKey", required=true)
-      private final String bootDiskKmsKey;
+    private String bootDiskKmsKey;
 
     public String bootDiskKmsKey() {
         return this.bootDiskKmsKey;
     }
 
     @Import(name="diskSizeGb", required=true)
-      private final Integer diskSizeGb;
+    private Integer diskSizeGb;
 
     public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
 
     @Import(name="diskType", required=true)
-      private final String diskType;
+    private String diskType;
 
     public String diskType() {
         return this.diskType;
     }
 
     @Import(name="ephemeralStorageConfigs", required=true)
-      private final List<GetClusterNodePoolNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs;
+    private List<GetClusterNodePoolNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs;
 
     public List<GetClusterNodePoolNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs() {
         return this.ephemeralStorageConfigs;
     }
 
     @Import(name="gcfsConfigs", required=true)
-      private final List<GetClusterNodePoolNodeConfigGcfsConfig> gcfsConfigs;
+    private List<GetClusterNodePoolNodeConfigGcfsConfig> gcfsConfigs;
 
     public List<GetClusterNodePoolNodeConfigGcfsConfig> gcfsConfigs() {
         return this.gcfsConfigs;
     }
 
     @Import(name="guestAccelerators", required=true)
-      private final List<GetClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators;
+    private List<GetClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators;
 
     public List<GetClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators() {
         return this.guestAccelerators;
     }
 
     @Import(name="imageType", required=true)
-      private final String imageType;
+    private String imageType;
 
     public String imageType() {
         return this.imageType;
     }
 
     @Import(name="kubeletConfigs", required=true)
-      private final List<GetClusterNodePoolNodeConfigKubeletConfig> kubeletConfigs;
+    private List<GetClusterNodePoolNodeConfigKubeletConfig> kubeletConfigs;
 
     public List<GetClusterNodePoolNodeConfigKubeletConfig> kubeletConfigs() {
         return this.kubeletConfigs;
     }
 
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
     }
 
     @Import(name="linuxNodeConfigs", required=true)
-      private final List<GetClusterNodePoolNodeConfigLinuxNodeConfig> linuxNodeConfigs;
+    private List<GetClusterNodePoolNodeConfigLinuxNodeConfig> linuxNodeConfigs;
 
     public List<GetClusterNodePoolNodeConfigLinuxNodeConfig> linuxNodeConfigs() {
         return this.linuxNodeConfigs;
     }
 
     @Import(name="localSsdCount", required=true)
-      private final Integer localSsdCount;
+    private Integer localSsdCount;
 
     public Integer localSsdCount() {
         return this.localSsdCount;
     }
 
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
     }
 
     @Import(name="metadata", required=true)
-      private final Map<String,String> metadata;
+    private Map<String,String> metadata;
 
     public Map<String,String> metadata() {
         return this.metadata;
     }
 
     @Import(name="minCpuPlatform", required=true)
-      private final String minCpuPlatform;
+    private String minCpuPlatform;
 
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
 
     @Import(name="nodeGroup", required=true)
-      private final String nodeGroup;
+    private String nodeGroup;
 
     public String nodeGroup() {
         return this.nodeGroup;
     }
 
     @Import(name="oauthScopes", required=true)
-      private final List<String> oauthScopes;
+    private List<String> oauthScopes;
 
     public List<String> oauthScopes() {
         return this.oauthScopes;
     }
 
     @Import(name="preemptible", required=true)
-      private final Boolean preemptible;
+    private Boolean preemptible;
 
     public Boolean preemptible() {
         return this.preemptible;
     }
 
     @Import(name="sandboxConfigs", required=true)
-      private final List<GetClusterNodePoolNodeConfigSandboxConfig> sandboxConfigs;
+    private List<GetClusterNodePoolNodeConfigSandboxConfig> sandboxConfigs;
 
     public List<GetClusterNodePoolNodeConfigSandboxConfig> sandboxConfigs() {
         return this.sandboxConfigs;
     }
 
     @Import(name="serviceAccount", required=true)
-      private final String serviceAccount;
+    private String serviceAccount;
 
     public String serviceAccount() {
         return this.serviceAccount;
     }
 
     @Import(name="shieldedInstanceConfigs", required=true)
-      private final List<GetClusterNodePoolNodeConfigShieldedInstanceConfig> shieldedInstanceConfigs;
+    private List<GetClusterNodePoolNodeConfigShieldedInstanceConfig> shieldedInstanceConfigs;
 
     public List<GetClusterNodePoolNodeConfigShieldedInstanceConfig> shieldedInstanceConfigs() {
         return this.shieldedInstanceConfigs;
     }
 
     @Import(name="spot", required=true)
-      private final Boolean spot;
+    private Boolean spot;
 
     public Boolean spot() {
         return this.spot;
     }
 
     @Import(name="tags", required=true)
-      private final List<String> tags;
+    private List<String> tags;
 
     public List<String> tags() {
         return this.tags;
     }
 
     @Import(name="taints", required=true)
-      private final List<GetClusterNodePoolNodeConfigTaint> taints;
+    private List<GetClusterNodePoolNodeConfigTaint> taints;
 
     public List<GetClusterNodePoolNodeConfigTaint> taints() {
         return this.taints;
     }
 
     @Import(name="workloadMetadataConfigs", required=true)
-      private final List<GetClusterNodePoolNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs;
+    private List<GetClusterNodePoolNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs;
 
     public List<GetClusterNodePoolNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs() {
         return this.workloadMetadataConfigs;
     }
 
-    public GetClusterNodePoolNodeConfig(
-        String bootDiskKmsKey,
-        Integer diskSizeGb,
-        String diskType,
-        List<GetClusterNodePoolNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs,
-        List<GetClusterNodePoolNodeConfigGcfsConfig> gcfsConfigs,
-        List<GetClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators,
-        String imageType,
-        List<GetClusterNodePoolNodeConfigKubeletConfig> kubeletConfigs,
-        Map<String,String> labels,
-        List<GetClusterNodePoolNodeConfigLinuxNodeConfig> linuxNodeConfigs,
-        Integer localSsdCount,
-        String machineType,
-        Map<String,String> metadata,
-        String minCpuPlatform,
-        String nodeGroup,
-        List<String> oauthScopes,
-        Boolean preemptible,
-        List<GetClusterNodePoolNodeConfigSandboxConfig> sandboxConfigs,
-        String serviceAccount,
-        List<GetClusterNodePoolNodeConfigShieldedInstanceConfig> shieldedInstanceConfigs,
-        Boolean spot,
-        List<String> tags,
-        List<GetClusterNodePoolNodeConfigTaint> taints,
-        List<GetClusterNodePoolNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs) {
-        this.bootDiskKmsKey = Objects.requireNonNull(bootDiskKmsKey, "expected parameter 'bootDiskKmsKey' to be non-null");
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.ephemeralStorageConfigs = Objects.requireNonNull(ephemeralStorageConfigs, "expected parameter 'ephemeralStorageConfigs' to be non-null");
-        this.gcfsConfigs = Objects.requireNonNull(gcfsConfigs, "expected parameter 'gcfsConfigs' to be non-null");
-        this.guestAccelerators = Objects.requireNonNull(guestAccelerators, "expected parameter 'guestAccelerators' to be non-null");
-        this.imageType = Objects.requireNonNull(imageType, "expected parameter 'imageType' to be non-null");
-        this.kubeletConfigs = Objects.requireNonNull(kubeletConfigs, "expected parameter 'kubeletConfigs' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.linuxNodeConfigs = Objects.requireNonNull(linuxNodeConfigs, "expected parameter 'linuxNodeConfigs' to be non-null");
-        this.localSsdCount = Objects.requireNonNull(localSsdCount, "expected parameter 'localSsdCount' to be non-null");
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
-        this.nodeGroup = Objects.requireNonNull(nodeGroup, "expected parameter 'nodeGroup' to be non-null");
-        this.oauthScopes = Objects.requireNonNull(oauthScopes, "expected parameter 'oauthScopes' to be non-null");
-        this.preemptible = Objects.requireNonNull(preemptible, "expected parameter 'preemptible' to be non-null");
-        this.sandboxConfigs = Objects.requireNonNull(sandboxConfigs, "expected parameter 'sandboxConfigs' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-        this.shieldedInstanceConfigs = Objects.requireNonNull(shieldedInstanceConfigs, "expected parameter 'shieldedInstanceConfigs' to be non-null");
-        this.spot = Objects.requireNonNull(spot, "expected parameter 'spot' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-        this.taints = Objects.requireNonNull(taints, "expected parameter 'taints' to be non-null");
-        this.workloadMetadataConfigs = Objects.requireNonNull(workloadMetadataConfigs, "expected parameter 'workloadMetadataConfigs' to be non-null");
-    }
+    private GetClusterNodePoolNodeConfig() {}
 
-    private GetClusterNodePoolNodeConfig() {
-        this.bootDiskKmsKey = null;
-        this.diskSizeGb = null;
-        this.diskType = null;
-        this.ephemeralStorageConfigs = List.of();
-        this.gcfsConfigs = List.of();
-        this.guestAccelerators = List.of();
-        this.imageType = null;
-        this.kubeletConfigs = List.of();
-        this.labels = Map.of();
-        this.linuxNodeConfigs = List.of();
-        this.localSsdCount = null;
-        this.machineType = null;
-        this.metadata = Map.of();
-        this.minCpuPlatform = null;
-        this.nodeGroup = null;
-        this.oauthScopes = List.of();
-        this.preemptible = null;
-        this.sandboxConfigs = List.of();
-        this.serviceAccount = null;
-        this.shieldedInstanceConfigs = List.of();
-        this.spot = null;
-        this.tags = List.of();
-        this.taints = List.of();
-        this.workloadMetadataConfigs = List.of();
+    private GetClusterNodePoolNodeConfig(GetClusterNodePoolNodeConfig $) {
+        this.bootDiskKmsKey = $.bootDiskKmsKey;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.ephemeralStorageConfigs = $.ephemeralStorageConfigs;
+        this.gcfsConfigs = $.gcfsConfigs;
+        this.guestAccelerators = $.guestAccelerators;
+        this.imageType = $.imageType;
+        this.kubeletConfigs = $.kubeletConfigs;
+        this.labels = $.labels;
+        this.linuxNodeConfigs = $.linuxNodeConfigs;
+        this.localSsdCount = $.localSsdCount;
+        this.machineType = $.machineType;
+        this.metadata = $.metadata;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.nodeGroup = $.nodeGroup;
+        this.oauthScopes = $.oauthScopes;
+        this.preemptible = $.preemptible;
+        this.sandboxConfigs = $.sandboxConfigs;
+        this.serviceAccount = $.serviceAccount;
+        this.shieldedInstanceConfigs = $.shieldedInstanceConfigs;
+        this.spot = $.spot;
+        this.tags = $.tags;
+        this.taints = $.taints;
+        this.workloadMetadataConfigs = $.workloadMetadataConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodePoolNodeConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bootDiskKmsKey;
-        private Integer diskSizeGb;
-        private String diskType;
-        private List<GetClusterNodePoolNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs;
-        private List<GetClusterNodePoolNodeConfigGcfsConfig> gcfsConfigs;
-        private List<GetClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators;
-        private String imageType;
-        private List<GetClusterNodePoolNodeConfigKubeletConfig> kubeletConfigs;
-        private Map<String,String> labels;
-        private List<GetClusterNodePoolNodeConfigLinuxNodeConfig> linuxNodeConfigs;
-        private Integer localSsdCount;
-        private String machineType;
-        private Map<String,String> metadata;
-        private String minCpuPlatform;
-        private String nodeGroup;
-        private List<String> oauthScopes;
-        private Boolean preemptible;
-        private List<GetClusterNodePoolNodeConfigSandboxConfig> sandboxConfigs;
-        private String serviceAccount;
-        private List<GetClusterNodePoolNodeConfigShieldedInstanceConfig> shieldedInstanceConfigs;
-        private Boolean spot;
-        private List<String> tags;
-        private List<GetClusterNodePoolNodeConfigTaint> taints;
-        private List<GetClusterNodePoolNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs;
+        private GetClusterNodePoolNodeConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodePoolNodeConfig();
         }
 
         public Builder(GetClusterNodePoolNodeConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bootDiskKmsKey = defaults.bootDiskKmsKey;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.ephemeralStorageConfigs = defaults.ephemeralStorageConfigs;
-    	      this.gcfsConfigs = defaults.gcfsConfigs;
-    	      this.guestAccelerators = defaults.guestAccelerators;
-    	      this.imageType = defaults.imageType;
-    	      this.kubeletConfigs = defaults.kubeletConfigs;
-    	      this.labels = defaults.labels;
-    	      this.linuxNodeConfigs = defaults.linuxNodeConfigs;
-    	      this.localSsdCount = defaults.localSsdCount;
-    	      this.machineType = defaults.machineType;
-    	      this.metadata = defaults.metadata;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.nodeGroup = defaults.nodeGroup;
-    	      this.oauthScopes = defaults.oauthScopes;
-    	      this.preemptible = defaults.preemptible;
-    	      this.sandboxConfigs = defaults.sandboxConfigs;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.shieldedInstanceConfigs = defaults.shieldedInstanceConfigs;
-    	      this.spot = defaults.spot;
-    	      this.tags = defaults.tags;
-    	      this.taints = defaults.taints;
-    	      this.workloadMetadataConfigs = defaults.workloadMetadataConfigs;
+            $ = new GetClusterNodePoolNodeConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder bootDiskKmsKey(String bootDiskKmsKey) {
-            this.bootDiskKmsKey = Objects.requireNonNull(bootDiskKmsKey);
+            $.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
+
         public Builder diskSizeGb(Integer diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder diskType(String diskType) {
-            this.diskType = Objects.requireNonNull(diskType);
+            $.diskType = diskType;
             return this;
         }
+
         public Builder ephemeralStorageConfigs(List<GetClusterNodePoolNodeConfigEphemeralStorageConfig> ephemeralStorageConfigs) {
-            this.ephemeralStorageConfigs = Objects.requireNonNull(ephemeralStorageConfigs);
+            $.ephemeralStorageConfigs = ephemeralStorageConfigs;
             return this;
         }
+
         public Builder ephemeralStorageConfigs(GetClusterNodePoolNodeConfigEphemeralStorageConfig... ephemeralStorageConfigs) {
             return ephemeralStorageConfigs(List.of(ephemeralStorageConfigs));
         }
+
         public Builder gcfsConfigs(List<GetClusterNodePoolNodeConfigGcfsConfig> gcfsConfigs) {
-            this.gcfsConfigs = Objects.requireNonNull(gcfsConfigs);
+            $.gcfsConfigs = gcfsConfigs;
             return this;
         }
+
         public Builder gcfsConfigs(GetClusterNodePoolNodeConfigGcfsConfig... gcfsConfigs) {
             return gcfsConfigs(List.of(gcfsConfigs));
         }
+
         public Builder guestAccelerators(List<GetClusterNodePoolNodeConfigGuestAccelerator> guestAccelerators) {
-            this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
+            $.guestAccelerators = guestAccelerators;
             return this;
         }
+
         public Builder guestAccelerators(GetClusterNodePoolNodeConfigGuestAccelerator... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
+
         public Builder imageType(String imageType) {
-            this.imageType = Objects.requireNonNull(imageType);
+            $.imageType = imageType;
             return this;
         }
+
         public Builder kubeletConfigs(List<GetClusterNodePoolNodeConfigKubeletConfig> kubeletConfigs) {
-            this.kubeletConfigs = Objects.requireNonNull(kubeletConfigs);
+            $.kubeletConfigs = kubeletConfigs;
             return this;
         }
+
         public Builder kubeletConfigs(GetClusterNodePoolNodeConfigKubeletConfig... kubeletConfigs) {
             return kubeletConfigs(List.of(kubeletConfigs));
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder linuxNodeConfigs(List<GetClusterNodePoolNodeConfigLinuxNodeConfig> linuxNodeConfigs) {
-            this.linuxNodeConfigs = Objects.requireNonNull(linuxNodeConfigs);
+            $.linuxNodeConfigs = linuxNodeConfigs;
             return this;
         }
+
         public Builder linuxNodeConfigs(GetClusterNodePoolNodeConfigLinuxNodeConfig... linuxNodeConfigs) {
             return linuxNodeConfigs(List.of(linuxNodeConfigs));
         }
+
         public Builder localSsdCount(Integer localSsdCount) {
-            this.localSsdCount = Objects.requireNonNull(localSsdCount);
+            $.localSsdCount = localSsdCount;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder metadata(Map<String,String> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder minCpuPlatform(String minCpuPlatform) {
-            this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
+
         public Builder nodeGroup(String nodeGroup) {
-            this.nodeGroup = Objects.requireNonNull(nodeGroup);
+            $.nodeGroup = nodeGroup;
             return this;
         }
+
         public Builder oauthScopes(List<String> oauthScopes) {
-            this.oauthScopes = Objects.requireNonNull(oauthScopes);
+            $.oauthScopes = oauthScopes;
             return this;
         }
+
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
+
         public Builder preemptible(Boolean preemptible) {
-            this.preemptible = Objects.requireNonNull(preemptible);
+            $.preemptible = preemptible;
             return this;
         }
+
         public Builder sandboxConfigs(List<GetClusterNodePoolNodeConfigSandboxConfig> sandboxConfigs) {
-            this.sandboxConfigs = Objects.requireNonNull(sandboxConfigs);
+            $.sandboxConfigs = sandboxConfigs;
             return this;
         }
+
         public Builder sandboxConfigs(GetClusterNodePoolNodeConfigSandboxConfig... sandboxConfigs) {
             return sandboxConfigs(List.of(sandboxConfigs));
         }
+
         public Builder serviceAccount(String serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
         }
+
         public Builder shieldedInstanceConfigs(List<GetClusterNodePoolNodeConfigShieldedInstanceConfig> shieldedInstanceConfigs) {
-            this.shieldedInstanceConfigs = Objects.requireNonNull(shieldedInstanceConfigs);
+            $.shieldedInstanceConfigs = shieldedInstanceConfigs;
             return this;
         }
+
         public Builder shieldedInstanceConfigs(GetClusterNodePoolNodeConfigShieldedInstanceConfig... shieldedInstanceConfigs) {
             return shieldedInstanceConfigs(List.of(shieldedInstanceConfigs));
         }
+
         public Builder spot(Boolean spot) {
-            this.spot = Objects.requireNonNull(spot);
+            $.spot = spot;
             return this;
         }
+
         public Builder tags(List<String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder taints(List<GetClusterNodePoolNodeConfigTaint> taints) {
-            this.taints = Objects.requireNonNull(taints);
+            $.taints = taints;
             return this;
         }
+
         public Builder taints(GetClusterNodePoolNodeConfigTaint... taints) {
             return taints(List.of(taints));
         }
+
         public Builder workloadMetadataConfigs(List<GetClusterNodePoolNodeConfigWorkloadMetadataConfig> workloadMetadataConfigs) {
-            this.workloadMetadataConfigs = Objects.requireNonNull(workloadMetadataConfigs);
+            $.workloadMetadataConfigs = workloadMetadataConfigs;
             return this;
         }
+
         public Builder workloadMetadataConfigs(GetClusterNodePoolNodeConfigWorkloadMetadataConfig... workloadMetadataConfigs) {
             return workloadMetadataConfigs(List.of(workloadMetadataConfigs));
-        }        public GetClusterNodePoolNodeConfig build() {
-            return new GetClusterNodePoolNodeConfig(bootDiskKmsKey, diskSizeGb, diskType, ephemeralStorageConfigs, gcfsConfigs, guestAccelerators, imageType, kubeletConfigs, labels, linuxNodeConfigs, localSsdCount, machineType, metadata, minCpuPlatform, nodeGroup, oauthScopes, preemptible, sandboxConfigs, serviceAccount, shieldedInstanceConfigs, spot, tags, taints, workloadMetadataConfigs);
+        }
+
+        public GetClusterNodePoolNodeConfig build() {
+            $.bootDiskKmsKey = Objects.requireNonNull($.bootDiskKmsKey, "expected parameter 'bootDiskKmsKey' to be non-null");
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.diskType = Objects.requireNonNull($.diskType, "expected parameter 'diskType' to be non-null");
+            $.ephemeralStorageConfigs = Objects.requireNonNull($.ephemeralStorageConfigs, "expected parameter 'ephemeralStorageConfigs' to be non-null");
+            $.gcfsConfigs = Objects.requireNonNull($.gcfsConfigs, "expected parameter 'gcfsConfigs' to be non-null");
+            $.guestAccelerators = Objects.requireNonNull($.guestAccelerators, "expected parameter 'guestAccelerators' to be non-null");
+            $.imageType = Objects.requireNonNull($.imageType, "expected parameter 'imageType' to be non-null");
+            $.kubeletConfigs = Objects.requireNonNull($.kubeletConfigs, "expected parameter 'kubeletConfigs' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.linuxNodeConfigs = Objects.requireNonNull($.linuxNodeConfigs, "expected parameter 'linuxNodeConfigs' to be non-null");
+            $.localSsdCount = Objects.requireNonNull($.localSsdCount, "expected parameter 'localSsdCount' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.minCpuPlatform = Objects.requireNonNull($.minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
+            $.nodeGroup = Objects.requireNonNull($.nodeGroup, "expected parameter 'nodeGroup' to be non-null");
+            $.oauthScopes = Objects.requireNonNull($.oauthScopes, "expected parameter 'oauthScopes' to be non-null");
+            $.preemptible = Objects.requireNonNull($.preemptible, "expected parameter 'preemptible' to be non-null");
+            $.sandboxConfigs = Objects.requireNonNull($.sandboxConfigs, "expected parameter 'sandboxConfigs' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            $.shieldedInstanceConfigs = Objects.requireNonNull($.shieldedInstanceConfigs, "expected parameter 'shieldedInstanceConfigs' to be non-null");
+            $.spot = Objects.requireNonNull($.spot, "expected parameter 'spot' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            $.taints = Objects.requireNonNull($.taints, "expected parameter 'taints' to be non-null");
+            $.workloadMetadataConfigs = Objects.requireNonNull($.workloadMetadataConfigs, "expected parameter 'workloadMetadataConfigs' to be non-null");
+            return $;
         }
     }
+
 }

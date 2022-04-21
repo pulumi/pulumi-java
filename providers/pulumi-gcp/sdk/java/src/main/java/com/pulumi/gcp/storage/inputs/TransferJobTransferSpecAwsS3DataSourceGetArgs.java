@@ -5,10 +5,10 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.storage.inputs.TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends com.pul
      * 
      */
     @Import(name="awsAccessKey")
-      private final @Nullable Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> awsAccessKey;
+    private @Nullable Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> awsAccessKey;
 
-    public Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> awsAccessKey() {
-        return this.awsAccessKey == null ? Codegen.empty() : this.awsAccessKey;
+    public Optional<Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs>> awsAccessKey() {
+        return Optional.ofNullable(this.awsAccessKey);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends com.pul
      * 
      */
     @Import(name="bucketName", required=true)
-      private final Output<String> bucketName;
+    private Output<String> bucketName;
 
     public Output<String> bucketName() {
         return this.bucketName;
@@ -43,76 +43,69 @@ public final class TransferJobTransferSpecAwsS3DataSourceGetArgs extends com.pul
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public TransferJobTransferSpecAwsS3DataSourceGetArgs(
-        @Nullable Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> awsAccessKey,
-        Output<String> bucketName,
-        @Nullable Output<String> roleArn) {
-        this.awsAccessKey = awsAccessKey;
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.roleArn = roleArn;
-    }
+    private TransferJobTransferSpecAwsS3DataSourceGetArgs() {}
 
-    private TransferJobTransferSpecAwsS3DataSourceGetArgs() {
-        this.awsAccessKey = Codegen.empty();
-        this.bucketName = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private TransferJobTransferSpecAwsS3DataSourceGetArgs(TransferJobTransferSpecAwsS3DataSourceGetArgs $) {
+        this.awsAccessKey = $.awsAccessKey;
+        this.bucketName = $.bucketName;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferJobTransferSpecAwsS3DataSourceGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> awsAccessKey;
-        private Output<String> bucketName;
-        private @Nullable Output<String> roleArn;
+        private TransferJobTransferSpecAwsS3DataSourceGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferJobTransferSpecAwsS3DataSourceGetArgs();
         }
 
         public Builder(TransferJobTransferSpecAwsS3DataSourceGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccessKey = defaults.awsAccessKey;
-    	      this.bucketName = defaults.bucketName;
-    	      this.roleArn = defaults.roleArn;
+            $ = new TransferJobTransferSpecAwsS3DataSourceGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccessKey(@Nullable Output<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs> awsAccessKey) {
-            this.awsAccessKey = awsAccessKey;
+            $.awsAccessKey = awsAccessKey;
             return this;
         }
-        public Builder awsAccessKey(@Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs awsAccessKey) {
-            this.awsAccessKey = Codegen.ofNullable(awsAccessKey);
-            return this;
+
+        public Builder awsAccessKey(TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyGetArgs awsAccessKey) {
+            return awsAccessKey(Output.of(awsAccessKey));
         }
+
         public Builder bucketName(Output<String> bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketName(String bucketName) {
-            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
-            return this;
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public TransferJobTransferSpecAwsS3DataSourceGetArgs build() {
-            return new TransferJobTransferSpecAwsS3DataSourceGetArgs(awsAccessKey, bucketName, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public TransferJobTransferSpecAwsS3DataSourceGetArgs build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            return $;
         }
     }
+
 }

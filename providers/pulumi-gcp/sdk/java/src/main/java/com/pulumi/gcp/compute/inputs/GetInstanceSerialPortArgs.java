@@ -20,7 +20,7 @@ public final class GetInstanceSerialPortArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="instance", required=true)
-      private final String instance;
+    private String instance;
 
     public String instance() {
         return this.instance;
@@ -31,7 +31,7 @@ public final class GetInstanceSerialPortArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -43,10 +43,10 @@ public final class GetInstanceSerialPortArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -55,73 +55,64 @@ public final class GetInstanceSerialPortArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="zone")
-      private final @Nullable String zone;
+    private @Nullable String zone;
 
     public Optional<String> zone() {
-        return this.zone == null ? Optional.empty() : Optional.ofNullable(this.zone);
+        return Optional.ofNullable(this.zone);
     }
 
-    public GetInstanceSerialPortArgs(
-        String instance,
-        Integer port,
-        @Nullable String project,
-        @Nullable String zone) {
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.project = project;
-        this.zone = zone;
-    }
+    private GetInstanceSerialPortArgs() {}
 
-    private GetInstanceSerialPortArgs() {
-        this.instance = null;
-        this.port = null;
-        this.project = null;
-        this.zone = null;
+    private GetInstanceSerialPortArgs(GetInstanceSerialPortArgs $) {
+        this.instance = $.instance;
+        this.port = $.port;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceSerialPortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instance;
-        private Integer port;
-        private @Nullable String project;
-        private @Nullable String zone;
+        private GetInstanceSerialPortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceSerialPortArgs();
         }
 
         public Builder(GetInstanceSerialPortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instance = defaults.instance;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new GetInstanceSerialPortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instance(String instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder zone(@Nullable String zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
-        }        public GetInstanceSerialPortArgs build() {
-            return new GetInstanceSerialPortArgs(instance, port, project, zone);
+        }
+
+        public GetInstanceSerialPortArgs build() {
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

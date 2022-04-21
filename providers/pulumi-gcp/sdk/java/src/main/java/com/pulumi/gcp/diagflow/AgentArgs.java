@@ -5,12 +5,12 @@ package com.pulumi.gcp.diagflow;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="avatarUri")
-      private final @Nullable Output<String> avatarUri;
+    private @Nullable Output<String> avatarUri;
 
-    public Output<String> avatarUri() {
-        return this.avatarUri == null ? Codegen.empty() : this.avatarUri;
+    public Optional<Output<String>> avatarUri() {
+        return Optional.ofNullable(this.avatarUri);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="classificationThreshold")
-      private final @Nullable Output<Double> classificationThreshold;
+    private @Nullable Output<Double> classificationThreshold;
 
-    public Output<Double> classificationThreshold() {
-        return this.classificationThreshold == null ? Codegen.empty() : this.classificationThreshold;
+    public Optional<Output<Double>> classificationThreshold() {
+        return Optional.ofNullable(this.classificationThreshold);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultLanguageCode", required=true)
-      private final Output<String> defaultLanguageCode;
+    private Output<String> defaultLanguageCode;
 
     public Output<String> defaultLanguageCode() {
         return this.defaultLanguageCode;
@@ -80,10 +80,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -91,7 +91,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -102,10 +102,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableLogging")
-      private final @Nullable Output<Boolean> enableLogging;
+    private @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> enableLogging() {
-        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
+    public Optional<Output<Boolean>> enableLogging() {
+        return Optional.ofNullable(this.enableLogging);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="matchMode")
-      private final @Nullable Output<String> matchMode;
+    private @Nullable Output<String> matchMode;
 
-    public Output<String> matchMode() {
-        return this.matchMode == null ? Codegen.empty() : this.matchMode;
+    public Optional<Output<String>> matchMode() {
+        return Optional.ofNullable(this.matchMode);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportedLanguageCodes")
-      private final @Nullable Output<List<String>> supportedLanguageCodes;
+    private @Nullable Output<List<String>> supportedLanguageCodes;
 
-    public Output<List<String>> supportedLanguageCodes() {
-        return this.supportedLanguageCodes == null ? Codegen.empty() : this.supportedLanguageCodes;
+    public Optional<Output<List<String>>> supportedLanguageCodes() {
+        return Optional.ofNullable(this.supportedLanguageCodes);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<String> tier;
+    private @Nullable Output<String> tier;
 
-    public Output<String> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<String>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
     /**
@@ -169,196 +169,165 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeZone", required=true)
-      private final Output<String> timeZone;
+    private Output<String> timeZone;
 
     public Output<String> timeZone() {
         return this.timeZone;
     }
 
-    public AgentArgs(
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<String> avatarUri,
-        @Nullable Output<Double> classificationThreshold,
-        Output<String> defaultLanguageCode,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<Boolean> enableLogging,
-        @Nullable Output<String> matchMode,
-        @Nullable Output<String> project,
-        @Nullable Output<List<String>> supportedLanguageCodes,
-        @Nullable Output<String> tier,
-        Output<String> timeZone) {
-        this.apiVersion = apiVersion;
-        this.avatarUri = avatarUri;
-        this.classificationThreshold = classificationThreshold;
-        this.defaultLanguageCode = Objects.requireNonNull(defaultLanguageCode, "expected parameter 'defaultLanguageCode' to be non-null");
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.enableLogging = enableLogging;
-        this.matchMode = matchMode;
-        this.project = project;
-        this.supportedLanguageCodes = supportedLanguageCodes;
-        this.tier = tier;
-        this.timeZone = Objects.requireNonNull(timeZone, "expected parameter 'timeZone' to be non-null");
-    }
+    private AgentArgs() {}
 
-    private AgentArgs() {
-        this.apiVersion = Codegen.empty();
-        this.avatarUri = Codegen.empty();
-        this.classificationThreshold = Codegen.empty();
-        this.defaultLanguageCode = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enableLogging = Codegen.empty();
-        this.matchMode = Codegen.empty();
-        this.project = Codegen.empty();
-        this.supportedLanguageCodes = Codegen.empty();
-        this.tier = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private AgentArgs(AgentArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.avatarUri = $.avatarUri;
+        this.classificationThreshold = $.classificationThreshold;
+        this.defaultLanguageCode = $.defaultLanguageCode;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.enableLogging = $.enableLogging;
+        this.matchMode = $.matchMode;
+        this.project = $.project;
+        this.supportedLanguageCodes = $.supportedLanguageCodes;
+        this.tier = $.tier;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<String> avatarUri;
-        private @Nullable Output<Double> classificationThreshold;
-        private Output<String> defaultLanguageCode;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> enableLogging;
-        private @Nullable Output<String> matchMode;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<String>> supportedLanguageCodes;
-        private @Nullable Output<String> tier;
-        private Output<String> timeZone;
+        private AgentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgentArgs();
         }
 
         public Builder(AgentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.avatarUri = defaults.avatarUri;
-    	      this.classificationThreshold = defaults.classificationThreshold;
-    	      this.defaultLanguageCode = defaults.defaultLanguageCode;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.enableLogging = defaults.enableLogging;
-    	      this.matchMode = defaults.matchMode;
-    	      this.project = defaults.project;
-    	      this.supportedLanguageCodes = defaults.supportedLanguageCodes;
-    	      this.tier = defaults.tier;
-    	      this.timeZone = defaults.timeZone;
+            $ = new AgentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder avatarUri(@Nullable Output<String> avatarUri) {
-            this.avatarUri = avatarUri;
+            $.avatarUri = avatarUri;
             return this;
         }
-        public Builder avatarUri(@Nullable String avatarUri) {
-            this.avatarUri = Codegen.ofNullable(avatarUri);
-            return this;
+
+        public Builder avatarUri(String avatarUri) {
+            return avatarUri(Output.of(avatarUri));
         }
+
         public Builder classificationThreshold(@Nullable Output<Double> classificationThreshold) {
-            this.classificationThreshold = classificationThreshold;
+            $.classificationThreshold = classificationThreshold;
             return this;
         }
-        public Builder classificationThreshold(@Nullable Double classificationThreshold) {
-            this.classificationThreshold = Codegen.ofNullable(classificationThreshold);
-            return this;
+
+        public Builder classificationThreshold(Double classificationThreshold) {
+            return classificationThreshold(Output.of(classificationThreshold));
         }
+
         public Builder defaultLanguageCode(Output<String> defaultLanguageCode) {
-            this.defaultLanguageCode = Objects.requireNonNull(defaultLanguageCode);
+            $.defaultLanguageCode = defaultLanguageCode;
             return this;
         }
+
         public Builder defaultLanguageCode(String defaultLanguageCode) {
-            this.defaultLanguageCode = Output.of(Objects.requireNonNull(defaultLanguageCode));
-            return this;
+            return defaultLanguageCode(Output.of(defaultLanguageCode));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
-            this.enableLogging = enableLogging;
+            $.enableLogging = enableLogging;
             return this;
         }
-        public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Codegen.ofNullable(enableLogging);
-            return this;
+
+        public Builder enableLogging(Boolean enableLogging) {
+            return enableLogging(Output.of(enableLogging));
         }
+
         public Builder matchMode(@Nullable Output<String> matchMode) {
-            this.matchMode = matchMode;
+            $.matchMode = matchMode;
             return this;
         }
-        public Builder matchMode(@Nullable String matchMode) {
-            this.matchMode = Codegen.ofNullable(matchMode);
-            return this;
+
+        public Builder matchMode(String matchMode) {
+            return matchMode(Output.of(matchMode));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder supportedLanguageCodes(@Nullable Output<List<String>> supportedLanguageCodes) {
-            this.supportedLanguageCodes = supportedLanguageCodes;
+            $.supportedLanguageCodes = supportedLanguageCodes;
             return this;
         }
-        public Builder supportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
-            this.supportedLanguageCodes = Codegen.ofNullable(supportedLanguageCodes);
-            return this;
+
+        public Builder supportedLanguageCodes(List<String> supportedLanguageCodes) {
+            return supportedLanguageCodes(Output.of(supportedLanguageCodes));
         }
+
         public Builder supportedLanguageCodes(String... supportedLanguageCodes) {
             return supportedLanguageCodes(List.of(supportedLanguageCodes));
         }
+
         public Builder tier(@Nullable Output<String> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable String tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
+
+        public Builder tier(String tier) {
+            return tier(Output.of(tier));
         }
+
         public Builder timeZone(Output<String> timeZone) {
-            this.timeZone = Objects.requireNonNull(timeZone);
+            $.timeZone = timeZone;
             return this;
         }
+
         public Builder timeZone(String timeZone) {
-            this.timeZone = Output.of(Objects.requireNonNull(timeZone));
-            return this;
-        }        public AgentArgs build() {
-            return new AgentArgs(apiVersion, avatarUri, classificationThreshold, defaultLanguageCode, description, displayName, enableLogging, matchMode, project, supportedLanguageCodes, tier, timeZone);
+            return timeZone(Output.of(timeZone));
+        }
+
+        public AgentArgs build() {
+            $.defaultLanguageCode = Objects.requireNonNull($.defaultLanguageCode, "expected parameter 'defaultLanguageCode' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.timeZone = Objects.requireNonNull($.timeZone, "expected parameter 'timeZone' to be non-null");
+            return $;
         }
     }
+
 }

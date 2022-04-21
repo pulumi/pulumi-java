@@ -5,12 +5,12 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.NotificationChannelSensitiveLabelsGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sensitiveLabels")
-      private final @Nullable Output<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels;
+    private @Nullable Output<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels;
 
-    public Output<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels() {
-        return this.sensitiveLabels == null ? Codegen.empty() : this.sensitiveLabels;
+    public Optional<Output<NotificationChannelSensitiveLabelsGetArgs>> sensitiveLabels() {
+        return Optional.ofNullable(this.sensitiveLabels);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="userLabels")
-      private final @Nullable Output<Map<String,String>> userLabels;
+    private @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> userLabels() {
-        return this.userLabels == null ? Codegen.empty() : this.userLabels;
+    public Optional<Output<Map<String,String>>> userLabels() {
+        return Optional.ofNullable(this.userLabels);
     }
 
     /**
@@ -141,167 +141,138 @@ public final class NotificationChannelState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="verificationStatus")
-      private final @Nullable Output<String> verificationStatus;
+    private @Nullable Output<String> verificationStatus;
 
-    public Output<String> verificationStatus() {
-        return this.verificationStatus == null ? Codegen.empty() : this.verificationStatus;
+    public Optional<Output<String>> verificationStatus() {
+        return Optional.ofNullable(this.verificationStatus);
     }
 
-    public NotificationChannelState(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels,
-        @Nullable Output<String> type,
-        @Nullable Output<Map<String,String>> userLabels,
-        @Nullable Output<String> verificationStatus) {
-        this.description = description;
-        this.displayName = displayName;
-        this.enabled = enabled;
-        this.labels = labels;
-        this.name = name;
-        this.project = project;
-        this.sensitiveLabels = sensitiveLabels;
-        this.type = type;
-        this.userLabels = userLabels;
-        this.verificationStatus = verificationStatus;
-    }
+    private NotificationChannelState() {}
 
-    private NotificationChannelState() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.sensitiveLabels = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userLabels = Codegen.empty();
-        this.verificationStatus = Codegen.empty();
+    private NotificationChannelState(NotificationChannelState $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.enabled = $.enabled;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.project = $.project;
+        this.sensitiveLabels = $.sensitiveLabels;
+        this.type = $.type;
+        this.userLabels = $.userLabels;
+        this.verificationStatus = $.verificationStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationChannelState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels;
-        private @Nullable Output<String> type;
-        private @Nullable Output<Map<String,String>> userLabels;
-        private @Nullable Output<String> verificationStatus;
+        private NotificationChannelState $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationChannelState();
         }
 
         public Builder(NotificationChannelState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.enabled = defaults.enabled;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.sensitiveLabels = defaults.sensitiveLabels;
-    	      this.type = defaults.type;
-    	      this.userLabels = defaults.userLabels;
-    	      this.verificationStatus = defaults.verificationStatus;
+            $ = new NotificationChannelState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder sensitiveLabels(@Nullable Output<NotificationChannelSensitiveLabelsGetArgs> sensitiveLabels) {
-            this.sensitiveLabels = sensitiveLabels;
+            $.sensitiveLabels = sensitiveLabels;
             return this;
         }
-        public Builder sensitiveLabels(@Nullable NotificationChannelSensitiveLabelsGetArgs sensitiveLabels) {
-            this.sensitiveLabels = Codegen.ofNullable(sensitiveLabels);
-            return this;
+
+        public Builder sensitiveLabels(NotificationChannelSensitiveLabelsGetArgs sensitiveLabels) {
+            return sensitiveLabels(Output.of(sensitiveLabels));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
-            this.userLabels = userLabels;
+            $.userLabels = userLabels;
             return this;
         }
-        public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Codegen.ofNullable(userLabels);
-            return this;
+
+        public Builder userLabels(Map<String,String> userLabels) {
+            return userLabels(Output.of(userLabels));
         }
+
         public Builder verificationStatus(@Nullable Output<String> verificationStatus) {
-            this.verificationStatus = verificationStatus;
+            $.verificationStatus = verificationStatus;
             return this;
         }
-        public Builder verificationStatus(@Nullable String verificationStatus) {
-            this.verificationStatus = Codegen.ofNullable(verificationStatus);
-            return this;
-        }        public NotificationChannelState build() {
-            return new NotificationChannelState(description, displayName, enabled, labels, name, project, sensitiveLabels, type, userLabels, verificationStatus);
+
+        public Builder verificationStatus(String verificationStatus) {
+            return verificationStatus(Output.of(verificationStatus));
+        }
+
+        public NotificationChannelState build() {
+            return $;
         }
     }
+
 }

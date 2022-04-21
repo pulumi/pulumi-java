@@ -5,9 +5,9 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class NodePoolNodeConfigShieldedInstanceConfigGetArgs extends com.p
     public static final NodePoolNodeConfigShieldedInstanceConfigGetArgs Empty = new NodePoolNodeConfigShieldedInstanceConfigGetArgs();
 
     @Import(name="enableIntegrityMonitoring")
-      private final @Nullable Output<Boolean> enableIntegrityMonitoring;
+    private @Nullable Output<Boolean> enableIntegrityMonitoring;
 
-    public Output<Boolean> enableIntegrityMonitoring() {
-        return this.enableIntegrityMonitoring == null ? Codegen.empty() : this.enableIntegrityMonitoring;
+    public Optional<Output<Boolean>> enableIntegrityMonitoring() {
+        return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
 
     @Import(name="enableSecureBoot")
-      private final @Nullable Output<Boolean> enableSecureBoot;
+    private @Nullable Output<Boolean> enableSecureBoot;
 
-    public Output<Boolean> enableSecureBoot() {
-        return this.enableSecureBoot == null ? Codegen.empty() : this.enableSecureBoot;
+    public Optional<Output<Boolean>> enableSecureBoot() {
+        return Optional.ofNullable(this.enableSecureBoot);
     }
 
-    public NodePoolNodeConfigShieldedInstanceConfigGetArgs(
-        @Nullable Output<Boolean> enableIntegrityMonitoring,
-        @Nullable Output<Boolean> enableSecureBoot) {
-        this.enableIntegrityMonitoring = enableIntegrityMonitoring;
-        this.enableSecureBoot = enableSecureBoot;
-    }
+    private NodePoolNodeConfigShieldedInstanceConfigGetArgs() {}
 
-    private NodePoolNodeConfigShieldedInstanceConfigGetArgs() {
-        this.enableIntegrityMonitoring = Codegen.empty();
-        this.enableSecureBoot = Codegen.empty();
+    private NodePoolNodeConfigShieldedInstanceConfigGetArgs(NodePoolNodeConfigShieldedInstanceConfigGetArgs $) {
+        this.enableIntegrityMonitoring = $.enableIntegrityMonitoring;
+        this.enableSecureBoot = $.enableSecureBoot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolNodeConfigShieldedInstanceConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableIntegrityMonitoring;
-        private @Nullable Output<Boolean> enableSecureBoot;
+        private NodePoolNodeConfigShieldedInstanceConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolNodeConfigShieldedInstanceConfigGetArgs();
         }
 
         public Builder(NodePoolNodeConfigShieldedInstanceConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableIntegrityMonitoring = defaults.enableIntegrityMonitoring;
-    	      this.enableSecureBoot = defaults.enableSecureBoot;
+            $ = new NodePoolNodeConfigShieldedInstanceConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableIntegrityMonitoring(@Nullable Output<Boolean> enableIntegrityMonitoring) {
-            this.enableIntegrityMonitoring = enableIntegrityMonitoring;
+            $.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
-        public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
-            this.enableIntegrityMonitoring = Codegen.ofNullable(enableIntegrityMonitoring);
-            return this;
+
+        public Builder enableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
+            return enableIntegrityMonitoring(Output.of(enableIntegrityMonitoring));
         }
+
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
-            this.enableSecureBoot = enableSecureBoot;
+            $.enableSecureBoot = enableSecureBoot;
             return this;
         }
-        public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
-            this.enableSecureBoot = Codegen.ofNullable(enableSecureBoot);
-            return this;
-        }        public NodePoolNodeConfigShieldedInstanceConfigGetArgs build() {
-            return new NodePoolNodeConfigShieldedInstanceConfigGetArgs(enableIntegrityMonitoring, enableSecureBoot);
+
+        public Builder enableSecureBoot(Boolean enableSecureBoot) {
+            return enableSecureBoot(Output.of(enableSecureBoot));
+        }
+
+        public NodePoolNodeConfigShieldedInstanceConfigGetArgs build() {
+            return $;
         }
     }
+
 }

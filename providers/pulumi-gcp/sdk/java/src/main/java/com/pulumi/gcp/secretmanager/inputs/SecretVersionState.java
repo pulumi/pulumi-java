@@ -5,10 +5,10 @@ package com.pulumi.gcp.secretmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="destroyTime")
-      private final @Nullable Output<String> destroyTime;
+    private @Nullable Output<String> destroyTime;
 
-    public Output<String> destroyTime() {
-        return this.destroyTime == null ? Codegen.empty() : this.destroyTime;
+    public Optional<Output<String>> destroyTime() {
+        return Optional.ofNullable(this.destroyTime);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<String> secret;
+    private @Nullable Output<String> secret;
 
-    public Output<String> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<String>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
     /**
@@ -77,115 +77,98 @@ public final class SecretVersionState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="secretData")
-      private final @Nullable Output<String> secretData;
+    private @Nullable Output<String> secretData;
 
-    public Output<String> secretData() {
-        return this.secretData == null ? Codegen.empty() : this.secretData;
+    public Optional<Output<String>> secretData() {
+        return Optional.ofNullable(this.secretData);
     }
 
-    public SecretVersionState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> destroyTime,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> name,
-        @Nullable Output<String> secret,
-        @Nullable Output<String> secretData) {
-        this.createTime = createTime;
-        this.destroyTime = destroyTime;
-        this.enabled = enabled;
-        this.name = name;
-        this.secret = secret;
-        this.secretData = secretData;
-    }
+    private SecretVersionState() {}
 
-    private SecretVersionState() {
-        this.createTime = Codegen.empty();
-        this.destroyTime = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.name = Codegen.empty();
-        this.secret = Codegen.empty();
-        this.secretData = Codegen.empty();
+    private SecretVersionState(SecretVersionState $) {
+        this.createTime = $.createTime;
+        this.destroyTime = $.destroyTime;
+        this.enabled = $.enabled;
+        this.name = $.name;
+        this.secret = $.secret;
+        this.secretData = $.secretData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretVersionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> destroyTime;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> secret;
-        private @Nullable Output<String> secretData;
+        private SecretVersionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretVersionState();
         }
 
         public Builder(SecretVersionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.destroyTime = defaults.destroyTime;
-    	      this.enabled = defaults.enabled;
-    	      this.name = defaults.name;
-    	      this.secret = defaults.secret;
-    	      this.secretData = defaults.secretData;
+            $ = new SecretVersionState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder destroyTime(@Nullable Output<String> destroyTime) {
-            this.destroyTime = destroyTime;
+            $.destroyTime = destroyTime;
             return this;
         }
-        public Builder destroyTime(@Nullable String destroyTime) {
-            this.destroyTime = Codegen.ofNullable(destroyTime);
-            return this;
+
+        public Builder destroyTime(String destroyTime) {
+            return destroyTime(Output.of(destroyTime));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder secret(@Nullable Output<String> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable String secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
+
+        public Builder secret(String secret) {
+            return secret(Output.of(secret));
         }
+
         public Builder secretData(@Nullable Output<String> secretData) {
-            this.secretData = secretData;
+            $.secretData = secretData;
             return this;
         }
-        public Builder secretData(@Nullable String secretData) {
-            this.secretData = Codegen.ofNullable(secretData);
-            return this;
-        }        public SecretVersionState build() {
-            return new SecretVersionState(createTime, destroyTime, enabled, name, secret, secretData);
+
+        public Builder secretData(String secretData) {
+            return secretData(Output.of(secretData));
+        }
+
+        public SecretVersionState build() {
+            return $;
         }
     }
+
 }

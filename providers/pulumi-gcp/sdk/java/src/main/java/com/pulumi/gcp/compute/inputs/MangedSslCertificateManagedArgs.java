@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,52 +15,53 @@ public final class MangedSslCertificateManagedArgs extends com.pulumi.resources.
     public static final MangedSslCertificateManagedArgs Empty = new MangedSslCertificateManagedArgs();
 
     @Import(name="domains", required=true)
-      private final Output<List<String>> domains;
+    private Output<List<String>> domains;
 
     public Output<List<String>> domains() {
         return this.domains;
     }
 
-    public MangedSslCertificateManagedArgs(Output<List<String>> domains) {
-        this.domains = Objects.requireNonNull(domains, "expected parameter 'domains' to be non-null");
-    }
+    private MangedSslCertificateManagedArgs() {}
 
-    private MangedSslCertificateManagedArgs() {
-        this.domains = Codegen.empty();
+    private MangedSslCertificateManagedArgs(MangedSslCertificateManagedArgs $) {
+        this.domains = $.domains;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MangedSslCertificateManagedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> domains;
+        private MangedSslCertificateManagedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MangedSslCertificateManagedArgs();
         }
 
         public Builder(MangedSslCertificateManagedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domains = defaults.domains;
+            $ = new MangedSslCertificateManagedArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domains(Output<List<String>> domains) {
-            this.domains = Objects.requireNonNull(domains);
+            $.domains = domains;
             return this;
         }
+
         public Builder domains(List<String> domains) {
-            this.domains = Output.of(Objects.requireNonNull(domains));
-            return this;
+            return domains(Output.of(domains));
         }
+
         public Builder domains(String... domains) {
             return domains(List.of(domains));
-        }        public MangedSslCertificateManagedArgs build() {
-            return new MangedSslCertificateManagedArgs(domains);
+        }
+
+        public MangedSslCertificateManagedArgs build() {
+            $.domains = Objects.requireNonNull($.domains, "expected parameter 'domains' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
      * 
      */
     @Import(name="httpStatus", required=true)
-      private final Output<Integer> httpStatus;
+    private Output<Integer> httpStatus;
 
     public Output<Integer> httpStatus() {
         return this.httpStatus;
@@ -33,63 +32,60 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
      * 
      */
     @Import(name="percentage", required=true)
-      private final Output<Double> percentage;
+    private Output<Double> percentage;
 
     public Output<Double> percentage() {
         return this.percentage;
     }
 
-    public URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs(
-        Output<Integer> httpStatus,
-        Output<Double> percentage) {
-        this.httpStatus = Objects.requireNonNull(httpStatus, "expected parameter 'httpStatus' to be non-null");
-        this.percentage = Objects.requireNonNull(percentage, "expected parameter 'percentage' to be non-null");
-    }
+    private URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs() {}
 
-    private URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs() {
-        this.httpStatus = Codegen.empty();
-        this.percentage = Codegen.empty();
+    private URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs(URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs $) {
+        this.httpStatus = $.httpStatus;
+        this.percentage = $.percentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> httpStatus;
-        private Output<Double> percentage;
+        private URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs();
         }
 
         public Builder(URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpStatus = defaults.httpStatus;
-    	      this.percentage = defaults.percentage;
+            $ = new URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpStatus(Output<Integer> httpStatus) {
-            this.httpStatus = Objects.requireNonNull(httpStatus);
+            $.httpStatus = httpStatus;
             return this;
         }
+
         public Builder httpStatus(Integer httpStatus) {
-            this.httpStatus = Output.of(Objects.requireNonNull(httpStatus));
-            return this;
+            return httpStatus(Output.of(httpStatus));
         }
+
         public Builder percentage(Output<Double> percentage) {
-            this.percentage = Objects.requireNonNull(percentage);
+            $.percentage = percentage;
             return this;
         }
+
         public Builder percentage(Double percentage) {
-            this.percentage = Output.of(Objects.requireNonNull(percentage));
-            return this;
-        }        public URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs build() {
-            return new URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs(httpStatus, percentage);
+            return percentage(Output.of(percentage));
+        }
+
+        public URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortGetArgs build() {
+            $.httpStatus = Objects.requireNonNull($.httpStatus, "expected parameter 'httpStatus' to be non-null");
+            $.percentage = Objects.requireNonNull($.percentage, "expected parameter 'percentage' to be non-null");
+            return $;
         }
     }
+
 }

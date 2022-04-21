@@ -5,13 +5,13 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationArgs;
 import com.pulumi.gcp.compute.inputs.SecurityScanConfigScheduleArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SecurityScanConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="authentication")
-      private final @Nullable Output<SecurityScanConfigAuthenticationArgs> authentication;
+    private @Nullable Output<SecurityScanConfigAuthenticationArgs> authentication;
 
-    public Output<SecurityScanConfigAuthenticationArgs> authentication() {
-        return this.authentication == null ? Codegen.empty() : this.authentication;
+    public Optional<Output<SecurityScanConfigAuthenticationArgs>> authentication() {
+        return Optional.ofNullable(this.authentication);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SecurityScanConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="blacklistPatterns")
-      private final @Nullable Output<List<String>> blacklistPatterns;
+    private @Nullable Output<List<String>> blacklistPatterns;
 
-    public Output<List<String>> blacklistPatterns() {
-        return this.blacklistPatterns == null ? Codegen.empty() : this.blacklistPatterns;
+    public Optional<Output<List<String>>> blacklistPatterns() {
+        return Optional.ofNullable(this.blacklistPatterns);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class SecurityScanConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -62,10 +62,10 @@ public final class SecurityScanConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="exportToSecurityCommandCenter")
-      private final @Nullable Output<String> exportToSecurityCommandCenter;
+    private @Nullable Output<String> exportToSecurityCommandCenter;
 
-    public Output<String> exportToSecurityCommandCenter() {
-        return this.exportToSecurityCommandCenter == null ? Codegen.empty() : this.exportToSecurityCommandCenter;
+    public Optional<Output<String>> exportToSecurityCommandCenter() {
+        return Optional.ofNullable(this.exportToSecurityCommandCenter);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class SecurityScanConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="maxQps")
-      private final @Nullable Output<Integer> maxQps;
+    private @Nullable Output<Integer> maxQps;
 
-    public Output<Integer> maxQps() {
-        return this.maxQps == null ? Codegen.empty() : this.maxQps;
+    public Optional<Output<Integer>> maxQps() {
+        return Optional.ofNullable(this.maxQps);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class SecurityScanConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class SecurityScanConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<SecurityScanConfigScheduleArgs> schedule;
+    private @Nullable Output<SecurityScanConfigScheduleArgs> schedule;
 
-    public Output<SecurityScanConfigScheduleArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<SecurityScanConfigScheduleArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -109,7 +109,7 @@ public final class SecurityScanConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="startingUrls", required=true)
-      private final Output<List<String>> startingUrls;
+    private Output<List<String>> startingUrls;
 
     public Output<List<String>> startingUrls() {
         return this.startingUrls;
@@ -121,10 +121,10 @@ public final class SecurityScanConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetPlatforms")
-      private final @Nullable Output<List<String>> targetPlatforms;
+    private @Nullable Output<List<String>> targetPlatforms;
 
-    public Output<List<String>> targetPlatforms() {
-        return this.targetPlatforms == null ? Codegen.empty() : this.targetPlatforms;
+    public Optional<Output<List<String>>> targetPlatforms() {
+        return Optional.ofNullable(this.targetPlatforms);
     }
 
     /**
@@ -134,176 +134,152 @@ public final class SecurityScanConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="userAgent")
-      private final @Nullable Output<String> userAgent;
+    private @Nullable Output<String> userAgent;
 
-    public Output<String> userAgent() {
-        return this.userAgent == null ? Codegen.empty() : this.userAgent;
+    public Optional<Output<String>> userAgent() {
+        return Optional.ofNullable(this.userAgent);
     }
 
-    public SecurityScanConfigArgs(
-        @Nullable Output<SecurityScanConfigAuthenticationArgs> authentication,
-        @Nullable Output<List<String>> blacklistPatterns,
-        Output<String> displayName,
-        @Nullable Output<String> exportToSecurityCommandCenter,
-        @Nullable Output<Integer> maxQps,
-        @Nullable Output<String> project,
-        @Nullable Output<SecurityScanConfigScheduleArgs> schedule,
-        Output<List<String>> startingUrls,
-        @Nullable Output<List<String>> targetPlatforms,
-        @Nullable Output<String> userAgent) {
-        this.authentication = authentication;
-        this.blacklistPatterns = blacklistPatterns;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.exportToSecurityCommandCenter = exportToSecurityCommandCenter;
-        this.maxQps = maxQps;
-        this.project = project;
-        this.schedule = schedule;
-        this.startingUrls = Objects.requireNonNull(startingUrls, "expected parameter 'startingUrls' to be non-null");
-        this.targetPlatforms = targetPlatforms;
-        this.userAgent = userAgent;
-    }
+    private SecurityScanConfigArgs() {}
 
-    private SecurityScanConfigArgs() {
-        this.authentication = Codegen.empty();
-        this.blacklistPatterns = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.exportToSecurityCommandCenter = Codegen.empty();
-        this.maxQps = Codegen.empty();
-        this.project = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.startingUrls = Codegen.empty();
-        this.targetPlatforms = Codegen.empty();
-        this.userAgent = Codegen.empty();
+    private SecurityScanConfigArgs(SecurityScanConfigArgs $) {
+        this.authentication = $.authentication;
+        this.blacklistPatterns = $.blacklistPatterns;
+        this.displayName = $.displayName;
+        this.exportToSecurityCommandCenter = $.exportToSecurityCommandCenter;
+        this.maxQps = $.maxQps;
+        this.project = $.project;
+        this.schedule = $.schedule;
+        this.startingUrls = $.startingUrls;
+        this.targetPlatforms = $.targetPlatforms;
+        this.userAgent = $.userAgent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityScanConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityScanConfigAuthenticationArgs> authentication;
-        private @Nullable Output<List<String>> blacklistPatterns;
-        private Output<String> displayName;
-        private @Nullable Output<String> exportToSecurityCommandCenter;
-        private @Nullable Output<Integer> maxQps;
-        private @Nullable Output<String> project;
-        private @Nullable Output<SecurityScanConfigScheduleArgs> schedule;
-        private Output<List<String>> startingUrls;
-        private @Nullable Output<List<String>> targetPlatforms;
-        private @Nullable Output<String> userAgent;
+        private SecurityScanConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityScanConfigArgs();
         }
 
         public Builder(SecurityScanConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authentication = defaults.authentication;
-    	      this.blacklistPatterns = defaults.blacklistPatterns;
-    	      this.displayName = defaults.displayName;
-    	      this.exportToSecurityCommandCenter = defaults.exportToSecurityCommandCenter;
-    	      this.maxQps = defaults.maxQps;
-    	      this.project = defaults.project;
-    	      this.schedule = defaults.schedule;
-    	      this.startingUrls = defaults.startingUrls;
-    	      this.targetPlatforms = defaults.targetPlatforms;
-    	      this.userAgent = defaults.userAgent;
+            $ = new SecurityScanConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authentication(@Nullable Output<SecurityScanConfigAuthenticationArgs> authentication) {
-            this.authentication = authentication;
+            $.authentication = authentication;
             return this;
         }
-        public Builder authentication(@Nullable SecurityScanConfigAuthenticationArgs authentication) {
-            this.authentication = Codegen.ofNullable(authentication);
-            return this;
+
+        public Builder authentication(SecurityScanConfigAuthenticationArgs authentication) {
+            return authentication(Output.of(authentication));
         }
+
         public Builder blacklistPatterns(@Nullable Output<List<String>> blacklistPatterns) {
-            this.blacklistPatterns = blacklistPatterns;
+            $.blacklistPatterns = blacklistPatterns;
             return this;
         }
-        public Builder blacklistPatterns(@Nullable List<String> blacklistPatterns) {
-            this.blacklistPatterns = Codegen.ofNullable(blacklistPatterns);
-            return this;
+
+        public Builder blacklistPatterns(List<String> blacklistPatterns) {
+            return blacklistPatterns(Output.of(blacklistPatterns));
         }
+
         public Builder blacklistPatterns(String... blacklistPatterns) {
             return blacklistPatterns(List.of(blacklistPatterns));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder exportToSecurityCommandCenter(@Nullable Output<String> exportToSecurityCommandCenter) {
-            this.exportToSecurityCommandCenter = exportToSecurityCommandCenter;
+            $.exportToSecurityCommandCenter = exportToSecurityCommandCenter;
             return this;
         }
-        public Builder exportToSecurityCommandCenter(@Nullable String exportToSecurityCommandCenter) {
-            this.exportToSecurityCommandCenter = Codegen.ofNullable(exportToSecurityCommandCenter);
-            return this;
+
+        public Builder exportToSecurityCommandCenter(String exportToSecurityCommandCenter) {
+            return exportToSecurityCommandCenter(Output.of(exportToSecurityCommandCenter));
         }
+
         public Builder maxQps(@Nullable Output<Integer> maxQps) {
-            this.maxQps = maxQps;
+            $.maxQps = maxQps;
             return this;
         }
-        public Builder maxQps(@Nullable Integer maxQps) {
-            this.maxQps = Codegen.ofNullable(maxQps);
-            return this;
+
+        public Builder maxQps(Integer maxQps) {
+            return maxQps(Output.of(maxQps));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder schedule(@Nullable Output<SecurityScanConfigScheduleArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable SecurityScanConfigScheduleArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(SecurityScanConfigScheduleArgs schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder startingUrls(Output<List<String>> startingUrls) {
-            this.startingUrls = Objects.requireNonNull(startingUrls);
+            $.startingUrls = startingUrls;
             return this;
         }
+
         public Builder startingUrls(List<String> startingUrls) {
-            this.startingUrls = Output.of(Objects.requireNonNull(startingUrls));
-            return this;
+            return startingUrls(Output.of(startingUrls));
         }
+
         public Builder startingUrls(String... startingUrls) {
             return startingUrls(List.of(startingUrls));
         }
+
         public Builder targetPlatforms(@Nullable Output<List<String>> targetPlatforms) {
-            this.targetPlatforms = targetPlatforms;
+            $.targetPlatforms = targetPlatforms;
             return this;
         }
-        public Builder targetPlatforms(@Nullable List<String> targetPlatforms) {
-            this.targetPlatforms = Codegen.ofNullable(targetPlatforms);
-            return this;
+
+        public Builder targetPlatforms(List<String> targetPlatforms) {
+            return targetPlatforms(Output.of(targetPlatforms));
         }
+
         public Builder targetPlatforms(String... targetPlatforms) {
             return targetPlatforms(List.of(targetPlatforms));
         }
+
         public Builder userAgent(@Nullable Output<String> userAgent) {
-            this.userAgent = userAgent;
+            $.userAgent = userAgent;
             return this;
         }
-        public Builder userAgent(@Nullable String userAgent) {
-            this.userAgent = Codegen.ofNullable(userAgent);
-            return this;
-        }        public SecurityScanConfigArgs build() {
-            return new SecurityScanConfigArgs(authentication, blacklistPatterns, displayName, exportToSecurityCommandCenter, maxQps, project, schedule, startingUrls, targetPlatforms, userAgent);
+
+        public Builder userAgent(String userAgent) {
+            return userAgent(Output.of(userAgent));
+        }
+
+        public SecurityScanConfigArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.startingUrls = Objects.requireNonNull($.startingUrls, "expected parameter 'startingUrls' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.accesscontextmanager;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ServicePerimetersArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="parent", required=true)
-      private final Output<String> parent;
+    private Output<String> parent;
 
     public Output<String> parent() {
         return this.parent;
@@ -35,66 +35,63 @@ public final class ServicePerimetersArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="servicePerimeters")
-      private final @Nullable Output<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters;
+    private @Nullable Output<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters;
 
-    public Output<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters() {
-        return this.servicePerimeters == null ? Codegen.empty() : this.servicePerimeters;
+    public Optional<Output<List<ServicePerimetersServicePerimeterArgs>>> servicePerimeters() {
+        return Optional.ofNullable(this.servicePerimeters);
     }
 
-    public ServicePerimetersArgs(
-        Output<String> parent,
-        @Nullable Output<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters) {
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-        this.servicePerimeters = servicePerimeters;
-    }
+    private ServicePerimetersArgs() {}
 
-    private ServicePerimetersArgs() {
-        this.parent = Codegen.empty();
-        this.servicePerimeters = Codegen.empty();
+    private ServicePerimetersArgs(ServicePerimetersArgs $) {
+        this.parent = $.parent;
+        this.servicePerimeters = $.servicePerimeters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePerimetersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> parent;
-        private @Nullable Output<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters;
+        private ServicePerimetersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePerimetersArgs();
         }
 
         public Builder(ServicePerimetersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parent = defaults.parent;
-    	      this.servicePerimeters = defaults.servicePerimeters;
+            $ = new ServicePerimetersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parent(Output<String> parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Output.of(Objects.requireNonNull(parent));
-            return this;
+            return parent(Output.of(parent));
         }
+
         public Builder servicePerimeters(@Nullable Output<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters) {
-            this.servicePerimeters = servicePerimeters;
+            $.servicePerimeters = servicePerimeters;
             return this;
         }
-        public Builder servicePerimeters(@Nullable List<ServicePerimetersServicePerimeterArgs> servicePerimeters) {
-            this.servicePerimeters = Codegen.ofNullable(servicePerimeters);
-            return this;
+
+        public Builder servicePerimeters(List<ServicePerimetersServicePerimeterArgs> servicePerimeters) {
+            return servicePerimeters(Output.of(servicePerimeters));
         }
+
         public Builder servicePerimeters(ServicePerimetersServicePerimeterArgs... servicePerimeters) {
             return servicePerimeters(List.of(servicePerimeters));
-        }        public ServicePerimetersArgs build() {
-            return new ServicePerimetersArgs(parent, servicePerimeters);
+        }
+
+        public ServicePerimetersArgs build() {
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            return $;
         }
     }
+
 }

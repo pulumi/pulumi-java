@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class RegionBackendServiceFailoverPolicyGetArgs extends com.pulumi.
      * 
      */
     @Import(name="disableConnectionDrainOnFailover")
-      private final @Nullable Output<Boolean> disableConnectionDrainOnFailover;
+    private @Nullable Output<Boolean> disableConnectionDrainOnFailover;
 
-    public Output<Boolean> disableConnectionDrainOnFailover() {
-        return this.disableConnectionDrainOnFailover == null ? Codegen.empty() : this.disableConnectionDrainOnFailover;
+    public Optional<Output<Boolean>> disableConnectionDrainOnFailover() {
+        return Optional.ofNullable(this.disableConnectionDrainOnFailover);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RegionBackendServiceFailoverPolicyGetArgs extends com.pulumi.
      * 
      */
     @Import(name="dropTrafficIfUnhealthy")
-      private final @Nullable Output<Boolean> dropTrafficIfUnhealthy;
+    private @Nullable Output<Boolean> dropTrafficIfUnhealthy;
 
-    public Output<Boolean> dropTrafficIfUnhealthy() {
-        return this.dropTrafficIfUnhealthy == null ? Codegen.empty() : this.dropTrafficIfUnhealthy;
+    public Optional<Output<Boolean>> dropTrafficIfUnhealthy() {
+        return Optional.ofNullable(this.dropTrafficIfUnhealthy);
     }
 
     /**
@@ -60,76 +60,68 @@ public final class RegionBackendServiceFailoverPolicyGetArgs extends com.pulumi.
      * 
      */
     @Import(name="failoverRatio")
-      private final @Nullable Output<Double> failoverRatio;
+    private @Nullable Output<Double> failoverRatio;
 
-    public Output<Double> failoverRatio() {
-        return this.failoverRatio == null ? Codegen.empty() : this.failoverRatio;
+    public Optional<Output<Double>> failoverRatio() {
+        return Optional.ofNullable(this.failoverRatio);
     }
 
-    public RegionBackendServiceFailoverPolicyGetArgs(
-        @Nullable Output<Boolean> disableConnectionDrainOnFailover,
-        @Nullable Output<Boolean> dropTrafficIfUnhealthy,
-        @Nullable Output<Double> failoverRatio) {
-        this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
-        this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
-        this.failoverRatio = failoverRatio;
-    }
+    private RegionBackendServiceFailoverPolicyGetArgs() {}
 
-    private RegionBackendServiceFailoverPolicyGetArgs() {
-        this.disableConnectionDrainOnFailover = Codegen.empty();
-        this.dropTrafficIfUnhealthy = Codegen.empty();
-        this.failoverRatio = Codegen.empty();
+    private RegionBackendServiceFailoverPolicyGetArgs(RegionBackendServiceFailoverPolicyGetArgs $) {
+        this.disableConnectionDrainOnFailover = $.disableConnectionDrainOnFailover;
+        this.dropTrafficIfUnhealthy = $.dropTrafficIfUnhealthy;
+        this.failoverRatio = $.failoverRatio;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionBackendServiceFailoverPolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableConnectionDrainOnFailover;
-        private @Nullable Output<Boolean> dropTrafficIfUnhealthy;
-        private @Nullable Output<Double> failoverRatio;
+        private RegionBackendServiceFailoverPolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionBackendServiceFailoverPolicyGetArgs();
         }
 
         public Builder(RegionBackendServiceFailoverPolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableConnectionDrainOnFailover = defaults.disableConnectionDrainOnFailover;
-    	      this.dropTrafficIfUnhealthy = defaults.dropTrafficIfUnhealthy;
-    	      this.failoverRatio = defaults.failoverRatio;
+            $ = new RegionBackendServiceFailoverPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableConnectionDrainOnFailover(@Nullable Output<Boolean> disableConnectionDrainOnFailover) {
-            this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
+            $.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
             return this;
         }
-        public Builder disableConnectionDrainOnFailover(@Nullable Boolean disableConnectionDrainOnFailover) {
-            this.disableConnectionDrainOnFailover = Codegen.ofNullable(disableConnectionDrainOnFailover);
-            return this;
+
+        public Builder disableConnectionDrainOnFailover(Boolean disableConnectionDrainOnFailover) {
+            return disableConnectionDrainOnFailover(Output.of(disableConnectionDrainOnFailover));
         }
+
         public Builder dropTrafficIfUnhealthy(@Nullable Output<Boolean> dropTrafficIfUnhealthy) {
-            this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
+            $.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
             return this;
         }
-        public Builder dropTrafficIfUnhealthy(@Nullable Boolean dropTrafficIfUnhealthy) {
-            this.dropTrafficIfUnhealthy = Codegen.ofNullable(dropTrafficIfUnhealthy);
-            return this;
+
+        public Builder dropTrafficIfUnhealthy(Boolean dropTrafficIfUnhealthy) {
+            return dropTrafficIfUnhealthy(Output.of(dropTrafficIfUnhealthy));
         }
+
         public Builder failoverRatio(@Nullable Output<Double> failoverRatio) {
-            this.failoverRatio = failoverRatio;
+            $.failoverRatio = failoverRatio;
             return this;
         }
-        public Builder failoverRatio(@Nullable Double failoverRatio) {
-            this.failoverRatio = Codegen.ofNullable(failoverRatio);
-            return this;
-        }        public RegionBackendServiceFailoverPolicyGetArgs build() {
-            return new RegionBackendServiceFailoverPolicyGetArgs(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);
+
+        public Builder failoverRatio(Double failoverRatio) {
+            return failoverRatio(Output.of(failoverRatio));
+        }
+
+        public RegionBackendServiceFailoverPolicyGetArgs build() {
+            return $;
         }
     }
+
 }

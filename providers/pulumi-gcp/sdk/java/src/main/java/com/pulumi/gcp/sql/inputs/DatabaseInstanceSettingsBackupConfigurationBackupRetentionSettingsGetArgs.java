@@ -5,10 +5,10 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
      * 
      */
     @Import(name="retainedBackups", required=true)
-      private final Output<Integer> retainedBackups;
+    private Output<Integer> retainedBackups;
 
     public Output<Integer> retainedBackups() {
         return this.retainedBackups;
@@ -33,63 +33,59 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
      * 
      */
     @Import(name="retentionUnit")
-      private final @Nullable Output<String> retentionUnit;
+    private @Nullable Output<String> retentionUnit;
 
-    public Output<String> retentionUnit() {
-        return this.retentionUnit == null ? Codegen.empty() : this.retentionUnit;
+    public Optional<Output<String>> retentionUnit() {
+        return Optional.ofNullable(this.retentionUnit);
     }
 
-    public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs(
-        Output<Integer> retainedBackups,
-        @Nullable Output<String> retentionUnit) {
-        this.retainedBackups = Objects.requireNonNull(retainedBackups, "expected parameter 'retainedBackups' to be non-null");
-        this.retentionUnit = retentionUnit;
-    }
+    private DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs() {}
 
-    private DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs() {
-        this.retainedBackups = Codegen.empty();
-        this.retentionUnit = Codegen.empty();
+    private DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs(DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs $) {
+        this.retainedBackups = $.retainedBackups;
+        this.retentionUnit = $.retentionUnit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> retainedBackups;
-        private @Nullable Output<String> retentionUnit;
+        private DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs();
         }
 
         public Builder(DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retainedBackups = defaults.retainedBackups;
-    	      this.retentionUnit = defaults.retentionUnit;
+            $ = new DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder retainedBackups(Output<Integer> retainedBackups) {
-            this.retainedBackups = Objects.requireNonNull(retainedBackups);
+            $.retainedBackups = retainedBackups;
             return this;
         }
+
         public Builder retainedBackups(Integer retainedBackups) {
-            this.retainedBackups = Output.of(Objects.requireNonNull(retainedBackups));
-            return this;
+            return retainedBackups(Output.of(retainedBackups));
         }
+
         public Builder retentionUnit(@Nullable Output<String> retentionUnit) {
-            this.retentionUnit = retentionUnit;
+            $.retentionUnit = retentionUnit;
             return this;
         }
-        public Builder retentionUnit(@Nullable String retentionUnit) {
-            this.retentionUnit = Codegen.ofNullable(retentionUnit);
-            return this;
-        }        public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs build() {
-            return new DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs(retainedBackups, retentionUnit);
+
+        public Builder retentionUnit(String retentionUnit) {
+            return retentionUnit(Output.of(retentionUnit));
+        }
+
+        public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs build() {
+            $.retainedBackups = Objects.requireNonNull($.retainedBackups, "expected parameter 'retainedBackups' to be non-null");
+            return $;
         }
     }
+
 }

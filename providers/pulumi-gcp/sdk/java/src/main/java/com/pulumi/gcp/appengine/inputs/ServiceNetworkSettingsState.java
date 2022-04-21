@@ -5,10 +5,10 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.ServiceNetworkSettingsNetworkSettingsGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ServiceNetworkSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="networkSettings")
-      private final @Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
+    private @Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
 
-    public Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings() {
-        return this.networkSettings == null ? Codegen.empty() : this.networkSettings;
+    public Optional<Output<ServiceNetworkSettingsNetworkSettingsGetArgs>> networkSettings() {
+        return Optional.ofNullable(this.networkSettings);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServiceNetworkSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -45,76 +45,68 @@ public final class ServiceNetworkSettingsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public ServiceNetworkSettingsState(
-        @Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings,
-        @Nullable Output<String> project,
-        @Nullable Output<String> service) {
-        this.networkSettings = networkSettings;
-        this.project = project;
-        this.service = service;
-    }
+    private ServiceNetworkSettingsState() {}
 
-    private ServiceNetworkSettingsState() {
-        this.networkSettings = Codegen.empty();
-        this.project = Codegen.empty();
-        this.service = Codegen.empty();
+    private ServiceNetworkSettingsState(ServiceNetworkSettingsState $) {
+        this.networkSettings = $.networkSettings;
+        this.project = $.project;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceNetworkSettingsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> service;
+        private ServiceNetworkSettingsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceNetworkSettingsState();
         }
 
         public Builder(ServiceNetworkSettingsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkSettings = defaults.networkSettings;
-    	      this.project = defaults.project;
-    	      this.service = defaults.service;
+            $ = new ServiceNetworkSettingsState(Objects.requireNonNull(defaults));
         }
 
         public Builder networkSettings(@Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings) {
-            this.networkSettings = networkSettings;
+            $.networkSettings = networkSettings;
             return this;
         }
-        public Builder networkSettings(@Nullable ServiceNetworkSettingsNetworkSettingsGetArgs networkSettings) {
-            this.networkSettings = Codegen.ofNullable(networkSettings);
-            return this;
+
+        public Builder networkSettings(ServiceNetworkSettingsNetworkSettingsGetArgs networkSettings) {
+            return networkSettings(Output.of(networkSettings));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public ServiceNetworkSettingsState build() {
-            return new ServiceNetworkSettingsState(networkSettings, project, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public ServiceNetworkSettingsState build() {
+            return $;
         }
     }
+
 }

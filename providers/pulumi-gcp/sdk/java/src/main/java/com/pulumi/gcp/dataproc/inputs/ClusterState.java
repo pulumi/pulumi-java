@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.ClusterClusterConfigGetArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterConfig")
-      private final @Nullable Output<ClusterClusterConfigGetArgs> clusterConfig;
+    private @Nullable Output<ClusterClusterConfigGetArgs> clusterConfig;
 
-    public Output<ClusterClusterConfigGetArgs> clusterConfig() {
-        return this.clusterConfig == null ? Codegen.empty() : this.clusterConfig;
+    public Optional<Output<ClusterClusterConfigGetArgs>> clusterConfig() {
+        return Optional.ofNullable(this.clusterConfig);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gracefulDecommissionTimeout")
-      private final @Nullable Output<String> gracefulDecommissionTimeout;
+    private @Nullable Output<String> gracefulDecommissionTimeout;
 
-    public Output<String> gracefulDecommissionTimeout() {
-        return this.gracefulDecommissionTimeout == null ? Codegen.empty() : this.gracefulDecommissionTimeout;
+    public Optional<Output<String>> gracefulDecommissionTimeout() {
+        return Optional.ofNullable(this.gracefulDecommissionTimeout);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -84,115 +84,98 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public ClusterState(
-        @Nullable Output<ClusterClusterConfigGetArgs> clusterConfig,
-        @Nullable Output<String> gracefulDecommissionTimeout,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.clusterConfig = clusterConfig;
-        this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
-        this.labels = labels;
-        this.name = name;
-        this.project = project;
-        this.region = region;
-    }
+    private ClusterState() {}
 
-    private ClusterState() {
-        this.clusterConfig = Codegen.empty();
-        this.gracefulDecommissionTimeout = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private ClusterState(ClusterState $) {
+        this.clusterConfig = $.clusterConfig;
+        this.gracefulDecommissionTimeout = $.gracefulDecommissionTimeout;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterClusterConfigGetArgs> clusterConfig;
-        private @Nullable Output<String> gracefulDecommissionTimeout;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private ClusterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterState();
         }
 
         public Builder(ClusterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterConfig = defaults.clusterConfig;
-    	      this.gracefulDecommissionTimeout = defaults.gracefulDecommissionTimeout;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new ClusterState(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterConfig(@Nullable Output<ClusterClusterConfigGetArgs> clusterConfig) {
-            this.clusterConfig = clusterConfig;
+            $.clusterConfig = clusterConfig;
             return this;
         }
-        public Builder clusterConfig(@Nullable ClusterClusterConfigGetArgs clusterConfig) {
-            this.clusterConfig = Codegen.ofNullable(clusterConfig);
-            return this;
+
+        public Builder clusterConfig(ClusterClusterConfigGetArgs clusterConfig) {
+            return clusterConfig(Output.of(clusterConfig));
         }
+
         public Builder gracefulDecommissionTimeout(@Nullable Output<String> gracefulDecommissionTimeout) {
-            this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
+            $.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
             return this;
         }
-        public Builder gracefulDecommissionTimeout(@Nullable String gracefulDecommissionTimeout) {
-            this.gracefulDecommissionTimeout = Codegen.ofNullable(gracefulDecommissionTimeout);
-            return this;
+
+        public Builder gracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
+            return gracefulDecommissionTimeout(Output.of(gracefulDecommissionTimeout));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public ClusterState build() {
-            return new ClusterState(clusterConfig, gracefulDecommissionTimeout, labels, name, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public ClusterState build() {
+            return $;
         }
     }
+
 }

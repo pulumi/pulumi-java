@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,49 +20,49 @@ public final class DatasetDefaultEncryptionConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final Output<String> kmsKeyName;
+    private Output<String> kmsKeyName;
 
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public DatasetDefaultEncryptionConfigurationArgs(Output<String> kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-    }
+    private DatasetDefaultEncryptionConfigurationArgs() {}
 
-    private DatasetDefaultEncryptionConfigurationArgs() {
-        this.kmsKeyName = Codegen.empty();
+    private DatasetDefaultEncryptionConfigurationArgs(DatasetDefaultEncryptionConfigurationArgs $) {
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetDefaultEncryptionConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kmsKeyName;
+        private DatasetDefaultEncryptionConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetDefaultEncryptionConfigurationArgs();
         }
 
         public Builder(DatasetDefaultEncryptionConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new DatasetDefaultEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(Output<String> kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
+
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
-            return this;
-        }        public DatasetDefaultEncryptionConfigurationArgs build() {
-            return new DatasetDefaultEncryptionConfigurationArgs(kmsKeyName);
+            return kmsKeyName(Output.of(kmsKeyName));
+        }
+
+        public DatasetDefaultEncryptionConfigurationArgs build() {
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,7 +20,7 @@ public final class GetAppEngineServiceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="moduleId", required=true)
-      private final String moduleId;
+    private String moduleId;
 
     public String moduleId() {
         return this.moduleId;
@@ -32,55 +32,51 @@ public final class GetAppEngineServiceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAppEngineServiceArgs(
-        String moduleId,
-        @Nullable String project) {
-        this.moduleId = Objects.requireNonNull(moduleId, "expected parameter 'moduleId' to be non-null");
-        this.project = project;
-    }
+    private GetAppEngineServiceArgs() {}
 
-    private GetAppEngineServiceArgs() {
-        this.moduleId = null;
-        this.project = null;
+    private GetAppEngineServiceArgs(GetAppEngineServiceArgs $) {
+        this.moduleId = $.moduleId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAppEngineServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String moduleId;
-        private @Nullable String project;
+        private GetAppEngineServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAppEngineServiceArgs();
         }
 
         public Builder(GetAppEngineServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.moduleId = defaults.moduleId;
-    	      this.project = defaults.project;
+            $ = new GetAppEngineServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder moduleId(String moduleId) {
-            this.moduleId = Objects.requireNonNull(moduleId);
+            $.moduleId = moduleId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAppEngineServiceArgs build() {
-            return new GetAppEngineServiceArgs(moduleId, project);
+        }
+
+        public GetAppEngineServiceArgs build() {
+            $.moduleId = Objects.requireNonNull($.moduleId, "expected parameter 'moduleId' to be non-null");
+            return $;
         }
     }
+
 }

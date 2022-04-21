@@ -5,9 +5,9 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PolicyTagIamPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PolicyTagIamPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class PolicyTagIamPolicyState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="policyTag")
-      private final @Nullable Output<String> policyTag;
+    private @Nullable Output<String> policyTag;
 
-    public Output<String> policyTag() {
-        return this.policyTag == null ? Codegen.empty() : this.policyTag;
+    public Optional<Output<String>> policyTag() {
+        return Optional.ofNullable(this.policyTag);
     }
 
-    public PolicyTagIamPolicyState(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData,
-        @Nullable Output<String> policyTag) {
-        this.etag = etag;
-        this.policyData = policyData;
-        this.policyTag = policyTag;
-    }
+    private PolicyTagIamPolicyState() {}
 
-    private PolicyTagIamPolicyState() {
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.policyTag = Codegen.empty();
+    private PolicyTagIamPolicyState(PolicyTagIamPolicyState $) {
+        this.etag = $.etag;
+        this.policyData = $.policyData;
+        this.policyTag = $.policyTag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyTagIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
-        private @Nullable Output<String> policyTag;
+        private PolicyTagIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyTagIamPolicyState();
         }
 
         public Builder(PolicyTagIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
-    	      this.policyTag = defaults.policyTag;
+            $ = new PolicyTagIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
         }
+
         public Builder policyTag(@Nullable Output<String> policyTag) {
-            this.policyTag = policyTag;
+            $.policyTag = policyTag;
             return this;
         }
-        public Builder policyTag(@Nullable String policyTag) {
-            this.policyTag = Codegen.ofNullable(policyTag);
-            return this;
-        }        public PolicyTagIamPolicyState build() {
-            return new PolicyTagIamPolicyState(etag, policyData, policyTag);
+
+        public Builder policyTag(String policyTag) {
+            return policyTag(Output.of(policyTag));
+        }
+
+        public PolicyTagIamPolicyState build() {
+            return $;
         }
     }
+
 }

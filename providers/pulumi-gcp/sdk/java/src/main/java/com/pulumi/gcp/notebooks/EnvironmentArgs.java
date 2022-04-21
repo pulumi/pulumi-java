@@ -5,11 +5,11 @@ package com.pulumi.gcp.notebooks;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.notebooks.inputs.EnvironmentContainerImageArgs;
 import com.pulumi.gcp.notebooks.inputs.EnvironmentVmImageArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerImage")
-      private final @Nullable Output<EnvironmentContainerImageArgs> containerImage;
+    private @Nullable Output<EnvironmentContainerImageArgs> containerImage;
 
-    public Output<EnvironmentContainerImageArgs> containerImage() {
-        return this.containerImage == null ? Codegen.empty() : this.containerImage;
+    public Optional<Output<EnvironmentContainerImageArgs>> containerImage() {
+        return Optional.ofNullable(this.containerImage);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -68,10 +68,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="postStartupScript")
-      private final @Nullable Output<String> postStartupScript;
+    private @Nullable Output<String> postStartupScript;
 
-    public Output<String> postStartupScript() {
-        return this.postStartupScript == null ? Codegen.empty() : this.postStartupScript;
+    public Optional<Output<String>> postStartupScript() {
+        return Optional.ofNullable(this.postStartupScript);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -104,141 +104,119 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmImage")
-      private final @Nullable Output<EnvironmentVmImageArgs> vmImage;
+    private @Nullable Output<EnvironmentVmImageArgs> vmImage;
 
-    public Output<EnvironmentVmImageArgs> vmImage() {
-        return this.vmImage == null ? Codegen.empty() : this.vmImage;
+    public Optional<Output<EnvironmentVmImageArgs>> vmImage() {
+        return Optional.ofNullable(this.vmImage);
     }
 
-    public EnvironmentArgs(
-        @Nullable Output<EnvironmentContainerImageArgs> containerImage,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> postStartupScript,
-        @Nullable Output<String> project,
-        @Nullable Output<EnvironmentVmImageArgs> vmImage) {
-        this.containerImage = containerImage;
-        this.description = description;
-        this.displayName = displayName;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = name;
-        this.postStartupScript = postStartupScript;
-        this.project = project;
-        this.vmImage = vmImage;
-    }
+    private EnvironmentArgs() {}
 
-    private EnvironmentArgs() {
-        this.containerImage = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.postStartupScript = Codegen.empty();
-        this.project = Codegen.empty();
-        this.vmImage = Codegen.empty();
+    private EnvironmentArgs(EnvironmentArgs $) {
+        this.containerImage = $.containerImage;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.location = $.location;
+        this.name = $.name;
+        this.postStartupScript = $.postStartupScript;
+        this.project = $.project;
+        this.vmImage = $.vmImage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EnvironmentContainerImageArgs> containerImage;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> postStartupScript;
-        private @Nullable Output<String> project;
-        private @Nullable Output<EnvironmentVmImageArgs> vmImage;
+        private EnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentArgs();
         }
 
         public Builder(EnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerImage = defaults.containerImage;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.postStartupScript = defaults.postStartupScript;
-    	      this.project = defaults.project;
-    	      this.vmImage = defaults.vmImage;
+            $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerImage(@Nullable Output<EnvironmentContainerImageArgs> containerImage) {
-            this.containerImage = containerImage;
+            $.containerImage = containerImage;
             return this;
         }
-        public Builder containerImage(@Nullable EnvironmentContainerImageArgs containerImage) {
-            this.containerImage = Codegen.ofNullable(containerImage);
-            return this;
+
+        public Builder containerImage(EnvironmentContainerImageArgs containerImage) {
+            return containerImage(Output.of(containerImage));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder postStartupScript(@Nullable Output<String> postStartupScript) {
-            this.postStartupScript = postStartupScript;
+            $.postStartupScript = postStartupScript;
             return this;
         }
-        public Builder postStartupScript(@Nullable String postStartupScript) {
-            this.postStartupScript = Codegen.ofNullable(postStartupScript);
-            return this;
+
+        public Builder postStartupScript(String postStartupScript) {
+            return postStartupScript(Output.of(postStartupScript));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder vmImage(@Nullable Output<EnvironmentVmImageArgs> vmImage) {
-            this.vmImage = vmImage;
+            $.vmImage = vmImage;
             return this;
         }
-        public Builder vmImage(@Nullable EnvironmentVmImageArgs vmImage) {
-            this.vmImage = Codegen.ofNullable(vmImage);
-            return this;
-        }        public EnvironmentArgs build() {
-            return new EnvironmentArgs(containerImage, description, displayName, location, name, postStartupScript, project, vmImage);
+
+        public Builder vmImage(EnvironmentVmImageArgs vmImage) {
+            return vmImage(Output.of(vmImage));
+        }
+
+        public EnvironmentArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

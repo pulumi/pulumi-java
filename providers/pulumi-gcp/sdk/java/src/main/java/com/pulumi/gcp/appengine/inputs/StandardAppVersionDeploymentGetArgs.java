@@ -5,11 +5,11 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentFileGetArgs;
 import com.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentZipGetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class StandardAppVersionDeploymentGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="files")
-      private final @Nullable Output<List<StandardAppVersionDeploymentFileGetArgs>> files;
+    private @Nullable Output<List<StandardAppVersionDeploymentFileGetArgs>> files;
 
-    public Output<List<StandardAppVersionDeploymentFileGetArgs>> files() {
-        return this.files == null ? Codegen.empty() : this.files;
+    public Optional<Output<List<StandardAppVersionDeploymentFileGetArgs>>> files() {
+        return Optional.ofNullable(this.files);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class StandardAppVersionDeploymentGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="zip")
-      private final @Nullable Output<StandardAppVersionDeploymentZipGetArgs> zip;
+    private @Nullable Output<StandardAppVersionDeploymentZipGetArgs> zip;
 
-    public Output<StandardAppVersionDeploymentZipGetArgs> zip() {
-        return this.zip == null ? Codegen.empty() : this.zip;
+    public Optional<Output<StandardAppVersionDeploymentZipGetArgs>> zip() {
+        return Optional.ofNullable(this.zip);
     }
 
-    public StandardAppVersionDeploymentGetArgs(
-        @Nullable Output<List<StandardAppVersionDeploymentFileGetArgs>> files,
-        @Nullable Output<StandardAppVersionDeploymentZipGetArgs> zip) {
-        this.files = files;
-        this.zip = zip;
-    }
+    private StandardAppVersionDeploymentGetArgs() {}
 
-    private StandardAppVersionDeploymentGetArgs() {
-        this.files = Codegen.empty();
-        this.zip = Codegen.empty();
+    private StandardAppVersionDeploymentGetArgs(StandardAppVersionDeploymentGetArgs $) {
+        this.files = $.files;
+        this.zip = $.zip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardAppVersionDeploymentGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<StandardAppVersionDeploymentFileGetArgs>> files;
-        private @Nullable Output<StandardAppVersionDeploymentZipGetArgs> zip;
+        private StandardAppVersionDeploymentGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardAppVersionDeploymentGetArgs();
         }
 
         public Builder(StandardAppVersionDeploymentGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.files = defaults.files;
-    	      this.zip = defaults.zip;
+            $ = new StandardAppVersionDeploymentGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder files(@Nullable Output<List<StandardAppVersionDeploymentFileGetArgs>> files) {
-            this.files = files;
+            $.files = files;
             return this;
         }
-        public Builder files(@Nullable List<StandardAppVersionDeploymentFileGetArgs> files) {
-            this.files = Codegen.ofNullable(files);
-            return this;
+
+        public Builder files(List<StandardAppVersionDeploymentFileGetArgs> files) {
+            return files(Output.of(files));
         }
+
         public Builder files(StandardAppVersionDeploymentFileGetArgs... files) {
             return files(List.of(files));
         }
+
         public Builder zip(@Nullable Output<StandardAppVersionDeploymentZipGetArgs> zip) {
-            this.zip = zip;
+            $.zip = zip;
             return this;
         }
-        public Builder zip(@Nullable StandardAppVersionDeploymentZipGetArgs zip) {
-            this.zip = Codegen.ofNullable(zip);
-            return this;
-        }        public StandardAppVersionDeploymentGetArgs build() {
-            return new StandardAppVersionDeploymentGetArgs(files, zip);
+
+        public Builder zip(StandardAppVersionDeploymentZipGetArgs zip) {
+            return zip(Output.of(zip));
+        }
+
+        public StandardAppVersionDeploymentGetArgs build() {
+            return $;
         }
     }
+
 }

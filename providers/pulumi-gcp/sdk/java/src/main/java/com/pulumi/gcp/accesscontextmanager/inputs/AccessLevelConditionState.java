@@ -5,12 +5,12 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelConditionDevicePolicyGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AccessLevelConditionState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="accessLevel")
-      private final @Nullable Output<String> accessLevel;
+    private @Nullable Output<String> accessLevel;
 
-    public Output<String> accessLevel() {
-        return this.accessLevel == null ? Codegen.empty() : this.accessLevel;
+    public Optional<Output<String>> accessLevel() {
+        return Optional.ofNullable(this.accessLevel);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AccessLevelConditionState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="devicePolicy")
-      private final @Nullable Output<AccessLevelConditionDevicePolicyGetArgs> devicePolicy;
+    private @Nullable Output<AccessLevelConditionDevicePolicyGetArgs> devicePolicy;
 
-    public Output<AccessLevelConditionDevicePolicyGetArgs> devicePolicy() {
-        return this.devicePolicy == null ? Codegen.empty() : this.devicePolicy;
+    public Optional<Output<AccessLevelConditionDevicePolicyGetArgs>> devicePolicy() {
+        return Optional.ofNullable(this.devicePolicy);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AccessLevelConditionState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ipSubnetworks")
-      private final @Nullable Output<List<String>> ipSubnetworks;
+    private @Nullable Output<List<String>> ipSubnetworks;
 
-    public Output<List<String>> ipSubnetworks() {
-        return this.ipSubnetworks == null ? Codegen.empty() : this.ipSubnetworks;
+    public Optional<Output<List<String>>> ipSubnetworks() {
+        return Optional.ofNullable(this.ipSubnetworks);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class AccessLevelConditionState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="members")
-      private final @Nullable Output<List<String>> members;
+    private @Nullable Output<List<String>> members;
 
-    public Output<List<String>> members() {
-        return this.members == null ? Codegen.empty() : this.members;
+    public Optional<Output<List<String>>> members() {
+        return Optional.ofNullable(this.members);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AccessLevelConditionState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="negate")
-      private final @Nullable Output<Boolean> negate;
+    private @Nullable Output<Boolean> negate;
 
-    public Output<Boolean> negate() {
-        return this.negate == null ? Codegen.empty() : this.negate;
+    public Optional<Output<Boolean>> negate() {
+        return Optional.ofNullable(this.negate);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class AccessLevelConditionState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="regions")
-      private final @Nullable Output<List<String>> regions;
+    private @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> regions() {
-        return this.regions == null ? Codegen.empty() : this.regions;
+    public Optional<Output<List<String>>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     /**
@@ -115,140 +115,124 @@ public final class AccessLevelConditionState extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="requiredAccessLevels")
-      private final @Nullable Output<List<String>> requiredAccessLevels;
+    private @Nullable Output<List<String>> requiredAccessLevels;
 
-    public Output<List<String>> requiredAccessLevels() {
-        return this.requiredAccessLevels == null ? Codegen.empty() : this.requiredAccessLevels;
+    public Optional<Output<List<String>>> requiredAccessLevels() {
+        return Optional.ofNullable(this.requiredAccessLevels);
     }
 
-    public AccessLevelConditionState(
-        @Nullable Output<String> accessLevel,
-        @Nullable Output<AccessLevelConditionDevicePolicyGetArgs> devicePolicy,
-        @Nullable Output<List<String>> ipSubnetworks,
-        @Nullable Output<List<String>> members,
-        @Nullable Output<Boolean> negate,
-        @Nullable Output<List<String>> regions,
-        @Nullable Output<List<String>> requiredAccessLevels) {
-        this.accessLevel = accessLevel;
-        this.devicePolicy = devicePolicy;
-        this.ipSubnetworks = ipSubnetworks;
-        this.members = members;
-        this.negate = negate;
-        this.regions = regions;
-        this.requiredAccessLevels = requiredAccessLevels;
-    }
+    private AccessLevelConditionState() {}
 
-    private AccessLevelConditionState() {
-        this.accessLevel = Codegen.empty();
-        this.devicePolicy = Codegen.empty();
-        this.ipSubnetworks = Codegen.empty();
-        this.members = Codegen.empty();
-        this.negate = Codegen.empty();
-        this.regions = Codegen.empty();
-        this.requiredAccessLevels = Codegen.empty();
+    private AccessLevelConditionState(AccessLevelConditionState $) {
+        this.accessLevel = $.accessLevel;
+        this.devicePolicy = $.devicePolicy;
+        this.ipSubnetworks = $.ipSubnetworks;
+        this.members = $.members;
+        this.negate = $.negate;
+        this.regions = $.regions;
+        this.requiredAccessLevels = $.requiredAccessLevels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessLevelConditionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessLevel;
-        private @Nullable Output<AccessLevelConditionDevicePolicyGetArgs> devicePolicy;
-        private @Nullable Output<List<String>> ipSubnetworks;
-        private @Nullable Output<List<String>> members;
-        private @Nullable Output<Boolean> negate;
-        private @Nullable Output<List<String>> regions;
-        private @Nullable Output<List<String>> requiredAccessLevels;
+        private AccessLevelConditionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessLevelConditionState();
         }
 
         public Builder(AccessLevelConditionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessLevel = defaults.accessLevel;
-    	      this.devicePolicy = defaults.devicePolicy;
-    	      this.ipSubnetworks = defaults.ipSubnetworks;
-    	      this.members = defaults.members;
-    	      this.negate = defaults.negate;
-    	      this.regions = defaults.regions;
-    	      this.requiredAccessLevels = defaults.requiredAccessLevels;
+            $ = new AccessLevelConditionState(Objects.requireNonNull(defaults));
         }
 
         public Builder accessLevel(@Nullable Output<String> accessLevel) {
-            this.accessLevel = accessLevel;
+            $.accessLevel = accessLevel;
             return this;
         }
-        public Builder accessLevel(@Nullable String accessLevel) {
-            this.accessLevel = Codegen.ofNullable(accessLevel);
-            return this;
+
+        public Builder accessLevel(String accessLevel) {
+            return accessLevel(Output.of(accessLevel));
         }
+
         public Builder devicePolicy(@Nullable Output<AccessLevelConditionDevicePolicyGetArgs> devicePolicy) {
-            this.devicePolicy = devicePolicy;
+            $.devicePolicy = devicePolicy;
             return this;
         }
-        public Builder devicePolicy(@Nullable AccessLevelConditionDevicePolicyGetArgs devicePolicy) {
-            this.devicePolicy = Codegen.ofNullable(devicePolicy);
-            return this;
+
+        public Builder devicePolicy(AccessLevelConditionDevicePolicyGetArgs devicePolicy) {
+            return devicePolicy(Output.of(devicePolicy));
         }
+
         public Builder ipSubnetworks(@Nullable Output<List<String>> ipSubnetworks) {
-            this.ipSubnetworks = ipSubnetworks;
+            $.ipSubnetworks = ipSubnetworks;
             return this;
         }
-        public Builder ipSubnetworks(@Nullable List<String> ipSubnetworks) {
-            this.ipSubnetworks = Codegen.ofNullable(ipSubnetworks);
-            return this;
+
+        public Builder ipSubnetworks(List<String> ipSubnetworks) {
+            return ipSubnetworks(Output.of(ipSubnetworks));
         }
+
         public Builder ipSubnetworks(String... ipSubnetworks) {
             return ipSubnetworks(List.of(ipSubnetworks));
         }
+
         public Builder members(@Nullable Output<List<String>> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
-        public Builder members(@Nullable List<String> members) {
-            this.members = Codegen.ofNullable(members);
-            return this;
+
+        public Builder members(List<String> members) {
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder negate(@Nullable Output<Boolean> negate) {
-            this.negate = negate;
+            $.negate = negate;
             return this;
         }
-        public Builder negate(@Nullable Boolean negate) {
-            this.negate = Codegen.ofNullable(negate);
-            return this;
+
+        public Builder negate(Boolean negate) {
+            return negate(Output.of(negate));
         }
+
         public Builder regions(@Nullable Output<List<String>> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
-        public Builder regions(@Nullable List<String> regions) {
-            this.regions = Codegen.ofNullable(regions);
-            return this;
+
+        public Builder regions(List<String> regions) {
+            return regions(Output.of(regions));
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
+
         public Builder requiredAccessLevels(@Nullable Output<List<String>> requiredAccessLevels) {
-            this.requiredAccessLevels = requiredAccessLevels;
+            $.requiredAccessLevels = requiredAccessLevels;
             return this;
         }
-        public Builder requiredAccessLevels(@Nullable List<String> requiredAccessLevels) {
-            this.requiredAccessLevels = Codegen.ofNullable(requiredAccessLevels);
-            return this;
+
+        public Builder requiredAccessLevels(List<String> requiredAccessLevels) {
+            return requiredAccessLevels(Output.of(requiredAccessLevels));
         }
+
         public Builder requiredAccessLevels(String... requiredAccessLevels) {
             return requiredAccessLevels(List.of(requiredAccessLevels));
-        }        public AccessLevelConditionState build() {
-            return new AccessLevelConditionState(accessLevel, devicePolicy, ipSubnetworks, members, negate, regions, requiredAccessLevels);
+        }
+
+        public AccessLevelConditionState build() {
+            return $;
         }
     }
+
 }

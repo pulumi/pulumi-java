@@ -5,9 +5,9 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class TopicSchemaSettingsGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<String> encoding;
+    private @Nullable Output<String> encoding;
 
-    public Output<String> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<String>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class TopicSchemaSettingsGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="schema", required=true)
-      private final Output<String> schema;
+    private Output<String> schema;
 
     public Output<String> schema() {
         return this.schema;
     }
 
-    public TopicSchemaSettingsGetArgs(
-        @Nullable Output<String> encoding,
-        Output<String> schema) {
-        this.encoding = encoding;
-        this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
-    }
+    private TopicSchemaSettingsGetArgs() {}
 
-    private TopicSchemaSettingsGetArgs() {
-        this.encoding = Codegen.empty();
-        this.schema = Codegen.empty();
+    private TopicSchemaSettingsGetArgs(TopicSchemaSettingsGetArgs $) {
+        this.encoding = $.encoding;
+        this.schema = $.schema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicSchemaSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> encoding;
-        private Output<String> schema;
+        private TopicSchemaSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicSchemaSettingsGetArgs();
         }
 
         public Builder(TopicSchemaSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encoding = defaults.encoding;
-    	      this.schema = defaults.schema;
+            $ = new TopicSchemaSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encoding(@Nullable Output<String> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable String encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(String encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder schema(Output<String> schema) {
-            this.schema = Objects.requireNonNull(schema);
+            $.schema = schema;
             return this;
         }
+
         public Builder schema(String schema) {
-            this.schema = Output.of(Objects.requireNonNull(schema));
-            return this;
-        }        public TopicSchemaSettingsGetArgs build() {
-            return new TopicSchemaSettingsGetArgs(encoding, schema);
+            return schema(Output.of(schema));
+        }
+
+        public TopicSchemaSettingsGetArgs build() {
+            $.schema = Objects.requireNonNull($.schema, "expected parameter 'schema' to be non-null");
+            return $;
         }
     }
+
 }

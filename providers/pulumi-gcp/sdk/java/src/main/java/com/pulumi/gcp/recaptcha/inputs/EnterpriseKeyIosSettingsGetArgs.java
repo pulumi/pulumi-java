@@ -5,11 +5,11 @@ package com.pulumi.gcp.recaptcha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EnterpriseKeyIosSettingsGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="allowAllBundleIds")
-      private final @Nullable Output<Boolean> allowAllBundleIds;
+    private @Nullable Output<Boolean> allowAllBundleIds;
 
-    public Output<Boolean> allowAllBundleIds() {
-        return this.allowAllBundleIds == null ? Codegen.empty() : this.allowAllBundleIds;
+    public Optional<Output<Boolean>> allowAllBundleIds() {
+        return Optional.ofNullable(this.allowAllBundleIds);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class EnterpriseKeyIosSettingsGetArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="allowedBundleIds")
-      private final @Nullable Output<List<String>> allowedBundleIds;
+    private @Nullable Output<List<String>> allowedBundleIds;
 
-    public Output<List<String>> allowedBundleIds() {
-        return this.allowedBundleIds == null ? Codegen.empty() : this.allowedBundleIds;
+    public Optional<Output<List<String>>> allowedBundleIds() {
+        return Optional.ofNullable(this.allowedBundleIds);
     }
 
-    public EnterpriseKeyIosSettingsGetArgs(
-        @Nullable Output<Boolean> allowAllBundleIds,
-        @Nullable Output<List<String>> allowedBundleIds) {
-        this.allowAllBundleIds = allowAllBundleIds;
-        this.allowedBundleIds = allowedBundleIds;
-    }
+    private EnterpriseKeyIosSettingsGetArgs() {}
 
-    private EnterpriseKeyIosSettingsGetArgs() {
-        this.allowAllBundleIds = Codegen.empty();
-        this.allowedBundleIds = Codegen.empty();
+    private EnterpriseKeyIosSettingsGetArgs(EnterpriseKeyIosSettingsGetArgs $) {
+        this.allowAllBundleIds = $.allowAllBundleIds;
+        this.allowedBundleIds = $.allowedBundleIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnterpriseKeyIosSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowAllBundleIds;
-        private @Nullable Output<List<String>> allowedBundleIds;
+        private EnterpriseKeyIosSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnterpriseKeyIosSettingsGetArgs();
         }
 
         public Builder(EnterpriseKeyIosSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowAllBundleIds = defaults.allowAllBundleIds;
-    	      this.allowedBundleIds = defaults.allowedBundleIds;
+            $ = new EnterpriseKeyIosSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowAllBundleIds(@Nullable Output<Boolean> allowAllBundleIds) {
-            this.allowAllBundleIds = allowAllBundleIds;
+            $.allowAllBundleIds = allowAllBundleIds;
             return this;
         }
-        public Builder allowAllBundleIds(@Nullable Boolean allowAllBundleIds) {
-            this.allowAllBundleIds = Codegen.ofNullable(allowAllBundleIds);
-            return this;
+
+        public Builder allowAllBundleIds(Boolean allowAllBundleIds) {
+            return allowAllBundleIds(Output.of(allowAllBundleIds));
         }
+
         public Builder allowedBundleIds(@Nullable Output<List<String>> allowedBundleIds) {
-            this.allowedBundleIds = allowedBundleIds;
+            $.allowedBundleIds = allowedBundleIds;
             return this;
         }
-        public Builder allowedBundleIds(@Nullable List<String> allowedBundleIds) {
-            this.allowedBundleIds = Codegen.ofNullable(allowedBundleIds);
-            return this;
+
+        public Builder allowedBundleIds(List<String> allowedBundleIds) {
+            return allowedBundleIds(Output.of(allowedBundleIds));
         }
+
         public Builder allowedBundleIds(String... allowedBundleIds) {
             return allowedBundleIds(List.of(allowedBundleIds));
-        }        public EnterpriseKeyIosSettingsGetArgs build() {
-            return new EnterpriseKeyIosSettingsGetArgs(allowAllBundleIds, allowedBundleIds);
+        }
+
+        public EnterpriseKeyIosSettingsGetArgs build() {
+            return $;
         }
     }
+
 }

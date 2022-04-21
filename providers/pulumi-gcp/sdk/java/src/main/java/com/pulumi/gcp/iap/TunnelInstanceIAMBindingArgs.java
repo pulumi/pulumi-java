@@ -5,11 +5,11 @@ package com.pulumi.gcp.iap;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.iap.inputs.TunnelInstanceIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TunnelInstanceIAMBindingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition;
+    private @Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition;
 
-    public Output<TunnelInstanceIAMBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<TunnelInstanceIAMBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -34,14 +34,14 @@ public final class TunnelInstanceIAMBindingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="instance", required=true)
-      private final Output<String> instance;
+    private Output<String> instance;
 
     public Output<String> instance() {
         return this.instance;
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -53,10 +53,10 @@ public final class TunnelInstanceIAMBindingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -66,125 +66,112 @@ public final class TunnelInstanceIAMBindingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public TunnelInstanceIAMBindingArgs(
-        @Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition,
-        Output<String> instance,
-        Output<List<String>> members,
-        @Nullable Output<String> project,
-        Output<String> role,
-        @Nullable Output<String> zone) {
-        this.condition = condition;
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.zone = zone;
-    }
+    private TunnelInstanceIAMBindingArgs() {}
 
-    private TunnelInstanceIAMBindingArgs() {
-        this.condition = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.zone = Codegen.empty();
+    private TunnelInstanceIAMBindingArgs(TunnelInstanceIAMBindingArgs $) {
+        this.condition = $.condition;
+        this.instance = $.instance;
+        this.members = $.members;
+        this.project = $.project;
+        this.role = $.role;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TunnelInstanceIAMBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition;
-        private Output<String> instance;
-        private Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private Output<String> role;
-        private @Nullable Output<String> zone;
+        private TunnelInstanceIAMBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TunnelInstanceIAMBindingArgs();
         }
 
         public Builder(TunnelInstanceIAMBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.instance = defaults.instance;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.zone = defaults.zone;
+            $ = new TunnelInstanceIAMBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<TunnelInstanceIAMBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable TunnelInstanceIAMBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(TunnelInstanceIAMBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder instance(Output<String> instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Output.of(Objects.requireNonNull(instance));
-            return this;
+            return instance(Output.of(instance));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public TunnelInstanceIAMBindingArgs build() {
-            return new TunnelInstanceIAMBindingArgs(condition, instance, members, project, role, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public TunnelInstanceIAMBindingArgs build() {
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

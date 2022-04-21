@@ -13,45 +13,45 @@ public final class GetInstanceTemplateConfidentialInstanceConfig extends com.pul
     public static final GetInstanceTemplateConfidentialInstanceConfig Empty = new GetInstanceTemplateConfidentialInstanceConfig();
 
     @Import(name="enableConfidentialCompute", required=true)
-      private final Boolean enableConfidentialCompute;
+    private Boolean enableConfidentialCompute;
 
     public Boolean enableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }
 
-    public GetInstanceTemplateConfidentialInstanceConfig(Boolean enableConfidentialCompute) {
-        this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute, "expected parameter 'enableConfidentialCompute' to be non-null");
-    }
+    private GetInstanceTemplateConfidentialInstanceConfig() {}
 
-    private GetInstanceTemplateConfidentialInstanceConfig() {
-        this.enableConfidentialCompute = null;
+    private GetInstanceTemplateConfidentialInstanceConfig(GetInstanceTemplateConfidentialInstanceConfig $) {
+        this.enableConfidentialCompute = $.enableConfidentialCompute;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTemplateConfidentialInstanceConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableConfidentialCompute;
+        private GetInstanceTemplateConfidentialInstanceConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTemplateConfidentialInstanceConfig();
         }
 
         public Builder(GetInstanceTemplateConfidentialInstanceConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableConfidentialCompute = defaults.enableConfidentialCompute;
+            $ = new GetInstanceTemplateConfidentialInstanceConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
-            this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
+            $.enableConfidentialCompute = enableConfidentialCompute;
             return this;
-        }        public GetInstanceTemplateConfidentialInstanceConfig build() {
-            return new GetInstanceTemplateConfidentialInstanceConfig(enableConfidentialCompute);
+        }
+
+        public GetInstanceTemplateConfidentialInstanceConfig build() {
+            $.enableConfidentialCompute = Objects.requireNonNull($.enableConfidentialCompute, "expected parameter 'enableConfidentialCompute' to be non-null");
+            return $;
         }
     }
+
 }

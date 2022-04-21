@@ -5,9 +5,9 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,24 +16,24 @@ public final class DatabaseInstanceServerCaCertArgs extends com.pulumi.resources
     public static final DatabaseInstanceServerCaCertArgs Empty = new DatabaseInstanceServerCaCertArgs();
 
     @Import(name="cert")
-      private final @Nullable Output<String> cert;
+    private @Nullable Output<String> cert;
 
-    public Output<String> cert() {
-        return this.cert == null ? Codegen.empty() : this.cert;
+    public Optional<Output<String>> cert() {
+        return Optional.ofNullable(this.cert);
     }
 
     @Import(name="commonName")
-      private final @Nullable Output<String> commonName;
+    private @Nullable Output<String> commonName;
 
-    public Output<String> commonName() {
-        return this.commonName == null ? Codegen.empty() : this.commonName;
+    public Optional<Output<String>> commonName() {
+        return Optional.ofNullable(this.commonName);
     }
 
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -42,109 +42,95 @@ public final class DatabaseInstanceServerCaCertArgs extends com.pulumi.resources
      * 
      */
     @Import(name="expirationTime")
-      private final @Nullable Output<String> expirationTime;
+    private @Nullable Output<String> expirationTime;
 
-    public Output<String> expirationTime() {
-        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
+    public Optional<Output<String>> expirationTime() {
+        return Optional.ofNullable(this.expirationTime);
     }
 
     @Import(name="sha1Fingerprint")
-      private final @Nullable Output<String> sha1Fingerprint;
+    private @Nullable Output<String> sha1Fingerprint;
 
-    public Output<String> sha1Fingerprint() {
-        return this.sha1Fingerprint == null ? Codegen.empty() : this.sha1Fingerprint;
+    public Optional<Output<String>> sha1Fingerprint() {
+        return Optional.ofNullable(this.sha1Fingerprint);
     }
 
-    public DatabaseInstanceServerCaCertArgs(
-        @Nullable Output<String> cert,
-        @Nullable Output<String> commonName,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> expirationTime,
-        @Nullable Output<String> sha1Fingerprint) {
-        this.cert = cert;
-        this.commonName = commonName;
-        this.createTime = createTime;
-        this.expirationTime = expirationTime;
-        this.sha1Fingerprint = sha1Fingerprint;
-    }
+    private DatabaseInstanceServerCaCertArgs() {}
 
-    private DatabaseInstanceServerCaCertArgs() {
-        this.cert = Codegen.empty();
-        this.commonName = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.expirationTime = Codegen.empty();
-        this.sha1Fingerprint = Codegen.empty();
+    private DatabaseInstanceServerCaCertArgs(DatabaseInstanceServerCaCertArgs $) {
+        this.cert = $.cert;
+        this.commonName = $.commonName;
+        this.createTime = $.createTime;
+        this.expirationTime = $.expirationTime;
+        this.sha1Fingerprint = $.sha1Fingerprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceServerCaCertArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cert;
-        private @Nullable Output<String> commonName;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> expirationTime;
-        private @Nullable Output<String> sha1Fingerprint;
+        private DatabaseInstanceServerCaCertArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceServerCaCertArgs();
         }
 
         public Builder(DatabaseInstanceServerCaCertArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cert = defaults.cert;
-    	      this.commonName = defaults.commonName;
-    	      this.createTime = defaults.createTime;
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.sha1Fingerprint = defaults.sha1Fingerprint;
+            $ = new DatabaseInstanceServerCaCertArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cert(@Nullable Output<String> cert) {
-            this.cert = cert;
+            $.cert = cert;
             return this;
         }
-        public Builder cert(@Nullable String cert) {
-            this.cert = Codegen.ofNullable(cert);
-            return this;
+
+        public Builder cert(String cert) {
+            return cert(Output.of(cert));
         }
+
         public Builder commonName(@Nullable Output<String> commonName) {
-            this.commonName = commonName;
+            $.commonName = commonName;
             return this;
         }
-        public Builder commonName(@Nullable String commonName) {
-            this.commonName = Codegen.ofNullable(commonName);
-            return this;
+
+        public Builder commonName(String commonName) {
+            return commonName(Output.of(commonName));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
-            this.expirationTime = expirationTime;
+            $.expirationTime = expirationTime;
             return this;
         }
-        public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Codegen.ofNullable(expirationTime);
-            return this;
+
+        public Builder expirationTime(String expirationTime) {
+            return expirationTime(Output.of(expirationTime));
         }
+
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
-            this.sha1Fingerprint = sha1Fingerprint;
+            $.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
-        public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
-            this.sha1Fingerprint = Codegen.ofNullable(sha1Fingerprint);
-            return this;
-        }        public DatabaseInstanceServerCaCertArgs build() {
-            return new DatabaseInstanceServerCaCertArgs(cert, commonName, createTime, expirationTime, sha1Fingerprint);
+
+        public Builder sha1Fingerprint(String sha1Fingerprint) {
+            return sha1Fingerprint(Output.of(sha1Fingerprint));
+        }
+
+        public DatabaseInstanceServerCaCertArgs build() {
+            return $;
         }
     }
+
 }

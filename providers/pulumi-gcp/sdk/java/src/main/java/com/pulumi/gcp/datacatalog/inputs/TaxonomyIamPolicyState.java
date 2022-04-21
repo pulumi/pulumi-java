@@ -5,9 +5,9 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TaxonomyIamPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TaxonomyIamPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
     /**
@@ -44,17 +44,17 @@ public final class TaxonomyIamPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -62,102 +62,88 @@ public final class TaxonomyIamPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="taxonomy")
-      private final @Nullable Output<String> taxonomy;
+    private @Nullable Output<String> taxonomy;
 
-    public Output<String> taxonomy() {
-        return this.taxonomy == null ? Codegen.empty() : this.taxonomy;
+    public Optional<Output<String>> taxonomy() {
+        return Optional.ofNullable(this.taxonomy);
     }
 
-    public TaxonomyIamPolicyState(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<String> taxonomy) {
-        this.etag = etag;
-        this.policyData = policyData;
-        this.project = project;
-        this.region = region;
-        this.taxonomy = taxonomy;
-    }
+    private TaxonomyIamPolicyState() {}
 
-    private TaxonomyIamPolicyState() {
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.taxonomy = Codegen.empty();
+    private TaxonomyIamPolicyState(TaxonomyIamPolicyState $) {
+        this.etag = $.etag;
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.region = $.region;
+        this.taxonomy = $.taxonomy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaxonomyIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> taxonomy;
+        private TaxonomyIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaxonomyIamPolicyState();
         }
 
         public Builder(TaxonomyIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.taxonomy = defaults.taxonomy;
+            $ = new TaxonomyIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder taxonomy(@Nullable Output<String> taxonomy) {
-            this.taxonomy = taxonomy;
+            $.taxonomy = taxonomy;
             return this;
         }
-        public Builder taxonomy(@Nullable String taxonomy) {
-            this.taxonomy = Codegen.ofNullable(taxonomy);
-            return this;
-        }        public TaxonomyIamPolicyState build() {
-            return new TaxonomyIamPolicyState(etag, policyData, project, region, taxonomy);
+
+        public Builder taxonomy(String taxonomy) {
+            return taxonomy(Output.of(taxonomy));
+        }
+
+        public TaxonomyIamPolicyState build() {
+            return $;
         }
     }
+
 }

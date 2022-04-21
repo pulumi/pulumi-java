@@ -13,45 +13,45 @@ public final class GetEnvironmentConfigWebServerConfig extends com.pulumi.resour
     public static final GetEnvironmentConfigWebServerConfig Empty = new GetEnvironmentConfigWebServerConfig();
 
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
     }
 
-    public GetEnvironmentConfigWebServerConfig(String machineType) {
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-    }
+    private GetEnvironmentConfigWebServerConfig() {}
 
-    private GetEnvironmentConfigWebServerConfig() {
-        this.machineType = null;
+    private GetEnvironmentConfigWebServerConfig(GetEnvironmentConfigWebServerConfig $) {
+        this.machineType = $.machineType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentConfigWebServerConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String machineType;
+        private GetEnvironmentConfigWebServerConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentConfigWebServerConfig();
         }
 
         public Builder(GetEnvironmentConfigWebServerConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.machineType = defaults.machineType;
+            $ = new GetEnvironmentConfigWebServerConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
-        }        public GetEnvironmentConfigWebServerConfig build() {
-            return new GetEnvironmentConfigWebServerConfig(machineType);
+        }
+
+        public GetEnvironmentConfigWebServerConfig build() {
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class EntryGroupIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="entryGroup")
-      private final @Nullable Output<String> entryGroup;
+    private @Nullable Output<String> entryGroup;
 
-    public Output<String> entryGroup() {
-        return this.entryGroup == null ? Codegen.empty() : this.entryGroup;
+    public Optional<Output<String>> entryGroup() {
+        return Optional.ofNullable(this.entryGroup);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class EntryGroupIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class EntryGroupIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
     /**
@@ -55,109 +55,95 @@ public final class EntryGroupIamPolicyState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public EntryGroupIamPolicyState(
-        @Nullable Output<String> entryGroup,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.entryGroup = entryGroup;
-        this.etag = etag;
-        this.policyData = policyData;
-        this.project = project;
-        this.region = region;
-    }
+    private EntryGroupIamPolicyState() {}
 
-    private EntryGroupIamPolicyState() {
-        this.entryGroup = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private EntryGroupIamPolicyState(EntryGroupIamPolicyState $) {
+        this.entryGroup = $.entryGroup;
+        this.etag = $.etag;
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntryGroupIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> entryGroup;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private EntryGroupIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntryGroupIamPolicyState();
         }
 
         public Builder(EntryGroupIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entryGroup = defaults.entryGroup;
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new EntryGroupIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder entryGroup(@Nullable Output<String> entryGroup) {
-            this.entryGroup = entryGroup;
+            $.entryGroup = entryGroup;
             return this;
         }
-        public Builder entryGroup(@Nullable String entryGroup) {
-            this.entryGroup = Codegen.ofNullable(entryGroup);
-            return this;
+
+        public Builder entryGroup(String entryGroup) {
+            return entryGroup(Output.of(entryGroup));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public EntryGroupIamPolicyState build() {
-            return new EntryGroupIamPolicyState(entryGroup, etag, policyData, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public EntryGroupIamPolicyState build() {
+            return $;
         }
     }
+
 }

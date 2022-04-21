@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ImageRawDiskGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="containerType")
-      private final @Nullable Output<String> containerType;
+    private @Nullable Output<String> containerType;
 
-    public Output<String> containerType() {
-        return this.containerType == null ? Codegen.empty() : this.containerType;
+    public Optional<Output<String>> containerType() {
+        return Optional.ofNullable(this.containerType);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ImageRawDiskGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sha1")
-      private final @Nullable Output<String> sha1;
+    private @Nullable Output<String> sha1;
 
-    public Output<String> sha1() {
-        return this.sha1 == null ? Codegen.empty() : this.sha1;
+    public Optional<Output<String>> sha1() {
+        return Optional.ofNullable(this.sha1);
     }
 
     /**
@@ -50,76 +50,69 @@ public final class ImageRawDiskGetArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="source", required=true)
-      private final Output<String> source;
+    private Output<String> source;
 
     public Output<String> source() {
         return this.source;
     }
 
-    public ImageRawDiskGetArgs(
-        @Nullable Output<String> containerType,
-        @Nullable Output<String> sha1,
-        Output<String> source) {
-        this.containerType = containerType;
-        this.sha1 = sha1;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private ImageRawDiskGetArgs() {}
 
-    private ImageRawDiskGetArgs() {
-        this.containerType = Codegen.empty();
-        this.sha1 = Codegen.empty();
-        this.source = Codegen.empty();
+    private ImageRawDiskGetArgs(ImageRawDiskGetArgs $) {
+        this.containerType = $.containerType;
+        this.sha1 = $.sha1;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRawDiskGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerType;
-        private @Nullable Output<String> sha1;
-        private Output<String> source;
+        private ImageRawDiskGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRawDiskGetArgs();
         }
 
         public Builder(ImageRawDiskGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerType = defaults.containerType;
-    	      this.sha1 = defaults.sha1;
-    	      this.source = defaults.source;
+            $ = new ImageRawDiskGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerType(@Nullable Output<String> containerType) {
-            this.containerType = containerType;
+            $.containerType = containerType;
             return this;
         }
-        public Builder containerType(@Nullable String containerType) {
-            this.containerType = Codegen.ofNullable(containerType);
-            return this;
+
+        public Builder containerType(String containerType) {
+            return containerType(Output.of(containerType));
         }
+
         public Builder sha1(@Nullable Output<String> sha1) {
-            this.sha1 = sha1;
+            $.sha1 = sha1;
             return this;
         }
-        public Builder sha1(@Nullable String sha1) {
-            this.sha1 = Codegen.ofNullable(sha1);
-            return this;
+
+        public Builder sha1(String sha1) {
+            return sha1(Output.of(sha1));
         }
+
         public Builder source(Output<String> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
-        }        public ImageRawDiskGetArgs build() {
-            return new ImageRawDiskGetArgs(containerType, sha1, source);
+            return source(Output.of(source));
+        }
+
+        public ImageRawDiskGetArgs build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

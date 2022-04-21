@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class FirewallPolicyAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="attachmentTarget")
-      private final @Nullable Output<String> attachmentTarget;
+    private @Nullable Output<String> attachmentTarget;
 
-    public Output<String> attachmentTarget() {
-        return this.attachmentTarget == null ? Codegen.empty() : this.attachmentTarget;
+    public Optional<Output<String>> attachmentTarget() {
+        return Optional.ofNullable(this.attachmentTarget);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class FirewallPolicyAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="firewallPolicy")
-      private final @Nullable Output<String> firewallPolicy;
+    private @Nullable Output<String> firewallPolicy;
 
-    public Output<String> firewallPolicy() {
-        return this.firewallPolicy == null ? Codegen.empty() : this.firewallPolicy;
+    public Optional<Output<String>> firewallPolicy() {
+        return Optional.ofNullable(this.firewallPolicy);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class FirewallPolicyAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class FirewallPolicyAssociationState extends com.pulumi.resources.R
      * 
      */
     @Import(name="shortName")
-      private final @Nullable Output<String> shortName;
+    private @Nullable Output<String> shortName;
 
-    public Output<String> shortName() {
-        return this.shortName == null ? Codegen.empty() : this.shortName;
+    public Optional<Output<String>> shortName() {
+        return Optional.ofNullable(this.shortName);
     }
 
-    public FirewallPolicyAssociationState(
-        @Nullable Output<String> attachmentTarget,
-        @Nullable Output<String> firewallPolicy,
-        @Nullable Output<String> name,
-        @Nullable Output<String> shortName) {
-        this.attachmentTarget = attachmentTarget;
-        this.firewallPolicy = firewallPolicy;
-        this.name = name;
-        this.shortName = shortName;
-    }
+    private FirewallPolicyAssociationState() {}
 
-    private FirewallPolicyAssociationState() {
-        this.attachmentTarget = Codegen.empty();
-        this.firewallPolicy = Codegen.empty();
-        this.name = Codegen.empty();
-        this.shortName = Codegen.empty();
+    private FirewallPolicyAssociationState(FirewallPolicyAssociationState $) {
+        this.attachmentTarget = $.attachmentTarget;
+        this.firewallPolicy = $.firewallPolicy;
+        this.name = $.name;
+        this.shortName = $.shortName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> attachmentTarget;
-        private @Nullable Output<String> firewallPolicy;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> shortName;
+        private FirewallPolicyAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyAssociationState();
         }
 
         public Builder(FirewallPolicyAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachmentTarget = defaults.attachmentTarget;
-    	      this.firewallPolicy = defaults.firewallPolicy;
-    	      this.name = defaults.name;
-    	      this.shortName = defaults.shortName;
+            $ = new FirewallPolicyAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder attachmentTarget(@Nullable Output<String> attachmentTarget) {
-            this.attachmentTarget = attachmentTarget;
+            $.attachmentTarget = attachmentTarget;
             return this;
         }
-        public Builder attachmentTarget(@Nullable String attachmentTarget) {
-            this.attachmentTarget = Codegen.ofNullable(attachmentTarget);
-            return this;
+
+        public Builder attachmentTarget(String attachmentTarget) {
+            return attachmentTarget(Output.of(attachmentTarget));
         }
+
         public Builder firewallPolicy(@Nullable Output<String> firewallPolicy) {
-            this.firewallPolicy = firewallPolicy;
+            $.firewallPolicy = firewallPolicy;
             return this;
         }
-        public Builder firewallPolicy(@Nullable String firewallPolicy) {
-            this.firewallPolicy = Codegen.ofNullable(firewallPolicy);
-            return this;
+
+        public Builder firewallPolicy(String firewallPolicy) {
+            return firewallPolicy(Output.of(firewallPolicy));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder shortName(@Nullable Output<String> shortName) {
-            this.shortName = shortName;
+            $.shortName = shortName;
             return this;
         }
-        public Builder shortName(@Nullable String shortName) {
-            this.shortName = Codegen.ofNullable(shortName);
-            return this;
-        }        public FirewallPolicyAssociationState build() {
-            return new FirewallPolicyAssociationState(attachmentTarget, firewallPolicy, name, shortName);
+
+        public Builder shortName(String shortName) {
+            return shortName(Output.of(shortName));
+        }
+
+        public FirewallPolicyAssociationState build() {
+            return $;
         }
     }
+
 }

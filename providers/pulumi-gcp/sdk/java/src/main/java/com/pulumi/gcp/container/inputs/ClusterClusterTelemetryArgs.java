@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ClusterClusterTelemetryArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ClusterClusterTelemetryArgs(Output<String> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ClusterClusterTelemetryArgs() {}
 
-    private ClusterClusterTelemetryArgs() {
-        this.type = Codegen.empty();
+    private ClusterClusterTelemetryArgs(ClusterClusterTelemetryArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterTelemetryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
+        private ClusterClusterTelemetryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterTelemetryArgs();
         }
 
         public Builder(ClusterClusterTelemetryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new ClusterClusterTelemetryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ClusterClusterTelemetryArgs build() {
-            return new ClusterClusterTelemetryArgs(type);
+            return type(Output.of(type));
+        }
+
+        public ClusterClusterTelemetryArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -19,10 +19,10 @@ public final class GetKeysKeySigningKeyDigest extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="digest")
-      private final @Nullable String digest;
+    private @Nullable String digest;
 
     public Optional<String> digest() {
-        return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
+        return Optional.ofNullable(this.digest);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class GetKeysKeySigningKeyDigest extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public GetKeysKeySigningKeyDigest(
-        @Nullable String digest,
-        @Nullable String type) {
-        this.digest = digest;
-        this.type = type;
-    }
+    private GetKeysKeySigningKeyDigest() {}
 
-    private GetKeysKeySigningKeyDigest() {
-        this.digest = null;
-        this.type = null;
+    private GetKeysKeySigningKeyDigest(GetKeysKeySigningKeyDigest $) {
+        this.digest = $.digest;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeysKeySigningKeyDigest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String digest;
-        private @Nullable String type;
+        private GetKeysKeySigningKeyDigest $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeysKeySigningKeyDigest();
         }
 
         public Builder(GetKeysKeySigningKeyDigest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.digest = defaults.digest;
-    	      this.type = defaults.type;
+            $ = new GetKeysKeySigningKeyDigest(Objects.requireNonNull(defaults));
         }
 
         public Builder digest(@Nullable String digest) {
-            this.digest = digest;
+            $.digest = digest;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public GetKeysKeySigningKeyDigest build() {
-            return new GetKeysKeySigningKeyDigest(digest, type);
+        }
+
+        public GetKeysKeySigningKeyDigest build() {
+            return $;
         }
     }
+
 }

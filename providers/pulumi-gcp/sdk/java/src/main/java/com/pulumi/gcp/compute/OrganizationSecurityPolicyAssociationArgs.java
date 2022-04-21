@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class OrganizationSecurityPolicyAssociationArgs extends com.pulumi.
      * 
      */
     @Import(name="attachmentId", required=true)
-      private final Output<String> attachmentId;
+    private Output<String> attachmentId;
 
     public Output<String> attachmentId() {
         return this.attachmentId;
@@ -31,10 +31,10 @@ public final class OrganizationSecurityPolicyAssociationArgs extends com.pulumi.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,76 +42,70 @@ public final class OrganizationSecurityPolicyAssociationArgs extends com.pulumi.
      * 
      */
     @Import(name="policyId", required=true)
-      private final Output<String> policyId;
+    private Output<String> policyId;
 
     public Output<String> policyId() {
         return this.policyId;
     }
 
-    public OrganizationSecurityPolicyAssociationArgs(
-        Output<String> attachmentId,
-        @Nullable Output<String> name,
-        Output<String> policyId) {
-        this.attachmentId = Objects.requireNonNull(attachmentId, "expected parameter 'attachmentId' to be non-null");
-        this.name = name;
-        this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
-    }
+    private OrganizationSecurityPolicyAssociationArgs() {}
 
-    private OrganizationSecurityPolicyAssociationArgs() {
-        this.attachmentId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policyId = Codegen.empty();
+    private OrganizationSecurityPolicyAssociationArgs(OrganizationSecurityPolicyAssociationArgs $) {
+        this.attachmentId = $.attachmentId;
+        this.name = $.name;
+        this.policyId = $.policyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationSecurityPolicyAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> attachmentId;
-        private @Nullable Output<String> name;
-        private Output<String> policyId;
+        private OrganizationSecurityPolicyAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationSecurityPolicyAssociationArgs();
         }
 
         public Builder(OrganizationSecurityPolicyAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachmentId = defaults.attachmentId;
-    	      this.name = defaults.name;
-    	      this.policyId = defaults.policyId;
+            $ = new OrganizationSecurityPolicyAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachmentId(Output<String> attachmentId) {
-            this.attachmentId = Objects.requireNonNull(attachmentId);
+            $.attachmentId = attachmentId;
             return this;
         }
+
         public Builder attachmentId(String attachmentId) {
-            this.attachmentId = Output.of(Objects.requireNonNull(attachmentId));
-            return this;
+            return attachmentId(Output.of(attachmentId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policyId(Output<String> policyId) {
-            this.policyId = Objects.requireNonNull(policyId);
+            $.policyId = policyId;
             return this;
         }
+
         public Builder policyId(String policyId) {
-            this.policyId = Output.of(Objects.requireNonNull(policyId));
-            return this;
-        }        public OrganizationSecurityPolicyAssociationArgs build() {
-            return new OrganizationSecurityPolicyAssociationArgs(attachmentId, name, policyId);
+            return policyId(Output.of(policyId));
+        }
+
+        public OrganizationSecurityPolicyAssociationArgs build() {
+            $.attachmentId = Objects.requireNonNull($.attachmentId, "expected parameter 'attachmentId' to be non-null");
+            $.policyId = Objects.requireNonNull($.policyId, "expected parameter 'policyId' to be non-null");
+            return $;
         }
     }
+
 }

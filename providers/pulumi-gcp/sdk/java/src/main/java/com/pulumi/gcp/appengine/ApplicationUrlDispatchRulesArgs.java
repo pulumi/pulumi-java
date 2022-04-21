@@ -5,11 +5,11 @@ package com.pulumi.gcp.appengine;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRulesDispatchRuleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ApplicationUrlDispatchRulesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="dispatchRules", required=true)
-      private final Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules;
+    private Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules;
 
     public Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules() {
         return this.dispatchRules;
@@ -35,66 +35,63 @@ public final class ApplicationUrlDispatchRulesArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ApplicationUrlDispatchRulesArgs(
-        Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules,
-        @Nullable Output<String> project) {
-        this.dispatchRules = Objects.requireNonNull(dispatchRules, "expected parameter 'dispatchRules' to be non-null");
-        this.project = project;
-    }
+    private ApplicationUrlDispatchRulesArgs() {}
 
-    private ApplicationUrlDispatchRulesArgs() {
-        this.dispatchRules = Codegen.empty();
-        this.project = Codegen.empty();
+    private ApplicationUrlDispatchRulesArgs(ApplicationUrlDispatchRulesArgs $) {
+        this.dispatchRules = $.dispatchRules;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationUrlDispatchRulesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules;
-        private @Nullable Output<String> project;
+        private ApplicationUrlDispatchRulesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationUrlDispatchRulesArgs();
         }
 
         public Builder(ApplicationUrlDispatchRulesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dispatchRules = defaults.dispatchRules;
-    	      this.project = defaults.project;
+            $ = new ApplicationUrlDispatchRulesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dispatchRules(Output<List<ApplicationUrlDispatchRulesDispatchRuleArgs>> dispatchRules) {
-            this.dispatchRules = Objects.requireNonNull(dispatchRules);
+            $.dispatchRules = dispatchRules;
             return this;
         }
+
         public Builder dispatchRules(List<ApplicationUrlDispatchRulesDispatchRuleArgs> dispatchRules) {
-            this.dispatchRules = Output.of(Objects.requireNonNull(dispatchRules));
-            return this;
+            return dispatchRules(Output.of(dispatchRules));
         }
+
         public Builder dispatchRules(ApplicationUrlDispatchRulesDispatchRuleArgs... dispatchRules) {
             return dispatchRules(List.of(dispatchRules));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ApplicationUrlDispatchRulesArgs build() {
-            return new ApplicationUrlDispatchRulesArgs(dispatchRules, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ApplicationUrlDispatchRulesArgs build() {
+            $.dispatchRules = Objects.requireNonNull($.dispatchRules, "expected parameter 'dispatchRules' to be non-null");
+            return $;
         }
     }
+
 }

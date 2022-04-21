@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsGetArgs exten
      * 
      */
     @Import(name="outputConfig", required=true)
-      private final Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig;
+    private Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig;
 
     public Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig() {
         return this.outputConfig;
     }
 
-    public PreventionJobTriggerInspectJobActionSaveFindingsGetArgs(Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig) {
-        this.outputConfig = Objects.requireNonNull(outputConfig, "expected parameter 'outputConfig' to be non-null");
-    }
+    private PreventionJobTriggerInspectJobActionSaveFindingsGetArgs() {}
 
-    private PreventionJobTriggerInspectJobActionSaveFindingsGetArgs() {
-        this.outputConfig = Codegen.empty();
+    private PreventionJobTriggerInspectJobActionSaveFindingsGetArgs(PreventionJobTriggerInspectJobActionSaveFindingsGetArgs $) {
+        this.outputConfig = $.outputConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionJobTriggerInspectJobActionSaveFindingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig;
+        private PreventionJobTriggerInspectJobActionSaveFindingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionJobTriggerInspectJobActionSaveFindingsGetArgs();
         }
 
         public Builder(PreventionJobTriggerInspectJobActionSaveFindingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.outputConfig = defaults.outputConfig;
+            $ = new PreventionJobTriggerInspectJobActionSaveFindingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder outputConfig(Output<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs> outputConfig) {
-            this.outputConfig = Objects.requireNonNull(outputConfig);
+            $.outputConfig = outputConfig;
             return this;
         }
+
         public Builder outputConfig(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigGetArgs outputConfig) {
-            this.outputConfig = Output.of(Objects.requireNonNull(outputConfig));
-            return this;
-        }        public PreventionJobTriggerInspectJobActionSaveFindingsGetArgs build() {
-            return new PreventionJobTriggerInspectJobActionSaveFindingsGetArgs(outputConfig);
+            return outputConfig(Output.of(outputConfig));
+        }
+
+        public PreventionJobTriggerInspectJobActionSaveFindingsGetArgs build() {
+            $.outputConfig = Objects.requireNonNull($.outputConfig, "expected parameter 'outputConfig' to be non-null");
+            return $;
         }
     }
+
 }

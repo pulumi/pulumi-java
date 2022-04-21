@@ -19,7 +19,7 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -30,10 +30,10 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -41,64 +41,57 @@ public final class GetResourcePolicyArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
-    public GetResourcePolicyArgs(
-        String name,
-        @Nullable String project,
-        @Nullable String region) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.project = project;
-        this.region = region;
-    }
+    private GetResourcePolicyArgs() {}
 
-    private GetResourcePolicyArgs() {
-        this.name = null;
-        this.project = null;
-        this.region = null;
+    private GetResourcePolicyArgs(GetResourcePolicyArgs $) {
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourcePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String project;
-        private @Nullable String region;
+        private GetResourcePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourcePolicyArgs();
         }
 
         public Builder(GetResourcePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetResourcePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
-        }        public GetResourcePolicyArgs build() {
-            return new GetResourcePolicyArgs(name, project, region);
+        }
+
+        public GetResourcePolicyArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

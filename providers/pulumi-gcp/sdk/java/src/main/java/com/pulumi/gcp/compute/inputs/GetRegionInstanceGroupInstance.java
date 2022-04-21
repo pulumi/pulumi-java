@@ -19,7 +19,7 @@ public final class GetRegionInstanceGroupInstance extends com.pulumi.resources.I
      * 
      */
     @Import(name="instance", required=true)
-      private final String instance;
+    private String instance;
 
     public String instance() {
         return this.instance;
@@ -30,7 +30,7 @@ public final class GetRegionInstanceGroupInstance extends com.pulumi.resources.I
      * 
      */
     @Import(name="namedPorts", required=true)
-      private final List<GetRegionInstanceGroupInstanceNamedPort> namedPorts;
+    private List<GetRegionInstanceGroupInstanceNamedPort> namedPorts;
 
     public List<GetRegionInstanceGroupInstanceNamedPort> namedPorts() {
         return this.namedPorts;
@@ -41,67 +41,63 @@ public final class GetRegionInstanceGroupInstance extends com.pulumi.resources.I
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public GetRegionInstanceGroupInstance(
-        String instance,
-        List<GetRegionInstanceGroupInstanceNamedPort> namedPorts,
-        String status) {
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.namedPorts = Objects.requireNonNull(namedPorts, "expected parameter 'namedPorts' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private GetRegionInstanceGroupInstance() {}
 
-    private GetRegionInstanceGroupInstance() {
-        this.instance = null;
-        this.namedPorts = List.of();
-        this.status = null;
+    private GetRegionInstanceGroupInstance(GetRegionInstanceGroupInstance $) {
+        this.instance = $.instance;
+        this.namedPorts = $.namedPorts;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionInstanceGroupInstance defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instance;
-        private List<GetRegionInstanceGroupInstanceNamedPort> namedPorts;
-        private String status;
+        private GetRegionInstanceGroupInstance $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionInstanceGroupInstance();
         }
 
         public Builder(GetRegionInstanceGroupInstance defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instance = defaults.instance;
-    	      this.namedPorts = defaults.namedPorts;
-    	      this.status = defaults.status;
+            $ = new GetRegionInstanceGroupInstance(Objects.requireNonNull(defaults));
         }
 
         public Builder instance(String instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder namedPorts(List<GetRegionInstanceGroupInstanceNamedPort> namedPorts) {
-            this.namedPorts = Objects.requireNonNull(namedPorts);
+            $.namedPorts = namedPorts;
             return this;
         }
+
         public Builder namedPorts(GetRegionInstanceGroupInstanceNamedPort... namedPorts) {
             return namedPorts(List.of(namedPorts));
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public GetRegionInstanceGroupInstance build() {
-            return new GetRegionInstanceGroupInstance(instance, namedPorts, status);
+        }
+
+        public GetRegionInstanceGroupInstance build() {
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            $.namedPorts = Objects.requireNonNull($.namedPorts, "expected parameter 'namedPorts' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

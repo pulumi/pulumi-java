@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryArgs extends com
      * 
      */
     @Import(name="bigQueryField")
-      private final @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs> bigQueryField;
+    private @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs> bigQueryField;
 
-    public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs> bigQueryField() {
-        return this.bigQueryField == null ? Codegen.empty() : this.bigQueryField;
+    public Optional<Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs>> bigQueryField() {
+        return Optional.ofNullable(this.bigQueryField);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryArgs extends com
      * 
      */
     @Import(name="cloudStorageFileSet")
-      private final @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs> cloudStorageFileSet;
+    private @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs> cloudStorageFileSet;
 
-    public Output<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs> cloudStorageFileSet() {
-        return this.cloudStorageFileSet == null ? Codegen.empty() : this.cloudStorageFileSet;
+    public Optional<Output<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs>> cloudStorageFileSet() {
+        return Optional.ofNullable(this.cloudStorageFileSet);
     }
 
     /**
@@ -48,76 +48,69 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryArgs extends com
      * 
      */
     @Import(name="outputPath", required=true)
-      private final Output<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs> outputPath;
+    private Output<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs> outputPath;
 
     public Output<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs> outputPath() {
         return this.outputPath;
     }
 
-    public PreventionStoredInfoTypeLargeCustomDictionaryArgs(
-        @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs> bigQueryField,
-        @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs> cloudStorageFileSet,
-        Output<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs> outputPath) {
-        this.bigQueryField = bigQueryField;
-        this.cloudStorageFileSet = cloudStorageFileSet;
-        this.outputPath = Objects.requireNonNull(outputPath, "expected parameter 'outputPath' to be non-null");
-    }
+    private PreventionStoredInfoTypeLargeCustomDictionaryArgs() {}
 
-    private PreventionStoredInfoTypeLargeCustomDictionaryArgs() {
-        this.bigQueryField = Codegen.empty();
-        this.cloudStorageFileSet = Codegen.empty();
-        this.outputPath = Codegen.empty();
+    private PreventionStoredInfoTypeLargeCustomDictionaryArgs(PreventionStoredInfoTypeLargeCustomDictionaryArgs $) {
+        this.bigQueryField = $.bigQueryField;
+        this.cloudStorageFileSet = $.cloudStorageFileSet;
+        this.outputPath = $.outputPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionStoredInfoTypeLargeCustomDictionaryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs> bigQueryField;
-        private @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs> cloudStorageFileSet;
-        private Output<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs> outputPath;
+        private PreventionStoredInfoTypeLargeCustomDictionaryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionStoredInfoTypeLargeCustomDictionaryArgs();
         }
 
         public Builder(PreventionStoredInfoTypeLargeCustomDictionaryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigQueryField = defaults.bigQueryField;
-    	      this.cloudStorageFileSet = defaults.cloudStorageFileSet;
-    	      this.outputPath = defaults.outputPath;
+            $ = new PreventionStoredInfoTypeLargeCustomDictionaryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigQueryField(@Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs> bigQueryField) {
-            this.bigQueryField = bigQueryField;
+            $.bigQueryField = bigQueryField;
             return this;
         }
-        public Builder bigQueryField(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs bigQueryField) {
-            this.bigQueryField = Codegen.ofNullable(bigQueryField);
-            return this;
+
+        public Builder bigQueryField(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs bigQueryField) {
+            return bigQueryField(Output.of(bigQueryField));
         }
+
         public Builder cloudStorageFileSet(@Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs> cloudStorageFileSet) {
-            this.cloudStorageFileSet = cloudStorageFileSet;
+            $.cloudStorageFileSet = cloudStorageFileSet;
             return this;
         }
-        public Builder cloudStorageFileSet(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs cloudStorageFileSet) {
-            this.cloudStorageFileSet = Codegen.ofNullable(cloudStorageFileSet);
-            return this;
+
+        public Builder cloudStorageFileSet(PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs cloudStorageFileSet) {
+            return cloudStorageFileSet(Output.of(cloudStorageFileSet));
         }
+
         public Builder outputPath(Output<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs> outputPath) {
-            this.outputPath = Objects.requireNonNull(outputPath);
+            $.outputPath = outputPath;
             return this;
         }
+
         public Builder outputPath(PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs outputPath) {
-            this.outputPath = Output.of(Objects.requireNonNull(outputPath));
-            return this;
-        }        public PreventionStoredInfoTypeLargeCustomDictionaryArgs build() {
-            return new PreventionStoredInfoTypeLargeCustomDictionaryArgs(bigQueryField, cloudStorageFileSet, outputPath);
+            return outputPath(Output.of(outputPath));
+        }
+
+        public PreventionStoredInfoTypeLargeCustomDictionaryArgs build() {
+            $.outputPath = Objects.requireNonNull($.outputPath, "expected parameter 'outputPath' to be non-null");
+            return $;
         }
     }
+
 }

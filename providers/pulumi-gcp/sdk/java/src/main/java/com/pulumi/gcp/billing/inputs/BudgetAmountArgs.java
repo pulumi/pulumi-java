@@ -5,10 +5,10 @@ package com.pulumi.gcp.billing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.billing.inputs.BudgetAmountSpecifiedAmountArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BudgetAmountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastPeriodAmount")
-      private final @Nullable Output<Boolean> lastPeriodAmount;
+    private @Nullable Output<Boolean> lastPeriodAmount;
 
-    public Output<Boolean> lastPeriodAmount() {
-        return this.lastPeriodAmount == null ? Codegen.empty() : this.lastPeriodAmount;
+    public Optional<Output<Boolean>> lastPeriodAmount() {
+        return Optional.ofNullable(this.lastPeriodAmount);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class BudgetAmountArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="specifiedAmount")
-      private final @Nullable Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount;
+    private @Nullable Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount;
 
-    public Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount() {
-        return this.specifiedAmount == null ? Codegen.empty() : this.specifiedAmount;
+    public Optional<Output<BudgetAmountSpecifiedAmountArgs>> specifiedAmount() {
+        return Optional.ofNullable(this.specifiedAmount);
     }
 
-    public BudgetAmountArgs(
-        @Nullable Output<Boolean> lastPeriodAmount,
-        @Nullable Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount) {
-        this.lastPeriodAmount = lastPeriodAmount;
-        this.specifiedAmount = specifiedAmount;
-    }
+    private BudgetAmountArgs() {}
 
-    private BudgetAmountArgs() {
-        this.lastPeriodAmount = Codegen.empty();
-        this.specifiedAmount = Codegen.empty();
+    private BudgetAmountArgs(BudgetAmountArgs $) {
+        this.lastPeriodAmount = $.lastPeriodAmount;
+        this.specifiedAmount = $.specifiedAmount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetAmountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> lastPeriodAmount;
-        private @Nullable Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount;
+        private BudgetAmountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetAmountArgs();
         }
 
         public Builder(BudgetAmountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastPeriodAmount = defaults.lastPeriodAmount;
-    	      this.specifiedAmount = defaults.specifiedAmount;
+            $ = new BudgetAmountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lastPeriodAmount(@Nullable Output<Boolean> lastPeriodAmount) {
-            this.lastPeriodAmount = lastPeriodAmount;
+            $.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
-        public Builder lastPeriodAmount(@Nullable Boolean lastPeriodAmount) {
-            this.lastPeriodAmount = Codegen.ofNullable(lastPeriodAmount);
-            return this;
+
+        public Builder lastPeriodAmount(Boolean lastPeriodAmount) {
+            return lastPeriodAmount(Output.of(lastPeriodAmount));
         }
+
         public Builder specifiedAmount(@Nullable Output<BudgetAmountSpecifiedAmountArgs> specifiedAmount) {
-            this.specifiedAmount = specifiedAmount;
+            $.specifiedAmount = specifiedAmount;
             return this;
         }
-        public Builder specifiedAmount(@Nullable BudgetAmountSpecifiedAmountArgs specifiedAmount) {
-            this.specifiedAmount = Codegen.ofNullable(specifiedAmount);
-            return this;
-        }        public BudgetAmountArgs build() {
-            return new BudgetAmountArgs(lastPeriodAmount, specifiedAmount);
+
+        public Builder specifiedAmount(BudgetAmountSpecifiedAmountArgs specifiedAmount) {
+            return specifiedAmount(Output.of(specifiedAmount));
+        }
+
+        public BudgetAmountArgs build() {
+            return $;
         }
     }
+
 }

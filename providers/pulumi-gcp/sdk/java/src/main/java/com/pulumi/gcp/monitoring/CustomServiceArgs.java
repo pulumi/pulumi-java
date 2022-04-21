@@ -5,10 +5,10 @@ package com.pulumi.gcp.monitoring;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.CustomServiceTelemetryArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class CustomServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class CustomServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CustomServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceId")
-      private final @Nullable Output<String> serviceId;
+    private @Nullable Output<String> serviceId;
 
-    public Output<String> serviceId() {
-        return this.serviceId == null ? Codegen.empty() : this.serviceId;
+    public Optional<Output<String>> serviceId() {
+        return Optional.ofNullable(this.serviceId);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class CustomServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="telemetry")
-      private final @Nullable Output<CustomServiceTelemetryArgs> telemetry;
+    private @Nullable Output<CustomServiceTelemetryArgs> telemetry;
 
-    public Output<CustomServiceTelemetryArgs> telemetry() {
-        return this.telemetry == null ? Codegen.empty() : this.telemetry;
+    public Optional<Output<CustomServiceTelemetryArgs>> telemetry() {
+        return Optional.ofNullable(this.telemetry);
     }
 
-    public CustomServiceArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> project,
-        @Nullable Output<String> serviceId,
-        @Nullable Output<CustomServiceTelemetryArgs> telemetry) {
-        this.displayName = displayName;
-        this.project = project;
-        this.serviceId = serviceId;
-        this.telemetry = telemetry;
-    }
+    private CustomServiceArgs() {}
 
-    private CustomServiceArgs() {
-        this.displayName = Codegen.empty();
-        this.project = Codegen.empty();
-        this.serviceId = Codegen.empty();
-        this.telemetry = Codegen.empty();
+    private CustomServiceArgs(CustomServiceArgs $) {
+        this.displayName = $.displayName;
+        this.project = $.project;
+        this.serviceId = $.serviceId;
+        this.telemetry = $.telemetry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> serviceId;
-        private @Nullable Output<CustomServiceTelemetryArgs> telemetry;
+        private CustomServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomServiceArgs();
         }
 
         public Builder(CustomServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.project = defaults.project;
-    	      this.serviceId = defaults.serviceId;
-    	      this.telemetry = defaults.telemetry;
+            $ = new CustomServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serviceId(@Nullable Output<String> serviceId) {
-            this.serviceId = serviceId;
+            $.serviceId = serviceId;
             return this;
         }
-        public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = Codegen.ofNullable(serviceId);
-            return this;
+
+        public Builder serviceId(String serviceId) {
+            return serviceId(Output.of(serviceId));
         }
+
         public Builder telemetry(@Nullable Output<CustomServiceTelemetryArgs> telemetry) {
-            this.telemetry = telemetry;
+            $.telemetry = telemetry;
             return this;
         }
-        public Builder telemetry(@Nullable CustomServiceTelemetryArgs telemetry) {
-            this.telemetry = Codegen.ofNullable(telemetry);
-            return this;
-        }        public CustomServiceArgs build() {
-            return new CustomServiceArgs(displayName, project, serviceId, telemetry);
+
+        public Builder telemetry(CustomServiceTelemetryArgs telemetry) {
+            return telemetry(Output.of(telemetry));
+        }
+
+        public CustomServiceArgs build() {
+            return $;
         }
     }
+
 }

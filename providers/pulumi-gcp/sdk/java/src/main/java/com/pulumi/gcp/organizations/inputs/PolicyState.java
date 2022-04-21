@@ -5,13 +5,13 @@ package com.pulumi.gcp.organizations.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.organizations.inputs.PolicyBooleanPolicyGetArgs;
 import com.pulumi.gcp.organizations.inputs.PolicyListPolicyGetArgs;
 import com.pulumi.gcp.organizations.inputs.PolicyRestorePolicyGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="booleanPolicy")
-      private final @Nullable Output<PolicyBooleanPolicyGetArgs> booleanPolicy;
+    private @Nullable Output<PolicyBooleanPolicyGetArgs> booleanPolicy;
 
-    public Output<PolicyBooleanPolicyGetArgs> booleanPolicy() {
-        return this.booleanPolicy == null ? Codegen.empty() : this.booleanPolicy;
+    public Optional<Output<PolicyBooleanPolicyGetArgs>> booleanPolicy() {
+        return Optional.ofNullable(this.booleanPolicy);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="constraint")
-      private final @Nullable Output<String> constraint;
+    private @Nullable Output<String> constraint;
 
-    public Output<String> constraint() {
-        return this.constraint == null ? Codegen.empty() : this.constraint;
+    public Optional<Output<String>> constraint() {
+        return Optional.ofNullable(this.constraint);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="listPolicy")
-      private final @Nullable Output<PolicyListPolicyGetArgs> listPolicy;
+    private @Nullable Output<PolicyListPolicyGetArgs> listPolicy;
 
-    public Output<PolicyListPolicyGetArgs> listPolicy() {
-        return this.listPolicy == null ? Codegen.empty() : this.listPolicy;
+    public Optional<Output<PolicyListPolicyGetArgs>> listPolicy() {
+        return Optional.ofNullable(this.listPolicy);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="orgId")
-      private final @Nullable Output<String> orgId;
+    private @Nullable Output<String> orgId;
 
-    public Output<String> orgId() {
-        return this.orgId == null ? Codegen.empty() : this.orgId;
+    public Optional<Output<String>> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restorePolicy")
-      private final @Nullable Output<PolicyRestorePolicyGetArgs> restorePolicy;
+    private @Nullable Output<PolicyRestorePolicyGetArgs> restorePolicy;
 
-    public Output<PolicyRestorePolicyGetArgs> restorePolicy() {
-        return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
+    public Optional<Output<PolicyRestorePolicyGetArgs>> restorePolicy() {
+        return Optional.ofNullable(this.restorePolicy);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
     /**
@@ -102,141 +102,118 @@ public final class PolicyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public PolicyState(
-        @Nullable Output<PolicyBooleanPolicyGetArgs> booleanPolicy,
-        @Nullable Output<String> constraint,
-        @Nullable Output<String> etag,
-        @Nullable Output<PolicyListPolicyGetArgs> listPolicy,
-        @Nullable Output<String> orgId,
-        @Nullable Output<PolicyRestorePolicyGetArgs> restorePolicy,
-        @Nullable Output<String> updateTime,
-        @Nullable Output<Integer> version) {
-        this.booleanPolicy = booleanPolicy;
-        this.constraint = constraint;
-        this.etag = etag;
-        this.listPolicy = listPolicy;
-        this.orgId = orgId;
-        this.restorePolicy = restorePolicy;
-        this.updateTime = updateTime;
-        this.version = version;
-    }
+    private PolicyState() {}
 
-    private PolicyState() {
-        this.booleanPolicy = Codegen.empty();
-        this.constraint = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.listPolicy = Codegen.empty();
-        this.orgId = Codegen.empty();
-        this.restorePolicy = Codegen.empty();
-        this.updateTime = Codegen.empty();
-        this.version = Codegen.empty();
+    private PolicyState(PolicyState $) {
+        this.booleanPolicy = $.booleanPolicy;
+        this.constraint = $.constraint;
+        this.etag = $.etag;
+        this.listPolicy = $.listPolicy;
+        this.orgId = $.orgId;
+        this.restorePolicy = $.restorePolicy;
+        this.updateTime = $.updateTime;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PolicyBooleanPolicyGetArgs> booleanPolicy;
-        private @Nullable Output<String> constraint;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<PolicyListPolicyGetArgs> listPolicy;
-        private @Nullable Output<String> orgId;
-        private @Nullable Output<PolicyRestorePolicyGetArgs> restorePolicy;
-        private @Nullable Output<String> updateTime;
-        private @Nullable Output<Integer> version;
+        private PolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyState();
         }
 
         public Builder(PolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.booleanPolicy = defaults.booleanPolicy;
-    	      this.constraint = defaults.constraint;
-    	      this.etag = defaults.etag;
-    	      this.listPolicy = defaults.listPolicy;
-    	      this.orgId = defaults.orgId;
-    	      this.restorePolicy = defaults.restorePolicy;
-    	      this.updateTime = defaults.updateTime;
-    	      this.version = defaults.version;
+            $ = new PolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder booleanPolicy(@Nullable Output<PolicyBooleanPolicyGetArgs> booleanPolicy) {
-            this.booleanPolicy = booleanPolicy;
+            $.booleanPolicy = booleanPolicy;
             return this;
         }
-        public Builder booleanPolicy(@Nullable PolicyBooleanPolicyGetArgs booleanPolicy) {
-            this.booleanPolicy = Codegen.ofNullable(booleanPolicy);
-            return this;
+
+        public Builder booleanPolicy(PolicyBooleanPolicyGetArgs booleanPolicy) {
+            return booleanPolicy(Output.of(booleanPolicy));
         }
+
         public Builder constraint(@Nullable Output<String> constraint) {
-            this.constraint = constraint;
+            $.constraint = constraint;
             return this;
         }
-        public Builder constraint(@Nullable String constraint) {
-            this.constraint = Codegen.ofNullable(constraint);
-            return this;
+
+        public Builder constraint(String constraint) {
+            return constraint(Output.of(constraint));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder listPolicy(@Nullable Output<PolicyListPolicyGetArgs> listPolicy) {
-            this.listPolicy = listPolicy;
+            $.listPolicy = listPolicy;
             return this;
         }
-        public Builder listPolicy(@Nullable PolicyListPolicyGetArgs listPolicy) {
-            this.listPolicy = Codegen.ofNullable(listPolicy);
-            return this;
+
+        public Builder listPolicy(PolicyListPolicyGetArgs listPolicy) {
+            return listPolicy(Output.of(listPolicy));
         }
+
         public Builder orgId(@Nullable Output<String> orgId) {
-            this.orgId = orgId;
+            $.orgId = orgId;
             return this;
         }
-        public Builder orgId(@Nullable String orgId) {
-            this.orgId = Codegen.ofNullable(orgId);
-            return this;
+
+        public Builder orgId(String orgId) {
+            return orgId(Output.of(orgId));
         }
+
         public Builder restorePolicy(@Nullable Output<PolicyRestorePolicyGetArgs> restorePolicy) {
-            this.restorePolicy = restorePolicy;
+            $.restorePolicy = restorePolicy;
             return this;
         }
-        public Builder restorePolicy(@Nullable PolicyRestorePolicyGetArgs restorePolicy) {
-            this.restorePolicy = Codegen.ofNullable(restorePolicy);
-            return this;
+
+        public Builder restorePolicy(PolicyRestorePolicyGetArgs restorePolicy) {
+            return restorePolicy(Output.of(restorePolicy));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public PolicyState build() {
-            return new PolicyState(booleanPolicy, constraint, etag, listPolicy, orgId, restorePolicy, updateTime, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public PolicyState build() {
+            return $;
         }
     }
+
 }

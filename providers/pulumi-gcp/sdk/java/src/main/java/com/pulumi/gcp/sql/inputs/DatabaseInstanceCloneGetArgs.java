@@ -5,9 +5,9 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DatabaseInstanceCloneGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="pointInTime")
-      private final @Nullable Output<String> pointInTime;
+    private @Nullable Output<String> pointInTime;
 
-    public Output<String> pointInTime() {
-        return this.pointInTime == null ? Codegen.empty() : this.pointInTime;
+    public Optional<Output<String>> pointInTime() {
+        return Optional.ofNullable(this.pointInTime);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class DatabaseInstanceCloneGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="sourceInstanceName", required=true)
-      private final Output<String> sourceInstanceName;
+    private Output<String> sourceInstanceName;
 
     public Output<String> sourceInstanceName() {
         return this.sourceInstanceName;
     }
 
-    public DatabaseInstanceCloneGetArgs(
-        @Nullable Output<String> pointInTime,
-        Output<String> sourceInstanceName) {
-        this.pointInTime = pointInTime;
-        this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName, "expected parameter 'sourceInstanceName' to be non-null");
-    }
+    private DatabaseInstanceCloneGetArgs() {}
 
-    private DatabaseInstanceCloneGetArgs() {
-        this.pointInTime = Codegen.empty();
-        this.sourceInstanceName = Codegen.empty();
+    private DatabaseInstanceCloneGetArgs(DatabaseInstanceCloneGetArgs $) {
+        this.pointInTime = $.pointInTime;
+        this.sourceInstanceName = $.sourceInstanceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceCloneGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pointInTime;
-        private Output<String> sourceInstanceName;
+        private DatabaseInstanceCloneGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceCloneGetArgs();
         }
 
         public Builder(DatabaseInstanceCloneGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pointInTime = defaults.pointInTime;
-    	      this.sourceInstanceName = defaults.sourceInstanceName;
+            $ = new DatabaseInstanceCloneGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pointInTime(@Nullable Output<String> pointInTime) {
-            this.pointInTime = pointInTime;
+            $.pointInTime = pointInTime;
             return this;
         }
-        public Builder pointInTime(@Nullable String pointInTime) {
-            this.pointInTime = Codegen.ofNullable(pointInTime);
-            return this;
+
+        public Builder pointInTime(String pointInTime) {
+            return pointInTime(Output.of(pointInTime));
         }
+
         public Builder sourceInstanceName(Output<String> sourceInstanceName) {
-            this.sourceInstanceName = Objects.requireNonNull(sourceInstanceName);
+            $.sourceInstanceName = sourceInstanceName;
             return this;
         }
+
         public Builder sourceInstanceName(String sourceInstanceName) {
-            this.sourceInstanceName = Output.of(Objects.requireNonNull(sourceInstanceName));
-            return this;
-        }        public DatabaseInstanceCloneGetArgs build() {
-            return new DatabaseInstanceCloneGetArgs(pointInTime, sourceInstanceName);
+            return sourceInstanceName(Output.of(sourceInstanceName));
+        }
+
+        public DatabaseInstanceCloneGetArgs build() {
+            $.sourceInstanceName = Objects.requireNonNull($.sourceInstanceName, "expected parameter 'sourceInstanceName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BucketObjectCustomerEncryptionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="encryptionAlgorithm")
-      private final @Nullable Output<String> encryptionAlgorithm;
+    private @Nullable Output<String> encryptionAlgorithm;
 
-    public Output<String> encryptionAlgorithm() {
-        return this.encryptionAlgorithm == null ? Codegen.empty() : this.encryptionAlgorithm;
+    public Optional<Output<String>> encryptionAlgorithm() {
+        return Optional.ofNullable(this.encryptionAlgorithm);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class BucketObjectCustomerEncryptionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="encryptionKey", required=true)
-      private final Output<String> encryptionKey;
+    private Output<String> encryptionKey;
 
     public Output<String> encryptionKey() {
         return this.encryptionKey;
     }
 
-    public BucketObjectCustomerEncryptionArgs(
-        @Nullable Output<String> encryptionAlgorithm,
-        Output<String> encryptionKey) {
-        this.encryptionAlgorithm = encryptionAlgorithm;
-        this.encryptionKey = Objects.requireNonNull(encryptionKey, "expected parameter 'encryptionKey' to be non-null");
-    }
+    private BucketObjectCustomerEncryptionArgs() {}
 
-    private BucketObjectCustomerEncryptionArgs() {
-        this.encryptionAlgorithm = Codegen.empty();
-        this.encryptionKey = Codegen.empty();
+    private BucketObjectCustomerEncryptionArgs(BucketObjectCustomerEncryptionArgs $) {
+        this.encryptionAlgorithm = $.encryptionAlgorithm;
+        this.encryptionKey = $.encryptionKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketObjectCustomerEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> encryptionAlgorithm;
-        private Output<String> encryptionKey;
+        private BucketObjectCustomerEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketObjectCustomerEncryptionArgs();
         }
 
         public Builder(BucketObjectCustomerEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionAlgorithm = defaults.encryptionAlgorithm;
-    	      this.encryptionKey = defaults.encryptionKey;
+            $ = new BucketObjectCustomerEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionAlgorithm(@Nullable Output<String> encryptionAlgorithm) {
-            this.encryptionAlgorithm = encryptionAlgorithm;
+            $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
-        public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
-            this.encryptionAlgorithm = Codegen.ofNullable(encryptionAlgorithm);
-            return this;
+
+        public Builder encryptionAlgorithm(String encryptionAlgorithm) {
+            return encryptionAlgorithm(Output.of(encryptionAlgorithm));
         }
+
         public Builder encryptionKey(Output<String> encryptionKey) {
-            this.encryptionKey = Objects.requireNonNull(encryptionKey);
+            $.encryptionKey = encryptionKey;
             return this;
         }
+
         public Builder encryptionKey(String encryptionKey) {
-            this.encryptionKey = Output.of(Objects.requireNonNull(encryptionKey));
-            return this;
-        }        public BucketObjectCustomerEncryptionArgs build() {
-            return new BucketObjectCustomerEncryptionArgs(encryptionAlgorithm, encryptionKey);
+            return encryptionKey(Output.of(encryptionKey));
+        }
+
+        public BucketObjectCustomerEncryptionArgs build() {
+            $.encryptionKey = Objects.requireNonNull($.encryptionKey, "expected parameter 'encryptionKey' to be non-null");
+            return $;
         }
     }
+
 }

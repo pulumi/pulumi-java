@@ -5,7 +5,6 @@ package com.pulumi.gcp.iam.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class WorkloadIdentityPoolProviderAwsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="accountId", required=true)
-      private final Output<String> accountId;
+    private Output<String> accountId;
 
     public Output<String> accountId() {
         return this.accountId;
     }
 
-    public WorkloadIdentityPoolProviderAwsArgs(Output<String> accountId) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-    }
+    private WorkloadIdentityPoolProviderAwsArgs() {}
 
-    private WorkloadIdentityPoolProviderAwsArgs() {
-        this.accountId = Codegen.empty();
+    private WorkloadIdentityPoolProviderAwsArgs(WorkloadIdentityPoolProviderAwsArgs $) {
+        this.accountId = $.accountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadIdentityPoolProviderAwsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountId;
+        private WorkloadIdentityPoolProviderAwsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadIdentityPoolProviderAwsArgs();
         }
 
         public Builder(WorkloadIdentityPoolProviderAwsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
+            $ = new WorkloadIdentityPoolProviderAwsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(Output<String> accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountId(String accountId) {
-            this.accountId = Output.of(Objects.requireNonNull(accountId));
-            return this;
-        }        public WorkloadIdentityPoolProviderAwsArgs build() {
-            return new WorkloadIdentityPoolProviderAwsArgs(accountId);
+            return accountId(Output.of(accountId));
+        }
+
+        public WorkloadIdentityPoolProviderAwsArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            return $;
         }
     }
+
 }

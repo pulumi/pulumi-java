@@ -16,87 +16,85 @@ public final class GetEnvironmentConfigWorkloadsConfig extends com.pulumi.resour
     public static final GetEnvironmentConfigWorkloadsConfig Empty = new GetEnvironmentConfigWorkloadsConfig();
 
     @Import(name="schedulers", required=true)
-      private final List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers;
+    private List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers;
 
     public List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers() {
         return this.schedulers;
     }
 
     @Import(name="webServers", required=true)
-      private final List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers;
+    private List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers;
 
     public List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers() {
         return this.webServers;
     }
 
     @Import(name="workers", required=true)
-      private final List<GetEnvironmentConfigWorkloadsConfigWorker> workers;
+    private List<GetEnvironmentConfigWorkloadsConfigWorker> workers;
 
     public List<GetEnvironmentConfigWorkloadsConfigWorker> workers() {
         return this.workers;
     }
 
-    public GetEnvironmentConfigWorkloadsConfig(
-        List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers,
-        List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers,
-        List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
-        this.schedulers = Objects.requireNonNull(schedulers, "expected parameter 'schedulers' to be non-null");
-        this.webServers = Objects.requireNonNull(webServers, "expected parameter 'webServers' to be non-null");
-        this.workers = Objects.requireNonNull(workers, "expected parameter 'workers' to be non-null");
-    }
+    private GetEnvironmentConfigWorkloadsConfig() {}
 
-    private GetEnvironmentConfigWorkloadsConfig() {
-        this.schedulers = List.of();
-        this.webServers = List.of();
-        this.workers = List.of();
+    private GetEnvironmentConfigWorkloadsConfig(GetEnvironmentConfigWorkloadsConfig $) {
+        this.schedulers = $.schedulers;
+        this.webServers = $.webServers;
+        this.workers = $.workers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentConfigWorkloadsConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers;
-        private List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers;
-        private List<GetEnvironmentConfigWorkloadsConfigWorker> workers;
+        private GetEnvironmentConfigWorkloadsConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentConfigWorkloadsConfig();
         }
 
         public Builder(GetEnvironmentConfigWorkloadsConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.schedulers = defaults.schedulers;
-    	      this.webServers = defaults.webServers;
-    	      this.workers = defaults.workers;
+            $ = new GetEnvironmentConfigWorkloadsConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder schedulers(List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers) {
-            this.schedulers = Objects.requireNonNull(schedulers);
+            $.schedulers = schedulers;
             return this;
         }
+
         public Builder schedulers(GetEnvironmentConfigWorkloadsConfigScheduler... schedulers) {
             return schedulers(List.of(schedulers));
         }
+
         public Builder webServers(List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers) {
-            this.webServers = Objects.requireNonNull(webServers);
+            $.webServers = webServers;
             return this;
         }
+
         public Builder webServers(GetEnvironmentConfigWorkloadsConfigWebServer... webServers) {
             return webServers(List.of(webServers));
         }
+
         public Builder workers(List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
-            this.workers = Objects.requireNonNull(workers);
+            $.workers = workers;
             return this;
         }
+
         public Builder workers(GetEnvironmentConfigWorkloadsConfigWorker... workers) {
             return workers(List.of(workers));
-        }        public GetEnvironmentConfigWorkloadsConfig build() {
-            return new GetEnvironmentConfigWorkloadsConfig(schedulers, webServers, workers);
+        }
+
+        public GetEnvironmentConfigWorkloadsConfig build() {
+            $.schedulers = Objects.requireNonNull($.schedulers, "expected parameter 'schedulers' to be non-null");
+            $.webServers = Objects.requireNonNull($.webServers, "expected parameter 'webServers' to be non-null");
+            $.workers = Objects.requireNonNull($.workers, "expected parameter 'workers' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="billingAccount")
-      private final @Nullable Output<String> billingAccount;
+    private @Nullable Output<String> billingAccount;
 
-    public Output<String> billingAccount() {
-        return this.billingAccount == null ? Codegen.empty() : this.billingAccount;
+    public Optional<Output<String>> billingAccount() {
+        return Optional.ofNullable(this.billingAccount);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="bucketId")
-      private final @Nullable Output<String> bucketId;
+    private @Nullable Output<String> bucketId;
 
-    public Output<String> bucketId() {
-        return this.bucketId == null ? Codegen.empty() : this.bucketId;
+    public Optional<Output<String>> bucketId() {
+        return Optional.ofNullable(this.bucketId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="lifecycleState")
-      private final @Nullable Output<String> lifecycleState;
+    private @Nullable Output<String> lifecycleState;
 
-    public Output<String> lifecycleState() {
-        return this.lifecycleState == null ? Codegen.empty() : this.lifecycleState;
+    public Optional<Output<String>> lifecycleState() {
+        return Optional.ofNullable(this.lifecycleState);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -87,128 +87,108 @@ public final class BillingAccountBucketConfigState extends com.pulumi.resources.
      * 
      */
     @Import(name="retentionDays")
-      private final @Nullable Output<Integer> retentionDays;
+    private @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> retentionDays() {
-        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
+    public Optional<Output<Integer>> retentionDays() {
+        return Optional.ofNullable(this.retentionDays);
     }
 
-    public BillingAccountBucketConfigState(
-        @Nullable Output<String> billingAccount,
-        @Nullable Output<String> bucketId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> lifecycleState,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> retentionDays) {
-        this.billingAccount = billingAccount;
-        this.bucketId = bucketId;
-        this.description = description;
-        this.lifecycleState = lifecycleState;
-        this.location = location;
-        this.name = name;
-        this.retentionDays = retentionDays;
-    }
+    private BillingAccountBucketConfigState() {}
 
-    private BillingAccountBucketConfigState() {
-        this.billingAccount = Codegen.empty();
-        this.bucketId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.lifecycleState = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.retentionDays = Codegen.empty();
+    private BillingAccountBucketConfigState(BillingAccountBucketConfigState $) {
+        this.billingAccount = $.billingAccount;
+        this.bucketId = $.bucketId;
+        this.description = $.description;
+        this.lifecycleState = $.lifecycleState;
+        this.location = $.location;
+        this.name = $.name;
+        this.retentionDays = $.retentionDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BillingAccountBucketConfigState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> billingAccount;
-        private @Nullable Output<String> bucketId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> lifecycleState;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> retentionDays;
+        private BillingAccountBucketConfigState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BillingAccountBucketConfigState();
         }
 
         public Builder(BillingAccountBucketConfigState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccount = defaults.billingAccount;
-    	      this.bucketId = defaults.bucketId;
-    	      this.description = defaults.description;
-    	      this.lifecycleState = defaults.lifecycleState;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.retentionDays = defaults.retentionDays;
+            $ = new BillingAccountBucketConfigState(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccount(@Nullable Output<String> billingAccount) {
-            this.billingAccount = billingAccount;
+            $.billingAccount = billingAccount;
             return this;
         }
-        public Builder billingAccount(@Nullable String billingAccount) {
-            this.billingAccount = Codegen.ofNullable(billingAccount);
-            return this;
+
+        public Builder billingAccount(String billingAccount) {
+            return billingAccount(Output.of(billingAccount));
         }
+
         public Builder bucketId(@Nullable Output<String> bucketId) {
-            this.bucketId = bucketId;
+            $.bucketId = bucketId;
             return this;
         }
-        public Builder bucketId(@Nullable String bucketId) {
-            this.bucketId = Codegen.ofNullable(bucketId);
-            return this;
+
+        public Builder bucketId(String bucketId) {
+            return bucketId(Output.of(bucketId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder lifecycleState(@Nullable Output<String> lifecycleState) {
-            this.lifecycleState = lifecycleState;
+            $.lifecycleState = lifecycleState;
             return this;
         }
-        public Builder lifecycleState(@Nullable String lifecycleState) {
-            this.lifecycleState = Codegen.ofNullable(lifecycleState);
-            return this;
+
+        public Builder lifecycleState(String lifecycleState) {
+            return lifecycleState(Output.of(lifecycleState));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
-            this.retentionDays = retentionDays;
+            $.retentionDays = retentionDays;
             return this;
         }
-        public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Codegen.ofNullable(retentionDays);
-            return this;
-        }        public BillingAccountBucketConfigState build() {
-            return new BillingAccountBucketConfigState(billingAccount, bucketId, description, lifecycleState, location, name, retentionDays);
+
+        public Builder retentionDays(Integer retentionDays) {
+            return retentionDays(Output.of(retentionDays));
+        }
+
+        public BillingAccountBucketConfigState build() {
+            return $;
         }
     }
+
 }

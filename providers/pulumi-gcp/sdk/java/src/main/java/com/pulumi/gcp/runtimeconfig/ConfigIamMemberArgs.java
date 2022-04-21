@@ -5,10 +5,10 @@ package com.pulumi.gcp.runtimeconfig;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.runtimeconfig.inputs.ConfigIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class ConfigIamMemberArgs extends com.pulumi.resources.ResourceArgs
     public static final ConfigIamMemberArgs Empty = new ConfigIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<ConfigIamMemberConditionArgs> condition;
+    private @Nullable Output<ConfigIamMemberConditionArgs> condition;
 
-    public Output<ConfigIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<ConfigIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -28,14 +28,14 @@ public final class ConfigIamMemberArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="config", required=true)
-      private final Output<String> config;
+    private Output<String> config;
 
     public Output<String> config() {
         return this.config;
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -47,10 +47,10 @@ public final class ConfigIamMemberArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -60,102 +60,91 @@ public final class ConfigIamMemberArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public ConfigIamMemberArgs(
-        @Nullable Output<ConfigIamMemberConditionArgs> condition,
-        Output<String> config,
-        Output<String> member,
-        @Nullable Output<String> project,
-        Output<String> role) {
-        this.condition = condition;
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private ConfigIamMemberArgs() {}
 
-    private ConfigIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.config = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
+    private ConfigIamMemberArgs(ConfigIamMemberArgs $) {
+        this.condition = $.condition;
+        this.config = $.config;
+        this.member = $.member;
+        this.project = $.project;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigIamMemberConditionArgs> condition;
-        private Output<String> config;
-        private Output<String> member;
-        private @Nullable Output<String> project;
-        private Output<String> role;
+        private ConfigIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigIamMemberArgs();
         }
 
         public Builder(ConfigIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.config = defaults.config;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
+            $ = new ConfigIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<ConfigIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable ConfigIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(ConfigIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder config(Output<String> config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder config(String config) {
-            this.config = Output.of(Objects.requireNonNull(config));
-            return this;
+            return config(Output.of(config));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public ConfigIamMemberArgs build() {
-            return new ConfigIamMemberArgs(condition, config, member, project, role);
+            return role(Output.of(role));
+        }
+
+        public ConfigIamMemberArgs build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

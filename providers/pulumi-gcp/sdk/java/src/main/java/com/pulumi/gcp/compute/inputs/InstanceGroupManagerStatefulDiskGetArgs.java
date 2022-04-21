@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class InstanceGroupManagerStatefulDiskGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="deleteRule")
-      private final @Nullable Output<String> deleteRule;
+    private @Nullable Output<String> deleteRule;
 
-    public Output<String> deleteRule() {
-        return this.deleteRule == null ? Codegen.empty() : this.deleteRule;
+    public Optional<Output<String>> deleteRule() {
+        return Optional.ofNullable(this.deleteRule);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class InstanceGroupManagerStatefulDiskGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="deviceName", required=true)
-      private final Output<String> deviceName;
+    private Output<String> deviceName;
 
     public Output<String> deviceName() {
         return this.deviceName;
     }
 
-    public InstanceGroupManagerStatefulDiskGetArgs(
-        @Nullable Output<String> deleteRule,
-        Output<String> deviceName) {
-        this.deleteRule = deleteRule;
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-    }
+    private InstanceGroupManagerStatefulDiskGetArgs() {}
 
-    private InstanceGroupManagerStatefulDiskGetArgs() {
-        this.deleteRule = Codegen.empty();
-        this.deviceName = Codegen.empty();
+    private InstanceGroupManagerStatefulDiskGetArgs(InstanceGroupManagerStatefulDiskGetArgs $) {
+        this.deleteRule = $.deleteRule;
+        this.deviceName = $.deviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerStatefulDiskGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deleteRule;
-        private Output<String> deviceName;
+        private InstanceGroupManagerStatefulDiskGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerStatefulDiskGetArgs();
         }
 
         public Builder(InstanceGroupManagerStatefulDiskGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteRule = defaults.deleteRule;
-    	      this.deviceName = defaults.deviceName;
+            $ = new InstanceGroupManagerStatefulDiskGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteRule(@Nullable Output<String> deleteRule) {
-            this.deleteRule = deleteRule;
+            $.deleteRule = deleteRule;
             return this;
         }
-        public Builder deleteRule(@Nullable String deleteRule) {
-            this.deleteRule = Codegen.ofNullable(deleteRule);
-            return this;
+
+        public Builder deleteRule(String deleteRule) {
+            return deleteRule(Output.of(deleteRule));
         }
+
         public Builder deviceName(Output<String> deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder deviceName(String deviceName) {
-            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
-            return this;
-        }        public InstanceGroupManagerStatefulDiskGetArgs build() {
-            return new InstanceGroupManagerStatefulDiskGetArgs(deleteRule, deviceName);
+            return deviceName(Output.of(deviceName));
+        }
+
+        public InstanceGroupManagerStatefulDiskGetArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            return $;
         }
     }
+
 }

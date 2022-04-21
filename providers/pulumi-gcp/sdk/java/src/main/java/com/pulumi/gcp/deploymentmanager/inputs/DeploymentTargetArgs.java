@@ -5,11 +5,11 @@ package com.pulumi.gcp.deploymentmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetConfigArgs;
 import com.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetImportArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class DeploymentTargetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="config", required=true)
-      private final Output<DeploymentTargetConfigArgs> config;
+    private Output<DeploymentTargetConfigArgs> config;
 
     public Output<DeploymentTargetConfigArgs> config() {
         return this.config;
@@ -37,66 +37,63 @@ public final class DeploymentTargetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="imports")
-      private final @Nullable Output<List<DeploymentTargetImportArgs>> imports;
+    private @Nullable Output<List<DeploymentTargetImportArgs>> imports;
 
-    public Output<List<DeploymentTargetImportArgs>> imports() {
-        return this.imports == null ? Codegen.empty() : this.imports;
+    public Optional<Output<List<DeploymentTargetImportArgs>>> imports() {
+        return Optional.ofNullable(this.imports);
     }
 
-    public DeploymentTargetArgs(
-        Output<DeploymentTargetConfigArgs> config,
-        @Nullable Output<List<DeploymentTargetImportArgs>> imports) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.imports = imports;
-    }
+    private DeploymentTargetArgs() {}
 
-    private DeploymentTargetArgs() {
-        this.config = Codegen.empty();
-        this.imports = Codegen.empty();
+    private DeploymentTargetArgs(DeploymentTargetArgs $) {
+        this.config = $.config;
+        this.imports = $.imports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DeploymentTargetConfigArgs> config;
-        private @Nullable Output<List<DeploymentTargetImportArgs>> imports;
+        private DeploymentTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentTargetArgs();
         }
 
         public Builder(DeploymentTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.imports = defaults.imports;
+            $ = new DeploymentTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(Output<DeploymentTargetConfigArgs> config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder config(DeploymentTargetConfigArgs config) {
-            this.config = Output.of(Objects.requireNonNull(config));
-            return this;
+            return config(Output.of(config));
         }
+
         public Builder imports(@Nullable Output<List<DeploymentTargetImportArgs>> imports) {
-            this.imports = imports;
+            $.imports = imports;
             return this;
         }
-        public Builder imports(@Nullable List<DeploymentTargetImportArgs> imports) {
-            this.imports = Codegen.ofNullable(imports);
-            return this;
+
+        public Builder imports(List<DeploymentTargetImportArgs> imports) {
+            return imports(Output.of(imports));
         }
+
         public Builder imports(DeploymentTargetImportArgs... imports) {
             return imports(List.of(imports));
-        }        public DeploymentTargetArgs build() {
-            return new DeploymentTargetArgs(config, imports);
+        }
+
+        public DeploymentTargetArgs build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            return $;
         }
     }
+
 }

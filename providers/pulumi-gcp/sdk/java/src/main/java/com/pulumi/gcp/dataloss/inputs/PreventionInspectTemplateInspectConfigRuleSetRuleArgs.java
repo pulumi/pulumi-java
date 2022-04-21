@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends
      * 
      */
     @Import(name="exclusionRule")
-      private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule;
+    private @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule() {
-        return this.exclusionRule == null ? Codegen.empty() : this.exclusionRule;
+    public Optional<Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs>> exclusionRule() {
+        return Optional.ofNullable(this.exclusionRule);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends
      * 
      */
     @Import(name="hotwordRule")
-      private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule;
+    private @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule;
 
-    public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule() {
-        return this.hotwordRule == null ? Codegen.empty() : this.hotwordRule;
+    public Optional<Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs>> hotwordRule() {
+        return Optional.ofNullable(this.hotwordRule);
     }
 
-    public PreventionInspectTemplateInspectConfigRuleSetRuleArgs(
-        @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule,
-        @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule) {
-        this.exclusionRule = exclusionRule;
-        this.hotwordRule = hotwordRule;
-    }
+    private PreventionInspectTemplateInspectConfigRuleSetRuleArgs() {}
 
-    private PreventionInspectTemplateInspectConfigRuleSetRuleArgs() {
-        this.exclusionRule = Codegen.empty();
-        this.hotwordRule = Codegen.empty();
+    private PreventionInspectTemplateInspectConfigRuleSetRuleArgs(PreventionInspectTemplateInspectConfigRuleSetRuleArgs $) {
+        this.exclusionRule = $.exclusionRule;
+        this.hotwordRule = $.hotwordRule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionInspectTemplateInspectConfigRuleSetRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule;
-        private @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule;
+        private PreventionInspectTemplateInspectConfigRuleSetRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionInspectTemplateInspectConfigRuleSetRuleArgs();
         }
 
         public Builder(PreventionInspectTemplateInspectConfigRuleSetRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exclusionRule = defaults.exclusionRule;
-    	      this.hotwordRule = defaults.hotwordRule;
+            $ = new PreventionInspectTemplateInspectConfigRuleSetRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exclusionRule(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule) {
-            this.exclusionRule = exclusionRule;
+            $.exclusionRule = exclusionRule;
             return this;
         }
-        public Builder exclusionRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs exclusionRule) {
-            this.exclusionRule = Codegen.ofNullable(exclusionRule);
-            return this;
+
+        public Builder exclusionRule(PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs exclusionRule) {
+            return exclusionRule(Output.of(exclusionRule));
         }
+
         public Builder hotwordRule(@Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule) {
-            this.hotwordRule = hotwordRule;
+            $.hotwordRule = hotwordRule;
             return this;
         }
-        public Builder hotwordRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs hotwordRule) {
-            this.hotwordRule = Codegen.ofNullable(hotwordRule);
-            return this;
-        }        public PreventionInspectTemplateInspectConfigRuleSetRuleArgs build() {
-            return new PreventionInspectTemplateInspectConfigRuleSetRuleArgs(exclusionRule, hotwordRule);
+
+        public Builder hotwordRule(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs hotwordRule) {
+            return hotwordRule(Output.of(hotwordRule));
+        }
+
+        public PreventionInspectTemplateInspectConfigRuleSetRuleArgs build() {
+            return $;
         }
     }
+
 }

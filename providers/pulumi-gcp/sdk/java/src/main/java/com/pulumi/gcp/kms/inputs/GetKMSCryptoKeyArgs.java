@@ -17,7 +17,7 @@ public final class GetKMSCryptoKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyRing", required=true)
-      private final String keyRing;
+    private String keyRing;
 
     public String keyRing() {
         return this.keyRing;
@@ -29,55 +29,52 @@ public final class GetKMSCryptoKeyArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetKMSCryptoKeyArgs(
-        String keyRing,
-        String name) {
-        this.keyRing = Objects.requireNonNull(keyRing, "expected parameter 'keyRing' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetKMSCryptoKeyArgs() {}
 
-    private GetKMSCryptoKeyArgs() {
-        this.keyRing = null;
-        this.name = null;
+    private GetKMSCryptoKeyArgs(GetKMSCryptoKeyArgs $) {
+        this.keyRing = $.keyRing;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKMSCryptoKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyRing;
-        private String name;
+        private GetKMSCryptoKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKMSCryptoKeyArgs();
         }
 
         public Builder(GetKMSCryptoKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyRing = defaults.keyRing;
-    	      this.name = defaults.name;
+            $ = new GetKMSCryptoKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyRing(String keyRing) {
-            this.keyRing = Objects.requireNonNull(keyRing);
+            $.keyRing = keyRing;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetKMSCryptoKeyArgs build() {
-            return new GetKMSCryptoKeyArgs(keyRing, name);
+        }
+
+        public GetKMSCryptoKeyArgs build() {
+            $.keyRing = Objects.requireNonNull($.keyRing, "expected parameter 'keyRing' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

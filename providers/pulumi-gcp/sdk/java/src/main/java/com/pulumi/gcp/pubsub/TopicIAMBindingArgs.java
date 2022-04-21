@@ -5,11 +5,11 @@ package com.pulumi.gcp.pubsub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.pubsub.inputs.TopicIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,14 +18,14 @@ public final class TopicIAMBindingArgs extends com.pulumi.resources.ResourceArgs
     public static final TopicIAMBindingArgs Empty = new TopicIAMBindingArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<TopicIAMBindingConditionArgs> condition;
+    private @Nullable Output<TopicIAMBindingConditionArgs> condition;
 
-    public Output<TopicIAMBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<TopicIAMBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -37,10 +37,10 @@ public final class TopicIAMBindingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class TopicIAMBindingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -61,105 +61,95 @@ public final class TopicIAMBindingArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="topic", required=true)
-      private final Output<String> topic;
+    private Output<String> topic;
 
     public Output<String> topic() {
         return this.topic;
     }
 
-    public TopicIAMBindingArgs(
-        @Nullable Output<TopicIAMBindingConditionArgs> condition,
-        Output<List<String>> members,
-        @Nullable Output<String> project,
-        Output<String> role,
-        Output<String> topic) {
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private TopicIAMBindingArgs() {}
 
-    private TopicIAMBindingArgs() {
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.topic = Codegen.empty();
+    private TopicIAMBindingArgs(TopicIAMBindingArgs $) {
+        this.condition = $.condition;
+        this.members = $.members;
+        this.project = $.project;
+        this.role = $.role;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicIAMBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TopicIAMBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private Output<String> role;
-        private Output<String> topic;
+        private TopicIAMBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicIAMBindingArgs();
         }
 
         public Builder(TopicIAMBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.topic = defaults.topic;
+            $ = new TopicIAMBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<TopicIAMBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable TopicIAMBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(TopicIAMBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder topic(Output<String> topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Output.of(Objects.requireNonNull(topic));
-            return this;
-        }        public TopicIAMBindingArgs build() {
-            return new TopicIAMBindingArgs(condition, members, project, role, topic);
+            return topic(Output.of(topic));
+        }
+
+        public TopicIAMBindingArgs build() {
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

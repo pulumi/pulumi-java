@@ -5,10 +5,10 @@ package com.pulumi.gcp.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiConfig")
-      private final @Nullable Output<String> apiConfig;
+    private @Nullable Output<String> apiConfig;
 
-    public Output<String> apiConfig() {
-        return this.apiConfig == null ? Codegen.empty() : this.apiConfig;
+    public Optional<Output<String>> apiConfig() {
+        return Optional.ofNullable(this.apiConfig);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultHostname")
-      private final @Nullable Output<String> defaultHostname;
+    private @Nullable Output<String> defaultHostname;
 
-    public Output<String> defaultHostname() {
-        return this.defaultHostname == null ? Codegen.empty() : this.defaultHostname;
+    public Optional<Output<String>> defaultHostname() {
+        return Optional.ofNullable(this.defaultHostname);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayId")
-      private final @Nullable Output<String> gatewayId;
+    private @Nullable Output<String> gatewayId;
 
-    public Output<String> gatewayId() {
-        return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
+    public Optional<Output<String>> gatewayId() {
+        return Optional.ofNullable(this.gatewayId);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -100,141 +100,118 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public GatewayState(
-        @Nullable Output<String> apiConfig,
-        @Nullable Output<String> defaultHostname,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> gatewayId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.apiConfig = apiConfig;
-        this.defaultHostname = defaultHostname;
-        this.displayName = displayName;
-        this.gatewayId = gatewayId;
-        this.labels = labels;
-        this.name = name;
-        this.project = project;
-        this.region = region;
-    }
+    private GatewayState() {}
 
-    private GatewayState() {
-        this.apiConfig = Codegen.empty();
-        this.defaultHostname = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.gatewayId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private GatewayState(GatewayState $) {
+        this.apiConfig = $.apiConfig;
+        this.defaultHostname = $.defaultHostname;
+        this.displayName = $.displayName;
+        this.gatewayId = $.gatewayId;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiConfig;
-        private @Nullable Output<String> defaultHostname;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> gatewayId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private GatewayState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayState();
         }
 
         public Builder(GatewayState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiConfig = defaults.apiConfig;
-    	      this.defaultHostname = defaults.defaultHostname;
-    	      this.displayName = defaults.displayName;
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GatewayState(Objects.requireNonNull(defaults));
         }
 
         public Builder apiConfig(@Nullable Output<String> apiConfig) {
-            this.apiConfig = apiConfig;
+            $.apiConfig = apiConfig;
             return this;
         }
-        public Builder apiConfig(@Nullable String apiConfig) {
-            this.apiConfig = Codegen.ofNullable(apiConfig);
-            return this;
+
+        public Builder apiConfig(String apiConfig) {
+            return apiConfig(Output.of(apiConfig));
         }
+
         public Builder defaultHostname(@Nullable Output<String> defaultHostname) {
-            this.defaultHostname = defaultHostname;
+            $.defaultHostname = defaultHostname;
             return this;
         }
-        public Builder defaultHostname(@Nullable String defaultHostname) {
-            this.defaultHostname = Codegen.ofNullable(defaultHostname);
-            return this;
+
+        public Builder defaultHostname(String defaultHostname) {
+            return defaultHostname(Output.of(defaultHostname));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
-            this.gatewayId = gatewayId;
+            $.gatewayId = gatewayId;
             return this;
         }
-        public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = Codegen.ofNullable(gatewayId);
-            return this;
+
+        public Builder gatewayId(String gatewayId) {
+            return gatewayId(Output.of(gatewayId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public GatewayState build() {
-            return new GatewayState(apiConfig, defaultHostname, displayName, gatewayId, labels, name, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public GatewayState build() {
+            return $;
         }
     }
+
 }

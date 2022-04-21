@@ -5,10 +5,10 @@ package com.pulumi.gcp.secretmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SecretReplicationUserManagedReplicaArgs extends com.pulumi.re
      * 
      */
     @Import(name="customerManagedEncryption")
-      private final @Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs> customerManagedEncryption;
+    private @Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs> customerManagedEncryption;
 
-    public Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs> customerManagedEncryption() {
-        return this.customerManagedEncryption == null ? Codegen.empty() : this.customerManagedEncryption;
+    public Optional<Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs>> customerManagedEncryption() {
+        return Optional.ofNullable(this.customerManagedEncryption);
     }
 
     /**
@@ -33,63 +33,59 @@ public final class SecretReplicationUserManagedReplicaArgs extends com.pulumi.re
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
     }
 
-    public SecretReplicationUserManagedReplicaArgs(
-        @Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs> customerManagedEncryption,
-        Output<String> location) {
-        this.customerManagedEncryption = customerManagedEncryption;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-    }
+    private SecretReplicationUserManagedReplicaArgs() {}
 
-    private SecretReplicationUserManagedReplicaArgs() {
-        this.customerManagedEncryption = Codegen.empty();
-        this.location = Codegen.empty();
+    private SecretReplicationUserManagedReplicaArgs(SecretReplicationUserManagedReplicaArgs $) {
+        this.customerManagedEncryption = $.customerManagedEncryption;
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretReplicationUserManagedReplicaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs> customerManagedEncryption;
-        private Output<String> location;
+        private SecretReplicationUserManagedReplicaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretReplicationUserManagedReplicaArgs();
         }
 
         public Builder(SecretReplicationUserManagedReplicaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerManagedEncryption = defaults.customerManagedEncryption;
-    	      this.location = defaults.location;
+            $ = new SecretReplicationUserManagedReplicaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerManagedEncryption(@Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs> customerManagedEncryption) {
-            this.customerManagedEncryption = customerManagedEncryption;
+            $.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
-        public Builder customerManagedEncryption(@Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs customerManagedEncryption) {
-            this.customerManagedEncryption = Codegen.ofNullable(customerManagedEncryption);
-            return this;
+
+        public Builder customerManagedEncryption(SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs customerManagedEncryption) {
+            return customerManagedEncryption(Output.of(customerManagedEncryption));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
-        }        public SecretReplicationUserManagedReplicaArgs build() {
-            return new SecretReplicationUserManagedReplicaArgs(customerManagedEncryption, location);
+            return location(Output.of(location));
+        }
+
+        public SecretReplicationUserManagedReplicaArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

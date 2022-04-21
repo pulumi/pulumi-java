@@ -5,9 +5,9 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,49 +22,48 @@ public final class ServiceNetworkSettingsNetworkSettingsGetArgs extends com.pulu
      * 
      */
     @Import(name="ingressTrafficAllowed")
-      private final @Nullable Output<String> ingressTrafficAllowed;
+    private @Nullable Output<String> ingressTrafficAllowed;
 
-    public Output<String> ingressTrafficAllowed() {
-        return this.ingressTrafficAllowed == null ? Codegen.empty() : this.ingressTrafficAllowed;
+    public Optional<Output<String>> ingressTrafficAllowed() {
+        return Optional.ofNullable(this.ingressTrafficAllowed);
     }
 
-    public ServiceNetworkSettingsNetworkSettingsGetArgs(@Nullable Output<String> ingressTrafficAllowed) {
-        this.ingressTrafficAllowed = ingressTrafficAllowed;
-    }
+    private ServiceNetworkSettingsNetworkSettingsGetArgs() {}
 
-    private ServiceNetworkSettingsNetworkSettingsGetArgs() {
-        this.ingressTrafficAllowed = Codegen.empty();
+    private ServiceNetworkSettingsNetworkSettingsGetArgs(ServiceNetworkSettingsNetworkSettingsGetArgs $) {
+        this.ingressTrafficAllowed = $.ingressTrafficAllowed;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceNetworkSettingsNetworkSettingsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ingressTrafficAllowed;
+        private ServiceNetworkSettingsNetworkSettingsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceNetworkSettingsNetworkSettingsGetArgs();
         }
 
         public Builder(ServiceNetworkSettingsNetworkSettingsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingressTrafficAllowed = defaults.ingressTrafficAllowed;
+            $ = new ServiceNetworkSettingsNetworkSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ingressTrafficAllowed(@Nullable Output<String> ingressTrafficAllowed) {
-            this.ingressTrafficAllowed = ingressTrafficAllowed;
+            $.ingressTrafficAllowed = ingressTrafficAllowed;
             return this;
         }
-        public Builder ingressTrafficAllowed(@Nullable String ingressTrafficAllowed) {
-            this.ingressTrafficAllowed = Codegen.ofNullable(ingressTrafficAllowed);
-            return this;
-        }        public ServiceNetworkSettingsNetworkSettingsGetArgs build() {
-            return new ServiceNetworkSettingsNetworkSettingsGetArgs(ingressTrafficAllowed);
+
+        public Builder ingressTrafficAllowed(String ingressTrafficAllowed) {
+            return ingressTrafficAllowed(Output.of(ingressTrafficAllowed));
+        }
+
+        public ServiceNetworkSettingsNetworkSettingsGetArgs build() {
+            return $;
         }
     }
+
 }

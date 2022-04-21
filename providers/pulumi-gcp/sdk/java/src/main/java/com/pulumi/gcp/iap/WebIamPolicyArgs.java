@@ -5,9 +5,9 @@ package com.pulumi.gcp.iap;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class WebIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
@@ -33,63 +33,59 @@ public final class WebIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public WebIamPolicyArgs(
-        Output<String> policyData,
-        @Nullable Output<String> project) {
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-    }
+    private WebIamPolicyArgs() {}
 
-    private WebIamPolicyArgs() {
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
+    private WebIamPolicyArgs(WebIamPolicyArgs $) {
+        this.policyData = $.policyData;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
+        private WebIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebIamPolicyArgs();
         }
 
         public Builder(WebIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
+            $ = new WebIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public WebIamPolicyArgs build() {
-            return new WebIamPolicyArgs(policyData, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public WebIamPolicyArgs build() {
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

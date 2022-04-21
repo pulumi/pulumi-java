@@ -5,10 +5,10 @@ package com.pulumi.gcp.billing.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BudgetThresholdRuleGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="spendBasis")
-      private final @Nullable Output<String> spendBasis;
+    private @Nullable Output<String> spendBasis;
 
-    public Output<String> spendBasis() {
-        return this.spendBasis == null ? Codegen.empty() : this.spendBasis;
+    public Optional<Output<String>> spendBasis() {
+        return Optional.ofNullable(this.spendBasis);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class BudgetThresholdRuleGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="thresholdPercent", required=true)
-      private final Output<Double> thresholdPercent;
+    private Output<Double> thresholdPercent;
 
     public Output<Double> thresholdPercent() {
         return this.thresholdPercent;
     }
 
-    public BudgetThresholdRuleGetArgs(
-        @Nullable Output<String> spendBasis,
-        Output<Double> thresholdPercent) {
-        this.spendBasis = spendBasis;
-        this.thresholdPercent = Objects.requireNonNull(thresholdPercent, "expected parameter 'thresholdPercent' to be non-null");
-    }
+    private BudgetThresholdRuleGetArgs() {}
 
-    private BudgetThresholdRuleGetArgs() {
-        this.spendBasis = Codegen.empty();
-        this.thresholdPercent = Codegen.empty();
+    private BudgetThresholdRuleGetArgs(BudgetThresholdRuleGetArgs $) {
+        this.spendBasis = $.spendBasis;
+        this.thresholdPercent = $.thresholdPercent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BudgetThresholdRuleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> spendBasis;
-        private Output<Double> thresholdPercent;
+        private BudgetThresholdRuleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BudgetThresholdRuleGetArgs();
         }
 
         public Builder(BudgetThresholdRuleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spendBasis = defaults.spendBasis;
-    	      this.thresholdPercent = defaults.thresholdPercent;
+            $ = new BudgetThresholdRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder spendBasis(@Nullable Output<String> spendBasis) {
-            this.spendBasis = spendBasis;
+            $.spendBasis = spendBasis;
             return this;
         }
-        public Builder spendBasis(@Nullable String spendBasis) {
-            this.spendBasis = Codegen.ofNullable(spendBasis);
-            return this;
+
+        public Builder spendBasis(String spendBasis) {
+            return spendBasis(Output.of(spendBasis));
         }
+
         public Builder thresholdPercent(Output<Double> thresholdPercent) {
-            this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
+            $.thresholdPercent = thresholdPercent;
             return this;
         }
+
         public Builder thresholdPercent(Double thresholdPercent) {
-            this.thresholdPercent = Output.of(Objects.requireNonNull(thresholdPercent));
-            return this;
-        }        public BudgetThresholdRuleGetArgs build() {
-            return new BudgetThresholdRuleGetArgs(spendBasis, thresholdPercent);
+            return thresholdPercent(Output.of(thresholdPercent));
+        }
+
+        public BudgetThresholdRuleGetArgs build() {
+            $.thresholdPercent = Objects.requireNonNull($.thresholdPercent, "expected parameter 'thresholdPercent' to be non-null");
+            return $;
         }
     }
+
 }

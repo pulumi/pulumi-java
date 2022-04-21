@@ -19,7 +19,7 @@ public final class GetHealthCheckArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -31,55 +31,51 @@ public final class GetHealthCheckArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetHealthCheckArgs(
-        String name,
-        @Nullable String project) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.project = project;
-    }
+    private GetHealthCheckArgs() {}
 
-    private GetHealthCheckArgs() {
-        this.name = null;
-        this.project = null;
+    private GetHealthCheckArgs(GetHealthCheckArgs $) {
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String project;
+        private GetHealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHealthCheckArgs();
         }
 
         public Builder(GetHealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new GetHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetHealthCheckArgs build() {
-            return new GetHealthCheckArgs(name, project);
+        }
+
+        public GetHealthCheckArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

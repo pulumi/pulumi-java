@@ -5,10 +5,10 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FeatureMembershipState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="configmanagement")
-      private final @Nullable Output<FeatureMembershipConfigmanagementGetArgs> configmanagement;
+    private @Nullable Output<FeatureMembershipConfigmanagementGetArgs> configmanagement;
 
-    public Output<FeatureMembershipConfigmanagementGetArgs> configmanagement() {
-        return this.configmanagement == null ? Codegen.empty() : this.configmanagement;
+    public Optional<Output<FeatureMembershipConfigmanagementGetArgs>> configmanagement() {
+        return Optional.ofNullable(this.configmanagement);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FeatureMembershipState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="feature")
-      private final @Nullable Output<String> feature;
+    private @Nullable Output<String> feature;
 
-    public Output<String> feature() {
-        return this.feature == null ? Codegen.empty() : this.feature;
+    public Optional<Output<String>> feature() {
+        return Optional.ofNullable(this.feature);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class FeatureMembershipState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class FeatureMembershipState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="membership")
-      private final @Nullable Output<String> membership;
+    private @Nullable Output<String> membership;
 
-    public Output<String> membership() {
-        return this.membership == null ? Codegen.empty() : this.membership;
+    public Optional<Output<String>> membership() {
+        return Optional.ofNullable(this.membership);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class FeatureMembershipState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public FeatureMembershipState(
-        @Nullable Output<FeatureMembershipConfigmanagementGetArgs> configmanagement,
-        @Nullable Output<String> feature,
-        @Nullable Output<String> location,
-        @Nullable Output<String> membership,
-        @Nullable Output<String> project) {
-        this.configmanagement = configmanagement;
-        this.feature = feature;
-        this.location = location;
-        this.membership = membership;
-        this.project = project;
-    }
+    private FeatureMembershipState() {}
 
-    private FeatureMembershipState() {
-        this.configmanagement = Codegen.empty();
-        this.feature = Codegen.empty();
-        this.location = Codegen.empty();
-        this.membership = Codegen.empty();
-        this.project = Codegen.empty();
+    private FeatureMembershipState(FeatureMembershipState $) {
+        this.configmanagement = $.configmanagement;
+        this.feature = $.feature;
+        this.location = $.location;
+        this.membership = $.membership;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureMembershipState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FeatureMembershipConfigmanagementGetArgs> configmanagement;
-        private @Nullable Output<String> feature;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> membership;
-        private @Nullable Output<String> project;
+        private FeatureMembershipState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureMembershipState();
         }
 
         public Builder(FeatureMembershipState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configmanagement = defaults.configmanagement;
-    	      this.feature = defaults.feature;
-    	      this.location = defaults.location;
-    	      this.membership = defaults.membership;
-    	      this.project = defaults.project;
+            $ = new FeatureMembershipState(Objects.requireNonNull(defaults));
         }
 
         public Builder configmanagement(@Nullable Output<FeatureMembershipConfigmanagementGetArgs> configmanagement) {
-            this.configmanagement = configmanagement;
+            $.configmanagement = configmanagement;
             return this;
         }
-        public Builder configmanagement(@Nullable FeatureMembershipConfigmanagementGetArgs configmanagement) {
-            this.configmanagement = Codegen.ofNullable(configmanagement);
-            return this;
+
+        public Builder configmanagement(FeatureMembershipConfigmanagementGetArgs configmanagement) {
+            return configmanagement(Output.of(configmanagement));
         }
+
         public Builder feature(@Nullable Output<String> feature) {
-            this.feature = feature;
+            $.feature = feature;
             return this;
         }
-        public Builder feature(@Nullable String feature) {
-            this.feature = Codegen.ofNullable(feature);
-            return this;
+
+        public Builder feature(String feature) {
+            return feature(Output.of(feature));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder membership(@Nullable Output<String> membership) {
-            this.membership = membership;
+            $.membership = membership;
             return this;
         }
-        public Builder membership(@Nullable String membership) {
-            this.membership = Codegen.ofNullable(membership);
-            return this;
+
+        public Builder membership(String membership) {
+            return membership(Output.of(membership));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public FeatureMembershipState build() {
-            return new FeatureMembershipState(configmanagement, feature, location, membership, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public FeatureMembershipState build() {
+            return $;
         }
     }
+
 }

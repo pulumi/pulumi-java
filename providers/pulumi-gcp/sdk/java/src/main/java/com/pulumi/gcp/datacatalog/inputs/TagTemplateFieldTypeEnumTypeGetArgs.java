@@ -5,7 +5,6 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.TagTemplateFieldTypeEnumTypeAllowedValueGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -25,52 +24,53 @@ public final class TagTemplateFieldTypeEnumTypeGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="allowedValues", required=true)
-      private final Output<List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs>> allowedValues;
+    private Output<List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs>> allowedValues;
 
     public Output<List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs>> allowedValues() {
         return this.allowedValues;
     }
 
-    public TagTemplateFieldTypeEnumTypeGetArgs(Output<List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs>> allowedValues) {
-        this.allowedValues = Objects.requireNonNull(allowedValues, "expected parameter 'allowedValues' to be non-null");
-    }
+    private TagTemplateFieldTypeEnumTypeGetArgs() {}
 
-    private TagTemplateFieldTypeEnumTypeGetArgs() {
-        this.allowedValues = Codegen.empty();
+    private TagTemplateFieldTypeEnumTypeGetArgs(TagTemplateFieldTypeEnumTypeGetArgs $) {
+        this.allowedValues = $.allowedValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagTemplateFieldTypeEnumTypeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs>> allowedValues;
+        private TagTemplateFieldTypeEnumTypeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagTemplateFieldTypeEnumTypeGetArgs();
         }
 
         public Builder(TagTemplateFieldTypeEnumTypeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedValues = defaults.allowedValues;
+            $ = new TagTemplateFieldTypeEnumTypeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedValues(Output<List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs>> allowedValues) {
-            this.allowedValues = Objects.requireNonNull(allowedValues);
+            $.allowedValues = allowedValues;
             return this;
         }
+
         public Builder allowedValues(List<TagTemplateFieldTypeEnumTypeAllowedValueGetArgs> allowedValues) {
-            this.allowedValues = Output.of(Objects.requireNonNull(allowedValues));
-            return this;
+            return allowedValues(Output.of(allowedValues));
         }
+
         public Builder allowedValues(TagTemplateFieldTypeEnumTypeAllowedValueGetArgs... allowedValues) {
             return allowedValues(List.of(allowedValues));
-        }        public TagTemplateFieldTypeEnumTypeGetArgs build() {
-            return new TagTemplateFieldTypeEnumTypeGetArgs(allowedValues);
+        }
+
+        public TagTemplateFieldTypeEnumTypeGetArgs build() {
+            $.allowedValues = Objects.requireNonNull($.allowedValues, "expected parameter 'allowedValues' to be non-null");
+            return $;
         }
     }
+
 }

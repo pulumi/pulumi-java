@@ -5,10 +5,10 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PolicyTagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="childPolicyTags")
-      private final @Nullable Output<List<String>> childPolicyTags;
+    private @Nullable Output<List<String>> childPolicyTags;
 
-    public Output<List<String>> childPolicyTags() {
-        return this.childPolicyTags == null ? Codegen.empty() : this.childPolicyTags;
+    public Optional<Output<List<String>>> childPolicyTags() {
+        return Optional.ofNullable(this.childPolicyTags);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PolicyTagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PolicyTagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class PolicyTagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class PolicyTagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentPolicyTag")
-      private final @Nullable Output<String> parentPolicyTag;
+    private @Nullable Output<String> parentPolicyTag;
 
-    public Output<String> parentPolicyTag() {
-        return this.parentPolicyTag == null ? Codegen.empty() : this.parentPolicyTag;
+    public Optional<Output<String>> parentPolicyTag() {
+        return Optional.ofNullable(this.parentPolicyTag);
     }
 
     /**
@@ -84,118 +84,102 @@ public final class PolicyTagState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taxonomy")
-      private final @Nullable Output<String> taxonomy;
+    private @Nullable Output<String> taxonomy;
 
-    public Output<String> taxonomy() {
-        return this.taxonomy == null ? Codegen.empty() : this.taxonomy;
+    public Optional<Output<String>> taxonomy() {
+        return Optional.ofNullable(this.taxonomy);
     }
 
-    public PolicyTagState(
-        @Nullable Output<List<String>> childPolicyTags,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parentPolicyTag,
-        @Nullable Output<String> taxonomy) {
-        this.childPolicyTags = childPolicyTags;
-        this.description = description;
-        this.displayName = displayName;
-        this.name = name;
-        this.parentPolicyTag = parentPolicyTag;
-        this.taxonomy = taxonomy;
-    }
+    private PolicyTagState() {}
 
-    private PolicyTagState() {
-        this.childPolicyTags = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parentPolicyTag = Codegen.empty();
-        this.taxonomy = Codegen.empty();
+    private PolicyTagState(PolicyTagState $) {
+        this.childPolicyTags = $.childPolicyTags;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.name = $.name;
+        this.parentPolicyTag = $.parentPolicyTag;
+        this.taxonomy = $.taxonomy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyTagState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> childPolicyTags;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parentPolicyTag;
-        private @Nullable Output<String> taxonomy;
+        private PolicyTagState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyTagState();
         }
 
         public Builder(PolicyTagState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.childPolicyTags = defaults.childPolicyTags;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
-    	      this.parentPolicyTag = defaults.parentPolicyTag;
-    	      this.taxonomy = defaults.taxonomy;
+            $ = new PolicyTagState(Objects.requireNonNull(defaults));
         }
 
         public Builder childPolicyTags(@Nullable Output<List<String>> childPolicyTags) {
-            this.childPolicyTags = childPolicyTags;
+            $.childPolicyTags = childPolicyTags;
             return this;
         }
-        public Builder childPolicyTags(@Nullable List<String> childPolicyTags) {
-            this.childPolicyTags = Codegen.ofNullable(childPolicyTags);
-            return this;
+
+        public Builder childPolicyTags(List<String> childPolicyTags) {
+            return childPolicyTags(Output.of(childPolicyTags));
         }
+
         public Builder childPolicyTags(String... childPolicyTags) {
             return childPolicyTags(List.of(childPolicyTags));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parentPolicyTag(@Nullable Output<String> parentPolicyTag) {
-            this.parentPolicyTag = parentPolicyTag;
+            $.parentPolicyTag = parentPolicyTag;
             return this;
         }
-        public Builder parentPolicyTag(@Nullable String parentPolicyTag) {
-            this.parentPolicyTag = Codegen.ofNullable(parentPolicyTag);
-            return this;
+
+        public Builder parentPolicyTag(String parentPolicyTag) {
+            return parentPolicyTag(Output.of(parentPolicyTag));
         }
+
         public Builder taxonomy(@Nullable Output<String> taxonomy) {
-            this.taxonomy = taxonomy;
+            $.taxonomy = taxonomy;
             return this;
         }
-        public Builder taxonomy(@Nullable String taxonomy) {
-            this.taxonomy = Codegen.ofNullable(taxonomy);
-            return this;
-        }        public PolicyTagState build() {
-            return new PolicyTagState(childPolicyTags, description, displayName, name, parentPolicyTag, taxonomy);
+
+        public Builder taxonomy(String taxonomy) {
+            return taxonomy(Output.of(taxonomy));
+        }
+
+        public PolicyTagState build() {
+            return $;
         }
     }
+
 }

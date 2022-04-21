@@ -13,78 +13,73 @@ public final class GetClusterDnsConfig extends com.pulumi.resources.InvokeArgs {
     public static final GetClusterDnsConfig Empty = new GetClusterDnsConfig();
 
     @Import(name="clusterDns", required=true)
-      private final String clusterDns;
+    private String clusterDns;
 
     public String clusterDns() {
         return this.clusterDns;
     }
 
     @Import(name="clusterDnsDomain", required=true)
-      private final String clusterDnsDomain;
+    private String clusterDnsDomain;
 
     public String clusterDnsDomain() {
         return this.clusterDnsDomain;
     }
 
     @Import(name="clusterDnsScope", required=true)
-      private final String clusterDnsScope;
+    private String clusterDnsScope;
 
     public String clusterDnsScope() {
         return this.clusterDnsScope;
     }
 
-    public GetClusterDnsConfig(
-        String clusterDns,
-        String clusterDnsDomain,
-        String clusterDnsScope) {
-        this.clusterDns = Objects.requireNonNull(clusterDns, "expected parameter 'clusterDns' to be non-null");
-        this.clusterDnsDomain = Objects.requireNonNull(clusterDnsDomain, "expected parameter 'clusterDnsDomain' to be non-null");
-        this.clusterDnsScope = Objects.requireNonNull(clusterDnsScope, "expected parameter 'clusterDnsScope' to be non-null");
-    }
+    private GetClusterDnsConfig() {}
 
-    private GetClusterDnsConfig() {
-        this.clusterDns = null;
-        this.clusterDnsDomain = null;
-        this.clusterDnsScope = null;
+    private GetClusterDnsConfig(GetClusterDnsConfig $) {
+        this.clusterDns = $.clusterDns;
+        this.clusterDnsDomain = $.clusterDnsDomain;
+        this.clusterDnsScope = $.clusterDnsScope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterDnsConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterDns;
-        private String clusterDnsDomain;
-        private String clusterDnsScope;
+        private GetClusterDnsConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterDnsConfig();
         }
 
         public Builder(GetClusterDnsConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterDns = defaults.clusterDns;
-    	      this.clusterDnsDomain = defaults.clusterDnsDomain;
-    	      this.clusterDnsScope = defaults.clusterDnsScope;
+            $ = new GetClusterDnsConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterDns(String clusterDns) {
-            this.clusterDns = Objects.requireNonNull(clusterDns);
+            $.clusterDns = clusterDns;
             return this;
         }
+
         public Builder clusterDnsDomain(String clusterDnsDomain) {
-            this.clusterDnsDomain = Objects.requireNonNull(clusterDnsDomain);
+            $.clusterDnsDomain = clusterDnsDomain;
             return this;
         }
+
         public Builder clusterDnsScope(String clusterDnsScope) {
-            this.clusterDnsScope = Objects.requireNonNull(clusterDnsScope);
+            $.clusterDnsScope = clusterDnsScope;
             return this;
-        }        public GetClusterDnsConfig build() {
-            return new GetClusterDnsConfig(clusterDns, clusterDnsDomain, clusterDnsScope);
+        }
+
+        public GetClusterDnsConfig build() {
+            $.clusterDns = Objects.requireNonNull($.clusterDns, "expected parameter 'clusterDns' to be non-null");
+            $.clusterDnsDomain = Objects.requireNonNull($.clusterDnsDomain, "expected parameter 'clusterDnsDomain' to be non-null");
+            $.clusterDnsScope = Objects.requireNonNull($.clusterDnsScope, "expected parameter 'clusterDnsScope' to be non-null");
+            return $;
         }
     }
+
 }

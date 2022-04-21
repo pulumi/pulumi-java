@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +21,7 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends com.
      * 
      */
     @Import(name="env", required=true)
-      private final Output<String> env;
+    private Output<String> env;
 
     public Output<String> env() {
         return this.env;
@@ -33,63 +32,60 @@ public final class TriggerBuildAvailableSecretsSecretManagerGetArgs extends com.
      * 
      */
     @Import(name="versionName", required=true)
-      private final Output<String> versionName;
+    private Output<String> versionName;
 
     public Output<String> versionName() {
         return this.versionName;
     }
 
-    public TriggerBuildAvailableSecretsSecretManagerGetArgs(
-        Output<String> env,
-        Output<String> versionName) {
-        this.env = Objects.requireNonNull(env, "expected parameter 'env' to be non-null");
-        this.versionName = Objects.requireNonNull(versionName, "expected parameter 'versionName' to be non-null");
-    }
+    private TriggerBuildAvailableSecretsSecretManagerGetArgs() {}
 
-    private TriggerBuildAvailableSecretsSecretManagerGetArgs() {
-        this.env = Codegen.empty();
-        this.versionName = Codegen.empty();
+    private TriggerBuildAvailableSecretsSecretManagerGetArgs(TriggerBuildAvailableSecretsSecretManagerGetArgs $) {
+        this.env = $.env;
+        this.versionName = $.versionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerBuildAvailableSecretsSecretManagerGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> env;
-        private Output<String> versionName;
+        private TriggerBuildAvailableSecretsSecretManagerGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerBuildAvailableSecretsSecretManagerGetArgs();
         }
 
         public Builder(TriggerBuildAvailableSecretsSecretManagerGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.env = defaults.env;
-    	      this.versionName = defaults.versionName;
+            $ = new TriggerBuildAvailableSecretsSecretManagerGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder env(Output<String> env) {
-            this.env = Objects.requireNonNull(env);
+            $.env = env;
             return this;
         }
+
         public Builder env(String env) {
-            this.env = Output.of(Objects.requireNonNull(env));
-            return this;
+            return env(Output.of(env));
         }
+
         public Builder versionName(Output<String> versionName) {
-            this.versionName = Objects.requireNonNull(versionName);
+            $.versionName = versionName;
             return this;
         }
+
         public Builder versionName(String versionName) {
-            this.versionName = Output.of(Objects.requireNonNull(versionName));
-            return this;
-        }        public TriggerBuildAvailableSecretsSecretManagerGetArgs build() {
-            return new TriggerBuildAvailableSecretsSecretManagerGetArgs(env, versionName);
+            return versionName(Output.of(versionName));
+        }
+
+        public TriggerBuildAvailableSecretsSecretManagerGetArgs build() {
+            $.env = Objects.requireNonNull($.env, "expected parameter 'env' to be non-null");
+            $.versionName = Objects.requireNonNull($.versionName, "expected parameter 'versionName' to be non-null");
+            return $;
         }
     }
+
 }

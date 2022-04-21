@@ -5,7 +5,6 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +21,7 @@ public final class DatasetIamPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="datasetId", required=true)
-      private final Output<String> datasetId;
+    private Output<String> datasetId;
 
     public Output<String> datasetId() {
         return this.datasetId;
@@ -34,63 +33,60 @@ public final class DatasetIamPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
-    public DatasetIamPolicyArgs(
-        Output<String> datasetId,
-        Output<String> policyData) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-    }
+    private DatasetIamPolicyArgs() {}
 
-    private DatasetIamPolicyArgs() {
-        this.datasetId = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private DatasetIamPolicyArgs(DatasetIamPolicyArgs $) {
+        this.datasetId = $.datasetId;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> datasetId;
-        private Output<String> policyData;
+        private DatasetIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetIamPolicyArgs();
         }
 
         public Builder(DatasetIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.policyData = defaults.policyData;
+            $ = new DatasetIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(Output<String> datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
-            return this;
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
-        }        public DatasetIamPolicyArgs build() {
-            return new DatasetIamPolicyArgs(datasetId, policyData);
+            return policyData(Output.of(policyData));
+        }
+
+        public DatasetIamPolicyArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.ClusterMaintenancePolicyDailyMaintenanceWindowArgs;
 import com.pulumi.gcp.container.inputs.ClusterMaintenancePolicyMaintenanceExclusionArgs;
 import com.pulumi.gcp.container.inputs.ClusterMaintenancePolicyRecurringWindowArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ClusterMaintenancePolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dailyMaintenanceWindow")
-      private final @Nullable Output<ClusterMaintenancePolicyDailyMaintenanceWindowArgs> dailyMaintenanceWindow;
+    private @Nullable Output<ClusterMaintenancePolicyDailyMaintenanceWindowArgs> dailyMaintenanceWindow;
 
-    public Output<ClusterMaintenancePolicyDailyMaintenanceWindowArgs> dailyMaintenanceWindow() {
-        return this.dailyMaintenanceWindow == null ? Codegen.empty() : this.dailyMaintenanceWindow;
+    public Optional<Output<ClusterMaintenancePolicyDailyMaintenanceWindowArgs>> dailyMaintenanceWindow() {
+        return Optional.ofNullable(this.dailyMaintenanceWindow);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ClusterMaintenancePolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maintenanceExclusions")
-      private final @Nullable Output<List<ClusterMaintenancePolicyMaintenanceExclusionArgs>> maintenanceExclusions;
+    private @Nullable Output<List<ClusterMaintenancePolicyMaintenanceExclusionArgs>> maintenanceExclusions;
 
-    public Output<List<ClusterMaintenancePolicyMaintenanceExclusionArgs>> maintenanceExclusions() {
-        return this.maintenanceExclusions == null ? Codegen.empty() : this.maintenanceExclusions;
+    public Optional<Output<List<ClusterMaintenancePolicyMaintenanceExclusionArgs>>> maintenanceExclusions() {
+        return Optional.ofNullable(this.maintenanceExclusions);
     }
 
     /**
@@ -47,79 +47,72 @@ public final class ClusterMaintenancePolicyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="recurringWindow")
-      private final @Nullable Output<ClusterMaintenancePolicyRecurringWindowArgs> recurringWindow;
+    private @Nullable Output<ClusterMaintenancePolicyRecurringWindowArgs> recurringWindow;
 
-    public Output<ClusterMaintenancePolicyRecurringWindowArgs> recurringWindow() {
-        return this.recurringWindow == null ? Codegen.empty() : this.recurringWindow;
+    public Optional<Output<ClusterMaintenancePolicyRecurringWindowArgs>> recurringWindow() {
+        return Optional.ofNullable(this.recurringWindow);
     }
 
-    public ClusterMaintenancePolicyArgs(
-        @Nullable Output<ClusterMaintenancePolicyDailyMaintenanceWindowArgs> dailyMaintenanceWindow,
-        @Nullable Output<List<ClusterMaintenancePolicyMaintenanceExclusionArgs>> maintenanceExclusions,
-        @Nullable Output<ClusterMaintenancePolicyRecurringWindowArgs> recurringWindow) {
-        this.dailyMaintenanceWindow = dailyMaintenanceWindow;
-        this.maintenanceExclusions = maintenanceExclusions;
-        this.recurringWindow = recurringWindow;
-    }
+    private ClusterMaintenancePolicyArgs() {}
 
-    private ClusterMaintenancePolicyArgs() {
-        this.dailyMaintenanceWindow = Codegen.empty();
-        this.maintenanceExclusions = Codegen.empty();
-        this.recurringWindow = Codegen.empty();
+    private ClusterMaintenancePolicyArgs(ClusterMaintenancePolicyArgs $) {
+        this.dailyMaintenanceWindow = $.dailyMaintenanceWindow;
+        this.maintenanceExclusions = $.maintenanceExclusions;
+        this.recurringWindow = $.recurringWindow;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterMaintenancePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterMaintenancePolicyDailyMaintenanceWindowArgs> dailyMaintenanceWindow;
-        private @Nullable Output<List<ClusterMaintenancePolicyMaintenanceExclusionArgs>> maintenanceExclusions;
-        private @Nullable Output<ClusterMaintenancePolicyRecurringWindowArgs> recurringWindow;
+        private ClusterMaintenancePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterMaintenancePolicyArgs();
         }
 
         public Builder(ClusterMaintenancePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dailyMaintenanceWindow = defaults.dailyMaintenanceWindow;
-    	      this.maintenanceExclusions = defaults.maintenanceExclusions;
-    	      this.recurringWindow = defaults.recurringWindow;
+            $ = new ClusterMaintenancePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dailyMaintenanceWindow(@Nullable Output<ClusterMaintenancePolicyDailyMaintenanceWindowArgs> dailyMaintenanceWindow) {
-            this.dailyMaintenanceWindow = dailyMaintenanceWindow;
+            $.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
-        public Builder dailyMaintenanceWindow(@Nullable ClusterMaintenancePolicyDailyMaintenanceWindowArgs dailyMaintenanceWindow) {
-            this.dailyMaintenanceWindow = Codegen.ofNullable(dailyMaintenanceWindow);
-            return this;
+
+        public Builder dailyMaintenanceWindow(ClusterMaintenancePolicyDailyMaintenanceWindowArgs dailyMaintenanceWindow) {
+            return dailyMaintenanceWindow(Output.of(dailyMaintenanceWindow));
         }
+
         public Builder maintenanceExclusions(@Nullable Output<List<ClusterMaintenancePolicyMaintenanceExclusionArgs>> maintenanceExclusions) {
-            this.maintenanceExclusions = maintenanceExclusions;
+            $.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
-        public Builder maintenanceExclusions(@Nullable List<ClusterMaintenancePolicyMaintenanceExclusionArgs> maintenanceExclusions) {
-            this.maintenanceExclusions = Codegen.ofNullable(maintenanceExclusions);
-            return this;
+
+        public Builder maintenanceExclusions(List<ClusterMaintenancePolicyMaintenanceExclusionArgs> maintenanceExclusions) {
+            return maintenanceExclusions(Output.of(maintenanceExclusions));
         }
+
         public Builder maintenanceExclusions(ClusterMaintenancePolicyMaintenanceExclusionArgs... maintenanceExclusions) {
             return maintenanceExclusions(List.of(maintenanceExclusions));
         }
+
         public Builder recurringWindow(@Nullable Output<ClusterMaintenancePolicyRecurringWindowArgs> recurringWindow) {
-            this.recurringWindow = recurringWindow;
+            $.recurringWindow = recurringWindow;
             return this;
         }
-        public Builder recurringWindow(@Nullable ClusterMaintenancePolicyRecurringWindowArgs recurringWindow) {
-            this.recurringWindow = Codegen.ofNullable(recurringWindow);
-            return this;
-        }        public ClusterMaintenancePolicyArgs build() {
-            return new ClusterMaintenancePolicyArgs(dailyMaintenanceWindow, maintenanceExclusions, recurringWindow);
+
+        public Builder recurringWindow(ClusterMaintenancePolicyRecurringWindowArgs recurringWindow) {
+            return recurringWindow(Output.of(recurringWindow));
+        }
+
+        public ClusterMaintenancePolicyArgs build() {
+            return $;
         }
     }
+
 }

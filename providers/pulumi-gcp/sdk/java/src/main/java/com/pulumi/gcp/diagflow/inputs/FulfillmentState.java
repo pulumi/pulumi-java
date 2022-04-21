@@ -5,13 +5,13 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.FulfillmentFeatureGetArgs;
 import com.pulumi.gcp.diagflow.inputs.FulfillmentGenericWebServiceGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="features")
-      private final @Nullable Output<List<FulfillmentFeatureGetArgs>> features;
+    private @Nullable Output<List<FulfillmentFeatureGetArgs>> features;
 
-    public Output<List<FulfillmentFeatureGetArgs>> features() {
-        return this.features == null ? Codegen.empty() : this.features;
+    public Optional<Output<List<FulfillmentFeatureGetArgs>>> features() {
+        return Optional.ofNullable(this.features);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="genericWebService")
-      private final @Nullable Output<FulfillmentGenericWebServiceGetArgs> genericWebService;
+    private @Nullable Output<FulfillmentGenericWebServiceGetArgs> genericWebService;
 
-    public Output<FulfillmentGenericWebServiceGetArgs> genericWebService() {
-        return this.genericWebService == null ? Codegen.empty() : this.genericWebService;
+    public Optional<Output<FulfillmentGenericWebServiceGetArgs>> genericWebService() {
+        return Optional.ofNullable(this.genericWebService);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -83,118 +83,102 @@ public final class FulfillmentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public FulfillmentState(
-        @Nullable Output<String> displayName,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<FulfillmentFeatureGetArgs>> features,
-        @Nullable Output<FulfillmentGenericWebServiceGetArgs> genericWebService,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project) {
-        this.displayName = displayName;
-        this.enabled = enabled;
-        this.features = features;
-        this.genericWebService = genericWebService;
-        this.name = name;
-        this.project = project;
-    }
+    private FulfillmentState() {}
 
-    private FulfillmentState() {
-        this.displayName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.features = Codegen.empty();
-        this.genericWebService = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
+    private FulfillmentState(FulfillmentState $) {
+        this.displayName = $.displayName;
+        this.enabled = $.enabled;
+        this.features = $.features;
+        this.genericWebService = $.genericWebService;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FulfillmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<FulfillmentFeatureGetArgs>> features;
-        private @Nullable Output<FulfillmentGenericWebServiceGetArgs> genericWebService;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
+        private FulfillmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FulfillmentState();
         }
 
         public Builder(FulfillmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.enabled = defaults.enabled;
-    	      this.features = defaults.features;
-    	      this.genericWebService = defaults.genericWebService;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new FulfillmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder features(@Nullable Output<List<FulfillmentFeatureGetArgs>> features) {
-            this.features = features;
+            $.features = features;
             return this;
         }
-        public Builder features(@Nullable List<FulfillmentFeatureGetArgs> features) {
-            this.features = Codegen.ofNullable(features);
-            return this;
+
+        public Builder features(List<FulfillmentFeatureGetArgs> features) {
+            return features(Output.of(features));
         }
+
         public Builder features(FulfillmentFeatureGetArgs... features) {
             return features(List.of(features));
         }
+
         public Builder genericWebService(@Nullable Output<FulfillmentGenericWebServiceGetArgs> genericWebService) {
-            this.genericWebService = genericWebService;
+            $.genericWebService = genericWebService;
             return this;
         }
-        public Builder genericWebService(@Nullable FulfillmentGenericWebServiceGetArgs genericWebService) {
-            this.genericWebService = Codegen.ofNullable(genericWebService);
-            return this;
+
+        public Builder genericWebService(FulfillmentGenericWebServiceGetArgs genericWebService) {
+            return genericWebService(Output.of(genericWebService));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public FulfillmentState build() {
-            return new FulfillmentState(displayName, enabled, features, genericWebService, name, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public FulfillmentState build() {
+            return $;
         }
     }
+
 }

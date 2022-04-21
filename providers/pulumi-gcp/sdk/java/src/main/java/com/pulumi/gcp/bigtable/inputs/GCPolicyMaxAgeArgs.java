@@ -5,10 +5,10 @@ package com.pulumi.gcp.bigtable.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,11 +25,11 @@ public final class GCPolicyMaxAgeArgs extends com.pulumi.resources.ResourceArgs 
      */
     @Deprecated /* Deprecated in favor of duration */
     @Import(name="days")
-      private final @Nullable Output<Integer> days;
+    private @Nullable Output<Integer> days;
 
     @Deprecated /* Deprecated in favor of duration */
-    public Output<Integer> days() {
-        return this.days == null ? Codegen.empty() : this.days;
+    public Optional<Output<Integer>> days() {
+        return Optional.ofNullable(this.days);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class GCPolicyMaxAgeArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="duration")
-      private final @Nullable Output<String> duration;
+    private @Nullable Output<String> duration;
 
-    public Output<String> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<String>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
-    public GCPolicyMaxAgeArgs(
-        @Nullable Output<Integer> days,
-        @Nullable Output<String> duration) {
-        this.days = days;
-        this.duration = duration;
-    }
+    private GCPolicyMaxAgeArgs() {}
 
-    private GCPolicyMaxAgeArgs() {
-        this.days = Codegen.empty();
-        this.duration = Codegen.empty();
+    private GCPolicyMaxAgeArgs(GCPolicyMaxAgeArgs $) {
+        this.days = $.days;
+        this.duration = $.duration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GCPolicyMaxAgeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> days;
-        private @Nullable Output<String> duration;
+        private GCPolicyMaxAgeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GCPolicyMaxAgeArgs();
         }
 
         public Builder(GCPolicyMaxAgeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.duration = defaults.duration;
+            $ = new GCPolicyMaxAgeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable Output<Integer> days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
-        public Builder days(@Nullable Integer days) {
-            this.days = Codegen.ofNullable(days);
-            return this;
+
+        public Builder days(Integer days) {
+            return days(Output.of(days));
         }
+
         public Builder duration(@Nullable Output<String> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable String duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
-        }        public GCPolicyMaxAgeArgs build() {
-            return new GCPolicyMaxAgeArgs(days, duration);
+
+        public Builder duration(String duration) {
+            return duration(Output.of(duration));
+        }
+
+        public GCPolicyMaxAgeArgs build() {
+            return $;
         }
     }
+
 }

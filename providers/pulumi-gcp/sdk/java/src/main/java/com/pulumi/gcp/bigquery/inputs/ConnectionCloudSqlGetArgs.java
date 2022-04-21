@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigquery.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlCredentialGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +20,7 @@ public final class ConnectionCloudSqlGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="credential", required=true)
-      private final Output<ConnectionCloudSqlCredentialGetArgs> credential;
+    private Output<ConnectionCloudSqlCredentialGetArgs> credential;
 
     public Output<ConnectionCloudSqlCredentialGetArgs> credential() {
         return this.credential;
@@ -32,7 +31,7 @@ public final class ConnectionCloudSqlGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="database", required=true)
-      private final Output<String> database;
+    private Output<String> database;
 
     public Output<String> database() {
         return this.database;
@@ -43,7 +42,7 @@ public final class ConnectionCloudSqlGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -55,89 +54,82 @@ public final class ConnectionCloudSqlGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ConnectionCloudSqlGetArgs(
-        Output<ConnectionCloudSqlCredentialGetArgs> credential,
-        Output<String> database,
-        Output<String> instanceId,
-        Output<String> type) {
-        this.credential = Objects.requireNonNull(credential, "expected parameter 'credential' to be non-null");
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ConnectionCloudSqlGetArgs() {}
 
-    private ConnectionCloudSqlGetArgs() {
-        this.credential = Codegen.empty();
-        this.database = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.type = Codegen.empty();
+    private ConnectionCloudSqlGetArgs(ConnectionCloudSqlGetArgs $) {
+        this.credential = $.credential;
+        this.database = $.database;
+        this.instanceId = $.instanceId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionCloudSqlGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ConnectionCloudSqlCredentialGetArgs> credential;
-        private Output<String> database;
-        private Output<String> instanceId;
-        private Output<String> type;
+        private ConnectionCloudSqlGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionCloudSqlGetArgs();
         }
 
         public Builder(ConnectionCloudSqlGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credential = defaults.credential;
-    	      this.database = defaults.database;
-    	      this.instanceId = defaults.instanceId;
-    	      this.type = defaults.type;
+            $ = new ConnectionCloudSqlGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credential(Output<ConnectionCloudSqlCredentialGetArgs> credential) {
-            this.credential = Objects.requireNonNull(credential);
+            $.credential = credential;
             return this;
         }
+
         public Builder credential(ConnectionCloudSqlCredentialGetArgs credential) {
-            this.credential = Output.of(Objects.requireNonNull(credential));
-            return this;
+            return credential(Output.of(credential));
         }
+
         public Builder database(Output<String> database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder database(String database) {
-            this.database = Output.of(Objects.requireNonNull(database));
-            return this;
+            return database(Output.of(database));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ConnectionCloudSqlGetArgs build() {
-            return new ConnectionCloudSqlGetArgs(credential, database, instanceId, type);
+            return type(Output.of(type));
+        }
+
+        public ConnectionCloudSqlGetArgs build() {
+            $.credential = Objects.requireNonNull($.credential, "expected parameter 'credential' to be non-null");
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

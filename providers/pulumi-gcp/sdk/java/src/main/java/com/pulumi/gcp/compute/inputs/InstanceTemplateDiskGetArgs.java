@@ -5,13 +5,13 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.InstanceTemplateDiskDiskEncryptionKeyGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="autoDelete")
-      private final @Nullable Output<Boolean> autoDelete;
+    private @Nullable Output<Boolean> autoDelete;
 
-    public Output<Boolean> autoDelete() {
-        return this.autoDelete == null ? Codegen.empty() : this.autoDelete;
+    public Optional<Output<Boolean>> autoDelete() {
+        return Optional.ofNullable(this.autoDelete);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="boot")
-      private final @Nullable Output<Boolean> boot;
+    private @Nullable Output<Boolean> boot;
 
-    public Output<Boolean> boot() {
-        return this.boot == null ? Codegen.empty() : this.boot;
+    public Optional<Output<Boolean>> boot() {
+        return Optional.ofNullable(this.boot);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="deviceName")
-      private final @Nullable Output<String> deviceName;
+    private @Nullable Output<String> deviceName;
 
-    public Output<String> deviceName() {
-        return this.deviceName == null ? Codegen.empty() : this.deviceName;
+    public Optional<Output<String>> deviceName() {
+        return Optional.ofNullable(this.deviceName);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="diskEncryptionKey")
-      private final @Nullable Output<InstanceTemplateDiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
+    private @Nullable Output<InstanceTemplateDiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
 
-    public Output<InstanceTemplateDiskDiskEncryptionKeyGetArgs> diskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
+    public Optional<Output<InstanceTemplateDiskDiskEncryptionKeyGetArgs>> diskEncryptionKey() {
+        return Optional.ofNullable(this.diskEncryptionKey);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="diskName")
-      private final @Nullable Output<String> diskName;
+    private @Nullable Output<String> diskName;
 
-    public Output<String> diskName() {
-        return this.diskName == null ? Codegen.empty() : this.diskName;
+    public Optional<Output<String>> diskName() {
+        return Optional.ofNullable(this.diskName);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="diskSizeGb")
-      private final @Nullable Output<Integer> diskSizeGb;
+    private @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<Integer>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="diskType")
-      private final @Nullable Output<String> diskType;
+    private @Nullable Output<String> diskType;
 
-    public Output<String> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<String>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="interface")
-      private final @Nullable Output<String> interface_;
+    private @Nullable Output<String> interface_;
 
-    public Output<String> interface_() {
-        return this.interface_ == null ? Codegen.empty() : this.interface_;
+    public Optional<Output<String>> interface_() {
+        return Optional.ofNullable(this.interface_);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourcePolicies")
-      private final @Nullable Output<String> resourcePolicies;
+    private @Nullable Output<String> resourcePolicies;
 
-    public Output<String> resourcePolicies() {
-        return this.resourcePolicies == null ? Codegen.empty() : this.resourcePolicies;
+    public Optional<Output<String>> resourcePolicies() {
+        return Optional.ofNullable(this.resourcePolicies);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="sourceImage")
-      private final @Nullable Output<String> sourceImage;
+    private @Nullable Output<String> sourceImage;
 
-    public Output<String> sourceImage() {
-        return this.sourceImage == null ? Codegen.empty() : this.sourceImage;
+    public Optional<Output<String>> sourceImage() {
+        return Optional.ofNullable(this.sourceImage);
     }
 
     /**
@@ -188,219 +188,178 @@ public final class InstanceTemplateDiskGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public InstanceTemplateDiskGetArgs(
-        @Nullable Output<Boolean> autoDelete,
-        @Nullable Output<Boolean> boot,
-        @Nullable Output<String> deviceName,
-        @Nullable Output<InstanceTemplateDiskDiskEncryptionKeyGetArgs> diskEncryptionKey,
-        @Nullable Output<String> diskName,
-        @Nullable Output<Integer> diskSizeGb,
-        @Nullable Output<String> diskType,
-        @Nullable Output<String> interface_,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> mode,
-        @Nullable Output<String> resourcePolicies,
-        @Nullable Output<String> source,
-        @Nullable Output<String> sourceImage,
-        @Nullable Output<String> type) {
-        this.autoDelete = autoDelete;
-        this.boot = boot;
-        this.deviceName = deviceName;
-        this.diskEncryptionKey = diskEncryptionKey;
-        this.diskName = diskName;
-        this.diskSizeGb = diskSizeGb;
-        this.diskType = diskType;
-        this.interface_ = interface_;
-        this.labels = labels;
-        this.mode = mode;
-        this.resourcePolicies = resourcePolicies;
-        this.source = source;
-        this.sourceImage = sourceImage;
-        this.type = type;
-    }
+    private InstanceTemplateDiskGetArgs() {}
 
-    private InstanceTemplateDiskGetArgs() {
-        this.autoDelete = Codegen.empty();
-        this.boot = Codegen.empty();
-        this.deviceName = Codegen.empty();
-        this.diskEncryptionKey = Codegen.empty();
-        this.diskName = Codegen.empty();
-        this.diskSizeGb = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.interface_ = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.resourcePolicies = Codegen.empty();
-        this.source = Codegen.empty();
-        this.sourceImage = Codegen.empty();
-        this.type = Codegen.empty();
+    private InstanceTemplateDiskGetArgs(InstanceTemplateDiskGetArgs $) {
+        this.autoDelete = $.autoDelete;
+        this.boot = $.boot;
+        this.deviceName = $.deviceName;
+        this.diskEncryptionKey = $.diskEncryptionKey;
+        this.diskName = $.diskName;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.interface_ = $.interface_;
+        this.labels = $.labels;
+        this.mode = $.mode;
+        this.resourcePolicies = $.resourcePolicies;
+        this.source = $.source;
+        this.sourceImage = $.sourceImage;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceTemplateDiskGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoDelete;
-        private @Nullable Output<Boolean> boot;
-        private @Nullable Output<String> deviceName;
-        private @Nullable Output<InstanceTemplateDiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
-        private @Nullable Output<String> diskName;
-        private @Nullable Output<Integer> diskSizeGb;
-        private @Nullable Output<String> diskType;
-        private @Nullable Output<String> interface_;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> mode;
-        private @Nullable Output<String> resourcePolicies;
-        private @Nullable Output<String> source;
-        private @Nullable Output<String> sourceImage;
-        private @Nullable Output<String> type;
+        private InstanceTemplateDiskGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceTemplateDiskGetArgs();
         }
 
         public Builder(InstanceTemplateDiskGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoDelete = defaults.autoDelete;
-    	      this.boot = defaults.boot;
-    	      this.deviceName = defaults.deviceName;
-    	      this.diskEncryptionKey = defaults.diskEncryptionKey;
-    	      this.diskName = defaults.diskName;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.interface_ = defaults.interface_;
-    	      this.labels = defaults.labels;
-    	      this.mode = defaults.mode;
-    	      this.resourcePolicies = defaults.resourcePolicies;
-    	      this.source = defaults.source;
-    	      this.sourceImage = defaults.sourceImage;
-    	      this.type = defaults.type;
+            $ = new InstanceTemplateDiskGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoDelete(@Nullable Output<Boolean> autoDelete) {
-            this.autoDelete = autoDelete;
+            $.autoDelete = autoDelete;
             return this;
         }
-        public Builder autoDelete(@Nullable Boolean autoDelete) {
-            this.autoDelete = Codegen.ofNullable(autoDelete);
-            return this;
+
+        public Builder autoDelete(Boolean autoDelete) {
+            return autoDelete(Output.of(autoDelete));
         }
+
         public Builder boot(@Nullable Output<Boolean> boot) {
-            this.boot = boot;
+            $.boot = boot;
             return this;
         }
-        public Builder boot(@Nullable Boolean boot) {
-            this.boot = Codegen.ofNullable(boot);
-            return this;
+
+        public Builder boot(Boolean boot) {
+            return boot(Output.of(boot));
         }
+
         public Builder deviceName(@Nullable Output<String> deviceName) {
-            this.deviceName = deviceName;
+            $.deviceName = deviceName;
             return this;
         }
-        public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Codegen.ofNullable(deviceName);
-            return this;
+
+        public Builder deviceName(String deviceName) {
+            return deviceName(Output.of(deviceName));
         }
+
         public Builder diskEncryptionKey(@Nullable Output<InstanceTemplateDiskDiskEncryptionKeyGetArgs> diskEncryptionKey) {
-            this.diskEncryptionKey = diskEncryptionKey;
+            $.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
-        public Builder diskEncryptionKey(@Nullable InstanceTemplateDiskDiskEncryptionKeyGetArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Codegen.ofNullable(diskEncryptionKey);
-            return this;
+
+        public Builder diskEncryptionKey(InstanceTemplateDiskDiskEncryptionKeyGetArgs diskEncryptionKey) {
+            return diskEncryptionKey(Output.of(diskEncryptionKey));
         }
+
         public Builder diskName(@Nullable Output<String> diskName) {
-            this.diskName = diskName;
+            $.diskName = diskName;
             return this;
         }
-        public Builder diskName(@Nullable String diskName) {
-            this.diskName = Codegen.ofNullable(diskName);
-            return this;
+
+        public Builder diskName(String diskName) {
+            return diskName(Output.of(diskName));
         }
+
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(Integer diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder diskType(@Nullable Output<String> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable String diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(String diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder interface_(@Nullable Output<String> interface_) {
-            this.interface_ = interface_;
+            $.interface_ = interface_;
             return this;
         }
-        public Builder interface_(@Nullable String interface_) {
-            this.interface_ = Codegen.ofNullable(interface_);
-            return this;
+
+        public Builder interface_(String interface_) {
+            return interface_(Output.of(interface_));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder resourcePolicies(@Nullable Output<String> resourcePolicies) {
-            this.resourcePolicies = resourcePolicies;
+            $.resourcePolicies = resourcePolicies;
             return this;
         }
-        public Builder resourcePolicies(@Nullable String resourcePolicies) {
-            this.resourcePolicies = Codegen.ofNullable(resourcePolicies);
-            return this;
+
+        public Builder resourcePolicies(String resourcePolicies) {
+            return resourcePolicies(Output.of(resourcePolicies));
         }
+
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(String source) {
+            return source(Output.of(source));
         }
+
         public Builder sourceImage(@Nullable Output<String> sourceImage) {
-            this.sourceImage = sourceImage;
+            $.sourceImage = sourceImage;
             return this;
         }
-        public Builder sourceImage(@Nullable String sourceImage) {
-            this.sourceImage = Codegen.ofNullable(sourceImage);
-            return this;
+
+        public Builder sourceImage(String sourceImage) {
+            return sourceImage(Output.of(sourceImage));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public InstanceTemplateDiskGetArgs build() {
-            return new InstanceTemplateDiskGetArgs(autoDelete, boot, deviceName, diskEncryptionKey, diskName, diskSizeGb, diskType, interface_, labels, mode, resourcePolicies, source, sourceImage, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public InstanceTemplateDiskGetArgs build() {
+            return $;
         }
     }
+
 }

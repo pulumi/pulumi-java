@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigquery;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.bigquery.inputs.JobCopyArgs;
 import com.pulumi.gcp.bigquery.inputs.JobExtractArgs;
 import com.pulumi.gcp.bigquery.inputs.JobLoadArgs;
@@ -13,6 +12,7 @@ import com.pulumi.gcp.bigquery.inputs.JobQueryArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="copy")
-      private final @Nullable Output<JobCopyArgs> copy;
+    private @Nullable Output<JobCopyArgs> copy;
 
-    public Output<JobCopyArgs> copy() {
-        return this.copy == null ? Codegen.empty() : this.copy;
+    public Optional<Output<JobCopyArgs>> copy() {
+        return Optional.ofNullable(this.copy);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extract")
-      private final @Nullable Output<JobExtractArgs> extract;
+    private @Nullable Output<JobExtractArgs> extract;
 
-    public Output<JobExtractArgs> extract() {
-        return this.extract == null ? Codegen.empty() : this.extract;
+    public Optional<Output<JobExtractArgs>> extract() {
+        return Optional.ofNullable(this.extract);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobId", required=true)
-      private final Output<String> jobId;
+    private Output<String> jobId;
 
     public Output<String> jobId() {
         return this.jobId;
@@ -60,10 +60,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobTimeoutMs")
-      private final @Nullable Output<String> jobTimeoutMs;
+    private @Nullable Output<String> jobTimeoutMs;
 
-    public Output<String> jobTimeoutMs() {
-        return this.jobTimeoutMs == null ? Codegen.empty() : this.jobTimeoutMs;
+    public Optional<Output<String>> jobTimeoutMs() {
+        return Optional.ofNullable(this.jobTimeoutMs);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="load")
-      private final @Nullable Output<JobLoadArgs> load;
+    private @Nullable Output<JobLoadArgs> load;
 
-    public Output<JobLoadArgs> load() {
-        return this.load == null ? Codegen.empty() : this.load;
+    public Optional<Output<JobLoadArgs>> load() {
+        return Optional.ofNullable(this.load);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -118,154 +118,129 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<JobQueryArgs> query;
+    private @Nullable Output<JobQueryArgs> query;
 
-    public Output<JobQueryArgs> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<JobQueryArgs>> query() {
+        return Optional.ofNullable(this.query);
     }
 
-    public JobArgs(
-        @Nullable Output<JobCopyArgs> copy,
-        @Nullable Output<JobExtractArgs> extract,
-        Output<String> jobId,
-        @Nullable Output<String> jobTimeoutMs,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<JobLoadArgs> load,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<JobQueryArgs> query) {
-        this.copy = copy;
-        this.extract = extract;
-        this.jobId = Objects.requireNonNull(jobId, "expected parameter 'jobId' to be non-null");
-        this.jobTimeoutMs = jobTimeoutMs;
-        this.labels = labels;
-        this.load = load;
-        this.location = location;
-        this.project = project;
-        this.query = query;
-    }
+    private JobArgs() {}
 
-    private JobArgs() {
-        this.copy = Codegen.empty();
-        this.extract = Codegen.empty();
-        this.jobId = Codegen.empty();
-        this.jobTimeoutMs = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.load = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.query = Codegen.empty();
+    private JobArgs(JobArgs $) {
+        this.copy = $.copy;
+        this.extract = $.extract;
+        this.jobId = $.jobId;
+        this.jobTimeoutMs = $.jobTimeoutMs;
+        this.labels = $.labels;
+        this.load = $.load;
+        this.location = $.location;
+        this.project = $.project;
+        this.query = $.query;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JobCopyArgs> copy;
-        private @Nullable Output<JobExtractArgs> extract;
-        private Output<String> jobId;
-        private @Nullable Output<String> jobTimeoutMs;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<JobLoadArgs> load;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<JobQueryArgs> query;
+        private JobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobArgs();
         }
 
         public Builder(JobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.copy = defaults.copy;
-    	      this.extract = defaults.extract;
-    	      this.jobId = defaults.jobId;
-    	      this.jobTimeoutMs = defaults.jobTimeoutMs;
-    	      this.labels = defaults.labels;
-    	      this.load = defaults.load;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.query = defaults.query;
+            $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder copy(@Nullable Output<JobCopyArgs> copy) {
-            this.copy = copy;
+            $.copy = copy;
             return this;
         }
-        public Builder copy(@Nullable JobCopyArgs copy) {
-            this.copy = Codegen.ofNullable(copy);
-            return this;
+
+        public Builder copy(JobCopyArgs copy) {
+            return copy(Output.of(copy));
         }
+
         public Builder extract(@Nullable Output<JobExtractArgs> extract) {
-            this.extract = extract;
+            $.extract = extract;
             return this;
         }
-        public Builder extract(@Nullable JobExtractArgs extract) {
-            this.extract = Codegen.ofNullable(extract);
-            return this;
+
+        public Builder extract(JobExtractArgs extract) {
+            return extract(Output.of(extract));
         }
+
         public Builder jobId(Output<String> jobId) {
-            this.jobId = Objects.requireNonNull(jobId);
+            $.jobId = jobId;
             return this;
         }
+
         public Builder jobId(String jobId) {
-            this.jobId = Output.of(Objects.requireNonNull(jobId));
-            return this;
+            return jobId(Output.of(jobId));
         }
+
         public Builder jobTimeoutMs(@Nullable Output<String> jobTimeoutMs) {
-            this.jobTimeoutMs = jobTimeoutMs;
+            $.jobTimeoutMs = jobTimeoutMs;
             return this;
         }
-        public Builder jobTimeoutMs(@Nullable String jobTimeoutMs) {
-            this.jobTimeoutMs = Codegen.ofNullable(jobTimeoutMs);
-            return this;
+
+        public Builder jobTimeoutMs(String jobTimeoutMs) {
+            return jobTimeoutMs(Output.of(jobTimeoutMs));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder load(@Nullable Output<JobLoadArgs> load) {
-            this.load = load;
+            $.load = load;
             return this;
         }
-        public Builder load(@Nullable JobLoadArgs load) {
-            this.load = Codegen.ofNullable(load);
-            return this;
+
+        public Builder load(JobLoadArgs load) {
+            return load(Output.of(load));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder query(@Nullable Output<JobQueryArgs> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable JobQueryArgs query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
-        }        public JobArgs build() {
-            return new JobArgs(copy, extract, jobId, jobTimeoutMs, labels, load, location, project, query);
+
+        public Builder query(JobQueryArgs query) {
+            return query(Output.of(query));
+        }
+
+        public JobArgs build() {
+            $.jobId = Objects.requireNonNull($.jobId, "expected parameter 'jobId' to be non-null");
+            return $;
         }
     }
+
 }

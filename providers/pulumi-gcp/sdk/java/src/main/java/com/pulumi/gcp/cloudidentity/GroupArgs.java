@@ -5,11 +5,11 @@ package com.pulumi.gcp.cloudidentity;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudidentity.inputs.GroupGroupKeyArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupKey", required=true)
-      private final Output<GroupGroupKeyArgs> groupKey;
+    private Output<GroupGroupKeyArgs> groupKey;
 
     public Output<GroupGroupKeyArgs> groupKey() {
         return this.groupKey;
@@ -62,10 +62,10 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="initialGroupConfig")
-      private final @Nullable Output<String> initialGroupConfig;
+    private @Nullable Output<String> initialGroupConfig;
 
-    public Output<String> initialGroupConfig() {
-        return this.initialGroupConfig == null ? Codegen.empty() : this.initialGroupConfig;
+    public Optional<Output<String>> initialGroupConfig() {
+        return Optional.ofNullable(this.initialGroupConfig);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels", required=true)
-      private final Output<Map<String,String>> labels;
+    private Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> labels() {
         return this.labels;
@@ -90,115 +90,101 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent", required=true)
-      private final Output<String> parent;
+    private Output<String> parent;
 
     public Output<String> parent() {
         return this.parent;
     }
 
-    public GroupArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<GroupGroupKeyArgs> groupKey,
-        @Nullable Output<String> initialGroupConfig,
-        Output<Map<String,String>> labels,
-        Output<String> parent) {
-        this.description = description;
-        this.displayName = displayName;
-        this.groupKey = Objects.requireNonNull(groupKey, "expected parameter 'groupKey' to be non-null");
-        this.initialGroupConfig = initialGroupConfig;
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-    }
+    private GroupArgs() {}
 
-    private GroupArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.groupKey = Codegen.empty();
-        this.initialGroupConfig = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.parent = Codegen.empty();
+    private GroupArgs(GroupArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.groupKey = $.groupKey;
+        this.initialGroupConfig = $.initialGroupConfig;
+        this.labels = $.labels;
+        this.parent = $.parent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<GroupGroupKeyArgs> groupKey;
-        private @Nullable Output<String> initialGroupConfig;
-        private Output<Map<String,String>> labels;
-        private Output<String> parent;
+        private GroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupArgs();
         }
 
         public Builder(GroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.groupKey = defaults.groupKey;
-    	      this.initialGroupConfig = defaults.initialGroupConfig;
-    	      this.labels = defaults.labels;
-    	      this.parent = defaults.parent;
+            $ = new GroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder groupKey(Output<GroupGroupKeyArgs> groupKey) {
-            this.groupKey = Objects.requireNonNull(groupKey);
+            $.groupKey = groupKey;
             return this;
         }
+
         public Builder groupKey(GroupGroupKeyArgs groupKey) {
-            this.groupKey = Output.of(Objects.requireNonNull(groupKey));
-            return this;
+            return groupKey(Output.of(groupKey));
         }
+
         public Builder initialGroupConfig(@Nullable Output<String> initialGroupConfig) {
-            this.initialGroupConfig = initialGroupConfig;
+            $.initialGroupConfig = initialGroupConfig;
             return this;
         }
-        public Builder initialGroupConfig(@Nullable String initialGroupConfig) {
-            this.initialGroupConfig = Codegen.ofNullable(initialGroupConfig);
-            return this;
+
+        public Builder initialGroupConfig(String initialGroupConfig) {
+            return initialGroupConfig(Output.of(initialGroupConfig));
         }
+
         public Builder labels(Output<Map<String,String>> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Output.of(Objects.requireNonNull(labels));
-            return this;
+            return labels(Output.of(labels));
         }
+
         public Builder parent(Output<String> parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Output.of(Objects.requireNonNull(parent));
-            return this;
-        }        public GroupArgs build() {
-            return new GroupArgs(description, displayName, groupKey, initialGroupConfig, labels, parent);
+            return parent(Output.of(parent));
+        }
+
+        public GroupArgs build() {
+            $.groupKey = Objects.requireNonNull($.groupKey, "expected parameter 'groupKey' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            return $;
         }
     }
+
 }

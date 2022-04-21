@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,49 +15,49 @@ public final class NodePoolNodeConfigLinuxNodeConfigGetArgs extends com.pulumi.r
     public static final NodePoolNodeConfigLinuxNodeConfigGetArgs Empty = new NodePoolNodeConfigLinuxNodeConfigGetArgs();
 
     @Import(name="sysctls", required=true)
-      private final Output<Map<String,String>> sysctls;
+    private Output<Map<String,String>> sysctls;
 
     public Output<Map<String,String>> sysctls() {
         return this.sysctls;
     }
 
-    public NodePoolNodeConfigLinuxNodeConfigGetArgs(Output<Map<String,String>> sysctls) {
-        this.sysctls = Objects.requireNonNull(sysctls, "expected parameter 'sysctls' to be non-null");
-    }
+    private NodePoolNodeConfigLinuxNodeConfigGetArgs() {}
 
-    private NodePoolNodeConfigLinuxNodeConfigGetArgs() {
-        this.sysctls = Codegen.empty();
+    private NodePoolNodeConfigLinuxNodeConfigGetArgs(NodePoolNodeConfigLinuxNodeConfigGetArgs $) {
+        this.sysctls = $.sysctls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolNodeConfigLinuxNodeConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> sysctls;
+        private NodePoolNodeConfigLinuxNodeConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolNodeConfigLinuxNodeConfigGetArgs();
         }
 
         public Builder(NodePoolNodeConfigLinuxNodeConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sysctls = defaults.sysctls;
+            $ = new NodePoolNodeConfigLinuxNodeConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sysctls(Output<Map<String,String>> sysctls) {
-            this.sysctls = Objects.requireNonNull(sysctls);
+            $.sysctls = sysctls;
             return this;
         }
+
         public Builder sysctls(Map<String,String> sysctls) {
-            this.sysctls = Output.of(Objects.requireNonNull(sysctls));
-            return this;
-        }        public NodePoolNodeConfigLinuxNodeConfigGetArgs build() {
-            return new NodePoolNodeConfigLinuxNodeConfigGetArgs(sysctls);
+            return sysctls(Output.of(sysctls));
+        }
+
+        public NodePoolNodeConfigLinuxNodeConfigGetArgs build() {
+            $.sysctls = Objects.requireNonNull($.sysctls, "expected parameter 'sysctls' to be non-null");
+            return $;
         }
     }
+
 }

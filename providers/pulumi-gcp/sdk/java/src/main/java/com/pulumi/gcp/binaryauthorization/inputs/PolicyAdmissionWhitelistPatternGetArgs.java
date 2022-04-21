@@ -5,7 +5,6 @@ package com.pulumi.gcp.binaryauthorization.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,49 +21,49 @@ public final class PolicyAdmissionWhitelistPatternGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="namePattern", required=true)
-      private final Output<String> namePattern;
+    private Output<String> namePattern;
 
     public Output<String> namePattern() {
         return this.namePattern;
     }
 
-    public PolicyAdmissionWhitelistPatternGetArgs(Output<String> namePattern) {
-        this.namePattern = Objects.requireNonNull(namePattern, "expected parameter 'namePattern' to be non-null");
-    }
+    private PolicyAdmissionWhitelistPatternGetArgs() {}
 
-    private PolicyAdmissionWhitelistPatternGetArgs() {
-        this.namePattern = Codegen.empty();
+    private PolicyAdmissionWhitelistPatternGetArgs(PolicyAdmissionWhitelistPatternGetArgs $) {
+        this.namePattern = $.namePattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAdmissionWhitelistPatternGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> namePattern;
+        private PolicyAdmissionWhitelistPatternGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAdmissionWhitelistPatternGetArgs();
         }
 
         public Builder(PolicyAdmissionWhitelistPatternGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namePattern = defaults.namePattern;
+            $ = new PolicyAdmissionWhitelistPatternGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namePattern(Output<String> namePattern) {
-            this.namePattern = Objects.requireNonNull(namePattern);
+            $.namePattern = namePattern;
             return this;
         }
+
         public Builder namePattern(String namePattern) {
-            this.namePattern = Output.of(Objects.requireNonNull(namePattern));
-            return this;
-        }        public PolicyAdmissionWhitelistPatternGetArgs build() {
-            return new PolicyAdmissionWhitelistPatternGetArgs(namePattern);
+            return namePattern(Output.of(namePattern));
+        }
+
+        public PolicyAdmissionWhitelistPatternGetArgs build() {
+            $.namePattern = Objects.requireNonNull($.namePattern, "expected parameter 'namePattern' to be non-null");
+            return $;
         }
     }
+
 }

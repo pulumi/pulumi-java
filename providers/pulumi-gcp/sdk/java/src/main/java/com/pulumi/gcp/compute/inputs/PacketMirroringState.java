@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.PacketMirroringCollectorIlbGetArgs;
 import com.pulumi.gcp.compute.inputs.PacketMirroringFilterGetArgs;
 import com.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesGetArgs;
@@ -13,6 +12,7 @@ import com.pulumi.gcp.compute.inputs.PacketMirroringNetworkGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="collectorIlb")
-      private final @Nullable Output<PacketMirroringCollectorIlbGetArgs> collectorIlb;
+    private @Nullable Output<PacketMirroringCollectorIlbGetArgs> collectorIlb;
 
-    public Output<PacketMirroringCollectorIlbGetArgs> collectorIlb() {
-        return this.collectorIlb == null ? Codegen.empty() : this.collectorIlb;
+    public Optional<Output<PacketMirroringCollectorIlbGetArgs>> collectorIlb() {
+        return Optional.ofNullable(this.collectorIlb);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<PacketMirroringFilterGetArgs> filter;
+    private @Nullable Output<PacketMirroringFilterGetArgs> filter;
 
-    public Output<PacketMirroringFilterGetArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<PacketMirroringFilterGetArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mirroredResources")
-      private final @Nullable Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources;
+    private @Nullable Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources;
 
-    public Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources() {
-        return this.mirroredResources == null ? Codegen.empty() : this.mirroredResources;
+    public Optional<Output<PacketMirroringMirroredResourcesGetArgs>> mirroredResources() {
+        return Optional.ofNullable(this.mirroredResources);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<PacketMirroringNetworkGetArgs> network;
+    private @Nullable Output<PacketMirroringNetworkGetArgs> network;
 
-    public Output<PacketMirroringNetworkGetArgs> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<PacketMirroringNetworkGetArgs>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -126,154 +126,128 @@ public final class PacketMirroringState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public PacketMirroringState(
-        @Nullable Output<PacketMirroringCollectorIlbGetArgs> collectorIlb,
-        @Nullable Output<String> description,
-        @Nullable Output<PacketMirroringFilterGetArgs> filter,
-        @Nullable Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources,
-        @Nullable Output<String> name,
-        @Nullable Output<PacketMirroringNetworkGetArgs> network,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.collectorIlb = collectorIlb;
-        this.description = description;
-        this.filter = filter;
-        this.mirroredResources = mirroredResources;
-        this.name = name;
-        this.network = network;
-        this.priority = priority;
-        this.project = project;
-        this.region = region;
-    }
+    private PacketMirroringState() {}
 
-    private PacketMirroringState() {
-        this.collectorIlb = Codegen.empty();
-        this.description = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.mirroredResources = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private PacketMirroringState(PacketMirroringState $) {
+        this.collectorIlb = $.collectorIlb;
+        this.description = $.description;
+        this.filter = $.filter;
+        this.mirroredResources = $.mirroredResources;
+        this.name = $.name;
+        this.network = $.network;
+        this.priority = $.priority;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PacketMirroringState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PacketMirroringCollectorIlbGetArgs> collectorIlb;
-        private @Nullable Output<String> description;
-        private @Nullable Output<PacketMirroringFilterGetArgs> filter;
-        private @Nullable Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources;
-        private @Nullable Output<String> name;
-        private @Nullable Output<PacketMirroringNetworkGetArgs> network;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private PacketMirroringState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PacketMirroringState();
         }
 
         public Builder(PacketMirroringState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collectorIlb = defaults.collectorIlb;
-    	      this.description = defaults.description;
-    	      this.filter = defaults.filter;
-    	      this.mirroredResources = defaults.mirroredResources;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.priority = defaults.priority;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new PacketMirroringState(Objects.requireNonNull(defaults));
         }
 
         public Builder collectorIlb(@Nullable Output<PacketMirroringCollectorIlbGetArgs> collectorIlb) {
-            this.collectorIlb = collectorIlb;
+            $.collectorIlb = collectorIlb;
             return this;
         }
-        public Builder collectorIlb(@Nullable PacketMirroringCollectorIlbGetArgs collectorIlb) {
-            this.collectorIlb = Codegen.ofNullable(collectorIlb);
-            return this;
+
+        public Builder collectorIlb(PacketMirroringCollectorIlbGetArgs collectorIlb) {
+            return collectorIlb(Output.of(collectorIlb));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder filter(@Nullable Output<PacketMirroringFilterGetArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable PacketMirroringFilterGetArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(PacketMirroringFilterGetArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder mirroredResources(@Nullable Output<PacketMirroringMirroredResourcesGetArgs> mirroredResources) {
-            this.mirroredResources = mirroredResources;
+            $.mirroredResources = mirroredResources;
             return this;
         }
-        public Builder mirroredResources(@Nullable PacketMirroringMirroredResourcesGetArgs mirroredResources) {
-            this.mirroredResources = Codegen.ofNullable(mirroredResources);
-            return this;
+
+        public Builder mirroredResources(PacketMirroringMirroredResourcesGetArgs mirroredResources) {
+            return mirroredResources(Output.of(mirroredResources));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<PacketMirroringNetworkGetArgs> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable PacketMirroringNetworkGetArgs network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(PacketMirroringNetworkGetArgs network) {
+            return network(Output.of(network));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public PacketMirroringState build() {
-            return new PacketMirroringState(collectorIlb, description, filter, mirroredResources, name, network, priority, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public PacketMirroringState build() {
+            return $;
         }
     }
+
 }

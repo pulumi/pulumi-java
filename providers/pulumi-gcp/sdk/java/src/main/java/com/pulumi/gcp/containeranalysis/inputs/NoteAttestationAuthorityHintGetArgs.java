@@ -5,7 +5,6 @@ package com.pulumi.gcp.containeranalysis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class NoteAttestationAuthorityHintGetArgs extends com.pulumi.resour
      * 
      */
     @Import(name="humanReadableName", required=true)
-      private final Output<String> humanReadableName;
+    private Output<String> humanReadableName;
 
     public Output<String> humanReadableName() {
         return this.humanReadableName;
     }
 
-    public NoteAttestationAuthorityHintGetArgs(Output<String> humanReadableName) {
-        this.humanReadableName = Objects.requireNonNull(humanReadableName, "expected parameter 'humanReadableName' to be non-null");
-    }
+    private NoteAttestationAuthorityHintGetArgs() {}
 
-    private NoteAttestationAuthorityHintGetArgs() {
-        this.humanReadableName = Codegen.empty();
+    private NoteAttestationAuthorityHintGetArgs(NoteAttestationAuthorityHintGetArgs $) {
+        this.humanReadableName = $.humanReadableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NoteAttestationAuthorityHintGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> humanReadableName;
+        private NoteAttestationAuthorityHintGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NoteAttestationAuthorityHintGetArgs();
         }
 
         public Builder(NoteAttestationAuthorityHintGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.humanReadableName = defaults.humanReadableName;
+            $ = new NoteAttestationAuthorityHintGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder humanReadableName(Output<String> humanReadableName) {
-            this.humanReadableName = Objects.requireNonNull(humanReadableName);
+            $.humanReadableName = humanReadableName;
             return this;
         }
+
         public Builder humanReadableName(String humanReadableName) {
-            this.humanReadableName = Output.of(Objects.requireNonNull(humanReadableName));
-            return this;
-        }        public NoteAttestationAuthorityHintGetArgs build() {
-            return new NoteAttestationAuthorityHintGetArgs(humanReadableName);
+            return humanReadableName(Output.of(humanReadableName));
+        }
+
+        public NoteAttestationAuthorityHintGetArgs build() {
+            $.humanReadableName = Objects.requireNonNull($.humanReadableName, "expected parameter 'humanReadableName' to be non-null");
+            return $;
         }
     }
+
 }

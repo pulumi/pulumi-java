@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class JobSchedulingGetArgs extends com.pulumi.resources.ResourceArg
     public static final JobSchedulingGetArgs Empty = new JobSchedulingGetArgs();
 
     @Import(name="maxFailuresPerHour", required=true)
-      private final Output<Integer> maxFailuresPerHour;
+    private Output<Integer> maxFailuresPerHour;
 
     public Output<Integer> maxFailuresPerHour() {
         return this.maxFailuresPerHour;
     }
 
     @Import(name="maxFailuresTotal", required=true)
-      private final Output<Integer> maxFailuresTotal;
+    private Output<Integer> maxFailuresTotal;
 
     public Output<Integer> maxFailuresTotal() {
         return this.maxFailuresTotal;
     }
 
-    public JobSchedulingGetArgs(
-        Output<Integer> maxFailuresPerHour,
-        Output<Integer> maxFailuresTotal) {
-        this.maxFailuresPerHour = Objects.requireNonNull(maxFailuresPerHour, "expected parameter 'maxFailuresPerHour' to be non-null");
-        this.maxFailuresTotal = Objects.requireNonNull(maxFailuresTotal, "expected parameter 'maxFailuresTotal' to be non-null");
-    }
+    private JobSchedulingGetArgs() {}
 
-    private JobSchedulingGetArgs() {
-        this.maxFailuresPerHour = Codegen.empty();
-        this.maxFailuresTotal = Codegen.empty();
+    private JobSchedulingGetArgs(JobSchedulingGetArgs $) {
+        this.maxFailuresPerHour = $.maxFailuresPerHour;
+        this.maxFailuresTotal = $.maxFailuresTotal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobSchedulingGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxFailuresPerHour;
-        private Output<Integer> maxFailuresTotal;
+        private JobSchedulingGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobSchedulingGetArgs();
         }
 
         public Builder(JobSchedulingGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxFailuresPerHour = defaults.maxFailuresPerHour;
-    	      this.maxFailuresTotal = defaults.maxFailuresTotal;
+            $ = new JobSchedulingGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxFailuresPerHour(Output<Integer> maxFailuresPerHour) {
-            this.maxFailuresPerHour = Objects.requireNonNull(maxFailuresPerHour);
+            $.maxFailuresPerHour = maxFailuresPerHour;
             return this;
         }
+
         public Builder maxFailuresPerHour(Integer maxFailuresPerHour) {
-            this.maxFailuresPerHour = Output.of(Objects.requireNonNull(maxFailuresPerHour));
-            return this;
+            return maxFailuresPerHour(Output.of(maxFailuresPerHour));
         }
+
         public Builder maxFailuresTotal(Output<Integer> maxFailuresTotal) {
-            this.maxFailuresTotal = Objects.requireNonNull(maxFailuresTotal);
+            $.maxFailuresTotal = maxFailuresTotal;
             return this;
         }
+
         public Builder maxFailuresTotal(Integer maxFailuresTotal) {
-            this.maxFailuresTotal = Output.of(Objects.requireNonNull(maxFailuresTotal));
-            return this;
-        }        public JobSchedulingGetArgs build() {
-            return new JobSchedulingGetArgs(maxFailuresPerHour, maxFailuresTotal);
+            return maxFailuresTotal(Output.of(maxFailuresTotal));
+        }
+
+        public JobSchedulingGetArgs build() {
+            $.maxFailuresPerHour = Objects.requireNonNull($.maxFailuresPerHour, "expected parameter 'maxFailuresPerHour' to be non-null");
+            $.maxFailuresTotal = Objects.requireNonNull($.maxFailuresTotal, "expected parameter 'maxFailuresTotal' to be non-null");
+            return $;
         }
     }
+
 }

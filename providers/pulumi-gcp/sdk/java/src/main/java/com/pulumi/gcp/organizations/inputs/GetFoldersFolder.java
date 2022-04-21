@@ -17,7 +17,7 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -28,7 +28,7 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deleteTime", required=true)
-      private final String deleteTime;
+    private String deleteTime;
 
     public String deleteTime() {
         return this.deleteTime;
@@ -39,7 +39,7 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -50,7 +50,7 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -61,7 +61,7 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -72,7 +72,7 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parent", required=true)
-      private final String parent;
+    private String parent;
 
     public String parent() {
         return this.parent;
@@ -83,7 +83,7 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -94,109 +94,94 @@ public final class GetFoldersFolder extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public GetFoldersFolder(
-        String createTime,
-        String deleteTime,
-        String displayName,
-        String etag,
-        String name,
-        String parent,
-        String state,
-        String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.deleteTime = Objects.requireNonNull(deleteTime, "expected parameter 'deleteTime' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private GetFoldersFolder() {}
 
-    private GetFoldersFolder() {
-        this.createTime = null;
-        this.deleteTime = null;
-        this.displayName = null;
-        this.etag = null;
-        this.name = null;
-        this.parent = null;
-        this.state = null;
-        this.updateTime = null;
+    private GetFoldersFolder(GetFoldersFolder $) {
+        this.createTime = $.createTime;
+        this.deleteTime = $.deleteTime;
+        this.displayName = $.displayName;
+        this.etag = $.etag;
+        this.name = $.name;
+        this.parent = $.parent;
+        this.state = $.state;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFoldersFolder defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String deleteTime;
-        private String displayName;
-        private String etag;
-        private String name;
-        private String parent;
-        private String state;
-        private String updateTime;
+        private GetFoldersFolder $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFoldersFolder();
         }
 
         public Builder(GetFoldersFolder defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.deleteTime = defaults.deleteTime;
-    	      this.displayName = defaults.displayName;
-    	      this.etag = defaults.etag;
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.state = defaults.state;
-    	      this.updateTime = defaults.updateTime;
+            $ = new GetFoldersFolder(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder deleteTime(String deleteTime) {
-            this.deleteTime = Objects.requireNonNull(deleteTime);
+            $.deleteTime = deleteTime;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public GetFoldersFolder build() {
-            return new GetFoldersFolder(createTime, deleteTime, displayName, etag, name, parent, state, updateTime);
+        }
+
+        public GetFoldersFolder build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.deleteTime = Objects.requireNonNull($.deleteTime, "expected parameter 'deleteTime' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

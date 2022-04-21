@@ -14,142 +14,129 @@ public final class GetEnvironmentConfigPrivateEnvironmentConfig extends com.pulu
     public static final GetEnvironmentConfigPrivateEnvironmentConfig Empty = new GetEnvironmentConfigPrivateEnvironmentConfig();
 
     @Import(name="cloudComposerConnectionSubnetwork", required=true)
-      private final String cloudComposerConnectionSubnetwork;
+    private String cloudComposerConnectionSubnetwork;
 
     public String cloudComposerConnectionSubnetwork() {
         return this.cloudComposerConnectionSubnetwork;
     }
 
     @Import(name="cloudComposerNetworkIpv4CidrBlock", required=true)
-      private final String cloudComposerNetworkIpv4CidrBlock;
+    private String cloudComposerNetworkIpv4CidrBlock;
 
     public String cloudComposerNetworkIpv4CidrBlock() {
         return this.cloudComposerNetworkIpv4CidrBlock;
     }
 
     @Import(name="cloudSqlIpv4CidrBlock", required=true)
-      private final String cloudSqlIpv4CidrBlock;
+    private String cloudSqlIpv4CidrBlock;
 
     public String cloudSqlIpv4CidrBlock() {
         return this.cloudSqlIpv4CidrBlock;
     }
 
     @Import(name="enablePrivateEndpoint", required=true)
-      private final Boolean enablePrivateEndpoint;
+    private Boolean enablePrivateEndpoint;
 
     public Boolean enablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
 
     @Import(name="enablePrivatelyUsedPublicIps", required=true)
-      private final Boolean enablePrivatelyUsedPublicIps;
+    private Boolean enablePrivatelyUsedPublicIps;
 
     public Boolean enablePrivatelyUsedPublicIps() {
         return this.enablePrivatelyUsedPublicIps;
     }
 
     @Import(name="masterIpv4CidrBlock", required=true)
-      private final String masterIpv4CidrBlock;
+    private String masterIpv4CidrBlock;
 
     public String masterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
 
     @Import(name="webServerIpv4CidrBlock", required=true)
-      private final String webServerIpv4CidrBlock;
+    private String webServerIpv4CidrBlock;
 
     public String webServerIpv4CidrBlock() {
         return this.webServerIpv4CidrBlock;
     }
 
-    public GetEnvironmentConfigPrivateEnvironmentConfig(
-        String cloudComposerConnectionSubnetwork,
-        String cloudComposerNetworkIpv4CidrBlock,
-        String cloudSqlIpv4CidrBlock,
-        Boolean enablePrivateEndpoint,
-        Boolean enablePrivatelyUsedPublicIps,
-        String masterIpv4CidrBlock,
-        String webServerIpv4CidrBlock) {
-        this.cloudComposerConnectionSubnetwork = Objects.requireNonNull(cloudComposerConnectionSubnetwork, "expected parameter 'cloudComposerConnectionSubnetwork' to be non-null");
-        this.cloudComposerNetworkIpv4CidrBlock = Objects.requireNonNull(cloudComposerNetworkIpv4CidrBlock, "expected parameter 'cloudComposerNetworkIpv4CidrBlock' to be non-null");
-        this.cloudSqlIpv4CidrBlock = Objects.requireNonNull(cloudSqlIpv4CidrBlock, "expected parameter 'cloudSqlIpv4CidrBlock' to be non-null");
-        this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint, "expected parameter 'enablePrivateEndpoint' to be non-null");
-        this.enablePrivatelyUsedPublicIps = Objects.requireNonNull(enablePrivatelyUsedPublicIps, "expected parameter 'enablePrivatelyUsedPublicIps' to be non-null");
-        this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock, "expected parameter 'masterIpv4CidrBlock' to be non-null");
-        this.webServerIpv4CidrBlock = Objects.requireNonNull(webServerIpv4CidrBlock, "expected parameter 'webServerIpv4CidrBlock' to be non-null");
-    }
+    private GetEnvironmentConfigPrivateEnvironmentConfig() {}
 
-    private GetEnvironmentConfigPrivateEnvironmentConfig() {
-        this.cloudComposerConnectionSubnetwork = null;
-        this.cloudComposerNetworkIpv4CidrBlock = null;
-        this.cloudSqlIpv4CidrBlock = null;
-        this.enablePrivateEndpoint = null;
-        this.enablePrivatelyUsedPublicIps = null;
-        this.masterIpv4CidrBlock = null;
-        this.webServerIpv4CidrBlock = null;
+    private GetEnvironmentConfigPrivateEnvironmentConfig(GetEnvironmentConfigPrivateEnvironmentConfig $) {
+        this.cloudComposerConnectionSubnetwork = $.cloudComposerConnectionSubnetwork;
+        this.cloudComposerNetworkIpv4CidrBlock = $.cloudComposerNetworkIpv4CidrBlock;
+        this.cloudSqlIpv4CidrBlock = $.cloudSqlIpv4CidrBlock;
+        this.enablePrivateEndpoint = $.enablePrivateEndpoint;
+        this.enablePrivatelyUsedPublicIps = $.enablePrivatelyUsedPublicIps;
+        this.masterIpv4CidrBlock = $.masterIpv4CidrBlock;
+        this.webServerIpv4CidrBlock = $.webServerIpv4CidrBlock;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentConfigPrivateEnvironmentConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cloudComposerConnectionSubnetwork;
-        private String cloudComposerNetworkIpv4CidrBlock;
-        private String cloudSqlIpv4CidrBlock;
-        private Boolean enablePrivateEndpoint;
-        private Boolean enablePrivatelyUsedPublicIps;
-        private String masterIpv4CidrBlock;
-        private String webServerIpv4CidrBlock;
+        private GetEnvironmentConfigPrivateEnvironmentConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentConfigPrivateEnvironmentConfig();
         }
 
         public Builder(GetEnvironmentConfigPrivateEnvironmentConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudComposerConnectionSubnetwork = defaults.cloudComposerConnectionSubnetwork;
-    	      this.cloudComposerNetworkIpv4CidrBlock = defaults.cloudComposerNetworkIpv4CidrBlock;
-    	      this.cloudSqlIpv4CidrBlock = defaults.cloudSqlIpv4CidrBlock;
-    	      this.enablePrivateEndpoint = defaults.enablePrivateEndpoint;
-    	      this.enablePrivatelyUsedPublicIps = defaults.enablePrivatelyUsedPublicIps;
-    	      this.masterIpv4CidrBlock = defaults.masterIpv4CidrBlock;
-    	      this.webServerIpv4CidrBlock = defaults.webServerIpv4CidrBlock;
+            $ = new GetEnvironmentConfigPrivateEnvironmentConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudComposerConnectionSubnetwork(String cloudComposerConnectionSubnetwork) {
-            this.cloudComposerConnectionSubnetwork = Objects.requireNonNull(cloudComposerConnectionSubnetwork);
+            $.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
             return this;
         }
+
         public Builder cloudComposerNetworkIpv4CidrBlock(String cloudComposerNetworkIpv4CidrBlock) {
-            this.cloudComposerNetworkIpv4CidrBlock = Objects.requireNonNull(cloudComposerNetworkIpv4CidrBlock);
+            $.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
             return this;
         }
+
         public Builder cloudSqlIpv4CidrBlock(String cloudSqlIpv4CidrBlock) {
-            this.cloudSqlIpv4CidrBlock = Objects.requireNonNull(cloudSqlIpv4CidrBlock);
+            $.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
             return this;
         }
+
         public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
-            this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
+            $.enablePrivateEndpoint = enablePrivateEndpoint;
             return this;
         }
+
         public Builder enablePrivatelyUsedPublicIps(Boolean enablePrivatelyUsedPublicIps) {
-            this.enablePrivatelyUsedPublicIps = Objects.requireNonNull(enablePrivatelyUsedPublicIps);
+            $.enablePrivatelyUsedPublicIps = enablePrivatelyUsedPublicIps;
             return this;
         }
+
         public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
-            this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock);
+            $.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
+
         public Builder webServerIpv4CidrBlock(String webServerIpv4CidrBlock) {
-            this.webServerIpv4CidrBlock = Objects.requireNonNull(webServerIpv4CidrBlock);
+            $.webServerIpv4CidrBlock = webServerIpv4CidrBlock;
             return this;
-        }        public GetEnvironmentConfigPrivateEnvironmentConfig build() {
-            return new GetEnvironmentConfigPrivateEnvironmentConfig(cloudComposerConnectionSubnetwork, cloudComposerNetworkIpv4CidrBlock, cloudSqlIpv4CidrBlock, enablePrivateEndpoint, enablePrivatelyUsedPublicIps, masterIpv4CidrBlock, webServerIpv4CidrBlock);
+        }
+
+        public GetEnvironmentConfigPrivateEnvironmentConfig build() {
+            $.cloudComposerConnectionSubnetwork = Objects.requireNonNull($.cloudComposerConnectionSubnetwork, "expected parameter 'cloudComposerConnectionSubnetwork' to be non-null");
+            $.cloudComposerNetworkIpv4CidrBlock = Objects.requireNonNull($.cloudComposerNetworkIpv4CidrBlock, "expected parameter 'cloudComposerNetworkIpv4CidrBlock' to be non-null");
+            $.cloudSqlIpv4CidrBlock = Objects.requireNonNull($.cloudSqlIpv4CidrBlock, "expected parameter 'cloudSqlIpv4CidrBlock' to be non-null");
+            $.enablePrivateEndpoint = Objects.requireNonNull($.enablePrivateEndpoint, "expected parameter 'enablePrivateEndpoint' to be non-null");
+            $.enablePrivatelyUsedPublicIps = Objects.requireNonNull($.enablePrivatelyUsedPublicIps, "expected parameter 'enablePrivatelyUsedPublicIps' to be non-null");
+            $.masterIpv4CidrBlock = Objects.requireNonNull($.masterIpv4CidrBlock, "expected parameter 'masterIpv4CidrBlock' to be non-null");
+            $.webServerIpv4CidrBlock = Objects.requireNonNull($.webServerIpv4CidrBlock, "expected parameter 'webServerIpv4CidrBlock' to be non-null");
+            return $;
         }
     }
+
 }

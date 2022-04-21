@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateMetadataGetArgs;
 import com.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ServiceTemplateGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ServiceTemplateMetadataGetArgs> metadata;
+    private @Nullable Output<ServiceTemplateMetadataGetArgs> metadata;
 
-    public Output<ServiceTemplateMetadataGetArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ServiceTemplateMetadataGetArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ServiceTemplateGetArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<ServiceTemplateSpecGetArgs> spec;
+    private @Nullable Output<ServiceTemplateSpecGetArgs> spec;
 
-    public Output<ServiceTemplateSpecGetArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<ServiceTemplateSpecGetArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
-    public ServiceTemplateGetArgs(
-        @Nullable Output<ServiceTemplateMetadataGetArgs> metadata,
-        @Nullable Output<ServiceTemplateSpecGetArgs> spec) {
-        this.metadata = metadata;
-        this.spec = spec;
-    }
+    private ServiceTemplateGetArgs() {}
 
-    private ServiceTemplateGetArgs() {
-        this.metadata = Codegen.empty();
-        this.spec = Codegen.empty();
+    private ServiceTemplateGetArgs(ServiceTemplateGetArgs $) {
+        this.metadata = $.metadata;
+        this.spec = $.spec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTemplateGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceTemplateMetadataGetArgs> metadata;
-        private @Nullable Output<ServiceTemplateSpecGetArgs> spec;
+        private ServiceTemplateGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTemplateGetArgs();
         }
 
         public Builder(ServiceTemplateGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
-    	      this.spec = defaults.spec;
+            $ = new ServiceTemplateGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(@Nullable Output<ServiceTemplateMetadataGetArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ServiceTemplateMetadataGetArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ServiceTemplateMetadataGetArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder spec(@Nullable Output<ServiceTemplateSpecGetArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable ServiceTemplateSpecGetArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
-        }        public ServiceTemplateGetArgs build() {
-            return new ServiceTemplateGetArgs(metadata, spec);
+
+        public Builder spec(ServiceTemplateSpecGetArgs spec) {
+            return spec(Output.of(spec));
+        }
+
+        public ServiceTemplateGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,62 +13,59 @@ public final class GetClusterNodePoolAutoscaling extends com.pulumi.resources.In
     public static final GetClusterNodePoolAutoscaling Empty = new GetClusterNodePoolAutoscaling();
 
     @Import(name="maxNodeCount", required=true)
-      private final Integer maxNodeCount;
+    private Integer maxNodeCount;
 
     public Integer maxNodeCount() {
         return this.maxNodeCount;
     }
 
     @Import(name="minNodeCount", required=true)
-      private final Integer minNodeCount;
+    private Integer minNodeCount;
 
     public Integer minNodeCount() {
         return this.minNodeCount;
     }
 
-    public GetClusterNodePoolAutoscaling(
-        Integer maxNodeCount,
-        Integer minNodeCount) {
-        this.maxNodeCount = Objects.requireNonNull(maxNodeCount, "expected parameter 'maxNodeCount' to be non-null");
-        this.minNodeCount = Objects.requireNonNull(minNodeCount, "expected parameter 'minNodeCount' to be non-null");
-    }
+    private GetClusterNodePoolAutoscaling() {}
 
-    private GetClusterNodePoolAutoscaling() {
-        this.maxNodeCount = null;
-        this.minNodeCount = null;
+    private GetClusterNodePoolAutoscaling(GetClusterNodePoolAutoscaling $) {
+        this.maxNodeCount = $.maxNodeCount;
+        this.minNodeCount = $.minNodeCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodePoolAutoscaling defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxNodeCount;
-        private Integer minNodeCount;
+        private GetClusterNodePoolAutoscaling $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodePoolAutoscaling();
         }
 
         public Builder(GetClusterNodePoolAutoscaling defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxNodeCount = defaults.maxNodeCount;
-    	      this.minNodeCount = defaults.minNodeCount;
+            $ = new GetClusterNodePoolAutoscaling(Objects.requireNonNull(defaults));
         }
 
         public Builder maxNodeCount(Integer maxNodeCount) {
-            this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
+            $.maxNodeCount = maxNodeCount;
             return this;
         }
+
         public Builder minNodeCount(Integer minNodeCount) {
-            this.minNodeCount = Objects.requireNonNull(minNodeCount);
+            $.minNodeCount = minNodeCount;
             return this;
-        }        public GetClusterNodePoolAutoscaling build() {
-            return new GetClusterNodePoolAutoscaling(maxNodeCount, minNodeCount);
+        }
+
+        public GetClusterNodePoolAutoscaling build() {
+            $.maxNodeCount = Objects.requireNonNull($.maxNodeCount, "expected parameter 'maxNodeCount' to be non-null");
+            $.minNodeCount = Objects.requireNonNull($.minNodeCount, "expected parameter 'minNodeCount' to be non-null");
+            return $;
         }
     }
+
 }

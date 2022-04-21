@@ -5,10 +5,10 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,90 +17,83 @@ public final class NodePoolNetworkConfigGetArgs extends com.pulumi.resources.Res
     public static final NodePoolNetworkConfigGetArgs Empty = new NodePoolNetworkConfigGetArgs();
 
     @Import(name="createPodRange")
-      private final @Nullable Output<Boolean> createPodRange;
+    private @Nullable Output<Boolean> createPodRange;
 
-    public Output<Boolean> createPodRange() {
-        return this.createPodRange == null ? Codegen.empty() : this.createPodRange;
+    public Optional<Output<Boolean>> createPodRange() {
+        return Optional.ofNullable(this.createPodRange);
     }
 
     @Import(name="podIpv4CidrBlock")
-      private final @Nullable Output<String> podIpv4CidrBlock;
+    private @Nullable Output<String> podIpv4CidrBlock;
 
-    public Output<String> podIpv4CidrBlock() {
-        return this.podIpv4CidrBlock == null ? Codegen.empty() : this.podIpv4CidrBlock;
+    public Optional<Output<String>> podIpv4CidrBlock() {
+        return Optional.ofNullable(this.podIpv4CidrBlock);
     }
 
     @Import(name="podRange", required=true)
-      private final Output<String> podRange;
+    private Output<String> podRange;
 
     public Output<String> podRange() {
         return this.podRange;
     }
 
-    public NodePoolNetworkConfigGetArgs(
-        @Nullable Output<Boolean> createPodRange,
-        @Nullable Output<String> podIpv4CidrBlock,
-        Output<String> podRange) {
-        this.createPodRange = createPodRange;
-        this.podIpv4CidrBlock = podIpv4CidrBlock;
-        this.podRange = Objects.requireNonNull(podRange, "expected parameter 'podRange' to be non-null");
-    }
+    private NodePoolNetworkConfigGetArgs() {}
 
-    private NodePoolNetworkConfigGetArgs() {
-        this.createPodRange = Codegen.empty();
-        this.podIpv4CidrBlock = Codegen.empty();
-        this.podRange = Codegen.empty();
+    private NodePoolNetworkConfigGetArgs(NodePoolNetworkConfigGetArgs $) {
+        this.createPodRange = $.createPodRange;
+        this.podIpv4CidrBlock = $.podIpv4CidrBlock;
+        this.podRange = $.podRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolNetworkConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> createPodRange;
-        private @Nullable Output<String> podIpv4CidrBlock;
-        private Output<String> podRange;
+        private NodePoolNetworkConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolNetworkConfigGetArgs();
         }
 
         public Builder(NodePoolNetworkConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createPodRange = defaults.createPodRange;
-    	      this.podIpv4CidrBlock = defaults.podIpv4CidrBlock;
-    	      this.podRange = defaults.podRange;
+            $ = new NodePoolNetworkConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createPodRange(@Nullable Output<Boolean> createPodRange) {
-            this.createPodRange = createPodRange;
+            $.createPodRange = createPodRange;
             return this;
         }
-        public Builder createPodRange(@Nullable Boolean createPodRange) {
-            this.createPodRange = Codegen.ofNullable(createPodRange);
-            return this;
+
+        public Builder createPodRange(Boolean createPodRange) {
+            return createPodRange(Output.of(createPodRange));
         }
+
         public Builder podIpv4CidrBlock(@Nullable Output<String> podIpv4CidrBlock) {
-            this.podIpv4CidrBlock = podIpv4CidrBlock;
+            $.podIpv4CidrBlock = podIpv4CidrBlock;
             return this;
         }
-        public Builder podIpv4CidrBlock(@Nullable String podIpv4CidrBlock) {
-            this.podIpv4CidrBlock = Codegen.ofNullable(podIpv4CidrBlock);
-            return this;
+
+        public Builder podIpv4CidrBlock(String podIpv4CidrBlock) {
+            return podIpv4CidrBlock(Output.of(podIpv4CidrBlock));
         }
+
         public Builder podRange(Output<String> podRange) {
-            this.podRange = Objects.requireNonNull(podRange);
+            $.podRange = podRange;
             return this;
         }
+
         public Builder podRange(String podRange) {
-            this.podRange = Output.of(Objects.requireNonNull(podRange));
-            return this;
-        }        public NodePoolNetworkConfigGetArgs build() {
-            return new NodePoolNetworkConfigGetArgs(createPodRange, podIpv4CidrBlock, podRange);
+            return podRange(Output.of(podRange));
+        }
+
+        public NodePoolNetworkConfigGetArgs build() {
+            $.podRange = Objects.requireNonNull($.podRange, "expected parameter 'podRange' to be non-null");
+            return $;
         }
     }
+
 }

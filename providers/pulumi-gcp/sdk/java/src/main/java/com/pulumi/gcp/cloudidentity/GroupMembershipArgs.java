@@ -5,13 +5,13 @@ package com.pulumi.gcp.cloudidentity;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipMemberKeyArgs;
 import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipPreferredMemberKeyArgs;
 import com.pulumi.gcp.cloudidentity.inputs.GroupMembershipRoleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class GroupMembershipArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="group", required=true)
-      private final Output<String> group;
+    private Output<String> group;
 
     public Output<String> group() {
         return this.group;
@@ -36,10 +36,10 @@ public final class GroupMembershipArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="memberKey")
-      private final @Nullable Output<GroupMembershipMemberKeyArgs> memberKey;
+    private @Nullable Output<GroupMembershipMemberKeyArgs> memberKey;
 
-    public Output<GroupMembershipMemberKeyArgs> memberKey() {
-        return this.memberKey == null ? Codegen.empty() : this.memberKey;
+    public Optional<Output<GroupMembershipMemberKeyArgs>> memberKey() {
+        return Optional.ofNullable(this.memberKey);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GroupMembershipArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="preferredMemberKey")
-      private final @Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey;
+    private @Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey;
 
-    public Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey() {
-        return this.preferredMemberKey == null ? Codegen.empty() : this.preferredMemberKey;
+    public Optional<Output<GroupMembershipPreferredMemberKeyArgs>> preferredMemberKey() {
+        return Optional.ofNullable(this.preferredMemberKey);
     }
 
     /**
@@ -61,92 +61,84 @@ public final class GroupMembershipArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="roles", required=true)
-      private final Output<List<GroupMembershipRoleArgs>> roles;
+    private Output<List<GroupMembershipRoleArgs>> roles;
 
     public Output<List<GroupMembershipRoleArgs>> roles() {
         return this.roles;
     }
 
-    public GroupMembershipArgs(
-        Output<String> group,
-        @Nullable Output<GroupMembershipMemberKeyArgs> memberKey,
-        @Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey,
-        Output<List<GroupMembershipRoleArgs>> roles) {
-        this.group = Objects.requireNonNull(group, "expected parameter 'group' to be non-null");
-        this.memberKey = memberKey;
-        this.preferredMemberKey = preferredMemberKey;
-        this.roles = Objects.requireNonNull(roles, "expected parameter 'roles' to be non-null");
-    }
+    private GroupMembershipArgs() {}
 
-    private GroupMembershipArgs() {
-        this.group = Codegen.empty();
-        this.memberKey = Codegen.empty();
-        this.preferredMemberKey = Codegen.empty();
-        this.roles = Codegen.empty();
+    private GroupMembershipArgs(GroupMembershipArgs $) {
+        this.group = $.group;
+        this.memberKey = $.memberKey;
+        this.preferredMemberKey = $.preferredMemberKey;
+        this.roles = $.roles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupMembershipArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> group;
-        private @Nullable Output<GroupMembershipMemberKeyArgs> memberKey;
-        private @Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey;
-        private Output<List<GroupMembershipRoleArgs>> roles;
+        private GroupMembershipArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupMembershipArgs();
         }
 
         public Builder(GroupMembershipArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.group = defaults.group;
-    	      this.memberKey = defaults.memberKey;
-    	      this.preferredMemberKey = defaults.preferredMemberKey;
-    	      this.roles = defaults.roles;
+            $ = new GroupMembershipArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder group(Output<String> group) {
-            this.group = Objects.requireNonNull(group);
+            $.group = group;
             return this;
         }
+
         public Builder group(String group) {
-            this.group = Output.of(Objects.requireNonNull(group));
-            return this;
+            return group(Output.of(group));
         }
+
         public Builder memberKey(@Nullable Output<GroupMembershipMemberKeyArgs> memberKey) {
-            this.memberKey = memberKey;
+            $.memberKey = memberKey;
             return this;
         }
-        public Builder memberKey(@Nullable GroupMembershipMemberKeyArgs memberKey) {
-            this.memberKey = Codegen.ofNullable(memberKey);
-            return this;
+
+        public Builder memberKey(GroupMembershipMemberKeyArgs memberKey) {
+            return memberKey(Output.of(memberKey));
         }
+
         public Builder preferredMemberKey(@Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey) {
-            this.preferredMemberKey = preferredMemberKey;
+            $.preferredMemberKey = preferredMemberKey;
             return this;
         }
-        public Builder preferredMemberKey(@Nullable GroupMembershipPreferredMemberKeyArgs preferredMemberKey) {
-            this.preferredMemberKey = Codegen.ofNullable(preferredMemberKey);
-            return this;
+
+        public Builder preferredMemberKey(GroupMembershipPreferredMemberKeyArgs preferredMemberKey) {
+            return preferredMemberKey(Output.of(preferredMemberKey));
         }
+
         public Builder roles(Output<List<GroupMembershipRoleArgs>> roles) {
-            this.roles = Objects.requireNonNull(roles);
+            $.roles = roles;
             return this;
         }
+
         public Builder roles(List<GroupMembershipRoleArgs> roles) {
-            this.roles = Output.of(Objects.requireNonNull(roles));
-            return this;
+            return roles(Output.of(roles));
         }
+
         public Builder roles(GroupMembershipRoleArgs... roles) {
             return roles(List.of(roles));
-        }        public GroupMembershipArgs build() {
-            return new GroupMembershipArgs(group, memberKey, preferredMemberKey, roles);
+        }
+
+        public GroupMembershipArgs build() {
+            $.group = Objects.requireNonNull($.group, "expected parameter 'group' to be non-null");
+            $.roles = Objects.requireNonNull($.roles, "expected parameter 'roles' to be non-null");
+            return $;
         }
     }
+
 }

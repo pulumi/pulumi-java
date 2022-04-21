@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.AutoscalerAutoscalingPolicyGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscalingPolicy")
-      private final @Nullable Output<AutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy;
+    private @Nullable Output<AutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy;
 
-    public Output<AutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
+    public Optional<Output<AutoscalerAutoscalingPolicyGetArgs>> autoscalingPolicy() {
+        return Optional.ofNullable(this.autoscalingPolicy);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -106,141 +106,118 @@ public final class AutoscalerState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public AutoscalerState(
-        @Nullable Output<AutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy,
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> target,
-        @Nullable Output<String> zone) {
-        this.autoscalingPolicy = autoscalingPolicy;
-        this.creationTimestamp = creationTimestamp;
-        this.description = description;
-        this.name = name;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.target = target;
-        this.zone = zone;
-    }
+    private AutoscalerState() {}
 
-    private AutoscalerState() {
-        this.autoscalingPolicy = Codegen.empty();
-        this.creationTimestamp = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.target = Codegen.empty();
-        this.zone = Codegen.empty();
+    private AutoscalerState(AutoscalerState $) {
+        this.autoscalingPolicy = $.autoscalingPolicy;
+        this.creationTimestamp = $.creationTimestamp;
+        this.description = $.description;
+        this.name = $.name;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.target = $.target;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalerState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy;
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> target;
-        private @Nullable Output<String> zone;
+        private AutoscalerState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalerState();
         }
 
         public Builder(AutoscalerState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingPolicy = defaults.autoscalingPolicy;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.target = defaults.target;
-    	      this.zone = defaults.zone;
+            $ = new AutoscalerState(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingPolicy(@Nullable Output<AutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy) {
-            this.autoscalingPolicy = autoscalingPolicy;
+            $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
-        public Builder autoscalingPolicy(@Nullable AutoscalerAutoscalingPolicyGetArgs autoscalingPolicy) {
-            this.autoscalingPolicy = Codegen.ofNullable(autoscalingPolicy);
-            return this;
+
+        public Builder autoscalingPolicy(AutoscalerAutoscalingPolicyGetArgs autoscalingPolicy) {
+            return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
+
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
+
+        public Builder target(String target) {
+            return target(Output.of(target));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public AutoscalerState build() {
-            return new AutoscalerState(autoscalingPolicy, creationTimestamp, description, name, project, selfLink, target, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public AutoscalerState build() {
+            return $;
         }
     }
+
 }

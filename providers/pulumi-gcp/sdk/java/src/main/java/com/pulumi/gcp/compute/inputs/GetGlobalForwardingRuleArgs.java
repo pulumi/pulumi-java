@@ -19,7 +19,7 @@ public final class GetGlobalForwardingRuleArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -31,55 +31,51 @@ public final class GetGlobalForwardingRuleArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetGlobalForwardingRuleArgs(
-        String name,
-        @Nullable String project) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.project = project;
-    }
+    private GetGlobalForwardingRuleArgs() {}
 
-    private GetGlobalForwardingRuleArgs() {
-        this.name = null;
-        this.project = null;
+    private GetGlobalForwardingRuleArgs(GetGlobalForwardingRuleArgs $) {
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlobalForwardingRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String project;
+        private GetGlobalForwardingRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlobalForwardingRuleArgs();
         }
 
         public Builder(GetGlobalForwardingRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new GetGlobalForwardingRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetGlobalForwardingRuleArgs build() {
-            return new GetGlobalForwardingRuleArgs(name, project);
+        }
+
+        public GetGlobalForwardingRuleArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

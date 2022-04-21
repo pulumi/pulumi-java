@@ -5,10 +5,10 @@ package com.pulumi.gcp.serviceAccount.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.serviceAccount.inputs.IAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class IAMMemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<IAMMemberConditionGetArgs> condition;
+    private @Nullable Output<IAMMemberConditionGetArgs> condition;
 
-    public Output<IAMMemberConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<IAMMemberConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -33,17 +33,17 @@ public final class IAMMemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="member")
-      private final @Nullable Output<String> member;
+    private @Nullable Output<String> member;
 
-    public Output<String> member() {
-        return this.member == null ? Codegen.empty() : this.member;
+    public Optional<Output<String>> member() {
+        return Optional.ofNullable(this.member);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class IAMMemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class IAMMemberState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountId")
-      private final @Nullable Output<String> serviceAccountId;
+    private @Nullable Output<String> serviceAccountId;
 
-    public Output<String> serviceAccountId() {
-        return this.serviceAccountId == null ? Codegen.empty() : this.serviceAccountId;
+    public Optional<Output<String>> serviceAccountId() {
+        return Optional.ofNullable(this.serviceAccountId);
     }
 
-    public IAMMemberState(
-        @Nullable Output<IAMMemberConditionGetArgs> condition,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> member,
-        @Nullable Output<String> role,
-        @Nullable Output<String> serviceAccountId) {
-        this.condition = condition;
-        this.etag = etag;
-        this.member = member;
-        this.role = role;
-        this.serviceAccountId = serviceAccountId;
-    }
+    private IAMMemberState() {}
 
-    private IAMMemberState() {
-        this.condition = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
-        this.serviceAccountId = Codegen.empty();
+    private IAMMemberState(IAMMemberState $) {
+        this.condition = $.condition;
+        this.etag = $.etag;
+        this.member = $.member;
+        this.role = $.role;
+        this.serviceAccountId = $.serviceAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IAMMemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IAMMemberConditionGetArgs> condition;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> member;
-        private @Nullable Output<String> role;
-        private @Nullable Output<String> serviceAccountId;
+        private IAMMemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IAMMemberState();
         }
 
         public Builder(IAMMemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.etag = defaults.etag;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
-    	      this.serviceAccountId = defaults.serviceAccountId;
+            $ = new IAMMemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<IAMMemberConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable IAMMemberConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(IAMMemberConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder member(@Nullable Output<String> member) {
-            this.member = member;
+            $.member = member;
             return this;
         }
-        public Builder member(@Nullable String member) {
-            this.member = Codegen.ofNullable(member);
-            return this;
+
+        public Builder member(String member) {
+            return member(Output.of(member));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder serviceAccountId(@Nullable Output<String> serviceAccountId) {
-            this.serviceAccountId = serviceAccountId;
+            $.serviceAccountId = serviceAccountId;
             return this;
         }
-        public Builder serviceAccountId(@Nullable String serviceAccountId) {
-            this.serviceAccountId = Codegen.ofNullable(serviceAccountId);
-            return this;
-        }        public IAMMemberState build() {
-            return new IAMMemberState(condition, etag, member, role, serviceAccountId);
+
+        public Builder serviceAccountId(String serviceAccountId) {
+            return serviceAccountId(Output.of(serviceAccountId));
+        }
+
+        public IAMMemberState build() {
+            return $;
         }
     }
+
 }

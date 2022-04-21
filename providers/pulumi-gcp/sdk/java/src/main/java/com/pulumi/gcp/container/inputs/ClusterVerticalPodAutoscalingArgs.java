@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ClusterVerticalPodAutoscalingArgs extends com.pulumi.resource
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public ClusterVerticalPodAutoscalingArgs(Output<Boolean> enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private ClusterVerticalPodAutoscalingArgs() {}
 
-    private ClusterVerticalPodAutoscalingArgs() {
-        this.enabled = Codegen.empty();
+    private ClusterVerticalPodAutoscalingArgs(ClusterVerticalPodAutoscalingArgs $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterVerticalPodAutoscalingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
+        private ClusterVerticalPodAutoscalingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterVerticalPodAutoscalingArgs();
         }
 
         public Builder(ClusterVerticalPodAutoscalingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new ClusterVerticalPodAutoscalingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public ClusterVerticalPodAutoscalingArgs build() {
-            return new ClusterVerticalPodAutoscalingArgs(enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public ClusterVerticalPodAutoscalingArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

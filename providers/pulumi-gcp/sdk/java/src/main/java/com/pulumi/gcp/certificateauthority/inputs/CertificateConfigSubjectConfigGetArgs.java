@@ -5,10 +5,10 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigSubjectAltNameGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigSubjectGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class CertificateConfigSubjectConfigGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="subject", required=true)
-      private final Output<CertificateConfigSubjectConfigSubjectGetArgs> subject;
+    private Output<CertificateConfigSubjectConfigSubjectGetArgs> subject;
 
     public Output<CertificateConfigSubjectConfigSubjectGetArgs> subject() {
         return this.subject;
@@ -34,63 +34,59 @@ public final class CertificateConfigSubjectConfigGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="subjectAltName")
-      private final @Nullable Output<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName;
+    private @Nullable Output<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName;
 
-    public Output<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName() {
-        return this.subjectAltName == null ? Codegen.empty() : this.subjectAltName;
+    public Optional<Output<CertificateConfigSubjectConfigSubjectAltNameGetArgs>> subjectAltName() {
+        return Optional.ofNullable(this.subjectAltName);
     }
 
-    public CertificateConfigSubjectConfigGetArgs(
-        Output<CertificateConfigSubjectConfigSubjectGetArgs> subject,
-        @Nullable Output<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName) {
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.subjectAltName = subjectAltName;
-    }
+    private CertificateConfigSubjectConfigGetArgs() {}
 
-    private CertificateConfigSubjectConfigGetArgs() {
-        this.subject = Codegen.empty();
-        this.subjectAltName = Codegen.empty();
+    private CertificateConfigSubjectConfigGetArgs(CertificateConfigSubjectConfigGetArgs $) {
+        this.subject = $.subject;
+        this.subjectAltName = $.subjectAltName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateConfigSubjectConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<CertificateConfigSubjectConfigSubjectGetArgs> subject;
-        private @Nullable Output<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName;
+        private CertificateConfigSubjectConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateConfigSubjectConfigGetArgs();
         }
 
         public Builder(CertificateConfigSubjectConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subject = defaults.subject;
-    	      this.subjectAltName = defaults.subjectAltName;
+            $ = new CertificateConfigSubjectConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subject(Output<CertificateConfigSubjectConfigSubjectGetArgs> subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder subject(CertificateConfigSubjectConfigSubjectGetArgs subject) {
-            this.subject = Output.of(Objects.requireNonNull(subject));
-            return this;
+            return subject(Output.of(subject));
         }
+
         public Builder subjectAltName(@Nullable Output<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName) {
-            this.subjectAltName = subjectAltName;
+            $.subjectAltName = subjectAltName;
             return this;
         }
-        public Builder subjectAltName(@Nullable CertificateConfigSubjectConfigSubjectAltNameGetArgs subjectAltName) {
-            this.subjectAltName = Codegen.ofNullable(subjectAltName);
-            return this;
-        }        public CertificateConfigSubjectConfigGetArgs build() {
-            return new CertificateConfigSubjectConfigGetArgs(subject, subjectAltName);
+
+        public Builder subjectAltName(CertificateConfigSubjectConfigSubjectAltNameGetArgs subjectAltName) {
+            return subjectAltName(Output.of(subjectAltName));
+        }
+
+        public CertificateConfigSubjectConfigGetArgs build() {
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.kms.inputs.CryptoKeyIAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CryptoKeyIAMMemberState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<CryptoKeyIAMMemberConditionGetArgs> condition;
+    private @Nullable Output<CryptoKeyIAMMemberConditionGetArgs> condition;
 
-    public Output<CryptoKeyIAMMemberConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<CryptoKeyIAMMemberConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CryptoKeyIAMMemberState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="cryptoKeyId")
-      private final @Nullable Output<String> cryptoKeyId;
+    private @Nullable Output<String> cryptoKeyId;
 
-    public Output<String> cryptoKeyId() {
-        return this.cryptoKeyId == null ? Codegen.empty() : this.cryptoKeyId;
+    public Optional<Output<String>> cryptoKeyId() {
+        return Optional.ofNullable(this.cryptoKeyId);
     }
 
     /**
@@ -47,17 +47,17 @@ public final class CryptoKeyIAMMemberState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="member")
-      private final @Nullable Output<String> member;
+    private @Nullable Output<String> member;
 
-    public Output<String> member() {
-        return this.member == null ? Codegen.empty() : this.member;
+    public Optional<Output<String>> member() {
+        return Optional.ofNullable(this.member);
     }
 
     /**
@@ -66,102 +66,88 @@ public final class CryptoKeyIAMMemberState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
-    public CryptoKeyIAMMemberState(
-        @Nullable Output<CryptoKeyIAMMemberConditionGetArgs> condition,
-        @Nullable Output<String> cryptoKeyId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> member,
-        @Nullable Output<String> role) {
-        this.condition = condition;
-        this.cryptoKeyId = cryptoKeyId;
-        this.etag = etag;
-        this.member = member;
-        this.role = role;
-    }
+    private CryptoKeyIAMMemberState() {}
 
-    private CryptoKeyIAMMemberState() {
-        this.condition = Codegen.empty();
-        this.cryptoKeyId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
+    private CryptoKeyIAMMemberState(CryptoKeyIAMMemberState $) {
+        this.condition = $.condition;
+        this.cryptoKeyId = $.cryptoKeyId;
+        this.etag = $.etag;
+        this.member = $.member;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CryptoKeyIAMMemberState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CryptoKeyIAMMemberConditionGetArgs> condition;
-        private @Nullable Output<String> cryptoKeyId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> member;
-        private @Nullable Output<String> role;
+        private CryptoKeyIAMMemberState $;
 
         public Builder() {
-    	      // Empty
+            $ = new CryptoKeyIAMMemberState();
         }
 
         public Builder(CryptoKeyIAMMemberState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.cryptoKeyId = defaults.cryptoKeyId;
-    	      this.etag = defaults.etag;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
+            $ = new CryptoKeyIAMMemberState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<CryptoKeyIAMMemberConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable CryptoKeyIAMMemberConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(CryptoKeyIAMMemberConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder cryptoKeyId(@Nullable Output<String> cryptoKeyId) {
-            this.cryptoKeyId = cryptoKeyId;
+            $.cryptoKeyId = cryptoKeyId;
             return this;
         }
-        public Builder cryptoKeyId(@Nullable String cryptoKeyId) {
-            this.cryptoKeyId = Codegen.ofNullable(cryptoKeyId);
-            return this;
+
+        public Builder cryptoKeyId(String cryptoKeyId) {
+            return cryptoKeyId(Output.of(cryptoKeyId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder member(@Nullable Output<String> member) {
-            this.member = member;
+            $.member = member;
             return this;
         }
-        public Builder member(@Nullable String member) {
-            this.member = Codegen.ofNullable(member);
-            return this;
+
+        public Builder member(String member) {
+            return member(Output.of(member));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
-        }        public CryptoKeyIAMMemberState build() {
-            return new CryptoKeyIAMMemberState(condition, cryptoKeyId, etag, member, role);
+
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        public CryptoKeyIAMMemberState build() {
+            return $;
         }
     }
+
 }

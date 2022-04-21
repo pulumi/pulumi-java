@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class RegionUrlMapTestGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class RegionUrlMapTestGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="host", required=true)
-      private final Output<String> host;
+    private Output<String> host;
 
     public Output<String> host() {
         return this.host;
@@ -42,7 +42,7 @@ public final class RegionUrlMapTestGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -53,89 +53,81 @@ public final class RegionUrlMapTestGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
     }
 
-    public RegionUrlMapTestGetArgs(
-        @Nullable Output<String> description,
-        Output<String> host,
-        Output<String> path,
-        Output<String> service) {
-        this.description = description;
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private RegionUrlMapTestGetArgs() {}
 
-    private RegionUrlMapTestGetArgs() {
-        this.description = Codegen.empty();
-        this.host = Codegen.empty();
-        this.path = Codegen.empty();
-        this.service = Codegen.empty();
+    private RegionUrlMapTestGetArgs(RegionUrlMapTestGetArgs $) {
+        this.description = $.description;
+        this.host = $.host;
+        this.path = $.path;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionUrlMapTestGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> host;
-        private Output<String> path;
-        private Output<String> service;
+        private RegionUrlMapTestGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionUrlMapTestGetArgs();
         }
 
         public Builder(RegionUrlMapTestGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.host = defaults.host;
-    	      this.path = defaults.path;
-    	      this.service = defaults.service;
+            $ = new RegionUrlMapTestGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder host(Output<String> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
-        }        public RegionUrlMapTestGetArgs build() {
-            return new RegionUrlMapTestGetArgs(description, host, path, service);
+            return service(Output.of(service));
+        }
+
+        public RegionUrlMapTestGetArgs build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

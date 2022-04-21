@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArg
      * 
      */
     @Import(name="hoursInCycle", required=true)
-      private final Output<Integer> hoursInCycle;
+    private Output<Integer> hoursInCycle;
 
     public Output<Integer> hoursInCycle() {
         return this.hoursInCycle;
@@ -31,63 +30,60 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArg
      * 
      */
     @Import(name="startTime", required=true)
-      private final Output<String> startTime;
+    private Output<String> startTime;
 
     public Output<String> startTime() {
         return this.startTime;
     }
 
-    public ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs(
-        Output<Integer> hoursInCycle,
-        Output<String> startTime) {
-        this.hoursInCycle = Objects.requireNonNull(hoursInCycle, "expected parameter 'hoursInCycle' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs() {}
 
-    private ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs() {
-        this.hoursInCycle = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs(ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs $) {
+        this.hoursInCycle = $.hoursInCycle;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> hoursInCycle;
-        private Output<String> startTime;
+        private ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs();
         }
 
         public Builder(ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hoursInCycle = defaults.hoursInCycle;
-    	      this.startTime = defaults.startTime;
+            $ = new ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hoursInCycle(Output<Integer> hoursInCycle) {
-            this.hoursInCycle = Objects.requireNonNull(hoursInCycle);
+            $.hoursInCycle = hoursInCycle;
             return this;
         }
+
         public Builder hoursInCycle(Integer hoursInCycle) {
-            this.hoursInCycle = Output.of(Objects.requireNonNull(hoursInCycle));
-            return this;
+            return hoursInCycle(Output.of(hoursInCycle));
         }
+
         public Builder startTime(Output<String> startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Output.of(Objects.requireNonNull(startTime));
-            return this;
-        }        public ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs build() {
-            return new ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs(hoursInCycle, startTime);
+            return startTime(Output.of(startTime));
+        }
+
+        public ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs build() {
+            $.hoursInCycle = Objects.requireNonNull($.hoursInCycle, "expected parameter 'hoursInCycle' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

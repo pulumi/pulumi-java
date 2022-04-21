@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class SecurityPolicyRuleRateLimitOptionsBanThresholdArgs extends co
      * 
      */
     @Import(name="count", required=true)
-      private final Output<Integer> count;
+    private Output<Integer> count;
 
     public Output<Integer> count() {
         return this.count;
@@ -30,63 +29,60 @@ public final class SecurityPolicyRuleRateLimitOptionsBanThresholdArgs extends co
      * 
      */
     @Import(name="intervalSec", required=true)
-      private final Output<Integer> intervalSec;
+    private Output<Integer> intervalSec;
 
     public Output<Integer> intervalSec() {
         return this.intervalSec;
     }
 
-    public SecurityPolicyRuleRateLimitOptionsBanThresholdArgs(
-        Output<Integer> count,
-        Output<Integer> intervalSec) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.intervalSec = Objects.requireNonNull(intervalSec, "expected parameter 'intervalSec' to be non-null");
-    }
+    private SecurityPolicyRuleRateLimitOptionsBanThresholdArgs() {}
 
-    private SecurityPolicyRuleRateLimitOptionsBanThresholdArgs() {
-        this.count = Codegen.empty();
-        this.intervalSec = Codegen.empty();
+    private SecurityPolicyRuleRateLimitOptionsBanThresholdArgs(SecurityPolicyRuleRateLimitOptionsBanThresholdArgs $) {
+        this.count = $.count;
+        this.intervalSec = $.intervalSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleRateLimitOptionsBanThresholdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> count;
-        private Output<Integer> intervalSec;
+        private SecurityPolicyRuleRateLimitOptionsBanThresholdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleRateLimitOptionsBanThresholdArgs();
         }
 
         public Builder(SecurityPolicyRuleRateLimitOptionsBanThresholdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.intervalSec = defaults.intervalSec;
+            $ = new SecurityPolicyRuleRateLimitOptionsBanThresholdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Output<Integer> count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder count(Integer count) {
-            this.count = Output.of(Objects.requireNonNull(count));
-            return this;
+            return count(Output.of(count));
         }
+
         public Builder intervalSec(Output<Integer> intervalSec) {
-            this.intervalSec = Objects.requireNonNull(intervalSec);
+            $.intervalSec = intervalSec;
             return this;
         }
+
         public Builder intervalSec(Integer intervalSec) {
-            this.intervalSec = Output.of(Objects.requireNonNull(intervalSec));
-            return this;
-        }        public SecurityPolicyRuleRateLimitOptionsBanThresholdArgs build() {
-            return new SecurityPolicyRuleRateLimitOptionsBanThresholdArgs(count, intervalSec);
+            return intervalSec(Output.of(intervalSec));
+        }
+
+        public SecurityPolicyRuleRateLimitOptionsBanThresholdArgs build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.intervalSec = Objects.requireNonNull($.intervalSec, "expected parameter 'intervalSec' to be non-null");
+            return $;
         }
     }
+
 }

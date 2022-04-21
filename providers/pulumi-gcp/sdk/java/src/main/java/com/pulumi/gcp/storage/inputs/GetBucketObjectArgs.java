@@ -19,10 +19,10 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bucket")
-      private final @Nullable String bucket;
+    private @Nullable String bucket;
 
     public Optional<String> bucket() {
-        return this.bucket == null ? Optional.empty() : Optional.ofNullable(this.bucket);
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class GetBucketObjectArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public GetBucketObjectArgs(
-        @Nullable String bucket,
-        @Nullable String name) {
-        this.bucket = bucket;
-        this.name = name;
-    }
+    private GetBucketObjectArgs() {}
 
-    private GetBucketObjectArgs() {
-        this.bucket = null;
-        this.name = null;
+    private GetBucketObjectArgs(GetBucketObjectArgs $) {
+        this.bucket = $.bucket;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBucketObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bucket;
-        private @Nullable String name;
+        private GetBucketObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBucketObjectArgs();
         }
 
         public Builder(GetBucketObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.name = defaults.name;
+            $ = new GetBucketObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public GetBucketObjectArgs build() {
-            return new GetBucketObjectArgs(bucket, name);
+        }
+
+        public GetBucketObjectArgs build() {
+            return $;
         }
     }
+
 }

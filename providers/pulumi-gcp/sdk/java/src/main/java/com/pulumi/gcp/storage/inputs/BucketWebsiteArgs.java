@@ -5,9 +5,9 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mainPageSuffix")
-      private final @Nullable Output<String> mainPageSuffix;
+    private @Nullable Output<String> mainPageSuffix;
 
-    public Output<String> mainPageSuffix() {
-        return this.mainPageSuffix == null ? Codegen.empty() : this.mainPageSuffix;
+    public Optional<Output<String>> mainPageSuffix() {
+        return Optional.ofNullable(this.mainPageSuffix);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notFoundPage")
-      private final @Nullable Output<String> notFoundPage;
+    private @Nullable Output<String> notFoundPage;
 
-    public Output<String> notFoundPage() {
-        return this.notFoundPage == null ? Codegen.empty() : this.notFoundPage;
+    public Optional<Output<String>> notFoundPage() {
+        return Optional.ofNullable(this.notFoundPage);
     }
 
-    public BucketWebsiteArgs(
-        @Nullable Output<String> mainPageSuffix,
-        @Nullable Output<String> notFoundPage) {
-        this.mainPageSuffix = mainPageSuffix;
-        this.notFoundPage = notFoundPage;
-    }
+    private BucketWebsiteArgs() {}
 
-    private BucketWebsiteArgs() {
-        this.mainPageSuffix = Codegen.empty();
-        this.notFoundPage = Codegen.empty();
+    private BucketWebsiteArgs(BucketWebsiteArgs $) {
+        this.mainPageSuffix = $.mainPageSuffix;
+        this.notFoundPage = $.notFoundPage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketWebsiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> mainPageSuffix;
-        private @Nullable Output<String> notFoundPage;
+        private BucketWebsiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketWebsiteArgs();
         }
 
         public Builder(BucketWebsiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mainPageSuffix = defaults.mainPageSuffix;
-    	      this.notFoundPage = defaults.notFoundPage;
+            $ = new BucketWebsiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mainPageSuffix(@Nullable Output<String> mainPageSuffix) {
-            this.mainPageSuffix = mainPageSuffix;
+            $.mainPageSuffix = mainPageSuffix;
             return this;
         }
-        public Builder mainPageSuffix(@Nullable String mainPageSuffix) {
-            this.mainPageSuffix = Codegen.ofNullable(mainPageSuffix);
-            return this;
+
+        public Builder mainPageSuffix(String mainPageSuffix) {
+            return mainPageSuffix(Output.of(mainPageSuffix));
         }
+
         public Builder notFoundPage(@Nullable Output<String> notFoundPage) {
-            this.notFoundPage = notFoundPage;
+            $.notFoundPage = notFoundPage;
             return this;
         }
-        public Builder notFoundPage(@Nullable String notFoundPage) {
-            this.notFoundPage = Codegen.ofNullable(notFoundPage);
-            return this;
-        }        public BucketWebsiteArgs build() {
-            return new BucketWebsiteArgs(mainPageSuffix, notFoundPage);
+
+        public Builder notFoundPage(String notFoundPage) {
+            return notFoundPage(Output.of(notFoundPage));
+        }
+
+        public BucketWebsiteArgs build() {
+            return $;
         }
     }
+
 }

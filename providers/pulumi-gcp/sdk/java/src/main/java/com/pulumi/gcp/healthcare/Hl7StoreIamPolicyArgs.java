@@ -5,7 +5,6 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +21,7 @@ public final class Hl7StoreIamPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="hl7V2StoreId", required=true)
-      private final Output<String> hl7V2StoreId;
+    private Output<String> hl7V2StoreId;
 
     public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId;
@@ -34,63 +33,60 @@ public final class Hl7StoreIamPolicyArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
-    public Hl7StoreIamPolicyArgs(
-        Output<String> hl7V2StoreId,
-        Output<String> policyData) {
-        this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-    }
+    private Hl7StoreIamPolicyArgs() {}
 
-    private Hl7StoreIamPolicyArgs() {
-        this.hl7V2StoreId = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private Hl7StoreIamPolicyArgs(Hl7StoreIamPolicyArgs $) {
+        this.hl7V2StoreId = $.hl7V2StoreId;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7StoreIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> hl7V2StoreId;
-        private Output<String> policyData;
+        private Hl7StoreIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7StoreIamPolicyArgs();
         }
 
         public Builder(Hl7StoreIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hl7V2StoreId = defaults.hl7V2StoreId;
-    	      this.policyData = defaults.policyData;
+            $ = new Hl7StoreIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hl7V2StoreId(Output<String> hl7V2StoreId) {
-            this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
+            $.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
+
         public Builder hl7V2StoreId(String hl7V2StoreId) {
-            this.hl7V2StoreId = Output.of(Objects.requireNonNull(hl7V2StoreId));
-            return this;
+            return hl7V2StoreId(Output.of(hl7V2StoreId));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
-        }        public Hl7StoreIamPolicyArgs build() {
-            return new Hl7StoreIamPolicyArgs(hl7V2StoreId, policyData);
+            return policyData(Output.of(policyData));
+        }
+
+        public Hl7StoreIamPolicyArgs build() {
+            $.hl7V2StoreId = Objects.requireNonNull($.hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

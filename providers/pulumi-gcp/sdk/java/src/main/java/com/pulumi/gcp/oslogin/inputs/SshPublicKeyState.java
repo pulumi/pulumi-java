@@ -5,9 +5,9 @@ package com.pulumi.gcp.oslogin.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SshPublicKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationTimeUsec")
-      private final @Nullable Output<String> expirationTimeUsec;
+    private @Nullable Output<String> expirationTimeUsec;
 
-    public Output<String> expirationTimeUsec() {
-        return this.expirationTimeUsec == null ? Codegen.empty() : this.expirationTimeUsec;
+    public Optional<Output<String>> expirationTimeUsec() {
+        return Optional.ofNullable(this.expirationTimeUsec);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SshPublicKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fingerprint")
-      private final @Nullable Output<String> fingerprint;
+    private @Nullable Output<String> fingerprint;
 
-    public Output<String> fingerprint() {
-        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
+    public Optional<Output<String>> fingerprint() {
+        return Optional.ofNullable(this.fingerprint);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SshPublicKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SshPublicKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class SshPublicKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="user")
-      private final @Nullable Output<String> user;
+    private @Nullable Output<String> user;
 
-    public Output<String> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<String>> user() {
+        return Optional.ofNullable(this.user);
     }
 
-    public SshPublicKeyState(
-        @Nullable Output<String> expirationTimeUsec,
-        @Nullable Output<String> fingerprint,
-        @Nullable Output<String> key,
-        @Nullable Output<String> project,
-        @Nullable Output<String> user) {
-        this.expirationTimeUsec = expirationTimeUsec;
-        this.fingerprint = fingerprint;
-        this.key = key;
-        this.project = project;
-        this.user = user;
-    }
+    private SshPublicKeyState() {}
 
-    private SshPublicKeyState() {
-        this.expirationTimeUsec = Codegen.empty();
-        this.fingerprint = Codegen.empty();
-        this.key = Codegen.empty();
-        this.project = Codegen.empty();
-        this.user = Codegen.empty();
+    private SshPublicKeyState(SshPublicKeyState $) {
+        this.expirationTimeUsec = $.expirationTimeUsec;
+        this.fingerprint = $.fingerprint;
+        this.key = $.key;
+        this.project = $.project;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshPublicKeyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expirationTimeUsec;
-        private @Nullable Output<String> fingerprint;
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> user;
+        private SshPublicKeyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshPublicKeyState();
         }
 
         public Builder(SshPublicKeyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationTimeUsec = defaults.expirationTimeUsec;
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.key = defaults.key;
-    	      this.project = defaults.project;
-    	      this.user = defaults.user;
+            $ = new SshPublicKeyState(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationTimeUsec(@Nullable Output<String> expirationTimeUsec) {
-            this.expirationTimeUsec = expirationTimeUsec;
+            $.expirationTimeUsec = expirationTimeUsec;
             return this;
         }
-        public Builder expirationTimeUsec(@Nullable String expirationTimeUsec) {
-            this.expirationTimeUsec = Codegen.ofNullable(expirationTimeUsec);
-            return this;
+
+        public Builder expirationTimeUsec(String expirationTimeUsec) {
+            return expirationTimeUsec(Output.of(expirationTimeUsec));
         }
+
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
-            this.fingerprint = fingerprint;
+            $.fingerprint = fingerprint;
             return this;
         }
-        public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Codegen.ofNullable(fingerprint);
-            return this;
+
+        public Builder fingerprint(String fingerprint) {
+            return fingerprint(Output.of(fingerprint));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder user(@Nullable Output<String> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable String user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
-        }        public SshPublicKeyState build() {
-            return new SshPublicKeyState(expirationTimeUsec, fingerprint, key, project, user);
+
+        public Builder user(String user) {
+            return user(Output.of(user));
+        }
+
+        public SshPublicKeyState build() {
+            return $;
         }
     }
+
 }

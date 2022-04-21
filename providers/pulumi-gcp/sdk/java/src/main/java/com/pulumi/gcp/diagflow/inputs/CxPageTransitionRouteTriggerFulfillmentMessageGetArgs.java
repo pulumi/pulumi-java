@@ -5,9 +5,9 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageGetArgs extends
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs> text;
+    private @Nullable Output<CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs> text;
 
-    public Output<CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs>> text() {
+        return Optional.ofNullable(this.text);
     }
 
-    public CxPageTransitionRouteTriggerFulfillmentMessageGetArgs(@Nullable Output<CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs> text) {
-        this.text = text;
-    }
+    private CxPageTransitionRouteTriggerFulfillmentMessageGetArgs() {}
 
-    private CxPageTransitionRouteTriggerFulfillmentMessageGetArgs() {
-        this.text = Codegen.empty();
+    private CxPageTransitionRouteTriggerFulfillmentMessageGetArgs(CxPageTransitionRouteTriggerFulfillmentMessageGetArgs $) {
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxPageTransitionRouteTriggerFulfillmentMessageGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs> text;
+        private CxPageTransitionRouteTriggerFulfillmentMessageGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxPageTransitionRouteTriggerFulfillmentMessageGetArgs();
         }
 
         public Builder(CxPageTransitionRouteTriggerFulfillmentMessageGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.text = defaults.text;
+            $ = new CxPageTransitionRouteTriggerFulfillmentMessageGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder text(@Nullable Output<CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
-        }        public CxPageTransitionRouteTriggerFulfillmentMessageGetArgs build() {
-            return new CxPageTransitionRouteTriggerFulfillmentMessageGetArgs(text);
+
+        public Builder text(CxPageTransitionRouteTriggerFulfillmentMessageTextGetArgs text) {
+            return text(Output.of(text));
+        }
+
+        public CxPageTransitionRouteTriggerFulfillmentMessageGetArgs build() {
+            return $;
         }
     }
+
 }

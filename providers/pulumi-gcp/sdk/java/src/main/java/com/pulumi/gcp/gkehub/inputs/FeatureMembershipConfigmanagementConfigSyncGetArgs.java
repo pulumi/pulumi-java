@@ -5,10 +5,10 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementConfigSyncGitGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FeatureMembershipConfigmanagementConfigSyncGetArgs extends co
      * 
      */
     @Import(name="git")
-      private final @Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitGetArgs> git;
+    private @Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitGetArgs> git;
 
-    public Output<FeatureMembershipConfigmanagementConfigSyncGitGetArgs> git() {
-        return this.git == null ? Codegen.empty() : this.git;
+    public Optional<Output<FeatureMembershipConfigmanagementConfigSyncGitGetArgs>> git() {
+        return Optional.ofNullable(this.git);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class FeatureMembershipConfigmanagementConfigSyncGetArgs extends co
      * 
      */
     @Import(name="sourceFormat")
-      private final @Nullable Output<String> sourceFormat;
+    private @Nullable Output<String> sourceFormat;
 
-    public Output<String> sourceFormat() {
-        return this.sourceFormat == null ? Codegen.empty() : this.sourceFormat;
+    public Optional<Output<String>> sourceFormat() {
+        return Optional.ofNullable(this.sourceFormat);
     }
 
-    public FeatureMembershipConfigmanagementConfigSyncGetArgs(
-        @Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitGetArgs> git,
-        @Nullable Output<String> sourceFormat) {
-        this.git = git;
-        this.sourceFormat = sourceFormat;
-    }
+    private FeatureMembershipConfigmanagementConfigSyncGetArgs() {}
 
-    private FeatureMembershipConfigmanagementConfigSyncGetArgs() {
-        this.git = Codegen.empty();
-        this.sourceFormat = Codegen.empty();
+    private FeatureMembershipConfigmanagementConfigSyncGetArgs(FeatureMembershipConfigmanagementConfigSyncGetArgs $) {
+        this.git = $.git;
+        this.sourceFormat = $.sourceFormat;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureMembershipConfigmanagementConfigSyncGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitGetArgs> git;
-        private @Nullable Output<String> sourceFormat;
+        private FeatureMembershipConfigmanagementConfigSyncGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureMembershipConfigmanagementConfigSyncGetArgs();
         }
 
         public Builder(FeatureMembershipConfigmanagementConfigSyncGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.git = defaults.git;
-    	      this.sourceFormat = defaults.sourceFormat;
+            $ = new FeatureMembershipConfigmanagementConfigSyncGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder git(@Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitGetArgs> git) {
-            this.git = git;
+            $.git = git;
             return this;
         }
-        public Builder git(@Nullable FeatureMembershipConfigmanagementConfigSyncGitGetArgs git) {
-            this.git = Codegen.ofNullable(git);
-            return this;
+
+        public Builder git(FeatureMembershipConfigmanagementConfigSyncGitGetArgs git) {
+            return git(Output.of(git));
         }
+
         public Builder sourceFormat(@Nullable Output<String> sourceFormat) {
-            this.sourceFormat = sourceFormat;
+            $.sourceFormat = sourceFormat;
             return this;
         }
-        public Builder sourceFormat(@Nullable String sourceFormat) {
-            this.sourceFormat = Codegen.ofNullable(sourceFormat);
-            return this;
-        }        public FeatureMembershipConfigmanagementConfigSyncGetArgs build() {
-            return new FeatureMembershipConfigmanagementConfigSyncGetArgs(git, sourceFormat);
+
+        public Builder sourceFormat(String sourceFormat) {
+            return sourceFormat(Output.of(sourceFormat));
+        }
+
+        public FeatureMembershipConfigmanagementConfigSyncGetArgs build() {
+            return $;
         }
     }
+
 }

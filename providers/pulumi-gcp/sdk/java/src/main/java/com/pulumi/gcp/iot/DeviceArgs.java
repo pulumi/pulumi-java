@@ -5,7 +5,6 @@ package com.pulumi.gcp.iot;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.iot.inputs.DeviceCredentialArgs;
 import com.pulumi.gcp.iot.inputs.DeviceGatewayConfigArgs;
 import java.lang.Boolean;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blocked")
-      private final @Nullable Output<Boolean> blocked;
+    private @Nullable Output<Boolean> blocked;
 
-    public Output<Boolean> blocked() {
-        return this.blocked == null ? Codegen.empty() : this.blocked;
+    public Optional<Output<Boolean>> blocked() {
+        return Optional.ofNullable(this.blocked);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<List<DeviceCredentialArgs>> credentials;
+    private @Nullable Output<List<DeviceCredentialArgs>> credentials;
 
-    public Output<List<DeviceCredentialArgs>> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<List<DeviceCredentialArgs>>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayConfig")
-      private final @Nullable Output<DeviceGatewayConfigArgs> gatewayConfig;
+    private @Nullable Output<DeviceGatewayConfigArgs> gatewayConfig;
 
-    public Output<DeviceGatewayConfigArgs> gatewayConfig() {
-        return this.gatewayConfig == null ? Codegen.empty() : this.gatewayConfig;
+    public Optional<Output<DeviceGatewayConfigArgs>> gatewayConfig() {
+        return Optional.ofNullable(this.gatewayConfig);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logLevel")
-      private final @Nullable Output<String> logLevel;
+    private @Nullable Output<String> logLevel;
 
-    public Output<String> logLevel() {
-        return this.logLevel == null ? Codegen.empty() : this.logLevel;
+    public Optional<Output<String>> logLevel() {
+        return Optional.ofNullable(this.logLevel);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -94,131 +94,113 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registry", required=true)
-      private final Output<String> registry;
+    private Output<String> registry;
 
     public Output<String> registry() {
         return this.registry;
     }
 
-    public DeviceArgs(
-        @Nullable Output<Boolean> blocked,
-        @Nullable Output<List<DeviceCredentialArgs>> credentials,
-        @Nullable Output<DeviceGatewayConfigArgs> gatewayConfig,
-        @Nullable Output<String> logLevel,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> name,
-        Output<String> registry) {
-        this.blocked = blocked;
-        this.credentials = credentials;
-        this.gatewayConfig = gatewayConfig;
-        this.logLevel = logLevel;
-        this.metadata = metadata;
-        this.name = name;
-        this.registry = Objects.requireNonNull(registry, "expected parameter 'registry' to be non-null");
-    }
+    private DeviceArgs() {}
 
-    private DeviceArgs() {
-        this.blocked = Codegen.empty();
-        this.credentials = Codegen.empty();
-        this.gatewayConfig = Codegen.empty();
-        this.logLevel = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.name = Codegen.empty();
-        this.registry = Codegen.empty();
+    private DeviceArgs(DeviceArgs $) {
+        this.blocked = $.blocked;
+        this.credentials = $.credentials;
+        this.gatewayConfig = $.gatewayConfig;
+        this.logLevel = $.logLevel;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.registry = $.registry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> blocked;
-        private @Nullable Output<List<DeviceCredentialArgs>> credentials;
-        private @Nullable Output<DeviceGatewayConfigArgs> gatewayConfig;
-        private @Nullable Output<String> logLevel;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> name;
-        private Output<String> registry;
+        private DeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceArgs();
         }
 
         public Builder(DeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blocked = defaults.blocked;
-    	      this.credentials = defaults.credentials;
-    	      this.gatewayConfig = defaults.gatewayConfig;
-    	      this.logLevel = defaults.logLevel;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.registry = defaults.registry;
+            $ = new DeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blocked(@Nullable Output<Boolean> blocked) {
-            this.blocked = blocked;
+            $.blocked = blocked;
             return this;
         }
-        public Builder blocked(@Nullable Boolean blocked) {
-            this.blocked = Codegen.ofNullable(blocked);
-            return this;
+
+        public Builder blocked(Boolean blocked) {
+            return blocked(Output.of(blocked));
         }
+
         public Builder credentials(@Nullable Output<List<DeviceCredentialArgs>> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable List<DeviceCredentialArgs> credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(List<DeviceCredentialArgs> credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder credentials(DeviceCredentialArgs... credentials) {
             return credentials(List.of(credentials));
         }
+
         public Builder gatewayConfig(@Nullable Output<DeviceGatewayConfigArgs> gatewayConfig) {
-            this.gatewayConfig = gatewayConfig;
+            $.gatewayConfig = gatewayConfig;
             return this;
         }
-        public Builder gatewayConfig(@Nullable DeviceGatewayConfigArgs gatewayConfig) {
-            this.gatewayConfig = Codegen.ofNullable(gatewayConfig);
-            return this;
+
+        public Builder gatewayConfig(DeviceGatewayConfigArgs gatewayConfig) {
+            return gatewayConfig(Output.of(gatewayConfig));
         }
+
         public Builder logLevel(@Nullable Output<String> logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
         }
-        public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = Codegen.ofNullable(logLevel);
-            return this;
+
+        public Builder logLevel(String logLevel) {
+            return logLevel(Output.of(logLevel));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder registry(Output<String> registry) {
-            this.registry = Objects.requireNonNull(registry);
+            $.registry = registry;
             return this;
         }
+
         public Builder registry(String registry) {
-            this.registry = Output.of(Objects.requireNonNull(registry));
-            return this;
-        }        public DeviceArgs build() {
-            return new DeviceArgs(blocked, credentials, gatewayConfig, logLevel, metadata, name, registry);
+            return registry(Output.of(registry));
+        }
+
+        public DeviceArgs build() {
+            $.registry = Objects.requireNonNull($.registry, "expected parameter 'registry' to be non-null");
+            return $;
         }
     }
+
 }

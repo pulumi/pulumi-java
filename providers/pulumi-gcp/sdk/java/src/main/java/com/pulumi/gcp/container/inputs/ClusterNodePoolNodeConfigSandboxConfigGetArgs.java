@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ClusterNodePoolNodeConfigSandboxConfigGetArgs extends com.pul
      * 
      */
     @Import(name="sandboxType", required=true)
-      private final Output<String> sandboxType;
+    private Output<String> sandboxType;
 
     public Output<String> sandboxType() {
         return this.sandboxType;
     }
 
-    public ClusterNodePoolNodeConfigSandboxConfigGetArgs(Output<String> sandboxType) {
-        this.sandboxType = Objects.requireNonNull(sandboxType, "expected parameter 'sandboxType' to be non-null");
-    }
+    private ClusterNodePoolNodeConfigSandboxConfigGetArgs() {}
 
-    private ClusterNodePoolNodeConfigSandboxConfigGetArgs() {
-        this.sandboxType = Codegen.empty();
+    private ClusterNodePoolNodeConfigSandboxConfigGetArgs(ClusterNodePoolNodeConfigSandboxConfigGetArgs $) {
+        this.sandboxType = $.sandboxType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterNodePoolNodeConfigSandboxConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sandboxType;
+        private ClusterNodePoolNodeConfigSandboxConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterNodePoolNodeConfigSandboxConfigGetArgs();
         }
 
         public Builder(ClusterNodePoolNodeConfigSandboxConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sandboxType = defaults.sandboxType;
+            $ = new ClusterNodePoolNodeConfigSandboxConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sandboxType(Output<String> sandboxType) {
-            this.sandboxType = Objects.requireNonNull(sandboxType);
+            $.sandboxType = sandboxType;
             return this;
         }
+
         public Builder sandboxType(String sandboxType) {
-            this.sandboxType = Output.of(Objects.requireNonNull(sandboxType));
-            return this;
-        }        public ClusterNodePoolNodeConfigSandboxConfigGetArgs build() {
-            return new ClusterNodePoolNodeConfigSandboxConfigGetArgs(sandboxType);
+            return sandboxType(Output.of(sandboxType));
+        }
+
+        public ClusterNodePoolNodeConfigSandboxConfigGetArgs build() {
+            $.sandboxType = Objects.requireNonNull($.sandboxType, "expected parameter 'sandboxType' to be non-null");
+            return $;
         }
     }
+
 }

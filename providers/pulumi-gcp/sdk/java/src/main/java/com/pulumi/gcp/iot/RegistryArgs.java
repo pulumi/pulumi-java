@@ -5,7 +5,6 @@ package com.pulumi.gcp.iot;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.iot.inputs.RegistryCredentialArgs;
 import com.pulumi.gcp.iot.inputs.RegistryEventNotificationConfigItemArgs;
 import java.lang.Object;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<List<RegistryCredentialArgs>> credentials;
+    private @Nullable Output<List<RegistryCredentialArgs>> credentials;
 
-    public Output<List<RegistryCredentialArgs>> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<List<RegistryCredentialArgs>>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventNotificationConfigs")
-      private final @Nullable Output<List<RegistryEventNotificationConfigItemArgs>> eventNotificationConfigs;
+    private @Nullable Output<List<RegistryEventNotificationConfigItemArgs>> eventNotificationConfigs;
 
-    public Output<List<RegistryEventNotificationConfigItemArgs>> eventNotificationConfigs() {
-        return this.eventNotificationConfigs == null ? Codegen.empty() : this.eventNotificationConfigs;
+    public Optional<Output<List<RegistryEventNotificationConfigItemArgs>>> eventNotificationConfigs() {
+        return Optional.ofNullable(this.eventNotificationConfigs);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="httpConfig")
-      private final @Nullable Output<Map<String,Object>> httpConfig;
+    private @Nullable Output<Map<String,Object>> httpConfig;
 
-    public Output<Map<String,Object>> httpConfig() {
-        return this.httpConfig == null ? Codegen.empty() : this.httpConfig;
+    public Optional<Output<Map<String,Object>>> httpConfig() {
+        return Optional.ofNullable(this.httpConfig);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logLevel")
-      private final @Nullable Output<String> logLevel;
+    private @Nullable Output<String> logLevel;
 
-    public Output<String> logLevel() {
-        return this.logLevel == null ? Codegen.empty() : this.logLevel;
+    public Optional<Output<String>> logLevel() {
+        return Optional.ofNullable(this.logLevel);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mqttConfig")
-      private final @Nullable Output<Map<String,Object>> mqttConfig;
+    private @Nullable Output<Map<String,Object>> mqttConfig;
 
-    public Output<Map<String,Object>> mqttConfig() {
-        return this.mqttConfig == null ? Codegen.empty() : this.mqttConfig;
+    public Optional<Output<Map<String,Object>>> mqttConfig() {
+        return Optional.ofNullable(this.mqttConfig);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -127,160 +127,136 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stateNotificationConfig")
-      private final @Nullable Output<Map<String,Object>> stateNotificationConfig;
+    private @Nullable Output<Map<String,Object>> stateNotificationConfig;
 
-    public Output<Map<String,Object>> stateNotificationConfig() {
-        return this.stateNotificationConfig == null ? Codegen.empty() : this.stateNotificationConfig;
+    public Optional<Output<Map<String,Object>>> stateNotificationConfig() {
+        return Optional.ofNullable(this.stateNotificationConfig);
     }
 
-    public RegistryArgs(
-        @Nullable Output<List<RegistryCredentialArgs>> credentials,
-        @Nullable Output<List<RegistryEventNotificationConfigItemArgs>> eventNotificationConfigs,
-        @Nullable Output<Map<String,Object>> httpConfig,
-        @Nullable Output<String> logLevel,
-        @Nullable Output<Map<String,Object>> mqttConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<Map<String,Object>> stateNotificationConfig) {
-        this.credentials = credentials;
-        this.eventNotificationConfigs = eventNotificationConfigs;
-        this.httpConfig = httpConfig;
-        this.logLevel = logLevel;
-        this.mqttConfig = mqttConfig;
-        this.name = name;
-        this.project = project;
-        this.region = region;
-        this.stateNotificationConfig = stateNotificationConfig;
-    }
+    private RegistryArgs() {}
 
-    private RegistryArgs() {
-        this.credentials = Codegen.empty();
-        this.eventNotificationConfigs = Codegen.empty();
-        this.httpConfig = Codegen.empty();
-        this.logLevel = Codegen.empty();
-        this.mqttConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.stateNotificationConfig = Codegen.empty();
+    private RegistryArgs(RegistryArgs $) {
+        this.credentials = $.credentials;
+        this.eventNotificationConfigs = $.eventNotificationConfigs;
+        this.httpConfig = $.httpConfig;
+        this.logLevel = $.logLevel;
+        this.mqttConfig = $.mqttConfig;
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
+        this.stateNotificationConfig = $.stateNotificationConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RegistryCredentialArgs>> credentials;
-        private @Nullable Output<List<RegistryEventNotificationConfigItemArgs>> eventNotificationConfigs;
-        private @Nullable Output<Map<String,Object>> httpConfig;
-        private @Nullable Output<String> logLevel;
-        private @Nullable Output<Map<String,Object>> mqttConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<Map<String,Object>> stateNotificationConfig;
+        private RegistryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryArgs();
         }
 
         public Builder(RegistryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.eventNotificationConfigs = defaults.eventNotificationConfigs;
-    	      this.httpConfig = defaults.httpConfig;
-    	      this.logLevel = defaults.logLevel;
-    	      this.mqttConfig = defaults.mqttConfig;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.stateNotificationConfig = defaults.stateNotificationConfig;
+            $ = new RegistryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(@Nullable Output<List<RegistryCredentialArgs>> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable List<RegistryCredentialArgs> credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(List<RegistryCredentialArgs> credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder credentials(RegistryCredentialArgs... credentials) {
             return credentials(List.of(credentials));
         }
+
         public Builder eventNotificationConfigs(@Nullable Output<List<RegistryEventNotificationConfigItemArgs>> eventNotificationConfigs) {
-            this.eventNotificationConfigs = eventNotificationConfigs;
+            $.eventNotificationConfigs = eventNotificationConfigs;
             return this;
         }
-        public Builder eventNotificationConfigs(@Nullable List<RegistryEventNotificationConfigItemArgs> eventNotificationConfigs) {
-            this.eventNotificationConfigs = Codegen.ofNullable(eventNotificationConfigs);
-            return this;
+
+        public Builder eventNotificationConfigs(List<RegistryEventNotificationConfigItemArgs> eventNotificationConfigs) {
+            return eventNotificationConfigs(Output.of(eventNotificationConfigs));
         }
+
         public Builder eventNotificationConfigs(RegistryEventNotificationConfigItemArgs... eventNotificationConfigs) {
             return eventNotificationConfigs(List.of(eventNotificationConfigs));
         }
+
         public Builder httpConfig(@Nullable Output<Map<String,Object>> httpConfig) {
-            this.httpConfig = httpConfig;
+            $.httpConfig = httpConfig;
             return this;
         }
-        public Builder httpConfig(@Nullable Map<String,Object> httpConfig) {
-            this.httpConfig = Codegen.ofNullable(httpConfig);
-            return this;
+
+        public Builder httpConfig(Map<String,Object> httpConfig) {
+            return httpConfig(Output.of(httpConfig));
         }
+
         public Builder logLevel(@Nullable Output<String> logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
         }
-        public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = Codegen.ofNullable(logLevel);
-            return this;
+
+        public Builder logLevel(String logLevel) {
+            return logLevel(Output.of(logLevel));
         }
+
         public Builder mqttConfig(@Nullable Output<Map<String,Object>> mqttConfig) {
-            this.mqttConfig = mqttConfig;
+            $.mqttConfig = mqttConfig;
             return this;
         }
-        public Builder mqttConfig(@Nullable Map<String,Object> mqttConfig) {
-            this.mqttConfig = Codegen.ofNullable(mqttConfig);
-            return this;
+
+        public Builder mqttConfig(Map<String,Object> mqttConfig) {
+            return mqttConfig(Output.of(mqttConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder stateNotificationConfig(@Nullable Output<Map<String,Object>> stateNotificationConfig) {
-            this.stateNotificationConfig = stateNotificationConfig;
+            $.stateNotificationConfig = stateNotificationConfig;
             return this;
         }
-        public Builder stateNotificationConfig(@Nullable Map<String,Object> stateNotificationConfig) {
-            this.stateNotificationConfig = Codegen.ofNullable(stateNotificationConfig);
-            return this;
-        }        public RegistryArgs build() {
-            return new RegistryArgs(credentials, eventNotificationConfigs, httpConfig, logLevel, mqttConfig, name, project, region, stateNotificationConfig);
+
+        public Builder stateNotificationConfig(Map<String,Object> stateNotificationConfig) {
+            return stateNotificationConfig(Output.of(stateNotificationConfig));
+        }
+
+        public RegistryArgs build() {
+            return $;
         }
     }
+
 }

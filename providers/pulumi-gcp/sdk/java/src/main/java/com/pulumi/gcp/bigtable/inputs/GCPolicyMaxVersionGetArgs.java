@@ -5,7 +5,6 @@ package com.pulumi.gcp.bigtable.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class GCPolicyMaxVersionGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="number", required=true)
-      private final Output<Integer> number;
+    private Output<Integer> number;
 
     public Output<Integer> number() {
         return this.number;
     }
 
-    public GCPolicyMaxVersionGetArgs(Output<Integer> number) {
-        this.number = Objects.requireNonNull(number, "expected parameter 'number' to be non-null");
-    }
+    private GCPolicyMaxVersionGetArgs() {}
 
-    private GCPolicyMaxVersionGetArgs() {
-        this.number = Codegen.empty();
+    private GCPolicyMaxVersionGetArgs(GCPolicyMaxVersionGetArgs $) {
+        this.number = $.number;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GCPolicyMaxVersionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> number;
+        private GCPolicyMaxVersionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GCPolicyMaxVersionGetArgs();
         }
 
         public Builder(GCPolicyMaxVersionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.number = defaults.number;
+            $ = new GCPolicyMaxVersionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder number(Output<Integer> number) {
-            this.number = Objects.requireNonNull(number);
+            $.number = number;
             return this;
         }
+
         public Builder number(Integer number) {
-            this.number = Output.of(Objects.requireNonNull(number));
-            return this;
-        }        public GCPolicyMaxVersionGetArgs build() {
-            return new GCPolicyMaxVersionGetArgs(number);
+            return number(Output.of(number));
+        }
+
+        public GCPolicyMaxVersionGetArgs build() {
+            $.number = Objects.requireNonNull($.number, "expected parameter 'number' to be non-null");
+            return $;
         }
     }
+
 }

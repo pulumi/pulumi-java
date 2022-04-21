@@ -14,14 +14,14 @@ public final class GetDatabaseInstanceRestoreBackupContext extends com.pulumi.re
     public static final GetDatabaseInstanceRestoreBackupContext Empty = new GetDatabaseInstanceRestoreBackupContext();
 
     @Import(name="backupRunId", required=true)
-      private final Integer backupRunId;
+    private Integer backupRunId;
 
     public Integer backupRunId() {
         return this.backupRunId;
     }
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -32,64 +32,59 @@ public final class GetDatabaseInstanceRestoreBackupContext extends com.pulumi.re
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
-    public GetDatabaseInstanceRestoreBackupContext(
-        Integer backupRunId,
-        String instanceId,
-        String project) {
-        this.backupRunId = Objects.requireNonNull(backupRunId, "expected parameter 'backupRunId' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private GetDatabaseInstanceRestoreBackupContext() {}
 
-    private GetDatabaseInstanceRestoreBackupContext() {
-        this.backupRunId = null;
-        this.instanceId = null;
-        this.project = null;
+    private GetDatabaseInstanceRestoreBackupContext(GetDatabaseInstanceRestoreBackupContext $) {
+        this.backupRunId = $.backupRunId;
+        this.instanceId = $.instanceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseInstanceRestoreBackupContext defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer backupRunId;
-        private String instanceId;
-        private String project;
+        private GetDatabaseInstanceRestoreBackupContext $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseInstanceRestoreBackupContext();
         }
 
         public Builder(GetDatabaseInstanceRestoreBackupContext defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupRunId = defaults.backupRunId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
+            $ = new GetDatabaseInstanceRestoreBackupContext(Objects.requireNonNull(defaults));
         }
 
         public Builder backupRunId(Integer backupRunId) {
-            this.backupRunId = Objects.requireNonNull(backupRunId);
+            $.backupRunId = backupRunId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
-        }        public GetDatabaseInstanceRestoreBackupContext build() {
-            return new GetDatabaseInstanceRestoreBackupContext(backupRunId, instanceId, project);
+        }
+
+        public GetDatabaseInstanceRestoreBackupContext build() {
+            $.backupRunId = Objects.requireNonNull($.backupRunId, "expected parameter 'backupRunId' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

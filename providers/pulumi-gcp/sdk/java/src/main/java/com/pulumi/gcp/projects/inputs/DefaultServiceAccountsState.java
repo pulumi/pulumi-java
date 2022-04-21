@@ -5,11 +5,11 @@ package com.pulumi.gcp.projects.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class DefaultServiceAccountsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DefaultServiceAccountsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class DefaultServiceAccountsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="restorePolicy")
-      private final @Nullable Output<String> restorePolicy;
+    private @Nullable Output<String> restorePolicy;
 
-    public Output<String> restorePolicy() {
-        return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
+    public Optional<Output<String>> restorePolicy() {
+        return Optional.ofNullable(this.restorePolicy);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class DefaultServiceAccountsState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="serviceAccounts")
-      private final @Nullable Output<Map<String,Object>> serviceAccounts;
+    private @Nullable Output<Map<String,Object>> serviceAccounts;
 
-    public Output<Map<String,Object>> serviceAccounts() {
-        return this.serviceAccounts == null ? Codegen.empty() : this.serviceAccounts;
+    public Optional<Output<Map<String,Object>>> serviceAccounts() {
+        return Optional.ofNullable(this.serviceAccounts);
     }
 
-    public DefaultServiceAccountsState(
-        @Nullable Output<String> action,
-        @Nullable Output<String> project,
-        @Nullable Output<String> restorePolicy,
-        @Nullable Output<Map<String,Object>> serviceAccounts) {
-        this.action = action;
-        this.project = project;
-        this.restorePolicy = restorePolicy;
-        this.serviceAccounts = serviceAccounts;
-    }
+    private DefaultServiceAccountsState() {}
 
-    private DefaultServiceAccountsState() {
-        this.action = Codegen.empty();
-        this.project = Codegen.empty();
-        this.restorePolicy = Codegen.empty();
-        this.serviceAccounts = Codegen.empty();
+    private DefaultServiceAccountsState(DefaultServiceAccountsState $) {
+        this.action = $.action;
+        this.project = $.project;
+        this.restorePolicy = $.restorePolicy;
+        this.serviceAccounts = $.serviceAccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultServiceAccountsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> restorePolicy;
-        private @Nullable Output<Map<String,Object>> serviceAccounts;
+        private DefaultServiceAccountsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultServiceAccountsState();
         }
 
         public Builder(DefaultServiceAccountsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.project = defaults.project;
-    	      this.restorePolicy = defaults.restorePolicy;
-    	      this.serviceAccounts = defaults.serviceAccounts;
+            $ = new DefaultServiceAccountsState(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder restorePolicy(@Nullable Output<String> restorePolicy) {
-            this.restorePolicy = restorePolicy;
+            $.restorePolicy = restorePolicy;
             return this;
         }
-        public Builder restorePolicy(@Nullable String restorePolicy) {
-            this.restorePolicy = Codegen.ofNullable(restorePolicy);
-            return this;
+
+        public Builder restorePolicy(String restorePolicy) {
+            return restorePolicy(Output.of(restorePolicy));
         }
+
         public Builder serviceAccounts(@Nullable Output<Map<String,Object>> serviceAccounts) {
-            this.serviceAccounts = serviceAccounts;
+            $.serviceAccounts = serviceAccounts;
             return this;
         }
-        public Builder serviceAccounts(@Nullable Map<String,Object> serviceAccounts) {
-            this.serviceAccounts = Codegen.ofNullable(serviceAccounts);
-            return this;
-        }        public DefaultServiceAccountsState build() {
-            return new DefaultServiceAccountsState(action, project, restorePolicy, serviceAccounts);
+
+        public Builder serviceAccounts(Map<String,Object> serviceAccounts) {
+            return serviceAccounts(Output.of(serviceAccounts));
+        }
+
+        public DefaultServiceAccountsState build() {
+            return $;
         }
     }
+
 }

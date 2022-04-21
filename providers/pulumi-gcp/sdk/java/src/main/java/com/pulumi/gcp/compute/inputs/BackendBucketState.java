@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.BackendBucketCdnPolicyGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class BackendBucketState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="bucketName")
-      private final @Nullable Output<String> bucketName;
+    private @Nullable Output<String> bucketName;
 
-    public Output<String> bucketName() {
-        return this.bucketName == null ? Codegen.empty() : this.bucketName;
+    public Optional<Output<String>> bucketName() {
+        return Optional.ofNullable(this.bucketName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BackendBucketState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="cdnPolicy")
-      private final @Nullable Output<BackendBucketCdnPolicyGetArgs> cdnPolicy;
+    private @Nullable Output<BackendBucketCdnPolicyGetArgs> cdnPolicy;
 
-    public Output<BackendBucketCdnPolicyGetArgs> cdnPolicy() {
-        return this.cdnPolicy == null ? Codegen.empty() : this.cdnPolicy;
+    public Optional<Output<BackendBucketCdnPolicyGetArgs>> cdnPolicy() {
+        return Optional.ofNullable(this.cdnPolicy);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class BackendBucketState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class BackendBucketState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="customResponseHeaders")
-      private final @Nullable Output<List<String>> customResponseHeaders;
+    private @Nullable Output<List<String>> customResponseHeaders;
 
-    public Output<List<String>> customResponseHeaders() {
-        return this.customResponseHeaders == null ? Codegen.empty() : this.customResponseHeaders;
+    public Optional<Output<List<String>>> customResponseHeaders() {
+        return Optional.ofNullable(this.customResponseHeaders);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class BackendBucketState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class BackendBucketState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enableCdn")
-      private final @Nullable Output<Boolean> enableCdn;
+    private @Nullable Output<Boolean> enableCdn;
 
-    public Output<Boolean> enableCdn() {
-        return this.enableCdn == null ? Codegen.empty() : this.enableCdn;
+    public Optional<Output<Boolean>> enableCdn() {
+        return Optional.ofNullable(this.enableCdn);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class BackendBucketState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class BackendBucketState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -120,157 +120,132 @@ public final class BackendBucketState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
-    public BackendBucketState(
-        @Nullable Output<String> bucketName,
-        @Nullable Output<BackendBucketCdnPolicyGetArgs> cdnPolicy,
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<List<String>> customResponseHeaders,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enableCdn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink) {
-        this.bucketName = bucketName;
-        this.cdnPolicy = cdnPolicy;
-        this.creationTimestamp = creationTimestamp;
-        this.customResponseHeaders = customResponseHeaders;
-        this.description = description;
-        this.enableCdn = enableCdn;
-        this.name = name;
-        this.project = project;
-        this.selfLink = selfLink;
-    }
+    private BackendBucketState() {}
 
-    private BackendBucketState() {
-        this.bucketName = Codegen.empty();
-        this.cdnPolicy = Codegen.empty();
-        this.creationTimestamp = Codegen.empty();
-        this.customResponseHeaders = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enableCdn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
+    private BackendBucketState(BackendBucketState $) {
+        this.bucketName = $.bucketName;
+        this.cdnPolicy = $.cdnPolicy;
+        this.creationTimestamp = $.creationTimestamp;
+        this.customResponseHeaders = $.customResponseHeaders;
+        this.description = $.description;
+        this.enableCdn = $.enableCdn;
+        this.name = $.name;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendBucketState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucketName;
-        private @Nullable Output<BackendBucketCdnPolicyGetArgs> cdnPolicy;
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<List<String>> customResponseHeaders;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enableCdn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
+        private BackendBucketState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendBucketState();
         }
 
         public Builder(BackendBucketState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.cdnPolicy = defaults.cdnPolicy;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.customResponseHeaders = defaults.customResponseHeaders;
-    	      this.description = defaults.description;
-    	      this.enableCdn = defaults.enableCdn;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
+            $ = new BackendBucketState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(@Nullable Output<String> bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
-        public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Codegen.ofNullable(bucketName);
-            return this;
+
+        public Builder bucketName(String bucketName) {
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder cdnPolicy(@Nullable Output<BackendBucketCdnPolicyGetArgs> cdnPolicy) {
-            this.cdnPolicy = cdnPolicy;
+            $.cdnPolicy = cdnPolicy;
             return this;
         }
-        public Builder cdnPolicy(@Nullable BackendBucketCdnPolicyGetArgs cdnPolicy) {
-            this.cdnPolicy = Codegen.ofNullable(cdnPolicy);
-            return this;
+
+        public Builder cdnPolicy(BackendBucketCdnPolicyGetArgs cdnPolicy) {
+            return cdnPolicy(Output.of(cdnPolicy));
         }
+
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder customResponseHeaders(@Nullable Output<List<String>> customResponseHeaders) {
-            this.customResponseHeaders = customResponseHeaders;
+            $.customResponseHeaders = customResponseHeaders;
             return this;
         }
-        public Builder customResponseHeaders(@Nullable List<String> customResponseHeaders) {
-            this.customResponseHeaders = Codegen.ofNullable(customResponseHeaders);
-            return this;
+
+        public Builder customResponseHeaders(List<String> customResponseHeaders) {
+            return customResponseHeaders(Output.of(customResponseHeaders));
         }
+
         public Builder customResponseHeaders(String... customResponseHeaders) {
             return customResponseHeaders(List.of(customResponseHeaders));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enableCdn(@Nullable Output<Boolean> enableCdn) {
-            this.enableCdn = enableCdn;
+            $.enableCdn = enableCdn;
             return this;
         }
-        public Builder enableCdn(@Nullable Boolean enableCdn) {
-            this.enableCdn = Codegen.ofNullable(enableCdn);
-            return this;
+
+        public Builder enableCdn(Boolean enableCdn) {
+            return enableCdn(Output.of(enableCdn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
-        }        public BackendBucketState build() {
-            return new BackendBucketState(bucketName, cdnPolicy, creationTimestamp, customResponseHeaders, description, enableCdn, name, project, selfLink);
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
+        }
+
+        public BackendBucketState build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.composer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class EnvironmentConfigWebServerNetworkAccessControlGetArgs extends
     public static final EnvironmentConfigWebServerNetworkAccessControlGetArgs Empty = new EnvironmentConfigWebServerNetworkAccessControlGetArgs();
 
     @Import(name="allowedIpRanges")
-      private final @Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges;
+    private @Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges;
 
-    public Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges() {
-        return this.allowedIpRanges == null ? Codegen.empty() : this.allowedIpRanges;
+    public Optional<Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>>> allowedIpRanges() {
+        return Optional.ofNullable(this.allowedIpRanges);
     }
 
-    public EnvironmentConfigWebServerNetworkAccessControlGetArgs(@Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges) {
-        this.allowedIpRanges = allowedIpRanges;
-    }
+    private EnvironmentConfigWebServerNetworkAccessControlGetArgs() {}
 
-    private EnvironmentConfigWebServerNetworkAccessControlGetArgs() {
-        this.allowedIpRanges = Codegen.empty();
+    private EnvironmentConfigWebServerNetworkAccessControlGetArgs(EnvironmentConfigWebServerNetworkAccessControlGetArgs $) {
+        this.allowedIpRanges = $.allowedIpRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentConfigWebServerNetworkAccessControlGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges;
+        private EnvironmentConfigWebServerNetworkAccessControlGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentConfigWebServerNetworkAccessControlGetArgs();
         }
 
         public Builder(EnvironmentConfigWebServerNetworkAccessControlGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedIpRanges = defaults.allowedIpRanges;
+            $ = new EnvironmentConfigWebServerNetworkAccessControlGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedIpRanges(@Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs>> allowedIpRanges) {
-            this.allowedIpRanges = allowedIpRanges;
+            $.allowedIpRanges = allowedIpRanges;
             return this;
         }
-        public Builder allowedIpRanges(@Nullable List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs> allowedIpRanges) {
-            this.allowedIpRanges = Codegen.ofNullable(allowedIpRanges);
-            return this;
+
+        public Builder allowedIpRanges(List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs> allowedIpRanges) {
+            return allowedIpRanges(Output.of(allowedIpRanges));
         }
+
         public Builder allowedIpRanges(EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeGetArgs... allowedIpRanges) {
             return allowedIpRanges(List.of(allowedIpRanges));
-        }        public EnvironmentConfigWebServerNetworkAccessControlGetArgs build() {
-            return new EnvironmentConfigWebServerNetworkAccessControlGetArgs(allowedIpRanges);
+        }
+
+        public EnvironmentConfigWebServerNetworkAccessControlGetArgs build() {
+            return $;
         }
     }
+
 }

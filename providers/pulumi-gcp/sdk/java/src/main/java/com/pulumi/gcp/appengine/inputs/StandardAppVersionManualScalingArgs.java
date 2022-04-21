@@ -5,7 +5,6 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,49 +20,49 @@ public final class StandardAppVersionManualScalingArgs extends com.pulumi.resour
      * 
      */
     @Import(name="instances", required=true)
-      private final Output<Integer> instances;
+    private Output<Integer> instances;
 
     public Output<Integer> instances() {
         return this.instances;
     }
 
-    public StandardAppVersionManualScalingArgs(Output<Integer> instances) {
-        this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
-    }
+    private StandardAppVersionManualScalingArgs() {}
 
-    private StandardAppVersionManualScalingArgs() {
-        this.instances = Codegen.empty();
+    private StandardAppVersionManualScalingArgs(StandardAppVersionManualScalingArgs $) {
+        this.instances = $.instances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardAppVersionManualScalingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> instances;
+        private StandardAppVersionManualScalingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardAppVersionManualScalingArgs();
         }
 
         public Builder(StandardAppVersionManualScalingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instances = defaults.instances;
+            $ = new StandardAppVersionManualScalingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instances(Output<Integer> instances) {
-            this.instances = Objects.requireNonNull(instances);
+            $.instances = instances;
             return this;
         }
+
         public Builder instances(Integer instances) {
-            this.instances = Output.of(Objects.requireNonNull(instances));
-            return this;
-        }        public StandardAppVersionManualScalingArgs build() {
-            return new StandardAppVersionManualScalingArgs(instances);
+            return instances(Output.of(instances));
+        }
+
+        public StandardAppVersionManualScalingArgs build() {
+            $.instances = Objects.requireNonNull($.instances, "expected parameter 'instances' to be non-null");
+            return $;
         }
     }
+
 }

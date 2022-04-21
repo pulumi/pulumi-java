@@ -22,10 +22,10 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filter")
-      private final @Nullable String filter;
+    private @Nullable String filter;
 
     public Optional<String> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="mostRecent")
-      private final @Nullable Boolean mostRecent;
+    private @Nullable Boolean mostRecent;
 
     public Optional<Boolean> mostRecent() {
-        return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
+        return Optional.ofNullable(this.mostRecent);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,73 +56,63 @@ public final class GetInstanceTemplateArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
-    public GetInstanceTemplateArgs(
-        @Nullable String filter,
-        @Nullable Boolean mostRecent,
-        @Nullable String name,
-        String project) {
-        this.filter = filter;
-        this.mostRecent = mostRecent;
-        this.name = name;
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private GetInstanceTemplateArgs() {}
 
-    private GetInstanceTemplateArgs() {
-        this.filter = null;
-        this.mostRecent = null;
-        this.name = null;
-        this.project = null;
+    private GetInstanceTemplateArgs(GetInstanceTemplateArgs $) {
+        this.filter = $.filter;
+        this.mostRecent = $.mostRecent;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String filter;
-        private @Nullable Boolean mostRecent;
-        private @Nullable String name;
-        private String project;
+        private GetInstanceTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTemplateArgs();
         }
 
         public Builder(GetInstanceTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.mostRecent = defaults.mostRecent;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new GetInstanceTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder mostRecent(@Nullable Boolean mostRecent) {
-            this.mostRecent = mostRecent;
+            $.mostRecent = mostRecent;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
-        }        public GetInstanceTemplateArgs build() {
-            return new GetInstanceTemplateArgs(filter, mostRecent, name, project);
+        }
+
+        public GetInstanceTemplateArgs build() {
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

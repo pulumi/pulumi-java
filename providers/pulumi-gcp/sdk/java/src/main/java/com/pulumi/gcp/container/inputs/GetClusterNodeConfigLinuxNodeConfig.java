@@ -14,45 +14,45 @@ public final class GetClusterNodeConfigLinuxNodeConfig extends com.pulumi.resour
     public static final GetClusterNodeConfigLinuxNodeConfig Empty = new GetClusterNodeConfigLinuxNodeConfig();
 
     @Import(name="sysctls", required=true)
-      private final Map<String,String> sysctls;
+    private Map<String,String> sysctls;
 
     public Map<String,String> sysctls() {
         return this.sysctls;
     }
 
-    public GetClusterNodeConfigLinuxNodeConfig(Map<String,String> sysctls) {
-        this.sysctls = Objects.requireNonNull(sysctls, "expected parameter 'sysctls' to be non-null");
-    }
+    private GetClusterNodeConfigLinuxNodeConfig() {}
 
-    private GetClusterNodeConfigLinuxNodeConfig() {
-        this.sysctls = Map.of();
+    private GetClusterNodeConfigLinuxNodeConfig(GetClusterNodeConfigLinuxNodeConfig $) {
+        this.sysctls = $.sysctls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodeConfigLinuxNodeConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> sysctls;
+        private GetClusterNodeConfigLinuxNodeConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodeConfigLinuxNodeConfig();
         }
 
         public Builder(GetClusterNodeConfigLinuxNodeConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sysctls = defaults.sysctls;
+            $ = new GetClusterNodeConfigLinuxNodeConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder sysctls(Map<String,String> sysctls) {
-            this.sysctls = Objects.requireNonNull(sysctls);
+            $.sysctls = sysctls;
             return this;
-        }        public GetClusterNodeConfigLinuxNodeConfig build() {
-            return new GetClusterNodeConfigLinuxNodeConfig(sysctls);
+        }
+
+        public GetClusterNodeConfigLinuxNodeConfig build() {
+            $.sysctls = Objects.requireNonNull($.sysctls, "expected parameter 'sysctls' to be non-null");
+            return $;
         }
     }
+
 }

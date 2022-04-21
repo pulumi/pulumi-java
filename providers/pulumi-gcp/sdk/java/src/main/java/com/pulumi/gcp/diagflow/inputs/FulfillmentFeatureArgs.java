@@ -5,7 +5,6 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,49 +20,49 @@ public final class FulfillmentFeatureArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public FulfillmentFeatureArgs(Output<String> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private FulfillmentFeatureArgs() {}
 
-    private FulfillmentFeatureArgs() {
-        this.type = Codegen.empty();
+    private FulfillmentFeatureArgs(FulfillmentFeatureArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FulfillmentFeatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
+        private FulfillmentFeatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FulfillmentFeatureArgs();
         }
 
         public Builder(FulfillmentFeatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new FulfillmentFeatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public FulfillmentFeatureArgs build() {
-            return new FulfillmentFeatureArgs(type);
+            return type(Output.of(type));
+        }
+
+        public FulfillmentFeatureArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

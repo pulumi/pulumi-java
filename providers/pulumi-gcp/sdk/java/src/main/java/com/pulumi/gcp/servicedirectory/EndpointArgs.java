@@ -5,11 +5,11 @@ package com.pulumi.gcp.servicedirectory;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointId", required=true)
-      private final Output<String> endpointId;
+    private Output<String> endpointId;
 
     public Output<String> endpointId() {
         return this.endpointId;
@@ -48,10 +48,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -82,115 +82,100 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
     }
 
-    public EndpointArgs(
-        @Nullable Output<String> address,
-        Output<String> endpointId,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> network,
-        @Nullable Output<Integer> port,
-        Output<String> service) {
-        this.address = address;
-        this.endpointId = Objects.requireNonNull(endpointId, "expected parameter 'endpointId' to be non-null");
-        this.metadata = metadata;
-        this.network = network;
-        this.port = port;
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private EndpointArgs() {}
 
-    private EndpointArgs() {
-        this.address = Codegen.empty();
-        this.endpointId = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.network = Codegen.empty();
-        this.port = Codegen.empty();
-        this.service = Codegen.empty();
+    private EndpointArgs(EndpointArgs $) {
+        this.address = $.address;
+        this.endpointId = $.endpointId;
+        this.metadata = $.metadata;
+        this.network = $.network;
+        this.port = $.port;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private Output<String> endpointId;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> network;
-        private @Nullable Output<Integer> port;
-        private Output<String> service;
+        private EndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointArgs();
         }
 
         public Builder(EndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.endpointId = defaults.endpointId;
-    	      this.metadata = defaults.metadata;
-    	      this.network = defaults.network;
-    	      this.port = defaults.port;
-    	      this.service = defaults.service;
+            $ = new EndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder endpointId(Output<String> endpointId) {
-            this.endpointId = Objects.requireNonNull(endpointId);
+            $.endpointId = endpointId;
             return this;
         }
+
         public Builder endpointId(String endpointId) {
-            this.endpointId = Output.of(Objects.requireNonNull(endpointId));
-            return this;
+            return endpointId(Output.of(endpointId));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
-        }        public EndpointArgs build() {
-            return new EndpointArgs(address, endpointId, metadata, network, port, service);
+            return service(Output.of(service));
+        }
+
+        public EndpointArgs build() {
+            $.endpointId = Objects.requireNonNull($.endpointId, "expected parameter 'endpointId' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

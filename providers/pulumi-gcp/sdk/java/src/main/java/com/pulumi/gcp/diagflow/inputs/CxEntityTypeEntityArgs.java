@@ -5,10 +5,10 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CxEntityTypeEntityArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="synonyms")
-      private final @Nullable Output<List<String>> synonyms;
+    private @Nullable Output<List<String>> synonyms;
 
-    public Output<List<String>> synonyms() {
-        return this.synonyms == null ? Codegen.empty() : this.synonyms;
+    public Optional<Output<List<String>>> synonyms() {
+        return Optional.ofNullable(this.synonyms);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class CxEntityTypeEntityArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public CxEntityTypeEntityArgs(
-        @Nullable Output<List<String>> synonyms,
-        @Nullable Output<String> value) {
-        this.synonyms = synonyms;
-        this.value = value;
-    }
+    private CxEntityTypeEntityArgs() {}
 
-    private CxEntityTypeEntityArgs() {
-        this.synonyms = Codegen.empty();
-        this.value = Codegen.empty();
+    private CxEntityTypeEntityArgs(CxEntityTypeEntityArgs $) {
+        this.synonyms = $.synonyms;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxEntityTypeEntityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> synonyms;
-        private @Nullable Output<String> value;
+        private CxEntityTypeEntityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxEntityTypeEntityArgs();
         }
 
         public Builder(CxEntityTypeEntityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.synonyms = defaults.synonyms;
-    	      this.value = defaults.value;
+            $ = new CxEntityTypeEntityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder synonyms(@Nullable Output<List<String>> synonyms) {
-            this.synonyms = synonyms;
+            $.synonyms = synonyms;
             return this;
         }
-        public Builder synonyms(@Nullable List<String> synonyms) {
-            this.synonyms = Codegen.ofNullable(synonyms);
-            return this;
+
+        public Builder synonyms(List<String> synonyms) {
+            return synonyms(Output.of(synonyms));
         }
+
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public CxEntityTypeEntityArgs build() {
-            return new CxEntityTypeEntityArgs(synonyms, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public CxEntityTypeEntityArgs build() {
+            return $;
         }
     }
+
 }

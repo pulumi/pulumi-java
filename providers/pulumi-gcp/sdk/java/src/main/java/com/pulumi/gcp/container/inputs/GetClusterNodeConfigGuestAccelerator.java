@@ -14,78 +14,73 @@ public final class GetClusterNodeConfigGuestAccelerator extends com.pulumi.resou
     public static final GetClusterNodeConfigGuestAccelerator Empty = new GetClusterNodeConfigGuestAccelerator();
 
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
     }
 
     @Import(name="gpuPartitionSize", required=true)
-      private final String gpuPartitionSize;
+    private String gpuPartitionSize;
 
     public String gpuPartitionSize() {
         return this.gpuPartitionSize;
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetClusterNodeConfigGuestAccelerator(
-        Integer count,
-        String gpuPartitionSize,
-        String type) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.gpuPartitionSize = Objects.requireNonNull(gpuPartitionSize, "expected parameter 'gpuPartitionSize' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetClusterNodeConfigGuestAccelerator() {}
 
-    private GetClusterNodeConfigGuestAccelerator() {
-        this.count = null;
-        this.gpuPartitionSize = null;
-        this.type = null;
+    private GetClusterNodeConfigGuestAccelerator(GetClusterNodeConfigGuestAccelerator $) {
+        this.count = $.count;
+        this.gpuPartitionSize = $.gpuPartitionSize;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodeConfigGuestAccelerator defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private String gpuPartitionSize;
-        private String type;
+        private GetClusterNodeConfigGuestAccelerator $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodeConfigGuestAccelerator();
         }
 
         public Builder(GetClusterNodeConfigGuestAccelerator defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.gpuPartitionSize = defaults.gpuPartitionSize;
-    	      this.type = defaults.type;
+            $ = new GetClusterNodeConfigGuestAccelerator(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder gpuPartitionSize(String gpuPartitionSize) {
-            this.gpuPartitionSize = Objects.requireNonNull(gpuPartitionSize);
+            $.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetClusterNodeConfigGuestAccelerator build() {
-            return new GetClusterNodeConfigGuestAccelerator(count, gpuPartitionSize, type);
+        }
+
+        public GetClusterNodeConfigGuestAccelerator build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.gpuPartitionSize = Objects.requireNonNull($.gpuPartitionSize, "expected parameter 'gpuPartitionSize' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

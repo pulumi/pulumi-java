@@ -5,10 +5,10 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="appStartTimeout")
-      private final @Nullable Output<String> appStartTimeout;
+    private @Nullable Output<String> appStartTimeout;
 
-    public Output<String> appStartTimeout() {
-        return this.appStartTimeout == null ? Codegen.empty() : this.appStartTimeout;
+    public Optional<Output<String>> appStartTimeout() {
+        return Optional.ofNullable(this.appStartTimeout);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="checkInterval")
-      private final @Nullable Output<String> checkInterval;
+    private @Nullable Output<String> checkInterval;
 
-    public Output<String> checkInterval() {
-        return this.checkInterval == null ? Codegen.empty() : this.checkInterval;
+    public Optional<Output<String>> checkInterval() {
+        return Optional.ofNullable(this.checkInterval);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="failureThreshold")
-      private final @Nullable Output<Double> failureThreshold;
+    private @Nullable Output<Double> failureThreshold;
 
-    public Output<Double> failureThreshold() {
-        return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
+    public Optional<Output<Double>> failureThreshold() {
+        return Optional.ofNullable(this.failureThreshold);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -78,10 +78,10 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="successThreshold")
-      private final @Nullable Output<Double> successThreshold;
+    private @Nullable Output<Double> successThreshold;
 
-    public Output<Double> successThreshold() {
-        return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
+    public Optional<Output<Double>> successThreshold() {
+        return Optional.ofNullable(this.successThreshold);
     }
 
     /**
@@ -89,128 +89,109 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public FlexibleAppVersionReadinessCheckGetArgs(
-        @Nullable Output<String> appStartTimeout,
-        @Nullable Output<String> checkInterval,
-        @Nullable Output<Double> failureThreshold,
-        @Nullable Output<String> host,
-        Output<String> path,
-        @Nullable Output<Double> successThreshold,
-        @Nullable Output<String> timeout) {
-        this.appStartTimeout = appStartTimeout;
-        this.checkInterval = checkInterval;
-        this.failureThreshold = failureThreshold;
-        this.host = host;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.successThreshold = successThreshold;
-        this.timeout = timeout;
-    }
+    private FlexibleAppVersionReadinessCheckGetArgs() {}
 
-    private FlexibleAppVersionReadinessCheckGetArgs() {
-        this.appStartTimeout = Codegen.empty();
-        this.checkInterval = Codegen.empty();
-        this.failureThreshold = Codegen.empty();
-        this.host = Codegen.empty();
-        this.path = Codegen.empty();
-        this.successThreshold = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private FlexibleAppVersionReadinessCheckGetArgs(FlexibleAppVersionReadinessCheckGetArgs $) {
+        this.appStartTimeout = $.appStartTimeout;
+        this.checkInterval = $.checkInterval;
+        this.failureThreshold = $.failureThreshold;
+        this.host = $.host;
+        this.path = $.path;
+        this.successThreshold = $.successThreshold;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlexibleAppVersionReadinessCheckGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appStartTimeout;
-        private @Nullable Output<String> checkInterval;
-        private @Nullable Output<Double> failureThreshold;
-        private @Nullable Output<String> host;
-        private Output<String> path;
-        private @Nullable Output<Double> successThreshold;
-        private @Nullable Output<String> timeout;
+        private FlexibleAppVersionReadinessCheckGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlexibleAppVersionReadinessCheckGetArgs();
         }
 
         public Builder(FlexibleAppVersionReadinessCheckGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appStartTimeout = defaults.appStartTimeout;
-    	      this.checkInterval = defaults.checkInterval;
-    	      this.failureThreshold = defaults.failureThreshold;
-    	      this.host = defaults.host;
-    	      this.path = defaults.path;
-    	      this.successThreshold = defaults.successThreshold;
-    	      this.timeout = defaults.timeout;
+            $ = new FlexibleAppVersionReadinessCheckGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appStartTimeout(@Nullable Output<String> appStartTimeout) {
-            this.appStartTimeout = appStartTimeout;
+            $.appStartTimeout = appStartTimeout;
             return this;
         }
-        public Builder appStartTimeout(@Nullable String appStartTimeout) {
-            this.appStartTimeout = Codegen.ofNullable(appStartTimeout);
-            return this;
+
+        public Builder appStartTimeout(String appStartTimeout) {
+            return appStartTimeout(Output.of(appStartTimeout));
         }
+
         public Builder checkInterval(@Nullable Output<String> checkInterval) {
-            this.checkInterval = checkInterval;
+            $.checkInterval = checkInterval;
             return this;
         }
-        public Builder checkInterval(@Nullable String checkInterval) {
-            this.checkInterval = Codegen.ofNullable(checkInterval);
-            return this;
+
+        public Builder checkInterval(String checkInterval) {
+            return checkInterval(Output.of(checkInterval));
         }
+
         public Builder failureThreshold(@Nullable Output<Double> failureThreshold) {
-            this.failureThreshold = failureThreshold;
+            $.failureThreshold = failureThreshold;
             return this;
         }
-        public Builder failureThreshold(@Nullable Double failureThreshold) {
-            this.failureThreshold = Codegen.ofNullable(failureThreshold);
-            return this;
+
+        public Builder failureThreshold(Double failureThreshold) {
+            return failureThreshold(Output.of(failureThreshold));
         }
+
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder successThreshold(@Nullable Output<Double> successThreshold) {
-            this.successThreshold = successThreshold;
+            $.successThreshold = successThreshold;
             return this;
         }
-        public Builder successThreshold(@Nullable Double successThreshold) {
-            this.successThreshold = Codegen.ofNullable(successThreshold);
-            return this;
+
+        public Builder successThreshold(Double successThreshold) {
+            return successThreshold(Output.of(successThreshold));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public FlexibleAppVersionReadinessCheckGetArgs build() {
-            return new FlexibleAppVersionReadinessCheckGetArgs(appStartTimeout, checkInterval, failureThreshold, host, path, successThreshold, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public FlexibleAppVersionReadinessCheckGetArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

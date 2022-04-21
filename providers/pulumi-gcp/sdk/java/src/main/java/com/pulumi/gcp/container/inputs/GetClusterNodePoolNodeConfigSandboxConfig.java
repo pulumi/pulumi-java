@@ -13,45 +13,45 @@ public final class GetClusterNodePoolNodeConfigSandboxConfig extends com.pulumi.
     public static final GetClusterNodePoolNodeConfigSandboxConfig Empty = new GetClusterNodePoolNodeConfigSandboxConfig();
 
     @Import(name="sandboxType", required=true)
-      private final String sandboxType;
+    private String sandboxType;
 
     public String sandboxType() {
         return this.sandboxType;
     }
 
-    public GetClusterNodePoolNodeConfigSandboxConfig(String sandboxType) {
-        this.sandboxType = Objects.requireNonNull(sandboxType, "expected parameter 'sandboxType' to be non-null");
-    }
+    private GetClusterNodePoolNodeConfigSandboxConfig() {}
 
-    private GetClusterNodePoolNodeConfigSandboxConfig() {
-        this.sandboxType = null;
+    private GetClusterNodePoolNodeConfigSandboxConfig(GetClusterNodePoolNodeConfigSandboxConfig $) {
+        this.sandboxType = $.sandboxType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodePoolNodeConfigSandboxConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sandboxType;
+        private GetClusterNodePoolNodeConfigSandboxConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodePoolNodeConfigSandboxConfig();
         }
 
         public Builder(GetClusterNodePoolNodeConfigSandboxConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sandboxType = defaults.sandboxType;
+            $ = new GetClusterNodePoolNodeConfigSandboxConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder sandboxType(String sandboxType) {
-            this.sandboxType = Objects.requireNonNull(sandboxType);
+            $.sandboxType = sandboxType;
             return this;
-        }        public GetClusterNodePoolNodeConfigSandboxConfig build() {
-            return new GetClusterNodePoolNodeConfigSandboxConfig(sandboxType);
+        }
+
+        public GetClusterNodePoolNodeConfigSandboxConfig build() {
+            $.sandboxType = Objects.requireNonNull($.sandboxType, "expected parameter 'sandboxType' to be non-null");
+            return $;
         }
     }
+
 }

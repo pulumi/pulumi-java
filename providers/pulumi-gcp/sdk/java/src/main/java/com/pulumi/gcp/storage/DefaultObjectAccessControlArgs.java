@@ -5,9 +5,9 @@ package com.pulumi.gcp.storage;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -39,7 +39,7 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="entity", required=true)
-      private final Output<String> entity;
+    private Output<String> entity;
 
     public Output<String> entity() {
         return this.entity;
@@ -50,10 +50,10 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="object")
-      private final @Nullable Output<String> object;
+    private @Nullable Output<String> object;
 
-    public Output<String> object() {
-        return this.object == null ? Codegen.empty() : this.object;
+    public Optional<Output<String>> object() {
+        return Optional.ofNullable(this.object);
     }
 
     /**
@@ -62,89 +62,81 @@ public final class DefaultObjectAccessControlArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public DefaultObjectAccessControlArgs(
-        Output<String> bucket,
-        Output<String> entity,
-        @Nullable Output<String> object,
-        Output<String> role) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.entity = Objects.requireNonNull(entity, "expected parameter 'entity' to be non-null");
-        this.object = object;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private DefaultObjectAccessControlArgs() {}
 
-    private DefaultObjectAccessControlArgs() {
-        this.bucket = Codegen.empty();
-        this.entity = Codegen.empty();
-        this.object = Codegen.empty();
-        this.role = Codegen.empty();
+    private DefaultObjectAccessControlArgs(DefaultObjectAccessControlArgs $) {
+        this.bucket = $.bucket;
+        this.entity = $.entity;
+        this.object = $.object;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultObjectAccessControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private Output<String> entity;
-        private @Nullable Output<String> object;
-        private Output<String> role;
+        private DefaultObjectAccessControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultObjectAccessControlArgs();
         }
 
         public Builder(DefaultObjectAccessControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.entity = defaults.entity;
-    	      this.object = defaults.object;
-    	      this.role = defaults.role;
+            $ = new DefaultObjectAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder entity(Output<String> entity) {
-            this.entity = Objects.requireNonNull(entity);
+            $.entity = entity;
             return this;
         }
+
         public Builder entity(String entity) {
-            this.entity = Output.of(Objects.requireNonNull(entity));
-            return this;
+            return entity(Output.of(entity));
         }
+
         public Builder object(@Nullable Output<String> object) {
-            this.object = object;
+            $.object = object;
             return this;
         }
-        public Builder object(@Nullable String object) {
-            this.object = Codegen.ofNullable(object);
-            return this;
+
+        public Builder object(String object) {
+            return object(Output.of(object));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public DefaultObjectAccessControlArgs build() {
-            return new DefaultObjectAccessControlArgs(bucket, entity, object, role);
+            return role(Output.of(role));
+        }
+
+        public DefaultObjectAccessControlArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.entity = Objects.requireNonNull($.entity, "expected parameter 'entity' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

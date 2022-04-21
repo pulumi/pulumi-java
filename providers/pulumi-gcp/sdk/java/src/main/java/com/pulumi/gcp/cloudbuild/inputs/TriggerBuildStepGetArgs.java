@@ -5,11 +5,11 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudbuild.inputs.TriggerBuildStepVolumeGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dir")
-      private final @Nullable Output<String> dir;
+    private @Nullable Output<String> dir;
 
-    public Output<String> dir() {
-        return this.dir == null ? Codegen.empty() : this.dir;
+    public Optional<Output<String>> dir() {
+        return Optional.ofNullable(this.dir);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="entrypoint")
-      private final @Nullable Output<String> entrypoint;
+    private @Nullable Output<String> entrypoint;
 
-    public Output<String> entrypoint() {
-        return this.entrypoint == null ? Codegen.empty() : this.entrypoint;
+    public Optional<Output<String>> entrypoint() {
+        return Optional.ofNullable(this.entrypoint);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="envs")
-      private final @Nullable Output<List<String>> envs;
+    private @Nullable Output<List<String>> envs;
 
-    public Output<List<String>> envs() {
-        return this.envs == null ? Codegen.empty() : this.envs;
+    public Optional<Output<List<String>>> envs() {
+        return Optional.ofNullable(this.envs);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -97,7 +97,7 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -110,10 +110,10 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="secretEnvs")
-      private final @Nullable Output<List<String>> secretEnvs;
+    private @Nullable Output<List<String>> secretEnvs;
 
-    public Output<List<String>> secretEnvs() {
-        return this.secretEnvs == null ? Codegen.empty() : this.secretEnvs;
+    public Optional<Output<List<String>>> secretEnvs() {
+        return Optional.ofNullable(this.secretEnvs);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="timing")
-      private final @Nullable Output<String> timing;
+    private @Nullable Output<String> timing;
 
-    public Output<String> timing() {
-        return this.timing == null ? Codegen.empty() : this.timing;
+    public Optional<Output<String>> timing() {
+        return Optional.ofNullable(this.timing);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="volumes")
-      private final @Nullable Output<List<TriggerBuildStepVolumeGetArgs>> volumes;
+    private @Nullable Output<List<TriggerBuildStepVolumeGetArgs>> volumes;
 
-    public Output<List<TriggerBuildStepVolumeGetArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<TriggerBuildStepVolumeGetArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
     /**
@@ -169,195 +169,169 @@ public final class TriggerBuildStepGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="waitFors")
-      private final @Nullable Output<List<String>> waitFors;
+    private @Nullable Output<List<String>> waitFors;
 
-    public Output<List<String>> waitFors() {
-        return this.waitFors == null ? Codegen.empty() : this.waitFors;
+    public Optional<Output<List<String>>> waitFors() {
+        return Optional.ofNullable(this.waitFors);
     }
 
-    public TriggerBuildStepGetArgs(
-        @Nullable Output<List<String>> args,
-        @Nullable Output<String> dir,
-        @Nullable Output<String> entrypoint,
-        @Nullable Output<List<String>> envs,
-        @Nullable Output<String> id,
-        Output<String> name,
-        @Nullable Output<List<String>> secretEnvs,
-        @Nullable Output<String> timeout,
-        @Nullable Output<String> timing,
-        @Nullable Output<List<TriggerBuildStepVolumeGetArgs>> volumes,
-        @Nullable Output<List<String>> waitFors) {
-        this.args = args;
-        this.dir = dir;
-        this.entrypoint = entrypoint;
-        this.envs = envs;
-        this.id = id;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.secretEnvs = secretEnvs;
-        this.timeout = timeout;
-        this.timing = timing;
-        this.volumes = volumes;
-        this.waitFors = waitFors;
-    }
+    private TriggerBuildStepGetArgs() {}
 
-    private TriggerBuildStepGetArgs() {
-        this.args = Codegen.empty();
-        this.dir = Codegen.empty();
-        this.entrypoint = Codegen.empty();
-        this.envs = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.secretEnvs = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.timing = Codegen.empty();
-        this.volumes = Codegen.empty();
-        this.waitFors = Codegen.empty();
+    private TriggerBuildStepGetArgs(TriggerBuildStepGetArgs $) {
+        this.args = $.args;
+        this.dir = $.dir;
+        this.entrypoint = $.entrypoint;
+        this.envs = $.envs;
+        this.id = $.id;
+        this.name = $.name;
+        this.secretEnvs = $.secretEnvs;
+        this.timeout = $.timeout;
+        this.timing = $.timing;
+        this.volumes = $.volumes;
+        this.waitFors = $.waitFors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerBuildStepGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<String> dir;
-        private @Nullable Output<String> entrypoint;
-        private @Nullable Output<List<String>> envs;
-        private @Nullable Output<String> id;
-        private Output<String> name;
-        private @Nullable Output<List<String>> secretEnvs;
-        private @Nullable Output<String> timeout;
-        private @Nullable Output<String> timing;
-        private @Nullable Output<List<TriggerBuildStepVolumeGetArgs>> volumes;
-        private @Nullable Output<List<String>> waitFors;
+        private TriggerBuildStepGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerBuildStepGetArgs();
         }
 
         public Builder(TriggerBuildStepGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.dir = defaults.dir;
-    	      this.entrypoint = defaults.entrypoint;
-    	      this.envs = defaults.envs;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.secretEnvs = defaults.secretEnvs;
-    	      this.timeout = defaults.timeout;
-    	      this.timing = defaults.timing;
-    	      this.volumes = defaults.volumes;
-    	      this.waitFors = defaults.waitFors;
+            $ = new TriggerBuildStepGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder dir(@Nullable Output<String> dir) {
-            this.dir = dir;
+            $.dir = dir;
             return this;
         }
-        public Builder dir(@Nullable String dir) {
-            this.dir = Codegen.ofNullable(dir);
-            return this;
+
+        public Builder dir(String dir) {
+            return dir(Output.of(dir));
         }
+
         public Builder entrypoint(@Nullable Output<String> entrypoint) {
-            this.entrypoint = entrypoint;
+            $.entrypoint = entrypoint;
             return this;
         }
-        public Builder entrypoint(@Nullable String entrypoint) {
-            this.entrypoint = Codegen.ofNullable(entrypoint);
-            return this;
+
+        public Builder entrypoint(String entrypoint) {
+            return entrypoint(Output.of(entrypoint));
         }
+
         public Builder envs(@Nullable Output<List<String>> envs) {
-            this.envs = envs;
+            $.envs = envs;
             return this;
         }
-        public Builder envs(@Nullable List<String> envs) {
-            this.envs = Codegen.ofNullable(envs);
-            return this;
+
+        public Builder envs(List<String> envs) {
+            return envs(Output.of(envs));
         }
+
         public Builder envs(String... envs) {
             return envs(List.of(envs));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder secretEnvs(@Nullable Output<List<String>> secretEnvs) {
-            this.secretEnvs = secretEnvs;
+            $.secretEnvs = secretEnvs;
             return this;
         }
-        public Builder secretEnvs(@Nullable List<String> secretEnvs) {
-            this.secretEnvs = Codegen.ofNullable(secretEnvs);
-            return this;
+
+        public Builder secretEnvs(List<String> secretEnvs) {
+            return secretEnvs(Output.of(secretEnvs));
         }
+
         public Builder secretEnvs(String... secretEnvs) {
             return secretEnvs(List.of(secretEnvs));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder timing(@Nullable Output<String> timing) {
-            this.timing = timing;
+            $.timing = timing;
             return this;
         }
-        public Builder timing(@Nullable String timing) {
-            this.timing = Codegen.ofNullable(timing);
-            return this;
+
+        public Builder timing(String timing) {
+            return timing(Output.of(timing));
         }
+
         public Builder volumes(@Nullable Output<List<TriggerBuildStepVolumeGetArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<TriggerBuildStepVolumeGetArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<TriggerBuildStepVolumeGetArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(TriggerBuildStepVolumeGetArgs... volumes) {
             return volumes(List.of(volumes));
         }
+
         public Builder waitFors(@Nullable Output<List<String>> waitFors) {
-            this.waitFors = waitFors;
+            $.waitFors = waitFors;
             return this;
         }
-        public Builder waitFors(@Nullable List<String> waitFors) {
-            this.waitFors = Codegen.ofNullable(waitFors);
-            return this;
+
+        public Builder waitFors(List<String> waitFors) {
+            return waitFors(Output.of(waitFors));
         }
+
         public Builder waitFors(String... waitFors) {
             return waitFors(List.of(waitFors));
-        }        public TriggerBuildStepGetArgs build() {
-            return new TriggerBuildStepGetArgs(args, dir, entrypoint, envs, id, name, secretEnvs, timeout, timing, volumes, waitFors);
+        }
+
+        public TriggerBuildStepGetArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

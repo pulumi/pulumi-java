@@ -5,7 +5,6 @@ package com.pulumi.gcp.datastore.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class DataStoreIndexPropertyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="direction", required=true)
-      private final Output<String> direction;
+    private Output<String> direction;
 
     public Output<String> direction() {
         return this.direction;
@@ -31,63 +30,60 @@ public final class DataStoreIndexPropertyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public DataStoreIndexPropertyArgs(
-        Output<String> direction,
-        Output<String> name) {
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private DataStoreIndexPropertyArgs() {}
 
-    private DataStoreIndexPropertyArgs() {
-        this.direction = Codegen.empty();
-        this.name = Codegen.empty();
+    private DataStoreIndexPropertyArgs(DataStoreIndexPropertyArgs $) {
+        this.direction = $.direction;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataStoreIndexPropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> direction;
-        private Output<String> name;
+        private DataStoreIndexPropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataStoreIndexPropertyArgs();
         }
 
         public Builder(DataStoreIndexPropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.direction = defaults.direction;
-    	      this.name = defaults.name;
+            $ = new DataStoreIndexPropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder direction(Output<String> direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder direction(String direction) {
-            this.direction = Output.of(Objects.requireNonNull(direction));
-            return this;
+            return direction(Output.of(direction));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public DataStoreIndexPropertyArgs build() {
-            return new DataStoreIndexPropertyArgs(direction, name);
+            return name(Output.of(name));
+        }
+
+        public DataStoreIndexPropertyArgs build() {
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

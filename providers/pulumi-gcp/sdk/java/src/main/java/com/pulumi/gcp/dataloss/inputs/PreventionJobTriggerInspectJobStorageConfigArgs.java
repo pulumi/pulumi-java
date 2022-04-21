@@ -5,12 +5,12 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigArgs extends com.p
      * 
      */
     @Import(name="bigQueryOptions")
-      private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs> bigQueryOptions;
+    private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs> bigQueryOptions;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs> bigQueryOptions() {
-        return this.bigQueryOptions == null ? Codegen.empty() : this.bigQueryOptions;
+    public Optional<Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs>> bigQueryOptions() {
+        return Optional.ofNullable(this.bigQueryOptions);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigArgs extends com.p
      * 
      */
     @Import(name="cloudStorageOptions")
-      private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs> cloudStorageOptions;
+    private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs> cloudStorageOptions;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs> cloudStorageOptions() {
-        return this.cloudStorageOptions == null ? Codegen.empty() : this.cloudStorageOptions;
+    public Optional<Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs>> cloudStorageOptions() {
+        return Optional.ofNullable(this.cloudStorageOptions);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigArgs extends com.p
      * 
      */
     @Import(name="datastoreOptions")
-      private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs> datastoreOptions;
+    private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs> datastoreOptions;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs> datastoreOptions() {
-        return this.datastoreOptions == null ? Codegen.empty() : this.datastoreOptions;
+    public Optional<Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs>> datastoreOptions() {
+        return Optional.ofNullable(this.datastoreOptions);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class PreventionJobTriggerInspectJobStorageConfigArgs extends com.p
      * 
      */
     @Import(name="timespanConfig")
-      private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs> timespanConfig;
+    private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs> timespanConfig;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs> timespanConfig() {
-        return this.timespanConfig == null ? Codegen.empty() : this.timespanConfig;
+    public Optional<Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs>> timespanConfig() {
+        return Optional.ofNullable(this.timespanConfig);
     }
 
-    public PreventionJobTriggerInspectJobStorageConfigArgs(
-        @Nullable Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs> bigQueryOptions,
-        @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs> cloudStorageOptions,
-        @Nullable Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs> datastoreOptions,
-        @Nullable Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs> timespanConfig) {
-        this.bigQueryOptions = bigQueryOptions;
-        this.cloudStorageOptions = cloudStorageOptions;
-        this.datastoreOptions = datastoreOptions;
-        this.timespanConfig = timespanConfig;
-    }
+    private PreventionJobTriggerInspectJobStorageConfigArgs() {}
 
-    private PreventionJobTriggerInspectJobStorageConfigArgs() {
-        this.bigQueryOptions = Codegen.empty();
-        this.cloudStorageOptions = Codegen.empty();
-        this.datastoreOptions = Codegen.empty();
-        this.timespanConfig = Codegen.empty();
+    private PreventionJobTriggerInspectJobStorageConfigArgs(PreventionJobTriggerInspectJobStorageConfigArgs $) {
+        this.bigQueryOptions = $.bigQueryOptions;
+        this.cloudStorageOptions = $.cloudStorageOptions;
+        this.datastoreOptions = $.datastoreOptions;
+        this.timespanConfig = $.timespanConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionJobTriggerInspectJobStorageConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs> bigQueryOptions;
-        private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs> cloudStorageOptions;
-        private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs> datastoreOptions;
-        private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs> timespanConfig;
+        private PreventionJobTriggerInspectJobStorageConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionJobTriggerInspectJobStorageConfigArgs();
         }
 
         public Builder(PreventionJobTriggerInspectJobStorageConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigQueryOptions = defaults.bigQueryOptions;
-    	      this.cloudStorageOptions = defaults.cloudStorageOptions;
-    	      this.datastoreOptions = defaults.datastoreOptions;
-    	      this.timespanConfig = defaults.timespanConfig;
+            $ = new PreventionJobTriggerInspectJobStorageConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigQueryOptions(@Nullable Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs> bigQueryOptions) {
-            this.bigQueryOptions = bigQueryOptions;
+            $.bigQueryOptions = bigQueryOptions;
             return this;
         }
-        public Builder bigQueryOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs bigQueryOptions) {
-            this.bigQueryOptions = Codegen.ofNullable(bigQueryOptions);
-            return this;
+
+        public Builder bigQueryOptions(PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs bigQueryOptions) {
+            return bigQueryOptions(Output.of(bigQueryOptions));
         }
+
         public Builder cloudStorageOptions(@Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs> cloudStorageOptions) {
-            this.cloudStorageOptions = cloudStorageOptions;
+            $.cloudStorageOptions = cloudStorageOptions;
             return this;
         }
-        public Builder cloudStorageOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs cloudStorageOptions) {
-            this.cloudStorageOptions = Codegen.ofNullable(cloudStorageOptions);
-            return this;
+
+        public Builder cloudStorageOptions(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs cloudStorageOptions) {
+            return cloudStorageOptions(Output.of(cloudStorageOptions));
         }
+
         public Builder datastoreOptions(@Nullable Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs> datastoreOptions) {
-            this.datastoreOptions = datastoreOptions;
+            $.datastoreOptions = datastoreOptions;
             return this;
         }
-        public Builder datastoreOptions(@Nullable PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs datastoreOptions) {
-            this.datastoreOptions = Codegen.ofNullable(datastoreOptions);
-            return this;
+
+        public Builder datastoreOptions(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs datastoreOptions) {
+            return datastoreOptions(Output.of(datastoreOptions));
         }
+
         public Builder timespanConfig(@Nullable Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs> timespanConfig) {
-            this.timespanConfig = timespanConfig;
+            $.timespanConfig = timespanConfig;
             return this;
         }
-        public Builder timespanConfig(@Nullable PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs timespanConfig) {
-            this.timespanConfig = Codegen.ofNullable(timespanConfig);
-            return this;
-        }        public PreventionJobTriggerInspectJobStorageConfigArgs build() {
-            return new PreventionJobTriggerInspectJobStorageConfigArgs(bigQueryOptions, cloudStorageOptions, datastoreOptions, timespanConfig);
+
+        public Builder timespanConfig(PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs timespanConfig) {
+            return timespanConfig(Output.of(timespanConfig));
+        }
+
+        public PreventionJobTriggerInspectJobStorageConfigArgs build() {
+            return $;
         }
     }
+
 }

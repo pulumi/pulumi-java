@@ -5,9 +5,9 @@ package com.pulumi.gcp.tags.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TagKeyIamPolicyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TagKeyIamPolicyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class TagKeyIamPolicyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tagKey")
-      private final @Nullable Output<String> tagKey;
+    private @Nullable Output<String> tagKey;
 
-    public Output<String> tagKey() {
-        return this.tagKey == null ? Codegen.empty() : this.tagKey;
+    public Optional<Output<String>> tagKey() {
+        return Optional.ofNullable(this.tagKey);
     }
 
-    public TagKeyIamPolicyState(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData,
-        @Nullable Output<String> tagKey) {
-        this.etag = etag;
-        this.policyData = policyData;
-        this.tagKey = tagKey;
-    }
+    private TagKeyIamPolicyState() {}
 
-    private TagKeyIamPolicyState() {
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.tagKey = Codegen.empty();
+    private TagKeyIamPolicyState(TagKeyIamPolicyState $) {
+        this.etag = $.etag;
+        this.policyData = $.policyData;
+        this.tagKey = $.tagKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagKeyIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
-        private @Nullable Output<String> tagKey;
+        private TagKeyIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagKeyIamPolicyState();
         }
 
         public Builder(TagKeyIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
-    	      this.tagKey = defaults.tagKey;
+            $ = new TagKeyIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
         }
+
         public Builder tagKey(@Nullable Output<String> tagKey) {
-            this.tagKey = tagKey;
+            $.tagKey = tagKey;
             return this;
         }
-        public Builder tagKey(@Nullable String tagKey) {
-            this.tagKey = Codegen.ofNullable(tagKey);
-            return this;
-        }        public TagKeyIamPolicyState build() {
-            return new TagKeyIamPolicyState(etag, policyData, tagKey);
+
+        public Builder tagKey(String tagKey) {
+            return tagKey(Output.of(tagKey));
+        }
+
+        public TagKeyIamPolicyState build() {
+            return $;
         }
     }
+
 }

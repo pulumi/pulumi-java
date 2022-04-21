@@ -5,12 +5,12 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs 
      * 
      */
     @Import(name="allowedSuccessCodes")
-      private final @Nullable Output<List<Integer>> allowedSuccessCodes;
+    private @Nullable Output<List<Integer>> allowedSuccessCodes;
 
-    public Output<List<Integer>> allowedSuccessCodes() {
-        return this.allowedSuccessCodes == null ? Codegen.empty() : this.allowedSuccessCodes;
+    public Optional<Output<List<Integer>>> allowedSuccessCodes() {
+        return Optional.ofNullable(this.allowedSuccessCodes);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs 
      * 
      */
     @Import(name="gcsObject")
-      private final @Nullable Output<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectGetArgs> gcsObject;
+    private @Nullable Output<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectGetArgs> gcsObject;
 
-    public Output<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectGetArgs> gcsObject() {
-        return this.gcsObject == null ? Codegen.empty() : this.gcsObject;
+    public Optional<Output<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectGetArgs>> gcsObject() {
+        return Optional.ofNullable(this.gcsObject);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs 
      * 
      */
     @Import(name="interpreter")
-      private final @Nullable Output<String> interpreter;
+    private @Nullable Output<String> interpreter;
 
-    public Output<String> interpreter() {
-        return this.interpreter == null ? Codegen.empty() : this.interpreter;
+    public Optional<Output<String>> interpreter() {
+        return Optional.ofNullable(this.interpreter);
     }
 
     /**
@@ -59,92 +59,82 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs 
      * 
      */
     @Import(name="localPath")
-      private final @Nullable Output<String> localPath;
+    private @Nullable Output<String> localPath;
 
-    public Output<String> localPath() {
-        return this.localPath == null ? Codegen.empty() : this.localPath;
+    public Optional<Output<String>> localPath() {
+        return Optional.ofNullable(this.localPath);
     }
 
-    public PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs(
-        @Nullable Output<List<Integer>> allowedSuccessCodes,
-        @Nullable Output<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectGetArgs> gcsObject,
-        @Nullable Output<String> interpreter,
-        @Nullable Output<String> localPath) {
-        this.allowedSuccessCodes = allowedSuccessCodes;
-        this.gcsObject = gcsObject;
-        this.interpreter = interpreter;
-        this.localPath = localPath;
-    }
+    private PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs() {}
 
-    private PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs() {
-        this.allowedSuccessCodes = Codegen.empty();
-        this.gcsObject = Codegen.empty();
-        this.interpreter = Codegen.empty();
-        this.localPath = Codegen.empty();
+    private PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs(PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs $) {
+        this.allowedSuccessCodes = $.allowedSuccessCodes;
+        this.gcsObject = $.gcsObject;
+        this.interpreter = $.interpreter;
+        this.localPath = $.localPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Integer>> allowedSuccessCodes;
-        private @Nullable Output<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectGetArgs> gcsObject;
-        private @Nullable Output<String> interpreter;
-        private @Nullable Output<String> localPath;
+        private PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs();
         }
 
         public Builder(PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedSuccessCodes = defaults.allowedSuccessCodes;
-    	      this.gcsObject = defaults.gcsObject;
-    	      this.interpreter = defaults.interpreter;
-    	      this.localPath = defaults.localPath;
+            $ = new PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedSuccessCodes(@Nullable Output<List<Integer>> allowedSuccessCodes) {
-            this.allowedSuccessCodes = allowedSuccessCodes;
+            $.allowedSuccessCodes = allowedSuccessCodes;
             return this;
         }
-        public Builder allowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
-            this.allowedSuccessCodes = Codegen.ofNullable(allowedSuccessCodes);
-            return this;
+
+        public Builder allowedSuccessCodes(List<Integer> allowedSuccessCodes) {
+            return allowedSuccessCodes(Output.of(allowedSuccessCodes));
         }
+
         public Builder allowedSuccessCodes(Integer... allowedSuccessCodes) {
             return allowedSuccessCodes(List.of(allowedSuccessCodes));
         }
+
         public Builder gcsObject(@Nullable Output<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectGetArgs> gcsObject) {
-            this.gcsObject = gcsObject;
+            $.gcsObject = gcsObject;
             return this;
         }
-        public Builder gcsObject(@Nullable PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectGetArgs gcsObject) {
-            this.gcsObject = Codegen.ofNullable(gcsObject);
-            return this;
+
+        public Builder gcsObject(PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectGetArgs gcsObject) {
+            return gcsObject(Output.of(gcsObject));
         }
+
         public Builder interpreter(@Nullable Output<String> interpreter) {
-            this.interpreter = interpreter;
+            $.interpreter = interpreter;
             return this;
         }
-        public Builder interpreter(@Nullable String interpreter) {
-            this.interpreter = Codegen.ofNullable(interpreter);
-            return this;
+
+        public Builder interpreter(String interpreter) {
+            return interpreter(Output.of(interpreter));
         }
+
         public Builder localPath(@Nullable Output<String> localPath) {
-            this.localPath = localPath;
+            $.localPath = localPath;
             return this;
         }
-        public Builder localPath(@Nullable String localPath) {
-            this.localPath = Codegen.ofNullable(localPath);
-            return this;
-        }        public PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs build() {
-            return new PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs(allowedSuccessCodes, gcsObject, interpreter, localPath);
+
+        public Builder localPath(String localPath) {
+            return localPath(Output.of(localPath));
+        }
+
+        public PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGetArgs build() {
+            return $;
         }
     }
+
 }

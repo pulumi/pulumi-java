@@ -5,7 +5,6 @@ package com.pulumi.gcp.storage;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class BucketIAMPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
@@ -31,63 +30,60 @@ public final class BucketIAMPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
-    public BucketIAMPolicyArgs(
-        Output<String> bucket,
-        Output<String> policyData) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-    }
+    private BucketIAMPolicyArgs() {}
 
-    private BucketIAMPolicyArgs() {
-        this.bucket = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private BucketIAMPolicyArgs(BucketIAMPolicyArgs $) {
+        this.bucket = $.bucket;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketIAMPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
-        private Output<String> policyData;
+        private BucketIAMPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketIAMPolicyArgs();
         }
 
         public Builder(BucketIAMPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.policyData = defaults.policyData;
+            $ = new BucketIAMPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
+            return bucket(Output.of(bucket));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
-        }        public BucketIAMPolicyArgs build() {
-            return new BucketIAMPolicyArgs(bucket, policyData);
+            return policyData(Output.of(policyData));
+        }
+
+        public BucketIAMPolicyArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

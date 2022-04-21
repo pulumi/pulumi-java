@@ -5,9 +5,9 @@ package com.pulumi.gcp.iap.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class WebTypeAppEngingIamPolicyState extends com.pulumi.resources.R
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class WebTypeAppEngingIamPolicyState extends com.pulumi.resources.R
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WebTypeAppEngingIamPolicyState extends com.pulumi.resources.R
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
     /**
@@ -55,89 +55,78 @@ public final class WebTypeAppEngingIamPolicyState extends com.pulumi.resources.R
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public WebTypeAppEngingIamPolicyState(
-        @Nullable Output<String> appId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> policyData,
-        @Nullable Output<String> project) {
-        this.appId = appId;
-        this.etag = etag;
-        this.policyData = policyData;
-        this.project = project;
-    }
+    private WebTypeAppEngingIamPolicyState() {}
 
-    private WebTypeAppEngingIamPolicyState() {
-        this.appId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
+    private WebTypeAppEngingIamPolicyState(WebTypeAppEngingIamPolicyState $) {
+        this.appId = $.appId;
+        this.etag = $.etag;
+        this.policyData = $.policyData;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebTypeAppEngingIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> appId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> policyData;
-        private @Nullable Output<String> project;
+        private WebTypeAppEngingIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebTypeAppEngingIamPolicyState();
         }
 
         public Builder(WebTypeAppEngingIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.etag = defaults.etag;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
+            $ = new WebTypeAppEngingIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public WebTypeAppEngingIamPolicyState build() {
-            return new WebTypeAppEngingIamPolicyState(appId, etag, policyData, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public WebTypeAppEngingIamPolicyState build() {
+            return $;
         }
     }
+
 }

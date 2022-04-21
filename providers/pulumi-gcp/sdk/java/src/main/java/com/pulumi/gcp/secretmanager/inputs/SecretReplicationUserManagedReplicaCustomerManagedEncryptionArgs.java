@@ -5,7 +5,6 @@ package com.pulumi.gcp.secretmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryptionA
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final Output<String> kmsKeyName;
+    private Output<String> kmsKeyName;
 
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs(Output<String> kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-    }
+    private SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs() {}
 
-    private SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs() {
-        this.kmsKeyName = Codegen.empty();
+    private SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs(SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs $) {
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kmsKeyName;
+        private SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs();
         }
 
         public Builder(SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(Output<String> kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
+
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
-            return this;
-        }        public SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs build() {
-            return new SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs(kmsKeyName);
+            return kmsKeyName(Output.of(kmsKeyName));
+        }
+
+        public SecretReplicationUserManagedReplicaCustomerManagedEncryptionArgs build() {
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

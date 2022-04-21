@@ -5,13 +5,13 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterExclusionLabelArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterInclusionLabelArgs;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterInventoryArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OsPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
      * 
      */
     @Import(name="all")
-      private final @Nullable Output<Boolean> all;
+    private @Nullable Output<Boolean> all;
 
-    public Output<Boolean> all() {
-        return this.all == null ? Codegen.empty() : this.all;
+    public Optional<Output<Boolean>> all() {
+        return Optional.ofNullable(this.all);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OsPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
      * 
      */
     @Import(name="exclusionLabels")
-      private final @Nullable Output<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>> exclusionLabels;
+    private @Nullable Output<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>> exclusionLabels;
 
-    public Output<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>> exclusionLabels() {
-        return this.exclusionLabels == null ? Codegen.empty() : this.exclusionLabels;
+    public Optional<Output<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>>> exclusionLabels() {
+        return Optional.ofNullable(this.exclusionLabels);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class OsPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
      * 
      */
     @Import(name="inclusionLabels")
-      private final @Nullable Output<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>> inclusionLabels;
+    private @Nullable Output<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>> inclusionLabels;
 
-    public Output<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>> inclusionLabels() {
-        return this.inclusionLabels == null ? Codegen.empty() : this.inclusionLabels;
+    public Optional<Output<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>>> inclusionLabels() {
+        return Optional.ofNullable(this.inclusionLabels);
     }
 
     /**
@@ -57,98 +57,90 @@ public final class OsPolicyAssignmentInstanceFilterArgs extends com.pulumi.resou
      * 
      */
     @Import(name="inventories")
-      private final @Nullable Output<List<OsPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
+    private @Nullable Output<List<OsPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
 
-    public Output<List<OsPolicyAssignmentInstanceFilterInventoryArgs>> inventories() {
-        return this.inventories == null ? Codegen.empty() : this.inventories;
+    public Optional<Output<List<OsPolicyAssignmentInstanceFilterInventoryArgs>>> inventories() {
+        return Optional.ofNullable(this.inventories);
     }
 
-    public OsPolicyAssignmentInstanceFilterArgs(
-        @Nullable Output<Boolean> all,
-        @Nullable Output<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>> exclusionLabels,
-        @Nullable Output<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>> inclusionLabels,
-        @Nullable Output<List<OsPolicyAssignmentInstanceFilterInventoryArgs>> inventories) {
-        this.all = all;
-        this.exclusionLabels = exclusionLabels;
-        this.inclusionLabels = inclusionLabels;
-        this.inventories = inventories;
-    }
+    private OsPolicyAssignmentInstanceFilterArgs() {}
 
-    private OsPolicyAssignmentInstanceFilterArgs() {
-        this.all = Codegen.empty();
-        this.exclusionLabels = Codegen.empty();
-        this.inclusionLabels = Codegen.empty();
-        this.inventories = Codegen.empty();
+    private OsPolicyAssignmentInstanceFilterArgs(OsPolicyAssignmentInstanceFilterArgs $) {
+        this.all = $.all;
+        this.exclusionLabels = $.exclusionLabels;
+        this.inclusionLabels = $.inclusionLabels;
+        this.inventories = $.inventories;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentInstanceFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> all;
-        private @Nullable Output<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>> exclusionLabels;
-        private @Nullable Output<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>> inclusionLabels;
-        private @Nullable Output<List<OsPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
+        private OsPolicyAssignmentInstanceFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentInstanceFilterArgs();
         }
 
         public Builder(OsPolicyAssignmentInstanceFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.all = defaults.all;
-    	      this.exclusionLabels = defaults.exclusionLabels;
-    	      this.inclusionLabels = defaults.inclusionLabels;
-    	      this.inventories = defaults.inventories;
+            $ = new OsPolicyAssignmentInstanceFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder all(@Nullable Output<Boolean> all) {
-            this.all = all;
+            $.all = all;
             return this;
         }
-        public Builder all(@Nullable Boolean all) {
-            this.all = Codegen.ofNullable(all);
-            return this;
+
+        public Builder all(Boolean all) {
+            return all(Output.of(all));
         }
+
         public Builder exclusionLabels(@Nullable Output<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>> exclusionLabels) {
-            this.exclusionLabels = exclusionLabels;
+            $.exclusionLabels = exclusionLabels;
             return this;
         }
-        public Builder exclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs> exclusionLabels) {
-            this.exclusionLabels = Codegen.ofNullable(exclusionLabels);
-            return this;
+
+        public Builder exclusionLabels(List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs> exclusionLabels) {
+            return exclusionLabels(Output.of(exclusionLabels));
         }
+
         public Builder exclusionLabels(OsPolicyAssignmentInstanceFilterExclusionLabelArgs... exclusionLabels) {
             return exclusionLabels(List.of(exclusionLabels));
         }
+
         public Builder inclusionLabels(@Nullable Output<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>> inclusionLabels) {
-            this.inclusionLabels = inclusionLabels;
+            $.inclusionLabels = inclusionLabels;
             return this;
         }
-        public Builder inclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs> inclusionLabels) {
-            this.inclusionLabels = Codegen.ofNullable(inclusionLabels);
-            return this;
+
+        public Builder inclusionLabels(List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs> inclusionLabels) {
+            return inclusionLabels(Output.of(inclusionLabels));
         }
+
         public Builder inclusionLabels(OsPolicyAssignmentInstanceFilterInclusionLabelArgs... inclusionLabels) {
             return inclusionLabels(List.of(inclusionLabels));
         }
+
         public Builder inventories(@Nullable Output<List<OsPolicyAssignmentInstanceFilterInventoryArgs>> inventories) {
-            this.inventories = inventories;
+            $.inventories = inventories;
             return this;
         }
-        public Builder inventories(@Nullable List<OsPolicyAssignmentInstanceFilterInventoryArgs> inventories) {
-            this.inventories = Codegen.ofNullable(inventories);
-            return this;
+
+        public Builder inventories(List<OsPolicyAssignmentInstanceFilterInventoryArgs> inventories) {
+            return inventories(Output.of(inventories));
         }
+
         public Builder inventories(OsPolicyAssignmentInstanceFilterInventoryArgs... inventories) {
             return inventories(List.of(inventories));
-        }        public OsPolicyAssignmentInstanceFilterArgs build() {
-            return new OsPolicyAssignmentInstanceFilterArgs(all, exclusionLabels, inclusionLabels, inventories);
+        }
+
+        public OsPolicyAssignmentInstanceFilterArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.MachineImageMachineImageEncryptionKeyGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="guestFlush")
-      private final @Nullable Output<Boolean> guestFlush;
+    private @Nullable Output<Boolean> guestFlush;
 
-    public Output<Boolean> guestFlush() {
-        return this.guestFlush == null ? Codegen.empty() : this.guestFlush;
+    public Optional<Output<Boolean>> guestFlush() {
+        return Optional.ofNullable(this.guestFlush);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="machineImageEncryptionKey")
-      private final @Nullable Output<MachineImageMachineImageEncryptionKeyGetArgs> machineImageEncryptionKey;
+    private @Nullable Output<MachineImageMachineImageEncryptionKeyGetArgs> machineImageEncryptionKey;
 
-    public Output<MachineImageMachineImageEncryptionKeyGetArgs> machineImageEncryptionKey() {
-        return this.machineImageEncryptionKey == null ? Codegen.empty() : this.machineImageEncryptionKey;
+    public Optional<Output<MachineImageMachineImageEncryptionKeyGetArgs>> machineImageEncryptionKey() {
+        return Optional.ofNullable(this.machineImageEncryptionKey);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceInstance")
-      private final @Nullable Output<String> sourceInstance;
+    private @Nullable Output<String> sourceInstance;
 
-    public Output<String> sourceInstance() {
-        return this.sourceInstance == null ? Codegen.empty() : this.sourceInstance;
+    public Optional<Output<String>> sourceInstance() {
+        return Optional.ofNullable(this.sourceInstance);
     }
 
     /**
@@ -106,144 +106,122 @@ public final class MachineImageState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageLocations")
-      private final @Nullable Output<List<String>> storageLocations;
+    private @Nullable Output<List<String>> storageLocations;
 
-    public Output<List<String>> storageLocations() {
-        return this.storageLocations == null ? Codegen.empty() : this.storageLocations;
+    public Optional<Output<List<String>>> storageLocations() {
+        return Optional.ofNullable(this.storageLocations);
     }
 
-    public MachineImageState(
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> guestFlush,
-        @Nullable Output<MachineImageMachineImageEncryptionKeyGetArgs> machineImageEncryptionKey,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> sourceInstance,
-        @Nullable Output<List<String>> storageLocations) {
-        this.description = description;
-        this.guestFlush = guestFlush;
-        this.machineImageEncryptionKey = machineImageEncryptionKey;
-        this.name = name;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.sourceInstance = sourceInstance;
-        this.storageLocations = storageLocations;
-    }
+    private MachineImageState() {}
 
-    private MachineImageState() {
-        this.description = Codegen.empty();
-        this.guestFlush = Codegen.empty();
-        this.machineImageEncryptionKey = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.sourceInstance = Codegen.empty();
-        this.storageLocations = Codegen.empty();
+    private MachineImageState(MachineImageState $) {
+        this.description = $.description;
+        this.guestFlush = $.guestFlush;
+        this.machineImageEncryptionKey = $.machineImageEncryptionKey;
+        this.name = $.name;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.sourceInstance = $.sourceInstance;
+        this.storageLocations = $.storageLocations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MachineImageState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> guestFlush;
-        private @Nullable Output<MachineImageMachineImageEncryptionKeyGetArgs> machineImageEncryptionKey;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> sourceInstance;
-        private @Nullable Output<List<String>> storageLocations;
+        private MachineImageState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MachineImageState();
         }
 
         public Builder(MachineImageState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.guestFlush = defaults.guestFlush;
-    	      this.machineImageEncryptionKey = defaults.machineImageEncryptionKey;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.sourceInstance = defaults.sourceInstance;
-    	      this.storageLocations = defaults.storageLocations;
+            $ = new MachineImageState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
-            this.guestFlush = guestFlush;
+            $.guestFlush = guestFlush;
             return this;
         }
-        public Builder guestFlush(@Nullable Boolean guestFlush) {
-            this.guestFlush = Codegen.ofNullable(guestFlush);
-            return this;
+
+        public Builder guestFlush(Boolean guestFlush) {
+            return guestFlush(Output.of(guestFlush));
         }
+
         public Builder machineImageEncryptionKey(@Nullable Output<MachineImageMachineImageEncryptionKeyGetArgs> machineImageEncryptionKey) {
-            this.machineImageEncryptionKey = machineImageEncryptionKey;
+            $.machineImageEncryptionKey = machineImageEncryptionKey;
             return this;
         }
-        public Builder machineImageEncryptionKey(@Nullable MachineImageMachineImageEncryptionKeyGetArgs machineImageEncryptionKey) {
-            this.machineImageEncryptionKey = Codegen.ofNullable(machineImageEncryptionKey);
-            return this;
+
+        public Builder machineImageEncryptionKey(MachineImageMachineImageEncryptionKeyGetArgs machineImageEncryptionKey) {
+            return machineImageEncryptionKey(Output.of(machineImageEncryptionKey));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder sourceInstance(@Nullable Output<String> sourceInstance) {
-            this.sourceInstance = sourceInstance;
+            $.sourceInstance = sourceInstance;
             return this;
         }
-        public Builder sourceInstance(@Nullable String sourceInstance) {
-            this.sourceInstance = Codegen.ofNullable(sourceInstance);
-            return this;
+
+        public Builder sourceInstance(String sourceInstance) {
+            return sourceInstance(Output.of(sourceInstance));
         }
+
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
-            this.storageLocations = storageLocations;
+            $.storageLocations = storageLocations;
             return this;
         }
-        public Builder storageLocations(@Nullable List<String> storageLocations) {
-            this.storageLocations = Codegen.ofNullable(storageLocations);
-            return this;
+
+        public Builder storageLocations(List<String> storageLocations) {
+            return storageLocations(Output.of(storageLocations));
         }
+
         public Builder storageLocations(String... storageLocations) {
             return storageLocations(List.of(storageLocations));
-        }        public MachineImageState build() {
-            return new MachineImageState(description, guestFlush, machineImageEncryptionKey, name, project, selfLink, sourceInstance, storageLocations);
+        }
+
+        public MachineImageState build() {
+            return $;
         }
     }
+
 }

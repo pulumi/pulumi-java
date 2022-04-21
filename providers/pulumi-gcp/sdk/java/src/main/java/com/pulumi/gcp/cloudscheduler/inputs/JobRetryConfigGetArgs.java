@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudscheduler.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class JobRetryConfigGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maxBackoffDuration")
-      private final @Nullable Output<String> maxBackoffDuration;
+    private @Nullable Output<String> maxBackoffDuration;
 
-    public Output<String> maxBackoffDuration() {
-        return this.maxBackoffDuration == null ? Codegen.empty() : this.maxBackoffDuration;
+    public Optional<Output<String>> maxBackoffDuration() {
+        return Optional.ofNullable(this.maxBackoffDuration);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class JobRetryConfigGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maxDoublings")
-      private final @Nullable Output<Integer> maxDoublings;
+    private @Nullable Output<Integer> maxDoublings;
 
-    public Output<Integer> maxDoublings() {
-        return this.maxDoublings == null ? Codegen.empty() : this.maxDoublings;
+    public Optional<Output<Integer>> maxDoublings() {
+        return Optional.ofNullable(this.maxDoublings);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class JobRetryConfigGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maxRetryDuration")
-      private final @Nullable Output<String> maxRetryDuration;
+    private @Nullable Output<String> maxRetryDuration;
 
-    public Output<String> maxRetryDuration() {
-        return this.maxRetryDuration == null ? Codegen.empty() : this.maxRetryDuration;
+    public Optional<Output<String>> maxRetryDuration() {
+        return Optional.ofNullable(this.maxRetryDuration);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class JobRetryConfigGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="minBackoffDuration")
-      private final @Nullable Output<String> minBackoffDuration;
+    private @Nullable Output<String> minBackoffDuration;
 
-    public Output<String> minBackoffDuration() {
-        return this.minBackoffDuration == null ? Codegen.empty() : this.minBackoffDuration;
+    public Optional<Output<String>> minBackoffDuration() {
+        return Optional.ofNullable(this.minBackoffDuration);
     }
 
     /**
@@ -74,102 +74,88 @@ public final class JobRetryConfigGetArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="retryCount")
-      private final @Nullable Output<Integer> retryCount;
+    private @Nullable Output<Integer> retryCount;
 
-    public Output<Integer> retryCount() {
-        return this.retryCount == null ? Codegen.empty() : this.retryCount;
+    public Optional<Output<Integer>> retryCount() {
+        return Optional.ofNullable(this.retryCount);
     }
 
-    public JobRetryConfigGetArgs(
-        @Nullable Output<String> maxBackoffDuration,
-        @Nullable Output<Integer> maxDoublings,
-        @Nullable Output<String> maxRetryDuration,
-        @Nullable Output<String> minBackoffDuration,
-        @Nullable Output<Integer> retryCount) {
-        this.maxBackoffDuration = maxBackoffDuration;
-        this.maxDoublings = maxDoublings;
-        this.maxRetryDuration = maxRetryDuration;
-        this.minBackoffDuration = minBackoffDuration;
-        this.retryCount = retryCount;
-    }
+    private JobRetryConfigGetArgs() {}
 
-    private JobRetryConfigGetArgs() {
-        this.maxBackoffDuration = Codegen.empty();
-        this.maxDoublings = Codegen.empty();
-        this.maxRetryDuration = Codegen.empty();
-        this.minBackoffDuration = Codegen.empty();
-        this.retryCount = Codegen.empty();
+    private JobRetryConfigGetArgs(JobRetryConfigGetArgs $) {
+        this.maxBackoffDuration = $.maxBackoffDuration;
+        this.maxDoublings = $.maxDoublings;
+        this.maxRetryDuration = $.maxRetryDuration;
+        this.minBackoffDuration = $.minBackoffDuration;
+        this.retryCount = $.retryCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobRetryConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> maxBackoffDuration;
-        private @Nullable Output<Integer> maxDoublings;
-        private @Nullable Output<String> maxRetryDuration;
-        private @Nullable Output<String> minBackoffDuration;
-        private @Nullable Output<Integer> retryCount;
+        private JobRetryConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobRetryConfigGetArgs();
         }
 
         public Builder(JobRetryConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxBackoffDuration = defaults.maxBackoffDuration;
-    	      this.maxDoublings = defaults.maxDoublings;
-    	      this.maxRetryDuration = defaults.maxRetryDuration;
-    	      this.minBackoffDuration = defaults.minBackoffDuration;
-    	      this.retryCount = defaults.retryCount;
+            $ = new JobRetryConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxBackoffDuration(@Nullable Output<String> maxBackoffDuration) {
-            this.maxBackoffDuration = maxBackoffDuration;
+            $.maxBackoffDuration = maxBackoffDuration;
             return this;
         }
-        public Builder maxBackoffDuration(@Nullable String maxBackoffDuration) {
-            this.maxBackoffDuration = Codegen.ofNullable(maxBackoffDuration);
-            return this;
+
+        public Builder maxBackoffDuration(String maxBackoffDuration) {
+            return maxBackoffDuration(Output.of(maxBackoffDuration));
         }
+
         public Builder maxDoublings(@Nullable Output<Integer> maxDoublings) {
-            this.maxDoublings = maxDoublings;
+            $.maxDoublings = maxDoublings;
             return this;
         }
-        public Builder maxDoublings(@Nullable Integer maxDoublings) {
-            this.maxDoublings = Codegen.ofNullable(maxDoublings);
-            return this;
+
+        public Builder maxDoublings(Integer maxDoublings) {
+            return maxDoublings(Output.of(maxDoublings));
         }
+
         public Builder maxRetryDuration(@Nullable Output<String> maxRetryDuration) {
-            this.maxRetryDuration = maxRetryDuration;
+            $.maxRetryDuration = maxRetryDuration;
             return this;
         }
-        public Builder maxRetryDuration(@Nullable String maxRetryDuration) {
-            this.maxRetryDuration = Codegen.ofNullable(maxRetryDuration);
-            return this;
+
+        public Builder maxRetryDuration(String maxRetryDuration) {
+            return maxRetryDuration(Output.of(maxRetryDuration));
         }
+
         public Builder minBackoffDuration(@Nullable Output<String> minBackoffDuration) {
-            this.minBackoffDuration = minBackoffDuration;
+            $.minBackoffDuration = minBackoffDuration;
             return this;
         }
-        public Builder minBackoffDuration(@Nullable String minBackoffDuration) {
-            this.minBackoffDuration = Codegen.ofNullable(minBackoffDuration);
-            return this;
+
+        public Builder minBackoffDuration(String minBackoffDuration) {
+            return minBackoffDuration(Output.of(minBackoffDuration));
         }
+
         public Builder retryCount(@Nullable Output<Integer> retryCount) {
-            this.retryCount = retryCount;
+            $.retryCount = retryCount;
             return this;
         }
-        public Builder retryCount(@Nullable Integer retryCount) {
-            this.retryCount = Codegen.ofNullable(retryCount);
-            return this;
-        }        public JobRetryConfigGetArgs build() {
-            return new JobRetryConfigGetArgs(maxBackoffDuration, maxDoublings, maxRetryDuration, minBackoffDuration, retryCount);
+
+        public Builder retryCount(Integer retryCount) {
+            return retryCount(Output.of(retryCount));
+        }
+
+        public JobRetryConfigGetArgs build() {
+            return $;
         }
     }
+
 }

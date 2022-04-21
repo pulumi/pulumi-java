@@ -5,10 +5,10 @@ package com.pulumi.gcp.gameservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
      * 
      */
     @Import(name="realms")
-      private final @Nullable Output<List<String>> realms;
+    private @Nullable Output<List<String>> realms;
 
-    public Output<List<String>> realms() {
-        return this.realms == null ? Codegen.empty() : this.realms;
+    public Optional<Output<List<String>>> realms() {
+        return Optional.ofNullable(this.realms);
     }
 
-    public GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs(@Nullable Output<List<String>> realms) {
-        this.realms = realms;
-    }
+    private GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs() {}
 
-    private GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs() {
-        this.realms = Codegen.empty();
+    private GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs(GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs $) {
+        this.realms = $.realms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> realms;
+        private GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs();
         }
 
         public Builder(GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.realms = defaults.realms;
+            $ = new GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder realms(@Nullable Output<List<String>> realms) {
-            this.realms = realms;
+            $.realms = realms;
             return this;
         }
-        public Builder realms(@Nullable List<String> realms) {
-            this.realms = Codegen.ofNullable(realms);
-            return this;
+
+        public Builder realms(List<String> realms) {
+            return realms(Output.of(realms));
         }
+
         public Builder realms(String... realms) {
             return realms(List.of(realms));
-        }        public GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs build() {
-            return new GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs(realms);
+        }
+
+        public GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SharedVPCServiceProjectState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="hostProject")
-      private final @Nullable Output<String> hostProject;
+    private @Nullable Output<String> hostProject;
 
-    public Output<String> hostProject() {
-        return this.hostProject == null ? Codegen.empty() : this.hostProject;
+    public Optional<Output<String>> hostProject() {
+        return Optional.ofNullable(this.hostProject);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class SharedVPCServiceProjectState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="serviceProject")
-      private final @Nullable Output<String> serviceProject;
+    private @Nullable Output<String> serviceProject;
 
-    public Output<String> serviceProject() {
-        return this.serviceProject == null ? Codegen.empty() : this.serviceProject;
+    public Optional<Output<String>> serviceProject() {
+        return Optional.ofNullable(this.serviceProject);
     }
 
-    public SharedVPCServiceProjectState(
-        @Nullable Output<String> hostProject,
-        @Nullable Output<String> serviceProject) {
-        this.hostProject = hostProject;
-        this.serviceProject = serviceProject;
-    }
+    private SharedVPCServiceProjectState() {}
 
-    private SharedVPCServiceProjectState() {
-        this.hostProject = Codegen.empty();
-        this.serviceProject = Codegen.empty();
+    private SharedVPCServiceProjectState(SharedVPCServiceProjectState $) {
+        this.hostProject = $.hostProject;
+        this.serviceProject = $.serviceProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SharedVPCServiceProjectState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hostProject;
-        private @Nullable Output<String> serviceProject;
+        private SharedVPCServiceProjectState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SharedVPCServiceProjectState();
         }
 
         public Builder(SharedVPCServiceProjectState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostProject = defaults.hostProject;
-    	      this.serviceProject = defaults.serviceProject;
+            $ = new SharedVPCServiceProjectState(Objects.requireNonNull(defaults));
         }
 
         public Builder hostProject(@Nullable Output<String> hostProject) {
-            this.hostProject = hostProject;
+            $.hostProject = hostProject;
             return this;
         }
-        public Builder hostProject(@Nullable String hostProject) {
-            this.hostProject = Codegen.ofNullable(hostProject);
-            return this;
+
+        public Builder hostProject(String hostProject) {
+            return hostProject(Output.of(hostProject));
         }
+
         public Builder serviceProject(@Nullable Output<String> serviceProject) {
-            this.serviceProject = serviceProject;
+            $.serviceProject = serviceProject;
             return this;
         }
-        public Builder serviceProject(@Nullable String serviceProject) {
-            this.serviceProject = Codegen.ofNullable(serviceProject);
-            return this;
-        }        public SharedVPCServiceProjectState build() {
-            return new SharedVPCServiceProjectState(hostProject, serviceProject);
+
+        public Builder serviceProject(String serviceProject) {
+            return serviceProject(Output.of(serviceProject));
+        }
+
+        public SharedVPCServiceProjectState build() {
+            return $;
         }
     }
+
 }

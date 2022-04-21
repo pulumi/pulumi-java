@@ -5,9 +5,9 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class MonitoredProjectState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MonitoredProjectState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="metricsScope")
-      private final @Nullable Output<String> metricsScope;
+    private @Nullable Output<String> metricsScope;
 
-    public Output<String> metricsScope() {
-        return this.metricsScope == null ? Codegen.empty() : this.metricsScope;
+    public Optional<Output<String>> metricsScope() {
+        return Optional.ofNullable(this.metricsScope);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class MonitoredProjectState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public MonitoredProjectState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> metricsScope,
-        @Nullable Output<String> name) {
-        this.createTime = createTime;
-        this.metricsScope = metricsScope;
-        this.name = name;
-    }
+    private MonitoredProjectState() {}
 
-    private MonitoredProjectState() {
-        this.createTime = Codegen.empty();
-        this.metricsScope = Codegen.empty();
-        this.name = Codegen.empty();
+    private MonitoredProjectState(MonitoredProjectState $) {
+        this.createTime = $.createTime;
+        this.metricsScope = $.metricsScope;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoredProjectState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> metricsScope;
-        private @Nullable Output<String> name;
+        private MonitoredProjectState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoredProjectState();
         }
 
         public Builder(MonitoredProjectState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.metricsScope = defaults.metricsScope;
-    	      this.name = defaults.name;
+            $ = new MonitoredProjectState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder metricsScope(@Nullable Output<String> metricsScope) {
-            this.metricsScope = metricsScope;
+            $.metricsScope = metricsScope;
             return this;
         }
-        public Builder metricsScope(@Nullable String metricsScope) {
-            this.metricsScope = Codegen.ofNullable(metricsScope);
-            return this;
+
+        public Builder metricsScope(String metricsScope) {
+            return metricsScope(Output.of(metricsScope));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public MonitoredProjectState build() {
-            return new MonitoredProjectState(createTime, metricsScope, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public MonitoredProjectState build() {
+            return $;
         }
     }
+
 }

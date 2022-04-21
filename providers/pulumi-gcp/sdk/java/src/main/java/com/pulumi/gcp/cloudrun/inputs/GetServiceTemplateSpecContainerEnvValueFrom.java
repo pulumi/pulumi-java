@@ -14,48 +14,49 @@ public final class GetServiceTemplateSpecContainerEnvValueFrom extends com.pulum
     public static final GetServiceTemplateSpecContainerEnvValueFrom Empty = new GetServiceTemplateSpecContainerEnvValueFrom();
 
     @Import(name="secretKeyReves", required=true)
-      private final List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves;
+    private List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves;
 
     public List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves() {
         return this.secretKeyReves;
     }
 
-    public GetServiceTemplateSpecContainerEnvValueFrom(List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves) {
-        this.secretKeyReves = Objects.requireNonNull(secretKeyReves, "expected parameter 'secretKeyReves' to be non-null");
-    }
+    private GetServiceTemplateSpecContainerEnvValueFrom() {}
 
-    private GetServiceTemplateSpecContainerEnvValueFrom() {
-        this.secretKeyReves = List.of();
+    private GetServiceTemplateSpecContainerEnvValueFrom(GetServiceTemplateSpecContainerEnvValueFrom $) {
+        this.secretKeyReves = $.secretKeyReves;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateSpecContainerEnvValueFrom defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves;
+        private GetServiceTemplateSpecContainerEnvValueFrom $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateSpecContainerEnvValueFrom();
         }
 
         public Builder(GetServiceTemplateSpecContainerEnvValueFrom defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretKeyReves = defaults.secretKeyReves;
+            $ = new GetServiceTemplateSpecContainerEnvValueFrom(Objects.requireNonNull(defaults));
         }
 
         public Builder secretKeyReves(List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves) {
-            this.secretKeyReves = Objects.requireNonNull(secretKeyReves);
+            $.secretKeyReves = secretKeyReves;
             return this;
         }
+
         public Builder secretKeyReves(GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef... secretKeyReves) {
             return secretKeyReves(List.of(secretKeyReves));
-        }        public GetServiceTemplateSpecContainerEnvValueFrom build() {
-            return new GetServiceTemplateSpecContainerEnvValueFrom(secretKeyReves);
+        }
+
+        public GetServiceTemplateSpecContainerEnvValueFrom build() {
+            $.secretKeyReves = Objects.requireNonNull($.secretKeyReves, "expected parameter 'secretKeyReves' to be non-null");
+            return $;
         }
     }
+
 }

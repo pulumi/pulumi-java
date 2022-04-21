@@ -5,9 +5,9 @@ package com.pulumi.gcp.vertex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class AiMetadataStoreEncryptionSpecArgs extends com.pulumi.resource
      * 
      */
     @Import(name="kmsKeyName")
-      private final @Nullable Output<String> kmsKeyName;
+    private @Nullable Output<String> kmsKeyName;
 
-    public Output<String> kmsKeyName() {
-        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
     }
 
-    public AiMetadataStoreEncryptionSpecArgs(@Nullable Output<String> kmsKeyName) {
-        this.kmsKeyName = kmsKeyName;
-    }
+    private AiMetadataStoreEncryptionSpecArgs() {}
 
-    private AiMetadataStoreEncryptionSpecArgs() {
-        this.kmsKeyName = Codegen.empty();
+    private AiMetadataStoreEncryptionSpecArgs(AiMetadataStoreEncryptionSpecArgs $) {
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AiMetadataStoreEncryptionSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyName;
+        private AiMetadataStoreEncryptionSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AiMetadataStoreEncryptionSpecArgs();
         }
 
         public Builder(AiMetadataStoreEncryptionSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new AiMetadataStoreEncryptionSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
-            this.kmsKeyName = kmsKeyName;
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
-        public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
-            return this;
-        }        public AiMetadataStoreEncryptionSpecArgs build() {
-            return new AiMetadataStoreEncryptionSpecArgs(kmsKeyName);
+
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
+        }
+
+        public AiMetadataStoreEncryptionSpecArgs build() {
+            return $;
         }
     }
+
 }

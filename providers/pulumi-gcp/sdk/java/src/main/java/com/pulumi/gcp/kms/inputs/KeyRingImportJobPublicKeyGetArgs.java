@@ -5,9 +5,9 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class KeyRingImportJobPublicKeyGetArgs extends com.pulumi.resources
     public static final KeyRingImportJobPublicKeyGetArgs Empty = new KeyRingImportJobPublicKeyGetArgs();
 
     @Import(name="pem")
-      private final @Nullable Output<String> pem;
+    private @Nullable Output<String> pem;
 
-    public Output<String> pem() {
-        return this.pem == null ? Codegen.empty() : this.pem;
+    public Optional<Output<String>> pem() {
+        return Optional.ofNullable(this.pem);
     }
 
-    public KeyRingImportJobPublicKeyGetArgs(@Nullable Output<String> pem) {
-        this.pem = pem;
-    }
+    private KeyRingImportJobPublicKeyGetArgs() {}
 
-    private KeyRingImportJobPublicKeyGetArgs() {
-        this.pem = Codegen.empty();
+    private KeyRingImportJobPublicKeyGetArgs(KeyRingImportJobPublicKeyGetArgs $) {
+        this.pem = $.pem;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyRingImportJobPublicKeyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pem;
+        private KeyRingImportJobPublicKeyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyRingImportJobPublicKeyGetArgs();
         }
 
         public Builder(KeyRingImportJobPublicKeyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pem = defaults.pem;
+            $ = new KeyRingImportJobPublicKeyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pem(@Nullable Output<String> pem) {
-            this.pem = pem;
+            $.pem = pem;
             return this;
         }
-        public Builder pem(@Nullable String pem) {
-            this.pem = Codegen.ofNullable(pem);
-            return this;
-        }        public KeyRingImportJobPublicKeyGetArgs build() {
-            return new KeyRingImportJobPublicKeyGetArgs(pem);
+
+        public Builder pem(String pem) {
+            return pem(Output.of(pem));
+        }
+
+        public KeyRingImportJobPublicKeyGetArgs build() {
+            return $;
         }
     }
+
 }

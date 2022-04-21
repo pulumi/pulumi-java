@@ -5,7 +5,6 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.pubsub.inputs.SubscriptionDeadLetterPolicyGetArgs;
 import com.pulumi.gcp.pubsub.inputs.SubscriptionExpirationPolicyGetArgs;
 import com.pulumi.gcp.pubsub.inputs.SubscriptionPushConfigGetArgs;
@@ -15,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -41,10 +41,10 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ackDeadlineSeconds")
-      private final @Nullable Output<Integer> ackDeadlineSeconds;
+    private @Nullable Output<Integer> ackDeadlineSeconds;
 
-    public Output<Integer> ackDeadlineSeconds() {
-        return this.ackDeadlineSeconds == null ? Codegen.empty() : this.ackDeadlineSeconds;
+    public Optional<Output<Integer>> ackDeadlineSeconds() {
+        return Optional.ofNullable(this.ackDeadlineSeconds);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deadLetterPolicy")
-      private final @Nullable Output<SubscriptionDeadLetterPolicyGetArgs> deadLetterPolicy;
+    private @Nullable Output<SubscriptionDeadLetterPolicyGetArgs> deadLetterPolicy;
 
-    public Output<SubscriptionDeadLetterPolicyGetArgs> deadLetterPolicy() {
-        return this.deadLetterPolicy == null ? Codegen.empty() : this.deadLetterPolicy;
+    public Optional<Output<SubscriptionDeadLetterPolicyGetArgs>> deadLetterPolicy() {
+        return Optional.ofNullable(this.deadLetterPolicy);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableMessageOrdering")
-      private final @Nullable Output<Boolean> enableMessageOrdering;
+    private @Nullable Output<Boolean> enableMessageOrdering;
 
-    public Output<Boolean> enableMessageOrdering() {
-        return this.enableMessageOrdering == null ? Codegen.empty() : this.enableMessageOrdering;
+    public Optional<Output<Boolean>> enableMessageOrdering() {
+        return Optional.ofNullable(this.enableMessageOrdering);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationPolicy")
-      private final @Nullable Output<SubscriptionExpirationPolicyGetArgs> expirationPolicy;
+    private @Nullable Output<SubscriptionExpirationPolicyGetArgs> expirationPolicy;
 
-    public Output<SubscriptionExpirationPolicyGetArgs> expirationPolicy() {
-        return this.expirationPolicy == null ? Codegen.empty() : this.expirationPolicy;
+    public Optional<Output<SubscriptionExpirationPolicyGetArgs>> expirationPolicy() {
+        return Optional.ofNullable(this.expirationPolicy);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="messageRetentionDuration")
-      private final @Nullable Output<String> messageRetentionDuration;
+    private @Nullable Output<String> messageRetentionDuration;
 
-    public Output<String> messageRetentionDuration() {
-        return this.messageRetentionDuration == null ? Codegen.empty() : this.messageRetentionDuration;
+    public Optional<Output<String>> messageRetentionDuration() {
+        return Optional.ofNullable(this.messageRetentionDuration);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pushConfig")
-      private final @Nullable Output<SubscriptionPushConfigGetArgs> pushConfig;
+    private @Nullable Output<SubscriptionPushConfigGetArgs> pushConfig;
 
-    public Output<SubscriptionPushConfigGetArgs> pushConfig() {
-        return this.pushConfig == null ? Codegen.empty() : this.pushConfig;
+    public Optional<Output<SubscriptionPushConfigGetArgs>> pushConfig() {
+        return Optional.ofNullable(this.pushConfig);
     }
 
     /**
@@ -184,10 +184,10 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retainAckedMessages")
-      private final @Nullable Output<Boolean> retainAckedMessages;
+    private @Nullable Output<Boolean> retainAckedMessages;
 
-    public Output<Boolean> retainAckedMessages() {
-        return this.retainAckedMessages == null ? Codegen.empty() : this.retainAckedMessages;
+    public Optional<Output<Boolean>> retainAckedMessages() {
+        return Optional.ofNullable(this.retainAckedMessages);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="retryPolicy")
-      private final @Nullable Output<SubscriptionRetryPolicyGetArgs> retryPolicy;
+    private @Nullable Output<SubscriptionRetryPolicyGetArgs> retryPolicy;
 
-    public Output<SubscriptionRetryPolicyGetArgs> retryPolicy() {
-        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
+    public Optional<Output<SubscriptionRetryPolicyGetArgs>> retryPolicy() {
+        return Optional.ofNullable(this.retryPolicy);
     }
 
     /**
@@ -209,206 +209,168 @@ public final class SubscriptionState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public SubscriptionState(
-        @Nullable Output<Integer> ackDeadlineSeconds,
-        @Nullable Output<SubscriptionDeadLetterPolicyGetArgs> deadLetterPolicy,
-        @Nullable Output<Boolean> enableMessageOrdering,
-        @Nullable Output<SubscriptionExpirationPolicyGetArgs> expirationPolicy,
-        @Nullable Output<String> filter,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> messageRetentionDuration,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<SubscriptionPushConfigGetArgs> pushConfig,
-        @Nullable Output<Boolean> retainAckedMessages,
-        @Nullable Output<SubscriptionRetryPolicyGetArgs> retryPolicy,
-        @Nullable Output<String> topic) {
-        this.ackDeadlineSeconds = ackDeadlineSeconds;
-        this.deadLetterPolicy = deadLetterPolicy;
-        this.enableMessageOrdering = enableMessageOrdering;
-        this.expirationPolicy = expirationPolicy;
-        this.filter = filter;
-        this.labels = labels;
-        this.messageRetentionDuration = messageRetentionDuration;
-        this.name = name;
-        this.project = project;
-        this.pushConfig = pushConfig;
-        this.retainAckedMessages = retainAckedMessages;
-        this.retryPolicy = retryPolicy;
-        this.topic = topic;
-    }
+    private SubscriptionState() {}
 
-    private SubscriptionState() {
-        this.ackDeadlineSeconds = Codegen.empty();
-        this.deadLetterPolicy = Codegen.empty();
-        this.enableMessageOrdering = Codegen.empty();
-        this.expirationPolicy = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.messageRetentionDuration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.pushConfig = Codegen.empty();
-        this.retainAckedMessages = Codegen.empty();
-        this.retryPolicy = Codegen.empty();
-        this.topic = Codegen.empty();
+    private SubscriptionState(SubscriptionState $) {
+        this.ackDeadlineSeconds = $.ackDeadlineSeconds;
+        this.deadLetterPolicy = $.deadLetterPolicy;
+        this.enableMessageOrdering = $.enableMessageOrdering;
+        this.expirationPolicy = $.expirationPolicy;
+        this.filter = $.filter;
+        this.labels = $.labels;
+        this.messageRetentionDuration = $.messageRetentionDuration;
+        this.name = $.name;
+        this.project = $.project;
+        this.pushConfig = $.pushConfig;
+        this.retainAckedMessages = $.retainAckedMessages;
+        this.retryPolicy = $.retryPolicy;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> ackDeadlineSeconds;
-        private @Nullable Output<SubscriptionDeadLetterPolicyGetArgs> deadLetterPolicy;
-        private @Nullable Output<Boolean> enableMessageOrdering;
-        private @Nullable Output<SubscriptionExpirationPolicyGetArgs> expirationPolicy;
-        private @Nullable Output<String> filter;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> messageRetentionDuration;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<SubscriptionPushConfigGetArgs> pushConfig;
-        private @Nullable Output<Boolean> retainAckedMessages;
-        private @Nullable Output<SubscriptionRetryPolicyGetArgs> retryPolicy;
-        private @Nullable Output<String> topic;
+        private SubscriptionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionState();
         }
 
         public Builder(SubscriptionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ackDeadlineSeconds = defaults.ackDeadlineSeconds;
-    	      this.deadLetterPolicy = defaults.deadLetterPolicy;
-    	      this.enableMessageOrdering = defaults.enableMessageOrdering;
-    	      this.expirationPolicy = defaults.expirationPolicy;
-    	      this.filter = defaults.filter;
-    	      this.labels = defaults.labels;
-    	      this.messageRetentionDuration = defaults.messageRetentionDuration;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.pushConfig = defaults.pushConfig;
-    	      this.retainAckedMessages = defaults.retainAckedMessages;
-    	      this.retryPolicy = defaults.retryPolicy;
-    	      this.topic = defaults.topic;
+            $ = new SubscriptionState(Objects.requireNonNull(defaults));
         }
 
         public Builder ackDeadlineSeconds(@Nullable Output<Integer> ackDeadlineSeconds) {
-            this.ackDeadlineSeconds = ackDeadlineSeconds;
+            $.ackDeadlineSeconds = ackDeadlineSeconds;
             return this;
         }
-        public Builder ackDeadlineSeconds(@Nullable Integer ackDeadlineSeconds) {
-            this.ackDeadlineSeconds = Codegen.ofNullable(ackDeadlineSeconds);
-            return this;
+
+        public Builder ackDeadlineSeconds(Integer ackDeadlineSeconds) {
+            return ackDeadlineSeconds(Output.of(ackDeadlineSeconds));
         }
+
         public Builder deadLetterPolicy(@Nullable Output<SubscriptionDeadLetterPolicyGetArgs> deadLetterPolicy) {
-            this.deadLetterPolicy = deadLetterPolicy;
+            $.deadLetterPolicy = deadLetterPolicy;
             return this;
         }
-        public Builder deadLetterPolicy(@Nullable SubscriptionDeadLetterPolicyGetArgs deadLetterPolicy) {
-            this.deadLetterPolicy = Codegen.ofNullable(deadLetterPolicy);
-            return this;
+
+        public Builder deadLetterPolicy(SubscriptionDeadLetterPolicyGetArgs deadLetterPolicy) {
+            return deadLetterPolicy(Output.of(deadLetterPolicy));
         }
+
         public Builder enableMessageOrdering(@Nullable Output<Boolean> enableMessageOrdering) {
-            this.enableMessageOrdering = enableMessageOrdering;
+            $.enableMessageOrdering = enableMessageOrdering;
             return this;
         }
-        public Builder enableMessageOrdering(@Nullable Boolean enableMessageOrdering) {
-            this.enableMessageOrdering = Codegen.ofNullable(enableMessageOrdering);
-            return this;
+
+        public Builder enableMessageOrdering(Boolean enableMessageOrdering) {
+            return enableMessageOrdering(Output.of(enableMessageOrdering));
         }
+
         public Builder expirationPolicy(@Nullable Output<SubscriptionExpirationPolicyGetArgs> expirationPolicy) {
-            this.expirationPolicy = expirationPolicy;
+            $.expirationPolicy = expirationPolicy;
             return this;
         }
-        public Builder expirationPolicy(@Nullable SubscriptionExpirationPolicyGetArgs expirationPolicy) {
-            this.expirationPolicy = Codegen.ofNullable(expirationPolicy);
-            return this;
+
+        public Builder expirationPolicy(SubscriptionExpirationPolicyGetArgs expirationPolicy) {
+            return expirationPolicy(Output.of(expirationPolicy));
         }
+
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder messageRetentionDuration(@Nullable Output<String> messageRetentionDuration) {
-            this.messageRetentionDuration = messageRetentionDuration;
+            $.messageRetentionDuration = messageRetentionDuration;
             return this;
         }
-        public Builder messageRetentionDuration(@Nullable String messageRetentionDuration) {
-            this.messageRetentionDuration = Codegen.ofNullable(messageRetentionDuration);
-            return this;
+
+        public Builder messageRetentionDuration(String messageRetentionDuration) {
+            return messageRetentionDuration(Output.of(messageRetentionDuration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder pushConfig(@Nullable Output<SubscriptionPushConfigGetArgs> pushConfig) {
-            this.pushConfig = pushConfig;
+            $.pushConfig = pushConfig;
             return this;
         }
-        public Builder pushConfig(@Nullable SubscriptionPushConfigGetArgs pushConfig) {
-            this.pushConfig = Codegen.ofNullable(pushConfig);
-            return this;
+
+        public Builder pushConfig(SubscriptionPushConfigGetArgs pushConfig) {
+            return pushConfig(Output.of(pushConfig));
         }
+
         public Builder retainAckedMessages(@Nullable Output<Boolean> retainAckedMessages) {
-            this.retainAckedMessages = retainAckedMessages;
+            $.retainAckedMessages = retainAckedMessages;
             return this;
         }
-        public Builder retainAckedMessages(@Nullable Boolean retainAckedMessages) {
-            this.retainAckedMessages = Codegen.ofNullable(retainAckedMessages);
-            return this;
+
+        public Builder retainAckedMessages(Boolean retainAckedMessages) {
+            return retainAckedMessages(Output.of(retainAckedMessages));
         }
+
         public Builder retryPolicy(@Nullable Output<SubscriptionRetryPolicyGetArgs> retryPolicy) {
-            this.retryPolicy = retryPolicy;
+            $.retryPolicy = retryPolicy;
             return this;
         }
-        public Builder retryPolicy(@Nullable SubscriptionRetryPolicyGetArgs retryPolicy) {
-            this.retryPolicy = Codegen.ofNullable(retryPolicy);
-            return this;
+
+        public Builder retryPolicy(SubscriptionRetryPolicyGetArgs retryPolicy) {
+            return retryPolicy(Output.of(retryPolicy));
         }
+
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
-        }        public SubscriptionState build() {
-            return new SubscriptionState(ackDeadlineSeconds, deadLetterPolicy, enableMessageOrdering, expirationPolicy, filter, labels, messageRetentionDuration, name, project, pushConfig, retainAckedMessages, retryPolicy, topic);
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public SubscriptionState build() {
+            return $;
         }
     }
+
 }

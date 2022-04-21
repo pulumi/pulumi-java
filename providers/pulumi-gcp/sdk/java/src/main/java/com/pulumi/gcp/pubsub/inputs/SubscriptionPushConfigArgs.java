@@ -5,11 +5,11 @@ package com.pulumi.gcp.pubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.pubsub.inputs.SubscriptionPushConfigOidcTokenArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -39,10 +39,10 @@ public final class SubscriptionPushConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<Map<String,String>> attributes;
+    private @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<Map<String,String>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class SubscriptionPushConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="oidcToken")
-      private final @Nullable Output<SubscriptionPushConfigOidcTokenArgs> oidcToken;
+    private @Nullable Output<SubscriptionPushConfigOidcTokenArgs> oidcToken;
 
-    public Output<SubscriptionPushConfigOidcTokenArgs> oidcToken() {
-        return this.oidcToken == null ? Codegen.empty() : this.oidcToken;
+    public Optional<Output<SubscriptionPushConfigOidcTokenArgs>> oidcToken() {
+        return Optional.ofNullable(this.oidcToken);
     }
 
     /**
@@ -65,76 +65,69 @@ public final class SubscriptionPushConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="pushEndpoint", required=true)
-      private final Output<String> pushEndpoint;
+    private Output<String> pushEndpoint;
 
     public Output<String> pushEndpoint() {
         return this.pushEndpoint;
     }
 
-    public SubscriptionPushConfigArgs(
-        @Nullable Output<Map<String,String>> attributes,
-        @Nullable Output<SubscriptionPushConfigOidcTokenArgs> oidcToken,
-        Output<String> pushEndpoint) {
-        this.attributes = attributes;
-        this.oidcToken = oidcToken;
-        this.pushEndpoint = Objects.requireNonNull(pushEndpoint, "expected parameter 'pushEndpoint' to be non-null");
-    }
+    private SubscriptionPushConfigArgs() {}
 
-    private SubscriptionPushConfigArgs() {
-        this.attributes = Codegen.empty();
-        this.oidcToken = Codegen.empty();
-        this.pushEndpoint = Codegen.empty();
+    private SubscriptionPushConfigArgs(SubscriptionPushConfigArgs $) {
+        this.attributes = $.attributes;
+        this.oidcToken = $.oidcToken;
+        this.pushEndpoint = $.pushEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubscriptionPushConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> attributes;
-        private @Nullable Output<SubscriptionPushConfigOidcTokenArgs> oidcToken;
-        private Output<String> pushEndpoint;
+        private SubscriptionPushConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubscriptionPushConfigArgs();
         }
 
         public Builder(SubscriptionPushConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.oidcToken = defaults.oidcToken;
-    	      this.pushEndpoint = defaults.pushEndpoint;
+            $ = new SubscriptionPushConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(Map<String,String> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder oidcToken(@Nullable Output<SubscriptionPushConfigOidcTokenArgs> oidcToken) {
-            this.oidcToken = oidcToken;
+            $.oidcToken = oidcToken;
             return this;
         }
-        public Builder oidcToken(@Nullable SubscriptionPushConfigOidcTokenArgs oidcToken) {
-            this.oidcToken = Codegen.ofNullable(oidcToken);
-            return this;
+
+        public Builder oidcToken(SubscriptionPushConfigOidcTokenArgs oidcToken) {
+            return oidcToken(Output.of(oidcToken));
         }
+
         public Builder pushEndpoint(Output<String> pushEndpoint) {
-            this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
+            $.pushEndpoint = pushEndpoint;
             return this;
         }
+
         public Builder pushEndpoint(String pushEndpoint) {
-            this.pushEndpoint = Output.of(Objects.requireNonNull(pushEndpoint));
-            return this;
-        }        public SubscriptionPushConfigArgs build() {
-            return new SubscriptionPushConfigArgs(attributes, oidcToken, pushEndpoint);
+            return pushEndpoint(Output.of(pushEndpoint));
+        }
+
+        public SubscriptionPushConfigArgs build() {
+            $.pushEndpoint = Objects.requireNonNull($.pushEndpoint, "expected parameter 'pushEndpoint' to be non-null");
+            return $;
         }
     }
+
 }

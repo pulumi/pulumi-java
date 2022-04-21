@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class AwsClusterControlPlaneSshConfigGetArgs extends com.pulumi.res
      * 
      */
     @Import(name="ec2KeyPair", required=true)
-      private final Output<String> ec2KeyPair;
+    private Output<String> ec2KeyPair;
 
     public Output<String> ec2KeyPair() {
         return this.ec2KeyPair;
     }
 
-    public AwsClusterControlPlaneSshConfigGetArgs(Output<String> ec2KeyPair) {
-        this.ec2KeyPair = Objects.requireNonNull(ec2KeyPair, "expected parameter 'ec2KeyPair' to be non-null");
-    }
+    private AwsClusterControlPlaneSshConfigGetArgs() {}
 
-    private AwsClusterControlPlaneSshConfigGetArgs() {
-        this.ec2KeyPair = Codegen.empty();
+    private AwsClusterControlPlaneSshConfigGetArgs(AwsClusterControlPlaneSshConfigGetArgs $) {
+        this.ec2KeyPair = $.ec2KeyPair;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsClusterControlPlaneSshConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ec2KeyPair;
+        private AwsClusterControlPlaneSshConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsClusterControlPlaneSshConfigGetArgs();
         }
 
         public Builder(AwsClusterControlPlaneSshConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ec2KeyPair = defaults.ec2KeyPair;
+            $ = new AwsClusterControlPlaneSshConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ec2KeyPair(Output<String> ec2KeyPair) {
-            this.ec2KeyPair = Objects.requireNonNull(ec2KeyPair);
+            $.ec2KeyPair = ec2KeyPair;
             return this;
         }
+
         public Builder ec2KeyPair(String ec2KeyPair) {
-            this.ec2KeyPair = Output.of(Objects.requireNonNull(ec2KeyPair));
-            return this;
-        }        public AwsClusterControlPlaneSshConfigGetArgs build() {
-            return new AwsClusterControlPlaneSshConfigGetArgs(ec2KeyPair);
+            return ec2KeyPair(Output.of(ec2KeyPair));
+        }
+
+        public AwsClusterControlPlaneSshConfigGetArgs build() {
+            $.ec2KeyPair = Objects.requireNonNull($.ec2KeyPair, "expected parameter 'ec2KeyPair' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,78 +13,73 @@ public final class GetRepositoryPubsubConfig extends com.pulumi.resources.Invoke
     public static final GetRepositoryPubsubConfig Empty = new GetRepositoryPubsubConfig();
 
     @Import(name="messageFormat", required=true)
-      private final String messageFormat;
+    private String messageFormat;
 
     public String messageFormat() {
         return this.messageFormat;
     }
 
     @Import(name="serviceAccountEmail", required=true)
-      private final String serviceAccountEmail;
+    private String serviceAccountEmail;
 
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
     @Import(name="topic", required=true)
-      private final String topic;
+    private String topic;
 
     public String topic() {
         return this.topic;
     }
 
-    public GetRepositoryPubsubConfig(
-        String messageFormat,
-        String serviceAccountEmail,
-        String topic) {
-        this.messageFormat = Objects.requireNonNull(messageFormat, "expected parameter 'messageFormat' to be non-null");
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private GetRepositoryPubsubConfig() {}
 
-    private GetRepositoryPubsubConfig() {
-        this.messageFormat = null;
-        this.serviceAccountEmail = null;
-        this.topic = null;
+    private GetRepositoryPubsubConfig(GetRepositoryPubsubConfig $) {
+        this.messageFormat = $.messageFormat;
+        this.serviceAccountEmail = $.serviceAccountEmail;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRepositoryPubsubConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String messageFormat;
-        private String serviceAccountEmail;
-        private String topic;
+        private GetRepositoryPubsubConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRepositoryPubsubConfig();
         }
 
         public Builder(GetRepositoryPubsubConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageFormat = defaults.messageFormat;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
-    	      this.topic = defaults.topic;
+            $ = new GetRepositoryPubsubConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder messageFormat(String messageFormat) {
-            this.messageFormat = Objects.requireNonNull(messageFormat);
+            $.messageFormat = messageFormat;
             return this;
         }
+
         public Builder serviceAccountEmail(String serviceAccountEmail) {
-            this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
-        }        public GetRepositoryPubsubConfig build() {
-            return new GetRepositoryPubsubConfig(messageFormat, serviceAccountEmail, topic);
+        }
+
+        public GetRepositoryPubsubConfig build() {
+            $.messageFormat = Objects.requireNonNull($.messageFormat, "expected parameter 'messageFormat' to be non-null");
+            $.serviceAccountEmail = Objects.requireNonNull($.serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

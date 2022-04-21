@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataloss;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class PreventionDeidentifyTemplateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="deidentifyConfig", required=true)
-      private final Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
+    private Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
 
     public Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig() {
         return this.deidentifyConfig;
@@ -33,10 +33,10 @@ public final class PreventionDeidentifyTemplateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PreventionDeidentifyTemplateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -59,89 +59,80 @@ public final class PreventionDeidentifyTemplateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="parent", required=true)
-      private final Output<String> parent;
+    private Output<String> parent;
 
     public Output<String> parent() {
         return this.parent;
     }
 
-    public PreventionDeidentifyTemplateArgs(
-        Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> parent) {
-        this.deidentifyConfig = Objects.requireNonNull(deidentifyConfig, "expected parameter 'deidentifyConfig' to be non-null");
-        this.description = description;
-        this.displayName = displayName;
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-    }
+    private PreventionDeidentifyTemplateArgs() {}
 
-    private PreventionDeidentifyTemplateArgs() {
-        this.deidentifyConfig = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.parent = Codegen.empty();
+    private PreventionDeidentifyTemplateArgs(PreventionDeidentifyTemplateArgs $) {
+        this.deidentifyConfig = $.deidentifyConfig;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.parent = $.parent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionDeidentifyTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> parent;
+        private PreventionDeidentifyTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionDeidentifyTemplateArgs();
         }
 
         public Builder(PreventionDeidentifyTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deidentifyConfig = defaults.deidentifyConfig;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.parent = defaults.parent;
+            $ = new PreventionDeidentifyTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deidentifyConfig(Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig) {
-            this.deidentifyConfig = Objects.requireNonNull(deidentifyConfig);
+            $.deidentifyConfig = deidentifyConfig;
             return this;
         }
+
         public Builder deidentifyConfig(PreventionDeidentifyTemplateDeidentifyConfigArgs deidentifyConfig) {
-            this.deidentifyConfig = Output.of(Objects.requireNonNull(deidentifyConfig));
-            return this;
+            return deidentifyConfig(Output.of(deidentifyConfig));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder parent(Output<String> parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Output.of(Objects.requireNonNull(parent));
-            return this;
-        }        public PreventionDeidentifyTemplateArgs build() {
-            return new PreventionDeidentifyTemplateArgs(deidentifyConfig, description, displayName, parent);
+            return parent(Output.of(parent));
+        }
+
+        public PreventionDeidentifyTemplateArgs build() {
+            $.deidentifyConfig = Objects.requireNonNull($.deidentifyConfig, "expected parameter 'deidentifyConfig' to be non-null");
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            return $;
         }
     }
+
 }

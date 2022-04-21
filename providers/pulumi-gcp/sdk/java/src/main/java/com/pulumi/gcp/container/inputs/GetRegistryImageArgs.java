@@ -15,110 +15,97 @@ public final class GetRegistryImageArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetRegistryImageArgs Empty = new GetRegistryImageArgs();
 
     @Import(name="digest")
-      private final @Nullable String digest;
+    private @Nullable String digest;
 
     public Optional<String> digest() {
-        return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
+        return Optional.ofNullable(this.digest);
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
     @Import(name="tag")
-      private final @Nullable String tag;
+    private @Nullable String tag;
 
     public Optional<String> tag() {
-        return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
+        return Optional.ofNullable(this.tag);
     }
 
-    public GetRegistryImageArgs(
-        @Nullable String digest,
-        String name,
-        @Nullable String project,
-        @Nullable String region,
-        @Nullable String tag) {
-        this.digest = digest;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.project = project;
-        this.region = region;
-        this.tag = tag;
-    }
+    private GetRegistryImageArgs() {}
 
-    private GetRegistryImageArgs() {
-        this.digest = null;
-        this.name = null;
-        this.project = null;
-        this.region = null;
-        this.tag = null;
+    private GetRegistryImageArgs(GetRegistryImageArgs $) {
+        this.digest = $.digest;
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegistryImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String digest;
-        private String name;
-        private @Nullable String project;
-        private @Nullable String region;
-        private @Nullable String tag;
+        private GetRegistryImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegistryImageArgs();
         }
 
         public Builder(GetRegistryImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.digest = defaults.digest;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.tag = defaults.tag;
+            $ = new GetRegistryImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder digest(@Nullable String digest) {
-            this.digest = digest;
+            $.digest = digest;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
+
         public Builder tag(@Nullable String tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
-        }        public GetRegistryImageArgs build() {
-            return new GetRegistryImageArgs(digest, name, project, region, tag);
+        }
+
+        public GetRegistryImageArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

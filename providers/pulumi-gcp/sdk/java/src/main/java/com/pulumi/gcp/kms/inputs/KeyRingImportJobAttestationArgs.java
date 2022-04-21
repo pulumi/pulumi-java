@@ -5,9 +5,9 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class KeyRingImportJobAttestationArgs extends com.pulumi.resources.
     public static final KeyRingImportJobAttestationArgs Empty = new KeyRingImportJobAttestationArgs();
 
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     @Import(name="format")
-      private final @Nullable Output<String> format;
+    private @Nullable Output<String> format;
 
-    public Output<String> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<String>> format() {
+        return Optional.ofNullable(this.format);
     }
 
-    public KeyRingImportJobAttestationArgs(
-        @Nullable Output<String> content,
-        @Nullable Output<String> format) {
-        this.content = content;
-        this.format = format;
-    }
+    private KeyRingImportJobAttestationArgs() {}
 
-    private KeyRingImportJobAttestationArgs() {
-        this.content = Codegen.empty();
-        this.format = Codegen.empty();
+    private KeyRingImportJobAttestationArgs(KeyRingImportJobAttestationArgs $) {
+        this.content = $.content;
+        this.format = $.format;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyRingImportJobAttestationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private @Nullable Output<String> format;
+        private KeyRingImportJobAttestationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyRingImportJobAttestationArgs();
         }
 
         public Builder(KeyRingImportJobAttestationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.format = defaults.format;
+            $ = new KeyRingImportJobAttestationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder format(@Nullable Output<String> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable String format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
-        }        public KeyRingImportJobAttestationArgs build() {
-            return new KeyRingImportJobAttestationArgs(content, format);
+
+        public Builder format(String format) {
+            return format(Output.of(format));
+        }
+
+        public KeyRingImportJobAttestationArgs build() {
+            return $;
         }
     }
+
 }

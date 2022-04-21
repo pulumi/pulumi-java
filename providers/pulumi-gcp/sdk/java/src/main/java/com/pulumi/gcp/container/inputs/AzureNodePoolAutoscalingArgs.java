@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class AzureNodePoolAutoscalingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxNodeCount", required=true)
-      private final Output<Integer> maxNodeCount;
+    private Output<Integer> maxNodeCount;
 
     public Output<Integer> maxNodeCount() {
         return this.maxNodeCount;
@@ -30,63 +29,60 @@ public final class AzureNodePoolAutoscalingArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="minNodeCount", required=true)
-      private final Output<Integer> minNodeCount;
+    private Output<Integer> minNodeCount;
 
     public Output<Integer> minNodeCount() {
         return this.minNodeCount;
     }
 
-    public AzureNodePoolAutoscalingArgs(
-        Output<Integer> maxNodeCount,
-        Output<Integer> minNodeCount) {
-        this.maxNodeCount = Objects.requireNonNull(maxNodeCount, "expected parameter 'maxNodeCount' to be non-null");
-        this.minNodeCount = Objects.requireNonNull(minNodeCount, "expected parameter 'minNodeCount' to be non-null");
-    }
+    private AzureNodePoolAutoscalingArgs() {}
 
-    private AzureNodePoolAutoscalingArgs() {
-        this.maxNodeCount = Codegen.empty();
-        this.minNodeCount = Codegen.empty();
+    private AzureNodePoolAutoscalingArgs(AzureNodePoolAutoscalingArgs $) {
+        this.maxNodeCount = $.maxNodeCount;
+        this.minNodeCount = $.minNodeCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureNodePoolAutoscalingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxNodeCount;
-        private Output<Integer> minNodeCount;
+        private AzureNodePoolAutoscalingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureNodePoolAutoscalingArgs();
         }
 
         public Builder(AzureNodePoolAutoscalingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxNodeCount = defaults.maxNodeCount;
-    	      this.minNodeCount = defaults.minNodeCount;
+            $ = new AzureNodePoolAutoscalingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxNodeCount(Output<Integer> maxNodeCount) {
-            this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
+            $.maxNodeCount = maxNodeCount;
             return this;
         }
+
         public Builder maxNodeCount(Integer maxNodeCount) {
-            this.maxNodeCount = Output.of(Objects.requireNonNull(maxNodeCount));
-            return this;
+            return maxNodeCount(Output.of(maxNodeCount));
         }
+
         public Builder minNodeCount(Output<Integer> minNodeCount) {
-            this.minNodeCount = Objects.requireNonNull(minNodeCount);
+            $.minNodeCount = minNodeCount;
             return this;
         }
+
         public Builder minNodeCount(Integer minNodeCount) {
-            this.minNodeCount = Output.of(Objects.requireNonNull(minNodeCount));
-            return this;
-        }        public AzureNodePoolAutoscalingArgs build() {
-            return new AzureNodePoolAutoscalingArgs(maxNodeCount, minNodeCount);
+            return minNodeCount(Output.of(minNodeCount));
+        }
+
+        public AzureNodePoolAutoscalingArgs build() {
+            $.maxNodeCount = Objects.requireNonNull($.maxNodeCount, "expected parameter 'maxNodeCount' to be non-null");
+            $.minNodeCount = Objects.requireNonNull($.minNodeCount, "expected parameter 'minNodeCount' to be non-null");
+            return $;
         }
     }
+
 }

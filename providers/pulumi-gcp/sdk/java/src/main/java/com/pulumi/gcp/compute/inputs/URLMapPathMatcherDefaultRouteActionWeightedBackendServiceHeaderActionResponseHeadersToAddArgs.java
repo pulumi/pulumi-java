@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * 
      */
     @Import(name="headerName")
-      private final @Nullable Output<String> headerName;
+    private @Nullable Output<String> headerName;
 
-    public Output<String> headerName() {
-        return this.headerName == null ? Codegen.empty() : this.headerName;
+    public Optional<Output<String>> headerName() {
+        return Optional.ofNullable(this.headerName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * 
      */
     @Import(name="headerValue")
-      private final @Nullable Output<String> headerValue;
+    private @Nullable Output<String> headerValue;
 
-    public Output<String> headerValue() {
-        return this.headerValue == null ? Codegen.empty() : this.headerValue;
+    public Optional<Output<String>> headerValue() {
+        return Optional.ofNullable(this.headerValue);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * 
      */
     @Import(name="replace")
-      private final @Nullable Output<Boolean> replace;
+    private @Nullable Output<Boolean> replace;
 
-    public Output<Boolean> replace() {
-        return this.replace == null ? Codegen.empty() : this.replace;
+    public Optional<Output<Boolean>> replace() {
+        return Optional.ofNullable(this.replace);
     }
 
-    public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs(
-        @Nullable Output<String> headerName,
-        @Nullable Output<String> headerValue,
-        @Nullable Output<Boolean> replace) {
-        this.headerName = headerName;
-        this.headerValue = headerValue;
-        this.replace = replace;
-    }
+    private URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs() {}
 
-    private URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs() {
-        this.headerName = Codegen.empty();
-        this.headerValue = Codegen.empty();
-        this.replace = Codegen.empty();
+    private URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs(URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs $) {
+        this.headerName = $.headerName;
+        this.headerValue = $.headerValue;
+        this.replace = $.replace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> headerName;
-        private @Nullable Output<String> headerValue;
-        private @Nullable Output<Boolean> replace;
+        private URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs();
         }
 
         public Builder(URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
-    	      this.headerValue = defaults.headerValue;
-    	      this.replace = defaults.replace;
+            $ = new URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(@Nullable Output<String> headerName) {
-            this.headerName = headerName;
+            $.headerName = headerName;
             return this;
         }
-        public Builder headerName(@Nullable String headerName) {
-            this.headerName = Codegen.ofNullable(headerName);
-            return this;
+
+        public Builder headerName(String headerName) {
+            return headerName(Output.of(headerName));
         }
+
         public Builder headerValue(@Nullable Output<String> headerValue) {
-            this.headerValue = headerValue;
+            $.headerValue = headerValue;
             return this;
         }
-        public Builder headerValue(@Nullable String headerValue) {
-            this.headerValue = Codegen.ofNullable(headerValue);
-            return this;
+
+        public Builder headerValue(String headerValue) {
+            return headerValue(Output.of(headerValue));
         }
+
         public Builder replace(@Nullable Output<Boolean> replace) {
-            this.replace = replace;
+            $.replace = replace;
             return this;
         }
-        public Builder replace(@Nullable Boolean replace) {
-            this.replace = Codegen.ofNullable(replace);
-            return this;
-        }        public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs build() {
-            return new URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs(headerName, headerValue, replace);
+
+        public Builder replace(Boolean replace) {
+            return replace(Output.of(replace));
+        }
+
+        public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs build() {
+            return $;
         }
     }
+
 }

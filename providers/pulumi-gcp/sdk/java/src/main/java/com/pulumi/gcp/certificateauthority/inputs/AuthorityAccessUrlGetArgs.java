@@ -5,10 +5,10 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,73 +17,69 @@ public final class AuthorityAccessUrlGetArgs extends com.pulumi.resources.Resour
     public static final AuthorityAccessUrlGetArgs Empty = new AuthorityAccessUrlGetArgs();
 
     @Import(name="caCertificateAccessUrl")
-      private final @Nullable Output<String> caCertificateAccessUrl;
+    private @Nullable Output<String> caCertificateAccessUrl;
 
-    public Output<String> caCertificateAccessUrl() {
-        return this.caCertificateAccessUrl == null ? Codegen.empty() : this.caCertificateAccessUrl;
+    public Optional<Output<String>> caCertificateAccessUrl() {
+        return Optional.ofNullable(this.caCertificateAccessUrl);
     }
 
     @Import(name="crlAccessUrls")
-      private final @Nullable Output<List<String>> crlAccessUrls;
+    private @Nullable Output<List<String>> crlAccessUrls;
 
-    public Output<List<String>> crlAccessUrls() {
-        return this.crlAccessUrls == null ? Codegen.empty() : this.crlAccessUrls;
+    public Optional<Output<List<String>>> crlAccessUrls() {
+        return Optional.ofNullable(this.crlAccessUrls);
     }
 
-    public AuthorityAccessUrlGetArgs(
-        @Nullable Output<String> caCertificateAccessUrl,
-        @Nullable Output<List<String>> crlAccessUrls) {
-        this.caCertificateAccessUrl = caCertificateAccessUrl;
-        this.crlAccessUrls = crlAccessUrls;
-    }
+    private AuthorityAccessUrlGetArgs() {}
 
-    private AuthorityAccessUrlGetArgs() {
-        this.caCertificateAccessUrl = Codegen.empty();
-        this.crlAccessUrls = Codegen.empty();
+    private AuthorityAccessUrlGetArgs(AuthorityAccessUrlGetArgs $) {
+        this.caCertificateAccessUrl = $.caCertificateAccessUrl;
+        this.crlAccessUrls = $.crlAccessUrls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityAccessUrlGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> caCertificateAccessUrl;
-        private @Nullable Output<List<String>> crlAccessUrls;
+        private AuthorityAccessUrlGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityAccessUrlGetArgs();
         }
 
         public Builder(AuthorityAccessUrlGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caCertificateAccessUrl = defaults.caCertificateAccessUrl;
-    	      this.crlAccessUrls = defaults.crlAccessUrls;
+            $ = new AuthorityAccessUrlGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caCertificateAccessUrl(@Nullable Output<String> caCertificateAccessUrl) {
-            this.caCertificateAccessUrl = caCertificateAccessUrl;
+            $.caCertificateAccessUrl = caCertificateAccessUrl;
             return this;
         }
-        public Builder caCertificateAccessUrl(@Nullable String caCertificateAccessUrl) {
-            this.caCertificateAccessUrl = Codegen.ofNullable(caCertificateAccessUrl);
-            return this;
+
+        public Builder caCertificateAccessUrl(String caCertificateAccessUrl) {
+            return caCertificateAccessUrl(Output.of(caCertificateAccessUrl));
         }
+
         public Builder crlAccessUrls(@Nullable Output<List<String>> crlAccessUrls) {
-            this.crlAccessUrls = crlAccessUrls;
+            $.crlAccessUrls = crlAccessUrls;
             return this;
         }
-        public Builder crlAccessUrls(@Nullable List<String> crlAccessUrls) {
-            this.crlAccessUrls = Codegen.ofNullable(crlAccessUrls);
-            return this;
+
+        public Builder crlAccessUrls(List<String> crlAccessUrls) {
+            return crlAccessUrls(Output.of(crlAccessUrls));
         }
+
         public Builder crlAccessUrls(String... crlAccessUrls) {
             return crlAccessUrls(List.of(crlAccessUrls));
-        }        public AuthorityAccessUrlGetArgs build() {
-            return new AuthorityAccessUrlGetArgs(caCertificateAccessUrl, crlAccessUrls);
+        }
+
+        public AuthorityAccessUrlGetArgs build() {
+            return $;
         }
     }
+
 }

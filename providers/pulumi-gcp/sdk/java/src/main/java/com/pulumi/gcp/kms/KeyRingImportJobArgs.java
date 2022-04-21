@@ -5,7 +5,6 @@ package com.pulumi.gcp.kms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class KeyRingImportJobArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="importJobId", required=true)
-      private final Output<String> importJobId;
+    private Output<String> importJobId;
 
     public Output<String> importJobId() {
         return this.importJobId;
@@ -31,7 +30,7 @@ public final class KeyRingImportJobArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="importMethod", required=true)
-      private final Output<String> importMethod;
+    private Output<String> importMethod;
 
     public Output<String> importMethod() {
         return this.importMethod;
@@ -43,7 +42,7 @@ public final class KeyRingImportJobArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="keyRing", required=true)
-      private final Output<String> keyRing;
+    private Output<String> keyRing;
 
     public Output<String> keyRing() {
         return this.keyRing;
@@ -56,89 +55,82 @@ public final class KeyRingImportJobArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="protectionLevel", required=true)
-      private final Output<String> protectionLevel;
+    private Output<String> protectionLevel;
 
     public Output<String> protectionLevel() {
         return this.protectionLevel;
     }
 
-    public KeyRingImportJobArgs(
-        Output<String> importJobId,
-        Output<String> importMethod,
-        Output<String> keyRing,
-        Output<String> protectionLevel) {
-        this.importJobId = Objects.requireNonNull(importJobId, "expected parameter 'importJobId' to be non-null");
-        this.importMethod = Objects.requireNonNull(importMethod, "expected parameter 'importMethod' to be non-null");
-        this.keyRing = Objects.requireNonNull(keyRing, "expected parameter 'keyRing' to be non-null");
-        this.protectionLevel = Objects.requireNonNull(protectionLevel, "expected parameter 'protectionLevel' to be non-null");
-    }
+    private KeyRingImportJobArgs() {}
 
-    private KeyRingImportJobArgs() {
-        this.importJobId = Codegen.empty();
-        this.importMethod = Codegen.empty();
-        this.keyRing = Codegen.empty();
-        this.protectionLevel = Codegen.empty();
+    private KeyRingImportJobArgs(KeyRingImportJobArgs $) {
+        this.importJobId = $.importJobId;
+        this.importMethod = $.importMethod;
+        this.keyRing = $.keyRing;
+        this.protectionLevel = $.protectionLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyRingImportJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> importJobId;
-        private Output<String> importMethod;
-        private Output<String> keyRing;
-        private Output<String> protectionLevel;
+        private KeyRingImportJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyRingImportJobArgs();
         }
 
         public Builder(KeyRingImportJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.importJobId = defaults.importJobId;
-    	      this.importMethod = defaults.importMethod;
-    	      this.keyRing = defaults.keyRing;
-    	      this.protectionLevel = defaults.protectionLevel;
+            $ = new KeyRingImportJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder importJobId(Output<String> importJobId) {
-            this.importJobId = Objects.requireNonNull(importJobId);
+            $.importJobId = importJobId;
             return this;
         }
+
         public Builder importJobId(String importJobId) {
-            this.importJobId = Output.of(Objects.requireNonNull(importJobId));
-            return this;
+            return importJobId(Output.of(importJobId));
         }
+
         public Builder importMethod(Output<String> importMethod) {
-            this.importMethod = Objects.requireNonNull(importMethod);
+            $.importMethod = importMethod;
             return this;
         }
+
         public Builder importMethod(String importMethod) {
-            this.importMethod = Output.of(Objects.requireNonNull(importMethod));
-            return this;
+            return importMethod(Output.of(importMethod));
         }
+
         public Builder keyRing(Output<String> keyRing) {
-            this.keyRing = Objects.requireNonNull(keyRing);
+            $.keyRing = keyRing;
             return this;
         }
+
         public Builder keyRing(String keyRing) {
-            this.keyRing = Output.of(Objects.requireNonNull(keyRing));
-            return this;
+            return keyRing(Output.of(keyRing));
         }
+
         public Builder protectionLevel(Output<String> protectionLevel) {
-            this.protectionLevel = Objects.requireNonNull(protectionLevel);
+            $.protectionLevel = protectionLevel;
             return this;
         }
+
         public Builder protectionLevel(String protectionLevel) {
-            this.protectionLevel = Output.of(Objects.requireNonNull(protectionLevel));
-            return this;
-        }        public KeyRingImportJobArgs build() {
-            return new KeyRingImportJobArgs(importJobId, importMethod, keyRing, protectionLevel);
+            return protectionLevel(Output.of(protectionLevel));
+        }
+
+        public KeyRingImportJobArgs build() {
+            $.importJobId = Objects.requireNonNull($.importJobId, "expected parameter 'importJobId' to be non-null");
+            $.importMethod = Objects.requireNonNull($.importMethod, "expected parameter 'importMethod' to be non-null");
+            $.keyRing = Objects.requireNonNull($.keyRing, "expected parameter 'keyRing' to be non-null");
+            $.protectionLevel = Objects.requireNonNull($.protectionLevel, "expected parameter 'protectionLevel' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.kms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.kms.inputs.CryptoKeyIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class CryptoKeyIAMBindingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<CryptoKeyIAMBindingConditionArgs> condition;
+    private @Nullable Output<CryptoKeyIAMBindingConditionArgs> condition;
 
-    public Output<CryptoKeyIAMBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<CryptoKeyIAMBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -37,14 +37,14 @@ public final class CryptoKeyIAMBindingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="cryptoKeyId", required=true)
-      private final Output<String> cryptoKeyId;
+    private Output<String> cryptoKeyId;
 
     public Output<String> cryptoKeyId() {
         return this.cryptoKeyId;
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -56,92 +56,85 @@ public final class CryptoKeyIAMBindingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public CryptoKeyIAMBindingArgs(
-        @Nullable Output<CryptoKeyIAMBindingConditionArgs> condition,
-        Output<String> cryptoKeyId,
-        Output<List<String>> members,
-        Output<String> role) {
-        this.condition = condition;
-        this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId, "expected parameter 'cryptoKeyId' to be non-null");
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private CryptoKeyIAMBindingArgs() {}
 
-    private CryptoKeyIAMBindingArgs() {
-        this.condition = Codegen.empty();
-        this.cryptoKeyId = Codegen.empty();
-        this.members = Codegen.empty();
-        this.role = Codegen.empty();
+    private CryptoKeyIAMBindingArgs(CryptoKeyIAMBindingArgs $) {
+        this.condition = $.condition;
+        this.cryptoKeyId = $.cryptoKeyId;
+        this.members = $.members;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CryptoKeyIAMBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CryptoKeyIAMBindingConditionArgs> condition;
-        private Output<String> cryptoKeyId;
-        private Output<List<String>> members;
-        private Output<String> role;
+        private CryptoKeyIAMBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CryptoKeyIAMBindingArgs();
         }
 
         public Builder(CryptoKeyIAMBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.cryptoKeyId = defaults.cryptoKeyId;
-    	      this.members = defaults.members;
-    	      this.role = defaults.role;
+            $ = new CryptoKeyIAMBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<CryptoKeyIAMBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable CryptoKeyIAMBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(CryptoKeyIAMBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder cryptoKeyId(Output<String> cryptoKeyId) {
-            this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
+            $.cryptoKeyId = cryptoKeyId;
             return this;
         }
+
         public Builder cryptoKeyId(String cryptoKeyId) {
-            this.cryptoKeyId = Output.of(Objects.requireNonNull(cryptoKeyId));
-            return this;
+            return cryptoKeyId(Output.of(cryptoKeyId));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public CryptoKeyIAMBindingArgs build() {
-            return new CryptoKeyIAMBindingArgs(condition, cryptoKeyId, members, role);
+            return role(Output.of(role));
+        }
+
+        public CryptoKeyIAMBindingArgs build() {
+            $.cryptoKeyId = Objects.requireNonNull($.cryptoKeyId, "expected parameter 'cryptoKeyId' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

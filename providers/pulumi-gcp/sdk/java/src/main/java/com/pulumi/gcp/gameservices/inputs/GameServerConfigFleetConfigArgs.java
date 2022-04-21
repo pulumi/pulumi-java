@@ -5,9 +5,9 @@ package com.pulumi.gcp.gameservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class GameServerConfigFleetConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="fleetSpec", required=true)
-      private final Output<String> fleetSpec;
+    private Output<String> fleetSpec;
 
     public Output<String> fleetSpec() {
         return this.fleetSpec;
@@ -37,63 +37,59 @@ public final class GameServerConfigFleetConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public GameServerConfigFleetConfigArgs(
-        Output<String> fleetSpec,
-        @Nullable Output<String> name) {
-        this.fleetSpec = Objects.requireNonNull(fleetSpec, "expected parameter 'fleetSpec' to be non-null");
-        this.name = name;
-    }
+    private GameServerConfigFleetConfigArgs() {}
 
-    private GameServerConfigFleetConfigArgs() {
-        this.fleetSpec = Codegen.empty();
-        this.name = Codegen.empty();
+    private GameServerConfigFleetConfigArgs(GameServerConfigFleetConfigArgs $) {
+        this.fleetSpec = $.fleetSpec;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameServerConfigFleetConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fleetSpec;
-        private @Nullable Output<String> name;
+        private GameServerConfigFleetConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameServerConfigFleetConfigArgs();
         }
 
         public Builder(GameServerConfigFleetConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fleetSpec = defaults.fleetSpec;
-    	      this.name = defaults.name;
+            $ = new GameServerConfigFleetConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fleetSpec(Output<String> fleetSpec) {
-            this.fleetSpec = Objects.requireNonNull(fleetSpec);
+            $.fleetSpec = fleetSpec;
             return this;
         }
+
         public Builder fleetSpec(String fleetSpec) {
-            this.fleetSpec = Output.of(Objects.requireNonNull(fleetSpec));
-            return this;
+            return fleetSpec(Output.of(fleetSpec));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public GameServerConfigFleetConfigArgs build() {
-            return new GameServerConfigFleetConfigArgs(fleetSpec, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public GameServerConfigFleetConfigArgs build() {
+            $.fleetSpec = Objects.requireNonNull($.fleetSpec, "expected parameter 'fleetSpec' to be non-null");
+            return $;
         }
     }
+
 }

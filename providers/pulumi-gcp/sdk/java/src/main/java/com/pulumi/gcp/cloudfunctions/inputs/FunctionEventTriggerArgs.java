@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudfunctions.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudfunctions.inputs.FunctionEventTriggerFailurePolicyArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class FunctionEventTriggerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="eventType", required=true)
-      private final Output<String> eventType;
+    private Output<String> eventType;
 
     public Output<String> eventType() {
         return this.eventType;
@@ -34,10 +34,10 @@ public final class FunctionEventTriggerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="failurePolicy")
-      private final @Nullable Output<FunctionEventTriggerFailurePolicyArgs> failurePolicy;
+    private @Nullable Output<FunctionEventTriggerFailurePolicyArgs> failurePolicy;
 
-    public Output<FunctionEventTriggerFailurePolicyArgs> failurePolicy() {
-        return this.failurePolicy == null ? Codegen.empty() : this.failurePolicy;
+    public Optional<Output<FunctionEventTriggerFailurePolicyArgs>> failurePolicy() {
+        return Optional.ofNullable(this.failurePolicy);
     }
 
     /**
@@ -46,76 +46,70 @@ public final class FunctionEventTriggerArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resource", required=true)
-      private final Output<String> resource;
+    private Output<String> resource;
 
     public Output<String> resource() {
         return this.resource;
     }
 
-    public FunctionEventTriggerArgs(
-        Output<String> eventType,
-        @Nullable Output<FunctionEventTriggerFailurePolicyArgs> failurePolicy,
-        Output<String> resource) {
-        this.eventType = Objects.requireNonNull(eventType, "expected parameter 'eventType' to be non-null");
-        this.failurePolicy = failurePolicy;
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-    }
+    private FunctionEventTriggerArgs() {}
 
-    private FunctionEventTriggerArgs() {
-        this.eventType = Codegen.empty();
-        this.failurePolicy = Codegen.empty();
-        this.resource = Codegen.empty();
+    private FunctionEventTriggerArgs(FunctionEventTriggerArgs $) {
+        this.eventType = $.eventType;
+        this.failurePolicy = $.failurePolicy;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionEventTriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> eventType;
-        private @Nullable Output<FunctionEventTriggerFailurePolicyArgs> failurePolicy;
-        private Output<String> resource;
+        private FunctionEventTriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionEventTriggerArgs();
         }
 
         public Builder(FunctionEventTriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventType = defaults.eventType;
-    	      this.failurePolicy = defaults.failurePolicy;
-    	      this.resource = defaults.resource;
+            $ = new FunctionEventTriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventType(Output<String> eventType) {
-            this.eventType = Objects.requireNonNull(eventType);
+            $.eventType = eventType;
             return this;
         }
+
         public Builder eventType(String eventType) {
-            this.eventType = Output.of(Objects.requireNonNull(eventType));
-            return this;
+            return eventType(Output.of(eventType));
         }
+
         public Builder failurePolicy(@Nullable Output<FunctionEventTriggerFailurePolicyArgs> failurePolicy) {
-            this.failurePolicy = failurePolicy;
+            $.failurePolicy = failurePolicy;
             return this;
         }
-        public Builder failurePolicy(@Nullable FunctionEventTriggerFailurePolicyArgs failurePolicy) {
-            this.failurePolicy = Codegen.ofNullable(failurePolicy);
-            return this;
+
+        public Builder failurePolicy(FunctionEventTriggerFailurePolicyArgs failurePolicy) {
+            return failurePolicy(Output.of(failurePolicy));
         }
+
         public Builder resource(Output<String> resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Output.of(Objects.requireNonNull(resource));
-            return this;
-        }        public FunctionEventTriggerArgs build() {
-            return new FunctionEventTriggerArgs(eventType, failurePolicy, resource);
+            return resource(Output.of(resource));
+        }
+
+        public FunctionEventTriggerArgs build() {
+            $.eventType = Objects.requireNonNull($.eventType, "expected parameter 'eventType' to be non-null");
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

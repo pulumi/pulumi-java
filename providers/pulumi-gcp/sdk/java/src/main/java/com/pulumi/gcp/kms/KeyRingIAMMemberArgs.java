@@ -5,10 +5,10 @@ package com.pulumi.gcp.kms;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.kms.inputs.KeyRingIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class KeyRingIAMMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<KeyRingIAMMemberConditionArgs> condition;
+    private @Nullable Output<KeyRingIAMMemberConditionArgs> condition;
 
-    public Output<KeyRingIAMMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<KeyRingIAMMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -36,14 +36,14 @@ public final class KeyRingIAMMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="keyRingId", required=true)
-      private final Output<String> keyRingId;
+    private Output<String> keyRingId;
 
     public Output<String> keyRingId() {
         return this.keyRingId;
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -56,89 +56,81 @@ public final class KeyRingIAMMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public KeyRingIAMMemberArgs(
-        @Nullable Output<KeyRingIAMMemberConditionArgs> condition,
-        Output<String> keyRingId,
-        Output<String> member,
-        Output<String> role) {
-        this.condition = condition;
-        this.keyRingId = Objects.requireNonNull(keyRingId, "expected parameter 'keyRingId' to be non-null");
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private KeyRingIAMMemberArgs() {}
 
-    private KeyRingIAMMemberArgs() {
-        this.condition = Codegen.empty();
-        this.keyRingId = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
+    private KeyRingIAMMemberArgs(KeyRingIAMMemberArgs $) {
+        this.condition = $.condition;
+        this.keyRingId = $.keyRingId;
+        this.member = $.member;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyRingIAMMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<KeyRingIAMMemberConditionArgs> condition;
-        private Output<String> keyRingId;
-        private Output<String> member;
-        private Output<String> role;
+        private KeyRingIAMMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyRingIAMMemberArgs();
         }
 
         public Builder(KeyRingIAMMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.keyRingId = defaults.keyRingId;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
+            $ = new KeyRingIAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<KeyRingIAMMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable KeyRingIAMMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(KeyRingIAMMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder keyRingId(Output<String> keyRingId) {
-            this.keyRingId = Objects.requireNonNull(keyRingId);
+            $.keyRingId = keyRingId;
             return this;
         }
+
         public Builder keyRingId(String keyRingId) {
-            this.keyRingId = Output.of(Objects.requireNonNull(keyRingId));
-            return this;
+            return keyRingId(Output.of(keyRingId));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public KeyRingIAMMemberArgs build() {
-            return new KeyRingIAMMemberArgs(condition, keyRingId, member, role);
+            return role(Output.of(role));
+        }
+
+        public KeyRingIAMMemberArgs build() {
+            $.keyRingId = Objects.requireNonNull($.keyRingId, "expected parameter 'keyRingId' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

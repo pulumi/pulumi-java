@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs;
 import com.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs;
@@ -13,6 +12,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends com.pulumi.re
      * 
      */
     @Import(name="fullPathMatch")
-      private final @Nullable Output<String> fullPathMatch;
+    private @Nullable Output<String> fullPathMatch;
 
-    public Output<String> fullPathMatch() {
-        return this.fullPathMatch == null ? Codegen.empty() : this.fullPathMatch;
+    public Optional<Output<String>> fullPathMatch() {
+        return Optional.ofNullable(this.fullPathMatch);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends com.pulumi.re
      * 
      */
     @Import(name="headerMatches")
-      private final @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches;
+    private @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches;
 
-    public Output<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches() {
-        return this.headerMatches == null ? Codegen.empty() : this.headerMatches;
+    public Optional<Output<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>>> headerMatches() {
+        return Optional.ofNullable(this.headerMatches);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends com.pulumi.re
      * 
      */
     @Import(name="ignoreCase")
-      private final @Nullable Output<Boolean> ignoreCase;
+    private @Nullable Output<Boolean> ignoreCase;
 
-    public Output<Boolean> ignoreCase() {
-        return this.ignoreCase == null ? Codegen.empty() : this.ignoreCase;
+    public Optional<Output<Boolean>> ignoreCase() {
+        return Optional.ofNullable(this.ignoreCase);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends com.pulumi.re
      * 
      */
     @Import(name="metadataFilters")
-      private final @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters;
+    private @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters;
 
-    public Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters() {
-        return this.metadataFilters == null ? Codegen.empty() : this.metadataFilters;
+    public Optional<Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>>> metadataFilters() {
+        return Optional.ofNullable(this.metadataFilters);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends com.pulumi.re
      * 
      */
     @Import(name="prefixMatch")
-      private final @Nullable Output<String> prefixMatch;
+    private @Nullable Output<String> prefixMatch;
 
-    public Output<String> prefixMatch() {
-        return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
+    public Optional<Output<String>> prefixMatch() {
+        return Optional.ofNullable(this.prefixMatch);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends com.pulumi.re
      * 
      */
     @Import(name="queryParameterMatches")
-      private final @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches;
+    private @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches;
 
-    public Output<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches() {
-        return this.queryParameterMatches == null ? Codegen.empty() : this.queryParameterMatches;
+    public Optional<Output<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>>> queryParameterMatches() {
+        return Optional.ofNullable(this.queryParameterMatches);
     }
 
     /**
@@ -116,137 +116,120 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends com.pulumi.re
      * 
      */
     @Import(name="regexMatch")
-      private final @Nullable Output<String> regexMatch;
+    private @Nullable Output<String> regexMatch;
 
-    public Output<String> regexMatch() {
-        return this.regexMatch == null ? Codegen.empty() : this.regexMatch;
+    public Optional<Output<String>> regexMatch() {
+        return Optional.ofNullable(this.regexMatch);
     }
 
-    public URLMapPathMatcherRouteRuleMatchRuleArgs(
-        @Nullable Output<String> fullPathMatch,
-        @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches,
-        @Nullable Output<Boolean> ignoreCase,
-        @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters,
-        @Nullable Output<String> prefixMatch,
-        @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches,
-        @Nullable Output<String> regexMatch) {
-        this.fullPathMatch = fullPathMatch;
-        this.headerMatches = headerMatches;
-        this.ignoreCase = ignoreCase;
-        this.metadataFilters = metadataFilters;
-        this.prefixMatch = prefixMatch;
-        this.queryParameterMatches = queryParameterMatches;
-        this.regexMatch = regexMatch;
-    }
+    private URLMapPathMatcherRouteRuleMatchRuleArgs() {}
 
-    private URLMapPathMatcherRouteRuleMatchRuleArgs() {
-        this.fullPathMatch = Codegen.empty();
-        this.headerMatches = Codegen.empty();
-        this.ignoreCase = Codegen.empty();
-        this.metadataFilters = Codegen.empty();
-        this.prefixMatch = Codegen.empty();
-        this.queryParameterMatches = Codegen.empty();
-        this.regexMatch = Codegen.empty();
+    private URLMapPathMatcherRouteRuleMatchRuleArgs(URLMapPathMatcherRouteRuleMatchRuleArgs $) {
+        this.fullPathMatch = $.fullPathMatch;
+        this.headerMatches = $.headerMatches;
+        this.ignoreCase = $.ignoreCase;
+        this.metadataFilters = $.metadataFilters;
+        this.prefixMatch = $.prefixMatch;
+        this.queryParameterMatches = $.queryParameterMatches;
+        this.regexMatch = $.regexMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(URLMapPathMatcherRouteRuleMatchRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fullPathMatch;
-        private @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches;
-        private @Nullable Output<Boolean> ignoreCase;
-        private @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters;
-        private @Nullable Output<String> prefixMatch;
-        private @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches;
-        private @Nullable Output<String> regexMatch;
+        private URLMapPathMatcherRouteRuleMatchRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new URLMapPathMatcherRouteRuleMatchRuleArgs();
         }
 
         public Builder(URLMapPathMatcherRouteRuleMatchRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fullPathMatch = defaults.fullPathMatch;
-    	      this.headerMatches = defaults.headerMatches;
-    	      this.ignoreCase = defaults.ignoreCase;
-    	      this.metadataFilters = defaults.metadataFilters;
-    	      this.prefixMatch = defaults.prefixMatch;
-    	      this.queryParameterMatches = defaults.queryParameterMatches;
-    	      this.regexMatch = defaults.regexMatch;
+            $ = new URLMapPathMatcherRouteRuleMatchRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fullPathMatch(@Nullable Output<String> fullPathMatch) {
-            this.fullPathMatch = fullPathMatch;
+            $.fullPathMatch = fullPathMatch;
             return this;
         }
-        public Builder fullPathMatch(@Nullable String fullPathMatch) {
-            this.fullPathMatch = Codegen.ofNullable(fullPathMatch);
-            return this;
+
+        public Builder fullPathMatch(String fullPathMatch) {
+            return fullPathMatch(Output.of(fullPathMatch));
         }
+
         public Builder headerMatches(@Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches) {
-            this.headerMatches = headerMatches;
+            $.headerMatches = headerMatches;
             return this;
         }
-        public Builder headerMatches(@Nullable List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs> headerMatches) {
-            this.headerMatches = Codegen.ofNullable(headerMatches);
-            return this;
+
+        public Builder headerMatches(List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs> headerMatches) {
+            return headerMatches(Output.of(headerMatches));
         }
+
         public Builder headerMatches(URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs... headerMatches) {
             return headerMatches(List.of(headerMatches));
         }
+
         public Builder ignoreCase(@Nullable Output<Boolean> ignoreCase) {
-            this.ignoreCase = ignoreCase;
+            $.ignoreCase = ignoreCase;
             return this;
         }
-        public Builder ignoreCase(@Nullable Boolean ignoreCase) {
-            this.ignoreCase = Codegen.ofNullable(ignoreCase);
-            return this;
+
+        public Builder ignoreCase(Boolean ignoreCase) {
+            return ignoreCase(Output.of(ignoreCase));
         }
+
         public Builder metadataFilters(@Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters) {
-            this.metadataFilters = metadataFilters;
+            $.metadataFilters = metadataFilters;
             return this;
         }
-        public Builder metadataFilters(@Nullable List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs> metadataFilters) {
-            this.metadataFilters = Codegen.ofNullable(metadataFilters);
-            return this;
+
+        public Builder metadataFilters(List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs> metadataFilters) {
+            return metadataFilters(Output.of(metadataFilters));
         }
+
         public Builder metadataFilters(URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs... metadataFilters) {
             return metadataFilters(List.of(metadataFilters));
         }
+
         public Builder prefixMatch(@Nullable Output<String> prefixMatch) {
-            this.prefixMatch = prefixMatch;
+            $.prefixMatch = prefixMatch;
             return this;
         }
-        public Builder prefixMatch(@Nullable String prefixMatch) {
-            this.prefixMatch = Codegen.ofNullable(prefixMatch);
-            return this;
+
+        public Builder prefixMatch(String prefixMatch) {
+            return prefixMatch(Output.of(prefixMatch));
         }
+
         public Builder queryParameterMatches(@Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches) {
-            this.queryParameterMatches = queryParameterMatches;
+            $.queryParameterMatches = queryParameterMatches;
             return this;
         }
-        public Builder queryParameterMatches(@Nullable List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs> queryParameterMatches) {
-            this.queryParameterMatches = Codegen.ofNullable(queryParameterMatches);
-            return this;
+
+        public Builder queryParameterMatches(List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs> queryParameterMatches) {
+            return queryParameterMatches(Output.of(queryParameterMatches));
         }
+
         public Builder queryParameterMatches(URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs... queryParameterMatches) {
             return queryParameterMatches(List.of(queryParameterMatches));
         }
+
         public Builder regexMatch(@Nullable Output<String> regexMatch) {
-            this.regexMatch = regexMatch;
+            $.regexMatch = regexMatch;
             return this;
         }
-        public Builder regexMatch(@Nullable String regexMatch) {
-            this.regexMatch = Codegen.ofNullable(regexMatch);
-            return this;
-        }        public URLMapPathMatcherRouteRuleMatchRuleArgs build() {
-            return new URLMapPathMatcherRouteRuleMatchRuleArgs(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
+
+        public Builder regexMatch(String regexMatch) {
+            return regexMatch(Output.of(regexMatch));
+        }
+
+        public URLMapPathMatcherRouteRuleMatchRuleArgs build() {
+            return $;
         }
     }
+
 }

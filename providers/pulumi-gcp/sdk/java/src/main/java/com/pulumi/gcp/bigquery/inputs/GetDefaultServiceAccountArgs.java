@@ -19,45 +19,44 @@ public final class GetDefaultServiceAccountArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetDefaultServiceAccountArgs(@Nullable String project) {
-        this.project = project;
-    }
+    private GetDefaultServiceAccountArgs() {}
 
-    private GetDefaultServiceAccountArgs() {
-        this.project = null;
+    private GetDefaultServiceAccountArgs(GetDefaultServiceAccountArgs $) {
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDefaultServiceAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
+        private GetDefaultServiceAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDefaultServiceAccountArgs();
         }
 
         public Builder(GetDefaultServiceAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
+            $ = new GetDefaultServiceAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetDefaultServiceAccountArgs build() {
-            return new GetDefaultServiceAccountArgs(project);
+        }
+
+        public GetDefaultServiceAccountArgs build() {
+            return $;
         }
     }
+
 }

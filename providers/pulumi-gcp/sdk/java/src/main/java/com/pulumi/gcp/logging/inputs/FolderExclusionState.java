@@ -5,10 +5,10 @@ package com.pulumi.gcp.logging.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FolderExclusionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FolderExclusionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FolderExclusionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class FolderExclusionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="folder")
-      private final @Nullable Output<String> folder;
+    private @Nullable Output<String> folder;
 
-    public Output<String> folder() {
-        return this.folder == null ? Codegen.empty() : this.folder;
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class FolderExclusionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public FolderExclusionState(
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<String> filter,
-        @Nullable Output<String> folder,
-        @Nullable Output<String> name) {
-        this.description = description;
-        this.disabled = disabled;
-        this.filter = filter;
-        this.folder = folder;
-        this.name = name;
-    }
+    private FolderExclusionState() {}
 
-    private FolderExclusionState() {
-        this.description = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.folder = Codegen.empty();
-        this.name = Codegen.empty();
+    private FolderExclusionState(FolderExclusionState $) {
+        this.description = $.description;
+        this.disabled = $.disabled;
+        this.filter = $.filter;
+        this.folder = $.folder;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FolderExclusionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<String> filter;
-        private @Nullable Output<String> folder;
-        private @Nullable Output<String> name;
+        private FolderExclusionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new FolderExclusionState();
         }
 
         public Builder(FolderExclusionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.disabled = defaults.disabled;
-    	      this.filter = defaults.filter;
-    	      this.folder = defaults.folder;
-    	      this.name = defaults.name;
+            $ = new FolderExclusionState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder folder(@Nullable Output<String> folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
-        public Builder folder(@Nullable String folder) {
-            this.folder = Codegen.ofNullable(folder);
-            return this;
+
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public FolderExclusionState build() {
-            return new FolderExclusionState(description, disabled, filter, folder, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public FolderExclusionState build() {
+            return $;
         }
     }
+
 }

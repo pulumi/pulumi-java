@@ -14,94 +14,87 @@ public final class GetEnvironmentConfigWorkloadsConfigScheduler extends com.pulu
     public static final GetEnvironmentConfigWorkloadsConfigScheduler Empty = new GetEnvironmentConfigWorkloadsConfigScheduler();
 
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
     }
 
     @Import(name="cpu", required=true)
-      private final Double cpu;
+    private Double cpu;
 
     public Double cpu() {
         return this.cpu;
     }
 
     @Import(name="memoryGb", required=true)
-      private final Double memoryGb;
+    private Double memoryGb;
 
     public Double memoryGb() {
         return this.memoryGb;
     }
 
     @Import(name="storageGb", required=true)
-      private final Double storageGb;
+    private Double storageGb;
 
     public Double storageGb() {
         return this.storageGb;
     }
 
-    public GetEnvironmentConfigWorkloadsConfigScheduler(
-        Integer count,
-        Double cpu,
-        Double memoryGb,
-        Double storageGb) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.cpu = Objects.requireNonNull(cpu, "expected parameter 'cpu' to be non-null");
-        this.memoryGb = Objects.requireNonNull(memoryGb, "expected parameter 'memoryGb' to be non-null");
-        this.storageGb = Objects.requireNonNull(storageGb, "expected parameter 'storageGb' to be non-null");
-    }
+    private GetEnvironmentConfigWorkloadsConfigScheduler() {}
 
-    private GetEnvironmentConfigWorkloadsConfigScheduler() {
-        this.count = null;
-        this.cpu = null;
-        this.memoryGb = null;
-        this.storageGb = null;
+    private GetEnvironmentConfigWorkloadsConfigScheduler(GetEnvironmentConfigWorkloadsConfigScheduler $) {
+        this.count = $.count;
+        this.cpu = $.cpu;
+        this.memoryGb = $.memoryGb;
+        this.storageGb = $.storageGb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentConfigWorkloadsConfigScheduler defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private Double cpu;
-        private Double memoryGb;
-        private Double storageGb;
+        private GetEnvironmentConfigWorkloadsConfigScheduler $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentConfigWorkloadsConfigScheduler();
         }
 
         public Builder(GetEnvironmentConfigWorkloadsConfigScheduler defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.cpu = defaults.cpu;
-    	      this.memoryGb = defaults.memoryGb;
-    	      this.storageGb = defaults.storageGb;
+            $ = new GetEnvironmentConfigWorkloadsConfigScheduler(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder cpu(Double cpu) {
-            this.cpu = Objects.requireNonNull(cpu);
+            $.cpu = cpu;
             return this;
         }
+
         public Builder memoryGb(Double memoryGb) {
-            this.memoryGb = Objects.requireNonNull(memoryGb);
+            $.memoryGb = memoryGb;
             return this;
         }
+
         public Builder storageGb(Double storageGb) {
-            this.storageGb = Objects.requireNonNull(storageGb);
+            $.storageGb = storageGb;
             return this;
-        }        public GetEnvironmentConfigWorkloadsConfigScheduler build() {
-            return new GetEnvironmentConfigWorkloadsConfigScheduler(count, cpu, memoryGb, storageGb);
+        }
+
+        public GetEnvironmentConfigWorkloadsConfigScheduler build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.cpu = Objects.requireNonNull($.cpu, "expected parameter 'cpu' to be non-null");
+            $.memoryGb = Objects.requireNonNull($.memoryGb, "expected parameter 'memoryGb' to be non-null");
+            $.storageGb = Objects.requireNonNull($.storageGb, "expected parameter 'storageGb' to be non-null");
+            return $;
         }
     }
+
 }

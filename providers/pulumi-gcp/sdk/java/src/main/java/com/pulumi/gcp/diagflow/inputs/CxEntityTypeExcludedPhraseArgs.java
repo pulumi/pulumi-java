@@ -5,9 +5,9 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class CxEntityTypeExcludedPhraseArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public CxEntityTypeExcludedPhraseArgs(@Nullable Output<String> value) {
-        this.value = value;
-    }
+    private CxEntityTypeExcludedPhraseArgs() {}
 
-    private CxEntityTypeExcludedPhraseArgs() {
-        this.value = Codegen.empty();
+    private CxEntityTypeExcludedPhraseArgs(CxEntityTypeExcludedPhraseArgs $) {
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxEntityTypeExcludedPhraseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> value;
+        private CxEntityTypeExcludedPhraseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxEntityTypeExcludedPhraseArgs();
         }
 
         public Builder(CxEntityTypeExcludedPhraseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
+            $ = new CxEntityTypeExcludedPhraseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public CxEntityTypeExcludedPhraseArgs build() {
-            return new CxEntityTypeExcludedPhraseArgs(value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public CxEntityTypeExcludedPhraseArgs build() {
+            return $;
         }
     }
+
 }

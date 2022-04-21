@@ -13,62 +13,59 @@ public final class GetBucketObjectCustomerEncryption extends com.pulumi.resource
     public static final GetBucketObjectCustomerEncryption Empty = new GetBucketObjectCustomerEncryption();
 
     @Import(name="encryptionAlgorithm", required=true)
-      private final String encryptionAlgorithm;
+    private String encryptionAlgorithm;
 
     public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
 
     @Import(name="encryptionKey", required=true)
-      private final String encryptionKey;
+    private String encryptionKey;
 
     public String encryptionKey() {
         return this.encryptionKey;
     }
 
-    public GetBucketObjectCustomerEncryption(
-        String encryptionAlgorithm,
-        String encryptionKey) {
-        this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm, "expected parameter 'encryptionAlgorithm' to be non-null");
-        this.encryptionKey = Objects.requireNonNull(encryptionKey, "expected parameter 'encryptionKey' to be non-null");
-    }
+    private GetBucketObjectCustomerEncryption() {}
 
-    private GetBucketObjectCustomerEncryption() {
-        this.encryptionAlgorithm = null;
-        this.encryptionKey = null;
+    private GetBucketObjectCustomerEncryption(GetBucketObjectCustomerEncryption $) {
+        this.encryptionAlgorithm = $.encryptionAlgorithm;
+        this.encryptionKey = $.encryptionKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBucketObjectCustomerEncryption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String encryptionAlgorithm;
-        private String encryptionKey;
+        private GetBucketObjectCustomerEncryption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBucketObjectCustomerEncryption();
         }
 
         public Builder(GetBucketObjectCustomerEncryption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionAlgorithm = defaults.encryptionAlgorithm;
-    	      this.encryptionKey = defaults.encryptionKey;
+            $ = new GetBucketObjectCustomerEncryption(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionAlgorithm(String encryptionAlgorithm) {
-            this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
+            $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
+
         public Builder encryptionKey(String encryptionKey) {
-            this.encryptionKey = Objects.requireNonNull(encryptionKey);
+            $.encryptionKey = encryptionKey;
             return this;
-        }        public GetBucketObjectCustomerEncryption build() {
-            return new GetBucketObjectCustomerEncryption(encryptionAlgorithm, encryptionKey);
+        }
+
+        public GetBucketObjectCustomerEncryption build() {
+            $.encryptionAlgorithm = Objects.requireNonNull($.encryptionAlgorithm, "expected parameter 'encryptionAlgorithm' to be non-null");
+            $.encryptionKey = Objects.requireNonNull($.encryptionKey, "expected parameter 'encryptionKey' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.DicomStoreNotificationConfigArgs;
 import com.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataset", required=true)
-      private final Output<String> dataset;
+    private Output<String> dataset;
 
     public Output<String> dataset() {
         return this.dataset;
@@ -43,10 +43,10 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationConfig")
-      private final @Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig;
+    private @Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig;
 
-    public Output<DicomStoreNotificationConfigArgs> notificationConfig() {
-        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
+    public Optional<Output<DicomStoreNotificationConfigArgs>> notificationConfig() {
+        return Optional.ofNullable(this.notificationConfig);
     }
 
     /**
@@ -80,105 +80,93 @@ public final class DicomStoreArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamConfigs")
-      private final @Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs;
+    private @Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs;
 
-    public Output<List<DicomStoreStreamConfigArgs>> streamConfigs() {
-        return this.streamConfigs == null ? Codegen.empty() : this.streamConfigs;
+    public Optional<Output<List<DicomStoreStreamConfigArgs>>> streamConfigs() {
+        return Optional.ofNullable(this.streamConfigs);
     }
 
-    public DicomStoreArgs(
-        Output<String> dataset,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig,
-        @Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs) {
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.labels = labels;
-        this.name = name;
-        this.notificationConfig = notificationConfig;
-        this.streamConfigs = streamConfigs;
-    }
+    private DicomStoreArgs() {}
 
-    private DicomStoreArgs() {
-        this.dataset = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationConfig = Codegen.empty();
-        this.streamConfigs = Codegen.empty();
+    private DicomStoreArgs(DicomStoreArgs $) {
+        this.dataset = $.dataset;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.notificationConfig = $.notificationConfig;
+        this.streamConfigs = $.streamConfigs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DicomStoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataset;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig;
-        private @Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs;
+        private DicomStoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DicomStoreArgs();
         }
 
         public Builder(DicomStoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.notificationConfig = defaults.notificationConfig;
-    	      this.streamConfigs = defaults.streamConfigs;
+            $ = new DicomStoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(Output<String> dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder dataset(String dataset) {
-            this.dataset = Output.of(Objects.requireNonNull(dataset));
-            return this;
+            return dataset(Output.of(dataset));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationConfig(@Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig) {
-            this.notificationConfig = notificationConfig;
+            $.notificationConfig = notificationConfig;
             return this;
         }
-        public Builder notificationConfig(@Nullable DicomStoreNotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Codegen.ofNullable(notificationConfig);
-            return this;
+
+        public Builder notificationConfig(DicomStoreNotificationConfigArgs notificationConfig) {
+            return notificationConfig(Output.of(notificationConfig));
         }
+
         public Builder streamConfigs(@Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs) {
-            this.streamConfigs = streamConfigs;
+            $.streamConfigs = streamConfigs;
             return this;
         }
-        public Builder streamConfigs(@Nullable List<DicomStoreStreamConfigArgs> streamConfigs) {
-            this.streamConfigs = Codegen.ofNullable(streamConfigs);
-            return this;
+
+        public Builder streamConfigs(List<DicomStoreStreamConfigArgs> streamConfigs) {
+            return streamConfigs(Output.of(streamConfigs));
         }
+
         public Builder streamConfigs(DicomStoreStreamConfigArgs... streamConfigs) {
             return streamConfigs(List.of(streamConfigs));
-        }        public DicomStoreArgs build() {
-            return new DicomStoreArgs(dataset, labels, name, notificationConfig, streamConfigs);
+        }
+
+        public DicomStoreArgs build() {
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            return $;
         }
     }
+
 }

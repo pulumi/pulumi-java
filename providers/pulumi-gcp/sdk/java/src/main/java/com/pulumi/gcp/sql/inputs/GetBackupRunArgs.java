@@ -22,10 +22,10 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupId")
-      private final @Nullable Integer backupId;
+    private @Nullable Integer backupId;
 
     public Optional<Integer> backupId() {
-        return this.backupId == null ? Optional.empty() : Optional.ofNullable(this.backupId);
+        return Optional.ofNullable(this.backupId);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instance", required=true)
-      private final String instance;
+    private String instance;
 
     public String instance() {
         return this.instance;
@@ -45,64 +45,57 @@ public final class GetBackupRunArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mostRecent")
-      private final @Nullable Boolean mostRecent;
+    private @Nullable Boolean mostRecent;
 
     public Optional<Boolean> mostRecent() {
-        return this.mostRecent == null ? Optional.empty() : Optional.ofNullable(this.mostRecent);
+        return Optional.ofNullable(this.mostRecent);
     }
 
-    public GetBackupRunArgs(
-        @Nullable Integer backupId,
-        String instance,
-        @Nullable Boolean mostRecent) {
-        this.backupId = backupId;
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.mostRecent = mostRecent;
-    }
+    private GetBackupRunArgs() {}
 
-    private GetBackupRunArgs() {
-        this.backupId = null;
-        this.instance = null;
-        this.mostRecent = null;
+    private GetBackupRunArgs(GetBackupRunArgs $) {
+        this.backupId = $.backupId;
+        this.instance = $.instance;
+        this.mostRecent = $.mostRecent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackupRunArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer backupId;
-        private String instance;
-        private @Nullable Boolean mostRecent;
+        private GetBackupRunArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackupRunArgs();
         }
 
         public Builder(GetBackupRunArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupId = defaults.backupId;
-    	      this.instance = defaults.instance;
-    	      this.mostRecent = defaults.mostRecent;
+            $ = new GetBackupRunArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupId(@Nullable Integer backupId) {
-            this.backupId = backupId;
+            $.backupId = backupId;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder mostRecent(@Nullable Boolean mostRecent) {
-            this.mostRecent = mostRecent;
+            $.mostRecent = mostRecent;
             return this;
-        }        public GetBackupRunArgs build() {
-            return new GetBackupRunArgs(backupId, instance, mostRecent);
+        }
+
+        public GetBackupRunArgs build() {
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            return $;
         }
     }
+
 }

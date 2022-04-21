@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ServiceTemplateSpecContainerResourcesArgs extends com.pulumi.
      * 
      */
     @Import(name="limits")
-      private final @Nullable Output<Map<String,String>> limits;
+    private @Nullable Output<Map<String,String>> limits;
 
-    public Output<Map<String,String>> limits() {
-        return this.limits == null ? Codegen.empty() : this.limits;
+    public Optional<Output<Map<String,String>>> limits() {
+        return Optional.ofNullable(this.limits);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class ServiceTemplateSpecContainerResourcesArgs extends com.pulumi.
      * 
      */
     @Import(name="requests")
-      private final @Nullable Output<Map<String,String>> requests;
+    private @Nullable Output<Map<String,String>> requests;
 
-    public Output<Map<String,String>> requests() {
-        return this.requests == null ? Codegen.empty() : this.requests;
+    public Optional<Output<Map<String,String>>> requests() {
+        return Optional.ofNullable(this.requests);
     }
 
-    public ServiceTemplateSpecContainerResourcesArgs(
-        @Nullable Output<Map<String,String>> limits,
-        @Nullable Output<Map<String,String>> requests) {
-        this.limits = limits;
-        this.requests = requests;
-    }
+    private ServiceTemplateSpecContainerResourcesArgs() {}
 
-    private ServiceTemplateSpecContainerResourcesArgs() {
-        this.limits = Codegen.empty();
-        this.requests = Codegen.empty();
+    private ServiceTemplateSpecContainerResourcesArgs(ServiceTemplateSpecContainerResourcesArgs $) {
+        this.limits = $.limits;
+        this.requests = $.requests;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTemplateSpecContainerResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> limits;
-        private @Nullable Output<Map<String,String>> requests;
+        private ServiceTemplateSpecContainerResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTemplateSpecContainerResourcesArgs();
         }
 
         public Builder(ServiceTemplateSpecContainerResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limits = defaults.limits;
-    	      this.requests = defaults.requests;
+            $ = new ServiceTemplateSpecContainerResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder limits(@Nullable Output<Map<String,String>> limits) {
-            this.limits = limits;
+            $.limits = limits;
             return this;
         }
-        public Builder limits(@Nullable Map<String,String> limits) {
-            this.limits = Codegen.ofNullable(limits);
-            return this;
+
+        public Builder limits(Map<String,String> limits) {
+            return limits(Output.of(limits));
         }
+
         public Builder requests(@Nullable Output<Map<String,String>> requests) {
-            this.requests = requests;
+            $.requests = requests;
             return this;
         }
-        public Builder requests(@Nullable Map<String,String> requests) {
-            this.requests = Codegen.ofNullable(requests);
-            return this;
-        }        public ServiceTemplateSpecContainerResourcesArgs build() {
-            return new ServiceTemplateSpecContainerResourcesArgs(limits, requests);
+
+        public Builder requests(Map<String,String> requests) {
+            return requests(Output.of(requests));
+        }
+
+        public ServiceTemplateSpecContainerResourcesArgs build() {
+            return $;
         }
     }
+
 }

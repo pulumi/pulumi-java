@@ -5,10 +5,10 @@ package com.pulumi.gcp.bigtable.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class InstanceClusterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="clusterId", required=true)
-      private final Output<String> clusterId;
+    private Output<String> clusterId;
 
     public Output<String> clusterId() {
         return this.clusterId;
@@ -32,10 +32,10 @@ public final class InstanceClusterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="kmsKeyName")
-      private final @Nullable Output<String> kmsKeyName;
+    private @Nullable Output<String> kmsKeyName;
 
-    public Output<String> kmsKeyName() {
-        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class InstanceClusterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="numNodes")
-      private final @Nullable Output<Integer> numNodes;
+    private @Nullable Output<Integer> numNodes;
 
-    public Output<Integer> numNodes() {
-        return this.numNodes == null ? Codegen.empty() : this.numNodes;
+    public Optional<Output<Integer>> numNodes() {
+        return Optional.ofNullable(this.numNodes);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class InstanceClusterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="storageType")
-      private final @Nullable Output<String> storageType;
+    private @Nullable Output<String> storageType;
 
-    public Output<String> storageType() {
-        return this.storageType == null ? Codegen.empty() : this.storageType;
+    public Optional<Output<String>> storageType() {
+        return Optional.ofNullable(this.storageType);
     }
 
     /**
@@ -70,102 +70,89 @@ public final class InstanceClusterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public InstanceClusterArgs(
-        Output<String> clusterId,
-        @Nullable Output<String> kmsKeyName,
-        @Nullable Output<Integer> numNodes,
-        @Nullable Output<String> storageType,
-        @Nullable Output<String> zone) {
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-        this.kmsKeyName = kmsKeyName;
-        this.numNodes = numNodes;
-        this.storageType = storageType;
-        this.zone = zone;
-    }
+    private InstanceClusterArgs() {}
 
-    private InstanceClusterArgs() {
-        this.clusterId = Codegen.empty();
-        this.kmsKeyName = Codegen.empty();
-        this.numNodes = Codegen.empty();
-        this.storageType = Codegen.empty();
-        this.zone = Codegen.empty();
+    private InstanceClusterArgs(InstanceClusterArgs $) {
+        this.clusterId = $.clusterId;
+        this.kmsKeyName = $.kmsKeyName;
+        this.numNodes = $.numNodes;
+        this.storageType = $.storageType;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> clusterId;
-        private @Nullable Output<String> kmsKeyName;
-        private @Nullable Output<Integer> numNodes;
-        private @Nullable Output<String> storageType;
-        private @Nullable Output<String> zone;
+        private InstanceClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceClusterArgs();
         }
 
         public Builder(InstanceClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.numNodes = defaults.numNodes;
-    	      this.storageType = defaults.storageType;
-    	      this.zone = defaults.zone;
+            $ = new InstanceClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(Output<String> clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder clusterId(String clusterId) {
-            this.clusterId = Output.of(Objects.requireNonNull(clusterId));
-            return this;
+            return clusterId(Output.of(clusterId));
         }
+
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
-            this.kmsKeyName = kmsKeyName;
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
-        public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
-            return this;
+
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
         }
+
         public Builder numNodes(@Nullable Output<Integer> numNodes) {
-            this.numNodes = numNodes;
+            $.numNodes = numNodes;
             return this;
         }
-        public Builder numNodes(@Nullable Integer numNodes) {
-            this.numNodes = Codegen.ofNullable(numNodes);
-            return this;
+
+        public Builder numNodes(Integer numNodes) {
+            return numNodes(Output.of(numNodes));
         }
+
         public Builder storageType(@Nullable Output<String> storageType) {
-            this.storageType = storageType;
+            $.storageType = storageType;
             return this;
         }
-        public Builder storageType(@Nullable String storageType) {
-            this.storageType = Codegen.ofNullable(storageType);
-            return this;
+
+        public Builder storageType(String storageType) {
+            return storageType(Output.of(storageType));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public InstanceClusterArgs build() {
-            return new InstanceClusterArgs(clusterId, kmsKeyName, numNodes, storageType, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public InstanceClusterArgs build() {
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            return $;
         }
     }
+
 }

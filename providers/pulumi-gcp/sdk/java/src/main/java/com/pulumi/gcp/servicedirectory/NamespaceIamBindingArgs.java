@@ -5,11 +5,11 @@ package com.pulumi.gcp.servicedirectory;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.servicedirectory.inputs.NamespaceIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,14 +18,14 @@ public final class NamespaceIamBindingArgs extends com.pulumi.resources.Resource
     public static final NamespaceIamBindingArgs Empty = new NamespaceIamBindingArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<NamespaceIamBindingConditionArgs> condition;
+    private @Nullable Output<NamespaceIamBindingConditionArgs> condition;
 
-    public Output<NamespaceIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<NamespaceIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -36,10 +36,10 @@ public final class NamespaceIamBindingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -49,92 +49,84 @@ public final class NamespaceIamBindingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public NamespaceIamBindingArgs(
-        @Nullable Output<NamespaceIamBindingConditionArgs> condition,
-        Output<List<String>> members,
-        @Nullable Output<String> name,
-        Output<String> role) {
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.name = name;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private NamespaceIamBindingArgs() {}
 
-    private NamespaceIamBindingArgs() {
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.name = Codegen.empty();
-        this.role = Codegen.empty();
+    private NamespaceIamBindingArgs(NamespaceIamBindingArgs $) {
+        this.condition = $.condition;
+        this.members = $.members;
+        this.name = $.name;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamespaceIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NamespaceIamBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private @Nullable Output<String> name;
-        private Output<String> role;
+        private NamespaceIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamespaceIamBindingArgs();
         }
 
         public Builder(NamespaceIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.name = defaults.name;
-    	      this.role = defaults.role;
+            $ = new NamespaceIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<NamespaceIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable NamespaceIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(NamespaceIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public NamespaceIamBindingArgs build() {
-            return new NamespaceIamBindingArgs(condition, members, name, role);
+            return role(Output.of(role));
+        }
+
+        public NamespaceIamBindingArgs build() {
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

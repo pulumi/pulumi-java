@@ -5,10 +5,10 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.FhirStoreIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class FhirStoreIamMemberArgs extends com.pulumi.resources.ResourceA
     public static final FhirStoreIamMemberArgs Empty = new FhirStoreIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<FhirStoreIamMemberConditionArgs> condition;
+    private @Nullable Output<FhirStoreIamMemberConditionArgs> condition;
 
-    public Output<FhirStoreIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<FhirStoreIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -31,14 +31,14 @@ public final class FhirStoreIamMemberArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fhirStoreId", required=true)
-      private final Output<String> fhirStoreId;
+    private Output<String> fhirStoreId;
 
     public Output<String> fhirStoreId() {
         return this.fhirStoreId;
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -51,89 +51,81 @@ public final class FhirStoreIamMemberArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public FhirStoreIamMemberArgs(
-        @Nullable Output<FhirStoreIamMemberConditionArgs> condition,
-        Output<String> fhirStoreId,
-        Output<String> member,
-        Output<String> role) {
-        this.condition = condition;
-        this.fhirStoreId = Objects.requireNonNull(fhirStoreId, "expected parameter 'fhirStoreId' to be non-null");
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private FhirStoreIamMemberArgs() {}
 
-    private FhirStoreIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.fhirStoreId = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
+    private FhirStoreIamMemberArgs(FhirStoreIamMemberArgs $) {
+        this.condition = $.condition;
+        this.fhirStoreId = $.fhirStoreId;
+        this.member = $.member;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FhirStoreIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FhirStoreIamMemberConditionArgs> condition;
-        private Output<String> fhirStoreId;
-        private Output<String> member;
-        private Output<String> role;
+        private FhirStoreIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FhirStoreIamMemberArgs();
         }
 
         public Builder(FhirStoreIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.fhirStoreId = defaults.fhirStoreId;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
+            $ = new FhirStoreIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<FhirStoreIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable FhirStoreIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(FhirStoreIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder fhirStoreId(Output<String> fhirStoreId) {
-            this.fhirStoreId = Objects.requireNonNull(fhirStoreId);
+            $.fhirStoreId = fhirStoreId;
             return this;
         }
+
         public Builder fhirStoreId(String fhirStoreId) {
-            this.fhirStoreId = Output.of(Objects.requireNonNull(fhirStoreId));
-            return this;
+            return fhirStoreId(Output.of(fhirStoreId));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public FhirStoreIamMemberArgs build() {
-            return new FhirStoreIamMemberArgs(condition, fhirStoreId, member, role);
+            return role(Output.of(role));
+        }
+
+        public FhirStoreIamMemberArgs build() {
+            $.fhirStoreId = Objects.requireNonNull($.fhirStoreId, "expected parameter 'fhirStoreId' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

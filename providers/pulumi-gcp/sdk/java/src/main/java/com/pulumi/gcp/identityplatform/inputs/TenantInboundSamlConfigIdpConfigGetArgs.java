@@ -5,12 +5,12 @@ package com.pulumi.gcp.identityplatform.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="idpCertificates", required=true)
-      private final Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates;
+    private Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates;
 
     public Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates() {
         return this.idpCertificates;
@@ -35,7 +35,7 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="idpEntityId", required=true)
-      private final Output<String> idpEntityId;
+    private Output<String> idpEntityId;
 
     public Output<String> idpEntityId() {
         return this.idpEntityId;
@@ -46,10 +46,10 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="signRequest")
-      private final @Nullable Output<Boolean> signRequest;
+    private @Nullable Output<Boolean> signRequest;
 
-    public Output<Boolean> signRequest() {
-        return this.signRequest == null ? Codegen.empty() : this.signRequest;
+    public Optional<Output<Boolean>> signRequest() {
+        return Optional.ofNullable(this.signRequest);
     }
 
     /**
@@ -57,92 +57,85 @@ public final class TenantInboundSamlConfigIdpConfigGetArgs extends com.pulumi.re
      * 
      */
     @Import(name="ssoUrl", required=true)
-      private final Output<String> ssoUrl;
+    private Output<String> ssoUrl;
 
     public Output<String> ssoUrl() {
         return this.ssoUrl;
     }
 
-    public TenantInboundSamlConfigIdpConfigGetArgs(
-        Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates,
-        Output<String> idpEntityId,
-        @Nullable Output<Boolean> signRequest,
-        Output<String> ssoUrl) {
-        this.idpCertificates = Objects.requireNonNull(idpCertificates, "expected parameter 'idpCertificates' to be non-null");
-        this.idpEntityId = Objects.requireNonNull(idpEntityId, "expected parameter 'idpEntityId' to be non-null");
-        this.signRequest = signRequest;
-        this.ssoUrl = Objects.requireNonNull(ssoUrl, "expected parameter 'ssoUrl' to be non-null");
-    }
+    private TenantInboundSamlConfigIdpConfigGetArgs() {}
 
-    private TenantInboundSamlConfigIdpConfigGetArgs() {
-        this.idpCertificates = Codegen.empty();
-        this.idpEntityId = Codegen.empty();
-        this.signRequest = Codegen.empty();
-        this.ssoUrl = Codegen.empty();
+    private TenantInboundSamlConfigIdpConfigGetArgs(TenantInboundSamlConfigIdpConfigGetArgs $) {
+        this.idpCertificates = $.idpCertificates;
+        this.idpEntityId = $.idpEntityId;
+        this.signRequest = $.signRequest;
+        this.ssoUrl = $.ssoUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TenantInboundSamlConfigIdpConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates;
-        private Output<String> idpEntityId;
-        private @Nullable Output<Boolean> signRequest;
-        private Output<String> ssoUrl;
+        private TenantInboundSamlConfigIdpConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TenantInboundSamlConfigIdpConfigGetArgs();
         }
 
         public Builder(TenantInboundSamlConfigIdpConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.idpCertificates = defaults.idpCertificates;
-    	      this.idpEntityId = defaults.idpEntityId;
-    	      this.signRequest = defaults.signRequest;
-    	      this.ssoUrl = defaults.ssoUrl;
+            $ = new TenantInboundSamlConfigIdpConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder idpCertificates(Output<List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates) {
-            this.idpCertificates = Objects.requireNonNull(idpCertificates);
+            $.idpCertificates = idpCertificates;
             return this;
         }
+
         public Builder idpCertificates(List<TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs> idpCertificates) {
-            this.idpCertificates = Output.of(Objects.requireNonNull(idpCertificates));
-            return this;
+            return idpCertificates(Output.of(idpCertificates));
         }
+
         public Builder idpCertificates(TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs... idpCertificates) {
             return idpCertificates(List.of(idpCertificates));
         }
+
         public Builder idpEntityId(Output<String> idpEntityId) {
-            this.idpEntityId = Objects.requireNonNull(idpEntityId);
+            $.idpEntityId = idpEntityId;
             return this;
         }
+
         public Builder idpEntityId(String idpEntityId) {
-            this.idpEntityId = Output.of(Objects.requireNonNull(idpEntityId));
-            return this;
+            return idpEntityId(Output.of(idpEntityId));
         }
+
         public Builder signRequest(@Nullable Output<Boolean> signRequest) {
-            this.signRequest = signRequest;
+            $.signRequest = signRequest;
             return this;
         }
-        public Builder signRequest(@Nullable Boolean signRequest) {
-            this.signRequest = Codegen.ofNullable(signRequest);
-            return this;
+
+        public Builder signRequest(Boolean signRequest) {
+            return signRequest(Output.of(signRequest));
         }
+
         public Builder ssoUrl(Output<String> ssoUrl) {
-            this.ssoUrl = Objects.requireNonNull(ssoUrl);
+            $.ssoUrl = ssoUrl;
             return this;
         }
+
         public Builder ssoUrl(String ssoUrl) {
-            this.ssoUrl = Output.of(Objects.requireNonNull(ssoUrl));
-            return this;
-        }        public TenantInboundSamlConfigIdpConfigGetArgs build() {
-            return new TenantInboundSamlConfigIdpConfigGetArgs(idpCertificates, idpEntityId, signRequest, ssoUrl);
+            return ssoUrl(Output.of(ssoUrl));
+        }
+
+        public TenantInboundSamlConfigIdpConfigGetArgs build() {
+            $.idpCertificates = Objects.requireNonNull($.idpCertificates, "expected parameter 'idpCertificates' to be non-null");
+            $.idpEntityId = Objects.requireNonNull($.idpEntityId, "expected parameter 'idpEntityId' to be non-null");
+            $.ssoUrl = Objects.requireNonNull($.ssoUrl, "expected parameter 'ssoUrl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,7 +20,7 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -32,7 +32,7 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -44,10 +44,10 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
@@ -68,82 +68,72 @@ public final class GetClusterIstioServiceArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="serviceNamespace", required=true)
-      private final String serviceNamespace;
+    private String serviceNamespace;
 
     public String serviceNamespace() {
         return this.serviceNamespace;
     }
 
-    public GetClusterIstioServiceArgs(
-        String clusterName,
-        String location,
-        @Nullable String project,
-        String serviceName,
-        String serviceNamespace) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.serviceNamespace = Objects.requireNonNull(serviceNamespace, "expected parameter 'serviceNamespace' to be non-null");
-    }
+    private GetClusterIstioServiceArgs() {}
 
-    private GetClusterIstioServiceArgs() {
-        this.clusterName = null;
-        this.location = null;
-        this.project = null;
-        this.serviceName = null;
-        this.serviceNamespace = null;
+    private GetClusterIstioServiceArgs(GetClusterIstioServiceArgs $) {
+        this.clusterName = $.clusterName;
+        this.location = $.location;
+        this.project = $.project;
+        this.serviceName = $.serviceName;
+        this.serviceNamespace = $.serviceNamespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterIstioServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String location;
-        private @Nullable String project;
-        private String serviceName;
-        private String serviceNamespace;
+        private GetClusterIstioServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterIstioServiceArgs();
         }
 
         public Builder(GetClusterIstioServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.serviceName = defaults.serviceName;
-    	      this.serviceNamespace = defaults.serviceNamespace;
+            $ = new GetClusterIstioServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceNamespace(String serviceNamespace) {
-            this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
+            $.serviceNamespace = serviceNamespace;
             return this;
-        }        public GetClusterIstioServiceArgs build() {
-            return new GetClusterIstioServiceArgs(clusterName, location, project, serviceName, serviceNamespace);
+        }
+
+        public GetClusterIstioServiceArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            $.serviceNamespace = Objects.requireNonNull($.serviceNamespace, "expected parameter 'serviceNamespace' to be non-null");
+            return $;
         }
     }
+
 }

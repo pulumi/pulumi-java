@@ -5,12 +5,12 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.CxIntentTrainingPhrasePartGetArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class CxIntentTrainingPhraseGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -41,7 +41,7 @@ public final class CxIntentTrainingPhraseGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="parts", required=true)
-      private final Output<List<CxIntentTrainingPhrasePartGetArgs>> parts;
+    private Output<List<CxIntentTrainingPhrasePartGetArgs>> parts;
 
     public Output<List<CxIntentTrainingPhrasePartGetArgs>> parts() {
         return this.parts;
@@ -52,79 +52,73 @@ public final class CxIntentTrainingPhraseGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="repeatCount")
-      private final @Nullable Output<Integer> repeatCount;
+    private @Nullable Output<Integer> repeatCount;
 
-    public Output<Integer> repeatCount() {
-        return this.repeatCount == null ? Codegen.empty() : this.repeatCount;
+    public Optional<Output<Integer>> repeatCount() {
+        return Optional.ofNullable(this.repeatCount);
     }
 
-    public CxIntentTrainingPhraseGetArgs(
-        @Nullable Output<String> id,
-        Output<List<CxIntentTrainingPhrasePartGetArgs>> parts,
-        @Nullable Output<Integer> repeatCount) {
-        this.id = id;
-        this.parts = Objects.requireNonNull(parts, "expected parameter 'parts' to be non-null");
-        this.repeatCount = repeatCount;
-    }
+    private CxIntentTrainingPhraseGetArgs() {}
 
-    private CxIntentTrainingPhraseGetArgs() {
-        this.id = Codegen.empty();
-        this.parts = Codegen.empty();
-        this.repeatCount = Codegen.empty();
+    private CxIntentTrainingPhraseGetArgs(CxIntentTrainingPhraseGetArgs $) {
+        this.id = $.id;
+        this.parts = $.parts;
+        this.repeatCount = $.repeatCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxIntentTrainingPhraseGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private Output<List<CxIntentTrainingPhrasePartGetArgs>> parts;
-        private @Nullable Output<Integer> repeatCount;
+        private CxIntentTrainingPhraseGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxIntentTrainingPhraseGetArgs();
         }
 
         public Builder(CxIntentTrainingPhraseGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.parts = defaults.parts;
-    	      this.repeatCount = defaults.repeatCount;
+            $ = new CxIntentTrainingPhraseGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder parts(Output<List<CxIntentTrainingPhrasePartGetArgs>> parts) {
-            this.parts = Objects.requireNonNull(parts);
+            $.parts = parts;
             return this;
         }
+
         public Builder parts(List<CxIntentTrainingPhrasePartGetArgs> parts) {
-            this.parts = Output.of(Objects.requireNonNull(parts));
-            return this;
+            return parts(Output.of(parts));
         }
+
         public Builder parts(CxIntentTrainingPhrasePartGetArgs... parts) {
             return parts(List.of(parts));
         }
+
         public Builder repeatCount(@Nullable Output<Integer> repeatCount) {
-            this.repeatCount = repeatCount;
+            $.repeatCount = repeatCount;
             return this;
         }
-        public Builder repeatCount(@Nullable Integer repeatCount) {
-            this.repeatCount = Codegen.ofNullable(repeatCount);
-            return this;
-        }        public CxIntentTrainingPhraseGetArgs build() {
-            return new CxIntentTrainingPhraseGetArgs(id, parts, repeatCount);
+
+        public Builder repeatCount(Integer repeatCount) {
+            return repeatCount(Output.of(repeatCount));
+        }
+
+        public CxIntentTrainingPhraseGetArgs build() {
+            $.parts = Objects.requireNonNull($.parts, "expected parameter 'parts' to be non-null");
+            return $;
         }
     }
+
 }

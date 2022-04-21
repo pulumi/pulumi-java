@@ -5,10 +5,10 @@ package com.pulumi.gcp.memcache.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class InstanceMemcacheParametersArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -33,63 +33,58 @@ public final class InstanceMemcacheParametersArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="params")
-      private final @Nullable Output<Map<String,String>> params;
+    private @Nullable Output<Map<String,String>> params;
 
-    public Output<Map<String,String>> params() {
-        return this.params == null ? Codegen.empty() : this.params;
+    public Optional<Output<Map<String,String>>> params() {
+        return Optional.ofNullable(this.params);
     }
 
-    public InstanceMemcacheParametersArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<Map<String,String>> params) {
-        this.id = id;
-        this.params = params;
-    }
+    private InstanceMemcacheParametersArgs() {}
 
-    private InstanceMemcacheParametersArgs() {
-        this.id = Codegen.empty();
-        this.params = Codegen.empty();
+    private InstanceMemcacheParametersArgs(InstanceMemcacheParametersArgs $) {
+        this.id = $.id;
+        this.params = $.params;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceMemcacheParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<Map<String,String>> params;
+        private InstanceMemcacheParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceMemcacheParametersArgs();
         }
 
         public Builder(InstanceMemcacheParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.params = defaults.params;
+            $ = new InstanceMemcacheParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder params(@Nullable Output<Map<String,String>> params) {
-            this.params = params;
+            $.params = params;
             return this;
         }
-        public Builder params(@Nullable Map<String,String> params) {
-            this.params = Codegen.ofNullable(params);
-            return this;
-        }        public InstanceMemcacheParametersArgs build() {
-            return new InstanceMemcacheParametersArgs(id, params);
+
+        public Builder params(Map<String,String> params) {
+            return params(Output.of(params));
+        }
+
+        public InstanceMemcacheParametersArgs build() {
+            return $;
         }
     }
+
 }

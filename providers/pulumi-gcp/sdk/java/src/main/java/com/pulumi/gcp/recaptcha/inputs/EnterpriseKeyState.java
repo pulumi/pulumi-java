@@ -5,7 +5,6 @@ package com.pulumi.gcp.recaptcha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyAndroidSettingsGetArgs;
 import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyIosSettingsGetArgs;
 import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyTestingOptionsGetArgs;
@@ -13,6 +12,7 @@ import com.pulumi.gcp.recaptcha.inputs.EnterpriseKeyWebSettingsGetArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="androidSettings")
-      private final @Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings;
+    private @Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings;
 
-    public Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings() {
-        return this.androidSettings == null ? Codegen.empty() : this.androidSettings;
+    public Optional<Output<EnterpriseKeyAndroidSettingsGetArgs>> androidSettings() {
+        return Optional.ofNullable(this.androidSettings);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="iosSettings")
-      private final @Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings;
+    private @Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings;
 
-    public Output<EnterpriseKeyIosSettingsGetArgs> iosSettings() {
-        return this.iosSettings == null ? Codegen.empty() : this.iosSettings;
+    public Optional<Output<EnterpriseKeyIosSettingsGetArgs>> iosSettings() {
+        return Optional.ofNullable(this.iosSettings);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="testingOptions")
-      private final @Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions;
+    private @Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions;
 
-    public Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions() {
-        return this.testingOptions == null ? Codegen.empty() : this.testingOptions;
+    public Optional<Output<EnterpriseKeyTestingOptionsGetArgs>> testingOptions() {
+        return Optional.ofNullable(this.testingOptions);
     }
 
     /**
@@ -113,154 +113,128 @@ public final class EnterpriseKeyState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="webSettings")
-      private final @Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings;
+    private @Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings;
 
-    public Output<EnterpriseKeyWebSettingsGetArgs> webSettings() {
-        return this.webSettings == null ? Codegen.empty() : this.webSettings;
+    public Optional<Output<EnterpriseKeyWebSettingsGetArgs>> webSettings() {
+        return Optional.ofNullable(this.webSettings);
     }
 
-    public EnterpriseKeyState(
-        @Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> displayName,
-        @Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions,
-        @Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings) {
-        this.androidSettings = androidSettings;
-        this.createTime = createTime;
-        this.displayName = displayName;
-        this.iosSettings = iosSettings;
-        this.labels = labels;
-        this.name = name;
-        this.project = project;
-        this.testingOptions = testingOptions;
-        this.webSettings = webSettings;
-    }
+    private EnterpriseKeyState() {}
 
-    private EnterpriseKeyState() {
-        this.androidSettings = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.iosSettings = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.testingOptions = Codegen.empty();
-        this.webSettings = Codegen.empty();
+    private EnterpriseKeyState(EnterpriseKeyState $) {
+        this.androidSettings = $.androidSettings;
+        this.createTime = $.createTime;
+        this.displayName = $.displayName;
+        this.iosSettings = $.iosSettings;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.project = $.project;
+        this.testingOptions = $.testingOptions;
+        this.webSettings = $.webSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnterpriseKeyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions;
-        private @Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings;
+        private EnterpriseKeyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnterpriseKeyState();
         }
 
         public Builder(EnterpriseKeyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidSettings = defaults.androidSettings;
-    	      this.createTime = defaults.createTime;
-    	      this.displayName = defaults.displayName;
-    	      this.iosSettings = defaults.iosSettings;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.testingOptions = defaults.testingOptions;
-    	      this.webSettings = defaults.webSettings;
+            $ = new EnterpriseKeyState(Objects.requireNonNull(defaults));
         }
 
         public Builder androidSettings(@Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings) {
-            this.androidSettings = androidSettings;
+            $.androidSettings = androidSettings;
             return this;
         }
-        public Builder androidSettings(@Nullable EnterpriseKeyAndroidSettingsGetArgs androidSettings) {
-            this.androidSettings = Codegen.ofNullable(androidSettings);
-            return this;
+
+        public Builder androidSettings(EnterpriseKeyAndroidSettingsGetArgs androidSettings) {
+            return androidSettings(Output.of(androidSettings));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder iosSettings(@Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings) {
-            this.iosSettings = iosSettings;
+            $.iosSettings = iosSettings;
             return this;
         }
-        public Builder iosSettings(@Nullable EnterpriseKeyIosSettingsGetArgs iosSettings) {
-            this.iosSettings = Codegen.ofNullable(iosSettings);
-            return this;
+
+        public Builder iosSettings(EnterpriseKeyIosSettingsGetArgs iosSettings) {
+            return iosSettings(Output.of(iosSettings));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder testingOptions(@Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions) {
-            this.testingOptions = testingOptions;
+            $.testingOptions = testingOptions;
             return this;
         }
-        public Builder testingOptions(@Nullable EnterpriseKeyTestingOptionsGetArgs testingOptions) {
-            this.testingOptions = Codegen.ofNullable(testingOptions);
-            return this;
+
+        public Builder testingOptions(EnterpriseKeyTestingOptionsGetArgs testingOptions) {
+            return testingOptions(Output.of(testingOptions));
         }
+
         public Builder webSettings(@Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings) {
-            this.webSettings = webSettings;
+            $.webSettings = webSettings;
             return this;
         }
-        public Builder webSettings(@Nullable EnterpriseKeyWebSettingsGetArgs webSettings) {
-            this.webSettings = Codegen.ofNullable(webSettings);
-            return this;
-        }        public EnterpriseKeyState build() {
-            return new EnterpriseKeyState(androidSettings, createTime, displayName, iosSettings, labels, name, project, testingOptions, webSettings);
+
+        public Builder webSettings(EnterpriseKeyWebSettingsGetArgs webSettings) {
+            return webSettings(Output.of(webSettings));
+        }
+
+        public EnterpriseKeyState build() {
+            return $;
         }
     }
+
 }

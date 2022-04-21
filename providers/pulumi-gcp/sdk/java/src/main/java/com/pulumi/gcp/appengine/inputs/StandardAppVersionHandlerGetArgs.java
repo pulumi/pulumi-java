@@ -5,11 +5,11 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.StandardAppVersionHandlerScriptGetArgs;
 import com.pulumi.gcp.appengine.inputs.StandardAppVersionHandlerStaticFilesGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class StandardAppVersionHandlerGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="authFailAction")
-      private final @Nullable Output<String> authFailAction;
+    private @Nullable Output<String> authFailAction;
 
-    public Output<String> authFailAction() {
-        return this.authFailAction == null ? Codegen.empty() : this.authFailAction;
+    public Optional<Output<String>> authFailAction() {
+        return Optional.ofNullable(this.authFailAction);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StandardAppVersionHandlerGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="login")
-      private final @Nullable Output<String> login;
+    private @Nullable Output<String> login;
 
-    public Output<String> login() {
-        return this.login == null ? Codegen.empty() : this.login;
+    public Optional<Output<String>> login() {
+        return Optional.ofNullable(this.login);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class StandardAppVersionHandlerGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="redirectHttpResponseCode")
-      private final @Nullable Output<String> redirectHttpResponseCode;
+    private @Nullable Output<String> redirectHttpResponseCode;
 
-    public Output<String> redirectHttpResponseCode() {
-        return this.redirectHttpResponseCode == null ? Codegen.empty() : this.redirectHttpResponseCode;
+    public Optional<Output<String>> redirectHttpResponseCode() {
+        return Optional.ofNullable(this.redirectHttpResponseCode);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class StandardAppVersionHandlerGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="script")
-      private final @Nullable Output<StandardAppVersionHandlerScriptGetArgs> script;
+    private @Nullable Output<StandardAppVersionHandlerScriptGetArgs> script;
 
-    public Output<StandardAppVersionHandlerScriptGetArgs> script() {
-        return this.script == null ? Codegen.empty() : this.script;
+    public Optional<Output<StandardAppVersionHandlerScriptGetArgs>> script() {
+        return Optional.ofNullable(this.script);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class StandardAppVersionHandlerGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="securityLevel")
-      private final @Nullable Output<String> securityLevel;
+    private @Nullable Output<String> securityLevel;
 
-    public Output<String> securityLevel() {
-        return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
+    public Optional<Output<String>> securityLevel() {
+        return Optional.ofNullable(this.securityLevel);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class StandardAppVersionHandlerGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="staticFiles")
-      private final @Nullable Output<StandardAppVersionHandlerStaticFilesGetArgs> staticFiles;
+    private @Nullable Output<StandardAppVersionHandlerStaticFilesGetArgs> staticFiles;
 
-    public Output<StandardAppVersionHandlerStaticFilesGetArgs> staticFiles() {
-        return this.staticFiles == null ? Codegen.empty() : this.staticFiles;
+    public Optional<Output<StandardAppVersionHandlerStaticFilesGetArgs>> staticFiles() {
+        return Optional.ofNullable(this.staticFiles);
     }
 
     /**
@@ -96,128 +96,108 @@ public final class StandardAppVersionHandlerGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="urlRegex")
-      private final @Nullable Output<String> urlRegex;
+    private @Nullable Output<String> urlRegex;
 
-    public Output<String> urlRegex() {
-        return this.urlRegex == null ? Codegen.empty() : this.urlRegex;
+    public Optional<Output<String>> urlRegex() {
+        return Optional.ofNullable(this.urlRegex);
     }
 
-    public StandardAppVersionHandlerGetArgs(
-        @Nullable Output<String> authFailAction,
-        @Nullable Output<String> login,
-        @Nullable Output<String> redirectHttpResponseCode,
-        @Nullable Output<StandardAppVersionHandlerScriptGetArgs> script,
-        @Nullable Output<String> securityLevel,
-        @Nullable Output<StandardAppVersionHandlerStaticFilesGetArgs> staticFiles,
-        @Nullable Output<String> urlRegex) {
-        this.authFailAction = authFailAction;
-        this.login = login;
-        this.redirectHttpResponseCode = redirectHttpResponseCode;
-        this.script = script;
-        this.securityLevel = securityLevel;
-        this.staticFiles = staticFiles;
-        this.urlRegex = urlRegex;
-    }
+    private StandardAppVersionHandlerGetArgs() {}
 
-    private StandardAppVersionHandlerGetArgs() {
-        this.authFailAction = Codegen.empty();
-        this.login = Codegen.empty();
-        this.redirectHttpResponseCode = Codegen.empty();
-        this.script = Codegen.empty();
-        this.securityLevel = Codegen.empty();
-        this.staticFiles = Codegen.empty();
-        this.urlRegex = Codegen.empty();
+    private StandardAppVersionHandlerGetArgs(StandardAppVersionHandlerGetArgs $) {
+        this.authFailAction = $.authFailAction;
+        this.login = $.login;
+        this.redirectHttpResponseCode = $.redirectHttpResponseCode;
+        this.script = $.script;
+        this.securityLevel = $.securityLevel;
+        this.staticFiles = $.staticFiles;
+        this.urlRegex = $.urlRegex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardAppVersionHandlerGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> authFailAction;
-        private @Nullable Output<String> login;
-        private @Nullable Output<String> redirectHttpResponseCode;
-        private @Nullable Output<StandardAppVersionHandlerScriptGetArgs> script;
-        private @Nullable Output<String> securityLevel;
-        private @Nullable Output<StandardAppVersionHandlerStaticFilesGetArgs> staticFiles;
-        private @Nullable Output<String> urlRegex;
+        private StandardAppVersionHandlerGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardAppVersionHandlerGetArgs();
         }
 
         public Builder(StandardAppVersionHandlerGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authFailAction = defaults.authFailAction;
-    	      this.login = defaults.login;
-    	      this.redirectHttpResponseCode = defaults.redirectHttpResponseCode;
-    	      this.script = defaults.script;
-    	      this.securityLevel = defaults.securityLevel;
-    	      this.staticFiles = defaults.staticFiles;
-    	      this.urlRegex = defaults.urlRegex;
+            $ = new StandardAppVersionHandlerGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authFailAction(@Nullable Output<String> authFailAction) {
-            this.authFailAction = authFailAction;
+            $.authFailAction = authFailAction;
             return this;
         }
-        public Builder authFailAction(@Nullable String authFailAction) {
-            this.authFailAction = Codegen.ofNullable(authFailAction);
-            return this;
+
+        public Builder authFailAction(String authFailAction) {
+            return authFailAction(Output.of(authFailAction));
         }
+
         public Builder login(@Nullable Output<String> login) {
-            this.login = login;
+            $.login = login;
             return this;
         }
-        public Builder login(@Nullable String login) {
-            this.login = Codegen.ofNullable(login);
-            return this;
+
+        public Builder login(String login) {
+            return login(Output.of(login));
         }
+
         public Builder redirectHttpResponseCode(@Nullable Output<String> redirectHttpResponseCode) {
-            this.redirectHttpResponseCode = redirectHttpResponseCode;
+            $.redirectHttpResponseCode = redirectHttpResponseCode;
             return this;
         }
-        public Builder redirectHttpResponseCode(@Nullable String redirectHttpResponseCode) {
-            this.redirectHttpResponseCode = Codegen.ofNullable(redirectHttpResponseCode);
-            return this;
+
+        public Builder redirectHttpResponseCode(String redirectHttpResponseCode) {
+            return redirectHttpResponseCode(Output.of(redirectHttpResponseCode));
         }
+
         public Builder script(@Nullable Output<StandardAppVersionHandlerScriptGetArgs> script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
-        public Builder script(@Nullable StandardAppVersionHandlerScriptGetArgs script) {
-            this.script = Codegen.ofNullable(script);
-            return this;
+
+        public Builder script(StandardAppVersionHandlerScriptGetArgs script) {
+            return script(Output.of(script));
         }
+
         public Builder securityLevel(@Nullable Output<String> securityLevel) {
-            this.securityLevel = securityLevel;
+            $.securityLevel = securityLevel;
             return this;
         }
-        public Builder securityLevel(@Nullable String securityLevel) {
-            this.securityLevel = Codegen.ofNullable(securityLevel);
-            return this;
+
+        public Builder securityLevel(String securityLevel) {
+            return securityLevel(Output.of(securityLevel));
         }
+
         public Builder staticFiles(@Nullable Output<StandardAppVersionHandlerStaticFilesGetArgs> staticFiles) {
-            this.staticFiles = staticFiles;
+            $.staticFiles = staticFiles;
             return this;
         }
-        public Builder staticFiles(@Nullable StandardAppVersionHandlerStaticFilesGetArgs staticFiles) {
-            this.staticFiles = Codegen.ofNullable(staticFiles);
-            return this;
+
+        public Builder staticFiles(StandardAppVersionHandlerStaticFilesGetArgs staticFiles) {
+            return staticFiles(Output.of(staticFiles));
         }
+
         public Builder urlRegex(@Nullable Output<String> urlRegex) {
-            this.urlRegex = urlRegex;
+            $.urlRegex = urlRegex;
             return this;
         }
-        public Builder urlRegex(@Nullable String urlRegex) {
-            this.urlRegex = Codegen.ofNullable(urlRegex);
-            return this;
-        }        public StandardAppVersionHandlerGetArgs build() {
-            return new StandardAppVersionHandlerGetArgs(authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
+
+        public Builder urlRegex(String urlRegex) {
+            return urlRegex(Output.of(urlRegex));
+        }
+
+        public StandardAppVersionHandlerGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.gcp.tags.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.tags.inputs.TagKeyIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class TagKeyIamBindingState extends com.pulumi.resources.ResourceAr
     public static final TagKeyIamBindingState Empty = new TagKeyIamBindingState();
 
     @Import(name="condition")
-      private final @Nullable Output<TagKeyIamBindingConditionGetArgs> condition;
+    private @Nullable Output<TagKeyIamBindingConditionGetArgs> condition;
 
-    public Output<TagKeyIamBindingConditionGetArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<TagKeyIamBindingConditionGetArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -29,17 +29,17 @@ public final class TagKeyIamBindingState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="members")
-      private final @Nullable Output<List<String>> members;
+    private @Nullable Output<List<String>> members;
 
-    public Output<List<String>> members() {
-        return this.members == null ? Codegen.empty() : this.members;
+    public Optional<Output<List<String>>> members() {
+        return Optional.ofNullable(this.members);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class TagKeyIamBindingState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -60,105 +60,92 @@ public final class TagKeyIamBindingState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tagKey")
-      private final @Nullable Output<String> tagKey;
+    private @Nullable Output<String> tagKey;
 
-    public Output<String> tagKey() {
-        return this.tagKey == null ? Codegen.empty() : this.tagKey;
+    public Optional<Output<String>> tagKey() {
+        return Optional.ofNullable(this.tagKey);
     }
 
-    public TagKeyIamBindingState(
-        @Nullable Output<TagKeyIamBindingConditionGetArgs> condition,
-        @Nullable Output<String> etag,
-        @Nullable Output<List<String>> members,
-        @Nullable Output<String> role,
-        @Nullable Output<String> tagKey) {
-        this.condition = condition;
-        this.etag = etag;
-        this.members = members;
-        this.role = role;
-        this.tagKey = tagKey;
-    }
+    private TagKeyIamBindingState() {}
 
-    private TagKeyIamBindingState() {
-        this.condition = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.members = Codegen.empty();
-        this.role = Codegen.empty();
-        this.tagKey = Codegen.empty();
+    private TagKeyIamBindingState(TagKeyIamBindingState $) {
+        this.condition = $.condition;
+        this.etag = $.etag;
+        this.members = $.members;
+        this.role = $.role;
+        this.tagKey = $.tagKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagKeyIamBindingState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TagKeyIamBindingConditionGetArgs> condition;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<List<String>> members;
-        private @Nullable Output<String> role;
-        private @Nullable Output<String> tagKey;
+        private TagKeyIamBindingState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagKeyIamBindingState();
         }
 
         public Builder(TagKeyIamBindingState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.etag = defaults.etag;
-    	      this.members = defaults.members;
-    	      this.role = defaults.role;
-    	      this.tagKey = defaults.tagKey;
+            $ = new TagKeyIamBindingState(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<TagKeyIamBindingConditionGetArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable TagKeyIamBindingConditionGetArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(TagKeyIamBindingConditionGetArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder members(@Nullable Output<List<String>> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
-        public Builder members(@Nullable List<String> members) {
-            this.members = Codegen.ofNullable(members);
-            return this;
+
+        public Builder members(List<String> members) {
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder tagKey(@Nullable Output<String> tagKey) {
-            this.tagKey = tagKey;
+            $.tagKey = tagKey;
             return this;
         }
-        public Builder tagKey(@Nullable String tagKey) {
-            this.tagKey = Codegen.ofNullable(tagKey);
-            return this;
-        }        public TagKeyIamBindingState build() {
-            return new TagKeyIamBindingState(condition, etag, members, role, tagKey);
+
+        public Builder tagKey(String tagKey) {
+            return tagKey(Output.of(tagKey));
+        }
+
+        public TagKeyIamBindingState build() {
+            return $;
         }
     }
+
 }

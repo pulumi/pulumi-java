@@ -13,62 +13,59 @@ public final class GetBucketLogging extends com.pulumi.resources.InvokeArgs {
     public static final GetBucketLogging Empty = new GetBucketLogging();
 
     @Import(name="logBucket", required=true)
-      private final String logBucket;
+    private String logBucket;
 
     public String logBucket() {
         return this.logBucket;
     }
 
     @Import(name="logObjectPrefix", required=true)
-      private final String logObjectPrefix;
+    private String logObjectPrefix;
 
     public String logObjectPrefix() {
         return this.logObjectPrefix;
     }
 
-    public GetBucketLogging(
-        String logBucket,
-        String logObjectPrefix) {
-        this.logBucket = Objects.requireNonNull(logBucket, "expected parameter 'logBucket' to be non-null");
-        this.logObjectPrefix = Objects.requireNonNull(logObjectPrefix, "expected parameter 'logObjectPrefix' to be non-null");
-    }
+    private GetBucketLogging() {}
 
-    private GetBucketLogging() {
-        this.logBucket = null;
-        this.logObjectPrefix = null;
+    private GetBucketLogging(GetBucketLogging $) {
+        this.logBucket = $.logBucket;
+        this.logObjectPrefix = $.logObjectPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBucketLogging defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String logBucket;
-        private String logObjectPrefix;
+        private GetBucketLogging $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBucketLogging();
         }
 
         public Builder(GetBucketLogging defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logBucket = defaults.logBucket;
-    	      this.logObjectPrefix = defaults.logObjectPrefix;
+            $ = new GetBucketLogging(Objects.requireNonNull(defaults));
         }
 
         public Builder logBucket(String logBucket) {
-            this.logBucket = Objects.requireNonNull(logBucket);
+            $.logBucket = logBucket;
             return this;
         }
+
         public Builder logObjectPrefix(String logObjectPrefix) {
-            this.logObjectPrefix = Objects.requireNonNull(logObjectPrefix);
+            $.logObjectPrefix = logObjectPrefix;
             return this;
-        }        public GetBucketLogging build() {
-            return new GetBucketLogging(logBucket, logObjectPrefix);
+        }
+
+        public GetBucketLogging build() {
+            $.logBucket = Objects.requireNonNull($.logBucket, "expected parameter 'logBucket' to be non-null");
+            $.logObjectPrefix = Objects.requireNonNull($.logObjectPrefix, "expected parameter 'logObjectPrefix' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,62 +13,59 @@ public final class GetBackendServiceOutlierDetectionInterval extends com.pulumi.
     public static final GetBackendServiceOutlierDetectionInterval Empty = new GetBackendServiceOutlierDetectionInterval();
 
     @Import(name="nanos", required=true)
-      private final Integer nanos;
+    private Integer nanos;
 
     public Integer nanos() {
         return this.nanos;
     }
 
     @Import(name="seconds", required=true)
-      private final Integer seconds;
+    private Integer seconds;
 
     public Integer seconds() {
         return this.seconds;
     }
 
-    public GetBackendServiceOutlierDetectionInterval(
-        Integer nanos,
-        Integer seconds) {
-        this.nanos = Objects.requireNonNull(nanos, "expected parameter 'nanos' to be non-null");
-        this.seconds = Objects.requireNonNull(seconds, "expected parameter 'seconds' to be non-null");
-    }
+    private GetBackendServiceOutlierDetectionInterval() {}
 
-    private GetBackendServiceOutlierDetectionInterval() {
-        this.nanos = null;
-        this.seconds = null;
+    private GetBackendServiceOutlierDetectionInterval(GetBackendServiceOutlierDetectionInterval $) {
+        this.nanos = $.nanos;
+        this.seconds = $.seconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackendServiceOutlierDetectionInterval defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer nanos;
-        private Integer seconds;
+        private GetBackendServiceOutlierDetectionInterval $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackendServiceOutlierDetectionInterval();
         }
 
         public Builder(GetBackendServiceOutlierDetectionInterval defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nanos = defaults.nanos;
-    	      this.seconds = defaults.seconds;
+            $ = new GetBackendServiceOutlierDetectionInterval(Objects.requireNonNull(defaults));
         }
 
         public Builder nanos(Integer nanos) {
-            this.nanos = Objects.requireNonNull(nanos);
+            $.nanos = nanos;
             return this;
         }
+
         public Builder seconds(Integer seconds) {
-            this.seconds = Objects.requireNonNull(seconds);
+            $.seconds = seconds;
             return this;
-        }        public GetBackendServiceOutlierDetectionInterval build() {
-            return new GetBackendServiceOutlierDetectionInterval(nanos, seconds);
+        }
+
+        public GetBackendServiceOutlierDetectionInterval build() {
+            $.nanos = Objects.requireNonNull($.nanos, "expected parameter 'nanos' to be non-null");
+            $.seconds = Objects.requireNonNull($.seconds, "expected parameter 'seconds' to be non-null");
+            return $;
         }
     }
+
 }

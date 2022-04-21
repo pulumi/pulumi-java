@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class WorkflowTemplateJobHadoopJobLoggingConfigGetArgs extends com.
      * 
      */
     @Import(name="driverLogLevels")
-      private final @Nullable Output<Map<String,String>> driverLogLevels;
+    private @Nullable Output<Map<String,String>> driverLogLevels;
 
-    public Output<Map<String,String>> driverLogLevels() {
-        return this.driverLogLevels == null ? Codegen.empty() : this.driverLogLevels;
+    public Optional<Output<Map<String,String>>> driverLogLevels() {
+        return Optional.ofNullable(this.driverLogLevels);
     }
 
-    public WorkflowTemplateJobHadoopJobLoggingConfigGetArgs(@Nullable Output<Map<String,String>> driverLogLevels) {
-        this.driverLogLevels = driverLogLevels;
-    }
+    private WorkflowTemplateJobHadoopJobLoggingConfigGetArgs() {}
 
-    private WorkflowTemplateJobHadoopJobLoggingConfigGetArgs() {
-        this.driverLogLevels = Codegen.empty();
+    private WorkflowTemplateJobHadoopJobLoggingConfigGetArgs(WorkflowTemplateJobHadoopJobLoggingConfigGetArgs $) {
+        this.driverLogLevels = $.driverLogLevels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplateJobHadoopJobLoggingConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> driverLogLevels;
+        private WorkflowTemplateJobHadoopJobLoggingConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplateJobHadoopJobLoggingConfigGetArgs();
         }
 
         public Builder(WorkflowTemplateJobHadoopJobLoggingConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.driverLogLevels = defaults.driverLogLevels;
+            $ = new WorkflowTemplateJobHadoopJobLoggingConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder driverLogLevels(@Nullable Output<Map<String,String>> driverLogLevels) {
-            this.driverLogLevels = driverLogLevels;
+            $.driverLogLevels = driverLogLevels;
             return this;
         }
-        public Builder driverLogLevels(@Nullable Map<String,String> driverLogLevels) {
-            this.driverLogLevels = Codegen.ofNullable(driverLogLevels);
-            return this;
-        }        public WorkflowTemplateJobHadoopJobLoggingConfigGetArgs build() {
-            return new WorkflowTemplateJobHadoopJobLoggingConfigGetArgs(driverLogLevels);
+
+        public Builder driverLogLevels(Map<String,String> driverLogLevels) {
+            return driverLogLevels(Output.of(driverLogLevels));
+        }
+
+        public WorkflowTemplateJobHadoopJobLoggingConfigGetArgs build() {
+            return $;
         }
     }
+
 }

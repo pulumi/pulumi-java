@@ -5,10 +5,10 @@ package com.pulumi.gcp.sourcerepo;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.sourcerepo.inputs.RepositoryIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,14 +17,14 @@ public final class RepositoryIamMemberArgs extends com.pulumi.resources.Resource
     public static final RepositoryIamMemberArgs Empty = new RepositoryIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<RepositoryIamMemberConditionArgs> condition;
+    private @Nullable Output<RepositoryIamMemberConditionArgs> condition;
 
-    public Output<RepositoryIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<RepositoryIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -36,14 +36,14 @@ public final class RepositoryIamMemberArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="repository", required=true)
-      private final Output<String> repository;
+    private Output<String> repository;
 
     public Output<String> repository() {
         return this.repository;
@@ -56,102 +56,91 @@ public final class RepositoryIamMemberArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public RepositoryIamMemberArgs(
-        @Nullable Output<RepositoryIamMemberConditionArgs> condition,
-        Output<String> member,
-        @Nullable Output<String> project,
-        Output<String> repository,
-        Output<String> role) {
-        this.condition = condition;
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.project = project;
-        this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private RepositoryIamMemberArgs() {}
 
-    private RepositoryIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.repository = Codegen.empty();
-        this.role = Codegen.empty();
+    private RepositoryIamMemberArgs(RepositoryIamMemberArgs $) {
+        this.condition = $.condition;
+        this.member = $.member;
+        this.project = $.project;
+        this.repository = $.repository;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RepositoryIamMemberConditionArgs> condition;
-        private Output<String> member;
-        private @Nullable Output<String> project;
-        private Output<String> repository;
-        private Output<String> role;
+        private RepositoryIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryIamMemberArgs();
         }
 
         public Builder(RepositoryIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.repository = defaults.repository;
-    	      this.role = defaults.role;
+            $ = new RepositoryIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<RepositoryIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable RepositoryIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(RepositoryIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder repository(Output<String> repository) {
-            this.repository = Objects.requireNonNull(repository);
+            $.repository = repository;
             return this;
         }
+
         public Builder repository(String repository) {
-            this.repository = Output.of(Objects.requireNonNull(repository));
-            return this;
+            return repository(Output.of(repository));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public RepositoryIamMemberArgs build() {
-            return new RepositoryIamMemberArgs(condition, member, project, repository, role);
+            return role(Output.of(role));
+        }
+
+        public RepositoryIamMemberArgs build() {
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.repository = Objects.requireNonNull($.repository, "expected parameter 'repository' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

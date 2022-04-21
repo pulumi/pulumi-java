@@ -14,78 +14,73 @@ public final class GetClusterNodeConfigKubeletConfig extends com.pulumi.resource
     public static final GetClusterNodeConfigKubeletConfig Empty = new GetClusterNodeConfigKubeletConfig();
 
     @Import(name="cpuCfsQuota", required=true)
-      private final Boolean cpuCfsQuota;
+    private Boolean cpuCfsQuota;
 
     public Boolean cpuCfsQuota() {
         return this.cpuCfsQuota;
     }
 
     @Import(name="cpuCfsQuotaPeriod", required=true)
-      private final String cpuCfsQuotaPeriod;
+    private String cpuCfsQuotaPeriod;
 
     public String cpuCfsQuotaPeriod() {
         return this.cpuCfsQuotaPeriod;
     }
 
     @Import(name="cpuManagerPolicy", required=true)
-      private final String cpuManagerPolicy;
+    private String cpuManagerPolicy;
 
     public String cpuManagerPolicy() {
         return this.cpuManagerPolicy;
     }
 
-    public GetClusterNodeConfigKubeletConfig(
-        Boolean cpuCfsQuota,
-        String cpuCfsQuotaPeriod,
-        String cpuManagerPolicy) {
-        this.cpuCfsQuota = Objects.requireNonNull(cpuCfsQuota, "expected parameter 'cpuCfsQuota' to be non-null");
-        this.cpuCfsQuotaPeriod = Objects.requireNonNull(cpuCfsQuotaPeriod, "expected parameter 'cpuCfsQuotaPeriod' to be non-null");
-        this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy, "expected parameter 'cpuManagerPolicy' to be non-null");
-    }
+    private GetClusterNodeConfigKubeletConfig() {}
 
-    private GetClusterNodeConfigKubeletConfig() {
-        this.cpuCfsQuota = null;
-        this.cpuCfsQuotaPeriod = null;
-        this.cpuManagerPolicy = null;
+    private GetClusterNodeConfigKubeletConfig(GetClusterNodeConfigKubeletConfig $) {
+        this.cpuCfsQuota = $.cpuCfsQuota;
+        this.cpuCfsQuotaPeriod = $.cpuCfsQuotaPeriod;
+        this.cpuManagerPolicy = $.cpuManagerPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodeConfigKubeletConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean cpuCfsQuota;
-        private String cpuCfsQuotaPeriod;
-        private String cpuManagerPolicy;
+        private GetClusterNodeConfigKubeletConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodeConfigKubeletConfig();
         }
 
         public Builder(GetClusterNodeConfigKubeletConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuCfsQuota = defaults.cpuCfsQuota;
-    	      this.cpuCfsQuotaPeriod = defaults.cpuCfsQuotaPeriod;
-    	      this.cpuManagerPolicy = defaults.cpuManagerPolicy;
+            $ = new GetClusterNodeConfigKubeletConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuCfsQuota(Boolean cpuCfsQuota) {
-            this.cpuCfsQuota = Objects.requireNonNull(cpuCfsQuota);
+            $.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
+
         public Builder cpuCfsQuotaPeriod(String cpuCfsQuotaPeriod) {
-            this.cpuCfsQuotaPeriod = Objects.requireNonNull(cpuCfsQuotaPeriod);
+            $.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
+
         public Builder cpuManagerPolicy(String cpuManagerPolicy) {
-            this.cpuManagerPolicy = Objects.requireNonNull(cpuManagerPolicy);
+            $.cpuManagerPolicy = cpuManagerPolicy;
             return this;
-        }        public GetClusterNodeConfigKubeletConfig build() {
-            return new GetClusterNodeConfigKubeletConfig(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
+        }
+
+        public GetClusterNodeConfigKubeletConfig build() {
+            $.cpuCfsQuota = Objects.requireNonNull($.cpuCfsQuota, "expected parameter 'cpuCfsQuota' to be non-null");
+            $.cpuCfsQuotaPeriod = Objects.requireNonNull($.cpuCfsQuotaPeriod, "expected parameter 'cpuCfsQuotaPeriod' to be non-null");
+            $.cpuManagerPolicy = Objects.requireNonNull($.cpuManagerPolicy, "expected parameter 'cpuManagerPolicy' to be non-null");
+            return $;
         }
     }
+
 }

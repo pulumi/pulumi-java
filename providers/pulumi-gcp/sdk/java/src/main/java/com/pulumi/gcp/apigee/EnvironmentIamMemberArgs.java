@@ -5,10 +5,10 @@ package com.pulumi.gcp.apigee;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.apigee.inputs.EnvironmentIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class EnvironmentIamMemberArgs extends com.pulumi.resources.Resourc
     public static final EnvironmentIamMemberArgs Empty = new EnvironmentIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<EnvironmentIamMemberConditionArgs> condition;
+    private @Nullable Output<EnvironmentIamMemberConditionArgs> condition;
 
-    public Output<EnvironmentIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<EnvironmentIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -28,21 +28,21 @@ public final class EnvironmentIamMemberArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="envId", required=true)
-      private final Output<String> envId;
+    private Output<String> envId;
 
     public Output<String> envId() {
         return this.envId;
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
     }
 
     @Import(name="orgId", required=true)
-      private final Output<String> orgId;
+    private Output<String> orgId;
 
     public Output<String> orgId() {
         return this.orgId;
@@ -55,102 +55,92 @@ public final class EnvironmentIamMemberArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public EnvironmentIamMemberArgs(
-        @Nullable Output<EnvironmentIamMemberConditionArgs> condition,
-        Output<String> envId,
-        Output<String> member,
-        Output<String> orgId,
-        Output<String> role) {
-        this.condition = condition;
-        this.envId = Objects.requireNonNull(envId, "expected parameter 'envId' to be non-null");
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.orgId = Objects.requireNonNull(orgId, "expected parameter 'orgId' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private EnvironmentIamMemberArgs() {}
 
-    private EnvironmentIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.envId = Codegen.empty();
-        this.member = Codegen.empty();
-        this.orgId = Codegen.empty();
-        this.role = Codegen.empty();
+    private EnvironmentIamMemberArgs(EnvironmentIamMemberArgs $) {
+        this.condition = $.condition;
+        this.envId = $.envId;
+        this.member = $.member;
+        this.orgId = $.orgId;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EnvironmentIamMemberConditionArgs> condition;
-        private Output<String> envId;
-        private Output<String> member;
-        private Output<String> orgId;
-        private Output<String> role;
+        private EnvironmentIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentIamMemberArgs();
         }
 
         public Builder(EnvironmentIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.envId = defaults.envId;
-    	      this.member = defaults.member;
-    	      this.orgId = defaults.orgId;
-    	      this.role = defaults.role;
+            $ = new EnvironmentIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<EnvironmentIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable EnvironmentIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(EnvironmentIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder envId(Output<String> envId) {
-            this.envId = Objects.requireNonNull(envId);
+            $.envId = envId;
             return this;
         }
+
         public Builder envId(String envId) {
-            this.envId = Output.of(Objects.requireNonNull(envId));
-            return this;
+            return envId(Output.of(envId));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder orgId(Output<String> orgId) {
-            this.orgId = Objects.requireNonNull(orgId);
+            $.orgId = orgId;
             return this;
         }
+
         public Builder orgId(String orgId) {
-            this.orgId = Output.of(Objects.requireNonNull(orgId));
-            return this;
+            return orgId(Output.of(orgId));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public EnvironmentIamMemberArgs build() {
-            return new EnvironmentIamMemberArgs(condition, envId, member, orgId, role);
+            return role(Output.of(role));
+        }
+
+        public EnvironmentIamMemberArgs build() {
+            $.envId = Objects.requireNonNull($.envId, "expected parameter 'envId' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.orgId = Objects.requireNonNull($.orgId, "expected parameter 'orgId' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

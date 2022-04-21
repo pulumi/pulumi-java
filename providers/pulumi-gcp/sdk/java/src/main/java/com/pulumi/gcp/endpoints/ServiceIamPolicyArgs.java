@@ -5,7 +5,6 @@ package com.pulumi.gcp.endpoints;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,70 +19,67 @@ public final class ServiceIamPolicyArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
     }
 
-    public ServiceIamPolicyArgs(
-        Output<String> policyData,
-        Output<String> serviceName) {
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private ServiceIamPolicyArgs() {}
 
-    private ServiceIamPolicyArgs() {
-        this.policyData = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private ServiceIamPolicyArgs(ServiceIamPolicyArgs $) {
+        this.policyData = $.policyData;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyData;
-        private Output<String> serviceName;
+        private ServiceIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceIamPolicyArgs();
         }
 
         public Builder(ServiceIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyData = defaults.policyData;
-    	      this.serviceName = defaults.serviceName;
+            $ = new ServiceIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
-        }        public ServiceIamPolicyArgs build() {
-            return new ServiceIamPolicyArgs(policyData, serviceName);
+            return serviceName(Output.of(serviceName));
+        }
+
+        public ServiceIamPolicyArgs build() {
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

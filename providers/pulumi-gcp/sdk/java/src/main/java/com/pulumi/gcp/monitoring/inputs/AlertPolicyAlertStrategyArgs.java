@@ -5,10 +5,10 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyAlertStrategyNotificationRateLimitArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AlertPolicyAlertStrategyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="autoClose")
-      private final @Nullable Output<String> autoClose;
+    private @Nullable Output<String> autoClose;
 
-    public Output<String> autoClose() {
-        return this.autoClose == null ? Codegen.empty() : this.autoClose;
+    public Optional<Output<String>> autoClose() {
+        return Optional.ofNullable(this.autoClose);
     }
 
     /**
@@ -34,63 +34,58 @@ public final class AlertPolicyAlertStrategyArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="notificationRateLimit")
-      private final @Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit;
+    private @Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit;
 
-    public Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit() {
-        return this.notificationRateLimit == null ? Codegen.empty() : this.notificationRateLimit;
+    public Optional<Output<AlertPolicyAlertStrategyNotificationRateLimitArgs>> notificationRateLimit() {
+        return Optional.ofNullable(this.notificationRateLimit);
     }
 
-    public AlertPolicyAlertStrategyArgs(
-        @Nullable Output<String> autoClose,
-        @Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit) {
-        this.autoClose = autoClose;
-        this.notificationRateLimit = notificationRateLimit;
-    }
+    private AlertPolicyAlertStrategyArgs() {}
 
-    private AlertPolicyAlertStrategyArgs() {
-        this.autoClose = Codegen.empty();
-        this.notificationRateLimit = Codegen.empty();
+    private AlertPolicyAlertStrategyArgs(AlertPolicyAlertStrategyArgs $) {
+        this.autoClose = $.autoClose;
+        this.notificationRateLimit = $.notificationRateLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertPolicyAlertStrategyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> autoClose;
-        private @Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit;
+        private AlertPolicyAlertStrategyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertPolicyAlertStrategyArgs();
         }
 
         public Builder(AlertPolicyAlertStrategyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoClose = defaults.autoClose;
-    	      this.notificationRateLimit = defaults.notificationRateLimit;
+            $ = new AlertPolicyAlertStrategyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoClose(@Nullable Output<String> autoClose) {
-            this.autoClose = autoClose;
+            $.autoClose = autoClose;
             return this;
         }
-        public Builder autoClose(@Nullable String autoClose) {
-            this.autoClose = Codegen.ofNullable(autoClose);
-            return this;
+
+        public Builder autoClose(String autoClose) {
+            return autoClose(Output.of(autoClose));
         }
+
         public Builder notificationRateLimit(@Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitArgs> notificationRateLimit) {
-            this.notificationRateLimit = notificationRateLimit;
+            $.notificationRateLimit = notificationRateLimit;
             return this;
         }
-        public Builder notificationRateLimit(@Nullable AlertPolicyAlertStrategyNotificationRateLimitArgs notificationRateLimit) {
-            this.notificationRateLimit = Codegen.ofNullable(notificationRateLimit);
-            return this;
-        }        public AlertPolicyAlertStrategyArgs build() {
-            return new AlertPolicyAlertStrategyArgs(autoClose, notificationRateLimit);
+
+        public Builder notificationRateLimit(AlertPolicyAlertStrategyNotificationRateLimitArgs notificationRateLimit) {
+            return notificationRateLimit(Output.of(notificationRateLimit));
+        }
+
+        public AlertPolicyAlertStrategyArgs build() {
+            return $;
         }
     }
+
 }

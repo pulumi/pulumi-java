@@ -5,7 +5,6 @@ package com.pulumi.gcp.folder;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class IAMPolicyArgs extends com.pulumi.resources.ResourceArgs {
     public static final IAMPolicyArgs Empty = new IAMPolicyArgs();
 
     @Import(name="folder", required=true)
-      private final Output<String> folder;
+    private Output<String> folder;
 
     public Output<String> folder() {
         return this.folder;
     }
 
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
-    public IAMPolicyArgs(
-        Output<String> folder,
-        Output<String> policyData) {
-        this.folder = Objects.requireNonNull(folder, "expected parameter 'folder' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-    }
+    private IAMPolicyArgs() {}
 
-    private IAMPolicyArgs() {
-        this.folder = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private IAMPolicyArgs(IAMPolicyArgs $) {
+        this.folder = $.folder;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IAMPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> folder;
-        private Output<String> policyData;
+        private IAMPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IAMPolicyArgs();
         }
 
         public Builder(IAMPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.folder = defaults.folder;
-    	      this.policyData = defaults.policyData;
+            $ = new IAMPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder folder(Output<String> folder) {
-            this.folder = Objects.requireNonNull(folder);
+            $.folder = folder;
             return this;
         }
+
         public Builder folder(String folder) {
-            this.folder = Output.of(Objects.requireNonNull(folder));
-            return this;
+            return folder(Output.of(folder));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
-        }        public IAMPolicyArgs build() {
-            return new IAMPolicyArgs(folder, policyData);
+            return policyData(Output.of(policyData));
+        }
+
+        public IAMPolicyArgs build() {
+            $.folder = Objects.requireNonNull($.folder, "expected parameter 'folder' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isCluster")
-      private final @Nullable Output<Boolean> isCluster;
+    private @Nullable Output<Boolean> isCluster;
 
-    public Output<Boolean> isCluster() {
-        return this.isCluster == null ? Codegen.empty() : this.isCluster;
+    public Optional<Output<Boolean>> isCluster() {
+        return Optional.ofNullable(this.isCluster);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parentName")
-      private final @Nullable Output<String> parentName;
+    private @Nullable Output<String> parentName;
 
-    public Output<String> parentName() {
-        return this.parentName == null ? Codegen.empty() : this.parentName;
+    public Optional<Output<String>> parentName() {
+        return Optional.ofNullable(this.parentName);
     }
 
     /**
@@ -83,115 +83,98 @@ public final class GroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public GroupState(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> filter,
-        @Nullable Output<Boolean> isCluster,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parentName,
-        @Nullable Output<String> project) {
-        this.displayName = displayName;
-        this.filter = filter;
-        this.isCluster = isCluster;
-        this.name = name;
-        this.parentName = parentName;
-        this.project = project;
-    }
+    private GroupState() {}
 
-    private GroupState() {
-        this.displayName = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.isCluster = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parentName = Codegen.empty();
-        this.project = Codegen.empty();
+    private GroupState(GroupState $) {
+        this.displayName = $.displayName;
+        this.filter = $.filter;
+        this.isCluster = $.isCluster;
+        this.name = $.name;
+        this.parentName = $.parentName;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> filter;
-        private @Nullable Output<Boolean> isCluster;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parentName;
-        private @Nullable Output<String> project;
+        private GroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupState();
         }
 
         public Builder(GroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.filter = defaults.filter;
-    	      this.isCluster = defaults.isCluster;
-    	      this.name = defaults.name;
-    	      this.parentName = defaults.parentName;
-    	      this.project = defaults.project;
+            $ = new GroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder isCluster(@Nullable Output<Boolean> isCluster) {
-            this.isCluster = isCluster;
+            $.isCluster = isCluster;
             return this;
         }
-        public Builder isCluster(@Nullable Boolean isCluster) {
-            this.isCluster = Codegen.ofNullable(isCluster);
-            return this;
+
+        public Builder isCluster(Boolean isCluster) {
+            return isCluster(Output.of(isCluster));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parentName(@Nullable Output<String> parentName) {
-            this.parentName = parentName;
+            $.parentName = parentName;
             return this;
         }
-        public Builder parentName(@Nullable String parentName) {
-            this.parentName = Codegen.ofNullable(parentName);
-            return this;
+
+        public Builder parentName(String parentName) {
+            return parentName(Output.of(parentName));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public GroupState build() {
-            return new GroupState(displayName, filter, isCluster, name, parentName, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public GroupState build() {
+            return $;
         }
     }
+
 }

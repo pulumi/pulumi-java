@@ -5,13 +5,13 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobSparkSqlJobQueryListGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WorkflowTemplateJobSparkSqlJobGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="jarFileUris")
-      private final @Nullable Output<List<String>> jarFileUris;
+    private @Nullable Output<List<String>> jarFileUris;
 
-    public Output<List<String>> jarFileUris() {
-        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
+    public Optional<Output<List<String>>> jarFileUris() {
+        return Optional.ofNullable(this.jarFileUris);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkflowTemplateJobSparkSqlJobGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="loggingConfig")
-      private final @Nullable Output<WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs> loggingConfig;
+    private @Nullable Output<WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs> loggingConfig;
 
-    public Output<WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs> loggingConfig() {
-        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
+    public Optional<Output<WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs>> loggingConfig() {
+        return Optional.ofNullable(this.loggingConfig);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkflowTemplateJobSparkSqlJobGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WorkflowTemplateJobSparkSqlJobGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="queryFileUri")
-      private final @Nullable Output<String> queryFileUri;
+    private @Nullable Output<String> queryFileUri;
 
-    public Output<String> queryFileUri() {
-        return this.queryFileUri == null ? Codegen.empty() : this.queryFileUri;
+    public Optional<Output<String>> queryFileUri() {
+        return Optional.ofNullable(this.queryFileUri);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WorkflowTemplateJobSparkSqlJobGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="queryList")
-      private final @Nullable Output<WorkflowTemplateJobSparkSqlJobQueryListGetArgs> queryList;
+    private @Nullable Output<WorkflowTemplateJobSparkSqlJobQueryListGetArgs> queryList;
 
-    public Output<WorkflowTemplateJobSparkSqlJobQueryListGetArgs> queryList() {
-        return this.queryList == null ? Codegen.empty() : this.queryList;
+    public Optional<Output<WorkflowTemplateJobSparkSqlJobQueryListGetArgs>> queryList() {
+        return Optional.ofNullable(this.queryList);
     }
 
     /**
@@ -79,118 +79,102 @@ public final class WorkflowTemplateJobSparkSqlJobGetArgs extends com.pulumi.reso
      * 
      */
     @Import(name="scriptVariables")
-      private final @Nullable Output<Map<String,String>> scriptVariables;
+    private @Nullable Output<Map<String,String>> scriptVariables;
 
-    public Output<Map<String,String>> scriptVariables() {
-        return this.scriptVariables == null ? Codegen.empty() : this.scriptVariables;
+    public Optional<Output<Map<String,String>>> scriptVariables() {
+        return Optional.ofNullable(this.scriptVariables);
     }
 
-    public WorkflowTemplateJobSparkSqlJobGetArgs(
-        @Nullable Output<List<String>> jarFileUris,
-        @Nullable Output<WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs> loggingConfig,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<String> queryFileUri,
-        @Nullable Output<WorkflowTemplateJobSparkSqlJobQueryListGetArgs> queryList,
-        @Nullable Output<Map<String,String>> scriptVariables) {
-        this.jarFileUris = jarFileUris;
-        this.loggingConfig = loggingConfig;
-        this.properties = properties;
-        this.queryFileUri = queryFileUri;
-        this.queryList = queryList;
-        this.scriptVariables = scriptVariables;
-    }
+    private WorkflowTemplateJobSparkSqlJobGetArgs() {}
 
-    private WorkflowTemplateJobSparkSqlJobGetArgs() {
-        this.jarFileUris = Codegen.empty();
-        this.loggingConfig = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.queryFileUri = Codegen.empty();
-        this.queryList = Codegen.empty();
-        this.scriptVariables = Codegen.empty();
+    private WorkflowTemplateJobSparkSqlJobGetArgs(WorkflowTemplateJobSparkSqlJobGetArgs $) {
+        this.jarFileUris = $.jarFileUris;
+        this.loggingConfig = $.loggingConfig;
+        this.properties = $.properties;
+        this.queryFileUri = $.queryFileUri;
+        this.queryList = $.queryList;
+        this.scriptVariables = $.scriptVariables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplateJobSparkSqlJobGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> jarFileUris;
-        private @Nullable Output<WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs> loggingConfig;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<String> queryFileUri;
-        private @Nullable Output<WorkflowTemplateJobSparkSqlJobQueryListGetArgs> queryList;
-        private @Nullable Output<Map<String,String>> scriptVariables;
+        private WorkflowTemplateJobSparkSqlJobGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplateJobSparkSqlJobGetArgs();
         }
 
         public Builder(WorkflowTemplateJobSparkSqlJobGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jarFileUris = defaults.jarFileUris;
-    	      this.loggingConfig = defaults.loggingConfig;
-    	      this.properties = defaults.properties;
-    	      this.queryFileUri = defaults.queryFileUri;
-    	      this.queryList = defaults.queryList;
-    	      this.scriptVariables = defaults.scriptVariables;
+            $ = new WorkflowTemplateJobSparkSqlJobGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
-            this.jarFileUris = jarFileUris;
+            $.jarFileUris = jarFileUris;
             return this;
         }
-        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Codegen.ofNullable(jarFileUris);
-            return this;
+
+        public Builder jarFileUris(List<String> jarFileUris) {
+            return jarFileUris(Output.of(jarFileUris));
         }
+
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
+
         public Builder loggingConfig(@Nullable Output<WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs> loggingConfig) {
-            this.loggingConfig = loggingConfig;
+            $.loggingConfig = loggingConfig;
             return this;
         }
-        public Builder loggingConfig(@Nullable WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs loggingConfig) {
-            this.loggingConfig = Codegen.ofNullable(loggingConfig);
-            return this;
+
+        public Builder loggingConfig(WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs loggingConfig) {
+            return loggingConfig(Output.of(loggingConfig));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
-            this.queryFileUri = queryFileUri;
+            $.queryFileUri = queryFileUri;
             return this;
         }
-        public Builder queryFileUri(@Nullable String queryFileUri) {
-            this.queryFileUri = Codegen.ofNullable(queryFileUri);
-            return this;
+
+        public Builder queryFileUri(String queryFileUri) {
+            return queryFileUri(Output.of(queryFileUri));
         }
+
         public Builder queryList(@Nullable Output<WorkflowTemplateJobSparkSqlJobQueryListGetArgs> queryList) {
-            this.queryList = queryList;
+            $.queryList = queryList;
             return this;
         }
-        public Builder queryList(@Nullable WorkflowTemplateJobSparkSqlJobQueryListGetArgs queryList) {
-            this.queryList = Codegen.ofNullable(queryList);
-            return this;
+
+        public Builder queryList(WorkflowTemplateJobSparkSqlJobQueryListGetArgs queryList) {
+            return queryList(Output.of(queryList));
         }
+
         public Builder scriptVariables(@Nullable Output<Map<String,String>> scriptVariables) {
-            this.scriptVariables = scriptVariables;
+            $.scriptVariables = scriptVariables;
             return this;
         }
-        public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
-            this.scriptVariables = Codegen.ofNullable(scriptVariables);
-            return this;
-        }        public WorkflowTemplateJobSparkSqlJobGetArgs build() {
-            return new WorkflowTemplateJobSparkSqlJobGetArgs(jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
+
+        public Builder scriptVariables(Map<String,String> scriptVariables) {
+            return scriptVariables(Output.of(scriptVariables));
+        }
+
+        public WorkflowTemplateJobSparkSqlJobGetArgs build() {
+            return $;
         }
     }
+
 }

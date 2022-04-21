@@ -5,12 +5,12 @@ package com.pulumi.gcp.cloudbuild;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudbuild.inputs.WorkerPoolNetworkConfigArgs;
 import com.pulumi.gcp.cloudbuild.inputs.WorkerPoolWorkerConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final Output<String> location;
+    private Output<String> location;
 
     public Output<String> location() {
         return this.location;
@@ -57,10 +57,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfig")
-      private final @Nullable Output<WorkerPoolNetworkConfigArgs> networkConfig;
+    private @Nullable Output<WorkerPoolNetworkConfigArgs> networkConfig;
 
-    public Output<WorkerPoolNetworkConfigArgs> networkConfig() {
-        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
+    public Optional<Output<WorkerPoolNetworkConfigArgs>> networkConfig() {
+        return Optional.ofNullable(this.networkConfig);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -90,128 +90,109 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerConfig")
-      private final @Nullable Output<WorkerPoolWorkerConfigArgs> workerConfig;
+    private @Nullable Output<WorkerPoolWorkerConfigArgs> workerConfig;
 
-    public Output<WorkerPoolWorkerConfigArgs> workerConfig() {
-        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
+    public Optional<Output<WorkerPoolWorkerConfigArgs>> workerConfig() {
+        return Optional.ofNullable(this.workerConfig);
     }
 
-    public WorkerPoolArgs(
-        @Nullable Output<Map<String,String>> annotations,
-        @Nullable Output<String> displayName,
-        Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<WorkerPoolNetworkConfigArgs> networkConfig,
-        @Nullable Output<String> project,
-        @Nullable Output<WorkerPoolWorkerConfigArgs> workerConfig) {
-        this.annotations = annotations;
-        this.displayName = displayName;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.name = name;
-        this.networkConfig = networkConfig;
-        this.project = project;
-        this.workerConfig = workerConfig;
-    }
+    private WorkerPoolArgs() {}
 
-    private WorkerPoolArgs() {
-        this.annotations = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.workerConfig = Codegen.empty();
+    private WorkerPoolArgs(WorkerPoolArgs $) {
+        this.annotations = $.annotations;
+        this.displayName = $.displayName;
+        this.location = $.location;
+        this.name = $.name;
+        this.networkConfig = $.networkConfig;
+        this.project = $.project;
+        this.workerConfig = $.workerConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> annotations;
-        private @Nullable Output<String> displayName;
-        private Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<WorkerPoolNetworkConfigArgs> networkConfig;
-        private @Nullable Output<String> project;
-        private @Nullable Output<WorkerPoolWorkerConfigArgs> workerConfig;
+        private WorkerPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerPoolArgs();
         }
 
         public Builder(WorkerPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.displayName = defaults.displayName;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.project = defaults.project;
-    	      this.workerConfig = defaults.workerConfig;
+            $ = new WorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder location(Output<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkConfig(@Nullable Output<WorkerPoolNetworkConfigArgs> networkConfig) {
-            this.networkConfig = networkConfig;
+            $.networkConfig = networkConfig;
             return this;
         }
-        public Builder networkConfig(@Nullable WorkerPoolNetworkConfigArgs networkConfig) {
-            this.networkConfig = Codegen.ofNullable(networkConfig);
-            return this;
+
+        public Builder networkConfig(WorkerPoolNetworkConfigArgs networkConfig) {
+            return networkConfig(Output.of(networkConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder workerConfig(@Nullable Output<WorkerPoolWorkerConfigArgs> workerConfig) {
-            this.workerConfig = workerConfig;
+            $.workerConfig = workerConfig;
             return this;
         }
-        public Builder workerConfig(@Nullable WorkerPoolWorkerConfigArgs workerConfig) {
-            this.workerConfig = Codegen.ofNullable(workerConfig);
-            return this;
-        }        public WorkerPoolArgs build() {
-            return new WorkerPoolArgs(annotations, displayName, location, name, networkConfig, project, workerConfig);
+
+        public Builder workerConfig(WorkerPoolWorkerConfigArgs workerConfig) {
+            return workerConfig(Output.of(workerConfig));
+        }
+
+        public WorkerPoolArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

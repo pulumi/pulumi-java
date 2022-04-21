@@ -5,11 +5,11 @@ package com.pulumi.gcp.billing;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.billing.inputs.AccountIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,113 +18,106 @@ public final class AccountIamBindingArgs extends com.pulumi.resources.ResourceAr
     public static final AccountIamBindingArgs Empty = new AccountIamBindingArgs();
 
     @Import(name="billingAccountId", required=true)
-      private final Output<String> billingAccountId;
+    private Output<String> billingAccountId;
 
     public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="condition")
-      private final @Nullable Output<AccountIamBindingConditionArgs> condition;
+    private @Nullable Output<AccountIamBindingConditionArgs> condition;
 
-    public Output<AccountIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<AccountIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
     }
 
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public AccountIamBindingArgs(
-        Output<String> billingAccountId,
-        @Nullable Output<AccountIamBindingConditionArgs> condition,
-        Output<List<String>> members,
-        Output<String> role) {
-        this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private AccountIamBindingArgs() {}
 
-    private AccountIamBindingArgs() {
-        this.billingAccountId = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.role = Codegen.empty();
+    private AccountIamBindingArgs(AccountIamBindingArgs $) {
+        this.billingAccountId = $.billingAccountId;
+        this.condition = $.condition;
+        this.members = $.members;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> billingAccountId;
-        private @Nullable Output<AccountIamBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private Output<String> role;
+        private AccountIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountIamBindingArgs();
         }
 
         public Builder(AccountIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.role = defaults.role;
+            $ = new AccountIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountId(Output<String> billingAccountId) {
-            this.billingAccountId = Objects.requireNonNull(billingAccountId);
+            $.billingAccountId = billingAccountId;
             return this;
         }
+
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Output.of(Objects.requireNonNull(billingAccountId));
-            return this;
+            return billingAccountId(Output.of(billingAccountId));
         }
+
         public Builder condition(@Nullable Output<AccountIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable AccountIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(AccountIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public AccountIamBindingArgs build() {
-            return new AccountIamBindingArgs(billingAccountId, condition, members, role);
+            return role(Output.of(role));
+        }
+
+        public AccountIamBindingArgs build() {
+            $.billingAccountId = Objects.requireNonNull($.billingAccountId, "expected parameter 'billingAccountId' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

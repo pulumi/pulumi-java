@@ -19,10 +19,10 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="domain")
-      private final @Nullable String domain;
+    private @Nullable String domain;
 
     public Optional<String> domain() {
-        return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -30,55 +30,50 @@ public final class GetOrganizationArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="organization")
-      private final @Nullable String organization;
+    private @Nullable String organization;
 
     public Optional<String> organization() {
-        return this.organization == null ? Optional.empty() : Optional.ofNullable(this.organization);
+        return Optional.ofNullable(this.organization);
     }
 
-    public GetOrganizationArgs(
-        @Nullable String domain,
-        @Nullable String organization) {
-        this.domain = domain;
-        this.organization = organization;
-    }
+    private GetOrganizationArgs() {}
 
-    private GetOrganizationArgs() {
-        this.domain = null;
-        this.organization = null;
+    private GetOrganizationArgs(GetOrganizationArgs $) {
+        this.domain = $.domain;
+        this.organization = $.organization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String domain;
-        private @Nullable String organization;
+        private GetOrganizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationArgs();
         }
 
         public Builder(GetOrganizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.organization = defaults.organization;
+            $ = new GetOrganizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
+
         public Builder organization(@Nullable String organization) {
-            this.organization = organization;
+            $.organization = organization;
             return this;
-        }        public GetOrganizationArgs build() {
-            return new GetOrganizationArgs(domain, organization);
+        }
+
+        public GetOrganizationArgs build() {
+            return $;
         }
     }
+
 }

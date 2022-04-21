@@ -5,11 +5,11 @@ package com.pulumi.gcp.iap;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.iap.inputs.AppEngineVersionIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class AppEngineVersionIamBindingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="appId", required=true)
-      private final Output<String> appId;
+    private Output<String> appId;
 
     public Output<String> appId() {
         return this.appId;
@@ -34,14 +34,14 @@ public final class AppEngineVersionIamBindingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<AppEngineVersionIamBindingConditionArgs> condition;
+    private @Nullable Output<AppEngineVersionIamBindingConditionArgs> condition;
 
-    public Output<AppEngineVersionIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<AppEngineVersionIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -53,10 +53,10 @@ public final class AppEngineVersionIamBindingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class AppEngineVersionIamBindingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -77,7 +77,7 @@ public final class AppEngineVersionIamBindingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
@@ -88,131 +88,117 @@ public final class AppEngineVersionIamBindingArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="versionId", required=true)
-      private final Output<String> versionId;
+    private Output<String> versionId;
 
     public Output<String> versionId() {
         return this.versionId;
     }
 
-    public AppEngineVersionIamBindingArgs(
-        Output<String> appId,
-        @Nullable Output<AppEngineVersionIamBindingConditionArgs> condition,
-        Output<List<String>> members,
-        @Nullable Output<String> project,
-        Output<String> role,
-        Output<String> service,
-        Output<String> versionId) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.condition = condition;
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.project = project;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.versionId = Objects.requireNonNull(versionId, "expected parameter 'versionId' to be non-null");
-    }
+    private AppEngineVersionIamBindingArgs() {}
 
-    private AppEngineVersionIamBindingArgs() {
-        this.appId = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.members = Codegen.empty();
-        this.project = Codegen.empty();
-        this.role = Codegen.empty();
-        this.service = Codegen.empty();
-        this.versionId = Codegen.empty();
+    private AppEngineVersionIamBindingArgs(AppEngineVersionIamBindingArgs $) {
+        this.appId = $.appId;
+        this.condition = $.condition;
+        this.members = $.members;
+        this.project = $.project;
+        this.role = $.role;
+        this.service = $.service;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppEngineVersionIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appId;
-        private @Nullable Output<AppEngineVersionIamBindingConditionArgs> condition;
-        private Output<List<String>> members;
-        private @Nullable Output<String> project;
-        private Output<String> role;
-        private Output<String> service;
-        private Output<String> versionId;
+        private AppEngineVersionIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppEngineVersionIamBindingArgs();
         }
 
         public Builder(AppEngineVersionIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.condition = defaults.condition;
-    	      this.members = defaults.members;
-    	      this.project = defaults.project;
-    	      this.role = defaults.role;
-    	      this.service = defaults.service;
-    	      this.versionId = defaults.versionId;
+            $ = new AppEngineVersionIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(Output<String> appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder appId(String appId) {
-            this.appId = Output.of(Objects.requireNonNull(appId));
-            return this;
+            return appId(Output.of(appId));
         }
+
         public Builder condition(@Nullable Output<AppEngineVersionIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable AppEngineVersionIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(AppEngineVersionIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
+            return service(Output.of(service));
         }
+
         public Builder versionId(Output<String> versionId) {
-            this.versionId = Objects.requireNonNull(versionId);
+            $.versionId = versionId;
             return this;
         }
+
         public Builder versionId(String versionId) {
-            this.versionId = Output.of(Objects.requireNonNull(versionId));
-            return this;
-        }        public AppEngineVersionIamBindingArgs build() {
-            return new AppEngineVersionIamBindingArgs(appId, condition, members, project, role, service, versionId);
+            return versionId(Output.of(versionId));
+        }
+
+        public AppEngineVersionIamBindingArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.versionId = Objects.requireNonNull($.versionId, "expected parameter 'versionId' to be non-null");
+            return $;
         }
     }
+
 }

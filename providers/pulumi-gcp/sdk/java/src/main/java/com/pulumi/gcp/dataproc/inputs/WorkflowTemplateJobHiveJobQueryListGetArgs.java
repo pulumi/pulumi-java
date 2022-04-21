@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class WorkflowTemplateJobHiveJobQueryListGetArgs extends com.pulumi
      * 
      */
     @Import(name="queries", required=true)
-      private final Output<List<String>> queries;
+    private Output<List<String>> queries;
 
     public Output<List<String>> queries() {
         return this.queries;
     }
 
-    public WorkflowTemplateJobHiveJobQueryListGetArgs(Output<List<String>> queries) {
-        this.queries = Objects.requireNonNull(queries, "expected parameter 'queries' to be non-null");
-    }
+    private WorkflowTemplateJobHiveJobQueryListGetArgs() {}
 
-    private WorkflowTemplateJobHiveJobQueryListGetArgs() {
-        this.queries = Codegen.empty();
+    private WorkflowTemplateJobHiveJobQueryListGetArgs(WorkflowTemplateJobHiveJobQueryListGetArgs $) {
+        this.queries = $.queries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplateJobHiveJobQueryListGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> queries;
+        private WorkflowTemplateJobHiveJobQueryListGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplateJobHiveJobQueryListGetArgs();
         }
 
         public Builder(WorkflowTemplateJobHiveJobQueryListGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queries = defaults.queries;
+            $ = new WorkflowTemplateJobHiveJobQueryListGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queries(Output<List<String>> queries) {
-            this.queries = Objects.requireNonNull(queries);
+            $.queries = queries;
             return this;
         }
+
         public Builder queries(List<String> queries) {
-            this.queries = Output.of(Objects.requireNonNull(queries));
-            return this;
+            return queries(Output.of(queries));
         }
+
         public Builder queries(String... queries) {
             return queries(List.of(queries));
-        }        public WorkflowTemplateJobHiveJobQueryListGetArgs build() {
-            return new WorkflowTemplateJobHiveJobQueryListGetArgs(queries);
+        }
+
+        public WorkflowTemplateJobHiveJobQueryListGetArgs build() {
+            $.queries = Objects.requireNonNull($.queries, "expected parameter 'queries' to be non-null");
+            return $;
         }
     }
+
 }

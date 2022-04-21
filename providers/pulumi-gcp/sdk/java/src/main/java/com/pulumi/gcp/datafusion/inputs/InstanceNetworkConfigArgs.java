@@ -5,7 +5,6 @@ package com.pulumi.gcp.datafusion.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class InstanceNetworkConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="ipAllocation", required=true)
-      private final Output<String> ipAllocation;
+    private Output<String> ipAllocation;
 
     public Output<String> ipAllocation() {
         return this.ipAllocation;
@@ -33,63 +32,60 @@ public final class InstanceNetworkConfigArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="network", required=true)
-      private final Output<String> network;
+    private Output<String> network;
 
     public Output<String> network() {
         return this.network;
     }
 
-    public InstanceNetworkConfigArgs(
-        Output<String> ipAllocation,
-        Output<String> network) {
-        this.ipAllocation = Objects.requireNonNull(ipAllocation, "expected parameter 'ipAllocation' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-    }
+    private InstanceNetworkConfigArgs() {}
 
-    private InstanceNetworkConfigArgs() {
-        this.ipAllocation = Codegen.empty();
-        this.network = Codegen.empty();
+    private InstanceNetworkConfigArgs(InstanceNetworkConfigArgs $) {
+        this.ipAllocation = $.ipAllocation;
+        this.network = $.network;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceNetworkConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ipAllocation;
-        private Output<String> network;
+        private InstanceNetworkConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceNetworkConfigArgs();
         }
 
         public Builder(InstanceNetworkConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAllocation = defaults.ipAllocation;
-    	      this.network = defaults.network;
+            $ = new InstanceNetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAllocation(Output<String> ipAllocation) {
-            this.ipAllocation = Objects.requireNonNull(ipAllocation);
+            $.ipAllocation = ipAllocation;
             return this;
         }
+
         public Builder ipAllocation(String ipAllocation) {
-            this.ipAllocation = Output.of(Objects.requireNonNull(ipAllocation));
-            return this;
+            return ipAllocation(Output.of(ipAllocation));
         }
+
         public Builder network(Output<String> network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Output.of(Objects.requireNonNull(network));
-            return this;
-        }        public InstanceNetworkConfigArgs build() {
-            return new InstanceNetworkConfigArgs(ipAllocation, network);
+            return network(Output.of(network));
+        }
+
+        public InstanceNetworkConfigArgs build() {
+            $.ipAllocation = Objects.requireNonNull($.ipAllocation, "expected parameter 'ipAllocation' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            return $;
         }
     }
+
 }

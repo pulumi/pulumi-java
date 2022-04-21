@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class InstanceGroupManagerNamedPortArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -32,63 +31,60 @@ public final class InstanceGroupManagerNamedPortArgs extends com.pulumi.resource
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
     }
 
-    public InstanceGroupManagerNamedPortArgs(
-        Output<String> name,
-        Output<Integer> port) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private InstanceGroupManagerNamedPortArgs() {}
 
-    private InstanceGroupManagerNamedPortArgs() {
-        this.name = Codegen.empty();
-        this.port = Codegen.empty();
+    private InstanceGroupManagerNamedPortArgs(InstanceGroupManagerNamedPortArgs $) {
+        this.name = $.name;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerNamedPortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<Integer> port;
+        private InstanceGroupManagerNamedPortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerNamedPortArgs();
         }
 
         public Builder(InstanceGroupManagerNamedPortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
+            $ = new InstanceGroupManagerNamedPortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
-        }        public InstanceGroupManagerNamedPortArgs build() {
-            return new InstanceGroupManagerNamedPortArgs(name, port);
+            return port(Output.of(port));
+        }
+
+        public InstanceGroupManagerNamedPortArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="cryptoKeyName", required=true)
-      private final Output<String> cryptoKeyName;
+    private Output<String> cryptoKeyName;
 
     public Output<String> cryptoKeyName() {
         return this.cryptoKeyName;
@@ -31,63 +30,60 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @Import(name="wrappedKey", required=true)
-      private final Output<String> wrappedKey;
+    private Output<String> wrappedKey;
 
     public Output<String> wrappedKey() {
         return this.wrappedKey;
     }
 
-    public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs(
-        Output<String> cryptoKeyName,
-        Output<String> wrappedKey) {
-        this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName, "expected parameter 'cryptoKeyName' to be non-null");
-        this.wrappedKey = Objects.requireNonNull(wrappedKey, "expected parameter 'wrappedKey' to be non-null");
-    }
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs() {}
 
-    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs() {
-        this.cryptoKeyName = Codegen.empty();
-        this.wrappedKey = Codegen.empty();
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs $) {
+        this.cryptoKeyName = $.cryptoKeyName;
+        this.wrappedKey = $.wrappedKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cryptoKeyName;
-        private Output<String> wrappedKey;
+        private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs();
         }
 
         public Builder(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cryptoKeyName = defaults.cryptoKeyName;
-    	      this.wrappedKey = defaults.wrappedKey;
+            $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cryptoKeyName(Output<String> cryptoKeyName) {
-            this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName);
+            $.cryptoKeyName = cryptoKeyName;
             return this;
         }
+
         public Builder cryptoKeyName(String cryptoKeyName) {
-            this.cryptoKeyName = Output.of(Objects.requireNonNull(cryptoKeyName));
-            return this;
+            return cryptoKeyName(Output.of(cryptoKeyName));
         }
+
         public Builder wrappedKey(Output<String> wrappedKey) {
-            this.wrappedKey = Objects.requireNonNull(wrappedKey);
+            $.wrappedKey = wrappedKey;
             return this;
         }
+
         public Builder wrappedKey(String wrappedKey) {
-            this.wrappedKey = Output.of(Objects.requireNonNull(wrappedKey));
-            return this;
-        }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs build() {
-            return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs(cryptoKeyName, wrappedKey);
+            return wrappedKey(Output.of(wrappedKey));
+        }
+
+        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyKmsWrappedArgs build() {
+            $.cryptoKeyName = Objects.requireNonNull($.cryptoKeyName, "expected parameter 'cryptoKeyName' to be non-null");
+            $.wrappedKey = Objects.requireNonNull($.wrappedKey, "expected parameter 'wrappedKey' to be non-null");
+            return $;
         }
     }
+
 }

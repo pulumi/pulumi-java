@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class BackendServiceBackendGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="balancingMode")
-      private final @Nullable Output<String> balancingMode;
+    private @Nullable Output<String> balancingMode;
 
-    public Output<String> balancingMode() {
-        return this.balancingMode == null ? Codegen.empty() : this.balancingMode;
+    public Optional<Output<String>> balancingMode() {
+        return Optional.ofNullable(this.balancingMode);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class BackendServiceBackendGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="capacityScaler")
-      private final @Nullable Output<Double> capacityScaler;
+    private @Nullable Output<Double> capacityScaler;
 
-    public Output<Double> capacityScaler() {
-        return this.capacityScaler == null ? Codegen.empty() : this.capacityScaler;
+    public Optional<Output<Double>> capacityScaler() {
+        return Optional.ofNullable(this.capacityScaler);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class BackendServiceBackendGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class BackendServiceBackendGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="group", required=true)
-      private final Output<String> group;
+    private Output<String> group;
 
     public Output<String> group() {
         return this.group;
@@ -91,10 +91,10 @@ public final class BackendServiceBackendGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxConnections")
-      private final @Nullable Output<Integer> maxConnections;
+    private @Nullable Output<Integer> maxConnections;
 
-    public Output<Integer> maxConnections() {
-        return this.maxConnections == null ? Codegen.empty() : this.maxConnections;
+    public Optional<Output<Integer>> maxConnections() {
+        return Optional.ofNullable(this.maxConnections);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class BackendServiceBackendGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxConnectionsPerEndpoint")
-      private final @Nullable Output<Integer> maxConnectionsPerEndpoint;
+    private @Nullable Output<Integer> maxConnectionsPerEndpoint;
 
-    public Output<Integer> maxConnectionsPerEndpoint() {
-        return this.maxConnectionsPerEndpoint == null ? Codegen.empty() : this.maxConnectionsPerEndpoint;
+    public Optional<Output<Integer>> maxConnectionsPerEndpoint() {
+        return Optional.ofNullable(this.maxConnectionsPerEndpoint);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class BackendServiceBackendGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxConnectionsPerInstance")
-      private final @Nullable Output<Integer> maxConnectionsPerInstance;
+    private @Nullable Output<Integer> maxConnectionsPerInstance;
 
-    public Output<Integer> maxConnectionsPerInstance() {
-        return this.maxConnectionsPerInstance == null ? Codegen.empty() : this.maxConnectionsPerInstance;
+    public Optional<Output<Integer>> maxConnectionsPerInstance() {
+        return Optional.ofNullable(this.maxConnectionsPerInstance);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class BackendServiceBackendGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxRate")
-      private final @Nullable Output<Integer> maxRate;
+    private @Nullable Output<Integer> maxRate;
 
-    public Output<Integer> maxRate() {
-        return this.maxRate == null ? Codegen.empty() : this.maxRate;
+    public Optional<Output<Integer>> maxRate() {
+        return Optional.ofNullable(this.maxRate);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class BackendServiceBackendGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxRatePerEndpoint")
-      private final @Nullable Output<Double> maxRatePerEndpoint;
+    private @Nullable Output<Double> maxRatePerEndpoint;
 
-    public Output<Double> maxRatePerEndpoint() {
-        return this.maxRatePerEndpoint == null ? Codegen.empty() : this.maxRatePerEndpoint;
+    public Optional<Output<Double>> maxRatePerEndpoint() {
+        return Optional.ofNullable(this.maxRatePerEndpoint);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class BackendServiceBackendGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxRatePerInstance")
-      private final @Nullable Output<Double> maxRatePerInstance;
+    private @Nullable Output<Double> maxRatePerInstance;
 
-    public Output<Double> maxRatePerInstance() {
-        return this.maxRatePerInstance == null ? Codegen.empty() : this.maxRatePerInstance;
+    public Optional<Output<Double>> maxRatePerInstance() {
+        return Optional.ofNullable(this.maxRatePerInstance);
     }
 
     /**
@@ -178,180 +178,149 @@ public final class BackendServiceBackendGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maxUtilization")
-      private final @Nullable Output<Double> maxUtilization;
+    private @Nullable Output<Double> maxUtilization;
 
-    public Output<Double> maxUtilization() {
-        return this.maxUtilization == null ? Codegen.empty() : this.maxUtilization;
+    public Optional<Output<Double>> maxUtilization() {
+        return Optional.ofNullable(this.maxUtilization);
     }
 
-    public BackendServiceBackendGetArgs(
-        @Nullable Output<String> balancingMode,
-        @Nullable Output<Double> capacityScaler,
-        @Nullable Output<String> description,
-        Output<String> group,
-        @Nullable Output<Integer> maxConnections,
-        @Nullable Output<Integer> maxConnectionsPerEndpoint,
-        @Nullable Output<Integer> maxConnectionsPerInstance,
-        @Nullable Output<Integer> maxRate,
-        @Nullable Output<Double> maxRatePerEndpoint,
-        @Nullable Output<Double> maxRatePerInstance,
-        @Nullable Output<Double> maxUtilization) {
-        this.balancingMode = balancingMode;
-        this.capacityScaler = capacityScaler;
-        this.description = description;
-        this.group = Objects.requireNonNull(group, "expected parameter 'group' to be non-null");
-        this.maxConnections = maxConnections;
-        this.maxConnectionsPerEndpoint = maxConnectionsPerEndpoint;
-        this.maxConnectionsPerInstance = maxConnectionsPerInstance;
-        this.maxRate = maxRate;
-        this.maxRatePerEndpoint = maxRatePerEndpoint;
-        this.maxRatePerInstance = maxRatePerInstance;
-        this.maxUtilization = maxUtilization;
-    }
+    private BackendServiceBackendGetArgs() {}
 
-    private BackendServiceBackendGetArgs() {
-        this.balancingMode = Codegen.empty();
-        this.capacityScaler = Codegen.empty();
-        this.description = Codegen.empty();
-        this.group = Codegen.empty();
-        this.maxConnections = Codegen.empty();
-        this.maxConnectionsPerEndpoint = Codegen.empty();
-        this.maxConnectionsPerInstance = Codegen.empty();
-        this.maxRate = Codegen.empty();
-        this.maxRatePerEndpoint = Codegen.empty();
-        this.maxRatePerInstance = Codegen.empty();
-        this.maxUtilization = Codegen.empty();
+    private BackendServiceBackendGetArgs(BackendServiceBackendGetArgs $) {
+        this.balancingMode = $.balancingMode;
+        this.capacityScaler = $.capacityScaler;
+        this.description = $.description;
+        this.group = $.group;
+        this.maxConnections = $.maxConnections;
+        this.maxConnectionsPerEndpoint = $.maxConnectionsPerEndpoint;
+        this.maxConnectionsPerInstance = $.maxConnectionsPerInstance;
+        this.maxRate = $.maxRate;
+        this.maxRatePerEndpoint = $.maxRatePerEndpoint;
+        this.maxRatePerInstance = $.maxRatePerInstance;
+        this.maxUtilization = $.maxUtilization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceBackendGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> balancingMode;
-        private @Nullable Output<Double> capacityScaler;
-        private @Nullable Output<String> description;
-        private Output<String> group;
-        private @Nullable Output<Integer> maxConnections;
-        private @Nullable Output<Integer> maxConnectionsPerEndpoint;
-        private @Nullable Output<Integer> maxConnectionsPerInstance;
-        private @Nullable Output<Integer> maxRate;
-        private @Nullable Output<Double> maxRatePerEndpoint;
-        private @Nullable Output<Double> maxRatePerInstance;
-        private @Nullable Output<Double> maxUtilization;
+        private BackendServiceBackendGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceBackendGetArgs();
         }
 
         public Builder(BackendServiceBackendGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.balancingMode = defaults.balancingMode;
-    	      this.capacityScaler = defaults.capacityScaler;
-    	      this.description = defaults.description;
-    	      this.group = defaults.group;
-    	      this.maxConnections = defaults.maxConnections;
-    	      this.maxConnectionsPerEndpoint = defaults.maxConnectionsPerEndpoint;
-    	      this.maxConnectionsPerInstance = defaults.maxConnectionsPerInstance;
-    	      this.maxRate = defaults.maxRate;
-    	      this.maxRatePerEndpoint = defaults.maxRatePerEndpoint;
-    	      this.maxRatePerInstance = defaults.maxRatePerInstance;
-    	      this.maxUtilization = defaults.maxUtilization;
+            $ = new BackendServiceBackendGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder balancingMode(@Nullable Output<String> balancingMode) {
-            this.balancingMode = balancingMode;
+            $.balancingMode = balancingMode;
             return this;
         }
-        public Builder balancingMode(@Nullable String balancingMode) {
-            this.balancingMode = Codegen.ofNullable(balancingMode);
-            return this;
+
+        public Builder balancingMode(String balancingMode) {
+            return balancingMode(Output.of(balancingMode));
         }
+
         public Builder capacityScaler(@Nullable Output<Double> capacityScaler) {
-            this.capacityScaler = capacityScaler;
+            $.capacityScaler = capacityScaler;
             return this;
         }
-        public Builder capacityScaler(@Nullable Double capacityScaler) {
-            this.capacityScaler = Codegen.ofNullable(capacityScaler);
-            return this;
+
+        public Builder capacityScaler(Double capacityScaler) {
+            return capacityScaler(Output.of(capacityScaler));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder group(Output<String> group) {
-            this.group = Objects.requireNonNull(group);
+            $.group = group;
             return this;
         }
+
         public Builder group(String group) {
-            this.group = Output.of(Objects.requireNonNull(group));
-            return this;
+            return group(Output.of(group));
         }
+
         public Builder maxConnections(@Nullable Output<Integer> maxConnections) {
-            this.maxConnections = maxConnections;
+            $.maxConnections = maxConnections;
             return this;
         }
-        public Builder maxConnections(@Nullable Integer maxConnections) {
-            this.maxConnections = Codegen.ofNullable(maxConnections);
-            return this;
+
+        public Builder maxConnections(Integer maxConnections) {
+            return maxConnections(Output.of(maxConnections));
         }
+
         public Builder maxConnectionsPerEndpoint(@Nullable Output<Integer> maxConnectionsPerEndpoint) {
-            this.maxConnectionsPerEndpoint = maxConnectionsPerEndpoint;
+            $.maxConnectionsPerEndpoint = maxConnectionsPerEndpoint;
             return this;
         }
-        public Builder maxConnectionsPerEndpoint(@Nullable Integer maxConnectionsPerEndpoint) {
-            this.maxConnectionsPerEndpoint = Codegen.ofNullable(maxConnectionsPerEndpoint);
-            return this;
+
+        public Builder maxConnectionsPerEndpoint(Integer maxConnectionsPerEndpoint) {
+            return maxConnectionsPerEndpoint(Output.of(maxConnectionsPerEndpoint));
         }
+
         public Builder maxConnectionsPerInstance(@Nullable Output<Integer> maxConnectionsPerInstance) {
-            this.maxConnectionsPerInstance = maxConnectionsPerInstance;
+            $.maxConnectionsPerInstance = maxConnectionsPerInstance;
             return this;
         }
-        public Builder maxConnectionsPerInstance(@Nullable Integer maxConnectionsPerInstance) {
-            this.maxConnectionsPerInstance = Codegen.ofNullable(maxConnectionsPerInstance);
-            return this;
+
+        public Builder maxConnectionsPerInstance(Integer maxConnectionsPerInstance) {
+            return maxConnectionsPerInstance(Output.of(maxConnectionsPerInstance));
         }
+
         public Builder maxRate(@Nullable Output<Integer> maxRate) {
-            this.maxRate = maxRate;
+            $.maxRate = maxRate;
             return this;
         }
-        public Builder maxRate(@Nullable Integer maxRate) {
-            this.maxRate = Codegen.ofNullable(maxRate);
-            return this;
+
+        public Builder maxRate(Integer maxRate) {
+            return maxRate(Output.of(maxRate));
         }
+
         public Builder maxRatePerEndpoint(@Nullable Output<Double> maxRatePerEndpoint) {
-            this.maxRatePerEndpoint = maxRatePerEndpoint;
+            $.maxRatePerEndpoint = maxRatePerEndpoint;
             return this;
         }
-        public Builder maxRatePerEndpoint(@Nullable Double maxRatePerEndpoint) {
-            this.maxRatePerEndpoint = Codegen.ofNullable(maxRatePerEndpoint);
-            return this;
+
+        public Builder maxRatePerEndpoint(Double maxRatePerEndpoint) {
+            return maxRatePerEndpoint(Output.of(maxRatePerEndpoint));
         }
+
         public Builder maxRatePerInstance(@Nullable Output<Double> maxRatePerInstance) {
-            this.maxRatePerInstance = maxRatePerInstance;
+            $.maxRatePerInstance = maxRatePerInstance;
             return this;
         }
-        public Builder maxRatePerInstance(@Nullable Double maxRatePerInstance) {
-            this.maxRatePerInstance = Codegen.ofNullable(maxRatePerInstance);
-            return this;
+
+        public Builder maxRatePerInstance(Double maxRatePerInstance) {
+            return maxRatePerInstance(Output.of(maxRatePerInstance));
         }
+
         public Builder maxUtilization(@Nullable Output<Double> maxUtilization) {
-            this.maxUtilization = maxUtilization;
+            $.maxUtilization = maxUtilization;
             return this;
         }
-        public Builder maxUtilization(@Nullable Double maxUtilization) {
-            this.maxUtilization = Codegen.ofNullable(maxUtilization);
-            return this;
-        }        public BackendServiceBackendGetArgs build() {
-            return new BackendServiceBackendGetArgs(balancingMode, capacityScaler, description, group, maxConnections, maxConnectionsPerEndpoint, maxConnectionsPerInstance, maxRate, maxRatePerEndpoint, maxRatePerInstance, maxUtilization);
+
+        public Builder maxUtilization(Double maxUtilization) {
+            return maxUtilization(Output.of(maxUtilization));
+        }
+
+        public BackendServiceBackendGetArgs build() {
+            $.group = Objects.requireNonNull($.group, "expected parameter 'group' to be non-null");
+            return $;
         }
     }
+
 }

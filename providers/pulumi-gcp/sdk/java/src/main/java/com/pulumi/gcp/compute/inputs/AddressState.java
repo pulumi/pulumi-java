@@ -5,12 +5,12 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressType")
-      private final @Nullable Output<String> addressType;
+    private @Nullable Output<String> addressType;
 
-    public Output<String> addressType() {
-        return this.addressType == null ? Codegen.empty() : this.addressType;
+    public Optional<Output<String>> addressType() {
+        return Optional.ofNullable(this.addressType);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labelFingerprint")
-      private final @Nullable Output<String> labelFingerprint;
+    private @Nullable Output<String> labelFingerprint;
 
-    public Output<String> labelFingerprint() {
-        return this.labelFingerprint == null ? Codegen.empty() : this.labelFingerprint;
+    public Optional<Output<String>> labelFingerprint() {
+        return Optional.ofNullable(this.labelFingerprint);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkTier")
-      private final @Nullable Output<String> networkTier;
+    private @Nullable Output<String> networkTier;
 
-    public Output<String> networkTier() {
-        return this.networkTier == null ? Codegen.empty() : this.networkTier;
+    public Optional<Output<String>> networkTier() {
+        return Optional.ofNullable(this.networkTier);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="prefixLength")
-      private final @Nullable Output<Integer> prefixLength;
+    private @Nullable Output<Integer> prefixLength;
 
-    public Output<Integer> prefixLength() {
-        return this.prefixLength == null ? Codegen.empty() : this.prefixLength;
+    public Optional<Output<Integer>> prefixLength() {
+        return Optional.ofNullable(this.prefixLength);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="purpose")
-      private final @Nullable Output<String> purpose;
+    private @Nullable Output<String> purpose;
 
-    public Output<String> purpose() {
-        return this.purpose == null ? Codegen.empty() : this.purpose;
+    public Optional<Output<String>> purpose() {
+        return Optional.ofNullable(this.purpose);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
     /**
@@ -219,248 +219,202 @@ public final class AddressState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="users")
-      private final @Nullable Output<List<String>> users;
+    private @Nullable Output<List<String>> users;
 
-    public Output<List<String>> users() {
-        return this.users == null ? Codegen.empty() : this.users;
+    public Optional<Output<List<String>>> users() {
+        return Optional.ofNullable(this.users);
     }
 
-    public AddressState(
-        @Nullable Output<String> address,
-        @Nullable Output<String> addressType,
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> description,
-        @Nullable Output<String> labelFingerprint,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<String> networkTier,
-        @Nullable Output<Integer> prefixLength,
-        @Nullable Output<String> project,
-        @Nullable Output<String> purpose,
-        @Nullable Output<String> region,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> subnetwork,
-        @Nullable Output<List<String>> users) {
-        this.address = address;
-        this.addressType = addressType;
-        this.creationTimestamp = creationTimestamp;
-        this.description = description;
-        this.labelFingerprint = labelFingerprint;
-        this.labels = labels;
-        this.name = name;
-        this.network = network;
-        this.networkTier = networkTier;
-        this.prefixLength = prefixLength;
-        this.project = project;
-        this.purpose = purpose;
-        this.region = region;
-        this.selfLink = selfLink;
-        this.subnetwork = subnetwork;
-        this.users = users;
-    }
+    private AddressState() {}
 
-    private AddressState() {
-        this.address = Codegen.empty();
-        this.addressType = Codegen.empty();
-        this.creationTimestamp = Codegen.empty();
-        this.description = Codegen.empty();
-        this.labelFingerprint = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.networkTier = Codegen.empty();
-        this.prefixLength = Codegen.empty();
-        this.project = Codegen.empty();
-        this.purpose = Codegen.empty();
-        this.region = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.subnetwork = Codegen.empty();
-        this.users = Codegen.empty();
+    private AddressState(AddressState $) {
+        this.address = $.address;
+        this.addressType = $.addressType;
+        this.creationTimestamp = $.creationTimestamp;
+        this.description = $.description;
+        this.labelFingerprint = $.labelFingerprint;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.network = $.network;
+        this.networkTier = $.networkTier;
+        this.prefixLength = $.prefixLength;
+        this.project = $.project;
+        this.purpose = $.purpose;
+        this.region = $.region;
+        this.selfLink = $.selfLink;
+        this.subnetwork = $.subnetwork;
+        this.users = $.users;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddressState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<String> addressType;
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> labelFingerprint;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> networkTier;
-        private @Nullable Output<Integer> prefixLength;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> purpose;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> subnetwork;
-        private @Nullable Output<List<String>> users;
+        private AddressState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddressState();
         }
 
         public Builder(AddressState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.addressType = defaults.addressType;
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.description = defaults.description;
-    	      this.labelFingerprint = defaults.labelFingerprint;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.networkTier = defaults.networkTier;
-    	      this.prefixLength = defaults.prefixLength;
-    	      this.project = defaults.project;
-    	      this.purpose = defaults.purpose;
-    	      this.region = defaults.region;
-    	      this.selfLink = defaults.selfLink;
-    	      this.subnetwork = defaults.subnetwork;
-    	      this.users = defaults.users;
+            $ = new AddressState(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder addressType(@Nullable Output<String> addressType) {
-            this.addressType = addressType;
+            $.addressType = addressType;
             return this;
         }
-        public Builder addressType(@Nullable String addressType) {
-            this.addressType = Codegen.ofNullable(addressType);
-            return this;
+
+        public Builder addressType(String addressType) {
+            return addressType(Output.of(addressType));
         }
+
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
-            this.labelFingerprint = labelFingerprint;
+            $.labelFingerprint = labelFingerprint;
             return this;
         }
-        public Builder labelFingerprint(@Nullable String labelFingerprint) {
-            this.labelFingerprint = Codegen.ofNullable(labelFingerprint);
-            return this;
+
+        public Builder labelFingerprint(String labelFingerprint) {
+            return labelFingerprint(Output.of(labelFingerprint));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder networkTier(@Nullable Output<String> networkTier) {
-            this.networkTier = networkTier;
+            $.networkTier = networkTier;
             return this;
         }
-        public Builder networkTier(@Nullable String networkTier) {
-            this.networkTier = Codegen.ofNullable(networkTier);
-            return this;
+
+        public Builder networkTier(String networkTier) {
+            return networkTier(Output.of(networkTier));
         }
+
         public Builder prefixLength(@Nullable Output<Integer> prefixLength) {
-            this.prefixLength = prefixLength;
+            $.prefixLength = prefixLength;
             return this;
         }
-        public Builder prefixLength(@Nullable Integer prefixLength) {
-            this.prefixLength = Codegen.ofNullable(prefixLength);
-            return this;
+
+        public Builder prefixLength(Integer prefixLength) {
+            return prefixLength(Output.of(prefixLength));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder purpose(@Nullable Output<String> purpose) {
-            this.purpose = purpose;
+            $.purpose = purpose;
             return this;
         }
-        public Builder purpose(@Nullable String purpose) {
-            this.purpose = Codegen.ofNullable(purpose);
-            return this;
+
+        public Builder purpose(String purpose) {
+            return purpose(Output.of(purpose));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
         }
+
         public Builder users(@Nullable Output<List<String>> users) {
-            this.users = users;
+            $.users = users;
             return this;
         }
-        public Builder users(@Nullable List<String> users) {
-            this.users = Codegen.ofNullable(users);
-            return this;
+
+        public Builder users(List<String> users) {
+            return users(Output.of(users));
         }
+
         public Builder users(String... users) {
             return users(List.of(users));
-        }        public AddressState build() {
-            return new AddressState(address, addressType, creationTimestamp, description, labelFingerprint, labels, name, network, networkTier, prefixLength, project, purpose, region, selfLink, subnetwork, users);
+        }
+
+        public AddressState build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class Hl7StoreIamPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class Hl7StoreIamPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="hl7V2StoreId")
-      private final @Nullable Output<String> hl7V2StoreId;
+    private @Nullable Output<String> hl7V2StoreId;
 
-    public Output<String> hl7V2StoreId() {
-        return this.hl7V2StoreId == null ? Codegen.empty() : this.hl7V2StoreId;
+    public Optional<Output<String>> hl7V2StoreId() {
+        return Optional.ofNullable(this.hl7V2StoreId);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class Hl7StoreIamPolicyState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
-    public Hl7StoreIamPolicyState(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> hl7V2StoreId,
-        @Nullable Output<String> policyData) {
-        this.etag = etag;
-        this.hl7V2StoreId = hl7V2StoreId;
-        this.policyData = policyData;
-    }
+    private Hl7StoreIamPolicyState() {}
 
-    private Hl7StoreIamPolicyState() {
-        this.etag = Codegen.empty();
-        this.hl7V2StoreId = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private Hl7StoreIamPolicyState(Hl7StoreIamPolicyState $) {
+        this.etag = $.etag;
+        this.hl7V2StoreId = $.hl7V2StoreId;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7StoreIamPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> hl7V2StoreId;
-        private @Nullable Output<String> policyData;
+        private Hl7StoreIamPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7StoreIamPolicyState();
         }
 
         public Builder(Hl7StoreIamPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.hl7V2StoreId = defaults.hl7V2StoreId;
-    	      this.policyData = defaults.policyData;
+            $ = new Hl7StoreIamPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder hl7V2StoreId(@Nullable Output<String> hl7V2StoreId) {
-            this.hl7V2StoreId = hl7V2StoreId;
+            $.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
-        public Builder hl7V2StoreId(@Nullable String hl7V2StoreId) {
-            this.hl7V2StoreId = Codegen.ofNullable(hl7V2StoreId);
-            return this;
+
+        public Builder hl7V2StoreId(String hl7V2StoreId) {
+            return hl7V2StoreId(Output.of(hl7V2StoreId));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
-        }        public Hl7StoreIamPolicyState build() {
-            return new Hl7StoreIamPolicyState(etag, hl7V2StoreId, policyData);
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
+        }
+
+        public Hl7StoreIamPolicyState build() {
+            return $;
         }
     }
+
 }

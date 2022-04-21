@@ -5,10 +5,10 @@ package com.pulumi.gcp.servicedirectory;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.servicedirectory.inputs.ServiceIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,14 +17,14 @@ public final class ServiceIamMemberArgs extends com.pulumi.resources.ResourceArg
     public static final ServiceIamMemberArgs Empty = new ServiceIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<ServiceIamMemberConditionArgs> condition;
+    private @Nullable Output<ServiceIamMemberConditionArgs> condition;
 
-    public Output<ServiceIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<ServiceIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -35,10 +35,10 @@ public final class ServiceIamMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,89 +48,80 @@ public final class ServiceIamMemberArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public ServiceIamMemberArgs(
-        @Nullable Output<ServiceIamMemberConditionArgs> condition,
-        Output<String> member,
-        @Nullable Output<String> name,
-        Output<String> role) {
-        this.condition = condition;
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.name = name;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private ServiceIamMemberArgs() {}
 
-    private ServiceIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.member = Codegen.empty();
-        this.name = Codegen.empty();
-        this.role = Codegen.empty();
+    private ServiceIamMemberArgs(ServiceIamMemberArgs $) {
+        this.condition = $.condition;
+        this.member = $.member;
+        this.name = $.name;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceIamMemberConditionArgs> condition;
-        private Output<String> member;
-        private @Nullable Output<String> name;
-        private Output<String> role;
+        private ServiceIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceIamMemberArgs();
         }
 
         public Builder(ServiceIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.member = defaults.member;
-    	      this.name = defaults.name;
-    	      this.role = defaults.role;
+            $ = new ServiceIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<ServiceIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable ServiceIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(ServiceIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public ServiceIamMemberArgs build() {
-            return new ServiceIamMemberArgs(condition, member, name, role);
+            return role(Output.of(role));
+        }
+
+        public ServiceIamMemberArgs build() {
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

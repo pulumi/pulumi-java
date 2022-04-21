@@ -5,7 +5,6 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsBackupConfigurationArgs;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsDatabaseFlagArgs;
 import com.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsInsightsConfigArgs;
@@ -18,6 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="activationPolicy")
-      private final @Nullable Output<String> activationPolicy;
+    private @Nullable Output<String> activationPolicy;
 
-    public Output<String> activationPolicy() {
-        return this.activationPolicy == null ? Codegen.empty() : this.activationPolicy;
+    public Optional<Output<String>> activationPolicy() {
+        return Optional.ofNullable(this.activationPolicy);
     }
 
     /**
@@ -45,17 +45,17 @@ public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="availabilityType")
-      private final @Nullable Output<String> availabilityType;
+    private @Nullable Output<String> availabilityType;
 
-    public Output<String> availabilityType() {
-        return this.availabilityType == null ? Codegen.empty() : this.availabilityType;
+    public Optional<Output<String>> availabilityType() {
+        return Optional.ofNullable(this.availabilityType);
     }
 
     @Import(name="backupConfiguration")
-      private final @Nullable Output<DatabaseInstanceSettingsBackupConfigurationArgs> backupConfiguration;
+    private @Nullable Output<DatabaseInstanceSettingsBackupConfigurationArgs> backupConfiguration;
 
-    public Output<DatabaseInstanceSettingsBackupConfigurationArgs> backupConfiguration() {
-        return this.backupConfiguration == null ? Codegen.empty() : this.backupConfiguration;
+    public Optional<Output<DatabaseInstanceSettingsBackupConfigurationArgs>> backupConfiguration() {
+        return Optional.ofNullable(this.backupConfiguration);
     }
 
     /**
@@ -63,17 +63,17 @@ public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="collation")
-      private final @Nullable Output<String> collation;
+    private @Nullable Output<String> collation;
 
-    public Output<String> collation() {
-        return this.collation == null ? Codegen.empty() : this.collation;
+    public Optional<Output<String>> collation() {
+        return Optional.ofNullable(this.collation);
     }
 
     @Import(name="databaseFlags")
-      private final @Nullable Output<List<DatabaseInstanceSettingsDatabaseFlagArgs>> databaseFlags;
+    private @Nullable Output<List<DatabaseInstanceSettingsDatabaseFlagArgs>> databaseFlags;
 
-    public Output<List<DatabaseInstanceSettingsDatabaseFlagArgs>> databaseFlags() {
-        return this.databaseFlags == null ? Codegen.empty() : this.databaseFlags;
+    public Optional<Output<List<DatabaseInstanceSettingsDatabaseFlagArgs>>> databaseFlags() {
+        return Optional.ofNullable(this.databaseFlags);
     }
 
     /**
@@ -81,17 +81,17 @@ public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="diskAutoresize")
-      private final @Nullable Output<Boolean> diskAutoresize;
+    private @Nullable Output<Boolean> diskAutoresize;
 
-    public Output<Boolean> diskAutoresize() {
-        return this.diskAutoresize == null ? Codegen.empty() : this.diskAutoresize;
+    public Optional<Output<Boolean>> diskAutoresize() {
+        return Optional.ofNullable(this.diskAutoresize);
     }
 
     @Import(name="diskAutoresizeLimit")
-      private final @Nullable Output<Integer> diskAutoresizeLimit;
+    private @Nullable Output<Integer> diskAutoresizeLimit;
 
-    public Output<Integer> diskAutoresizeLimit() {
-        return this.diskAutoresizeLimit == null ? Codegen.empty() : this.diskAutoresizeLimit;
+    public Optional<Output<Integer>> diskAutoresizeLimit() {
+        return Optional.ofNullable(this.diskAutoresizeLimit);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="diskSize")
-      private final @Nullable Output<Integer> diskSize;
+    private @Nullable Output<Integer> diskSize;
 
-    public Output<Integer> diskSize() {
-        return this.diskSize == null ? Codegen.empty() : this.diskSize;
+    public Optional<Output<Integer>> diskSize() {
+        return Optional.ofNullable(this.diskSize);
     }
 
     /**
@@ -110,38 +110,38 @@ public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="diskType")
-      private final @Nullable Output<String> diskType;
+    private @Nullable Output<String> diskType;
 
-    public Output<String> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<String>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     @Import(name="insightsConfig")
-      private final @Nullable Output<DatabaseInstanceSettingsInsightsConfigArgs> insightsConfig;
+    private @Nullable Output<DatabaseInstanceSettingsInsightsConfigArgs> insightsConfig;
 
-    public Output<DatabaseInstanceSettingsInsightsConfigArgs> insightsConfig() {
-        return this.insightsConfig == null ? Codegen.empty() : this.insightsConfig;
+    public Optional<Output<DatabaseInstanceSettingsInsightsConfigArgs>> insightsConfig() {
+        return Optional.ofNullable(this.insightsConfig);
     }
 
     @Import(name="ipConfiguration")
-      private final @Nullable Output<DatabaseInstanceSettingsIpConfigurationArgs> ipConfiguration;
+    private @Nullable Output<DatabaseInstanceSettingsIpConfigurationArgs> ipConfiguration;
 
-    public Output<DatabaseInstanceSettingsIpConfigurationArgs> ipConfiguration() {
-        return this.ipConfiguration == null ? Codegen.empty() : this.ipConfiguration;
+    public Optional<Output<DatabaseInstanceSettingsIpConfigurationArgs>> ipConfiguration() {
+        return Optional.ofNullable(this.ipConfiguration);
     }
 
     @Import(name="locationPreference")
-      private final @Nullable Output<DatabaseInstanceSettingsLocationPreferenceArgs> locationPreference;
+    private @Nullable Output<DatabaseInstanceSettingsLocationPreferenceArgs> locationPreference;
 
-    public Output<DatabaseInstanceSettingsLocationPreferenceArgs> locationPreference() {
-        return this.locationPreference == null ? Codegen.empty() : this.locationPreference;
+    public Optional<Output<DatabaseInstanceSettingsLocationPreferenceArgs>> locationPreference() {
+        return Optional.ofNullable(this.locationPreference);
     }
 
     @Import(name="maintenanceWindow")
-      private final @Nullable Output<DatabaseInstanceSettingsMaintenanceWindowArgs> maintenanceWindow;
+    private @Nullable Output<DatabaseInstanceSettingsMaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<DatabaseInstanceSettingsMaintenanceWindowArgs> maintenanceWindow() {
-        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
+    public Optional<Output<DatabaseInstanceSettingsMaintenanceWindowArgs>> maintenanceWindow() {
+        return Optional.ofNullable(this.maintenanceWindow);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="pricingPlan")
-      private final @Nullable Output<String> pricingPlan;
+    private @Nullable Output<String> pricingPlan;
 
-    public Output<String> pricingPlan() {
-        return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
+    public Optional<Output<String>> pricingPlan() {
+        return Optional.ofNullable(this.pricingPlan);
     }
 
     /**
@@ -162,7 +162,7 @@ public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="tier", required=true)
-      private final Output<String> tier;
+    private Output<String> tier;
 
     public Output<String> tier() {
         return this.tier;
@@ -173,268 +173,220 @@ public final class DatabaseInstanceSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="userLabels")
-      private final @Nullable Output<Map<String,String>> userLabels;
+    private @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> userLabels() {
-        return this.userLabels == null ? Codegen.empty() : this.userLabels;
+    public Optional<Output<Map<String,String>>> userLabels() {
+        return Optional.ofNullable(this.userLabels);
     }
 
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public DatabaseInstanceSettingsArgs(
-        @Nullable Output<String> activationPolicy,
-        @Nullable Output<String> availabilityType,
-        @Nullable Output<DatabaseInstanceSettingsBackupConfigurationArgs> backupConfiguration,
-        @Nullable Output<String> collation,
-        @Nullable Output<List<DatabaseInstanceSettingsDatabaseFlagArgs>> databaseFlags,
-        @Nullable Output<Boolean> diskAutoresize,
-        @Nullable Output<Integer> diskAutoresizeLimit,
-        @Nullable Output<Integer> diskSize,
-        @Nullable Output<String> diskType,
-        @Nullable Output<DatabaseInstanceSettingsInsightsConfigArgs> insightsConfig,
-        @Nullable Output<DatabaseInstanceSettingsIpConfigurationArgs> ipConfiguration,
-        @Nullable Output<DatabaseInstanceSettingsLocationPreferenceArgs> locationPreference,
-        @Nullable Output<DatabaseInstanceSettingsMaintenanceWindowArgs> maintenanceWindow,
-        @Nullable Output<String> pricingPlan,
-        Output<String> tier,
-        @Nullable Output<Map<String,String>> userLabels,
-        @Nullable Output<Integer> version) {
-        this.activationPolicy = activationPolicy;
-        this.availabilityType = availabilityType;
-        this.backupConfiguration = backupConfiguration;
-        this.collation = collation;
-        this.databaseFlags = databaseFlags;
-        this.diskAutoresize = diskAutoresize;
-        this.diskAutoresizeLimit = diskAutoresizeLimit;
-        this.diskSize = diskSize;
-        this.diskType = diskType;
-        this.insightsConfig = insightsConfig;
-        this.ipConfiguration = ipConfiguration;
-        this.locationPreference = locationPreference;
-        this.maintenanceWindow = maintenanceWindow;
-        this.pricingPlan = pricingPlan;
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-        this.userLabels = userLabels;
-        this.version = version;
-    }
+    private DatabaseInstanceSettingsArgs() {}
 
-    private DatabaseInstanceSettingsArgs() {
-        this.activationPolicy = Codegen.empty();
-        this.availabilityType = Codegen.empty();
-        this.backupConfiguration = Codegen.empty();
-        this.collation = Codegen.empty();
-        this.databaseFlags = Codegen.empty();
-        this.diskAutoresize = Codegen.empty();
-        this.diskAutoresizeLimit = Codegen.empty();
-        this.diskSize = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.insightsConfig = Codegen.empty();
-        this.ipConfiguration = Codegen.empty();
-        this.locationPreference = Codegen.empty();
-        this.maintenanceWindow = Codegen.empty();
-        this.pricingPlan = Codegen.empty();
-        this.tier = Codegen.empty();
-        this.userLabels = Codegen.empty();
-        this.version = Codegen.empty();
+    private DatabaseInstanceSettingsArgs(DatabaseInstanceSettingsArgs $) {
+        this.activationPolicy = $.activationPolicy;
+        this.availabilityType = $.availabilityType;
+        this.backupConfiguration = $.backupConfiguration;
+        this.collation = $.collation;
+        this.databaseFlags = $.databaseFlags;
+        this.diskAutoresize = $.diskAutoresize;
+        this.diskAutoresizeLimit = $.diskAutoresizeLimit;
+        this.diskSize = $.diskSize;
+        this.diskType = $.diskType;
+        this.insightsConfig = $.insightsConfig;
+        this.ipConfiguration = $.ipConfiguration;
+        this.locationPreference = $.locationPreference;
+        this.maintenanceWindow = $.maintenanceWindow;
+        this.pricingPlan = $.pricingPlan;
+        this.tier = $.tier;
+        this.userLabels = $.userLabels;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> activationPolicy;
-        private @Nullable Output<String> availabilityType;
-        private @Nullable Output<DatabaseInstanceSettingsBackupConfigurationArgs> backupConfiguration;
-        private @Nullable Output<String> collation;
-        private @Nullable Output<List<DatabaseInstanceSettingsDatabaseFlagArgs>> databaseFlags;
-        private @Nullable Output<Boolean> diskAutoresize;
-        private @Nullable Output<Integer> diskAutoresizeLimit;
-        private @Nullable Output<Integer> diskSize;
-        private @Nullable Output<String> diskType;
-        private @Nullable Output<DatabaseInstanceSettingsInsightsConfigArgs> insightsConfig;
-        private @Nullable Output<DatabaseInstanceSettingsIpConfigurationArgs> ipConfiguration;
-        private @Nullable Output<DatabaseInstanceSettingsLocationPreferenceArgs> locationPreference;
-        private @Nullable Output<DatabaseInstanceSettingsMaintenanceWindowArgs> maintenanceWindow;
-        private @Nullable Output<String> pricingPlan;
-        private Output<String> tier;
-        private @Nullable Output<Map<String,String>> userLabels;
-        private @Nullable Output<Integer> version;
+        private DatabaseInstanceSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceSettingsArgs();
         }
 
         public Builder(DatabaseInstanceSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activationPolicy = defaults.activationPolicy;
-    	      this.availabilityType = defaults.availabilityType;
-    	      this.backupConfiguration = defaults.backupConfiguration;
-    	      this.collation = defaults.collation;
-    	      this.databaseFlags = defaults.databaseFlags;
-    	      this.diskAutoresize = defaults.diskAutoresize;
-    	      this.diskAutoresizeLimit = defaults.diskAutoresizeLimit;
-    	      this.diskSize = defaults.diskSize;
-    	      this.diskType = defaults.diskType;
-    	      this.insightsConfig = defaults.insightsConfig;
-    	      this.ipConfiguration = defaults.ipConfiguration;
-    	      this.locationPreference = defaults.locationPreference;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
-    	      this.pricingPlan = defaults.pricingPlan;
-    	      this.tier = defaults.tier;
-    	      this.userLabels = defaults.userLabels;
-    	      this.version = defaults.version;
+            $ = new DatabaseInstanceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activationPolicy(@Nullable Output<String> activationPolicy) {
-            this.activationPolicy = activationPolicy;
+            $.activationPolicy = activationPolicy;
             return this;
         }
-        public Builder activationPolicy(@Nullable String activationPolicy) {
-            this.activationPolicy = Codegen.ofNullable(activationPolicy);
-            return this;
+
+        public Builder activationPolicy(String activationPolicy) {
+            return activationPolicy(Output.of(activationPolicy));
         }
+
         public Builder availabilityType(@Nullable Output<String> availabilityType) {
-            this.availabilityType = availabilityType;
+            $.availabilityType = availabilityType;
             return this;
         }
-        public Builder availabilityType(@Nullable String availabilityType) {
-            this.availabilityType = Codegen.ofNullable(availabilityType);
-            return this;
+
+        public Builder availabilityType(String availabilityType) {
+            return availabilityType(Output.of(availabilityType));
         }
+
         public Builder backupConfiguration(@Nullable Output<DatabaseInstanceSettingsBackupConfigurationArgs> backupConfiguration) {
-            this.backupConfiguration = backupConfiguration;
+            $.backupConfiguration = backupConfiguration;
             return this;
         }
-        public Builder backupConfiguration(@Nullable DatabaseInstanceSettingsBackupConfigurationArgs backupConfiguration) {
-            this.backupConfiguration = Codegen.ofNullable(backupConfiguration);
-            return this;
+
+        public Builder backupConfiguration(DatabaseInstanceSettingsBackupConfigurationArgs backupConfiguration) {
+            return backupConfiguration(Output.of(backupConfiguration));
         }
+
         public Builder collation(@Nullable Output<String> collation) {
-            this.collation = collation;
+            $.collation = collation;
             return this;
         }
-        public Builder collation(@Nullable String collation) {
-            this.collation = Codegen.ofNullable(collation);
-            return this;
+
+        public Builder collation(String collation) {
+            return collation(Output.of(collation));
         }
+
         public Builder databaseFlags(@Nullable Output<List<DatabaseInstanceSettingsDatabaseFlagArgs>> databaseFlags) {
-            this.databaseFlags = databaseFlags;
+            $.databaseFlags = databaseFlags;
             return this;
         }
-        public Builder databaseFlags(@Nullable List<DatabaseInstanceSettingsDatabaseFlagArgs> databaseFlags) {
-            this.databaseFlags = Codegen.ofNullable(databaseFlags);
-            return this;
+
+        public Builder databaseFlags(List<DatabaseInstanceSettingsDatabaseFlagArgs> databaseFlags) {
+            return databaseFlags(Output.of(databaseFlags));
         }
+
         public Builder databaseFlags(DatabaseInstanceSettingsDatabaseFlagArgs... databaseFlags) {
             return databaseFlags(List.of(databaseFlags));
         }
+
         public Builder diskAutoresize(@Nullable Output<Boolean> diskAutoresize) {
-            this.diskAutoresize = diskAutoresize;
+            $.diskAutoresize = diskAutoresize;
             return this;
         }
-        public Builder diskAutoresize(@Nullable Boolean diskAutoresize) {
-            this.diskAutoresize = Codegen.ofNullable(diskAutoresize);
-            return this;
+
+        public Builder diskAutoresize(Boolean diskAutoresize) {
+            return diskAutoresize(Output.of(diskAutoresize));
         }
+
         public Builder diskAutoresizeLimit(@Nullable Output<Integer> diskAutoresizeLimit) {
-            this.diskAutoresizeLimit = diskAutoresizeLimit;
+            $.diskAutoresizeLimit = diskAutoresizeLimit;
             return this;
         }
-        public Builder diskAutoresizeLimit(@Nullable Integer diskAutoresizeLimit) {
-            this.diskAutoresizeLimit = Codegen.ofNullable(diskAutoresizeLimit);
-            return this;
+
+        public Builder diskAutoresizeLimit(Integer diskAutoresizeLimit) {
+            return diskAutoresizeLimit(Output.of(diskAutoresizeLimit));
         }
+
         public Builder diskSize(@Nullable Output<Integer> diskSize) {
-            this.diskSize = diskSize;
+            $.diskSize = diskSize;
             return this;
         }
-        public Builder diskSize(@Nullable Integer diskSize) {
-            this.diskSize = Codegen.ofNullable(diskSize);
-            return this;
+
+        public Builder diskSize(Integer diskSize) {
+            return diskSize(Output.of(diskSize));
         }
+
         public Builder diskType(@Nullable Output<String> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable String diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(String diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder insightsConfig(@Nullable Output<DatabaseInstanceSettingsInsightsConfigArgs> insightsConfig) {
-            this.insightsConfig = insightsConfig;
+            $.insightsConfig = insightsConfig;
             return this;
         }
-        public Builder insightsConfig(@Nullable DatabaseInstanceSettingsInsightsConfigArgs insightsConfig) {
-            this.insightsConfig = Codegen.ofNullable(insightsConfig);
-            return this;
+
+        public Builder insightsConfig(DatabaseInstanceSettingsInsightsConfigArgs insightsConfig) {
+            return insightsConfig(Output.of(insightsConfig));
         }
+
         public Builder ipConfiguration(@Nullable Output<DatabaseInstanceSettingsIpConfigurationArgs> ipConfiguration) {
-            this.ipConfiguration = ipConfiguration;
+            $.ipConfiguration = ipConfiguration;
             return this;
         }
-        public Builder ipConfiguration(@Nullable DatabaseInstanceSettingsIpConfigurationArgs ipConfiguration) {
-            this.ipConfiguration = Codegen.ofNullable(ipConfiguration);
-            return this;
+
+        public Builder ipConfiguration(DatabaseInstanceSettingsIpConfigurationArgs ipConfiguration) {
+            return ipConfiguration(Output.of(ipConfiguration));
         }
+
         public Builder locationPreference(@Nullable Output<DatabaseInstanceSettingsLocationPreferenceArgs> locationPreference) {
-            this.locationPreference = locationPreference;
+            $.locationPreference = locationPreference;
             return this;
         }
-        public Builder locationPreference(@Nullable DatabaseInstanceSettingsLocationPreferenceArgs locationPreference) {
-            this.locationPreference = Codegen.ofNullable(locationPreference);
-            return this;
+
+        public Builder locationPreference(DatabaseInstanceSettingsLocationPreferenceArgs locationPreference) {
+            return locationPreference(Output.of(locationPreference));
         }
+
         public Builder maintenanceWindow(@Nullable Output<DatabaseInstanceSettingsMaintenanceWindowArgs> maintenanceWindow) {
-            this.maintenanceWindow = maintenanceWindow;
+            $.maintenanceWindow = maintenanceWindow;
             return this;
         }
-        public Builder maintenanceWindow(@Nullable DatabaseInstanceSettingsMaintenanceWindowArgs maintenanceWindow) {
-            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
-            return this;
+
+        public Builder maintenanceWindow(DatabaseInstanceSettingsMaintenanceWindowArgs maintenanceWindow) {
+            return maintenanceWindow(Output.of(maintenanceWindow));
         }
+
         public Builder pricingPlan(@Nullable Output<String> pricingPlan) {
-            this.pricingPlan = pricingPlan;
+            $.pricingPlan = pricingPlan;
             return this;
         }
-        public Builder pricingPlan(@Nullable String pricingPlan) {
-            this.pricingPlan = Codegen.ofNullable(pricingPlan);
-            return this;
+
+        public Builder pricingPlan(String pricingPlan) {
+            return pricingPlan(Output.of(pricingPlan));
         }
+
         public Builder tier(Output<String> tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
         }
+
         public Builder tier(String tier) {
-            this.tier = Output.of(Objects.requireNonNull(tier));
-            return this;
+            return tier(Output.of(tier));
         }
+
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
-            this.userLabels = userLabels;
+            $.userLabels = userLabels;
             return this;
         }
-        public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Codegen.ofNullable(userLabels);
-            return this;
+
+        public Builder userLabels(Map<String,String> userLabels) {
+            return userLabels(Output.of(userLabels));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public DatabaseInstanceSettingsArgs build() {
-            return new DatabaseInstanceSettingsArgs(activationPolicy, availabilityType, backupConfiguration, collation, databaseFlags, diskAutoresize, diskAutoresizeLimit, diskSize, diskType, insightsConfig, ipConfiguration, locationPreference, maintenanceWindow, pricingPlan, tier, userLabels, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public DatabaseInstanceSettingsArgs build() {
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

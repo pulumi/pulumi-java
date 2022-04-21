@@ -13,62 +13,59 @@ public final class GetTopicSchemaSetting extends com.pulumi.resources.InvokeArgs
     public static final GetTopicSchemaSetting Empty = new GetTopicSchemaSetting();
 
     @Import(name="encoding", required=true)
-      private final String encoding;
+    private String encoding;
 
     public String encoding() {
         return this.encoding;
     }
 
     @Import(name="schema", required=true)
-      private final String schema;
+    private String schema;
 
     public String schema() {
         return this.schema;
     }
 
-    public GetTopicSchemaSetting(
-        String encoding,
-        String schema) {
-        this.encoding = Objects.requireNonNull(encoding, "expected parameter 'encoding' to be non-null");
-        this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
-    }
+    private GetTopicSchemaSetting() {}
 
-    private GetTopicSchemaSetting() {
-        this.encoding = null;
-        this.schema = null;
+    private GetTopicSchemaSetting(GetTopicSchemaSetting $) {
+        this.encoding = $.encoding;
+        this.schema = $.schema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTopicSchemaSetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String encoding;
-        private String schema;
+        private GetTopicSchemaSetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTopicSchemaSetting();
         }
 
         public Builder(GetTopicSchemaSetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encoding = defaults.encoding;
-    	      this.schema = defaults.schema;
+            $ = new GetTopicSchemaSetting(Objects.requireNonNull(defaults));
         }
 
         public Builder encoding(String encoding) {
-            this.encoding = Objects.requireNonNull(encoding);
+            $.encoding = encoding;
             return this;
         }
+
         public Builder schema(String schema) {
-            this.schema = Objects.requireNonNull(schema);
+            $.schema = schema;
             return this;
-        }        public GetTopicSchemaSetting build() {
-            return new GetTopicSchemaSetting(encoding, schema);
+        }
+
+        public GetTopicSchemaSetting build() {
+            $.encoding = Objects.requireNonNull($.encoding, "expected parameter 'encoding' to be non-null");
+            $.schema = Objects.requireNonNull($.schema, "expected parameter 'schema' to be non-null");
+            return $;
         }
     }
+
 }

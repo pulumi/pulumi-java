@@ -5,7 +5,6 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class InstanceGroupManagerAutoHealingPoliciesGetArgs extends com.pu
      * 
      */
     @Import(name="healthCheck", required=true)
-      private final Output<String> healthCheck;
+    private Output<String> healthCheck;
 
     public Output<String> healthCheck() {
         return this.healthCheck;
@@ -32,63 +31,60 @@ public final class InstanceGroupManagerAutoHealingPoliciesGetArgs extends com.pu
      * 
      */
     @Import(name="initialDelaySec", required=true)
-      private final Output<Integer> initialDelaySec;
+    private Output<Integer> initialDelaySec;
 
     public Output<Integer> initialDelaySec() {
         return this.initialDelaySec;
     }
 
-    public InstanceGroupManagerAutoHealingPoliciesGetArgs(
-        Output<String> healthCheck,
-        Output<Integer> initialDelaySec) {
-        this.healthCheck = Objects.requireNonNull(healthCheck, "expected parameter 'healthCheck' to be non-null");
-        this.initialDelaySec = Objects.requireNonNull(initialDelaySec, "expected parameter 'initialDelaySec' to be non-null");
-    }
+    private InstanceGroupManagerAutoHealingPoliciesGetArgs() {}
 
-    private InstanceGroupManagerAutoHealingPoliciesGetArgs() {
-        this.healthCheck = Codegen.empty();
-        this.initialDelaySec = Codegen.empty();
+    private InstanceGroupManagerAutoHealingPoliciesGetArgs(InstanceGroupManagerAutoHealingPoliciesGetArgs $) {
+        this.healthCheck = $.healthCheck;
+        this.initialDelaySec = $.initialDelaySec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerAutoHealingPoliciesGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> healthCheck;
-        private Output<Integer> initialDelaySec;
+        private InstanceGroupManagerAutoHealingPoliciesGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerAutoHealingPoliciesGetArgs();
         }
 
         public Builder(InstanceGroupManagerAutoHealingPoliciesGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthCheck = defaults.healthCheck;
-    	      this.initialDelaySec = defaults.initialDelaySec;
+            $ = new InstanceGroupManagerAutoHealingPoliciesGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder healthCheck(Output<String> healthCheck) {
-            this.healthCheck = Objects.requireNonNull(healthCheck);
+            $.healthCheck = healthCheck;
             return this;
         }
+
         public Builder healthCheck(String healthCheck) {
-            this.healthCheck = Output.of(Objects.requireNonNull(healthCheck));
-            return this;
+            return healthCheck(Output.of(healthCheck));
         }
+
         public Builder initialDelaySec(Output<Integer> initialDelaySec) {
-            this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
+            $.initialDelaySec = initialDelaySec;
             return this;
         }
+
         public Builder initialDelaySec(Integer initialDelaySec) {
-            this.initialDelaySec = Output.of(Objects.requireNonNull(initialDelaySec));
-            return this;
-        }        public InstanceGroupManagerAutoHealingPoliciesGetArgs build() {
-            return new InstanceGroupManagerAutoHealingPoliciesGetArgs(healthCheck, initialDelaySec);
+            return initialDelaySec(Output.of(initialDelaySec));
+        }
+
+        public InstanceGroupManagerAutoHealingPoliciesGetArgs build() {
+            $.healthCheck = Objects.requireNonNull($.healthCheck, "expected parameter 'healthCheck' to be non-null");
+            $.initialDelaySec = Objects.requireNonNull($.initialDelaySec, "expected parameter 'initialDelaySec' to be non-null");
+            return $;
         }
     }
+
 }

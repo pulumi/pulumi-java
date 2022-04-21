@@ -18,7 +18,7 @@ public final class GetInstanceTemplateGuestAccelerator extends com.pulumi.resour
      * 
      */
     @Import(name="count", required=true)
-      private final Integer count;
+    private Integer count;
 
     public Integer count() {
         return this.count;
@@ -29,55 +29,52 @@ public final class GetInstanceTemplateGuestAccelerator extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetInstanceTemplateGuestAccelerator(
-        Integer count,
-        String type) {
-        this.count = Objects.requireNonNull(count, "expected parameter 'count' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetInstanceTemplateGuestAccelerator() {}
 
-    private GetInstanceTemplateGuestAccelerator() {
-        this.count = null;
-        this.type = null;
+    private GetInstanceTemplateGuestAccelerator(GetInstanceTemplateGuestAccelerator $) {
+        this.count = $.count;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceTemplateGuestAccelerator defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer count;
-        private String type;
+        private GetInstanceTemplateGuestAccelerator $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceTemplateGuestAccelerator();
         }
 
         public Builder(GetInstanceTemplateGuestAccelerator defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.type = defaults.type;
+            $ = new GetInstanceTemplateGuestAccelerator(Objects.requireNonNull(defaults));
         }
 
         public Builder count(Integer count) {
-            this.count = Objects.requireNonNull(count);
+            $.count = count;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetInstanceTemplateGuestAccelerator build() {
-            return new GetInstanceTemplateGuestAccelerator(count, type);
+        }
+
+        public GetInstanceTemplateGuestAccelerator build() {
+            $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

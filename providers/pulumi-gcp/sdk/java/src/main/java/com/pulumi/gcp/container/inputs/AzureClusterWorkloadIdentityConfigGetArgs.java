@@ -5,9 +5,9 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,82 @@ public final class AzureClusterWorkloadIdentityConfigGetArgs extends com.pulumi.
     public static final AzureClusterWorkloadIdentityConfigGetArgs Empty = new AzureClusterWorkloadIdentityConfigGetArgs();
 
     @Import(name="identityProvider")
-      private final @Nullable Output<String> identityProvider;
+    private @Nullable Output<String> identityProvider;
 
-    public Output<String> identityProvider() {
-        return this.identityProvider == null ? Codegen.empty() : this.identityProvider;
+    public Optional<Output<String>> identityProvider() {
+        return Optional.ofNullable(this.identityProvider);
     }
 
     @Import(name="issuerUri")
-      private final @Nullable Output<String> issuerUri;
+    private @Nullable Output<String> issuerUri;
 
-    public Output<String> issuerUri() {
-        return this.issuerUri == null ? Codegen.empty() : this.issuerUri;
+    public Optional<Output<String>> issuerUri() {
+        return Optional.ofNullable(this.issuerUri);
     }
 
     @Import(name="workloadPool")
-      private final @Nullable Output<String> workloadPool;
+    private @Nullable Output<String> workloadPool;
 
-    public Output<String> workloadPool() {
-        return this.workloadPool == null ? Codegen.empty() : this.workloadPool;
+    public Optional<Output<String>> workloadPool() {
+        return Optional.ofNullable(this.workloadPool);
     }
 
-    public AzureClusterWorkloadIdentityConfigGetArgs(
-        @Nullable Output<String> identityProvider,
-        @Nullable Output<String> issuerUri,
-        @Nullable Output<String> workloadPool) {
-        this.identityProvider = identityProvider;
-        this.issuerUri = issuerUri;
-        this.workloadPool = workloadPool;
-    }
+    private AzureClusterWorkloadIdentityConfigGetArgs() {}
 
-    private AzureClusterWorkloadIdentityConfigGetArgs() {
-        this.identityProvider = Codegen.empty();
-        this.issuerUri = Codegen.empty();
-        this.workloadPool = Codegen.empty();
+    private AzureClusterWorkloadIdentityConfigGetArgs(AzureClusterWorkloadIdentityConfigGetArgs $) {
+        this.identityProvider = $.identityProvider;
+        this.issuerUri = $.issuerUri;
+        this.workloadPool = $.workloadPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureClusterWorkloadIdentityConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> identityProvider;
-        private @Nullable Output<String> issuerUri;
-        private @Nullable Output<String> workloadPool;
+        private AzureClusterWorkloadIdentityConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureClusterWorkloadIdentityConfigGetArgs();
         }
 
         public Builder(AzureClusterWorkloadIdentityConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identityProvider = defaults.identityProvider;
-    	      this.issuerUri = defaults.issuerUri;
-    	      this.workloadPool = defaults.workloadPool;
+            $ = new AzureClusterWorkloadIdentityConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identityProvider(@Nullable Output<String> identityProvider) {
-            this.identityProvider = identityProvider;
+            $.identityProvider = identityProvider;
             return this;
         }
-        public Builder identityProvider(@Nullable String identityProvider) {
-            this.identityProvider = Codegen.ofNullable(identityProvider);
-            return this;
+
+        public Builder identityProvider(String identityProvider) {
+            return identityProvider(Output.of(identityProvider));
         }
+
         public Builder issuerUri(@Nullable Output<String> issuerUri) {
-            this.issuerUri = issuerUri;
+            $.issuerUri = issuerUri;
             return this;
         }
-        public Builder issuerUri(@Nullable String issuerUri) {
-            this.issuerUri = Codegen.ofNullable(issuerUri);
-            return this;
+
+        public Builder issuerUri(String issuerUri) {
+            return issuerUri(Output.of(issuerUri));
         }
+
         public Builder workloadPool(@Nullable Output<String> workloadPool) {
-            this.workloadPool = workloadPool;
+            $.workloadPool = workloadPool;
             return this;
         }
-        public Builder workloadPool(@Nullable String workloadPool) {
-            this.workloadPool = Codegen.ofNullable(workloadPool);
-            return this;
-        }        public AzureClusterWorkloadIdentityConfigGetArgs build() {
-            return new AzureClusterWorkloadIdentityConfigGetArgs(identityProvider, issuerUri, workloadPool);
+
+        public Builder workloadPool(String workloadPool) {
+            return workloadPool(Output.of(workloadPool));
+        }
+
+        public AzureClusterWorkloadIdentityConfigGetArgs build() {
+            return $;
         }
     }
+
 }

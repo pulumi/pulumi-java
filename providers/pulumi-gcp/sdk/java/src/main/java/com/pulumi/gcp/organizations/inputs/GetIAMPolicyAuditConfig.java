@@ -19,7 +19,7 @@ public final class GetIAMPolicyAuditConfig extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="auditLogConfigs", required=true)
-      private final List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs;
+    private List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs;
 
     public List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs() {
         return this.auditLogConfigs;
@@ -30,58 +30,56 @@ public final class GetIAMPolicyAuditConfig extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public GetIAMPolicyAuditConfig(
-        List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs,
-        String service) {
-        this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs, "expected parameter 'auditLogConfigs' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private GetIAMPolicyAuditConfig() {}
 
-    private GetIAMPolicyAuditConfig() {
-        this.auditLogConfigs = List.of();
-        this.service = null;
+    private GetIAMPolicyAuditConfig(GetIAMPolicyAuditConfig $) {
+        this.auditLogConfigs = $.auditLogConfigs;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIAMPolicyAuditConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs;
-        private String service;
+        private GetIAMPolicyAuditConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIAMPolicyAuditConfig();
         }
 
         public Builder(GetIAMPolicyAuditConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditLogConfigs = defaults.auditLogConfigs;
-    	      this.service = defaults.service;
+            $ = new GetIAMPolicyAuditConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder auditLogConfigs(List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs) {
-            this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
+            $.auditLogConfigs = auditLogConfigs;
             return this;
         }
+
         public Builder auditLogConfigs(GetIAMPolicyAuditConfigAuditLogConfig... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public GetIAMPolicyAuditConfig build() {
-            return new GetIAMPolicyAuditConfig(auditLogConfigs, service);
+        }
+
+        public GetIAMPolicyAuditConfig build() {
+            $.auditLogConfigs = Objects.requireNonNull($.auditLogConfigs, "expected parameter 'auditLogConfigs' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

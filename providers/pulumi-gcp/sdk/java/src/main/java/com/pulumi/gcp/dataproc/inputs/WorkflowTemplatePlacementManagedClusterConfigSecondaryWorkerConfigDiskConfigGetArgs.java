@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      * 
      */
     @Import(name="bootDiskSizeGb")
-      private final @Nullable Output<Integer> bootDiskSizeGb;
+    private @Nullable Output<Integer> bootDiskSizeGb;
 
-    public Output<Integer> bootDiskSizeGb() {
-        return this.bootDiskSizeGb == null ? Codegen.empty() : this.bootDiskSizeGb;
+    public Optional<Output<Integer>> bootDiskSizeGb() {
+        return Optional.ofNullable(this.bootDiskSizeGb);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      * 
      */
     @Import(name="bootDiskType")
-      private final @Nullable Output<String> bootDiskType;
+    private @Nullable Output<String> bootDiskType;
 
-    public Output<String> bootDiskType() {
-        return this.bootDiskType == null ? Codegen.empty() : this.bootDiskType;
+    public Optional<Output<String>> bootDiskType() {
+        return Optional.ofNullable(this.bootDiskType);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      * 
      */
     @Import(name="numLocalSsds")
-      private final @Nullable Output<Integer> numLocalSsds;
+    private @Nullable Output<Integer> numLocalSsds;
 
-    public Output<Integer> numLocalSsds() {
-        return this.numLocalSsds == null ? Codegen.empty() : this.numLocalSsds;
+    public Optional<Output<Integer>> numLocalSsds() {
+        return Optional.ofNullable(this.numLocalSsds);
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs(
-        @Nullable Output<Integer> bootDiskSizeGb,
-        @Nullable Output<String> bootDiskType,
-        @Nullable Output<Integer> numLocalSsds) {
-        this.bootDiskSizeGb = bootDiskSizeGb;
-        this.bootDiskType = bootDiskType;
-        this.numLocalSsds = numLocalSsds;
-    }
+    private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs() {
-        this.bootDiskSizeGb = Codegen.empty();
-        this.bootDiskType = Codegen.empty();
-        this.numLocalSsds = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs(WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs $) {
+        this.bootDiskSizeGb = $.bootDiskSizeGb;
+        this.bootDiskType = $.bootDiskType;
+        this.numLocalSsds = $.numLocalSsds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> bootDiskSizeGb;
-        private @Nullable Output<String> bootDiskType;
-        private @Nullable Output<Integer> numLocalSsds;
+        private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bootDiskSizeGb = defaults.bootDiskSizeGb;
-    	      this.bootDiskType = defaults.bootDiskType;
-    	      this.numLocalSsds = defaults.numLocalSsds;
+            $ = new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bootDiskSizeGb(@Nullable Output<Integer> bootDiskSizeGb) {
-            this.bootDiskSizeGb = bootDiskSizeGb;
+            $.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
-        public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Codegen.ofNullable(bootDiskSizeGb);
-            return this;
+
+        public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
+            return bootDiskSizeGb(Output.of(bootDiskSizeGb));
         }
+
         public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
-            this.bootDiskType = bootDiskType;
+            $.bootDiskType = bootDiskType;
             return this;
         }
-        public Builder bootDiskType(@Nullable String bootDiskType) {
-            this.bootDiskType = Codegen.ofNullable(bootDiskType);
-            return this;
+
+        public Builder bootDiskType(String bootDiskType) {
+            return bootDiskType(Output.of(bootDiskType));
         }
+
         public Builder numLocalSsds(@Nullable Output<Integer> numLocalSsds) {
-            this.numLocalSsds = numLocalSsds;
+            $.numLocalSsds = numLocalSsds;
             return this;
         }
-        public Builder numLocalSsds(@Nullable Integer numLocalSsds) {
-            this.numLocalSsds = Codegen.ofNullable(numLocalSsds);
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs(bootDiskSizeGb, bootDiskType, numLocalSsds);
+
+        public Builder numLocalSsds(Integer numLocalSsds) {
+            return numLocalSsds(Output.of(numLocalSsds));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs build() {
+            return $;
         }
     }
+
 }

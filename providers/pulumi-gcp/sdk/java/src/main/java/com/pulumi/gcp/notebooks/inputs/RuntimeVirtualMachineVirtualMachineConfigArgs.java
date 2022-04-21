@@ -5,7 +5,6 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs;
 import com.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs;
 import com.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs;
@@ -16,6 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="acceleratorConfig")
-      private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> acceleratorConfig;
+    private @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> acceleratorConfig;
 
-    public Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> acceleratorConfig() {
-        return this.acceleratorConfig == null ? Codegen.empty() : this.acceleratorConfig;
+    public Optional<Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs>> acceleratorConfig() {
+        return Optional.ofNullable(this.acceleratorConfig);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="containerImages")
-      private final @Nullable Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> containerImages;
+    private @Nullable Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> containerImages;
 
-    public Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> containerImages() {
-        return this.containerImages == null ? Codegen.empty() : this.containerImages;
+    public Optional<Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>>> containerImages() {
+        return Optional.ofNullable(this.containerImages);
     }
 
     /**
@@ -53,7 +53,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="dataDisk", required=true)
-      private final Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> dataDisk;
+    private Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> dataDisk;
 
     public Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> dataDisk() {
         return this.dataDisk;
@@ -65,10 +65,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="encryptionConfig")
-      private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> encryptionConfig;
+    private @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> encryptionConfig;
 
-    public Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> encryptionConfig() {
-        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
+    public Optional<Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs>> encryptionConfig() {
+        return Optional.ofNullable(this.encryptionConfig);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="guestAttributes")
-      private final @Nullable Output<Map<String,String>> guestAttributes;
+    private @Nullable Output<Map<String,String>> guestAttributes;
 
-    public Output<Map<String,String>> guestAttributes() {
-        return this.guestAttributes == null ? Codegen.empty() : this.guestAttributes;
+    public Optional<Output<Map<String,String>>> guestAttributes() {
+        return Optional.ofNullable(this.guestAttributes);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="internalIpOnly")
-      private final @Nullable Output<Boolean> internalIpOnly;
+    private @Nullable Output<Boolean> internalIpOnly;
 
-    public Output<Boolean> internalIpOnly() {
-        return this.internalIpOnly == null ? Codegen.empty() : this.internalIpOnly;
+    public Optional<Output<Boolean>> internalIpOnly() {
+        return Optional.ofNullable(this.internalIpOnly);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -119,7 +119,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="machineType", required=true)
-      private final Output<String> machineType;
+    private Output<String> machineType;
 
     public Output<String> machineType() {
         return this.machineType;
@@ -133,10 +133,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -170,10 +170,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="nicType")
-      private final @Nullable Output<String> nicType;
+    private @Nullable Output<String> nicType;
 
-    public Output<String> nicType() {
-        return this.nicType == null ? Codegen.empty() : this.nicType;
+    public Optional<Output<String>> nicType() {
+        return Optional.ofNullable(this.nicType);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="shieldedInstanceConfig")
-      private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
+    private @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> shieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
+    public Optional<Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
+        return Optional.ofNullable(this.shieldedInstanceConfig);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="subnet")
-      private final @Nullable Output<String> subnet;
+    private @Nullable Output<String> subnet;
 
-    public Output<String> subnet() {
-        return this.subnet == null ? Codegen.empty() : this.subnet;
+    public Optional<Output<String>> subnet() {
+        return Optional.ofNullable(this.subnet);
     }
 
     /**
@@ -211,10 +211,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -223,238 +223,198 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends com.pul
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public RuntimeVirtualMachineVirtualMachineConfigArgs(
-        @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> acceleratorConfig,
-        @Nullable Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> containerImages,
-        Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> dataDisk,
-        @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> encryptionConfig,
-        @Nullable Output<Map<String,String>> guestAttributes,
-        @Nullable Output<Boolean> internalIpOnly,
-        @Nullable Output<Map<String,String>> labels,
-        Output<String> machineType,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> network,
-        @Nullable Output<String> nicType,
-        @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        @Nullable Output<String> subnet,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<String> zone) {
-        this.acceleratorConfig = acceleratorConfig;
-        this.containerImages = containerImages;
-        this.dataDisk = Objects.requireNonNull(dataDisk, "expected parameter 'dataDisk' to be non-null");
-        this.encryptionConfig = encryptionConfig;
-        this.guestAttributes = guestAttributes;
-        this.internalIpOnly = internalIpOnly;
-        this.labels = labels;
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.metadata = metadata;
-        this.network = network;
-        this.nicType = nicType;
-        this.shieldedInstanceConfig = shieldedInstanceConfig;
-        this.subnet = subnet;
-        this.tags = tags;
-        this.zone = zone;
-    }
+    private RuntimeVirtualMachineVirtualMachineConfigArgs() {}
 
-    private RuntimeVirtualMachineVirtualMachineConfigArgs() {
-        this.acceleratorConfig = Codegen.empty();
-        this.containerImages = Codegen.empty();
-        this.dataDisk = Codegen.empty();
-        this.encryptionConfig = Codegen.empty();
-        this.guestAttributes = Codegen.empty();
-        this.internalIpOnly = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.network = Codegen.empty();
-        this.nicType = Codegen.empty();
-        this.shieldedInstanceConfig = Codegen.empty();
-        this.subnet = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.zone = Codegen.empty();
+    private RuntimeVirtualMachineVirtualMachineConfigArgs(RuntimeVirtualMachineVirtualMachineConfigArgs $) {
+        this.acceleratorConfig = $.acceleratorConfig;
+        this.containerImages = $.containerImages;
+        this.dataDisk = $.dataDisk;
+        this.encryptionConfig = $.encryptionConfig;
+        this.guestAttributes = $.guestAttributes;
+        this.internalIpOnly = $.internalIpOnly;
+        this.labels = $.labels;
+        this.machineType = $.machineType;
+        this.metadata = $.metadata;
+        this.network = $.network;
+        this.nicType = $.nicType;
+        this.shieldedInstanceConfig = $.shieldedInstanceConfig;
+        this.subnet = $.subnet;
+        this.tags = $.tags;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeVirtualMachineVirtualMachineConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> acceleratorConfig;
-        private @Nullable Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> containerImages;
-        private Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> dataDisk;
-        private @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> encryptionConfig;
-        private @Nullable Output<Map<String,String>> guestAttributes;
-        private @Nullable Output<Boolean> internalIpOnly;
-        private @Nullable Output<Map<String,String>> labels;
-        private Output<String> machineType;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> nicType;
-        private @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private @Nullable Output<String> subnet;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<String> zone;
+        private RuntimeVirtualMachineVirtualMachineConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeVirtualMachineVirtualMachineConfigArgs();
         }
 
         public Builder(RuntimeVirtualMachineVirtualMachineConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorConfig = defaults.acceleratorConfig;
-    	      this.containerImages = defaults.containerImages;
-    	      this.dataDisk = defaults.dataDisk;
-    	      this.encryptionConfig = defaults.encryptionConfig;
-    	      this.guestAttributes = defaults.guestAttributes;
-    	      this.internalIpOnly = defaults.internalIpOnly;
-    	      this.labels = defaults.labels;
-    	      this.machineType = defaults.machineType;
-    	      this.metadata = defaults.metadata;
-    	      this.network = defaults.network;
-    	      this.nicType = defaults.nicType;
-    	      this.shieldedInstanceConfig = defaults.shieldedInstanceConfig;
-    	      this.subnet = defaults.subnet;
-    	      this.tags = defaults.tags;
-    	      this.zone = defaults.zone;
+            $ = new RuntimeVirtualMachineVirtualMachineConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorConfig(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> acceleratorConfig) {
-            this.acceleratorConfig = acceleratorConfig;
+            $.acceleratorConfig = acceleratorConfig;
             return this;
         }
-        public Builder acceleratorConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs acceleratorConfig) {
-            this.acceleratorConfig = Codegen.ofNullable(acceleratorConfig);
-            return this;
+
+        public Builder acceleratorConfig(RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs acceleratorConfig) {
+            return acceleratorConfig(Output.of(acceleratorConfig));
         }
+
         public Builder containerImages(@Nullable Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> containerImages) {
-            this.containerImages = containerImages;
+            $.containerImages = containerImages;
             return this;
         }
-        public Builder containerImages(@Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs> containerImages) {
-            this.containerImages = Codegen.ofNullable(containerImages);
-            return this;
+
+        public Builder containerImages(List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs> containerImages) {
+            return containerImages(Output.of(containerImages));
         }
+
         public Builder containerImages(RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs... containerImages) {
             return containerImages(List.of(containerImages));
         }
+
         public Builder dataDisk(Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> dataDisk) {
-            this.dataDisk = Objects.requireNonNull(dataDisk);
+            $.dataDisk = dataDisk;
             return this;
         }
+
         public Builder dataDisk(RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs dataDisk) {
-            this.dataDisk = Output.of(Objects.requireNonNull(dataDisk));
-            return this;
+            return dataDisk(Output.of(dataDisk));
         }
+
         public Builder encryptionConfig(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> encryptionConfig) {
-            this.encryptionConfig = encryptionConfig;
+            $.encryptionConfig = encryptionConfig;
             return this;
         }
-        public Builder encryptionConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
-            return this;
+
+        public Builder encryptionConfig(RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs encryptionConfig) {
+            return encryptionConfig(Output.of(encryptionConfig));
         }
+
         public Builder guestAttributes(@Nullable Output<Map<String,String>> guestAttributes) {
-            this.guestAttributes = guestAttributes;
+            $.guestAttributes = guestAttributes;
             return this;
         }
-        public Builder guestAttributes(@Nullable Map<String,String> guestAttributes) {
-            this.guestAttributes = Codegen.ofNullable(guestAttributes);
-            return this;
+
+        public Builder guestAttributes(Map<String,String> guestAttributes) {
+            return guestAttributes(Output.of(guestAttributes));
         }
+
         public Builder internalIpOnly(@Nullable Output<Boolean> internalIpOnly) {
-            this.internalIpOnly = internalIpOnly;
+            $.internalIpOnly = internalIpOnly;
             return this;
         }
-        public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
-            this.internalIpOnly = Codegen.ofNullable(internalIpOnly);
-            return this;
+
+        public Builder internalIpOnly(Boolean internalIpOnly) {
+            return internalIpOnly(Output.of(internalIpOnly));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder machineType(Output<String> machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Output.of(Objects.requireNonNull(machineType));
-            return this;
+            return machineType(Output.of(machineType));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder nicType(@Nullable Output<String> nicType) {
-            this.nicType = nicType;
+            $.nicType = nicType;
             return this;
         }
-        public Builder nicType(@Nullable String nicType) {
-            this.nicType = Codegen.ofNullable(nicType);
-            return this;
+
+        public Builder nicType(String nicType) {
+            return nicType(Output.of(nicType));
         }
+
         public Builder shieldedInstanceConfig(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = shieldedInstanceConfig;
+            $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-        public Builder shieldedInstanceConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
-            return this;
+
+        public Builder shieldedInstanceConfig(RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs shieldedInstanceConfig) {
+            return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
+
         public Builder subnet(@Nullable Output<String> subnet) {
-            this.subnet = subnet;
+            $.subnet = subnet;
             return this;
         }
-        public Builder subnet(@Nullable String subnet) {
-            this.subnet = Codegen.ofNullable(subnet);
-            return this;
+
+        public Builder subnet(String subnet) {
+            return subnet(Output.of(subnet));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public RuntimeVirtualMachineVirtualMachineConfigArgs build() {
-            return new RuntimeVirtualMachineVirtualMachineConfigArgs(acceleratorConfig, containerImages, dataDisk, encryptionConfig, guestAttributes, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public RuntimeVirtualMachineVirtualMachineConfigArgs build() {
+            $.dataDisk = Objects.requireNonNull($.dataDisk, "expected parameter 'dataDisk' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            return $;
         }
     }
+
 }

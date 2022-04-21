@@ -5,10 +5,10 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AwsNodePoolConfigRootVolumeArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="iops")
-      private final @Nullable Output<Integer> iops;
+    private @Nullable Output<Integer> iops;
 
-    public Output<Integer> iops() {
-        return this.iops == null ? Codegen.empty() : this.iops;
+    public Optional<Output<Integer>> iops() {
+        return Optional.ofNullable(this.iops);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AwsNodePoolConfigRootVolumeArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AwsNodePoolConfigRootVolumeArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="sizeGib")
-      private final @Nullable Output<Integer> sizeGib;
+    private @Nullable Output<Integer> sizeGib;
 
-    public Output<Integer> sizeGib() {
-        return this.sizeGib == null ? Codegen.empty() : this.sizeGib;
+    public Optional<Output<Integer>> sizeGib() {
+        return Optional.ofNullable(this.sizeGib);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class AwsNodePoolConfigRootVolumeArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="volumeType")
-      private final @Nullable Output<String> volumeType;
+    private @Nullable Output<String> volumeType;
 
-    public Output<String> volumeType() {
-        return this.volumeType == null ? Codegen.empty() : this.volumeType;
+    public Optional<Output<String>> volumeType() {
+        return Optional.ofNullable(this.volumeType);
     }
 
-    public AwsNodePoolConfigRootVolumeArgs(
-        @Nullable Output<Integer> iops,
-        @Nullable Output<String> kmsKeyArn,
-        @Nullable Output<Integer> sizeGib,
-        @Nullable Output<String> volumeType) {
-        this.iops = iops;
-        this.kmsKeyArn = kmsKeyArn;
-        this.sizeGib = sizeGib;
-        this.volumeType = volumeType;
-    }
+    private AwsNodePoolConfigRootVolumeArgs() {}
 
-    private AwsNodePoolConfigRootVolumeArgs() {
-        this.iops = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
-        this.sizeGib = Codegen.empty();
-        this.volumeType = Codegen.empty();
+    private AwsNodePoolConfigRootVolumeArgs(AwsNodePoolConfigRootVolumeArgs $) {
+        this.iops = $.iops;
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.sizeGib = $.sizeGib;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsNodePoolConfigRootVolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> iops;
-        private @Nullable Output<String> kmsKeyArn;
-        private @Nullable Output<Integer> sizeGib;
-        private @Nullable Output<String> volumeType;
+        private AwsNodePoolConfigRootVolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsNodePoolConfigRootVolumeArgs();
         }
 
         public Builder(AwsNodePoolConfigRootVolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iops = defaults.iops;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.sizeGib = defaults.sizeGib;
-    	      this.volumeType = defaults.volumeType;
+            $ = new AwsNodePoolConfigRootVolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iops(@Nullable Output<Integer> iops) {
-            this.iops = iops;
+            $.iops = iops;
             return this;
         }
-        public Builder iops(@Nullable Integer iops) {
-            this.iops = Codegen.ofNullable(iops);
-            return this;
+
+        public Builder iops(Integer iops) {
+            return iops(Output.of(iops));
         }
+
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
         }
+
         public Builder sizeGib(@Nullable Output<Integer> sizeGib) {
-            this.sizeGib = sizeGib;
+            $.sizeGib = sizeGib;
             return this;
         }
-        public Builder sizeGib(@Nullable Integer sizeGib) {
-            this.sizeGib = Codegen.ofNullable(sizeGib);
-            return this;
+
+        public Builder sizeGib(Integer sizeGib) {
+            return sizeGib(Output.of(sizeGib));
         }
+
         public Builder volumeType(@Nullable Output<String> volumeType) {
-            this.volumeType = volumeType;
+            $.volumeType = volumeType;
             return this;
         }
-        public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Codegen.ofNullable(volumeType);
-            return this;
-        }        public AwsNodePoolConfigRootVolumeArgs build() {
-            return new AwsNodePoolConfigRootVolumeArgs(iops, kmsKeyArn, sizeGib, volumeType);
+
+        public Builder volumeType(String volumeType) {
+            return volumeType(Output.of(volumeType));
+        }
+
+        public AwsNodePoolConfigRootVolumeArgs build() {
+            return $;
         }
     }
+
 }

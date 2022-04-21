@@ -16,113 +16,105 @@ public final class GetServiceStatus extends com.pulumi.resources.InvokeArgs {
     public static final GetServiceStatus Empty = new GetServiceStatus();
 
     @Import(name="conditions", required=true)
-      private final List<GetServiceStatusCondition> conditions;
+    private List<GetServiceStatusCondition> conditions;
 
     public List<GetServiceStatusCondition> conditions() {
         return this.conditions;
     }
 
     @Import(name="latestCreatedRevisionName", required=true)
-      private final String latestCreatedRevisionName;
+    private String latestCreatedRevisionName;
 
     public String latestCreatedRevisionName() {
         return this.latestCreatedRevisionName;
     }
 
     @Import(name="latestReadyRevisionName", required=true)
-      private final String latestReadyRevisionName;
+    private String latestReadyRevisionName;
 
     public String latestReadyRevisionName() {
         return this.latestReadyRevisionName;
     }
 
     @Import(name="observedGeneration", required=true)
-      private final Integer observedGeneration;
+    private Integer observedGeneration;
 
     public Integer observedGeneration() {
         return this.observedGeneration;
     }
 
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public GetServiceStatus(
-        List<GetServiceStatusCondition> conditions,
-        String latestCreatedRevisionName,
-        String latestReadyRevisionName,
-        Integer observedGeneration,
-        String url) {
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.latestCreatedRevisionName = Objects.requireNonNull(latestCreatedRevisionName, "expected parameter 'latestCreatedRevisionName' to be non-null");
-        this.latestReadyRevisionName = Objects.requireNonNull(latestReadyRevisionName, "expected parameter 'latestReadyRevisionName' to be non-null");
-        this.observedGeneration = Objects.requireNonNull(observedGeneration, "expected parameter 'observedGeneration' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private GetServiceStatus() {}
 
-    private GetServiceStatus() {
-        this.conditions = List.of();
-        this.latestCreatedRevisionName = null;
-        this.latestReadyRevisionName = null;
-        this.observedGeneration = null;
-        this.url = null;
+    private GetServiceStatus(GetServiceStatus $) {
+        this.conditions = $.conditions;
+        this.latestCreatedRevisionName = $.latestCreatedRevisionName;
+        this.latestReadyRevisionName = $.latestReadyRevisionName;
+        this.observedGeneration = $.observedGeneration;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceStatus defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GetServiceStatusCondition> conditions;
-        private String latestCreatedRevisionName;
-        private String latestReadyRevisionName;
-        private Integer observedGeneration;
-        private String url;
+        private GetServiceStatus $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceStatus();
         }
 
         public Builder(GetServiceStatus defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.latestCreatedRevisionName = defaults.latestCreatedRevisionName;
-    	      this.latestReadyRevisionName = defaults.latestReadyRevisionName;
-    	      this.observedGeneration = defaults.observedGeneration;
-    	      this.url = defaults.url;
+            $ = new GetServiceStatus(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(List<GetServiceStatusCondition> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(GetServiceStatusCondition... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder latestCreatedRevisionName(String latestCreatedRevisionName) {
-            this.latestCreatedRevisionName = Objects.requireNonNull(latestCreatedRevisionName);
+            $.latestCreatedRevisionName = latestCreatedRevisionName;
             return this;
         }
+
         public Builder latestReadyRevisionName(String latestReadyRevisionName) {
-            this.latestReadyRevisionName = Objects.requireNonNull(latestReadyRevisionName);
+            $.latestReadyRevisionName = latestReadyRevisionName;
             return this;
         }
+
         public Builder observedGeneration(Integer observedGeneration) {
-            this.observedGeneration = Objects.requireNonNull(observedGeneration);
+            $.observedGeneration = observedGeneration;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public GetServiceStatus build() {
-            return new GetServiceStatus(conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, url);
+        }
+
+        public GetServiceStatus build() {
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.latestCreatedRevisionName = Objects.requireNonNull($.latestCreatedRevisionName, "expected parameter 'latestCreatedRevisionName' to be non-null");
+            $.latestReadyRevisionName = Objects.requireNonNull($.latestReadyRevisionName, "expected parameter 'latestReadyRevisionName' to be non-null");
+            $.observedGeneration = Objects.requireNonNull($.observedGeneration, "expected parameter 'observedGeneration' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

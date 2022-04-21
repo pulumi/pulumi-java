@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends com.
      * 
      */
     @Import(name="maxFindingsPerInfoTypes")
-      private final @Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes;
+    private @Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes;
 
-    public Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes() {
-        return this.maxFindingsPerInfoTypes == null ? Codegen.empty() : this.maxFindingsPerInfoTypes;
+    public Optional<Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>>> maxFindingsPerInfoTypes() {
+        return Optional.ofNullable(this.maxFindingsPerInfoTypes);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends com.
      * 
      */
     @Import(name="maxFindingsPerItem", required=true)
-      private final Output<Integer> maxFindingsPerItem;
+    private Output<Integer> maxFindingsPerItem;
 
     public Output<Integer> maxFindingsPerItem() {
         return this.maxFindingsPerItem;
@@ -45,79 +45,74 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends com.
      * 
      */
     @Import(name="maxFindingsPerRequest", required=true)
-      private final Output<Integer> maxFindingsPerRequest;
+    private Output<Integer> maxFindingsPerRequest;
 
     public Output<Integer> maxFindingsPerRequest() {
         return this.maxFindingsPerRequest;
     }
 
-    public PreventionInspectTemplateInspectConfigLimitsArgs(
-        @Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes,
-        Output<Integer> maxFindingsPerItem,
-        Output<Integer> maxFindingsPerRequest) {
-        this.maxFindingsPerInfoTypes = maxFindingsPerInfoTypes;
-        this.maxFindingsPerItem = Objects.requireNonNull(maxFindingsPerItem, "expected parameter 'maxFindingsPerItem' to be non-null");
-        this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest, "expected parameter 'maxFindingsPerRequest' to be non-null");
-    }
+    private PreventionInspectTemplateInspectConfigLimitsArgs() {}
 
-    private PreventionInspectTemplateInspectConfigLimitsArgs() {
-        this.maxFindingsPerInfoTypes = Codegen.empty();
-        this.maxFindingsPerItem = Codegen.empty();
-        this.maxFindingsPerRequest = Codegen.empty();
+    private PreventionInspectTemplateInspectConfigLimitsArgs(PreventionInspectTemplateInspectConfigLimitsArgs $) {
+        this.maxFindingsPerInfoTypes = $.maxFindingsPerInfoTypes;
+        this.maxFindingsPerItem = $.maxFindingsPerItem;
+        this.maxFindingsPerRequest = $.maxFindingsPerRequest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionInspectTemplateInspectConfigLimitsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes;
-        private Output<Integer> maxFindingsPerItem;
-        private Output<Integer> maxFindingsPerRequest;
+        private PreventionInspectTemplateInspectConfigLimitsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionInspectTemplateInspectConfigLimitsArgs();
         }
 
         public Builder(PreventionInspectTemplateInspectConfigLimitsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxFindingsPerInfoTypes = defaults.maxFindingsPerInfoTypes;
-    	      this.maxFindingsPerItem = defaults.maxFindingsPerItem;
-    	      this.maxFindingsPerRequest = defaults.maxFindingsPerRequest;
+            $ = new PreventionInspectTemplateInspectConfigLimitsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxFindingsPerInfoTypes(@Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes) {
-            this.maxFindingsPerInfoTypes = maxFindingsPerInfoTypes;
+            $.maxFindingsPerInfoTypes = maxFindingsPerInfoTypes;
             return this;
         }
-        public Builder maxFindingsPerInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs> maxFindingsPerInfoTypes) {
-            this.maxFindingsPerInfoTypes = Codegen.ofNullable(maxFindingsPerInfoTypes);
-            return this;
+
+        public Builder maxFindingsPerInfoTypes(List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs> maxFindingsPerInfoTypes) {
+            return maxFindingsPerInfoTypes(Output.of(maxFindingsPerInfoTypes));
         }
+
         public Builder maxFindingsPerInfoTypes(PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs... maxFindingsPerInfoTypes) {
             return maxFindingsPerInfoTypes(List.of(maxFindingsPerInfoTypes));
         }
+
         public Builder maxFindingsPerItem(Output<Integer> maxFindingsPerItem) {
-            this.maxFindingsPerItem = Objects.requireNonNull(maxFindingsPerItem);
+            $.maxFindingsPerItem = maxFindingsPerItem;
             return this;
         }
+
         public Builder maxFindingsPerItem(Integer maxFindingsPerItem) {
-            this.maxFindingsPerItem = Output.of(Objects.requireNonNull(maxFindingsPerItem));
-            return this;
+            return maxFindingsPerItem(Output.of(maxFindingsPerItem));
         }
+
         public Builder maxFindingsPerRequest(Output<Integer> maxFindingsPerRequest) {
-            this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest);
+            $.maxFindingsPerRequest = maxFindingsPerRequest;
             return this;
         }
+
         public Builder maxFindingsPerRequest(Integer maxFindingsPerRequest) {
-            this.maxFindingsPerRequest = Output.of(Objects.requireNonNull(maxFindingsPerRequest));
-            return this;
-        }        public PreventionInspectTemplateInspectConfigLimitsArgs build() {
-            return new PreventionInspectTemplateInspectConfigLimitsArgs(maxFindingsPerInfoTypes, maxFindingsPerItem, maxFindingsPerRequest);
+            return maxFindingsPerRequest(Output.of(maxFindingsPerRequest));
+        }
+
+        public PreventionInspectTemplateInspectConfigLimitsArgs build() {
+            $.maxFindingsPerItem = Objects.requireNonNull($.maxFindingsPerItem, "expected parameter 'maxFindingsPerItem' to be non-null");
+            $.maxFindingsPerRequest = Objects.requireNonNull($.maxFindingsPerRequest, "expected parameter 'maxFindingsPerRequest' to be non-null");
+            return $;
         }
     }
+
 }

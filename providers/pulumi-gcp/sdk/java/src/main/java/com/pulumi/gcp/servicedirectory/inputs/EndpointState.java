@@ -5,11 +5,11 @@ package com.pulumi.gcp.servicedirectory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointId")
-      private final @Nullable Output<String> endpointId;
+    private @Nullable Output<String> endpointId;
 
-    public Output<String> endpointId() {
-        return this.endpointId == null ? Codegen.empty() : this.endpointId;
+    public Optional<Output<String>> endpointId() {
+        return Optional.ofNullable(this.endpointId);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -93,128 +93,108 @@ public final class EndpointState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public EndpointState(
-        @Nullable Output<String> address,
-        @Nullable Output<String> endpointId,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> service) {
-        this.address = address;
-        this.endpointId = endpointId;
-        this.metadata = metadata;
-        this.name = name;
-        this.network = network;
-        this.port = port;
-        this.service = service;
-    }
+    private EndpointState() {}
 
-    private EndpointState() {
-        this.address = Codegen.empty();
-        this.endpointId = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.port = Codegen.empty();
-        this.service = Codegen.empty();
+    private EndpointState(EndpointState $) {
+        this.address = $.address;
+        this.endpointId = $.endpointId;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.network = $.network;
+        this.port = $.port;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<String> endpointId;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> service;
+        private EndpointState $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointState();
         }
 
         public Builder(EndpointState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.endpointId = defaults.endpointId;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.port = defaults.port;
-    	      this.service = defaults.service;
+            $ = new EndpointState(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder endpointId(@Nullable Output<String> endpointId) {
-            this.endpointId = endpointId;
+            $.endpointId = endpointId;
             return this;
         }
-        public Builder endpointId(@Nullable String endpointId) {
-            this.endpointId = Codegen.ofNullable(endpointId);
-            return this;
+
+        public Builder endpointId(String endpointId) {
+            return endpointId(Output.of(endpointId));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public EndpointState build() {
-            return new EndpointState(address, endpointId, metadata, name, network, port, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public EndpointState build() {
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetGroupMembershipsMembershipRole extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetGroupMembershipsMembershipRole(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetGroupMembershipsMembershipRole() {}
 
-    private GetGroupMembershipsMembershipRole() {
-        this.name = null;
+    private GetGroupMembershipsMembershipRole(GetGroupMembershipsMembershipRole $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGroupMembershipsMembershipRole defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetGroupMembershipsMembershipRole $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGroupMembershipsMembershipRole();
         }
 
         public Builder(GetGroupMembershipsMembershipRole defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetGroupMembershipsMembershipRole(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetGroupMembershipsMembershipRole build() {
-            return new GetGroupMembershipsMembershipRole(name);
+        }
+
+        public GetGroupMembershipsMembershipRole build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

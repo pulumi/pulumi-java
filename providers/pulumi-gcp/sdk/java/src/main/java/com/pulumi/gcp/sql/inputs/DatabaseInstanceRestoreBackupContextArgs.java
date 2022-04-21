@@ -5,10 +5,10 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends com.pulumi.r
      * 
      */
     @Import(name="backupRunId", required=true)
-      private final Output<Integer> backupRunId;
+    private Output<Integer> backupRunId;
 
     public Output<Integer> backupRunId() {
         return this.backupRunId;
@@ -33,10 +33,10 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends com.pulumi.r
      * 
      */
     @Import(name="instanceId")
-      private final @Nullable Output<String> instanceId;
+    private @Nullable Output<String> instanceId;
 
-    public Output<String> instanceId() {
-        return this.instanceId == null ? Codegen.empty() : this.instanceId;
+    public Optional<Output<String>> instanceId() {
+        return Optional.ofNullable(this.instanceId);
     }
 
     /**
@@ -44,76 +44,69 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends com.pulumi.r
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public DatabaseInstanceRestoreBackupContextArgs(
-        Output<Integer> backupRunId,
-        @Nullable Output<String> instanceId,
-        @Nullable Output<String> project) {
-        this.backupRunId = Objects.requireNonNull(backupRunId, "expected parameter 'backupRunId' to be non-null");
-        this.instanceId = instanceId;
-        this.project = project;
-    }
+    private DatabaseInstanceRestoreBackupContextArgs() {}
 
-    private DatabaseInstanceRestoreBackupContextArgs() {
-        this.backupRunId = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.project = Codegen.empty();
+    private DatabaseInstanceRestoreBackupContextArgs(DatabaseInstanceRestoreBackupContextArgs $) {
+        this.backupRunId = $.backupRunId;
+        this.instanceId = $.instanceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceRestoreBackupContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> backupRunId;
-        private @Nullable Output<String> instanceId;
-        private @Nullable Output<String> project;
+        private DatabaseInstanceRestoreBackupContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceRestoreBackupContextArgs();
         }
 
         public Builder(DatabaseInstanceRestoreBackupContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupRunId = defaults.backupRunId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
+            $ = new DatabaseInstanceRestoreBackupContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupRunId(Output<Integer> backupRunId) {
-            this.backupRunId = Objects.requireNonNull(backupRunId);
+            $.backupRunId = backupRunId;
             return this;
         }
+
         public Builder backupRunId(Integer backupRunId) {
-            this.backupRunId = Output.of(Objects.requireNonNull(backupRunId));
-            return this;
+            return backupRunId(Output.of(backupRunId));
         }
+
         public Builder instanceId(@Nullable Output<String> instanceId) {
-            this.instanceId = instanceId;
+            $.instanceId = instanceId;
             return this;
         }
-        public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Codegen.ofNullable(instanceId);
-            return this;
+
+        public Builder instanceId(String instanceId) {
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public DatabaseInstanceRestoreBackupContextArgs build() {
-            return new DatabaseInstanceRestoreBackupContextArgs(backupRunId, instanceId, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public DatabaseInstanceRestoreBackupContextArgs build() {
+            $.backupRunId = Objects.requireNonNull($.backupRunId, "expected parameter 'backupRunId' to be non-null");
+            return $;
         }
     }
+
 }

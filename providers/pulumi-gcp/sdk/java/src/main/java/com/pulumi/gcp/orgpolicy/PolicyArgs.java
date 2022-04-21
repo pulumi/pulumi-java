@@ -5,10 +5,10 @@ package com.pulumi.gcp.orgpolicy;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.orgpolicy.inputs.PolicySpecArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent", required=true)
-      private final Output<String> parent;
+    private Output<String> parent;
 
     public Output<String> parent() {
         return this.parent;
@@ -43,76 +43,69 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<PolicySpecArgs> spec;
+    private @Nullable Output<PolicySpecArgs> spec;
 
-    public Output<PolicySpecArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<PolicySpecArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
-    public PolicyArgs(
-        @Nullable Output<String> name,
-        Output<String> parent,
-        @Nullable Output<PolicySpecArgs> spec) {
-        this.name = name;
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-        this.spec = spec;
-    }
+    private PolicyArgs() {}
 
-    private PolicyArgs() {
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.spec = Codegen.empty();
+    private PolicyArgs(PolicyArgs $) {
+        this.name = $.name;
+        this.parent = $.parent;
+        this.spec = $.spec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<String> parent;
-        private @Nullable Output<PolicySpecArgs> spec;
+        private PolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyArgs();
         }
 
         public Builder(PolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.spec = defaults.spec;
+            $ = new PolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parent(Output<String> parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Output.of(Objects.requireNonNull(parent));
-            return this;
+            return parent(Output.of(parent));
         }
+
         public Builder spec(@Nullable Output<PolicySpecArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable PolicySpecArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
-        }        public PolicyArgs build() {
-            return new PolicyArgs(name, parent, spec);
+
+        public Builder spec(PolicySpecArgs spec) {
+            return spec(Output.of(spec));
+        }
+
+        public PolicyArgs build() {
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            return $;
         }
     }
+
 }

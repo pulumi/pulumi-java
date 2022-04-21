@@ -5,9 +5,9 @@ package com.pulumi.gcp.firebase.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class ProjectState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectNumber")
-      private final @Nullable Output<String> projectNumber;
+    private @Nullable Output<String> projectNumber;
 
-    public Output<String> projectNumber() {
-        return this.projectNumber == null ? Codegen.empty() : this.projectNumber;
+    public Optional<Output<String>> projectNumber() {
+        return Optional.ofNullable(this.projectNumber);
     }
 
-    public ProjectState(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> project,
-        @Nullable Output<String> projectNumber) {
-        this.displayName = displayName;
-        this.project = project;
-        this.projectNumber = projectNumber;
-    }
+    private ProjectState() {}
 
-    private ProjectState() {
-        this.displayName = Codegen.empty();
-        this.project = Codegen.empty();
-        this.projectNumber = Codegen.empty();
+    private ProjectState(ProjectState $) {
+        this.displayName = $.displayName;
+        this.project = $.project;
+        this.projectNumber = $.projectNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> projectNumber;
+        private ProjectState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectState();
         }
 
         public Builder(ProjectState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.project = defaults.project;
-    	      this.projectNumber = defaults.projectNumber;
+            $ = new ProjectState(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder projectNumber(@Nullable Output<String> projectNumber) {
-            this.projectNumber = projectNumber;
+            $.projectNumber = projectNumber;
             return this;
         }
-        public Builder projectNumber(@Nullable String projectNumber) {
-            this.projectNumber = Codegen.ofNullable(projectNumber);
-            return this;
-        }        public ProjectState build() {
-            return new ProjectState(displayName, project, projectNumber);
+
+        public Builder projectNumber(String projectNumber) {
+            return projectNumber(Output.of(projectNumber));
+        }
+
+        public ProjectState build() {
+            return $;
         }
     }
+
 }

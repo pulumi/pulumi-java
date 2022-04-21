@@ -5,9 +5,9 @@ package com.pulumi.gcp.apigee;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="analyticsRegion")
-      private final @Nullable Output<String> analyticsRegion;
+    private @Nullable Output<String> analyticsRegion;
 
-    public Output<String> analyticsRegion() {
-        return this.analyticsRegion == null ? Codegen.empty() : this.analyticsRegion;
+    public Optional<Output<String>> analyticsRegion() {
+        return Optional.ofNullable(this.analyticsRegion);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizedNetwork")
-      private final @Nullable Output<String> authorizedNetwork;
+    private @Nullable Output<String> authorizedNetwork;
 
-    public Output<String> authorizedNetwork() {
-        return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
+    public Optional<Output<String>> authorizedNetwork() {
+        return Optional.ofNullable(this.authorizedNetwork);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectId", required=true)
-      private final Output<String> projectId;
+    private Output<String> projectId;
 
     public Output<String> projectId() {
         return this.projectId;
@@ -80,10 +80,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeDatabaseEncryptionKeyName")
-      private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
+    private @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
-    public Output<String> runtimeDatabaseEncryptionKeyName() {
-        return this.runtimeDatabaseEncryptionKeyName == null ? Codegen.empty() : this.runtimeDatabaseEncryptionKeyName;
+    public Optional<Output<String>> runtimeDatabaseEncryptionKeyName() {
+        return Optional.ofNullable(this.runtimeDatabaseEncryptionKeyName);
     }
 
     /**
@@ -93,128 +93,109 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeType")
-      private final @Nullable Output<String> runtimeType;
+    private @Nullable Output<String> runtimeType;
 
-    public Output<String> runtimeType() {
-        return this.runtimeType == null ? Codegen.empty() : this.runtimeType;
+    public Optional<Output<String>> runtimeType() {
+        return Optional.ofNullable(this.runtimeType);
     }
 
-    public OrganizationArgs(
-        @Nullable Output<String> analyticsRegion,
-        @Nullable Output<String> authorizedNetwork,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> projectId,
-        @Nullable Output<String> runtimeDatabaseEncryptionKeyName,
-        @Nullable Output<String> runtimeType) {
-        this.analyticsRegion = analyticsRegion;
-        this.authorizedNetwork = authorizedNetwork;
-        this.description = description;
-        this.displayName = displayName;
-        this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
-        this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
-        this.runtimeType = runtimeType;
-    }
+    private OrganizationArgs() {}
 
-    private OrganizationArgs() {
-        this.analyticsRegion = Codegen.empty();
-        this.authorizedNetwork = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.projectId = Codegen.empty();
-        this.runtimeDatabaseEncryptionKeyName = Codegen.empty();
-        this.runtimeType = Codegen.empty();
+    private OrganizationArgs(OrganizationArgs $) {
+        this.analyticsRegion = $.analyticsRegion;
+        this.authorizedNetwork = $.authorizedNetwork;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.projectId = $.projectId;
+        this.runtimeDatabaseEncryptionKeyName = $.runtimeDatabaseEncryptionKeyName;
+        this.runtimeType = $.runtimeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> analyticsRegion;
-        private @Nullable Output<String> authorizedNetwork;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> projectId;
-        private @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
-        private @Nullable Output<String> runtimeType;
+        private OrganizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationArgs();
         }
 
         public Builder(OrganizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyticsRegion = defaults.analyticsRegion;
-    	      this.authorizedNetwork = defaults.authorizedNetwork;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.projectId = defaults.projectId;
-    	      this.runtimeDatabaseEncryptionKeyName = defaults.runtimeDatabaseEncryptionKeyName;
-    	      this.runtimeType = defaults.runtimeType;
+            $ = new OrganizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analyticsRegion(@Nullable Output<String> analyticsRegion) {
-            this.analyticsRegion = analyticsRegion;
+            $.analyticsRegion = analyticsRegion;
             return this;
         }
-        public Builder analyticsRegion(@Nullable String analyticsRegion) {
-            this.analyticsRegion = Codegen.ofNullable(analyticsRegion);
-            return this;
+
+        public Builder analyticsRegion(String analyticsRegion) {
+            return analyticsRegion(Output.of(analyticsRegion));
         }
+
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
-            this.authorizedNetwork = authorizedNetwork;
+            $.authorizedNetwork = authorizedNetwork;
             return this;
         }
-        public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Codegen.ofNullable(authorizedNetwork);
-            return this;
+
+        public Builder authorizedNetwork(String authorizedNetwork) {
+            return authorizedNetwork(Output.of(authorizedNetwork));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder projectId(Output<String> projectId) {
-            this.projectId = Objects.requireNonNull(projectId);
+            $.projectId = projectId;
             return this;
         }
+
         public Builder projectId(String projectId) {
-            this.projectId = Output.of(Objects.requireNonNull(projectId));
-            return this;
+            return projectId(Output.of(projectId));
         }
+
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable Output<String> runtimeDatabaseEncryptionKeyName) {
-            this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
+            $.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
             return this;
         }
-        public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
-            this.runtimeDatabaseEncryptionKeyName = Codegen.ofNullable(runtimeDatabaseEncryptionKeyName);
-            return this;
+
+        public Builder runtimeDatabaseEncryptionKeyName(String runtimeDatabaseEncryptionKeyName) {
+            return runtimeDatabaseEncryptionKeyName(Output.of(runtimeDatabaseEncryptionKeyName));
         }
+
         public Builder runtimeType(@Nullable Output<String> runtimeType) {
-            this.runtimeType = runtimeType;
+            $.runtimeType = runtimeType;
             return this;
         }
-        public Builder runtimeType(@Nullable String runtimeType) {
-            this.runtimeType = Codegen.ofNullable(runtimeType);
-            return this;
-        }        public OrganizationArgs build() {
-            return new OrganizationArgs(analyticsRegion, authorizedNetwork, description, displayName, projectId, runtimeDatabaseEncryptionKeyName, runtimeType);
+
+        public Builder runtimeType(String runtimeType) {
+            return runtimeType(Output.of(runtimeType));
+        }
+
+        public OrganizationArgs build() {
+            $.projectId = Objects.requireNonNull($.projectId, "expected parameter 'projectId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ClusterClusterConfigEncryptionConfigArgs extends com.pulumi.r
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final Output<String> kmsKeyName;
+    private Output<String> kmsKeyName;
 
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public ClusterClusterConfigEncryptionConfigArgs(Output<String> kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-    }
+    private ClusterClusterConfigEncryptionConfigArgs() {}
 
-    private ClusterClusterConfigEncryptionConfigArgs() {
-        this.kmsKeyName = Codegen.empty();
+    private ClusterClusterConfigEncryptionConfigArgs(ClusterClusterConfigEncryptionConfigArgs $) {
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterClusterConfigEncryptionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kmsKeyName;
+        private ClusterClusterConfigEncryptionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterClusterConfigEncryptionConfigArgs();
         }
 
         public Builder(ClusterClusterConfigEncryptionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new ClusterClusterConfigEncryptionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(Output<String> kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
+
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
-            return this;
-        }        public ClusterClusterConfigEncryptionConfigArgs build() {
-            return new ClusterClusterConfigEncryptionConfigArgs(kmsKeyName);
+            return kmsKeyName(Output.of(kmsKeyName));
+        }
+
+        public ClusterClusterConfigEncryptionConfigArgs build() {
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }
